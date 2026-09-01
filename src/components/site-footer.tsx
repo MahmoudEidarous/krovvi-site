@@ -42,14 +42,14 @@ export function SiteFooter() {
         &copy; 2026 Krovvi. All rights reserved.
       </div>
 
-      <div className="relative mt-2">
+      <div className="relative mt-2 pb-6">
         <div
           aria-hidden="true"
-          className="-mb-[0.42em] select-none whitespace-nowrap text-center text-[clamp(110px,22.5vw,330px)] font-semibold leading-none tracking-[-0.03em] text-[#EDEDEB]/[0.085]"
+          className="giantfade select-none whitespace-nowrap text-center text-[clamp(110px,22.5vw,330px)] font-semibold leading-none tracking-[-0.03em] text-[#EDEDEB]/[0.09]"
         >
           krovvi
         </div>
-        <Mark size={108} className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2" />
+        <Mark size={108} className="absolute left-1/2 top-[34%] -translate-x-1/2 -translate-y-1/2" />
       </div>
     </footer>
   );

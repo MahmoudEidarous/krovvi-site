@@ -50,3 +50,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .wavebar { animation: none; }
 }
+
+/* the giant wordmark melts into the ground — no dependence on the page edge */
+.giantfade {
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
+  mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
+}
+html { background: var(--bg); }
