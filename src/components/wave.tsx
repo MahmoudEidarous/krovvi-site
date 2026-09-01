@@ -7,11 +7,14 @@ const AMPS = [
 
 export function Wave({ className }: { className?: string }) {
   return (
-    <div className={`flex h-16 items-center gap-[5px] ${className ?? ""}`} aria-hidden="true">
+    <div
+      className={`flex h-16 max-w-full items-center justify-center gap-1 sm:gap-[5px] ${className ?? ""}`}
+      aria-hidden="true"
+    >
       {AMPS.map((a, i) => (
         <span
           key={i}
-          className="wavebar"
+          className="wavebar shrink-0"
           style={
             {
               "--a": a,

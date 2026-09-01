@@ -11,12 +11,33 @@
   --faint: #7a7a74;
 }
 
+html {
+  background: var(--bg);
+  color-scheme: dark;
+  /* iOS boosts text in landscape unless told not to */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   background: var(--bg);
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+}
+
+/* The glow discs are wider than any phone. `clip` cuts them without creating a
+   scroll container (which `hidden` does, and which iOS Safari ignores on body
+   anyway, so the page used to pan sideways). */
+html,
+body {
+  overflow-x: clip;
+}
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /* mono-safe depth — a quiet lift, never a color */
@@ -47,6 +68,10 @@ body {
   animation: speak var(--t) ease-in-out var(--d) infinite;
   opacity: var(--o);
 }
+/* 44 bars have to fit a 360px phone with room to breathe */
+@media (max-width: 639px) {
+  .wavebar { width: 3px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .wavebar { animation: none; }
 }
@@ -56,4 +81,3 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
   mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
 }
-html { background: var(--bg); }

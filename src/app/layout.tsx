@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const description =
@@ -23,6 +23,15 @@ export const metadata: Metadata = {
     description: "Never lose a thought. Talk, and Krovvi writes it down.",
     images: ["/shots/mockup.png"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // Paint under the notch and the home indicator; the page is edge to edge dark.
+  viewportFit: "cover",
+  themeColor: "#0a0a0a",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
