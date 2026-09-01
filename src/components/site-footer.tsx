@@ -1,5 +1,3 @@
-import { Mark } from "@/components/mark";
-
 export function SiteFooter() {
   return (
     <footer className="relative mt-32 overflow-hidden border-t border-[var(--surface-hi)] pt-[72px]">
@@ -45,7 +43,6 @@ export function SiteFooter() {
         >
           krovvi
         </div>
-        <Mark size={108} className="absolute left-1/2 top-[34%] -translate-x-1/2 -translate-y-1/2" />
       </div>
 
       <div className="pb-7 text-center text-[12.5px] tracking-[0.08em] text-[var(--faint)]">

@@ -1,6 +1,5 @@
 import { Drift, ParallaxY, Reveal, Rise } from "@/components/fx";
 import { FeatureRow } from "@/components/feature-row";
-import { Mark } from "@/components/mark";
 import { Phone } from "@/components/phone";
 import { SiteFooter } from "@/components/site-footer";
 import { Wave } from "@/components/wave";
@@ -9,8 +8,7 @@ export default function Home() {
   return (
     <main>
       <nav className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-[clamp(24px,5vw,56px)] py-7">
-        <a href="/" className="flex items-center gap-3 text-[17px] font-semibold tracking-[-0.01em]">
-          <Mark size={30} />
+        <a href="/" className="text-[17px] font-semibold tracking-[-0.01em]">
           krovvi
         </a>
         <a href="/support" className="text-sm text-[var(--muted)] hover:text-[var(--fg)]">
