@@ -98,13 +98,24 @@
   .closing p { color:var(--muted); font-size:clamp(16px, 2.2vw, 19px); margin-top:16px; }
   .closing .pill { display:inline-block; margin-top:34px; }
 
-  footer { border-top:1px solid var(--surface-hi); margin-top:130px; padding:56px 24px 72px; }
-  .foot { max-width:1100px; margin:0 auto; display:flex; align-items:center;
-          justify-content:space-between; gap:24px; flex-wrap:wrap; }
-  .brand { display:flex; align-items:center; gap:14px; font-size:18px; font-weight:600; }
-  .footlinks { display:flex; gap:26px; }
-  .footlinks a { color:var(--muted); font-size:14px; text-decoration:none; }
-  .footlinks a:hover { color:var(--fg); }
+  footer { border-top:1px solid var(--surface-hi); margin-top:130px; padding:72px 0 0;
+           overflow:hidden; position:relative; }
+  .footTop { max-width:1100px; margin:0 auto; padding:0 24px; display:flex;
+             justify-content:space-between; gap:56px; flex-wrap:wrap; }
+  .footTag h3 { font-size:26px; font-weight:600; letter-spacing:-0.02em; }
+  .footTag p { color:var(--muted); font-size:15px; margin-top:12px; max-width:320px; line-height:1.6; }
+  .footCols { display:flex; gap:clamp(48px, 8vw, 110px); }
+  .fcol h4 { font-size:12px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase;
+             color:var(--faint); margin-bottom:8px; }
+  .fcol a { display:block; color:var(--soft); font-size:15px; margin-top:12px; text-decoration:none; }
+  .fcol a:hover { color:var(--fg); }
+  .footMeta { max-width:1100px; margin:56px auto 0; padding:0 24px; color:var(--faint);
+              font-size:12.5px; letter-spacing:0.08em; text-align:right; }
+  .giantWrap { position:relative; margin-top:8px; }
+  .giant { font-size:clamp(110px, 22.5vw, 330px); font-weight:600; letter-spacing:-0.03em;
+           line-height:1; text-align:center; color:rgba(237,237,235,0.085);
+           user-select:none; margin-bottom:-0.42em; white-space:nowrap; }
+  .giantMark { position:absolute; left:50%; top:38%; transform:translate(-50%,-50%); }
 
   @media (max-width: 780px) {
     .row, .row.flip { flex-direction:column; gap:56px; text-align:center; }
@@ -234,23 +245,34 @@
 </section>
 
 <footer>
-  <div class="foot">
-    <div class="brand">
-      <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true">
-        <circle cx="40" cy="28" r="6.5" fill="#EDEDEB"/><circle cx="40" cy="44" r="6.5" fill="#EDEDEB"/>
-        <circle cx="40" cy="60" r="6.5" fill="#EDEDEB"/><circle cx="40" cy="76" r="6.5" fill="#EDEDEB"/>
-        <circle cx="40" cy="92" r="6.5" fill="#EDEDEB"/><circle cx="54" cy="50" r="6.5" fill="#EDEDEB"/>
-        <circle cx="68" cy="40" r="6.5" fill="#EDEDEB"/><circle cx="82" cy="30" r="6.5" fill="#EDEDEB"/>
-        <circle cx="54" cy="70" r="6.5" fill="#EDEDEB"/><circle cx="68" cy="80" r="6.5" fill="#EDEDEB"/>
-        <circle cx="82" cy="90" r="6.5" fill="#EDEDEB"/>
-      </svg>
-      krovvi
+  <div class="footTop">
+    <div class="footTag">
+      <h3>Your world, in your words.</h3>
+      <p>Talk. Krovvi writes it down, keeps it, and puts it to work.</p>
     </div>
-    <div class="footlinks">
-      <a href="/privacy/">Privacy</a>
-      <a href="/support/">Support</a>
-      <a href="mailto:support@krovvi.com">support@krovvi.com</a>
+    <div class="footCols">
+      <div class="fcol">
+        <h4>App</h4>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <a href="mailto:support@krovvi.com">support@krovvi.com</a>
+      </div>
     </div>
+  </div>
+  <div class="footMeta">&copy; 2026 Krovvi. All rights reserved.</div>
+  <div class="giantWrap">
+    <div class="giant" aria-hidden="true">krovvi</div>
+    <svg class="giantMark" width="108" height="108" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="40" cy="28" r="6.5" fill="#EDEDEB"/><circle cx="40" cy="44" r="6.5" fill="#EDEDEB"/>
+      <circle cx="40" cy="60" r="6.5" fill="#EDEDEB"/><circle cx="40" cy="76" r="6.5" fill="#EDEDEB"/>
+      <circle cx="40" cy="92" r="6.5" fill="#EDEDEB"/><circle cx="54" cy="50" r="6.5" fill="#EDEDEB"/>
+      <circle cx="68" cy="40" r="6.5" fill="#EDEDEB"/><circle cx="82" cy="30" r="6.5" fill="#EDEDEB"/>
+      <circle cx="54" cy="70" r="6.5" fill="#EDEDEB"/><circle cx="68" cy="80" r="6.5" fill="#EDEDEB"/>
+      <circle cx="82" cy="90" r="6.5" fill="#EDEDEB"/>
+    </svg>
   </div>
 </footer>
 
