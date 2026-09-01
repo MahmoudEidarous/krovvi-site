@@ -38,11 +38,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-[1100px] px-6 text-right text-[12.5px] tracking-[0.08em] text-[var(--faint)]">
-        &copy; 2026 Krovvi. All rights reserved.
-      </div>
-
-      <div className="relative mt-2 pb-6">
+      <div className="relative mt-14 pb-2">
         <div
           aria-hidden="true"
           className="giantfade select-none whitespace-nowrap text-center text-[clamp(110px,22.5vw,330px)] font-semibold leading-none tracking-[-0.03em] text-[#EDEDEB]/[0.09]"
@@ -50,6 +46,10 @@ export function SiteFooter() {
           krovvi
         </div>
         <Mark size={108} className="absolute left-1/2 top-[34%] -translate-x-1/2 -translate-y-1/2" />
+      </div>
+
+      <div className="pb-7 text-center text-[12.5px] tracking-[0.08em] text-[var(--faint)]">
+        &copy; 2026 Krovvi. All rights reserved.
       </div>
     </footer>
   );
