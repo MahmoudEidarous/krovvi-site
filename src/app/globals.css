@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #161615;
+  --surface-hi: #1f1f1e;
+  --line: #262625;
+  --fg: #ededeb;
+  --soft: #a9a8a2;
+  --muted: #8f8f8a;
+  --faint: #7a7a74;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* mono-safe depth — a quiet lift, never a color */
+.glow {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(237, 237, 235, 0.055) 0%,
+    rgba(237, 237, 235, 0.018) 45%,
+    transparent 68%
+  );
+}
+
+/* the voice, alive */
+@keyframes speak {
+  0%, 100% { transform: scaleY(0.14); }
+  50% { transform: scaleY(var(--a)); }
+}
+.wavebar {
+  width: 3.5px;
+  border-radius: 2px;
+  background: var(--fg);
+  height: 100%;
+  transform: scaleY(0.16);
+  transform-origin: center;
+  animation: speak var(--t) ease-in-out var(--d) infinite;
+  opacity: var(--o);
+}
+@media (prefers-reduced-motion: reduce) {
+  .wavebar { animation: none; }
+}
