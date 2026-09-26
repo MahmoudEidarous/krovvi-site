@@ -6,8 +6,10 @@ import { useEffect, useState } from "react";
  * The other person's side of a record sent from Krovvi: what was agreed,
  * and two answers, "This is right" or "Something is off", where each line
  * becomes editable in place. The owner hears the answer in the app, and this
- * page shows what they did with each change. Only these lines ever reach
- * this page, never the recording.
+ * page shows what they did with each change. Each line also shows where it
+ * stands now, from the owner's promises, and a task line takes their word on
+ * it: Done, Need more time on their own line, or Not done yet to take back
+ * their own Done. Only these lines ever reach this page, never the recording.
  */
 
 const API = process.env.NEXT_PUBLIC_RECORD_API ?? "https://eybepawprfhrvcnpggwk.supabase.co/functions/v1/record";
@@ -31,6 +33,25 @@ type Reply = {
   at: number;
 };
 
+/** Their word on one line of the record (record_public_line). */
+type LineAction = "done" | "more_time" | "open";
+
+/** One line as it stands now, from the owner's record and promises (record_public_read). */
+type State = {
+  /** The promise the line is about, once one is linked to it. */
+  status?: "open" | "done" | "dropped";
+  due_at?: number;
+  /** Whose Done closed it: this reader's, someone else's link, or the owner. */
+  by?: "reader" | "other" | "owner";
+  /** When its day last moved since the link was made. */
+  moved_at?: number;
+  /** Its words now, when the owner's record changed them. */
+  now_text?: string;
+  changed_since_agreed?: boolean;
+};
+
+type Answer = { state: LineAction; at: number; name?: string; until?: number };
+
 type Shared = {
   owner: string;
   to: string | null;
@@ -41,6 +62,12 @@ type Shared = {
   zone: string | null;
   lines: Line[];
   reply: Reply | null;
+  /** When they said "This is right", while that answer stands. */
+  agreed_at?: number | null;
+  /** Each line as it stands now, by line id; a line with nothing to say is left out. */
+  states?: { [id: string]: State };
+  /** Their own word on each line, as they gave it. An older record door sends none and takes none. */
+  answers?: { [id: string]: Answer };
 };
 
 type Phase = { kind: "loading" } | { kind: "gone" } | { kind: "expired" } | { kind: "error" } | { kind: "ready"; record: Shared };
@@ -54,6 +81,7 @@ const MONTHS = {
   ar: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
 };
 const SHORT_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const DAY = 86_400_000;
 
 const WORDS = {
   en: {
@@ -79,8 +107,22 @@ const WORDS = {
     kept: (owner: string) => `${owner} kept the first version.`,
     change: "Change your answer",
     empty: "Change at least one line, or write a note.",
+    markDone: "Done",
+    moreTime: "Need more time",
+    notDone: "Not done yet",
+    newDay: "New day (optional)",
+    moved: "moved",
+    doneByYou: "You marked it done",
+    doneBy: (who: string) => `${who} marked it done`,
+    doneByOther: "Someone else marked it done",
+    asked: "You asked for more time",
+    askedUntil: (day: string) => `You asked for more time until ${day}`,
+    changedSince: "Changed since you both agreed",
+    pickDay: "Pick a day from today to a year from now.",
     gone: "This link does not work. Ask the person who sent it for a new one.",
     expired: "This link has expired. Ask the person who sent it for a new one.",
+    limit: "This link cannot take more answers. Ask the person who sent it for a new one.",
+    refused: "This line cannot take that answer.",
     error: "Something went wrong. Try again in a moment.",
     retry: "Try again",
     about: "Krovvi keeps track of what was said in your conversations, so nothing agreed gets lost.",
@@ -110,8 +152,22 @@ const WORDS = {
     kept: (owner: string) => `${owner} ساب النسخة الأولى.`,
     change: "غيّر ردك",
     empty: "غيّر سطر واحد على الأقل، أو اكتب ملاحظة.",
+    markDone: "اتعمل",
+    moreTime: "محتاج وقت أكتر",
+    notDone: "لسه ما اتعملش",
+    newDay: "ميعاد جديد (اختياري)",
+    moved: "اتنقل",
+    doneByYou: "إنت علّمت إنه اتعمل",
+    doneBy: (who: string) => `${who} علّم إنه اتعمل`,
+    doneByOther: "حد تاني علّم إنه اتعمل",
+    asked: "إنت طلبت وقت أكتر",
+    askedUntil: (day: string) => `إنت طلبت وقت أكتر لحد ${day}`,
+    changedSince: "اتغير من بعد ما اتفقتوا انتوا الاتنين",
+    pickDay: "اختار يوم من النهارده لحد سنة من دلوقتي.",
     gone: "اللينك ده مش شغال. اطلب لينك جديد من اللي بعته.",
     expired: "اللينك ده خلص. اطلب لينك جديد من اللي بعته.",
+    limit: "اللينك ده مش هياخد ردود تانية. اطلب لينك جديد من اللي بعته.",
+    refused: "الرد ده مينفعش على السطر ده.",
     error: "حصلت مشكلة. جرّب تاني كمان شوية.",
     retry: "جرّب تاني",
     about: "Krovvi بيفتكر اللي اتقال في كلامك مع الناس، عشان محدش ينسى اللي اتفقتوا عليه.",
@@ -126,22 +182,57 @@ function first(name: string | null | undefined): string {
   return (name ?? "").trim().split(/\s+/)[0] ?? "";
 }
 
-/** Weekday, day and month on the owner's calendar; the reader's own clock only if the zone is unknown. */
-function calendar(ms: number, zone: string | null): { weekday: number; day: number; month: number } {
+/** Year, weekday, day and month on the owner's calendar; the reader's own clock only if the zone is unknown. */
+function calendar(ms: number, zone: string | null): { year: number; weekday: number; day: number; month: number } {
   const d = new Date(ms);
   if (zone) {
     try {
-      const parts = new Intl.DateTimeFormat("en-US", { timeZone: zone, weekday: "short", day: "numeric", month: "numeric" }).formatToParts(d);
+      const parts = new Intl.DateTimeFormat("en-US", { timeZone: zone, weekday: "short", day: "numeric", month: "numeric", year: "numeric" }).formatToParts(d);
       const get = (type: string) => parts.find((p) => p.type === type)?.value ?? "";
+      const year = Number(get("year"));
       const weekday = SHORT_DAYS.indexOf(get("weekday"));
       const day = Number(get("day"));
       const month = Number(get("month")) - 1;
-      if (weekday >= 0 && day > 0 && month >= 0) return { weekday, day, month };
+      if (year > 0 && weekday >= 0 && day > 0 && month >= 0) return { year, weekday, day, month };
     } catch {
       // An unknown zone: the reader's clock below.
     }
   }
-  return { weekday: d.getDay(), day: d.getDate(), month: d.getMonth() };
+  return { year: d.getFullYear(), weekday: d.getDay(), day: d.getDate(), month: d.getMonth() };
+}
+
+/** A day on the owner's calendar as a date box writes it: 2026-10-12. */
+function dayKey(ms: number, zone: string | null): string {
+  const c = calendar(ms, zone);
+  return `${c.year}-${String(c.month + 1).padStart(2, "0")}-${String(c.day).padStart(2, "0")}`;
+}
+
+/** How far a zone's clock runs ahead of UTC at one moment, in ms. */
+function aheadOf(zone: string, at: number): number {
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: zone, hourCycle: "h23", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", second: "numeric" }).formatToParts(new Date(at));
+  const get = (type: string) => Number(parts.find((p) => p.type === type)?.value ?? 0);
+  return Date.UTC(get("year"), get("month") - 1, get("day"), get("hour") % 24, get("minute"), get("second")) - Math.floor(at / 1000) * 1000;
+}
+
+/**
+ * The last second of a day picked on this page, on the owner's clock: how a
+ * promise's day is kept, so the owner reads the same day. The reader's own
+ * clock only if the zone is unknown.
+ */
+function endOfDay(day: string, zone: string | null): number | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(day);
+  if (!m) return null;
+  const [year, month, date] = [Number(m[1]), Number(m[2]) - 1, Number(m[3])];
+  if (zone) {
+    try {
+      const guess = Date.UTC(year, month, date, 23, 59, 59);
+      // Two passes settle a day that holds a daylight saving change.
+      return guess - aheadOf(zone, guess - aheadOf(zone, guess));
+    } catch {
+      // An unknown zone: the reader's clock below.
+    }
+  }
+  return new Date(year, month, date, 23, 59, 59).getTime();
 }
 
 function dayName(ms: number, lang: Lang, zone: string | null): string {
@@ -164,6 +255,53 @@ function whose(line: Line, record: Shared, lang: Lang): string | null {
   return who || null;
 }
 
+/** The reader's own line: a task on their side that is not named for someone else. Only there can they ask for more time. */
+function theirs(line: Line, record: Shared): boolean {
+  if (line.kind !== "task" || line.side !== "them") return false;
+  const who = first(line.who).toLowerCase();
+  const reader = first(record.to).toLowerCase();
+  return !who || !reader || who === reader;
+}
+
+/**
+ * Where one line stands now, from the owner's record and promises: its words,
+ * its day, open or done and whose Done closed it, the reader's own ask for
+ * more time, and a change since they said "This is right". A task with no
+ * promise linked yet is open until the reader marks it done; their Done waits
+ * there for the link.
+ */
+function standing(line: Line, record: Shared) {
+  const state = record.states?.[line.id];
+  const answer = record.answers?.[line.id];
+  const status = state?.status ?? (answer?.state === "done" ? "done" : "open");
+  return {
+    words: state?.now_text ?? line.text,
+    // The day it moved to; otherwise its own day, or its promise's when the line had none.
+    due: state?.moved_at ? (state.due_at ?? null) : (line.due_at ?? state?.due_at ?? null),
+    moved: !!state?.moved_at,
+    status,
+    by: state?.status ? state.by : answer?.state === "done" ? "reader" : undefined,
+    // Their ask stands until the owner moves the day after it, as the owner's app shows it.
+    asked: status === "open" && answer?.state === "more_time" && !((state?.moved_at ?? 0) > answer.at) ? answer : null,
+    // Only while the "This is right" the page read stands: an answer sent from here since is newer than every change.
+    changed: !!state?.changed_since_agreed && record.reply?.status === "confirmed" && record.reply.at === record.agreed_at,
+  };
+}
+
+/**
+ * The record after the reader's word on one line, as a reload would show it:
+ * their answer on file, and what the door does with it at once to a line
+ * whose promise is linked (record_apply): their Done closes it while it is
+ * open, and Not done yet opens only a close their own Done made.
+ */
+function withAnswer(record: Shared, id: string, answer: Answer): Shared {
+  const was = record.states?.[id];
+  let state = was;
+  if (was?.status === "open" && answer.state === "done") state = { ...was, status: "done", by: "reader" };
+  if (was?.status === "done" && was.by === "reader" && answer.state === "open") state = { ...was, status: "open", by: undefined };
+  return { ...record, answers: { ...record.answers, [id]: answer }, states: state ? { ...record.states, [id]: state } : record.states };
+}
+
 /** Each line's words as the reader last left them: their earlier change, or the line itself. */
 function draftsOf(record: Shared): { [id: string]: string } {
   const earlier = new Map((record.reply?.fixes ?? []).map((f) => [f.line, f.text]));
@@ -180,13 +318,18 @@ function grow(el: HTMLTextAreaElement | null) {
 export function RecordPage({ token }: { token: string }) {
   const [phase, setPhase] = useState<Phase>({ kind: "loading" });
   const [mode, setMode] = useState<"view" | "fix" | "done">("view");
-  const [busy, setBusy] = useState<"confirm" | "fix" | null>(null);
+  // One answer on its way at a time: the whole record's, or one line's.
+  const [busy, setBusy] = useState<"confirm" | "fix" | { line: string; action: LineAction } | null>(null);
   const [changing, setChanging] = useState(false);
   const [drafts, setDrafts] = useState<{ [id: string]: string }>({});
   const [note, setNote] = useState("");
   const [name, setName] = useState("");
   const [sent, setSent] = useState<"confirmed" | "fixed" | null>(null);
   const [problem, setProblem] = useState<string | null>(null);
+  // The line whose "Need more time" is open, the day in its date box, and a refusal under one line.
+  const [asking, setAsking] = useState<string | null>(null);
+  const [newDay, setNewDay] = useState("");
+  const [lineProblem, setLineProblem] = useState<{ line: string; text: string } | null>(null);
 
   const load = () => {
     setPhase({ kind: "loading" });
@@ -218,6 +361,9 @@ export function RecordPage({ token }: { token: string }) {
   // Their changes stay under their lines whenever they are not editing, the one just sent included.
   const shown = !fixing && record?.reply?.status === "fixed" && (!changing || sent) ? record.reply : null;
   const fixOf = (id: string) => shown?.fixes.find((f) => f.line === id);
+  // An older record door sends no answers and takes none on a line: no buttons under the lines then.
+  const answerable = !!record?.answers;
+  const sending = (id: string, action: LineAction) => typeof busy === "object" && busy?.line === id && busy.action === action;
 
   const startFix = () => {
     if (!record) return;
@@ -262,6 +408,42 @@ export function RecordPage({ token }: { token: string }) {
     }
   };
 
+  /** Their word on one line: Done, Need more time (with a day or without), or Not done yet. */
+  const answerLine = async (line: Line, action: LineAction, until?: number) => {
+    if (busy) return;
+    setLineProblem(null);
+    setBusy({ line: line.id, action });
+    try {
+      const res = await fetch(API, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ t: token, action, line: line.id, name: name.trim() || null, until }),
+      });
+      const body = (await res.json().catch(() => null)) as { ok?: boolean; gone?: boolean; expired?: boolean; limit?: boolean; bad?: boolean } | null;
+      if (!body?.ok) {
+        // The door's refusal, in plain words.
+        setLineProblem({ line: line.id, text: body?.expired ? w.expired : body?.gone ? w.gone : body?.limit ? w.limit : body?.bad ? w.refused : w.error });
+        return;
+      }
+      const given: Answer = { state: action, at: Date.now(), ...(name.trim() ? { name: name.trim() } : {}), ...(until ? { until } : {}) };
+      setPhase((was) => (was.kind === "ready" ? { kind: "ready", record: withAnswer(was.record, line.id, given) } : was));
+      setAsking((open) => (open === line.id ? null : open));
+    } catch {
+      setLineProblem({ line: line.id, text: w.error });
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  const askMoreTime = (line: Line) => {
+    // A day is optional. One given is the end of it on the owner's clock, from today to a year out, as the door takes it.
+    if (newDay && (newDay < dayKey(Date.now(), zone) || newDay > dayKey(Date.now() + 364 * DAY, zone))) {
+      setLineProblem({ line: line.id, text: w.pickDay });
+      return;
+    }
+    void answerLine(line, "more_time", newDay ? (endOfDay(newDay, zone) ?? undefined) : undefined);
+  };
+
   return (
     <main dir={dir} className="min-h-[100svh] px-5 pb-16 pt-10 sm:pt-16">
       <div className="mx-auto max-w-[560px]">
@@ -297,6 +479,23 @@ export function RecordPage({ token }: { token: string }) {
               {record.lines.map((line, i) => {
                 const who = whose(line, record, lang);
                 const mine = fixOf(line.id);
+                const now = standing(line, record);
+                // While fixing, the line as it was sent; otherwise as it stands now.
+                const due = fixing ? line.due_at : now.due;
+                // Their change, taken as the line's words, is said once: as the line.
+                const echoed = mine?.decision === "used" && mine.text === now.words;
+                const said = fixing
+                  ? ""
+                  : [
+                      now.status === "done" ? (now.by === "reader" ? w.doneByYou : now.by === "other" ? w.doneByOther : w.doneBy(ownerFirst)) : "",
+                      now.asked ? (now.asked.until ? w.askedUntil(dayName(now.asked.until, lang, zone)) : w.asked) : "",
+                      now.changed ? w.changedSince : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" · ");
+                // Their word on a task line: Done while it is open (and more time on their own), Not done yet after their own Done.
+                const own = theirs(line, record);
+                const offers = !fixing && answerable && line.kind === "task" && (now.status === "open" || now.by === "reader");
                 return (
                   <li key={line.id} className={i ? "border-t border-[var(--line)]" : ""}>
                     <div className="flex items-start gap-3 px-4 py-[14px]">
@@ -327,20 +526,109 @@ export function RecordPage({ token }: { token: string }) {
                         ) : (
                           <p className="text-[16px] leading-[1.5]">
                             {who ? <span className="font-semibold">{who}: </span> : null}
-                            {line.text}
+                            {now.words}
                           </p>
                         )}
-                        {line.due_at ? <p className="mt-1 text-[13px] text-[var(--muted)]">{w.by(dayName(line.due_at, lang, zone))}</p> : null}
+                        {due ? (
+                          <p className="mt-1 text-[13px] text-[var(--muted)]">
+                            {w.by(dayName(due, lang, zone))}
+                            {!fixing && now.moved ? ` · ${w.moved}` : null}
+                          </p>
+                        ) : null}
                         {mine ? (
                           <div className="mt-2 border-s-2 border-[var(--line)] ps-3">
-                            <p className="text-[14px] leading-[1.5] text-[var(--soft)]">
-                              <span className="text-[var(--muted)]">{w.yourChange}: </span>
-                              {mine.text}
-                            </p>
+                            {echoed ? null : (
+                              <p className="text-[14px] leading-[1.5] text-[var(--soft)]">
+                                <span className="text-[var(--muted)]">{w.yourChange}: </span>
+                                {mine.text}
+                              </p>
+                            )}
                             {mine.decision ? (
                               <p className="mt-0.5 text-[13px] text-[var(--muted)]">{mine.decision === "used" ? w.used(ownerFirst) : w.kept(ownerFirst)}</p>
                             ) : null}
                           </div>
+                        ) : null}
+                        {said ? <p className="mt-1 text-[13px] leading-[1.5] text-[var(--soft)]">{said}</p> : null}
+                        {offers && now.status === "open" && own && asking === line.id ? (
+                          <div className="mt-3">
+                            <label className="block text-[13px] text-[var(--muted)]">
+                              {w.newDay}
+                              <input
+                                type="date"
+                                value={newDay}
+                                min={dayKey(Date.now(), zone)}
+                                max={dayKey(Date.now() + 364 * DAY, zone)}
+                                onChange={(e) => {
+                                  setNewDay(e.target.value);
+                                  setLineProblem(null);
+                                }}
+                                disabled={busy !== null}
+                                className="mt-1 block h-11 w-full min-w-0 appearance-none rounded-[10px] bg-[var(--surface-hi)] px-3 text-[16px] text-[var(--fg)] outline-none focus:ring-1 focus:ring-[var(--line)] [&::-webkit-date-and-time-value]:text-start"
+                              />
+                            </label>
+                            <div className="mt-3 flex gap-2">
+                              <button
+                                onClick={() => {
+                                  setAsking(null);
+                                  setLineProblem(null);
+                                }}
+                                disabled={busy !== null}
+                                className="h-11 flex-1 rounded-full bg-[var(--surface-hi)] text-[15px] font-medium text-[var(--fg)]"
+                              >
+                                {w.cancel}
+                              </button>
+                              <button
+                                onClick={() => askMoreTime(line)}
+                                disabled={busy !== null}
+                                className="h-11 flex-1 rounded-full bg-[var(--fg)] text-[15px] font-semibold text-[var(--bg)] disabled:opacity-60"
+                              >
+                                {sending(line.id, "more_time") ? w.sending : w.send}
+                              </button>
+                            </div>
+                          </div>
+                        ) : offers ? (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {now.status === "open" ? (
+                              <>
+                                <button
+                                  onClick={() => void answerLine(line, "done")}
+                                  disabled={busy !== null}
+                                  aria-label={`${w.markDone}: ${now.words}`}
+                                  className="h-11 rounded-full bg-[var(--surface-hi)] px-5 text-[15px] font-medium text-[var(--fg)] transition-transform active:scale-[0.98] disabled:opacity-60"
+                                >
+                                  {sending(line.id, "done") ? w.sending : w.markDone}
+                                </button>
+                                {own ? (
+                                  <button
+                                    onClick={() => {
+                                      setAsking(line.id);
+                                      setNewDay("");
+                                      setLineProblem(null);
+                                    }}
+                                    disabled={busy !== null}
+                                    aria-label={`${w.moreTime}: ${now.words}`}
+                                    className="h-11 rounded-full bg-[var(--surface-hi)] px-5 text-[15px] font-medium text-[var(--fg)] transition-transform active:scale-[0.98] disabled:opacity-60"
+                                  >
+                                    {w.moreTime}
+                                  </button>
+                                ) : null}
+                              </>
+                            ) : (
+                              <button
+                                onClick={() => void answerLine(line, "open")}
+                                disabled={busy !== null}
+                                aria-label={`${w.notDone}: ${now.words}`}
+                                className="h-11 rounded-full bg-[var(--surface-hi)] px-5 text-[15px] font-medium text-[var(--fg)] transition-transform active:scale-[0.98] disabled:opacity-60"
+                              >
+                                {sending(line.id, "open") ? w.sending : w.notDone}
+                              </button>
+                            )}
+                          </div>
+                        ) : null}
+                        {!fixing && lineProblem?.line === line.id ? (
+                          <p className="mt-2 text-[14px] text-[#C4574F]" role="alert">
+                            {lineProblem.text}
+                          </p>
                         ) : null}
                       </div>
                     </div>
