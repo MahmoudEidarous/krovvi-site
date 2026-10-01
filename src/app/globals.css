@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Krovvi Mono, the app's own palette (catch8 src/theme/tokens.ts). Neutrals
+   lean a hair warm on purpose; the voice inks tint people and nothing else. */
 :root {
   --bg: #0a0a0a;
   --surface: #161615;
@@ -9,6 +11,32 @@
   --soft: #a9a8a2;
   --muted: #8f8f8a;
   --faint: #7a7a74;
+  --danger: #c4574f;
+
+  --bone: #e6dcc8;
+  --clay: #c98a62;
+  --ash: #b0a89d;
+  --brass: #c2a470;
+  --umber: #8f7864;
+  --sand: #d4b49a;
+
+  /* Emil's curve, the app's EASE_OUT. */
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@theme inline {
+  --color-ground: var(--bg);
+  --color-card: var(--surface);
+  --color-card-hi: var(--surface-hi);
+  --color-line: var(--line);
+  --color-ink: var(--fg);
+  --color-soft: var(--soft);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-sand: var(--sand);
+  --color-clay: var(--clay);
+  --color-brass: var(--brass);
+  --color-bone: var(--bone);
 }
 
 html {
@@ -17,16 +45,23 @@ html {
   /* iOS boosts text in landscape unless told not to */
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern";
 }
 
-/* The glow discs are wider than any phone. `clip` cuts them without creating a
+::selection {
+  background: rgba(237, 237, 235, 0.22);
+}
+
+/* The glows are wider than any phone. `clip` cuts them without creating a
    scroll container (which `hidden` does, and which iOS Safari ignores on body
    anyway, so the page used to pan sideways). */
 html,
@@ -40,44 +75,355 @@ body {
   }
 }
 
-/* mono-safe depth — a quiet lift, never a color */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Depth without color: a quiet lift of the ivory. */
 .glow {
   position: absolute;
   border-radius: 9999px;
   pointer-events: none;
   background: radial-gradient(
     circle,
-    rgba(237, 237, 235, 0.055) 0%,
-    rgba(237, 237, 235, 0.018) 45%,
+    rgba(237, 237, 235, 0.07) 0%,
+    rgba(237, 237, 235, 0.022) 42%,
     transparent 68%
   );
 }
 
-/* the voice, alive */
-@keyframes speak {
-  0%, 100% { transform: scaleY(0.14); }
-  50% { transform: scaleY(var(--a)); }
-}
-.wavebar {
-  width: 3.5px;
-  border-radius: 2px;
-  background: var(--fg);
-  height: 100%;
-  transform: scaleY(0.16);
-  transform-origin: center;
-  animation: speak var(--t) ease-in-out var(--d) infinite;
-  opacity: var(--o);
-}
-/* 44 bars have to fit a 360px phone with room to breathe */
-@media (max-width: 639px) {
-  .wavebar { width: 3px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .wavebar { animation: none; }
+.glow-warm {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(212, 180, 154, 0.09) 0%,
+    rgba(212, 180, 154, 0.025) 45%,
+    transparent 70%
+  );
 }
 
-/* the giant wordmark melts into the ground — no dependence on the page edge */
+/* ── One animation helper ────────────────────────────────────────────────
+   An element with .anim plays the keyframes named in --a, after --delay.
+   Every keyframe below starts from a hidden or earlier state and ends on the
+   element's own style, so with motion reduced the page simply shows the end. */
+.anim {
+  animation: var(--a, k-rise) var(--dur, 700ms) var(--ease) var(--delay, 0ms) both;
+}
+.anim-loop {
+  animation: var(--a) var(--dur, 1400ms) var(--ease) var(--delay, 0ms) infinite both;
+}
+
+@keyframes k-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+@keyframes k-rise-lg {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+@keyframes k-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes k-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+}
+@keyframes k-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-110%) scale(0.94);
+  }
+}
+@keyframes k-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+@keyframes k-press {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(0.93);
+    filter: brightness(1.25);
+  }
+}
+@keyframes k-shift {
+  from {
+    transform: translateY(var(--from, -100px));
+  }
+}
+@keyframes k-done-text {
+  from {
+    color: var(--fg);
+    text-decoration-color: transparent;
+  }
+  to {
+    color: var(--muted);
+    text-decoration-color: var(--soft);
+  }
+}
+@keyframes k-gone {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@keyframes k-gone-fast {
+  to {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+@keyframes k-strike {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes k-fill {
+  from {
+    stroke-dashoffset: var(--len, 70);
+  }
+}
+@keyframes k-check-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+@keyframes k-grow-x {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes k-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* The brand's brightness wave: the KThinking keyframes from the app. */
+@keyframes k-wave {
+  0% {
+    opacity: 0.22;
+  }
+  18% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0.22;
+  }
+  100% {
+    opacity: 0.22;
+  }
+}
+/* The K lands, then a brightness wave travels through it in drawing order. */
+@keyframes k-land {
+  from {
+    opacity: 0;
+    transform: translate(var(--x), var(--y));
+  }
+  60% {
+    opacity: 1;
+  }
+}
+@keyframes k-wave-soft {
+  0% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0.68;
+  }
+  86% {
+    opacity: 0.68;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .k-alive g,
+  .k-alive circle {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+@keyframes k-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* A voice, as the app's record screen draws it. */
+@keyframes k-speak {
+  0%,
+  100% {
+    transform: scaleY(0.16);
+  }
+  50% {
+    transform: scaleY(var(--amp, 1));
+  }
+}
+.bar {
+  transform-origin: center;
+  animation: k-speak var(--t, 1.2s) ease-in-out var(--d, 0s) infinite;
+}
+
+@keyframes k-ticker {
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes k-ticker-back {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes k-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes k-orbit-back {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* A dot travelling in to the K from wherever it came from. */
+@keyframes k-inflow {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.6);
+  }
+  20% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.3);
+  }
+}
+
+@keyframes k-label {
+  0%,
+  100% {
+    color: var(--faint);
+  }
+  6%,
+  18% {
+    color: var(--fg);
+  }
+  30% {
+    color: var(--faint);
+  }
+}
+@keyframes k-node {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  6%,
+  18% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  30% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+}
+
+@keyframes k-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.float {
+  animation: k-float var(--dur, 7s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes k-play {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Held until scrolled into view (components/in-view.tsx). */
+[data-inview="0"] .anim,
+[data-inview="0"] .anim-loop,
+[data-inview="0"] .seq {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Steps of a little film that the end state replaces: with motion off, only the end shows. */
+  .transient {
+    display: none !important;
+  }
+  .seq,
+  .anim,
+  .anim-loop,
+  .bar,
+  .float,
+  .orbit,
+  .orbit-back,
+  .inflow,
+  .ticker {
+    animation: none !important;
+  }
+}
+
+/* The giant wordmark melts into the ground, with no dependence on the page edge. */
 .giantfade {
   -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
   mask-image: linear-gradient(to bottom, black 40%, transparent 92%);
+}
+
+/* A quiet fade at the sides of the inputs orbit, so chips leave rather than clip. */
+.edgefade {
+  -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, black 55%, transparent 78%);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }

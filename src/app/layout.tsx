@@ -2,26 +2,23 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const description =
-  "Talk. Krovvi writes it down. Notes, tasks, and a memory of your world, made from your words.";
+  "Krovvi is an iPhone app for the conversations in your life. It keeps track of what people promised, what was decided and what changed.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://krovvi.com"),
-  title: "Krovvi",
+  title: "Krovvi: know where things stand with everyone",
   description,
-  icons: { icon: "/favicon.png" },
   openGraph: {
     type: "website",
     url: "https://krovvi.com",
     siteName: "Krovvi",
     title: "Krovvi",
-    description: "Never lose a thought. Talk, and Krovvi writes it down.",
-    images: [{ url: "/shots/mockup.png", alt: "Krovvi on iPhone" }],
+    description: "Know where things stand with everyone.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Krovvi",
-    description: "Never lose a thought. Talk, and Krovvi writes it down.",
-    images: ["/shots/mockup.png"],
+    description: "Know where things stand with everyone.",
   },
 };
 
@@ -37,6 +34,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* Without scripts nothing would ever be scrolled into view: show every end state at once. */}
+        <noscript>
+          <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}`}</style>
+        </noscript>
+      </head>
       <body>{children}</body>
     </html>
   );
