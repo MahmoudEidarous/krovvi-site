@@ -1,4 +1,5 @@
 import { an } from "@/lib/anim";
+import { MicGlyph } from "./chat";
 import { Card, Check, Divider, PersonFace, NavCircle, Play, StatusBar } from "./ui";
 
 /** The top of a recording's page: back, title, and the Note / Transcript switch. */
@@ -6,7 +7,7 @@ function NoteTop() {
   return (
     <>
       <StatusBar />
-      <div className="absolute inset-x-[18px] top-[58px] flex justify-between">
+      <div className="absolute inset-x-[16px] top-[63px] flex justify-between">
         <NavCircle icon="back" />
         <NavCircle icon="more" />
       </div>
@@ -273,7 +274,7 @@ export function BriefScreen({ still = false }: { still?: boolean }) {
   return (
     <div className="relative h-full w-full bg-ground">
       <StatusBar />
-      <div className="absolute left-[18px] top-[58px]">
+      <div className="absolute left-[16px] top-[63px]">
         <NavCircle icon="back" />
       </div>
       <div className="absolute inset-x-[20px] top-[118px]">
@@ -287,11 +288,11 @@ export function BriefScreen({ still = false }: { still?: boolean }) {
           </div>
         </div>
         <div className={`${A} mt-[16px] flex gap-[10px]`} style={an("k-rise", 400)}>
-          <span className="flex h-[44px] flex-[1.25] items-center justify-center gap-[7px] rounded-full bg-ink text-[15.5px] font-semibold text-ground">
-            <svg width="12" height="16" viewBox="0 0 12 16" aria-hidden="true"><rect x="3" y="0.5" width="6" height="10" rx="3" fill="#0A0A0A" /><path d="M1 8a5 5 0 0 0 10 0M6 13v2.5" stroke="#0A0A0A" strokeWidth="1.6" fill="none" strokeLinecap="round" /></svg>
+          <span className="flex h-[40px] flex-grow items-center justify-center gap-[8px] rounded-[20px] bg-ink px-[16px] text-[14.5px] font-semibold text-ground">
+            <MicGlyph size={13} color="#0A0A0A" weight={1.6} />
             Record this meeting
           </span>
-          <span className="flex h-[44px] flex-1 items-center justify-center rounded-full bg-card-hi text-[15.5px] font-medium text-ink">
+          <span className="flex h-[40px] items-center justify-center gap-[8px] rounded-[20px] bg-card px-[16px] text-[14.5px] font-medium text-ink">
             Ask about Sara
           </span>
         </div>

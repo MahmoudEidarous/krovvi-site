@@ -1,73 +1,54 @@
 import { PersonFace, personTint } from "@/components/app/ui";
 
 /**
- * How people really talk, and what Krovvi keeps from it. Each line is said
- * by someone in your life (or by you), in their own loose words; the part
- * Krovvi caught is lit and marked in that person's colour, with what it
- * filed it as. Two rows drift past in opposite directions.
+ * What people say, and what Krovvi understands from it. Each line is said
+ * loosely, the way people talk; after the arrow is what Krovvi worked out,
+ * which nobody said outright, with the kind of thing it is (the app's own
+ * words: Still deciding, Decided, On your mind, A goal, Worth knowing).
+ * Two rows drift past in opposite directions.
  */
-type Said = { who: string; name?: string; before: string; caught: string; after: string; kind: string };
+type Read = { who: string; said: string; means: string; kind: string };
 
-const THEM: Said[] = [
-  { who: "Sara Ali", before: "Can you get me ", caught: "the new deck by Friday", after: "?", kind: "Task" },
-  { who: "Karim Nabil", before: "Let's say ", caught: "forty-two, half now", after: " and half when it's done.", kind: "Money" },
-  { who: "Mom", before: "Come ", caught: "Sunday at 7", after: ", I'm making your favorite.", kind: "Date" },
-  { who: "Lina", before: "I'll ", caught: "take the kids Wednesday", after: ", you have the weekend.", kind: "Task" },
-  { who: "Omar", before: "You have to try ", caught: "Sora on 9th Street", after: ".", kind: "Noted" },
-  { who: "Mona", before: "So the launch is still ", caught: "October 3", after: ", right?", kind: "Old date" },
+const THEM: Read[] = [
+  { who: "Karim Nabil", said: "We start the day the deposit clears.", means: "The kitchen waits on your deposit", kind: "Waiting on you" },
+  { who: "Sara Ali", said: "Let's see what the board says first.", means: "The launch date isn't final yet", kind: "Still deciding" },
+  { who: "Mom", said: "Your father hasn't been himself since the surgery.", means: "Worth checking in on your dad", kind: "Worth knowing" },
+  { who: "Omar", said: "I'm half thinking of leaving Atlas.", means: "Omar may be leaving Atlas", kind: "Worth knowing" },
+  { who: "Lina", said: "The kids won't stop talking about the trip.", means: "The trip matters to the kids", kind: "Noticed" },
 ];
 
-const YOU: Said[] = [
-  { who: "You", before: "I'll ", caught: "send you the signed quote on Monday", after: ".", kind: "Task" },
-  { who: "You", before: "Okay, ", caught: "we go with the second design", after: ".", kind: "Decision" },
-  { who: "You", before: "Remind me to ", caught: "call the landlord", after: " about the heater.", kind: "Task" },
-  { who: "You", before: "The dentist moved to ", caught: "Friday at 10", after: ".", kind: "Date" },
-  { who: "You", before: "We split summer camp, ", caught: "600 each", after: ".", kind: "Money" },
-  { who: "You", before: "I want to ", caught: "lead a team", after: " next year.", kind: "Goal" },
+const YOU: Read[] = [
+  { who: "You", said: "I'm so done with this commute.", means: "The third time you've said it this month", kind: "On your mind" },
+  { who: "You", said: "If he asks for more than 45, we walk.", means: "Your limit with Karim is 45,000", kind: "Decided" },
+  { who: "You", said: "I'll deal with the landlord after the launch.", means: "The heater waits until after October 15", kind: "Waiting" },
+  { who: "You", said: "I really want to run a 10K before the year's out.", means: "Run a 10K by December", kind: "A goal" },
 ];
 
-/** A hex ink at a given strength, for the underline under what was caught. */
-function alpha(hex: string, a: number) {
-  const n = parseInt(hex.slice(1), 16);
-  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
-}
-
-function Line({ s }: { s: Said }) {
-  const tint = personTint(s.who);
-  const first = s.who.split(" ")[0];
+function Line({ r }: { r: Read }) {
+  const you = r.who === "You";
   return (
     <span className="flex shrink-0 items-center gap-[14px] whitespace-nowrap">
-      {s.who === "You" ? (
+      {you ? (
         <span className="text-[13px] font-semibold text-soft">You</span>
       ) : (
         <>
-          <PersonFace name={s.who} size={30} />
-          <span className="text-[13px] font-semibold" style={{ color: tint }}>
-            {first}
+          <PersonFace name={r.who} size={30} />
+          <span className="text-[13px] font-semibold" style={{ color: personTint(r.who) }}>
+            {r.who.split(" ")[0]}
           </span>
         </>
       )}
-      <span className="text-[clamp(19px,2.2vw,27px)] font-medium tracking-[-0.02em] text-muted">
-        “{s.before}
-        <span
-          className="text-ink"
-          style={{
-            backgroundImage: `linear-gradient(transparent 56%, ${alpha(s.who === "You" ? "#EDEDEB" : tint, s.who === "You" ? 0.14 : 0.26)} 56%, ${alpha(s.who === "You" ? "#EDEDEB" : tint, s.who === "You" ? 0.14 : 0.26)} 94%, transparent 94%)`,
-            borderRadius: 3,
-            padding: "0 2px",
-            margin: "0 -2px",
-          }}
-        >
-          {s.caught}
-        </span>
-        {s.after}”
-      </span>
-      <span className="rounded-full bg-card px-[10px] py-[4px] text-[12px] font-medium text-soft">{s.kind}</span>
+      <span className="text-[clamp(18px,2vw,24px)] font-medium tracking-[-0.02em] text-muted">“{r.said}”</span>
+      <svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="#7A7A74" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M1 6h19M15 1l5 5-5 5" />
+      </svg>
+      <span className="text-[clamp(18px,2vw,24px)] font-semibold tracking-[-0.02em] text-ink">{r.means}</span>
+      <span className="rounded-full bg-card px-[10px] py-[4px] text-[12px] font-medium text-soft">{r.kind}</span>
     </span>
   );
 }
 
-function Row({ items, seconds, reverse = false }: { items: Said[]; seconds: number; reverse?: boolean }) {
+function Row({ items, seconds, reverse = false }: { items: Read[]; seconds: number; reverse?: boolean }) {
   // Two copies side by side, moved by exactly one copy's width, loop without a seam.
   return (
     <div className="flex overflow-hidden">
@@ -75,11 +56,11 @@ function Row({ items, seconds, reverse = false }: { items: Said[]; seconds: numb
         <div
           key={copy}
           aria-hidden={copy === 1}
-          className="ticker flex shrink-0 items-center gap-16 pr-16"
+          className="ticker flex shrink-0 items-center gap-20 pr-20"
           style={{ animation: `${reverse ? "k-ticker-back" : "k-ticker"} ${seconds}s linear infinite` }}
         >
-          {items.map((s) => (
-            <Line key={s.caught} s={s} />
+          {items.map((r) => (
+            <Line key={r.said} r={r} />
           ))}
         </div>
       ))}
@@ -89,8 +70,8 @@ function Row({ items, seconds, reverse = false }: { items: Said[]; seconds: numb
 
 export function Ticker() {
   return (
-    <section aria-label="How people really talk, and what Krovvi keeps from it" className="relative pb-6">
-      <div className="mb-8 px-5 text-center text-[14px] text-faint">How people really talk, and what Krovvi keeps.</div>
+    <section aria-label="What people say, and what Krovvi understands from it" className="relative pb-6">
+      <div className="mb-8 px-5 text-center text-[14px] text-faint">What people say, and what Krovvi understands.</div>
       <div
         className="flex flex-col gap-7"
         style={{
@@ -98,8 +79,8 @@ export function Ticker() {
           maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
         }}
       >
-        <Row items={THEM} seconds={95} />
-        <Row items={YOU} seconds={110} reverse />
+        <Row items={THEM} seconds={110} />
+        <Row items={YOU} seconds={120} reverse />
       </div>
     </section>
   );

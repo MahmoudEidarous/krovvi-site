@@ -36,29 +36,33 @@ export function StatusBar({ time = "9:41" }: { time?: string }) {
 
 type IconName = "back" | "close" | "more" | "plus";
 
+/**
+ * The app's nav buttons (components/nav-back.tsx): a 34 point disc on the
+ * card colour, with a small glyph. Back is a chevron, more is three dots.
+ */
 export function NavCircle({ icon, className }: { icon: IconName; className?: string }) {
   return (
-    <span className={`flex h-[44px] w-[44px] items-center justify-center rounded-full bg-card-hi ${className ?? ""}`}>
+    <span className={`flex h-[34px] w-[34px] items-center justify-center rounded-full bg-card ${className ?? ""}`}>
       {icon === "back" && (
-        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#EDEDEB" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M10 2 2 10l8 8" />
+        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" stroke="#EDEDEB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M6.5 1.5 1.5 6.5l5 5" />
         </svg>
       )}
       {icon === "close" && (
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#EDEDEB" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-          <path d="M2 2l10 10M12 2 2 12" />
+        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="#8F8F8A" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+          <path d="M1.5 1.5l8 8M9.5 1.5l-8 8" />
         </svg>
       )}
       {icon === "more" && (
-        <svg width="20" height="4" viewBox="0 0 20 4" fill="#EDEDEB" aria-hidden="true">
-          <circle cx="2" cy="2" r="2" />
-          <circle cx="10" cy="2" r="2" />
-          <circle cx="18" cy="2" r="2" />
-        </svg>
+        <span className="flex gap-[3px]">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="h-[3.5px] w-[3.5px] rounded-[2px] bg-ink" />
+          ))}
+        </span>
       )}
       {icon === "plus" && (
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#EDEDEB" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-          <path d="M9 1.5v15M1.5 9h15" />
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#EDEDEB" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+          <path d="M6 1v10M1 6h10" />
         </svg>
       )}
     </span>

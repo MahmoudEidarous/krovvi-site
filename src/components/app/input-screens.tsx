@@ -15,6 +15,7 @@ import {
   UserBubble,
   WorkingStrip,
 } from "./chat";
+import { HomeScreen } from "./home";
 import { AppIcon, StatusBar } from "./ui";
 
 /**
@@ -257,38 +258,8 @@ export function UploadScreen() {
   let t = titleAt + 350;
   return (
     <div className="relative h-full w-full overflow-hidden bg-ground">
-      {/* Home behind the sheet: search, sort and add, the lenses, today's notes. */}
-      <StatusBar />
-      <div className="absolute inset-x-[16px] top-[71px] flex gap-[8px]">
-        <span className="flex h-[46px] flex-1 items-center gap-[10px] rounded-[16px] border-[0.5px] border-line bg-card-hi px-[14px] text-[14px] text-faint">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="#7A7A74" strokeWidth="1.6" strokeLinecap="round" aria-hidden="true">
-            <circle cx="6.5" cy="6.5" r="5" />
-            <path d="m10.3 10.3 3.2 3.2" />
-          </svg>
-          Search everything you&apos;ve said
-        </span>
-        <span className="h-[46px] w-[46px] rounded-full border-[0.5px] border-line bg-card-hi" />
-        <span className="flex h-[46px] w-[46px] items-center justify-center rounded-full border-[0.5px] border-line bg-card-hi">
-          <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
-            <path d="M7.5 1v13M1 7.5h13" stroke="#EDEDEB" strokeWidth="1.7" strokeLinecap="round" />
-          </svg>
-        </span>
-      </div>
-      <div className="absolute left-[16px] top-[129px] flex gap-[18px] text-[15px] font-medium tracking-[-0.2px] text-muted">
-        <span className="text-ink">All</span>
-        <span>Folders</span>
-        <span>
-          Recordings <span className="text-[12px] text-faint">24</span>
-        </span>
-        <span>
-          Files <span className="text-[12px] text-faint">6</span>
-        </span>
-      </div>
-      <div className="absolute inset-x-[16px] top-[205px]">
-        <div className="px-[4px] text-[11px] uppercase tracking-[1px] text-faint">Today</div>
-        <div className="mt-[8px] h-[116px] rounded-[17px] bg-card" />
-        <div className="mt-[8px] h-[116px] rounded-[17px] bg-card" />
-      </div>
+      {/* Home behind the sheet, with its dock and the record button. */}
+      <HomeScreen />
       <div className="seq transient absolute inset-0 bg-black/60" style={seq(`k-fade 240ms ${EASE} 0ms both, k-hide 140ms linear ${openAt - 200}ms forwards`)} />
 
       {/* The Add sheet: capture above the line, paste below. */}

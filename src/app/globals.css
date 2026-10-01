@@ -549,6 +549,13 @@ body {
     transform: translateX(160%);
   }
 }
+/* Home steps back as the recording stage covers it. */
+@keyframes k-home-out {
+  to {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
 @keyframes k-sheet-up {
   from {
     transform: translateY(100%);

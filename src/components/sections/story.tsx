@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
 
 import { ChatTellScreen, ShareScreen, UploadScreen } from "@/components/app/input-screens";
 import { BriefScreen, CaughtScreen } from "@/components/app/note-screens";
@@ -59,20 +59,40 @@ const STEPS: Step[] = [
 
 export function Story() {
   const [active, setActive] = useState(0);
-  const refs = useRef<Array<HTMLDivElement | null>>([]);
+  const track = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
 
+  // The story follows the scroll: where the middle of the screen sits along
+  // the steps decides the step, and a bar under the phone fills as you go.
+  const { scrollYProgress } = useScroll({ target: track, offset: ["start center", "end center"] });
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    const next = Math.min(STEPS.length - 1, Math.max(0, Math.floor(v * STEPS.length)));
+    setActive((now) => (now === next ? now : next));
+  });
+  const fill = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  // Nothing plays before the story is on screen: the first film starts when you reach it.
+  const [seen, setSeen] = useState(false);
   useEffect(() => {
+    const el = track.current;
+    if (!el) return;
     const io = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) setActive(Number((entry.target as HTMLElement).dataset.step));
+      ([e]) => {
+        if (e.isIntersecting) {
+          setSeen(true);
+          io.disconnect();
         }
       },
-      { rootMargin: "-48% 0px -48% 0px" }
+      { rootMargin: "0px 0px -35% 0px" }
     );
-    refs.current.forEach((el) => el && io.observe(el));
+    io.observe(el);
     return () => io.disconnect();
   }, []);
+
+  // The phone settles in as the section arrives.
+  const { scrollYProgress: arrive } = useScroll({ target: track, offset: ["start end", "start 35%"] });
+  const settle = useTransform(arrive, [0, 1], [0.94, 1]);
+  const light = useTransform(arrive, [0, 1], [0.4, 1]);
 
   return (
     <section id="how" className="relative scroll-mt-10 px-5 pt-[120px] md:pt-[180px]">
@@ -92,21 +112,15 @@ export function Story() {
 
         {/* Wide screens: the phone stays, the words move past it. */}
         <div className="relative mt-4 hidden md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,420px)] md:gap-14 lg:gap-24">
-          <div>
+          <div ref={track}>
             {STEPS.map((step, i) => (
-              <div
-                key={i}
-                ref={(el) => {
-                  refs.current[i] = el;
-                }}
-                data-step={i}
-                className="flex min-h-[78vh] flex-col justify-center"
-              >
+              <div key={i} className="flex min-h-[72vh] flex-col justify-center">
                 <div
-                  className="transition-[opacity,transform] duration-700"
+                  className="transition-[opacity,transform,filter] duration-700"
                   style={{
-                    opacity: active === i ? 1 : 0.16,
-                    transform: active === i ? "none" : "translateY(10px)",
+                    opacity: active === i ? 1 : 0.14,
+                    transform: active === i ? "none" : "translateY(12px)",
+                    filter: active === i ? "none" : "blur(1.5px)",
                     transitionTimingFunction: "cubic-bezier(0.23,1,0.32,1)",
                   }}
                 >
@@ -121,36 +135,32 @@ export function Story() {
           <div className="relative">
             <div className="sticky top-[calc(50vh-min(380px,43vh))] flex items-center justify-center py-2">
               <div className="glow-warm left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2" />
-              <div className="relative w-[min(340px,37vh)]">
+              <motion.div className="relative w-[min(340px,37vh)]" style={reduced ? undefined : { scale: settle, opacity: light }}>
                 <Phone label={STEPS[active].label}>
                   <AnimatePresence initial={false}>
                     <motion.div
-                      key={active}
+                      key={seen ? active : "waiting"}
                       className="absolute inset-0"
-                      initial={{ opacity: 0, y: 18 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.5, ease: EASE }}
+                      initial={reduced ? false : { opacity: 0, scale: 0.985, filter: "blur(6px)" }}
+                      animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+                      exit={reduced ? undefined : { opacity: 0, scale: 1.01, filter: "blur(4px)" }}
+                      transition={{ duration: 0.55, ease: EASE }}
                     >
-                      {STEPS[active].screen()}
+                      {seen ? STEPS[active].screen() : <div className="h-full w-full bg-ground" />}
                     </motion.div>
                   </AnimatePresence>
                 </Phone>
-                {/* Where we are in the story: six short marks under the phone. */}
-                <div className="mt-7 flex justify-center gap-[6px]" aria-hidden="true">
-                  {STEPS.map((_, i) => (
-                    <span
-                      key={i}
-                      className="h-[3px] rounded-full transition-all duration-500"
-                      style={{
-                        width: active === i ? 28 : 12,
-                        background: active === i ? "var(--fg)" : "var(--line)",
-                        transitionTimingFunction: "cubic-bezier(0.23,1,0.32,1)",
-                      }}
-                    />
-                  ))}
+                {/* Where we are in the story: the step's name and a bar that fills as you scroll. */}
+                <div className="mx-auto mt-7 flex w-[min(280px,100%)] items-center gap-3" aria-hidden="true">
+                  <span className="whitespace-nowrap text-right text-[13px] font-medium text-soft">{STEPS[active].word.replace(/\.$/, "")}</span>
+                  <span className="relative h-[3px] flex-1 overflow-hidden rounded-full bg-line">
+                    <motion.span className="absolute inset-y-0 left-0 rounded-full bg-ink" style={{ width: fill }} />
+                  </span>
+                  <span className="w-[34px] text-[13px] text-faint tabular">
+                    {active + 1}/{STEPS.length}
+                  </span>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
