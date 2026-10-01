@@ -1,7 +1,7 @@
 /**
  * Krovvi's chat, drawn to the app's own numbers (catch8 app/agent.tsx,
- * components/answer/sources.tsx, memory/turn-chip.tsx, glyph.tsx; the spec
- * is in the site's notes). One screen is 393 by 852 points: the nav row at
+ * components/answer/sources.tsx, memory/turn-chip.tsx, glyph.tsx; every
+ * number is listed in docs/app-visual-spec.md). One screen is 393 by 852 points: the nav row at
  * 59, the thread from 111, the composer field from 750. Nothing here moves
  * by itself; the films that use it time each piece with the .anim helper.
  */
