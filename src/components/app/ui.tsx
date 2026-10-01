@@ -117,6 +117,23 @@ export function KGlyph({ size = 18, color = "#EDEDEB" }: { size?: number; color?
   );
 }
 
+/** Krovvi's home-screen icon (brand/icon-1024.svg): eleven ivory dots as a K on black, in iOS's rounded square. */
+const ICON_DOTS: Array<[number, number]> = [
+  [358, 268.8], [358, 390.4], [358, 512], [358, 633.6], [358, 755.2],
+  [464.4, 436], [570.8, 360], [677.2, 284], [464.4, 588], [570.8, 664], [677.2, 740],
+];
+export function AppIcon({ size = 60 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 1024 1024" className="shrink-0" aria-hidden="true">
+      <rect width="1024" height="1024" rx="229" fill="#0A0A0A" />
+      <rect x="2" y="2" width="1020" height="1020" rx="227" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="4" />
+      {ICON_DOTS.map(([cx, cy]) => (
+        <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r={49.4} fill="#EDEDEB" />
+      ))}
+    </svg>
+  );
+}
+
 /** A round check, empty or done. */
 export function Check({ done = false, className, style }: { done?: boolean; className?: string; style?: React.CSSProperties }) {
   return (

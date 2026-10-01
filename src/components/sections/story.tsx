@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-import { AgreedScreen, BriefScreen, CaughtScreen, DebriefScreen, LinkScreen } from "@/components/app/note-screens";
+import { ChatTellScreen, ShareScreen, UploadScreen } from "@/components/app/input-screens";
+import { BriefScreen, CaughtScreen } from "@/components/app/note-screens";
 import { RecordScreen } from "@/components/app/record-screen";
 import { InView } from "@/components/in-view";
 import { Phone } from "@/components/phone";
@@ -11,38 +12,48 @@ import { an } from "@/lib/anim";
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
-type Step = { title: string; body: string; label: string; screen: () => React.ReactNode };
+/**
+ * Every way in, then what comes of it. One big word and one short line per
+ * step; the phone shows the step happening in the app.
+ */
+type Step = { word: string; line: string; label: string; screen: () => React.ReactNode };
 
 const STEPS: Step[] = [
   {
-    title: "Talk the way you always do.",
-    body: "Tap record when you talk in person, or send Krovvi to your Zoom, Meet or Teams call. English, Arabic or both.",
+    word: "Talk.",
+    line: "Record a conversation in person, or send Krovvi to your Zoom, Meet or Teams call.",
     label: "Recording in Krovvi: the timer runs and the voice moves.",
     screen: () => <RecordScreen />,
   },
   {
-    title: "See what was caught.",
-    body: "Soon after you stop, Krovvi shows what was promised, decided and paid. Every line plays the moment it was said.",
+    word: "Chat.",
+    line: "Ask it anything, or tell it something to keep. Type it or say it.",
+    label: "A chat with Krovvi: you tell it Lina has the kids on Wednesday, and it keeps that with Lina.",
+    screen: () => <ChatTellScreen />,
+  },
+  {
+    word: "Upload.",
+    line: "Photos, screenshots, PDFs and voice notes. It reads every one.",
+    label: "A lease added to Krovvi as a PDF, and what it found inside: the new rent and the notice period.",
+    screen: () => <UploadScreen />,
+  },
+  {
+    word: "Share.",
+    line: "Send a WhatsApp chat, a link or a video from whatever app you're in.",
+    label: "A WhatsApp chat shared to Krovvi from the share sheet, read and understood.",
+    screen: () => <ShareScreen />,
+  },
+  {
+    word: "It understands.",
+    line: "It works out what was promised, decided and paid, and who it's about.",
     label: "What I caught: a task, a decision, a sum and a date, each with the second it was said.",
     screen: () => <CaughtScreen />,
   },
   {
-    title: "Make sure you both agree.",
-    body: "Send the other person what you agreed. They confirm it or fix a line from their own phone, no app needed.",
-    label: "What you agreed with Sara, sent, opened and confirmed.",
-    screen: () => <AgreedScreen />,
-  },
-  {
-    title: "Walk in knowing where things stand.",
-    body: "Before you meet again, Krovvi shows what you owe them, what they owe you, and what's new since you last talked.",
+    word: "It remembers.",
+    line: "Before you see someone, it tells you where things stand.",
     label: "Sara Ali, in 25 minutes: last time, what you owe, what Sara owes you, and what is worth knowing.",
     screen: () => <BriefScreen />,
-  },
-  {
-    title: "Tell it what changed.",
-    body: "After you meet, say it in a few words. Krovvi updates the dates and the tasks, and you can undo any change.",
-    label: "How did it go with Sara? Krovvi updated 2 things, each with Undo.",
-    screen: () => <DebriefScreen />,
   },
 ];
 
@@ -64,17 +75,23 @@ export function Story() {
   }, []);
 
   return (
-    <section id="how" className="relative scroll-mt-10 px-5 pt-10 md:pt-24">
-      <div className="mx-auto max-w-[1120px]">
-        <InView className="mx-auto max-w-[760px] text-center">
+    <section id="how" className="relative scroll-mt-10 px-5 pt-[120px] md:pt-[180px]">
+      <div className="mx-auto max-w-[1160px]">
+        <InView className="max-w-[760px]">
           <div className="anim text-[14px] font-medium text-muted" style={an("k-fade", 0, 800)}>How it works</div>
-          <h2 className="anim mt-3 text-balance text-[clamp(36px,5.6vw,64px)] font-semibold leading-[1.04] tracking-[-0.04em]" style={an("k-rise-lg", 100, 1000)}>
-            One conversation, start to finish.
+          <h2
+            className="anim mt-3 text-balance text-[clamp(38px,5.6vw,68px)] font-semibold leading-[1.02] tracking-[-0.045em]"
+            style={an("k-rise-lg", 100, 1000)}
+          >
+            Tell it things. Send it things.
           </h2>
+          <p className="anim mt-6 max-w-[520px] text-pretty text-[clamp(17px,2vw,20px)] leading-[1.6] text-muted" style={an("k-rise", 250, 900)}>
+            However it reaches Krovvi, it lands in one place, linked to the people and plans it&apos;s about.
+          </p>
         </InView>
 
-        {/* Wide screens: the phone stays, the story moves past it. */}
-        <div className="relative mt-10 hidden md:grid md:grid-cols-[1fr_minmax(0,440px)] md:gap-16 lg:gap-24">
+        {/* Wide screens: the phone stays, the words move past it. */}
+        <div className="relative mt-4 hidden md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,420px)] md:gap-14 lg:gap-24">
           <div>
             {STEPS.map((step, i) => (
               <div
@@ -83,88 +100,69 @@ export function Story() {
                   refs.current[i] = el;
                 }}
                 data-step={i}
-                className="flex min-h-[86vh] flex-col justify-center"
+                className="flex min-h-[78vh] flex-col justify-center"
               >
                 <div
-                  className="transition-[opacity,transform] duration-500"
+                  className="transition-[opacity,transform] duration-700"
                   style={{
-                    opacity: active === i ? 1 : 0.28,
-                    transform: active === i ? "none" : "translateY(6px)",
+                    opacity: active === i ? 1 : 0.16,
+                    transform: active === i ? "none" : "translateY(10px)",
                     transitionTimingFunction: "cubic-bezier(0.23,1,0.32,1)",
                   }}
                 >
-                  <div className="text-[15px] font-medium text-faint tabular">0{i + 1}</div>
-                  <h3 className="mt-3 max-w-[480px] text-balance text-[clamp(30px,3.6vw,46px)] font-semibold leading-[1.08] tracking-[-0.035em]">
-                    {step.title}
+                  <h3 className="text-[clamp(56px,7.4vw,104px)] font-semibold leading-[0.98] tracking-[-0.055em]">
+                    {step.word}
                   </h3>
-                  <p className="mt-5 max-w-[460px] text-pretty text-[19px] leading-[1.6] text-muted">{step.body}</p>
+                  <p className="mt-6 max-w-[440px] text-pretty text-[clamp(18px,1.7vw,21px)] leading-[1.55] text-muted">{step.line}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="relative">
-            <div className="sticky top-[calc(50vh-min(370px,42vh))] flex items-center justify-center py-2">
-              <div className="glow-warm left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2" />
-              <div className="relative w-[min(330px,36vh)]">
-                {/* At step 3 the phone steps aside so Sara's side can stand next to it. */}
-                <motion.div
-                  animate={active === 2 ? { x: "-42%", scale: 0.94 } : { x: "0%", scale: 1 }}
-                  transition={{ duration: 0.8, ease: EASE }}
-                >
-                  <Phone label={STEPS[active].label}>
-                    <AnimatePresence initial={false}>
-                      <motion.div
-                        key={active}
-                        className="absolute inset-0"
-                        initial={{ opacity: 0, scale: 1.015 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.45, ease: EASE }}
-                      >
-                        {STEPS[active].screen()}
-                      </motion.div>
-                    </AnimatePresence>
-                  </Phone>
-                </motion.div>
-                <AnimatePresence>
-                  {active === 2 && (
+            <div className="sticky top-[calc(50vh-min(380px,43vh))] flex items-center justify-center py-2">
+              <div className="glow-warm left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2" />
+              <div className="relative w-[min(340px,37vh)]">
+                <Phone label={STEPS[active].label}>
+                  <AnimatePresence initial={false}>
                     <motion.div
-                      key="their-side"
-                      className="absolute left-[52%] top-[9%] w-[84%]"
-                      initial={{ opacity: 0, x: 60 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 40 }}
-                      transition={{ duration: 0.8, ease: EASE, delay: 0.25 }}
+                      key={active}
+                      className="absolute inset-0"
+                      initial={{ opacity: 0, y: 18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.5, ease: EASE }}
                     >
-                      <Phone label="Sara's side: a private page in her browser to confirm or fix a line.">
-                        <LinkScreen />
-                      </Phone>
-                      <div className="mt-3 text-center text-[13px] text-faint">Sara&apos;s phone, no app needed</div>
+                      {STEPS[active].screen()}
                     </motion.div>
-                  )}
-                </AnimatePresence>
+                  </AnimatePresence>
+                </Phone>
+                {/* Where we are in the story: six short marks under the phone. */}
+                <div className="mt-7 flex justify-center gap-[6px]" aria-hidden="true">
+                  {STEPS.map((_, i) => (
+                    <span
+                      key={i}
+                      className="h-[3px] rounded-full transition-all duration-500"
+                      style={{
+                        width: active === i ? 28 : 12,
+                        background: active === i ? "var(--fg)" : "var(--line)",
+                        transitionTimingFunction: "cubic-bezier(0.23,1,0.32,1)",
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Phones: each step with its own screen. */}
-        <div className="mt-12 flex flex-col gap-24 md:hidden">
+        <div className="mt-16 flex flex-col gap-24 md:hidden">
           {STEPS.map((step, i) => (
             <div key={i}>
-              <div className="text-[14px] font-medium text-faint tabular">0{i + 1}</div>
-              <h3 className="mt-2 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em]">{step.title}</h3>
-              <p className="mt-3 text-pretty text-[17px] leading-[1.6] text-muted">{step.body}</p>
-              <InView className="relative mx-auto mt-8 w-[min(300px,78vw)]">
+              <h3 className="text-[52px] font-semibold leading-[1] tracking-[-0.05em]">{step.word}</h3>
+              <p className="mt-4 text-pretty text-[17px] leading-[1.6] text-muted">{step.line}</p>
+              <InView className="relative mx-auto mt-10 w-[min(300px,78vw)]">
                 <Phone label={step.label}>{step.screen()}</Phone>
-                {i === 2 && (
-                  <div className="mx-auto mt-6 w-[86%]">
-                    <Phone label="Sara's side: a private page in her browser to confirm or fix a line.">
-                      <LinkScreen />
-                    </Phone>
-                    <div className="mt-3 text-center text-[13px] text-faint">Sara&apos;s phone, no app needed</div>
-                  </div>
-                )}
               </InView>
             </div>
           ))}

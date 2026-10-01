@@ -1,7 +1,6 @@
 import { Bento } from "@/components/sections/bento";
 import { Closing } from "@/components/sections/closing";
 import { Hero } from "@/components/sections/hero";
-import { Inputs } from "@/components/sections/inputs";
 import { Loop } from "@/components/sections/loop";
 import { Statement } from "@/components/sections/statement";
 import { Story } from "@/components/sections/story";
@@ -20,7 +19,6 @@ export default function Home() {
         <Ticker />
         <Bento />
         <Story />
-        <Inputs />
         <Loop />
         <Trust />
         <Closing />

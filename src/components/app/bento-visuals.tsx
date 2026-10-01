@@ -1,5 +1,5 @@
 import { an } from "@/lib/anim";
-import { Card, Check, PersonFace, KGlyph, Play } from "./ui";
+import { AppIcon, Card, Check, PersonFace, Play } from "./ui";
 
 /* ── It remembers: a moment played back, the words arriving with the sound ── */
 
@@ -43,7 +43,7 @@ export function RememberVisual() {
         <div className="px-1 text-[13px] font-semibold text-muted">What I caught</div>
         {[
           ["Task", "Karim: Send the signed quote", "Due Monday", "3:12"],
-          ["Decision", "Half up front, half on delivery", "", "5:40"],
+          ["Decision", "Half up front, half when it's done", "", "5:40"],
           ["Money", "The total stays at 42,000", "", "6:02"],
           ["Date", "Install starts on the 5th", "", "8:47"],
         ].map(([kind, text, sub, at], i) => (
@@ -241,8 +241,8 @@ function LockNote({ title, body, when = "now" }: { title: string; body: string; 
   return (
     <div className="rounded-[18px] bg-[rgba(52,50,48,0.72)] px-3 py-[10px] backdrop-blur-xl">
       <div className="flex items-start gap-[10px]">
-        <span className="mt-[1px] flex h-[32px] w-[32px] shrink-0 items-center justify-center rounded-[8px] bg-ground">
-          <KGlyph size={19} />
+        <span className="mt-[1px] shrink-0">
+          <AppIcon size={32} />
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex items-baseline justify-between gap-2">
@@ -259,7 +259,7 @@ function LockNote({ title, body, when = "now" }: { title: string; body: string; 
 /* ── It does the next step, with your OK ── */
 
 export function NextStepVisual() {
-  const body = "Hi Karim, here is the signed quote: 42,000 in total, half up front and half on delivery. Thanks, Sam".split(" ");
+  const body = "Hi Karim, here is the signed quote: 42,000 in total, half up front and half when it's done. Thanks, Sam".split(" ");
   const seq = (steps: string) => ({ animation: steps });
   return (
     <div className="grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">

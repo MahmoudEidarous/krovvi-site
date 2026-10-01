@@ -463,3 +463,135 @@ body {
 .tabular {
   font-variant-numeric: tabular-nums;
 }
+
+/* ── The chat films: letters that take space only once typed, the arc
+   spinner, the light that passes over a status line, and a pause. ───── */
+@keyframes k-char {
+  from {
+    font-size: 0;
+  }
+}
+@keyframes k-collapse {
+  to {
+    font-size: 0;
+  }
+}
+@keyframes k-hide {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes k-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Shown only while it plays: on for its whole length, then back to the element's own (hidden) style. */
+@keyframes k-on {
+  0% {
+    opacity: 0;
+  }
+  4%,
+  96% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Hidden only while it plays: the element's own style is shown before and after. */
+@keyframes k-off {
+  0% {
+    opacity: 1;
+  }
+  4%,
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes k-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes k-sweep {
+  0% {
+    opacity: 0.5;
+  }
+  18% {
+    opacity: 1;
+  }
+  40%,
+  100% {
+    opacity: 0.5;
+  }
+}
+/* One soft light across a phone's glass, left to right, then gone. */
+@keyframes k-glint {
+  0% {
+    opacity: 0;
+    transform: translateX(-110%);
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(160%);
+  }
+}
+@keyframes k-sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+@keyframes k-sheet-down {
+  to {
+    transform: translateY(100%);
+  }
+}
+/* A row pressed: the raised ground at 60% and a hair smaller, then back. */
+@keyframes k-row-press {
+  0%,
+  100% {
+    background-color: transparent;
+    transform: scale(1);
+  }
+  30%,
+  70% {
+    background-color: rgba(31, 31, 30, 0.6);
+    transform: scale(0.985);
+  }
+}
+/* The app's K loader: each dot lights and fades in turn (components/k-thinking.tsx). */
+@keyframes k-think {
+  0% {
+    opacity: 0.22;
+  }
+  18% {
+    opacity: 1;
+  }
+  62%,
+  100% {
+    opacity: 0.22;
+  }
+}
+@keyframes k-scroll-away {
+  to {
+    transform: translateY(-92%);
+    opacity: 0;
+  }
+}
+.paused,
+.paused * {
+  animation-play-state: paused !important;
+}

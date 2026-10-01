@@ -22,12 +22,23 @@ function NoteTop() {
   );
 }
 
-const CAUGHT: Array<{ kind: string; text: React.ReactNode; at: string; sub?: string }> = [
-  { kind: "Task", text: <><b className="font-semibold text-ink">You:</b> Send the new deck with the updated numbers</>, at: "3:12", sub: "Due Friday" },
+/** What came out of the conversation, worded as the app words it (understood.tsx). */
+const CAUGHT: Array<{ kind: string; lead?: string; text: string; at: string; due?: string }> = [
+  { kind: "Task", lead: "You owe Sara", text: "send the new deck with the updated numbers", at: "3:12", due: "Friday" },
   { kind: "Decision", text: "The Atlas launch moves to October 15", at: "7:40" },
   { kind: "Money", text: "The design budget stays at 40,000", at: "9:05" },
-  { kind: "Date", text: "Review on Thursday at 10", at: "11:22" },
 ];
+
+/** The quiet three dots that open Right / Not right on a caught line. */
+function MoreDots() {
+  return (
+    <span className="flex h-[26px] w-[30px] items-center justify-center gap-[3px]">
+      {[0, 1, 2].map((i) => (
+        <span key={i} className="h-[3px] w-[3px] rounded-full bg-faint" />
+      ))}
+    </span>
+  );
+}
 
 /** "What I caught": what came out of the conversation, each line one tap from its second. */
 export function CaughtScreen({ still = false }: { still?: boolean }) {
@@ -35,65 +46,77 @@ export function CaughtScreen({ still = false }: { still?: boolean }) {
   return (
     <div className="relative h-full w-full bg-ground">
       <NoteTop />
-      <div className="absolute inset-x-[16px] top-[262px]">
-        <div className={`${A} mb-[10px] px-[4px] text-[15px] font-semibold text-muted`} style={an("k-fade", 150)}>
+      <div className="absolute inset-x-[16px] top-[262px] flex flex-col gap-[12px]">
+        <div className={`${A} px-[4px] text-[12px] uppercase tracking-[1.1px] text-faint`} style={an("k-fade", 150)}>
           What I caught
         </div>
         <Card className="overflow-hidden">
           {CAUGHT.map((line, i) => (
             <div key={i} className={A} style={an("k-rise", 300 + i * 260, 650)}>
               {i > 0 && <Divider />}
-              <div className="flex items-start gap-[12px] px-[16px] py-[12px]">
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-semibold text-faint">{line.kind}</div>
-                  <div className="mt-[2px] text-[15.5px] leading-[1.35] tracking-[-0.15px] text-soft">{line.text}</div>
-                  {line.sub && <div className="mt-[3px] text-[13px] text-muted">{line.sub}</div>}
-                  {i === 0 && (
-                    <div className="mt-[8px] h-[3px] w-full overflow-hidden rounded-full bg-card-hi">
-                      <div
-                        className={`${A} h-full origin-left rounded-full bg-ink`}
-                        style={an("k-grow-x", 2100, 2600)}
-                      />
-                    </div>
+              <div className="flex flex-col gap-[6px] px-[16px] pb-[10px] pt-[12px]">
+                <div className="mb-[-2px] text-[11px] font-semibold tracking-[0.4px] text-faint">{line.kind}</div>
+                <div className="text-[15px] leading-[21.75px] tracking-[-0.15px] text-soft">
+                  {line.lead && (
+                    <>
+                      <b className="font-semibold text-ink">{line.lead}</b>
+                      <span className="text-muted">: </span>
+                    </>
                   )}
+                  {line.text}
                 </div>
-                <span
-                  className={`mt-[14px] flex items-center gap-[5px] rounded-full px-[9px] py-[4px] text-[12px] text-faint tabular ${i === 0 ? "bg-card-hi text-ink" : ""}`}
-                >
-                  <Play size={7} />
-                  {line.at}
-                </span>
+                <div className="flex min-h-[26px] items-center justify-between">
+                  <span className="flex items-center gap-[8px] text-[12px] text-faint tabular">
+                    <span className="flex items-center gap-[5px]">
+                      <span
+                        className="h-0 w-0"
+                        style={{ borderTop: "3.5px solid transparent", borderBottom: "3.5px solid transparent", borderLeft: "6px solid #7A7A74" }}
+                      />
+                      {line.at}
+                    </span>
+                    {line.due && <span className="text-soft">Due {line.due}</span>}
+                  </span>
+                  <MoreDots />
+                </div>
               </div>
             </div>
           ))}
         </Card>
 
-        <div className={`${A} mt-[12px]`} style={an("k-pop", 1700, 600)}>
-          <Card className="px-[16px] py-[11px]">
+        <div className={A} style={an("k-pop", 1400, 600)}>
+          <Card className="flex flex-col gap-[3px] px-[16px] py-[11px]">
             <div className="text-[12px] font-medium text-faint">Noticed</div>
-            <div className="mt-[2px] text-[15px] text-soft">A date moved. Moved from October 3 to October 15</div>
+            <div className="text-[15px] leading-[21px] text-soft">
+              <b className="font-semibold text-ink">Moved from October 3 to October 15.</b> The Atlas launch
+            </div>
           </Card>
         </div>
 
-        <div className={`${A} mt-[16px] flex items-center gap-[12px] px-[4px]`} style={an("k-rise", 2300, 600)}>
-          <span className="flex -space-x-[8px]">
-            <span className="rounded-full ring-[3px] ring-ground"><PersonFace name="Sara Ali" size={34} /></span>
-            <span className="rounded-full ring-[3px] ring-ground"><PersonFace name="Omar" size={34} /></span>
-          </span>
-          <span className="text-[14px] text-muted">Sara now has 3 things, 1 task due Sunday.</span>
+        <div className={`${A} flex items-center gap-[10px] px-[4px]`} style={an("k-rise", 1900, 600)}>
+          <PersonFace name="Sara Ali" size={22} />
+          <span className="text-[14px] text-muted">Sara now has 3 things, 1 task due Friday.</span>
         </div>
 
-        <div className={`${A} mt-[14px]`} style={an("k-pop", 2900, 600)}>
-          <Card className="px-[16px] pb-[12px] pt-[13px]">
-            <div className="text-[15.5px] font-medium leading-[1.35] tracking-[-0.2px] text-ink">
-              Want this ready before you see Sara next?
-            </div>
-            <div className="mt-[3px] text-[13px] text-muted">What is open with them comes to you before you meet.</div>
-            <div className="mt-[10px] flex gap-[8px]">
-              <span className="rounded-full bg-ink px-[18px] py-[7px] text-[14px] font-semibold text-ground">Yes</span>
-              <span className="rounded-full bg-card-hi px-[16px] py-[7px] text-[14px] font-medium text-ink">Not now</span>
+        <div className={A} style={an("k-pop", 2400, 600)}>
+          <Card className="flex flex-col gap-[6px] pb-[12px] pl-[16px] pr-[12px] pt-[13px]">
+            <div className="text-[15.5px] font-medium leading-[21px] tracking-[-0.2px] text-ink">Want this ready before you see Sara next?</div>
+            <div className="text-[13px] text-muted">What is open with them comes to you before you meet.</div>
+            <div className="mt-[4px] flex items-center justify-end gap-[14px]">
+              <span className="text-[14px] font-medium text-soft">Not now</span>
+              <span className="flex h-[36px] min-w-[72px] items-center justify-center rounded-[18px] bg-ink px-[16px] text-[15px] font-semibold text-ground">
+                Yes
+              </span>
             </div>
           </Card>
+        </div>
+
+        <div className={`${A} flex gap-[18px] px-[4px]`} style={an("k-rise", 2800, 600)}>
+          {["Sara Ali", "Omar"].map((name) => (
+            <span key={name} className="flex w-[52px] flex-col items-center gap-[4px]">
+              <PersonFace name={name} size={34} />
+              <span className="text-[11px] text-faint">{name.split(" ")[0]}</span>
+            </span>
+          ))}
         </div>
       </div>
     </div>
