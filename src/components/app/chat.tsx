@@ -86,6 +86,21 @@ export function DocGlyph({ size = 13, color = "#8F8F8A" }: { size?: number; colo
   );
 }
 
+/** A chat brought in from WhatsApp: the app's speech bubble. */
+export function BubbleGlyph({ size = 13, color = "#8F8F8A" }: { size?: number; color?: string }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M12 3.5c-4.9 0-8.5 3.2-8.5 7.2 0 2.1 1 4 2.7 5.3l-.7 3.8 3.9-2c.8.2 1.7.3 2.6.3 4.9 0 8.5-3.2 8.5-7.3S16.9 3.5 12 3.5Z"
+        fill="none"
+        stroke={color}
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function ActionIcons() {
   const s = { fill: "none", stroke: "#7A7A74", strokeWidth: 1.5, strokeLinecap: "round", strokeLinejoin: "round" } as const;
   return (
@@ -183,7 +198,7 @@ export function UserBubble({ children, className, style }: { children: ReactNode
 export function Receipt({ title, at, kind = "rec", className, style }: {
   title: string;
   at?: string;
-  kind?: "rec" | "doc";
+  kind?: "rec" | "doc" | "chat";
   className?: string;
   style?: CSSProperties;
 }) {
@@ -200,9 +215,7 @@ export function Receipt({ title, at, kind = "rec", className, style }: {
             style={{ borderTop: "4px solid transparent", borderBottom: "4px solid transparent", borderLeft: "6.5px solid #A9A8A2" }}
           />
         ) : (
-          <span className="ml-[1px]">
-            <DocGlyph size={13} />
-          </span>
+          <span className="ml-[1px]">{kind === "chat" ? <BubbleGlyph size={13} /> : <DocGlyph size={13} />}</span>
         )}
         <span className="truncate text-[12px] font-medium leading-none text-soft">{title}</span>
         {at && <span className="text-[11px] leading-none text-faint tabular">{at}</span>}

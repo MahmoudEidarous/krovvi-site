@@ -5,9 +5,8 @@ import { useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 
 /**
  * The idea in one paragraph, lit word by word as it scrolls past. The four
- * ways in carry a small moving picture inside the sentence: a voice, a
- * message, a page, the share arrow. One CSS variable moves per frame; every
- * word reads it and works out its own light.
+ * ways in carry a small moving tile inside the sentence. One CSS variable
+ * moves per frame; every word reads it and works out its own light.
  */
 type Piece = string | { mark: "talk" | "chat" | "upload" | "share" };
 
@@ -20,40 +19,68 @@ const PIECES: Piece[] = [
   ..."It works out what it all means and who it's about. And it remembers, so you don't have to.".split(" "),
 ];
 
+/**
+ * The pictures inside the sentence: small tiles in the app's graphite, lit
+ * from above like a key, each with one live detail. A voice moving, a
+ * message being typed, a page going up, the share arrow lifting. Each tile
+ * grows into place as the light reaches it.
+ */
 function Mark({ mark }: { mark: "talk" | "chat" | "upload" | "share" }) {
-  const stroke = { fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" } as const;
+  const line = { fill: "none", stroke: "#F2F1EE", strokeWidth: 1.9, strokeLinecap: "round", strokeLinejoin: "round" } as const;
   return (
     <span
       aria-hidden="true"
-      className="ml-[0.04em] mr-[0.05em] inline-flex h-[0.8em] min-w-[1.45em] items-center justify-center rounded-[0.28em] bg-card-hi px-[0.26em] align-[-0.1em] text-ink"
+      className="relative top-[-0.07em] ml-[0.04em] mr-[0.05em] inline-flex h-[0.94em] w-[0.94em] items-center justify-center rounded-[0.27em] align-middle"
+      style={{
+        background:
+          "radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0) 58%), linear-gradient(180deg, #31302e 0%, #1a1918 100%)",
+        boxShadow:
+          "inset 0 1px 0 rgba(255,255,255,0.16), inset 0 0 0 1px rgba(255,255,255,0.06), 0 0.04em 0.08em rgba(0,0,0,0.45), 0 0.2em 0.42em -0.12em rgba(0,0,0,0.6)",
+        transform: "scale(calc(0.78 + 0.22 * clamp(0, calc(var(--p) * (var(--n) + 4) - var(--i)), 1)))",
+        transition: "transform 180ms var(--ease)",
+      }}
     >
       {mark === "talk" && (
-        <span className="flex h-[0.42em] items-center gap-[0.07em]">
-          {[0.5, 0.9, 0.62, 1, 0.45, 0.78].map((h, i) => (
+        <span className="flex h-[0.46em] items-center gap-[0.05em]">
+          {[0.45, 0.85, 1, 0.62, 0.9, 0.5].map((h, i) => (
             <span
               key={i}
-              className="bar block w-[0.07em] rounded-full bg-ink"
-              style={{ height: `${h * 100}%`, "--d": `${i * -170}ms`, "--t": `${0.95 + (i % 3) * 0.22}s` } as React.CSSProperties}
+              className="bar block w-[0.06em] rounded-full bg-[#F2F1EE]"
+              style={{ height: "100%", transform: `scaleY(${h})`, "--d": `${i * -160}ms`, "--t": `${0.9 + (i % 3) * 0.2}s`, "--amp": h } as React.CSSProperties}
             />
           ))}
         </span>
       )}
       {mark === "chat" && (
-        <svg viewBox="0 0 24 24" className="h-[0.5em] w-[0.5em]" {...stroke}>
-          <path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v8.5a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V17H4a1.5 1.5 0 0 1-1.5-1.5V7A1.5 1.5 0 0 1 4 5.5Z" />
-          <path d="M7 10h10M7 13.2h6" />
+        <svg viewBox="0 0 24 24" className="h-[0.56em] w-[0.56em]">
+          {/* The app's own bubble: round corners, the bottom right one tucked. */}
+          <path d="M7.5 4.5h9a5 5 0 0 1 5 5v6.7a1.8 1.8 0 0 1-1.8 1.8H7.5a5 5 0 0 1-5-5V9.5a5 5 0 0 1 5-5Z" fill="#F2F1EE" />
+          <path d="M7 9.6h10" stroke="#1d1c1b" strokeWidth="1.9" strokeLinecap="round" />
+          <path
+            className="mark-loop"
+            d="M7 13.3h6.5"
+            stroke="#1d1c1b"
+            strokeWidth="1.9"
+            strokeLinecap="round"
+            style={{ transformBox: "fill-box", transformOrigin: "left center", animation: "k-type 2.6s var(--ease) infinite" }}
+          />
         </svg>
       )}
       {mark === "upload" && (
-        <svg viewBox="0 0 24 24" className="h-[0.5em] w-[0.5em]" {...stroke}>
-          <path d="M6.5 2.5h7.5l4.5 4.5v13a1.5 1.5 0 0 1-1.5 1.5h-10.5a1.5 1.5 0 0 1-1.5-1.5v-16a1.5 1.5 0 0 1 1.5-1.5Z" />
-          <path d="M13.5 2.5V7.5h5M8.5 12.5h7M8.5 16h5" />
+        <svg viewBox="0 0 24 24" className="h-[0.56em] w-[0.56em]">
+          <path d="M7 3h7l4.5 4.5V19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" {...line} />
+          <path d="M14 3v4.5h4.5" {...line} />
+          <g className="mark-loop" style={{ animation: "k-lift 2.2s var(--ease) infinite" }}>
+            <path d="M11.75 17V11M9.3 13.3l2.45-2.45 2.45 2.45" {...line} />
+          </g>
         </svg>
       )}
       {mark === "share" && (
-        <svg viewBox="0 0 24 24" className="h-[0.5em] w-[0.5em]" {...stroke}>
-          <path d="M8 9H6.5A1.5 1.5 0 0 0 5 10.5v9A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 17.5 9H16" />
-          <path d="M12 14.5V2.5M8.2 6.2 12 2.4l3.8 3.8" />
+        <svg viewBox="0 0 24 24" className="h-[0.56em] w-[0.56em]">
+          <path d="M8.5 9.5H7a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7.5a2 2 0 0 0-2-2h-1.5" {...line} />
+          <g className="mark-loop" style={{ animation: "k-nudge 1.9s ease-in-out infinite" }}>
+            <path d="M12 14.5V3.4M8.7 6.7 12 3.4l3.3 3.3" {...line} />
+          </g>
         </svg>
       )}
     </span>

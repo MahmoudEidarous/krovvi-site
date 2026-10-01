@@ -18,7 +18,7 @@ export function RememberVisual() {
           <PersonFace name="Karim Nabil" size={40} />
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-semibold text-ink">Karim Nabil</div>
-            <div className="text-[12.5px] text-faint">Call with Karim · Monday</div>
+            <div className="text-[12.5px] text-faint">Meeting with Karim · Monday</div>
           </div>
           <span className="flex items-center gap-[6px] rounded-full bg-card-hi px-[10px] py-[5px] text-[12.5px] text-ink tabular">
             <Play size={7} /> 3:12
@@ -306,7 +306,7 @@ export function NextStepVisual() {
                 Send Karim the signed quote
               </div>
               <div className="mt-[4px] flex items-center gap-[6px] text-[13px] text-faint">
-                <Play size={6} /> said Monday, on a call
+                <Play size={6} /> said Monday, in a meeting
               </div>
             </div>
           </div>
