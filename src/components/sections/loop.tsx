@@ -4,9 +4,10 @@ import { Phone } from "@/components/phone";
 import { an } from "@/lib/anim";
 
 /**
- * What using it more gets you, shown rather than told: the same question
- * about a mother's birthday, asked on day one and six months in. One answer
- * could be for anyone's mom; the other could only be for yours.
+ * What using it more gets you, shown rather than told: the same big
+ * question asked on day one and six months in. One answer could be for
+ * anyone; the other weighs your kids, your lease, your money and your own
+ * words, each with where it heard them.
  */
 export function Loop() {
   return (
@@ -28,26 +29,26 @@ export function Loop() {
         </div>
 
         <div className="relative mt-16 grid items-start justify-items-center gap-20 md:mt-20 md:grid-cols-2 md:gap-10 lg:gap-20">
-          <figure className="anim w-[min(300px,78vw)]" style={an("k-rise", 300, 900)}>
+          <figure className="anim w-[min(290px,74vw)] md:mt-10" style={an("k-rise", 300, 900)}>
             <figcaption className="mb-7 text-center">
               <div className="text-[clamp(22px,2.2vw,28px)] font-semibold tracking-[-0.03em] text-faint">Day 1</div>
-              <div className="mt-1 text-[15px] text-faint">It doesn&apos;t know her yet.</div>
+              <div className="mt-1 text-[15px] text-faint">It doesn&apos;t know your life yet.</div>
             </figcaption>
-            <div className="opacity-[0.82]">
-              <Phone label={`Day one. You ask: "What should I get my mom for her birthday?" Krovvi suggests flowers, a spa day, a photo or jewelry, and asks what she enjoys.`}>
+            <div className="opacity-[0.78] saturate-[0.6]">
+              <Phone label={`Day one. You ask: "Should I take the job in Dubai?" Krovvi lists the usual things to weigh and asks what's making you think about it.`}>
                 <KnowsScreen known={false} />
               </Phone>
             </div>
           </figure>
 
-          <figure className="anim relative w-[min(300px,78vw)]" style={an("k-rise", 450, 900)}>
+          <figure className="anim relative w-[min(330px,80vw)]" style={an("k-rise", 450, 900)}>
             <div className="glow-warm left-1/2 top-[55%] h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2" />
             <figcaption className="relative mb-7 text-center">
               <div className="text-[clamp(22px,2.2vw,28px)] font-semibold tracking-[-0.03em] text-ink">Month 6</div>
-              <div className="mt-1 text-[15px] text-muted">It remembers what she told you.</div>
+              <div className="mt-1 text-[15px] text-muted">It knows what&apos;s at stake.</div>
             </figcaption>
             <div className="relative">
-              <Phone label={`Six months in. Same question. Krovvi says she told you twice she wants to start painting, suggests a watercolor set, and reminds you her birthday dinner is Sunday at 7, each with where it heard it.`}>
+              <Phone label={`Six months in. Same question. Krovvi weighs what the move would touch: your Wednesdays with the kids, the lease's 60 days' notice, the 21,000 you still owe Karim, and the lead role you told Omar you wanted. Each with where it heard it.`}>
                 <KnowsScreen known />
               </Phone>
             </div>

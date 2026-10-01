@@ -85,26 +85,26 @@ export const HERO_TURNS: HeroTurn[] = [
   },
 ];
 
-const TYPE_MS = 38; // per letter of a typed question
-const WORD_MS = 42; // per word of the answer, a calm stream
-const PILL_MS = 110; // a moment cited gets a beat of its own
+const TYPE_MS = 24; // per letter of a typed question
+const WORD_MS = 24; // per word of the answer, streaming as the app does
+const PILL_MS = 60; // a moment cited gets a short beat of its own
 const GAP = 16; // between rows of the thread, as the app spaces them
 
 /** When each thing happens in a turn, in ms from the moment it starts. */
 export function heroTimeline(turn: HeroTurn, first: boolean) {
-  const start = first ? 900 : 700;
-  const dictStart = start + 160;
+  const start = first ? 800 : 350;
+  const dictStart = start + 120;
   const typeEnd = start + turn.ask.length * TYPE_MS;
-  const sendAt = turn.voice ? dictStart + 2300 : typeEnd + 380;
-  const workAt = sendAt + 600;
-  const answerAt = sendAt + 2000;
+  const sendAt = turn.voice ? dictStart + 1500 : typeEnd + 240;
+  const workAt = sendAt + 300;
+  const answerAt = sendAt + 1050;
   let span = 0;
   for (const block of turn.blocks) {
     for (const part of block.parts) span += typeof part === "string" ? part.split(" ").length * WORD_MS : PILL_MS;
-    span += 140;
+    span += 70;
   }
   const answerEnd = answerAt + span;
-  return { start, dictStart, typeEnd, sendAt, workAt, answerAt, answerEnd, total: answerEnd + 4600 };
+  return { start, dictStart, typeEnd, sendAt, workAt, answerAt, answerEnd, total: answerEnd + 3300 };
 }
 
 const seq = (animation: string): CSSProperties => ({ animation });
@@ -144,7 +144,7 @@ function Turn({ turn, t, still = false }: { turn: HeroTurn; t: ReturnType<typeof
         </span>
       );
     });
-    at += 140;
+    at += 70;
     const body = <AnswerText>{pieces}</AnswerText>;
     return block.bullet ? (
       <Bullet key={b} className="mb-[8px]" dotClass={A} dotStyle={at0("k-fade", begin, 200)}>
@@ -159,7 +159,7 @@ function Turn({ turn, t, still = false }: { turn: HeroTurn; t: ReturnType<typeof
 
   return (
     <div>
-      <UserBubble className={A} style={at0("k-pop", t.sendAt + 80, 320)}>
+      <UserBubble className={A} style={at0("k-pop", t.sendAt + 60, 260)}>
         {turn.ask}
       </UserBubble>
       <div className="relative mt-[20px]">
@@ -213,7 +213,7 @@ export function HeroChat({ turn, prev, first }: {
         <div
           ref={column}
           className="seq absolute inset-x-[20px] top-[12px]"
-          style={prev ? seq(`k-thread-up 620ms ${ease} ${t.sendAt}ms forwards`) : undefined}
+          style={prev ? seq(`k-thread-up 480ms ${ease} ${t.sendAt}ms forwards`) : undefined}
         >
           {prev && (
             <div ref={before}>

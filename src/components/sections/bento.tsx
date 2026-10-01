@@ -37,41 +37,44 @@ export function Bento() {
         <div className="mt-14 grid gap-4 md:mt-20 lg:grid-cols-3 lg:gap-5">
           <Tile
             className="lg:col-span-2"
-            title="It remembers what people told you."
-            body="Promises, prices, plans and dates, each with the moment it was said. Tap any line to hear it again."
+            title="It remembers exactly what was said."
+            body="Prices, promises, plans and dates, each with the moment it was said. Tap a line and hear it again."
           >
             <RememberVisual />
           </Tile>
           <Tile
-            top
+            align="start"
+            bleed
             className="lg:row-span-2"
-            title="It knows who matters to you."
-            body="The people you talk to most, what each one is waiting on, and what you're waiting on from them."
+            title="It knows the people in your life."
+            body="Who you talk with most, what you owe each other, and where things stand before you meet."
           >
             <PeopleVisual />
           </Tile>
           <Tile
             title="It understands what you're working toward."
-            body="Your goals, what's on your mind and how you like things done. You can see all of it, and change any of it."
+            body="Your goals, what you're still deciding, and how you like things done. See all of it, and fix any of it."
           >
             <ReadOnYouVisual />
           </Tile>
           <Tile
+            align="center"
             title="It keeps up when plans change."
-            body="A date moves, a price changes. Krovvi updates what it knows and tells you who still has the old version."
+            body="A date moves, a price changes. Krovvi updates what it knows, and tells you who still has the old version."
           >
             <ChangedVisual />
           </Tile>
           <Tile
             title="It speaks up at the right moment."
-            body="A heads-up before you meet. A reminder when something is due. Quiet the rest of the time."
+            body="A heads-up before you meet, a nudge when something's due. Quiet the rest of the time."
           >
             <SpeakUpVisual />
           </Tile>
           <Tile
+            align="center"
             className="lg:col-span-2"
             title="It does the next step, with your OK."
-            body="Replies, invites and follow-ups, drafted the way you write. Nothing goes out until you tap, and the task closes itself once it's done."
+            body="Replies, invites and follow-ups, drafted and ready. Nothing goes out until you tap, and the task closes itself once it's done."
           >
             <NextStepVisual />
           </Tile>
@@ -81,17 +84,20 @@ export function Bento() {
   );
 }
 
-function Tile({ title, body, children, className, top = false }: {
+function Tile({ title, body, children, className, align = "end", bleed = false }: {
   title: string;
   body: string;
   children: React.ReactNode;
   className?: string;
-  /** Keep the picture right under the words instead of at the foot of the tile. */
-  top?: boolean;
+  /** Where the picture sits in the space under the words. */
+  align?: "start" | "center" | "end";
+  /** The picture runs off the foot of the tile, fading into it (a phone cut by the edge). */
+  bleed?: boolean;
 }) {
+  const place = align === "start" ? "justify-start" : align === "center" ? "justify-center" : "justify-end";
   return (
     <InView
-      className={`group relative flex flex-col overflow-hidden rounded-[30px] border border-white/[0.06] p-6 transition-[transform,border-color] duration-500 [transition-timing-function:var(--ease)] hover:-translate-y-1 hover:border-white/[0.1] md:p-8 ${className ?? ""}`}
+      className={`group relative flex flex-col overflow-hidden rounded-[30px] border border-white/[0.06] p-6 transition-[transform,border-color] duration-500 [transition-timing-function:var(--ease)] hover:-translate-y-1 hover:border-white/[0.1] md:p-8 ${bleed ? "pb-0 md:pb-0" : ""} ${className ?? ""}`}
       style={{ background: "radial-gradient(130% 90% at 50% 0%, #1c1c1b 0%, #131312 52%, #0f0f0e 100%)" }}
     >
       <div className="pointer-events-none absolute -right-28 -top-28 h-80 w-80 rounded-full bg-[radial-gradient(circle,rgba(237,237,235,0.07),transparent_70%)] opacity-50 transition-opacity duration-500 group-hover:opacity-100" />
@@ -104,7 +110,20 @@ function Tile({ title, body, children, className, top = false }: {
       <p className="anim relative mt-3 max-w-[480px] text-pretty text-[16px] leading-[1.6] text-muted" style={an("k-rise", 100, 800)}>
         {body}
       </p>
-      <div className={`relative mt-8 flex flex-1 flex-col ${top ? "justify-start" : "justify-end"}`}>{children}</div>
+      {bleed ? (
+        // The phone is placed, not flowed, so it never stretches the row; the tile cuts it.
+        <div className="relative mt-8 min-h-[520px] flex-1 lg:min-h-0">
+          <div className="absolute inset-x-0 top-0">{children}</div>
+        </div>
+      ) : (
+        <div className={`relative mt-8 flex flex-1 flex-col ${place}`}>{children}</div>
+      )}
+      {bleed && (
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[120px]"
+          style={{ background: "linear-gradient(to bottom, rgba(15,15,14,0), #0f0f0e 92%)" }}
+        />
+      )}
     </InView>
   );
 }

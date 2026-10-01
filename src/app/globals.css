@@ -585,6 +585,22 @@ body {
     opacity: 0.22;
   }
 }
+/* A word lighting as it is heard, and a caught line lit while its moment plays. */
+@keyframes k-ink {
+  from {
+    color: #4c4b47;
+  }
+}
+@keyframes k-lit {
+  0%,
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  6%,
+  94% {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
 /* The statement's tiles: a line being typed, a page going up, the share arrow lifting. */
 @keyframes k-type {
   0%,

@@ -1,319 +1,520 @@
+import type { CSSProperties } from "react";
+
+import { Phone } from "@/components/phone";
 import { an } from "@/lib/anim";
-import { AppIcon, Card, Check, PersonFace, Play } from "./ui";
+import { AppIcon, KGlyph, PersonFace, personTint, StatusBar } from "./ui";
 
-/* ── It remembers: a moment played back, the words arriving with the sound ── */
+/**
+ * The six things having Krovvi means, each shown as the moment it happens in
+ * the app and worded the way the app words it (catch8 lib/i18n.ts,
+ * components/understood.tsx, app/person/[id].tsx; docs/app-visual-spec.md).
+ */
 
-const WAVE = Array.from({ length: 76 }, (_, i) => {
-  const v = Math.abs(Math.sin(i * 1.7) * 0.55 + Math.sin(i * 0.37) * 0.35 + Math.sin(i * 4.1) * 0.18);
-  return Math.max(0.12, Math.min(1, v));
-});
+const seq = (animation: string): CSSProperties => ({ animation });
 
-export function RememberVisual() {
-  const quote = "“I'll get you the signed quote on Monday.”".split(" ");
-  const play = 3200;
-  return (
-    <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
-      <div className="rounded-[22px] bg-ground p-5">
-        <div className="flex items-center gap-3">
-          <PersonFace name="Karim Nabil" size={40} />
-          <div className="min-w-0 flex-1">
-            <div className="text-[15px] font-semibold text-ink">Karim Nabil</div>
-            <div className="text-[12.5px] text-faint">Meeting with Karim · Monday</div>
-          </div>
-          <span className="flex items-center gap-[6px] rounded-full bg-card-hi px-[10px] py-[5px] text-[12.5px] text-ink tabular">
-            <Play size={7} /> 3:12
-          </span>
-        </div>
-        {/* The sound: grey until it is heard, then ivory as the moment plays. */}
-        <div className="relative mt-5 h-[58px]">
-          <Bars tone="#33332f" />
-          <div className="anim absolute inset-0" style={an("k-reveal-x", 500, play, { animationTimingFunction: "linear" })}>
-            <Bars tone="#EDEDEB" />
-          </div>
-        </div>
-        <div className="mt-5 text-[clamp(18px,2vw,22px)] font-medium leading-[1.35] tracking-[-0.02em] text-ink">
-          {quote.map((w, i) => (
-            <span key={i} className="anim" style={an("k-fade", 700 + (i * play) / quote.length, 300)}>
-              {w}{" "}
-            </span>
-          ))}
-        </div>
-      </div>
-      <div className="flex flex-col gap-2">
-        <div className="px-1 text-[13px] font-semibold text-muted">What I caught</div>
-        {[
-          ["Task", "Karim: Send the signed quote", "Due Monday", "3:12"],
-          ["Decision", "Half up front, half when it's done", "", "5:40"],
-          ["Money", "The total stays at 42,000", "", "6:02"],
-          ["Date", "Install starts on the 5th", "", "8:47"],
-        ].map(([kind, text, sub, at], i) => (
-          <div
-            key={kind}
-            className="anim flex items-start gap-3 rounded-[16px] bg-ground px-4 py-3"
-            style={an("k-rise", 900 + i * 380, 700)}
-          >
-            <div className="min-w-0 flex-1">
-              <div className="text-[11px] font-semibold text-faint">{kind}</div>
-              <div className="text-[14.5px] leading-[1.35] text-soft">{text}</div>
-              {sub && <div className="mt-[2px] text-[12.5px] text-muted">{sub}</div>}
-            </div>
-            <span className="mt-[10px] flex items-center gap-[5px] text-[12px] text-faint tabular">
-              <Play size={6} /> {at}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+/** The play mark the app puts beside a moment: a small solid triangle. */
+function Tri({ color = "#7A7A74" }: { color?: string }) {
+  return <span className="h-0 w-0 shrink-0" style={{ borderTop: "3.5px solid transparent", borderBottom: "3.5px solid transparent", borderLeft: `6px solid ${color}` }} />;
 }
+
+/* ── A. It remembers exactly what was said ─────────────────────────────── */
+
+const WAVE = Array.from({ length: 64 }, (_, i) => {
+  const v = Math.abs(Math.sin(i * 1.7) * 0.55 + Math.sin(i * 0.37) * 0.35 + Math.sin(i * 4.1) * 0.18);
+  return Math.max(0.14, Math.min(1, v));
+});
 
 function Bars({ tone }: { tone: string }) {
   return (
     <div className="absolute inset-0 flex items-center justify-between">
       {WAVE.map((h, i) => (
-        <span key={i} className="block w-[3px] rounded-[2px]" style={{ height: `${h * 100}%`, background: tone }} />
+        <span key={i} className="block w-[3px] rounded-full" style={{ height: `${h * 100}%`, background: tone }} />
       ))}
     </div>
   );
 }
 
-/* ── It knows who matters: your people, closest first, with twelve weeks of talk ── */
+const SAID = "Forty-two in total. Half now, and half when it's done.".split(" ");
 
-const PEOPLE: Array<{ letter: string; ink: string; name: string; line: string; last: string }> = [
-  { letter: "S", ink: "var(--sand)", name: "Sara Ali", line: "Waiting on your new deck", last: "Tuesday" },
-  { letter: "M", ink: "var(--bone)", name: "Mom", line: "Dinner on Sunday at 7", last: "Saturday" },
-  { letter: "K", ink: "var(--clay)", name: "Karim Nabil", line: "You owe him the signed quote", last: "Monday" },
-  { letter: "L", ink: "var(--brass)", name: "Lina", line: "Has the kids on Wednesday", last: "Monday" },
-  { letter: "O", ink: "var(--ash)", name: "Omar", line: "Review on Thursday at 10", last: "Last week" },
+const CAUGHT: Array<{ kind: string; lead?: string; text: string; at: string; due?: string; playing?: boolean }> = [
+  { kind: "Money", lead: "42,000", text: " in total, not the 46,000 in the quote", at: "12:08", playing: true },
+  { kind: "Decision", text: "Half up front, half when the kitchen is done", at: "12:11" },
+  { kind: "Task", lead: "You owe Karim", text: ": the signed quote", at: "3:12", due: "Monday" },
+  { kind: "Date", text: "Work starts on the 5th", at: "8:47" },
 ];
 
-export function PeopleVisual() {
+export function RememberVisual() {
+  const begin = 700; // the moment starts playing
+  const play = 2800; // and plays this long
+  const tint = personTint("Karim Nabil");
   return (
-    <div className="flex flex-col gap-3">
-      <div className="rounded-[22px] bg-ground p-4 md:p-5">
-        <div className="flex items-baseline justify-between px-1">
-          <span className="text-[13px] font-semibold text-muted">Closest now</span>
-          <span className="text-[12px] text-faint">Last talked</span>
+    <div className="grid gap-4 md:grid-cols-2">
+      {/* The moment, playing: the sound lights as it is heard, and the words light with it. */}
+      <div className="flex flex-col rounded-[22px] bg-ground p-5">
+        <div className="flex items-center gap-3">
+          <PersonFace name="Karim Nabil" size={40} />
+          <div className="min-w-0 flex-1">
+            <div className="text-[15px] font-semibold tracking-[-0.2px] text-ink">Kitchen walkthrough</div>
+            <div className="text-[12.5px] text-faint">With Karim Nabil · Monday</div>
+          </div>
         </div>
-        <div className="mt-2 flex flex-col">
-          {PEOPLE.map((p, i) => (
-            <div
-              key={p.name}
-              className="anim flex items-center gap-3 border-t border-line/70 py-[12px] first:border-t-0"
-              style={an("k-rise", 200 + i * 160, 700)}
-            >
-              <PersonFace name={p.name} size={38} />
-              <div className="min-w-0 flex-1">
-                <div className="text-[15px] font-semibold text-ink">{p.name}</div>
-                <div className="text-[13px] leading-[1.4] text-muted">{p.line}</div>
+        <div className="relative mt-5 h-[48px]">
+          <Bars tone="#33332f" />
+          <div className="anim absolute inset-0" style={an("k-reveal-x", begin, play, { animationTimingFunction: "linear" })}>
+            <Bars tone="#EDEDEB" />
+          </div>
+        </div>
+        <div className="mt-5">
+          <div className="text-[12.5px] font-semibold" style={{ color: tint }}>
+            Karim
+          </div>
+          <div className="mt-1 text-[clamp(19px,1.9vw,23px)] font-medium leading-[1.35] tracking-[-0.02em] text-ink">
+            {SAID.map((w, i) => (
+              <span key={i} className="anim" style={an("k-ink", begin + (i * play) / SAID.length, 260)}>
+                {w}{" "}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* The player: playing from 12:08 of a 31-minute walkthrough. */}
+        <div className="mt-auto flex items-center gap-[10px] pt-5">
+          <span className="flex h-[30px] w-[30px] shrink-0 items-center justify-center rounded-full bg-ink">
+            <svg width="9" height="10" viewBox="0 0 12 14" aria-hidden="true">
+              <rect x="1" y="1" width="3.4" height="12" rx="1.2" fill="#0A0A0A" />
+              <rect x="7.6" y="1" width="3.4" height="12" rx="1.2" fill="#0A0A0A" />
+            </svg>
+          </span>
+          <span className="relative w-[38px] text-[12px] text-ink tabular">
+            <span style={{ animation: `k-hide 1ms linear ${begin + play / 2}ms forwards` }}>12:08</span>
+            <span className="absolute left-0 top-0" style={{ animation: `k-show 1ms linear ${begin + play / 2}ms both` }}>
+              12:11
+            </span>
+          </span>
+          <span className="relative h-[3px] flex-1 rounded-full bg-line">
+            <span className="absolute inset-y-0 left-0 w-[38%] rounded-full bg-soft" />
+          </span>
+          <span className="text-[12px] text-faint tabular">31:40</span>
+        </div>
+      </div>
+
+      {/* What Krovvi caught from that conversation, as the app shows it; the line being played is lit. */}
+      <div className="flex flex-col">
+        <div className="px-1 text-[12px] uppercase tracking-[1.1px] text-faint">What I caught</div>
+        <div className="mt-2 overflow-hidden rounded-[17px] bg-ground">
+          {CAUGHT.map((line, i) => (
+            <div key={line.kind} className="anim" style={an("k-rise", 300 + i * 160, 650)}>
+              {i > 0 && <div className="mx-4 h-px bg-line" />}
+              <div
+                className="seq flex flex-col gap-[4px] px-4 pb-[9px] pt-[11px]"
+                style={line.playing ? seq(`k-lit ${play}ms linear ${begin}ms`) : undefined}
+              >
+                <div className="text-[11px] font-semibold tracking-[0.4px] text-faint">{line.kind}</div>
+                <div className="text-[14.5px] leading-[1.42] tracking-[-0.15px] text-soft">
+                  {line.lead && <b className="font-semibold text-ink">{line.lead}</b>}
+                  {line.text}
+                </div>
+                <div className="flex items-center gap-[8px] text-[12px] text-faint tabular">
+                  <span className="flex items-center gap-[5px]">
+                    <Tri color={line.playing ? "#EDEDEB" : "#7A7A74"} />
+                    <span className={line.playing ? "text-ink" : ""}>{line.at}</span>
+                  </span>
+                  {line.due && <span className="text-soft">Due {line.due}</span>}
+                </div>
               </div>
-              <span className="shrink-0 text-[12.5px] text-faint">{p.last}</span>
             </div>
           ))}
         </div>
       </div>
-      <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1500, 800)}>
-        <div className="flex items-center gap-3">
-          <PersonFace name="Sara Ali" size={34} />
-          <div>
-            <div className="text-[15px] font-semibold text-ink">Where things stand with Sara</div>
-            <div className="text-[12.5px] text-faint">Before your 6:17 meeting</div>
+    </div>
+  );
+}
+
+/* ── B. It knows the people in your life: Sara's page, as the app shows it ── */
+
+/** Twenty-six weeks of talk, oldest on the left: the app's rhythm, in its four inks. */
+const RHYTHM = [0, 1, 0, 0, 1, 1, 0, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 3, 2, 2, 3, 2, 3, 3, 2, 3];
+const RHYTHM_INK = ["#2A2A28", "#5A5955", "#A9A8A2", "#EDEDEB"];
+
+function SectionHead({ title, note }: { title: string; note?: string }) {
+  return (
+    <div className="flex items-baseline justify-between px-[4px] pb-[10px] pt-[22px]">
+      <span className="text-[13px] font-semibold text-muted">{title}</span>
+      {note && <span className="text-[12.5px] text-soft">{note}</span>}
+    </div>
+  );
+}
+
+function PersonScreen() {
+  const stand: Array<[string, string]> = [
+    ["The Atlas launch moved to October 15", "Tue"],
+    ["She owns the final copy for the landing page", "Tue"],
+    ["She's moving to Dubai in November", "Sun"],
+  ];
+  return (
+    <div className="relative h-full w-full bg-ground">
+      <StatusBar />
+      <div className="absolute inset-x-[16px] top-[63px] flex justify-between">
+        <span className="flex h-[34px] w-[34px] items-center justify-center rounded-full bg-card">
+          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" stroke="#EDEDEB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M6.5 1.5 1.5 6.5l5 5" />
+          </svg>
+        </span>
+        <span className="flex h-[34px] w-[34px] items-center justify-center gap-[3px] rounded-full bg-card">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="h-[3.5px] w-[3.5px] rounded-[2px] bg-ink" />
+          ))}
+        </span>
+      </div>
+
+      <div className="absolute inset-x-[16px] top-[105px]">
+        <div className="flex flex-col gap-[12px] px-[4px] pt-[4px]">
+          <PersonFace name="Sara Ali" size={68} />
+          <div className="mt-[2px]">
+            <div className="text-[28px] font-bold leading-[33px] tracking-[-0.9px] text-ink">Sara Ali</div>
+            <div className="mt-[2px] text-[15px] tracking-[-0.15px] text-soft">Head of design at Atlas</div>
+          </div>
+          <div className="flex flex-col gap-[7px]">
+            <div className="flex gap-[4.6px]">
+              {RHYTHM.map((level, i) => (
+                <span
+                  key={i}
+                  className="anim h-[7px] w-[7px] rounded-full"
+                  style={{ ...an("k-fade", 200 + i * 28, 300), background: RHYTHM_INK[level] }}
+                />
+              ))}
+            </div>
+            <div className="text-[12.5px] leading-[17px] text-faint">38 talks since March · last Tuesday · 12 emails</div>
           </div>
         </div>
-        <div className="mt-4 grid grid-cols-[96px_1fr] gap-y-[10px] text-[14px]">
-          <span className="text-faint">You owe</span>
-          <span className="text-ink">The new deck, by Friday</span>
-          <span className="text-faint">Sara owes</span>
-          <span className="text-ink">The final copy, by Sunday</span>
-          <span className="text-faint">Worth knowing</span>
-          <span className="text-ink">She&apos;s moving to Dubai in November</span>
+
+        <div className="flex gap-[8px] px-[4px] pt-[16px]">
+          <span className="flex h-[36px] items-center gap-[7px] rounded-[18px] bg-ink px-[15px] text-[14px] font-semibold text-ground">
+            <KGlyph size={12} color="#0A0A0A" /> Ask about Sara
+          </span>
+          <span className="flex h-[36px] items-center gap-[7px] rounded-[18px] bg-card px-[15px] text-[14px] font-medium text-ink">
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+              <path d="M5 1v8M1 5h8" stroke="#EDEDEB" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
+            Add
+          </span>
+        </div>
+
+        <SectionHead title="Where things stand" note="Hold to fix" />
+        <div className="anim overflow-hidden rounded-[17px] bg-card" style={an("k-rise", 900, 650)}>
+          {stand.map(([text, day], i) => (
+            <div key={text}>
+              {i > 0 && <div className="mx-[14px] h-[0.5px] bg-line" />}
+              <div className="flex items-start gap-[11px] px-[14px] py-[12px]">
+                <span className="mt-[7px] flex w-[11px] justify-center">
+                  <Tri />
+                </span>
+                <span className="flex-1 text-[14.5px] leading-[20.5px] tracking-[-0.1px] text-ink">{text}</span>
+                <span className="mt-[2px] text-[12px] text-faint tabular">{day}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <SectionHead title="Between you" />
+        <div className="anim overflow-hidden rounded-[17px] bg-card" style={an("k-rise", 1300, 650)}>
+          {[
+            ["You", "send the new deck for Sara", "Friday"],
+            ["Sara", "send you the final copy", "Sunday"],
+          ].map(([who, what, when], i) => (
+            <div key={who}>
+              {i > 0 && <div className="mx-[14px] h-[0.5px] bg-line" />}
+              <div className="flex items-start gap-[11px] px-[14px] py-[12px]">
+                <span className="mt-[2px] h-[15px] w-[15px] shrink-0 rounded-full border-[1.5px] border-muted" />
+                <span className="flex-1 text-[14.5px] leading-[20.5px] text-soft">
+                  <b className="font-semibold text-ink">{who}</b>: {what}
+                </span>
+                <span className="mt-[2px] text-[12px] text-faint">{when}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="anim mt-[18px] rounded-[17px] bg-card p-[16px]" style={an("k-rise", 1700, 650)}>
+          <div className="flex items-baseline justify-between">
+            <span className="text-[13px] font-semibold text-muted">Krovvi’s read</span>
+            <span className="text-[12px] text-faint">Updated today</span>
+          </div>
+          <div className="mt-[8px] text-[15.5px] leading-[23px] tracking-[-0.15px] text-ink">
+            You work with Sara more than anyone. She&apos;s waiting on your deck before the launch, and she leaves for Dubai in
+            November.
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-/* ── It understands you: Krovvi's read on you, every line yours to change ── */
+const CLOSEST: Array<{ name: string; line: string; day: string }> = [
+  { name: "Sara Ali", line: "Waiting on your new deck", day: "Tue" },
+  { name: "Mom", line: "Dinner on Sunday at 7", day: "Sat" },
+  { name: "Karim Nabil", line: "You owe him the signed quote", day: "Mon" },
+  { name: "Lina", line: "Asked to swap the 25th", day: "Mon" },
+];
 
-export function ReadOnYouVisual() {
-  const groups: Array<[string, string[]]> = [
-    ["Working toward", ["A 10K in December", "Moving into the new apartment"]],
-    ["On your mind", ["The Atlas launch", "Your mom's birthday on the 20th"]],
-    ["How you like things", ["Short answers, no lists", "The answer first, details after"]],
-  ];
+export function PeopleVisual() {
   return (
-    <div className="rounded-[22px] bg-ground p-5">
-      <div className="text-[13px] font-semibold text-muted">Krovvi&apos;s read on you</div>
-      <div className="mt-4 flex flex-col gap-4">
-        {groups.map(([label, lines], g) => (
-          <div key={label} className="anim" style={an("k-rise", 200 + g * 220, 700)}>
-            <div className="text-[12px] font-medium text-faint">{label}</div>
-            {lines.map((l) => (
-              <div key={l} className="mt-[3px] text-[15px] text-ink">
-                {l}
+    <div className="flex flex-col gap-5">
+      {/* Your closest people, and what is open with each; Sara is opened below. */}
+      <div className="rounded-[22px] bg-ground px-4 py-3">
+        <div className="flex items-baseline justify-between px-1 py-1">
+          <span className="text-[13px] font-semibold text-muted">Closest now</span>
+          <span className="text-[12px] text-faint">Last talked</span>
+        </div>
+        {CLOSEST.map((p, i) => (
+          <div key={p.name} className="anim" style={an("k-rise", 200 + i * 130, 650)}>
+            {i > 0 && <div className="ml-[48px] h-px bg-line/70" />}
+            <div
+              className={`flex items-center gap-3 rounded-[12px] px-1 py-[10px] ${i === 0 ? "seq" : ""}`}
+              style={i === 0 ? seq("k-row-press 420ms var(--ease) 1150ms both") : undefined}
+            >
+              <PersonFace name={p.name} size={34} />
+              <div className="min-w-0 flex-1">
+                <div className="text-[14.5px] font-semibold tracking-[-0.15px] text-ink">{p.name}</div>
+                <div className="truncate text-[13px] text-muted">{p.line}</div>
               </div>
-            ))}
-            {g === 2 && (
-              <div className="anim mt-3 flex flex-wrap gap-[6px]" style={an("k-pop", 1500, 500)}>
-                {["Still true", "Change", "Outdated"].map((pill, k) => (
-                  <span
-                    key={pill}
-                    className={`seq rounded-full px-[11px] py-[5px] text-[12.5px] font-medium ${k === 0 ? "bg-ink text-ground" : "bg-card-hi text-ink"}`}
-                    style={k === 0 ? { animation: "k-press 420ms var(--ease) 2300ms both" } : undefined}
-                  >
-                    {pill}
-                  </span>
-                ))}
-              </div>
-            )}
+              <span className="shrink-0 text-[12px] text-faint">{p.day}</span>
+            </div>
           </div>
         ))}
       </div>
+      <div className="anim mx-auto w-[min(290px,100%)]" style={an("k-rise-lg", 1450, 900)}>
+        <Phone shadow={false} label="Sara's page in Krovvi: where things stand, what you owe each other, and Krovvi's read on her.">
+          <PersonScreen />
+        </Phone>
+      </div>
     </div>
   );
 }
 
-/* ── It keeps up: what changed, and who still has the old version ── */
+/* ── C. It understands what you're working toward: Krovvi's read on you ── */
+
+const ROOMS: Array<{ kind: string; line: string; meta: string }> = [
+  { kind: "A goal", line: "Launch Atlas on October 15", meta: "2 things moving it" },
+  { kind: "Still deciding", line: "Whether to take the job in Dubai", meta: "since September" },
+  { kind: "A rule Krovvi follows", line: "Keep replies to Karim short", meta: "Used 4 times" },
+];
+
+export function ReadOnYouVisual() {
+  const read = "You're deep in the Atlas launch, and weekends are for the kids. You like short answers, with the answer first.".split(" ");
+  return (
+    <div className="rounded-[22px] bg-ground p-5">
+      <div className="flex items-baseline justify-between">
+        <span className="text-[13px] font-semibold text-muted">Krovvi’s read on you</span>
+        <span className="text-[12px] text-faint">Rewritten Tuesday</span>
+      </div>
+      <div className="mt-3 text-[15.5px] leading-[23px] tracking-[-0.15px] text-ink">
+        {read.map((w, i) => (
+          <span key={i} className="anim" style={an("k-fade", 300 + i * 45, 260)}>
+            {w}{" "}
+          </span>
+        ))}
+      </div>
+      <div className="mt-4 flex flex-col gap-[8px]">
+        {ROOMS.map((room, i) => (
+          <div key={room.kind} className="anim rounded-[14px] bg-card px-[14px] py-[10px]" style={an("k-rise", 1300 + i * 220, 650)}>
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="text-[11px] font-semibold tracking-[0.4px] text-faint">{room.kind}</span>
+              <span className="text-[11.5px] text-faint">{room.meta}</span>
+            </div>
+            <div className="mt-[3px] text-[14.5px] leading-[1.35] text-ink">{room.line}</div>
+          </div>
+        ))}
+      </div>
+      <div className="anim mt-3 px-[2px] text-[13px] font-medium text-soft" style={an("k-fade", 2200, 600)}>
+        Not right?
+      </div>
+    </div>
+  );
+}
+
+/* ── D. It keeps up when plans change: the update, and who has the old version ── */
 
 export function ChangedVisual() {
+  const tellAt = 2600;
   return (
     <div className="flex flex-col gap-3">
       <div className="rounded-[22px] bg-ground p-5">
-        <div className="flex items-center justify-between">
-          <span className="text-[13px] font-semibold text-muted">What changed</span>
-          <span className="flex h-[28px] items-center gap-[6px] rounded-full bg-card-hi px-[11px] text-[13px] font-medium text-ink">Undo</span>
+        <div className="flex items-baseline justify-between">
+          <span className="text-[12px] font-medium text-faint">Updated · Today</span>
+          <span className="text-[12.5px] font-medium text-soft">Undo</span>
         </div>
-        <div className="mt-2 text-[17px] font-semibold tracking-[-0.02em] text-ink">The Atlas launch</div>
-        <div className="mt-3 grid grid-cols-[48px_1fr] items-baseline gap-y-2 text-[15px]">
-          <span className="text-[12.5px] text-faint">Was</span>
-          <span className="relative w-fit text-muted">
+        <div className="mt-[6px] text-[16px] font-medium leading-[1.4] tracking-[-0.2px] text-ink">
+          The Atlas launch is <span className="anim" style={an("k-pop", 1100, 500)}>October 15</span>
+        </div>
+        <div className="mt-[4px] text-[13px] leading-[18px] text-soft">
+          Was:{" "}
+          <span className="relative">
             October 3
-            <span className="anim absolute left-0 right-0 top-1/2 h-[1.5px] origin-left bg-soft" style={an("k-strike", 700, 600)} />
+            <span className="anim absolute left-0 right-0 top-1/2 h-[1.5px] origin-left bg-soft" style={an("k-strike", 600, 600)} />
           </span>
-          <span className="text-[12.5px] text-faint">Now</span>
-          <span className="anim w-fit font-semibold text-ink" style={an("k-pop", 1200, 500)}>October 15</span>
         </div>
         <div className="mt-3 flex items-center gap-[6px] text-[12.5px] text-faint">
-          <Play size={6} /> Heard in Atlas sync · Tuesday
+          <Tri /> Heard in Atlas sync, Tuesday
         </div>
       </div>
-      <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1700, 700)}>
-        <div className="flex items-center gap-3">
-          <PersonFace name="Mona" size={34} />
-          <div className="min-w-0 flex-1">
-            <div className="text-[15px] font-semibold text-ink">Mona still has the old date</div>
-            <div className="text-[13px] text-muted">You told her October 3, last week</div>
+
+      <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1500, 700)}>
+        <div className="flex items-center gap-[10px]">
+          <PersonFace name="Mona" size={22} />
+          <span className="text-[15px] font-semibold tracking-[-0.2px] text-ink">Mona has the old version</span>
+        </div>
+        <div className="mt-[10px] text-[14.5px] leading-[1.45] text-soft">
+          You told Mona the launch was October 3 (14 Sep). It is now October 15.
+        </div>
+        <div className="mt-[8px] flex gap-[14px] text-[12.5px] text-muted">
+          <span className="flex items-center gap-[5px]">
+            <Tri /> Said 14 Sep
+          </span>
+          <span>Now: Sara, Tuesday</span>
+        </div>
+        <div className="relative mt-[12px] h-[42px]">
+          <div className="seq transient absolute inset-0 flex gap-[8px]" style={seq(`k-gone 220ms var(--ease) ${tellAt + 380}ms forwards`)}>
+            <span
+              className="seq flex flex-1 items-center justify-center rounded-[14px] bg-ink text-[14.5px] font-semibold text-ground"
+              style={seq(`k-press 380ms var(--ease) ${tellAt}ms both`)}
+            >
+              Tell Mona
+            </span>
+            <span className="flex flex-1 items-center justify-center rounded-[14px] bg-card-hi text-[14.5px] font-medium text-ink">
+              Not needed
+            </span>
+          </div>
+          <div className="anim absolute inset-0 flex items-center gap-[8px] text-[14.5px] font-medium text-ink" style={an("k-pop", tellAt + 560, 450)}>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="8" cy="8" r="7.5" fill="#EDEDEB" />
+              <path d="M4.8 8.2 7 10.4l4.2-4.6" fill="none" stroke="#0A0A0A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Sent to Mona.
           </div>
         </div>
-        <span className="anim mt-3 inline-block rounded-full bg-ink px-[16px] py-[7px] text-[14px] font-semibold text-ground" style={an("k-pop", 2200, 500)}>
-          Tell Mona
-        </span>
       </div>
     </div>
   );
 }
 
-/* ── It speaks up at the right moment, and only then ── */
+/* ── E. It speaks up at the right moment: the lock screen before you meet ── */
+
+function LockNote({ title, body, when }: { title: string; body: string; when: string }) {
+  return (
+    <div className="flex items-start gap-[10px] rounded-[20px] bg-[rgba(46,44,42,0.72)] px-[12px] py-[11px] backdrop-blur-xl">
+      <span className="mt-[1px]">
+        <AppIcon size={34} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex items-baseline justify-between gap-2">
+          <span className="truncate text-[14px] font-semibold tracking-[-0.15px] text-white">{title}</span>
+          <span className="shrink-0 text-[12px] text-white/50">{when}</span>
+        </div>
+        <div className="text-[14px] leading-[1.32] tracking-[-0.1px] text-white/85">{body}</div>
+      </div>
+    </div>
+  );
+}
 
 export function SpeakUpVisual() {
   return (
     <div
       className="relative overflow-hidden rounded-[22px] px-4 pb-5 pt-6"
-      style={{ background: "radial-gradient(120% 80% at 30% 0%, #2a2420 0%, #141211 55%, #0a0a0a 100%)" }}
+      style={{ background: "radial-gradient(120% 85% at 30% 0%, #2b2521 0%, #151312 55%, #0b0b0a 100%)" }}
     >
       <div className="text-center">
-        <div className="text-[13px] font-semibold text-ink/80">Thursday 1 October</div>
-        <div className="text-[58px] font-semibold leading-none tracking-[-2px] text-ink/95 tabular">6:07</div>
+        <div className="text-[13px] font-semibold text-white/75">Thursday, October 1</div>
+        <div className="mt-[2px] text-[64px] font-semibold leading-none tracking-[-2.5px] text-white/95 tabular">6:07</div>
       </div>
-      <div className="mt-5 flex flex-col gap-2">
+      <div className="mt-6 flex flex-col gap-2">
         <div className="anim" style={an("k-drop", 600, 800)}>
-          <LockNote title="Seeing Sara at 6:17 PM" body="You owe: the new deck with the updated numbers." />
+          <LockNote title="Seeing Sara at 6:17" body="You still owe her the new deck. She leaves for Dubai in November." when="now" />
         </div>
-        <div className="anim opacity-70" style={an("k-drop", 1800, 800)}>
-          <LockNote title="Send Karim the signed quote" body="Due today · Your task for Karim" when="9:00" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function LockNote({ title, body, when = "now" }: { title: string; body: string; when?: string }) {
-  return (
-    <div className="rounded-[18px] bg-[rgba(52,50,48,0.72)] px-3 py-[10px] backdrop-blur-xl">
-      <div className="flex items-start gap-[10px]">
-        <span className="mt-[1px] shrink-0">
-          <AppIcon size={32} />
-        </span>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-baseline justify-between gap-2">
-            <span className="text-[13.5px] font-semibold text-ink">{title}</span>
-            <span className="text-[12px] text-ink/50">{when}</span>
-          </div>
-          <div className="text-[13.5px] leading-[1.3] text-ink/85">{body}</div>
+        <div className="anim opacity-75" style={an("k-drop", 1700, 800)}>
+          <LockNote title="Send Karim the quote" body="You told him Monday. That's today." when="9:00" />
         </div>
       </div>
     </div>
   );
 }
 
-/* ── It does the next step, with your OK ── */
+/* ── F. It does the next step, with your OK: the draft waits, then the task closes itself ── */
 
 export function NextStepVisual() {
-  const body = "Hi Karim, here is the signed quote: 42,000 in total, half up front and half when it's done. Thanks, Sam".split(" ");
-  const seq = (steps: string) => ({ animation: steps });
+  const sendAt = 2300;
+  const closeAt = 3300;
+  const body = "Hi Karim, here's the signed quote: 42,000 in total, half up front and half when the kitchen is done. Thanks, Sam".split(" ");
   return (
-    <div className="grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
-      <Card className="bg-ground px-5 py-5">
-        <div className="flex justify-between text-[13px]">
-          <span className="font-semibold text-ink">Before it sends</span>
-          <span className="text-faint">Valid for 30 minutes</span>
+    <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+      {/* The app's draft card: it waits for a yes. */}
+      <div className="flex flex-col gap-[8px] rounded-[17px] bg-ground px-[16px] py-[14px]">
+        <div className="flex items-center gap-[8px]">
+          <span className="flex-1 text-[14px] font-medium tracking-[-0.3px] text-ink">Before it sends</span>
+          <span className="text-[12px] text-faint">Valid for 30 minutes</span>
         </div>
-        <div className="mt-3 grid grid-cols-[62px_1fr] gap-y-[4px] text-[14px]">
-          <span className="text-faint">To</span>
+        <div className="flex gap-[8px] text-[14px]">
+          <span className="w-[52px] pt-[1px] text-[12px] text-faint">To</span>
           <span className="text-soft">Karim Nabil</span>
-          <span className="text-faint">Subject</span>
+        </div>
+        <div className="flex gap-[8px] text-[14px]">
+          <span className="w-[52px] pt-[1px] text-[12px] text-faint">Subject</span>
           <span className="font-semibold text-ink">The signed quote</span>
         </div>
-        <div className="mt-3 min-h-[66px] text-[14.5px] leading-[1.5] text-soft">
+        <div className="min-h-[63px] text-[14px] leading-[21px] text-soft">
           {body.map((w, i) => (
-            <span key={i} className="anim" style={an("k-fade", 400 + i * 55, 250)}>
+            <span key={i} className="anim" style={an("k-fade", 300 + i * 45, 240)}>
               {w}{" "}
             </span>
           ))}
         </div>
-        <div className="relative mt-4 h-[36px]">
-          <div className="seq transient absolute inset-0 flex items-center gap-[14px]" style={seq("k-gone 250ms var(--ease) 2900ms forwards")}>
-            <span className="seq rounded-full bg-ink px-[18px] py-[8px] text-[14.5px] font-semibold text-ground" style={seq("k-press 420ms var(--ease) 2400ms both")}>
+        <div className="relative h-[38px]">
+          <div className="seq transient absolute inset-0 flex items-center gap-[12px]" style={seq(`k-gone 220ms var(--ease) ${sendAt + 400}ms forwards`)}>
+            <span
+              className="seq rounded-full bg-ink px-[24px] py-[8px] text-[14px] font-medium tracking-[-0.3px] text-ground"
+              style={seq(`k-press 400ms var(--ease) ${sendAt}ms both`)}
+            >
               Send it
             </span>
-            <span className="text-[14.5px] font-medium text-soft">Change it</span>
+            <span className="p-[8px] text-[14px] text-muted">Change it</span>
           </div>
-          <div className="seq absolute inset-0 flex items-center gap-[10px] text-[15px] font-semibold text-ink" style={seq("k-pop 450ms var(--ease) 3100ms both")}>
-            <Check done /> Sent to Karim
+          <div className="anim absolute inset-0 flex items-center text-[14px] font-medium text-soft" style={an("k-pop", sendAt + 560, 450)}>
+            Sent to Karim at 9:12
           </div>
         </div>
-      </Card>
-      <div className="flex flex-col gap-2">
-        <div className="px-1 text-[13px] font-semibold text-muted">Tasks</div>
-        <Card className="bg-ground">
-          <div className="flex items-start gap-[14px] px-[16px] py-[13px]">
-            <span className="relative mt-[1px] h-[24px] w-[24px] shrink-0">
-              <span className="absolute inset-0"><Check /></span>
-              <span className="anim absolute inset-0" style={an("k-check-in", 3600, 500)}><Check done /></span>
+      </div>
+
+      {/* Between you and Karim: the task closes itself once it's done. */}
+      <div className="flex flex-col justify-center gap-3">
+        <div className="px-1 text-[13px] font-semibold text-muted">Between you and Karim</div>
+        <div className="rounded-[17px] bg-ground">
+          <div className="flex items-start gap-[11px] px-[14px] py-[13px]">
+            <span className="relative mt-[2px] h-[15px] w-[15px] shrink-0">
+              <span className="absolute inset-0 rounded-full border-[1.5px] border-muted" />
+              <span className="anim absolute inset-0" style={an("k-check-in", closeAt, 450)}>
+                <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+                  <circle cx="7.5" cy="7.5" r="7.5" fill="#EDEDEB" />
+                  <path d="M4.4 7.7 6.5 9.8l4-4.4" fill="none" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
             </span>
-            <div className="min-w-0 flex-1">
-              <div className="anim text-[15.5px] leading-[1.35] line-through decoration-[1.5px]" style={an("k-done-text", 3800, 700)}>
-                Send Karim the signed quote
-              </div>
-              <div className="mt-[4px] flex items-center gap-[6px] text-[13px] text-faint">
-                <Play size={6} /> said Monday, in a meeting
-              </div>
-            </div>
+            <span className="flex-1 text-[14.5px] leading-[20.5px] text-soft">
+              <b className="font-semibold text-ink">You</b>: send Karim the signed quote
+            </span>
+            <span className="text-[12px] text-faint">Monday</span>
           </div>
-        </Card>
-        <div className="anim flex items-center justify-between rounded-[14px] bg-ground px-[14px] py-[10px]" style={an("k-pop", 4300, 600)}>
-          <span className="text-[13.5px] text-soft">Closed: you sent it at 9:12</span>
-          <span className="rounded-full bg-card-hi px-[11px] py-[4px] text-[12.5px] font-medium text-ink">Undo</span>
+        </div>
+        <div className="anim flex items-center justify-between gap-3 rounded-[17px] bg-ground px-[14px] py-[11px]" style={an("k-pop", closeAt + 500, 550)}>
+          <span>
+            <span className="block text-[14.5px] text-ink">Closed: send the signed quote</span>
+            <span className="block text-[12.5px] text-faint">Sent by mail</span>
+          </span>
+          <span className="flex h-[26px] items-center gap-[5px] rounded-full bg-card-hi px-[10px] text-[12.5px] font-medium text-ink">
+            <svg width="10" height="9" viewBox="0 0 14 12" fill="none" stroke="#A9A8A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4.5 1 1.5 4l3 3" />
+              <path d="M1.8 4h6.7a4 4 0 0 1 0 8H5" />
+            </svg>
+            Undo
+          </span>
         </div>
       </div>
     </div>
