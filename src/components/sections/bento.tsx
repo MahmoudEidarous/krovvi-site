@@ -1,6 +1,6 @@
 import {
+  AdaptsVisual,
   ChangedVisual,
-  OwesVisual,
   PeopleVisual,
   ReadOnYouVisual,
   RememberVisual,
@@ -12,7 +12,7 @@ import { an } from "@/lib/anim";
 /**
  * What having Krovvi means, in six parts: it remembers, it knows who matters,
  * it understands you, it keeps up, it speaks up at the right time, and it
- * knows who owes what. Each tile plays its own small film.
+ * adapts to you over time. Each tile plays its own small film.
  */
 export function Bento() {
   return (
@@ -74,10 +74,10 @@ export function Bento() {
           <Tile
             align="center"
             className="lg:col-span-2"
-            title="It knows who owes what."
-            body="Money, favors and promises between you and everyone, straight from your conversations. Just ask."
+            title="It adapts to you over time."
+            body="Tell it once how you like things, and it remembers. Week by week, it works more your way."
           >
-            <OwesVisual />
+            <AdaptsVisual />
           </Tile>
         </div>
       </div>

@@ -438,77 +438,87 @@ export function SpeakUpVisual() {
   );
 }
 
-/* ── F. It knows who owes what: one of the app's own questions, answered from your conversations ── */
+/* ── F. It adapts to you over time: tell it once how you like things, and it works your way after ── */
 
-type Owe = { name: string; line: string; what: string; amount: string; mine?: boolean; src: { title: string; at?: string; chat?: boolean } };
-
-const OWES: Owe[] = [
-  { name: "Omar", line: "Omar owes you", what: "for dinner on Saturday", amount: "200", src: { title: "Dinner with Omar", at: "41:05" } },
-  { name: "Lina", line: "Lina owes you", what: "her half of summer camp", amount: "300", src: { title: "Chat with Lina", chat: true } },
-  { name: "Karim Nabil", line: "You owe Karim", what: "when the kitchen is done", amount: "21,000", mine: true, src: { title: "Kitchen walkthrough", at: "12:08" } },
-];
-
-/** Where a line came from, as the chat's receipt pill: play and the second, or the chat it was read in. */
-function Source({ title, at, chat }: { title: string; at?: string; chat?: boolean }) {
+/** The person's message, as the app draws it: a raised bubble with its bottom right corner tucked. */
+function Asked({ children, className, style }: { children: React.ReactNode; className?: string; style?: CSSProperties }) {
   return (
-    <span className="inline-flex h-[22px] items-center gap-[6px] whitespace-nowrap rounded-full bg-card-hi pl-[7px] pr-[9px] text-[12px] font-medium text-soft">
-      {chat ? (
-        <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M12 3.5c-4.9 0-8.5 3.2-8.5 7.2 0 2.1 1 4 2.7 5.3l-.7 3.8 3.9-2c.8.2 1.7.3 2.6.3 4.9 0 8.5-3.2 8.5-7.3S16.9 3.5 12 3.5Z"
-            fill="none"
-            stroke="#8F8F8A"
-            strokeWidth="2.2"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ) : (
-        <Tri color="#A9A8A2" />
-      )}
-      {title}
-      {at && <span className="text-[11px] font-normal text-faint tabular">{at}</span>}
-    </span>
+    <div className="flex justify-end">
+      <div
+        className={`max-w-[85%] rounded-[17px] rounded-br-[6px] bg-card-hi px-[14px] py-[9px] text-[14.5px] leading-[1.35] tracking-[-0.15px] text-ink ${className ?? ""}`}
+        style={style}
+      >
+        {children}
+      </div>
+    </div>
   );
 }
 
-export function OwesVisual() {
+export function AdaptsVisual() {
+  const long =
+    "You're seeing Karim on Thursday at 10, at his office on Nile Street. The plan is to go over the kitchen timeline and the second payment, and he wants you to pick the cabinet colors, so it's worth looking at the samples he sent before you go, and".split(" ");
+  const chipAt = 2300;
+  const weekTwo = 3100;
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex justify-end">
-        <div
-          className="anim max-w-[420px] rounded-[20px] rounded-br-[7px] bg-card-hi px-[16px] py-[11px] text-[16px] leading-[1.35] tracking-[-0.15px] text-ink"
-          style={an("k-pop", 300, 420)}
-        >
-          My money with people. Who owes what?
+    <div className="grid gap-4 md:grid-cols-2">
+      {/* Week 1: a long answer, one word from you, and a rule Krovvi keeps from it. */}
+      <div className="flex flex-col">
+        <div className="px-1 text-[12px] uppercase tracking-[1.1px] text-faint">Week 1</div>
+        <div className="mt-2 flex flex-1 flex-col gap-3 rounded-[22px] bg-ground p-5">
+          <Asked className="anim" style={an("k-pop", 200, 380)}>
+            When do I see Karim?
+          </Asked>
+          <div className="relative max-h-[96px] overflow-hidden text-[14.5px] leading-[1.6] text-soft">
+            {long.map((w, i) => (
+              <span key={i} className="anim" style={an("k-fade", 500 + i * 16, 200)}>
+                {w}{" "}
+              </span>
+            ))}
+            <div className="absolute inset-x-0 bottom-0 h-[34px]" style={{ background: "linear-gradient(to bottom, rgba(10,10,10,0), #0A0A0A)" }} />
+          </div>
+          <Asked className="anim" style={an("k-pop", 1500, 380)}>
+            Shorter, please. Just the time and the place.
+          </Asked>
+          <div className="anim flex items-start justify-between gap-[8px] rounded-[11px] bg-card px-[12px] py-[10px]" style={an("k-pop", chipAt, 450)}>
+            <span className="flex min-w-0 items-start">
+              <span className="w-[14px] shrink-0 pt-[4px]">
+                <KGlyph size={11} color="#8F8F8A" />
+              </span>
+              <span className="ml-[4px] text-[13.5px] leading-[19.6px] tracking-[-0.1px] text-soft">
+                From now on: short answers, time and place first
+              </span>
+            </span>
+            <span className="flex h-[24px] shrink-0 items-center gap-[4px] rounded-full bg-card-hi px-[9px] text-[12px] font-medium text-ink">
+              <svg width="9" height="8" viewBox="0 0 14 12" fill="none" stroke="#A9A8A2" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M4.5 1 1.5 4l3 3" />
+                <path d="M1.8 4h6.7a4 4 0 0 1 0 8H5" />
+              </svg>
+              Undo
+            </span>
+          </div>
         </div>
       </div>
-      <div className="overflow-hidden rounded-[22px] bg-ground">
-        {OWES.map((o, i) => (
-          <div key={o.name} className="anim" style={an("k-rise", 1000 + i * 240, 650)}>
-            {i > 0 && <div className="mx-5 h-px bg-line" />}
-            <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-5 py-[16px]">
-              <PersonFace name={o.name} size={40} />
-              <div className="min-w-0">
-                <div className="text-[16px] font-semibold tracking-[-0.2px] text-ink">{o.line}</div>
-                <div className="mt-[5px] flex flex-wrap items-center gap-x-[10px] gap-y-[6px] text-[14px] text-muted">
-                  <span>{o.what}</span>
-                  <Source {...o.src} />
-                </div>
-              </div>
-              <div className={`text-[clamp(24px,2.7vw,34px)] font-semibold tracking-[-0.03em] tabular ${o.mine ? "text-soft" : "text-ink"}`}>
-                {o.amount}
-              </div>
-            </div>
+
+      {/* Week 2: the same kind of question, answered your way, without being told again. */}
+      <div className="flex flex-col">
+        <div className="px-1 text-[12px] uppercase tracking-[1.1px] text-ink">Week 2</div>
+        <div className="mt-2 flex flex-1 flex-col gap-3 rounded-[22px] bg-ground p-5">
+          <Asked className="anim" style={an("k-pop", weekTwo, 380)}>
+            When do I see Karim?
+          </Asked>
+          <div className="anim text-[18px] font-medium leading-[1.4] tracking-[-0.2px] text-ink" style={an("k-rise", weekTwo + 500, 450)}>
+            Thursday at 10, at his office.
           </div>
-        ))}
-      </div>
-      <div className="anim flex flex-wrap items-baseline justify-between gap-2 px-2 text-[14px]" style={an("k-fade", 1900, 600)}>
-        <span className="text-muted">
-          Owed to you <span className="ml-1 font-semibold text-ink tabular">500</span>
-        </span>
-        <span className="text-muted">
-          You owe <span className="ml-1 font-semibold text-soft tabular">21,000</span>
-        </span>
+          <Asked className="anim" style={an("k-pop", weekTwo + 1300, 380)}>
+            And Sara?
+          </Asked>
+          <div className="anim text-[18px] font-medium leading-[1.4] tracking-[-0.2px] text-ink" style={an("k-rise", weekTwo + 1800, 450)}>
+            Friday at 2, on Zoom.
+          </div>
+          <div className="anim mt-auto pt-2 text-[13px] text-faint" style={an("k-fade", weekTwo + 2400, 600)}>
+            You said it once. It remembers.
+          </div>
+        </div>
       </div>
     </div>
   );
