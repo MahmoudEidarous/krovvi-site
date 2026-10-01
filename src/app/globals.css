@@ -585,6 +585,12 @@ body {
     opacity: 0.22;
   }
 }
+/* The side not kept steps back. */
+@keyframes k-dim {
+  to {
+    opacity: 0.4;
+  }
+}
 /* A word lighting as it is heard, and a caught line lit while its moment plays. */
 @keyframes k-ink {
   from {

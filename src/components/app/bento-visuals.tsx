@@ -438,84 +438,164 @@ export function SpeakUpVisual() {
   );
 }
 
-/* ── F. It does the next step, with your OK: the draft waits, then the task closes itself ── */
+/* ── F. Both of you, on the same page: Krovvi catches what doesn't match,
+      and the other person confirms what you agreed from their own phone ── */
 
-export function NextStepVisual() {
-  const sendAt = 2300;
-  const closeAt = 3300;
-  const body = "Hi Karim, here's the signed quote: 42,000 in total, half up front and half when the kitchen is done. Thanks, Sam".split(" ");
+/** The page the other person opens in Safari: krovvi.com/r/ as the site draws it (app/r/[token]/record-page.tsx). */
+function TheirPage({ confirmAt }: { confirmAt: number }) {
+  const lines: Array<{ who?: string; text: string; by?: string }> = [
+    { text: "42,000 in total, half up front and half when the kitchen is done" },
+    { who: "You", text: "start work on the 5th" },
+    { who: "Sam", text: "send the signed quote", by: "by Monday" },
+  ];
   return (
-    <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
-      {/* The app's draft card: it waits for a yes. */}
-      <div className="flex flex-col gap-[8px] rounded-[17px] bg-ground px-[16px] py-[14px]">
-        <div className="flex items-center gap-[8px]">
-          <span className="flex-1 text-[14px] font-medium tracking-[-0.3px] text-ink">Before it sends</span>
-          <span className="text-[12px] text-faint">Valid for 30 minutes</span>
-        </div>
-        <div className="flex gap-[8px] text-[14px]">
-          <span className="w-[52px] pt-[1px] text-[12px] text-faint">To</span>
-          <span className="text-soft">Karim Nabil</span>
-        </div>
-        <div className="flex gap-[8px] text-[14px]">
-          <span className="w-[52px] pt-[1px] text-[12px] text-faint">Subject</span>
-          <span className="font-semibold text-ink">The signed quote</span>
-        </div>
-        <div className="min-h-[63px] text-[14px] leading-[21px] text-soft">
-          {body.map((w, i) => (
-            <span key={i} className="anim" style={an("k-fade", 300 + i * 45, 240)}>
-              {w}{" "}
-            </span>
+    <div className="relative h-full w-full bg-ground">
+      <StatusBar />
+      <div className="absolute inset-x-[20px] top-[70px]">
+        <div className="text-[15px] font-semibold tracking-[-0.01em] text-ink">krovvi</div>
+        <div className="mt-[34px] text-[27px] font-semibold leading-[1.25] tracking-[-0.02em] text-ink">Sam shared what you agreed</div>
+        <div className="mt-[8px] text-[15px] text-muted">Kitchen walkthrough · Monday</div>
+        <div className="mt-[22px] overflow-hidden rounded-[18px] bg-card">
+          {lines.map((line, i) => (
+            <div key={i} className={`flex items-start gap-3 px-4 py-[14px] ${i ? "border-t border-line" : ""}`}>
+              <span className="mt-[9px] h-[6px] w-[6px] shrink-0 rounded-full bg-soft" />
+              <div className="min-w-0 flex-1">
+                <div className="text-[16px] leading-[1.5] text-ink">
+                  {line.who && <span className="font-semibold">{line.who}: </span>}
+                  {line.text}
+                </div>
+                {line.by && <div className="mt-1 text-[13px] text-muted">{line.by}</div>}
+              </div>
+            </div>
           ))}
         </div>
-        <div className="relative h-[38px]">
-          <div className="seq transient absolute inset-0 flex items-center gap-[12px]" style={seq(`k-gone 220ms var(--ease) ${sendAt + 400}ms forwards`)}>
+        <div className="mt-[12px] px-1 text-[13px] leading-[1.5] text-faint">Only these lines were shared, never the conversation itself.</div>
+        <div className="relative mt-[26px] h-[108px]">
+          <div className="seq transient absolute inset-x-0 top-0 flex flex-col gap-3" style={seq(`k-gone 260ms var(--ease) ${confirmAt + 420}ms forwards`)}>
             <span
-              className="seq rounded-full bg-ink px-[24px] py-[8px] text-[14px] font-medium tracking-[-0.3px] text-ground"
-              style={seq(`k-press 400ms var(--ease) ${sendAt}ms both`)}
+              className="seq flex h-[48px] items-center justify-center rounded-full bg-ink text-[16px] font-semibold text-ground"
+              style={seq(`k-press 420ms var(--ease) ${confirmAt}ms both`)}
             >
-              Send it
+              This is right
             </span>
-            <span className="p-[8px] text-[14px] text-muted">Change it</span>
+            <span className="flex h-[48px] items-center justify-center rounded-full bg-card-hi text-[16px] font-medium text-ink">Something is off</span>
           </div>
-          <div className="anim absolute inset-0 flex items-center text-[14px] font-medium text-soft" style={an("k-pop", sendAt + 560, 450)}>
-            Sent to Karim at 9:12
+          <div className="anim absolute inset-x-0 top-0 rounded-[16px] bg-card px-4 py-4 text-[16px] leading-[1.5] text-ink" style={an("k-pop", confirmAt + 620, 500)}>
+            Thanks. Sam will see that you confirmed it.
+          </div>
+        </div>
+      </div>
+      {/* Safari's address bar, at the bottom where iPhone keeps it. */}
+      <div className="absolute inset-x-[16px] bottom-[34px] flex h-[48px] items-center justify-center gap-[6px] rounded-full bg-card-hi text-[15px] text-soft">
+        <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true">
+          <rect x="0.75" y="5.25" width="8.5" height="7" rx="1.6" fill="#A9A8A2" />
+          <path d="M2.6 5.3V3.8a2.4 2.4 0 0 1 4.8 0v1.5" stroke="#A9A8A2" strokeWidth="1.4" />
+        </svg>
+        krovvi.com
+      </div>
+    </div>
+  );
+}
+
+export function AgreeVisual() {
+  const keepAt = 1500; // you keep what Karim said in the room
+  const sendAt = 2700; // and send him what you agreed
+  const openAt = 3500;
+  const confirmAt = 4300; // he confirms it on his phone
+  const doneAt = confirmAt + 900;
+  return (
+    <div className="grid items-start gap-5 md:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]">
+      <div className="flex flex-col gap-3">
+        {/* Krovvi caught it: what was said and what was sent do not match. It shows both and lets you choose. */}
+        <div className="anim rounded-[22px] bg-ground px-[18px] pb-[14px] pt-[16px]" style={an("k-rise", 200, 700)}>
+          <div className="flex items-center gap-[8px] text-[12.5px] font-medium text-muted">
+            <span className="h-[6px] w-[6px] rounded-full bg-muted" />
+            Two things disagree
+          </div>
+          <div className="mt-[8px] text-[17px] font-medium leading-[24px] tracking-[-0.3px] text-ink">
+            Karim and his quote say different things about the total.
+          </div>
+          <div className="mt-[12px] flex flex-col gap-[8px]">
+            <div
+              className="seq flex min-h-[52px] items-center gap-[11px] rounded-[14px] bg-card-hi px-[14px] py-[8px]"
+              style={seq(`k-press 380ms var(--ease) ${keepAt}ms both`)}
+            >
+              <PersonFace name="Karim Nabil" size={24} />
+              <span className="min-w-0 flex-1">
+                <span className="block text-[15px] font-medium tracking-[-0.2px] text-ink">42,000</span>
+                <span className="flex items-center gap-[5px] text-[12.5px] text-muted">
+                  <Tri /> Said in the kitchen walkthrough, Mon 12:08
+                </span>
+              </span>
+              <span className="anim" style={an("k-check-in", keepAt + 200, 420)}>
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7.5" fill="#EDEDEB" />
+                  <path d="M4.8 8.2 7 10.4l4.2-4.6" fill="none" stroke="#0A0A0A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </div>
+            <div className="seq flex min-h-[52px] items-center gap-[11px] rounded-[14px] bg-card-hi px-[14px] py-[8px]" style={seq(`k-dim 400ms var(--ease) ${keepAt + 200}ms forwards`)}>
+              <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full bg-card">
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" stroke="#A9A8A2" strokeWidth="1.3" aria-hidden="true">
+                  <rect x="0.65" y="0.65" width="10.7" height="8.7" rx="1.6" />
+                  <path d="m1 1.4 5 3.9 5-3.9" />
+                </svg>
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[15px] font-medium tracking-[-0.2px] text-ink">46,000</span>
+                <span className="text-[12.5px] text-muted">The quote he emailed, Tuesday</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* What you agreed goes to Karim; his answer comes back. */}
+        <div className="anim rounded-[22px] bg-ground px-[18px] py-[14px]" style={an("k-rise", 900, 700)}>
+          <div className="text-[13px] font-semibold text-muted">What you agreed with Karim</div>
+          <div className="mt-[8px] flex flex-col gap-[6px] text-[14.5px] leading-[1.45] text-soft">
+            <span>42,000 in total, half up front and half when the kitchen is done</span>
+            <span>
+              <b className="font-semibold text-ink">Karim</b>: start work on the 5th
+            </span>
+            <span>
+              <b className="font-semibold text-ink">You</b>: send the signed quote <span className="text-faint">· by Monday</span>
+            </span>
+          </div>
+          <div className="relative mt-[12px] h-[36px]">
+            <span
+              className="seq transient absolute left-0 top-0 flex h-[36px] items-center rounded-full bg-ink px-[18px] text-[14px] font-semibold text-ground"
+              style={seq(`k-press 380ms var(--ease) ${sendAt}ms both, k-gone 200ms var(--ease) ${sendAt + 380}ms forwards`)}
+            >
+              Send to Karim
+            </span>
+            <span className="absolute left-0 top-0 flex h-[36px] items-center text-[14px] text-soft">
+              <span className="seq opacity-0" style={seq(`k-on ${openAt - sendAt - 400}ms linear ${sendAt + 400}ms`)}>Sent to Karim</span>
+            </span>
+            <span className="absolute left-0 top-0 flex h-[36px] items-center text-[14px] text-soft">
+              <span className="seq opacity-0" style={seq(`k-on ${doneAt - openAt}ms linear ${openAt}ms`)}>Karim opened it</span>
+            </span>
+            <span className="anim absolute left-0 top-0 flex h-[36px] items-center gap-[8px] text-[14px] font-medium text-ink" style={an("k-pop", doneAt, 450)}>
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                <circle cx="8" cy="8" r="7.5" fill="#EDEDEB" />
+                <path d="M4.8 8.2 7 10.4l4.2-4.6" fill="none" stroke="#0A0A0A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              Karim confirmed it
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Between you and Karim: the task closes itself once it's done. */}
-      <div className="flex flex-col justify-center gap-3">
-        <div className="px-1 text-[13px] font-semibold text-muted">Between you and Karim</div>
-        <div className="rounded-[17px] bg-ground">
-          <div className="flex items-start gap-[11px] px-[14px] py-[13px]">
-            <span className="relative mt-[2px] h-[15px] w-[15px] shrink-0">
-              <span className="absolute inset-0 rounded-full border-[1.5px] border-muted" />
-              <span className="anim absolute inset-0" style={an("k-check-in", closeAt, 450)}>
-                <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
-                  <circle cx="7.5" cy="7.5" r="7.5" fill="#EDEDEB" />
-                  <path d="M4.4 7.7 6.5 9.8l4-4.4" fill="none" stroke="#0A0A0A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </span>
-            <span className="flex-1 text-[14.5px] leading-[20.5px] text-soft">
-              <b className="font-semibold text-ink">You</b>: send Karim the signed quote
-            </span>
-            <span className="text-[12px] text-faint">Monday</span>
+      {/* Karim's side: a private page in his browser. No app. */}
+      <div className="flex flex-col items-center">
+        <div className="relative h-[470px] w-full overflow-hidden">
+          <div className="anim mx-auto w-[min(250px,100%)]" style={an("k-rise-lg", 500, 900)}>
+            <Phone shadow={false} label="Karim's phone: the page Sam sent him, where he confirms what they agreed. No app needed.">
+              <TheirPage confirmAt={confirmAt} />
+            </Phone>
           </div>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[90px]" style={{ background: "linear-gradient(to bottom, rgba(15,15,14,0), #0f0f0e 92%)" }} />
         </div>
-        <div className="anim flex items-center justify-between gap-3 rounded-[17px] bg-ground px-[14px] py-[11px]" style={an("k-pop", closeAt + 500, 550)}>
-          <span>
-            <span className="block text-[14.5px] text-ink">Closed: send the signed quote</span>
-            <span className="block text-[12.5px] text-faint">Sent by mail</span>
-          </span>
-          <span className="flex h-[26px] items-center gap-[5px] rounded-full bg-card-hi px-[10px] text-[12.5px] font-medium text-ink">
-            <svg width="10" height="9" viewBox="0 0 14 12" fill="none" stroke="#A9A8A2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M4.5 1 1.5 4l3 3" />
-              <path d="M1.8 4h6.7a4 4 0 0 1 0 8H5" />
-            </svg>
-            Undo
-          </span>
-        </div>
+        <div className="mt-2 text-[13px] text-faint">Karim&apos;s phone, no app needed</div>
       </div>
     </div>
   );
