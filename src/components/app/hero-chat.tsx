@@ -15,7 +15,6 @@ import {
   SourcesLine,
   StopSquare,
   UserBubble,
-  Wordmark,
   WorkingStrip,
 } from "./chat";
 
@@ -68,20 +67,13 @@ export const HERO_SCENES: HeroScene[] = [
   },
 ];
 
-/** The person's own lines on an empty chat, each with where it comes from (lib/starter-text.ts). */
-const STARTERS: Array<[string, string]> = [
-  ["What did Sara and I settle on Tuesday?", "Sara · Tuesday · 31 min"],
-  ["What's still open with Karim?", "Karim · Monday · 12 min"],
-  ["Who am I waiting on, and since when?", "Your week"],
-];
-
 const TYPE_MS = 38; // per letter of a typed question
 const WORD_MS = 42; // per word of the answer, a calm stream
 const PILL_MS = 110; // a moment cited gets a beat of its own
 
 /** When each thing happens in a scene, in ms from the moment it starts. */
 export function heroTimeline(scene: HeroScene, first: boolean) {
-  const start = first ? 1500 : 500;
+  const start = first ? 900 : 500;
   const dictStart = start + 160;
   const typeEnd = start + scene.ask.length * TYPE_MS;
   const sendAt = scene.voice ? dictStart + 2300 : typeEnd + 380;
@@ -187,26 +179,6 @@ export function HeroChat({ scene, prev, first }: {
   return (
     <div className="relative h-full w-full bg-ground">
       <ChatNav kClass={first ? "anim" : undefined} kStyle={first ? an("k-fade", t.sendAt, 240) : undefined} />
-
-      {/* An empty chat: the dotted wordmark and the person's own questions. */}
-      {first && (
-        <div
-          className="seq transient absolute inset-x-[20px] top-[111px] flex h-[591px] flex-col items-center justify-center pb-[32px]"
-          style={seq(`k-gone 240ms ${ease} ${t.sendAt - 120}ms forwards`)}
-        >
-          <div className="anim mb-[40px]" style={an("k-fade", 150, 500)}>
-            <Wordmark pitch={8} />
-          </div>
-          <div className="flex flex-col items-center gap-[26px]">
-            {STARTERS.map(([line, from], i) => (
-              <div key={line} className="anim max-w-[300px] px-[8px] py-[4px] text-center" style={an("k-rise", 380 + i * 110, 500)}>
-                <div className="text-[17px] font-medium leading-[22px] tracking-[-0.3px] text-ink">{line}</div>
-                <div className="mt-[6px] text-[12px] text-faint">{from}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* The turn before stays while the next question is asked, then scrolls up out of the way. */}
       {prev && (

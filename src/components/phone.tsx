@@ -79,16 +79,19 @@ export function Phone({ children, className, label, shadow = true, glint }: {
             {glint !== undefined && (
               <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[13.2cqw]">
                 <div
-                  className="anim transient absolute -inset-y-[10%] left-0 w-[70%] opacity-0"
-                  style={
-                    {
-                      "--a": "k-glint",
-                      "--dur": "1700ms",
-                      "--delay": `${glint}ms`,
-                      background: "linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.075) 45%, rgba(255,255,255,0.11) 50%, rgba(255,255,255,0.075) 55%, transparent 100%)",
-                    } as React.CSSProperties
-                  }
-                />
+                  className="anim transient absolute inset-y-0 left-0 w-[60%] opacity-0"
+                  style={{ "--a": "k-glint", "--dur": "1700ms", "--delay": `${glint}ms` } as React.CSSProperties}
+                >
+                  {/* Soft on both sides everywhere: the band is upright and leaned by a skew, not by the gradient. */}
+                  <div
+                    className="h-full w-full"
+                    style={{
+                      transform: "skewX(-16deg)",
+                      background:
+                        "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.065) 38%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.065) 62%, transparent 100%)",
+                    }}
+                  />
+                </div>
               </div>
             )}
             {/* The glass: a faint sheen from the top left, and its edge. */}
