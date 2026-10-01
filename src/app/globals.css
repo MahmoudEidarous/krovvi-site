@@ -94,6 +94,14 @@ body {
   );
 }
 
+/* A phone's screen, drawn at 393 points and scaled to its glass. --k is the
+   glass's width over 393, measured by components/phone-screen.tsx; until it
+   is known the screen shows nothing rather than the wrong size. */
+.phone-canvas {
+  transform: scale(var(--k, 0));
+  transform-origin: 0 0;
+}
+
 .glow-warm {
   position: absolute;
   border-radius: 9999px;
@@ -488,5 +496,13 @@ body {
 }
 .paused,
 .paused * {
+  animation-play-state: paused !important;
+}
+/* Endless loops rest while their part of the page is off screen (components/in-view.tsx). */
+[data-onscreen="0"] .bar,
+[data-onscreen="0"] .anim-loop,
+[data-onscreen="0"] .mark-loop,
+[data-onscreen="0"] .ticker,
+[data-onscreen="0"] .loop {
   animation-play-state: paused !important;
 }

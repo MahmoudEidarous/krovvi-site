@@ -35,9 +35,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        {/* Without scripts nothing would ever be scrolled into view: show every end state at once. */}
+        {/* Without scripts nothing would ever be scrolled into view: show every end state at once, and size
+            the phone screens in CSS alone (right everywhere but Safari 26, which only matters with scripts off). */}
         <noscript>
-          <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}`}</style>
+          <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}.phone-canvas{transform:scale(tan(atan2(100cqw,393px)))!important}`}</style>
         </noscript>
       </head>
       <body>{children}</body>

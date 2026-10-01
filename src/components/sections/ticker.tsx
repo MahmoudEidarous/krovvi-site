@@ -1,4 +1,5 @@
 import { PersonFace, personTint } from "@/components/app/ui";
+import { InView } from "@/components/in-view";
 
 /**
  * What people say, and what Krovvi understands from it. Each line is said
@@ -71,17 +72,19 @@ function Row({ items, seconds, reverse = false }: { items: Read[]; seconds: numb
 export function Ticker() {
   return (
     <section aria-label="What people say, and what Krovvi understands from it" className="relative pb-6">
-      <div className="mb-8 px-5 text-center text-[14px] text-faint">What people say, and what Krovvi understands.</div>
-      <div
-        className="flex flex-col gap-7"
-        style={{
-          WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-          maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
-        }}
-      >
-        <Row items={THEM} seconds={110} />
-        <Row items={YOU} seconds={120} reverse />
-      </div>
+      <InView hold={false}>
+        <div className="mb-8 px-5 text-center text-[14px] text-faint">What people say, and what Krovvi understands.</div>
+        <div
+          className="flex flex-col gap-7"
+          style={{
+            WebkitMaskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            maskImage: "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+          }}
+        >
+          <Row items={THEM} seconds={110} />
+          <Row items={YOU} seconds={120} reverse />
+        </div>
+      </InView>
     </section>
   );
 }

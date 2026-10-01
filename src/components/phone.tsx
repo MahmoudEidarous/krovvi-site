@@ -1,9 +1,10 @@
+import { PhoneScreen } from "./phone-screen";
+
 /**
  * The device, drawn: no photo of a phone, so it is sharp at every size and
  * its screen can move. Screens are laid out at the iPhone's own 393 by 852
- * points and scaled to whatever width the phone is given. The scale is the
- * screen's width over 393, worked out in CSS (tan(atan2(a, b)) is a / b as a
- * plain number), so there is no measuring script and no jump on load.
+ * points and scaled to whatever width the phone is given (PhoneScreen
+ * measures the glass and sets the scale before the first paint).
  *
  * Proportions follow an iPhone 17 Pro seen from the front: a thin titanium
  * band that catches the light at its corners, a black border of about two
@@ -60,14 +61,11 @@ export function Phone({ children, className, label, shadow = true, glint }: {
         }}
       >
         <div className="rounded-[15.25cqw] bg-black p-[2.05cqw]" style={{ boxShadow: "inset 0 0 0 0.25cqw #050505" }}>
-          <div
+          <PhoneScreen
             className="relative overflow-hidden rounded-[13.2cqw] bg-[var(--bg)]"
             style={{ containerType: "inline-size", aspectRatio: "393 / 852" }}
           >
-            <div
-              className="absolute left-0 top-0 h-[852px] w-[393px] origin-top-left text-left"
-              style={{ transform: "scale(tan(atan2(100cqw, 393px)))" }}
-            >
+            <div className="phone-canvas absolute left-0 top-0 h-[852px] w-[393px] text-left">
               {children}
               {/* The island, with the lens a shade lighter on its right. */}
               <div className="pointer-events-none absolute left-1/2 top-[11px] z-50 flex h-[37px] w-[126px] -translate-x-1/2 items-center justify-end rounded-full bg-black pr-[13px]">
@@ -103,7 +101,7 @@ export function Phone({ children, className, label, shadow = true, glint }: {
                 boxShadow: "inset 0 0 0 0.25cqw rgba(255,255,255,0.03)",
               }}
             />
-          </div>
+          </PhoneScreen>
         </div>
       </div>
     </div>

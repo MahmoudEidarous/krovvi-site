@@ -216,6 +216,7 @@ function Reading({ words, className, style }: { words: string; className?: strin
             cy={cy}
             r={8}
             fill="#A9A8A2"
+            className="loop"
             style={{ opacity: 0.22, animation: `k-think 1400ms cubic-bezier(0.23,1,0.32,1) ${i * 140}ms infinite` }}
           />
         ))}

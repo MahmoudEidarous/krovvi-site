@@ -10,16 +10,16 @@ export function SiteFooter() {
             Krovvi remembers what people told you, keeps track of what you promised, and keeps up as plans change.
           </p>
         </div>
-        <div className="flex gap-[clamp(48px,8vw,110px)]">
+        <div className="flex flex-wrap gap-x-[clamp(48px,8vw,110px)] gap-y-8">
           <div>
             <h4 className="mb-2 text-[13px] font-semibold text-[var(--faint)]">Krovvi</h4>
-            <a href="/#how" className="mt-1 block py-1.5 text-[15px] text-[var(--soft)] no-underline hover:text-[var(--fg)]">
+            <a href="/#how" className="mt-1 block py-1.5 text-[15px] text-[var(--soft)] no-underline whitespace-nowrap hover:text-[var(--fg)]">
               How it works
             </a>
-            <a href="/privacy" className="block py-1.5 text-[15px] text-[var(--soft)] no-underline hover:text-[var(--fg)]">
+            <a href="/privacy" className="block py-1.5 text-[15px] text-[var(--soft)] no-underline whitespace-nowrap hover:text-[var(--fg)]">
               Privacy
             </a>
-            <a href="/support" className="block py-1.5 text-[15px] text-[var(--soft)] no-underline hover:text-[var(--fg)]">
+            <a href="/support" className="block py-1.5 text-[15px] text-[var(--soft)] no-underline whitespace-nowrap hover:text-[var(--fg)]">
               Support
             </a>
           </div>
@@ -27,7 +27,7 @@ export function SiteFooter() {
             <h4 className="mb-2 text-[13px] font-semibold text-[var(--faint)]">Contact</h4>
             <a
               href={`mailto:${SUPPORT_EMAIL}`}
-              className="mt-1 block py-1.5 text-[15px] text-[var(--soft)] no-underline hover:text-[var(--fg)]"
+              className="mt-1 block py-1.5 text-[15px] text-[var(--soft)] no-underline whitespace-nowrap hover:text-[var(--fg)]"
             >
               {SUPPORT_EMAIL}
             </a>

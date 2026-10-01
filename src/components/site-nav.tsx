@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 
 import { JOIN_URL } from "@/lib/site";
 
-/** The top bar: clear over the hero, a blurred strip once the page moves. */
+/**
+ * The top bar: clear over the hero, a dark blurred strip once the page moves.
+ * Dark enough that a white heading or button passing under it reads as a
+ * faint shadow, not a bright smudge.
+ */
 export function SiteNav({ home = true }: { home?: boolean }) {
   const [moved, setMoved] = useState(false);
   useEffect(() => {
@@ -16,7 +20,7 @@ export function SiteNav({ home = true }: { home?: boolean }) {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,box-shadow] duration-300 ${
-        moved ? "bg-[rgba(10,10,10,0.72)] shadow-[0_1px_0_rgba(237,237,235,0.06)] backdrop-blur-xl" : ""
+        moved ? "bg-[rgba(10,10,10,0.9)] shadow-[0_1px_0_rgba(237,237,235,0.06)] backdrop-blur-xl" : ""
       }`}
     >
       <nav className="mx-auto flex h-[64px] max-w-[1200px] items-center justify-between px-[max(20px,env(safe-area-inset-left))] md:h-[72px] md:px-8">

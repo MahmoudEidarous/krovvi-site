@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 
+import { InView } from "@/components/in-view";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 /**
@@ -104,33 +105,35 @@ export function Statement() {
     }) as React.CSSProperties;
   return (
     <section className="relative px-5 pb-[72px] pt-[120px] md:pb-[110px] md:pt-[200px]">
-      <div
-        ref={ref}
-        className="mx-auto max-w-[1040px]"
-        style={{ "--p": reduced ? 1 : 0, "--n": PIECES.length } as React.CSSProperties}
-      >
-        <p className="text-[clamp(30px,4.6vw,56px)] font-semibold leading-[1.22] tracking-[-0.035em]">
-          {PIECES.map((piece, i) => {
-            const next = PIECES[i + 1];
-            // A full stop sits right after its word or picture; everything else is followed by a space.
-            const space = next === "." ? "" : " ";
-            if (typeof piece !== "string") {
+      <InView hold={false}>
+        <div
+          ref={ref}
+          className="mx-auto max-w-[1040px]"
+          style={{ "--p": reduced ? 1 : 0, "--n": PIECES.length } as React.CSSProperties}
+        >
+          <p className="text-[clamp(30px,4.6vw,56px)] font-semibold leading-[1.22] tracking-[-0.035em]">
+            {PIECES.map((piece, i) => {
+              const next = PIECES[i + 1];
+              // A full stop sits right after its word or picture; everything else is followed by a space.
+              const space = next === "." ? "" : " ";
+              if (typeof piece !== "string") {
+                return (
+                  <span key={i} style={lit(i)}>
+                    <Mark mark={piece.mark} />
+                    {space}
+                  </span>
+                );
+              }
               return (
                 <span key={i} style={lit(i)}>
-                  <Mark mark={piece.mark} />
+                  {piece}
                   {space}
                 </span>
               );
-            }
-            return (
-              <span key={i} style={lit(i)}>
-                {piece}
-                {space}
-              </span>
-            );
-          })}
-        </p>
-      </div>
+            })}
+          </p>
+        </div>
+      </InView>
     </section>
   );
 }

@@ -274,13 +274,13 @@ export function WorkingStrip({ status, tick = 1000, className, style }: {
     <div className={`flex h-[26px] items-center gap-[9px] ${className ?? ""}`} style={style}>
       <span className="flex h-[20px] w-[20px] items-center justify-center">
         <span
-          className="block h-[13px] w-[13px] rounded-full"
+          className="loop block h-[13px] w-[13px] rounded-full"
           style={{ border: "2px solid rgba(143,143,138,0.18)", borderTopColor: "#8F8F8A", animation: "k-spin 800ms linear infinite" }}
         />
       </span>
       <span className="flex flex-1 gap-[4px] text-[13px] text-ink">
         {words.map((w, i) => (
-          <span key={i} style={{ animation: `k-sweep 1500ms linear ${i * 160}ms infinite both` }}>
+          <span key={i} className="loop" style={{ animation: `k-sweep 1500ms linear ${i * 160}ms infinite both` }}>
             {w}
           </span>
         ))}

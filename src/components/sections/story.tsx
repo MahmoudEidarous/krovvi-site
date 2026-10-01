@@ -133,7 +133,7 @@ export function Story() {
               </div>
             ))}
           </div>
-          <div className="relative">
+          <InView hold={false} className="relative">
             <div className="sticky top-[calc(50vh-min(380px,43vh))] flex items-center justify-center py-2">
               <div className="glow-warm left-1/2 top-1/2 h-[720px] w-[720px] -translate-x-1/2 -translate-y-1/2" />
               <motion.div className="relative w-[min(340px,37vh)]" style={reduced ? undefined : { scale: settle, opacity: light }}>
@@ -163,7 +163,7 @@ export function Story() {
                 </div>
               </motion.div>
             </div>
-          </div>
+          </InView>
         </div>
 
         {/* Phones: each step with its own screen. */}
