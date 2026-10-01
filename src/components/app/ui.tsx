@@ -129,26 +129,82 @@ export function Check({ done = false, className, style }: { done?: boolean; clas
   );
 }
 
-/* ── People: a plain initial on a soft tint of their own colour ─────────── */
+/* ── People: their first letter in Krovvi's dots, as the app draws it ──────
+   A port of the app's components/person-face.tsx and lib/letter-dots.ts: the
+   same dot-matrix capitals, the same pitch and dot size, and the same colour
+   hashed from the name, so a person looks the same here as on the phone. */
 
-export function Initial({ letter, size = 56, ink = "var(--sand)" }: {
-  letter: string;
-  size?: number;
-  ink?: string;
-}) {
+const LATIN: Record<string, string[]> = {
+  A: [".###.", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
+  B: ["####.", "#...#", "#...#", "####.", "#...#", "#...#", "####."],
+  C: [".###.", "#...#", "#....", "#....", "#....", "#...#", ".###."],
+  D: ["###..", "#..#.", "#...#", "#...#", "#...#", "#..#.", "###.."],
+  E: ["#####", "#....", "#....", "####.", "#....", "#....", "#####"],
+  F: ["#####", "#....", "#....", "####.", "#....", "#....", "#...."],
+  G: [".###.", "#...#", "#....", "#.###", "#...#", "#...#", ".####"],
+  H: ["#...#", "#...#", "#...#", "#####", "#...#", "#...#", "#...#"],
+  I: [".###.", "..#..", "..#..", "..#..", "..#..", "..#..", ".###."],
+  J: ["..###", "...#.", "...#.", "...#.", "...#.", "#..#.", ".##.."],
+  K: ["#...#", "#..#.", "#.#..", "##...", "#.#..", "#..#.", "#...#"],
+  L: ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
+  M: ["#...#", "##.##", "#.#.#", "#.#.#", "#...#", "#...#", "#...#"],
+  N: ["#...#", "#...#", "##..#", "#.#.#", "#..##", "#...#", "#...#"],
+  O: [".###.", "#...#", "#...#", "#...#", "#...#", "#...#", ".###."],
+  P: ["####.", "#...#", "#...#", "####.", "#....", "#....", "#...."],
+  Q: [".###.", "#...#", "#...#", "#...#", "#.#.#", "#..#.", ".##.#"],
+  R: ["####.", "#...#", "#...#", "####.", "#.#..", "#..#.", "#...#"],
+  S: [".####", "#....", "#....", ".###.", "....#", "....#", "####."],
+  T: ["#####", "..#..", "..#..", "..#..", "..#..", "..#..", "..#.."],
+  U: ["#...#", "#...#", "#...#", "#...#", "#...#", "#...#", ".###."],
+  V: ["#...#", "#...#", "#...#", "#...#", "#...#", ".#.#.", "..#.."],
+  W: ["#...#", "#...#", "#...#", "#.#.#", "#.#.#", "#.#.#", ".#.#."],
+  X: ["#...#", "#...#", ".#.#.", "..#..", ".#.#.", "#...#", "#...#"],
+  Y: ["#...#", "#...#", ".#.#.", "..#..", "..#..", "..#..", "..#.."],
+  Z: ["#####", "....#", "...#.", "..#..", ".#...", "#....", "#####"],
+};
+
+/** The transcript's speaker inks (theme/tokens.ts voice). */
+const VOICE = ["#E6DCC8", "#C98A62", "#B0A89D", "#C2A470", "#8F7864", "#D4B49A"];
+
+/** The same warmth for the same person everywhere: hashed from the name, as the app does. */
+export function personTint(name: string): string {
+  let h = 0;
+  for (let i = 0; i < name.length; i += 1) h = (h * 31 + name.charCodeAt(i)) >>> 0;
+  return VOICE[h % VOICE.length];
+}
+
+export function PersonFace({ name, size = 36 }: { name: string; size?: number }) {
+  const tint = personTint(name);
+  const letter = name.trim().charAt(0).toUpperCase();
+  const rows = LATIN[letter];
+  if (!rows) {
+    return (
+      <span
+        className="inline-flex shrink-0 items-center justify-center rounded-full bg-card-hi font-semibold"
+        style={{ width: size, height: size, fontSize: size * 0.44, color: tint }}
+      >
+        {letter}
+      </span>
+    );
+  }
+  const dots: Array<[number, number]> = [];
+  rows.forEach((line, y) => [...line].forEach((cell, x) => cell === "#" && dots.push([x, y])));
+  const xs = dots.map((d) => d[0]);
+  const ys = dots.map((d) => d[1]);
+  const cols = Math.max(...xs) - Math.min(...xs) + 1;
+  const tall = Math.max(...ys) - Math.min(...ys) + 1;
+  const small = size < 30;
+  const pitch = (size * (small ? 0.64 : 0.56)) / 6;
+  const r = pitch * (small ? 0.42 : 0.37);
+  const x0 = size / 2 - ((cols - 1) * pitch) / 2 - Math.min(...xs) * pitch;
+  const y0 = size / 2 - ((tall - 1) * pitch) / 2 - Math.min(...ys) * pitch;
   return (
-    <span
-      className="inline-flex shrink-0 items-center justify-center rounded-full font-semibold"
-      style={{
-        width: size,
-        height: size,
-        fontSize: Math.round(size * 0.42),
-        color: ink,
-        background: `color-mix(in srgb, ${ink} 15%, #161615)`,
-      }}
-    >
-      {letter}
-    </span>
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="shrink-0" aria-hidden="true">
+      <circle cx={size / 2} cy={size / 2} r={size / 2} fill="#1F1F1E" />
+      {dots.map(([x, y]) => (
+        <circle key={`${x}-${y}`} cx={x0 + x * pitch} cy={y0 + y * pitch} r={r} fill={tint} />
+      ))}
+    </svg>
   );
 }
 

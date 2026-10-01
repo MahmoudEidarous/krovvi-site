@@ -1,5 +1,5 @@
 import { an } from "@/lib/anim";
-import { Card, Check, Initial, KGlyph, Play } from "./ui";
+import { Card, Check, PersonFace, KGlyph, Play } from "./ui";
 
 /* ── It remembers: a moment played back, the words arriving with the sound ── */
 
@@ -15,7 +15,7 @@ export function RememberVisual() {
     <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
       <div className="rounded-[22px] bg-ground p-5">
         <div className="flex items-center gap-3">
-          <Initial letter="K" size={40} ink="var(--clay)" />
+          <PersonFace name="Karim Nabil" size={40} />
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-semibold text-ink">Karim Nabil</div>
             <div className="text-[12.5px] text-faint">Call with Karim · Monday</div>
@@ -102,7 +102,7 @@ export function PeopleVisual() {
               className="anim flex items-center gap-3 border-t border-line/70 py-[12px] first:border-t-0"
               style={an("k-rise", 200 + i * 160, 700)}
             >
-              <Initial letter={p.letter} size={38} ink={p.ink} />
+              <PersonFace name={p.name} size={38} />
               <div className="min-w-0 flex-1">
                 <div className="text-[15px] font-semibold text-ink">{p.name}</div>
                 <div className="text-[13px] leading-[1.4] text-muted">{p.line}</div>
@@ -114,7 +114,7 @@ export function PeopleVisual() {
       </div>
       <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1500, 800)}>
         <div className="flex items-center gap-3">
-          <Initial letter="S" size={34} ink="var(--sand)" />
+          <PersonFace name="Sara Ali" size={34} />
           <div>
             <div className="text-[15px] font-semibold text-ink">Where things stand with Sara</div>
             <div className="text-[12.5px] text-faint">Before your 6:17 meeting</div>
@@ -199,7 +199,7 @@ export function ChangedVisual() {
       </div>
       <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1700, 700)}>
         <div className="flex items-center gap-3">
-          <Initial letter="M" size={34} ink="var(--ash)" />
+          <PersonFace name="Mona" size={34} />
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-semibold text-ink">Mona still has the old date</div>
             <div className="text-[13px] text-muted">You told her October 3, last week</div>

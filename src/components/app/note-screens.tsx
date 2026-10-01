@@ -1,5 +1,5 @@
 import { an } from "@/lib/anim";
-import { Card, Check, Divider, Initial, NavCircle, Play, StatusBar } from "./ui";
+import { Card, Check, Divider, PersonFace, NavCircle, Play, StatusBar } from "./ui";
 
 /** The top of a recording's page: back, title, and the Note / Transcript switch. */
 function NoteTop() {
@@ -77,8 +77,8 @@ export function CaughtScreen({ still = false }: { still?: boolean }) {
 
         <div className={`${A} mt-[16px] flex items-center gap-[12px] px-[4px]`} style={an("k-rise", 2300, 600)}>
           <span className="flex -space-x-[8px]">
-            <span className="rounded-full ring-[3px] ring-ground"><Initial letter="S" size={34} ink="var(--sand)" /></span>
-            <span className="rounded-full ring-[3px] ring-ground"><Initial letter="O" size={34} ink="var(--clay)" /></span>
+            <span className="rounded-full ring-[3px] ring-ground"><PersonFace name="Sara Ali" size={34} /></span>
+            <span className="rounded-full ring-[3px] ring-ground"><PersonFace name="Omar" size={34} /></span>
           </span>
           <span className="text-[14px] text-muted">Sara now has 3 things, 1 task due Sunday.</span>
         </div>
@@ -257,7 +257,7 @@ export function BriefScreen({ still = false }: { still?: boolean }) {
         <div className={`${A} text-[16px] text-muted`} style={an("k-fade", 100)}>In 25 min · 6:17 pm</div>
         <div className={`${A} mt-[2px] text-[17px] text-soft`} style={an("k-fade", 150)}>Atlas sync</div>
         <div className={`${A} mt-[16px] flex items-center gap-[14px]`} style={an("k-rise", 250)}>
-          <Initial letter="S" size={54} ink="var(--sand)" />
+          <PersonFace name="Sara Ali" size={54} />
           <div>
             <div className="text-[26px] font-bold leading-tight tracking-[-0.9px] text-ink">Sara Ali</div>
             <div className="text-[14.5px] text-soft">Sara leads design for the Atlas launch</div>
@@ -336,7 +336,7 @@ export function DebriefScreen({ still = false }: { still?: boolean }) {
         <NavCircle icon="close" />
       </div>
       <div className="absolute inset-x-[20px] top-[124px]">
-        <Initial letter="S" size={46} ink="var(--sand)" />
+        <PersonFace name="Sara Ali" size={46} />
         <div className="mt-[14px] text-[29px] font-bold leading-[1.1] tracking-[-1.1px] text-ink">How did it go with Sara?</div>
         <div className="mt-[6px] text-[15px] text-muted">Atlas sync</div>
         <Card className="mt-[18px] px-[16px] py-[14px]">
