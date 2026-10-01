@@ -438,164 +438,77 @@ export function SpeakUpVisual() {
   );
 }
 
-/* ── F. Both of you, on the same page: Krovvi catches what doesn't match,
-      and the other person confirms what you agreed from their own phone ── */
+/* ── F. It knows who owes what: one of the app's own questions, answered from your conversations ── */
 
-/** The page the other person opens in Safari: krovvi.com/r/ as the site draws it (app/r/[token]/record-page.tsx). */
-function TheirPage({ confirmAt }: { confirmAt: number }) {
-  const lines: Array<{ who?: string; text: string; by?: string }> = [
-    { text: "42,000 in total, half up front and half when the kitchen is done" },
-    { who: "You", text: "start work on the 5th" },
-    { who: "Sam", text: "send the signed quote", by: "by Monday" },
-  ];
+type Owe = { name: string; line: string; what: string; amount: string; mine?: boolean; src: { title: string; at?: string; chat?: boolean } };
+
+const OWES: Owe[] = [
+  { name: "Omar", line: "Omar owes you", what: "for dinner on Saturday", amount: "200", src: { title: "Dinner with Omar", at: "41:05" } },
+  { name: "Lina", line: "Lina owes you", what: "her half of summer camp", amount: "300", src: { title: "Chat with Lina", chat: true } },
+  { name: "Karim Nabil", line: "You owe Karim", what: "when the kitchen is done", amount: "21,000", mine: true, src: { title: "Kitchen walkthrough", at: "12:08" } },
+];
+
+/** Where a line came from, as the chat's receipt pill: play and the second, or the chat it was read in. */
+function Source({ title, at, chat }: { title: string; at?: string; chat?: boolean }) {
   return (
-    <div className="relative h-full w-full bg-ground">
-      <StatusBar />
-      <div className="absolute inset-x-[20px] top-[70px]">
-        <div className="text-[15px] font-semibold tracking-[-0.01em] text-ink">krovvi</div>
-        <div className="mt-[34px] text-[27px] font-semibold leading-[1.25] tracking-[-0.02em] text-ink">Sam shared what you agreed</div>
-        <div className="mt-[8px] text-[15px] text-muted">Kitchen walkthrough · Monday</div>
-        <div className="mt-[22px] overflow-hidden rounded-[18px] bg-card">
-          {lines.map((line, i) => (
-            <div key={i} className={`flex items-start gap-3 px-4 py-[14px] ${i ? "border-t border-line" : ""}`}>
-              <span className="mt-[9px] h-[6px] w-[6px] shrink-0 rounded-full bg-soft" />
-              <div className="min-w-0 flex-1">
-                <div className="text-[16px] leading-[1.5] text-ink">
-                  {line.who && <span className="font-semibold">{line.who}: </span>}
-                  {line.text}
-                </div>
-                {line.by && <div className="mt-1 text-[13px] text-muted">{line.by}</div>}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-[12px] px-1 text-[13px] leading-[1.5] text-faint">Only these lines were shared, never the conversation itself.</div>
-        <div className="relative mt-[26px] h-[108px]">
-          <div className="seq transient absolute inset-x-0 top-0 flex flex-col gap-3" style={seq(`k-gone 260ms var(--ease) ${confirmAt + 420}ms forwards`)}>
-            <span
-              className="seq flex h-[48px] items-center justify-center rounded-full bg-ink text-[16px] font-semibold text-ground"
-              style={seq(`k-press 420ms var(--ease) ${confirmAt}ms both`)}
-            >
-              This is right
-            </span>
-            <span className="flex h-[48px] items-center justify-center rounded-full bg-card-hi text-[16px] font-medium text-ink">Something is off</span>
-          </div>
-          <div className="anim absolute inset-x-0 top-0 rounded-[16px] bg-card px-4 py-4 text-[16px] leading-[1.5] text-ink" style={an("k-pop", confirmAt + 620, 500)}>
-            Thanks. Sam will see that you confirmed it.
-          </div>
-        </div>
-      </div>
-      {/* Safari's address bar, at the bottom where iPhone keeps it. */}
-      <div className="absolute inset-x-[16px] bottom-[34px] flex h-[48px] items-center justify-center gap-[6px] rounded-full bg-card-hi text-[15px] text-soft">
-        <svg width="10" height="13" viewBox="0 0 10 13" fill="none" aria-hidden="true">
-          <rect x="0.75" y="5.25" width="8.5" height="7" rx="1.6" fill="#A9A8A2" />
-          <path d="M2.6 5.3V3.8a2.4 2.4 0 0 1 4.8 0v1.5" stroke="#A9A8A2" strokeWidth="1.4" />
+    <span className="inline-flex h-[22px] items-center gap-[6px] whitespace-nowrap rounded-full bg-card-hi pl-[7px] pr-[9px] text-[12px] font-medium text-soft">
+      {chat ? (
+        <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 3.5c-4.9 0-8.5 3.2-8.5 7.2 0 2.1 1 4 2.7 5.3l-.7 3.8 3.9-2c.8.2 1.7.3 2.6.3 4.9 0 8.5-3.2 8.5-7.3S16.9 3.5 12 3.5Z"
+            fill="none"
+            stroke="#8F8F8A"
+            strokeWidth="2.2"
+            strokeLinejoin="round"
+          />
         </svg>
-        krovvi.com
-      </div>
-    </div>
+      ) : (
+        <Tri color="#A9A8A2" />
+      )}
+      {title}
+      {at && <span className="text-[11px] font-normal text-faint tabular">{at}</span>}
+    </span>
   );
 }
 
-export function AgreeVisual() {
-  const keepAt = 1500; // you keep what Karim said in the room
-  const sendAt = 2700; // and send him what you agreed
-  const openAt = 3500;
-  const confirmAt = 4300; // he confirms it on his phone
-  const doneAt = confirmAt + 900;
+export function OwesVisual() {
   return (
-    <div className="grid items-start gap-5 md:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)]">
-      <div className="flex flex-col gap-3">
-        {/* Krovvi caught it: what was said and what was sent do not match. It shows both and lets you choose. */}
-        <div className="anim rounded-[22px] bg-ground px-[18px] pb-[14px] pt-[16px]" style={an("k-rise", 200, 700)}>
-          <div className="flex items-center gap-[8px] text-[12.5px] font-medium text-muted">
-            <span className="h-[6px] w-[6px] rounded-full bg-muted" />
-            Two things disagree
-          </div>
-          <div className="mt-[8px] text-[17px] font-medium leading-[24px] tracking-[-0.3px] text-ink">
-            Karim and his quote say different things about the total.
-          </div>
-          <div className="mt-[12px] flex flex-col gap-[8px]">
-            <div
-              className="seq flex min-h-[52px] items-center gap-[11px] rounded-[14px] bg-card-hi px-[14px] py-[8px]"
-              style={seq(`k-press 380ms var(--ease) ${keepAt}ms both`)}
-            >
-              <PersonFace name="Karim Nabil" size={24} />
-              <span className="min-w-0 flex-1">
-                <span className="block text-[15px] font-medium tracking-[-0.2px] text-ink">42,000</span>
-                <span className="flex items-center gap-[5px] text-[12.5px] text-muted">
-                  <Tri /> Said in the kitchen walkthrough, Mon 12:08
-                </span>
-              </span>
-              <span className="anim" style={an("k-check-in", keepAt + 200, 420)}>
-                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                  <circle cx="8" cy="8" r="7.5" fill="#EDEDEB" />
-                  <path d="M4.8 8.2 7 10.4l4.2-4.6" fill="none" stroke="#0A0A0A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </div>
-            <div className="seq flex min-h-[52px] items-center gap-[11px] rounded-[14px] bg-card-hi px-[14px] py-[8px]" style={seq(`k-dim 400ms var(--ease) ${keepAt + 200}ms forwards`)}>
-              <span className="flex h-[24px] w-[24px] items-center justify-center rounded-full bg-card">
-                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" stroke="#A9A8A2" strokeWidth="1.3" aria-hidden="true">
-                  <rect x="0.65" y="0.65" width="10.7" height="8.7" rx="1.6" />
-                  <path d="m1 1.4 5 3.9 5-3.9" />
-                </svg>
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block text-[15px] font-medium tracking-[-0.2px] text-ink">46,000</span>
-                <span className="text-[12.5px] text-muted">The quote he emailed, Tuesday</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* What you agreed goes to Karim; his answer comes back. */}
-        <div className="anim rounded-[22px] bg-ground px-[18px] py-[14px]" style={an("k-rise", 900, 700)}>
-          <div className="text-[13px] font-semibold text-muted">What you agreed with Karim</div>
-          <div className="mt-[8px] flex flex-col gap-[6px] text-[14.5px] leading-[1.45] text-soft">
-            <span>42,000 in total, half up front and half when the kitchen is done</span>
-            <span>
-              <b className="font-semibold text-ink">Karim</b>: start work on the 5th
-            </span>
-            <span>
-              <b className="font-semibold text-ink">You</b>: send the signed quote <span className="text-faint">· by Monday</span>
-            </span>
-          </div>
-          <div className="relative mt-[12px] h-[36px]">
-            <span
-              className="seq transient absolute left-0 top-0 flex h-[36px] items-center rounded-full bg-ink px-[18px] text-[14px] font-semibold text-ground"
-              style={seq(`k-press 380ms var(--ease) ${sendAt}ms both, k-gone 200ms var(--ease) ${sendAt + 380}ms forwards`)}
-            >
-              Send to Karim
-            </span>
-            <span className="absolute left-0 top-0 flex h-[36px] items-center text-[14px] text-soft">
-              <span className="seq opacity-0" style={seq(`k-on ${openAt - sendAt - 400}ms linear ${sendAt + 400}ms`)}>Sent to Karim</span>
-            </span>
-            <span className="absolute left-0 top-0 flex h-[36px] items-center text-[14px] text-soft">
-              <span className="seq opacity-0" style={seq(`k-on ${doneAt - openAt}ms linear ${openAt}ms`)}>Karim opened it</span>
-            </span>
-            <span className="anim absolute left-0 top-0 flex h-[36px] items-center gap-[8px] text-[14px] font-medium text-ink" style={an("k-pop", doneAt, 450)}>
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                <circle cx="8" cy="8" r="7.5" fill="#EDEDEB" />
-                <path d="M4.8 8.2 7 10.4l4.2-4.6" fill="none" stroke="#0A0A0A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              Karim confirmed it
-            </span>
-          </div>
+    <div className="flex flex-col gap-4">
+      <div className="flex justify-end">
+        <div
+          className="anim max-w-[420px] rounded-[20px] rounded-br-[7px] bg-card-hi px-[16px] py-[11px] text-[16px] leading-[1.35] tracking-[-0.15px] text-ink"
+          style={an("k-pop", 300, 420)}
+        >
+          My money with people. Who owes what?
         </div>
       </div>
-
-      {/* Karim's side: a private page in his browser. No app. */}
-      <div className="flex flex-col items-center">
-        <div className="relative h-[470px] w-full overflow-hidden">
-          <div className="anim mx-auto w-[min(250px,100%)]" style={an("k-rise-lg", 500, 900)}>
-            <Phone shadow={false} label="Karim's phone: the page Sam sent him, where he confirms what they agreed. No app needed.">
-              <TheirPage confirmAt={confirmAt} />
-            </Phone>
+      <div className="overflow-hidden rounded-[22px] bg-ground">
+        {OWES.map((o, i) => (
+          <div key={o.name} className="anim" style={an("k-rise", 1000 + i * 240, 650)}>
+            {i > 0 && <div className="mx-5 h-px bg-line" />}
+            <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-5 py-[16px]">
+              <PersonFace name={o.name} size={40} />
+              <div className="min-w-0">
+                <div className="text-[16px] font-semibold tracking-[-0.2px] text-ink">{o.line}</div>
+                <div className="mt-[5px] flex flex-wrap items-center gap-x-[10px] gap-y-[6px] text-[14px] text-muted">
+                  <span>{o.what}</span>
+                  <Source {...o.src} />
+                </div>
+              </div>
+              <div className={`text-[clamp(24px,2.7vw,34px)] font-semibold tracking-[-0.03em] tabular ${o.mine ? "text-soft" : "text-ink"}`}>
+                {o.amount}
+              </div>
+            </div>
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[90px]" style={{ background: "linear-gradient(to bottom, rgba(15,15,14,0), #0f0f0e 92%)" }} />
-        </div>
-        <div className="mt-2 text-[13px] text-faint">Karim&apos;s phone, no app needed</div>
+        ))}
+      </div>
+      <div className="anim flex flex-wrap items-baseline justify-between gap-2 px-2 text-[14px]" style={an("k-fade", 1900, 600)}>
+        <span className="text-muted">
+          Owed to you <span className="ml-1 font-semibold text-ink tabular">500</span>
+        </span>
+        <span className="text-muted">
+          You owe <span className="ml-1 font-semibold text-soft tabular">21,000</span>
+        </span>
       </div>
     </div>
   );

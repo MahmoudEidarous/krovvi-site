@@ -1,6 +1,6 @@
 import {
-  AgreeVisual,
   ChangedVisual,
+  OwesVisual,
   PeopleVisual,
   ReadOnYouVisual,
   RememberVisual,
@@ -12,7 +12,7 @@ import { an } from "@/lib/anim";
 /**
  * What having Krovvi means, in six parts: it remembers, it knows who matters,
  * it understands you, it keeps up, it speaks up at the right time, and it
- * keeps both of you on the same page. Each tile plays its own small film.
+ * knows who owes what. Each tile plays its own small film.
  */
 export function Bento() {
   return (
@@ -72,12 +72,12 @@ export function Bento() {
             <SpeakUpVisual />
           </Tile>
           <Tile
-            align="start"
+            align="center"
             className="lg:col-span-2"
-            title="Both of you, on the same page."
-            body="If what was said and what was sent don't match, Krovvi catches it. Send the other person what you agreed, and they confirm it from their own phone. No app needed."
+            title="It knows who owes what."
+            body="Money, favors and promises between you and everyone, straight from your conversations. Just ask."
           >
-            <AgreeVisual />
+            <OwesVisual />
           </Tile>
         </div>
       </div>
