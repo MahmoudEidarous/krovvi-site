@@ -15,32 +15,32 @@ type Step = { title: string; body: string; label: string; screen: () => React.Re
 
 const STEPS: Step[] = [
   {
-    title: "Record the conversation.",
-    body: "Tap once when you talk in person. For a Zoom, Meet or Teams call, send Krovvi to join it. Talk the way you always do, in English, Arabic or both.",
+    title: "Talk the way you always do.",
+    body: "Tap record when you talk in person, or send Krovvi to your Zoom, Meet or Teams call. English, Arabic or both.",
     label: "Recording in Krovvi: the timer runs and the voice moves.",
     screen: () => <RecordScreen />,
   },
   {
     title: "See what was caught.",
-    body: "Soon after you stop, Krovvi shows what was promised, decided and paid. Tap any line to hear the moment it was said.",
+    body: "Soon after you stop, Krovvi shows what was promised, decided and paid. Every line plays the moment it was said.",
     label: "What I caught: a task, a decision, a sum and a date, each with the second it was said.",
     screen: () => <CaughtScreen />,
   },
   {
-    title: "Send them what you agreed.",
-    body: "One tap sends the other person a short list of what you agreed. They confirm it or fix a line, without the app. Nothing goes out unless you tap.",
+    title: "Make sure you both agree.",
+    body: "Send the other person what you agreed. They confirm it or fix a line from their own phone, no app needed.",
     label: "What you agreed with Sara, sent, opened and confirmed.",
     screen: () => <AgreedScreen />,
   },
   {
-    title: "Know where things stand before you meet again.",
-    body: "Before your next meeting, Krovvi shows what you owe them, what they owe you, and anything new worth knowing.",
+    title: "Walk in knowing where things stand.",
+    body: "Before you meet again, Krovvi shows what you owe them, what they owe you, and what's new since you last talked.",
     label: "Sara Ali, in 25 minutes: last time, what you owe, what Sara owes you, and what is worth knowing.",
     screen: () => <BriefScreen />,
   },
   {
-    title: "Say what changed. Krovvi updates.",
-    body: "After you meet, tell Krovvi in a few words. It updates the dates and the tasks, and you can undo any change.",
+    title: "Tell it what changed.",
+    body: "After you meet, say it in a few words. Krovvi updates the dates and the tasks, and you can undo any change.",
     label: "How did it go with Sara? Krovvi updated 2 things, each with Undo.",
     screen: () => <DebriefScreen />,
   },

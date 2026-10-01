@@ -23,8 +23,8 @@ export function Loop() {
             The more you use it, the less you explain.
           </h2>
           <p className="anim max-w-[500px] self-end text-pretty text-[clamp(17px,2.2vw,20px)] leading-[1.6] text-muted" style={an("k-rise", 150, 900)}>
-            Krovvi learns from what you keep, change and skip. It learns how you write to each person and which help you
-            actually use. When you correct it, your correction wins, and it stays fixed.
+            Krovvi learns how you talk, who matters to you, and which help you actually use. When you correct it, your
+            correction wins.
           </p>
         </InView>
 
@@ -122,7 +122,7 @@ export function Loop() {
             })}
           </div>
           <div className="absolute left-1/2 top-1/2 w-[34cqw] -translate-x-1/2 -translate-y-1/2 text-center text-[clamp(15px,2.6cqw,22px)] font-medium leading-[1.35] tracking-[-0.01em] text-soft">
-            Each time round, a little less to explain.
+            A little less to explain, every time.
           </div>
         </InView>
       </div>

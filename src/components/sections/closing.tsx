@@ -13,7 +13,7 @@ export function Closing() {
           Krovvi keeps up, so you don&apos;t have to.
         </h2>
         <p style={an("k-rise", 1600, 900)} className="anim mt-5 max-w-[520px] text-pretty text-[clamp(17px,2.2vw,20px)] leading-[1.6] text-muted">
-          Krovvi is in beta on iPhone. Join, record your next real conversation, and see what it catches.
+          It&apos;s in beta on iPhone now. Join, record your next real conversation, and see what Krovvi catches.
         </p>
         <a
           href={JOIN_URL}

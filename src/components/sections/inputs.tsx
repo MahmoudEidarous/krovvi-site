@@ -151,8 +151,8 @@ export function Inputs() {
           Tell it things. Send it things.
         </h2>
         <p style={an("k-rise", 150, 900)} className="anim mx-auto mt-5 max-w-[640px] text-pretty text-[clamp(17px,2.2vw,20px)] leading-[1.6] text-muted">
-          Share a PDF, a link, a photo or a WhatsApp chat. Connect Gmail and your calendar. Bring what ChatGPT and Claude
-          already know about you. It all lands in one place, linked to the people it is about.
+          Voice notes, meetings, photos, PDFs, links and WhatsApp chats. Your Gmail and your calendar. What ChatGPT and
+          Claude already know about you. Krovvi connects all of it to the people and plans it&apos;s about.
         </p>
       </InView>
       <InView className="relative mx-auto mt-10 aspect-square w-[min(640px,100%)] md:mt-4" style={{ containerType: "inline-size" }}>

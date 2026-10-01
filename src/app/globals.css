@@ -162,6 +162,28 @@ body {
     filter: brightness(1.25);
   }
 }
+@keyframes k-reveal-x {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes k-blip {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
 @keyframes k-shift {
   from {
     transform: translateY(var(--from, -100px));

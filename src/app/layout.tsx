@@ -2,23 +2,23 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const description =
-  "Krovvi is an iPhone app for the conversations in your life. It keeps track of what people promised, what was decided and what changed.";
+  "Krovvi remembers what people told you, keeps track of what you promised, and notices what changed. So when you need it, it's already caught up.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://krovvi.com"),
-  title: "Krovvi: know where things stand with everyone",
+  title: "Krovvi: the AI that knows your life",
   description,
   openGraph: {
     type: "website",
     url: "https://krovvi.com",
     siteName: "Krovvi",
     title: "Krovvi",
-    description: "Know where things stand with everyone.",
+    description: "The AI that knows your life.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Krovvi",
-    description: "Know where things stand with everyone.",
+    description: "The AI that knows your life.",
   },
 };
 

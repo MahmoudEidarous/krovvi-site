@@ -5,9 +5,9 @@ export function SiteFooter() {
     <footer className="relative mt-24 overflow-hidden border-t border-[var(--surface-hi)] pt-14 md:mt-36 md:pt-[72px]">
       <div className="mx-auto flex max-w-[1120px] flex-wrap justify-between gap-12 px-6 md:gap-14">
         <div>
-          <h3 className="text-balance text-[26px] font-semibold tracking-[-0.02em]">Know where things stand with everyone.</h3>
+          <h3 className="text-balance text-[26px] font-semibold tracking-[-0.02em]">The AI that knows your life.</h3>
           <p className="mt-3 max-w-[340px] text-[15px] leading-[1.6] text-[var(--muted)]">
-            Krovvi keeps track of what people promised, what was decided and what changed.
+            Krovvi remembers what people told you, keeps track of what you promised, and keeps up as plans change.
           </p>
         </div>
         <div className="flex gap-[clamp(48px,8vw,110px)]">

@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
 
 const TEXT =
-  "People tell you things all day. A date, a price, a favor, a plan. Most of it is said out loud and never written down. Then plans change, and no one is sure who said what. Krovvi keeps track of it for you, with the moment each thing was said.";
+  "Most AI only knows what you type into it. Krovvi knows what's going on. It hears your conversations, reads what you share, and keeps track of the people in your life. What they told you. What you promised. What changed. The longer you use it, the less you explain.";
 
 /**
  * The problem in one paragraph, lit word by word as it scrolls past. One CSS
