@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 
 import { ChatTellScreen, ShareScreen, UploadScreen } from "@/components/app/input-screens";
 import { BriefScreen, CaughtScreen } from "@/components/app/note-screens";
@@ -9,6 +9,7 @@ import { RecordScreen } from "@/components/app/record-screen";
 import { InView } from "@/components/in-view";
 import { Phone } from "@/components/phone";
 import { an } from "@/lib/anim";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 

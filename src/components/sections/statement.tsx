@@ -1,7 +1,9 @@
 "use client";
 
 import { useRef } from "react";
-import { useMotionValueEvent, useReducedMotion, useScroll } from "motion/react";
+import { useMotionValueEvent, useScroll } from "motion/react";
+
+import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 /**
  * The idea in one paragraph, lit word by word as it scrolls past. The four

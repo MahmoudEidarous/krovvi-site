@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useReducedMotion } from "motion/react";
+import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 import { HERO_TURNS, HeroChat, heroTimeline } from "@/components/app/hero-chat";
 import { Phone } from "@/components/phone";

@@ -454,8 +454,8 @@ export function ShareScreen() {
         style={seq(`k-on ${goneAt - savingAt}ms linear ${savingAt}ms`)}
       >
         <span className="relative inline-block">
-          <span style={{ animation: `k-hide 1ms linear ${savedAt}ms forwards` }}>Saving to Krovvi…</span>
-          <span className="absolute inset-0 whitespace-nowrap" style={{ animation: `k-show 160ms linear ${savedAt}ms both` }}>
+          <span className="seq" style={{ animation: `k-hide 1ms linear ${savedAt}ms forwards` }}>Saving to Krovvi…</span>
+          <span className="seq absolute inset-0 whitespace-nowrap" style={{ animation: `k-show 160ms linear ${savedAt}ms both` }}>
             Saved to Krovvi
           </span>
         </span>

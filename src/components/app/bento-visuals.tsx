@@ -85,8 +85,8 @@ export function RememberVisual() {
             </svg>
           </span>
           <span className="relative w-[38px] text-[12px] text-ink tabular">
-            <span style={{ animation: `k-hide 1ms linear ${begin + play / 2}ms forwards` }}>12:08</span>
-            <span className="absolute left-0 top-0" style={{ animation: `k-show 1ms linear ${begin + play / 2}ms both` }}>
+            <span className="seq" style={{ animation: `k-hide 1ms linear ${begin + play / 2}ms forwards` }}>12:08</span>
+            <span className="seq absolute left-0 top-0" style={{ animation: `k-show 1ms linear ${begin + play / 2}ms both` }}>
               12:11
             </span>
           </span>

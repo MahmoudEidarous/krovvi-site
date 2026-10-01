@@ -133,29 +133,6 @@ function ActionIcons() {
 
 /* ── The wordmark on an empty chat: "krovvi" in 46 equal dots ───────────── */
 
-const WORD_DOTS: Array<[number, number]> = (() => {
-  const K: Array<[number, number]> = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0.875, 1.375], [1.75, 0.75], [2.625, 0.125], [0.875, 2.625], [1.75, 3.25], [2.625, 3.875]];
-  const R: Array<[number, number]> = [[0, 1], [0, 2], [0, 3], [0, 4], [0.85, 1], [1.7, 1.2]];
-  const O: Array<[number, number]> = Array.from({ length: 10 }, (_, i) => {
-    const a = Math.PI / 2 + (i * 2 * Math.PI) / 10;
-    return [1.5 + 1.5 * Math.cos(a), 2.5 - 1.5 * Math.sin(a)];
-  });
-  const V: Array<[number, number]> = [[0, 1], [0.42, 2], [0.83, 3], [1.25, 4], [1.67, 3], [2.08, 2], [2.5, 1]];
-  const I: Array<[number, number]> = [[0, -0.3], [0, 1], [0, 2], [0, 3], [0, 4]];
-  const at = (pts: Array<[number, number]>, dx: number) => pts.map(([x, y]) => [x + dx, y] as [number, number]);
-  return [...at(K, 0), ...at(R, 3.825), ...at(O, 6.725), ...at(V, 10.925), ...at(V, 14.425), ...at(I, 18.125)];
-})();
-
-export function Wordmark({ pitch = 8, color = "#EDEDEB" }: { pitch?: number; color?: string }) {
-  return (
-    <svg width={19.4 * pitch} height={5.4 * pitch} viewBox="-0.6 -0.85 19.4 5.4" aria-label="krovvi">
-      {WORD_DOTS.map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r={0.40625} fill={color} />
-      ))}
-    </svg>
-  );
-}
-
 /* ── Chrome ─────────────────────────────────────────────────────────────── */
 
 /** Status bar and the nav row: the small K on the left (once there is a message), past chats and close on the right. */
@@ -309,8 +286,8 @@ export function WorkingStrip({ status, tick = 1000, className, style }: {
         ))}
       </span>
       <span className="relative text-[12px] text-faint tabular">
-        <span style={{ animation: `k-hide 1ms linear ${tick}ms forwards` }}>0:00</span>
-        <span className="absolute right-0 top-0" style={{ animation: `k-show 1ms linear ${tick}ms both` }}>0:01</span>
+        <span className="seq" style={{ animation: `k-hide 1ms linear ${tick}ms forwards` }}>0:00</span>
+        <span className="seq absolute right-0 top-0" style={{ animation: `k-show 1ms linear ${tick}ms both` }}>0:01</span>
       </span>
     </div>
   );
@@ -364,8 +341,8 @@ export function DictationBar({ className, style, tick = 1000 }: { className?: st
         <CrossGlyph size={13} color="#EDEDEB" />
       </span>
       <span className="relative min-w-[30px] text-[12px] text-muted tabular">
-        <span style={{ animation: `k-hide 1ms linear ${tick}ms forwards` }}>0:00</span>
-        <span className="absolute left-0 top-0" style={{ animation: `k-show 1ms linear ${tick}ms both` }}>0:01</span>
+        <span className="seq" style={{ animation: `k-hide 1ms linear ${tick}ms forwards` }}>0:00</span>
+        <span className="seq absolute left-0 top-0" style={{ animation: `k-show 1ms linear ${tick}ms both` }}>0:01</span>
       </span>
       <span className="flex h-[22px] flex-1 items-center justify-between">
         {amps.map((amp, i) => (
@@ -408,57 +385,6 @@ export function StopSquare() {
 }
 
 /* ── Cards that sit above the composer or in the thread ─────────────────── */
-
-/** "Before it sends": a draft waiting for a yes, between the thread and the composer. */
-export function DraftCard({ to, subject, body, className, style, toFace }: {
-  to: string;
-  subject: string;
-  body: string;
-  className?: string;
-  style?: CSSProperties;
-  toFace?: ReactNode;
-}) {
-  return (
-    <div className={`flex flex-col gap-[8px] rounded-[17px] bg-card px-[16px] py-[12px] ${className ?? ""}`} style={style}>
-      <div className="flex items-center gap-[8px]">
-        <span className="flex-1 text-[14px] font-medium tracking-[-0.3px] text-ink">Before it sends</span>
-        <span className="text-[12px] text-faint">Valid for 30 minutes</span>
-        <CrossGlyph size={10} />
-      </div>
-      <div className="flex gap-[8px]">
-        <span className="w-[52px] pt-[1px] text-[12px] text-faint">To</span>
-        <span className="flex items-center gap-[6px] text-[14px] text-soft">
-          {toFace}
-          {to}
-        </span>
-      </div>
-      <div className="flex gap-[8px]">
-        <span className="w-[52px] pt-[1px] text-[12px] text-faint">Subject</span>
-        <span className="text-[14px] font-semibold text-ink">{subject}</span>
-      </div>
-      <div className="text-[14px] leading-[21px] text-soft">{body}</div>
-      <div className="flex items-center gap-[12px] pt-[2px]">
-        <span className="rounded-full bg-ink px-[24px] py-[8px] text-[14px] font-medium tracking-[-0.3px] text-ground">Send it</span>
-        <span className="p-[8px] text-[14px] text-muted">Change it</span>
-      </div>
-    </div>
-  );
-}
-
-/** A file sent with a message: a card above the bubble with its badge, name and kind. */
-export function FileCard({ name, kind, tint, className, style }: { name: string; kind: string; tint: string; className?: string; style?: CSSProperties }) {
-  return (
-    <div className={`flex items-center gap-[12px] rounded-[17px] bg-card px-[14px] py-[12px] ${className ?? ""}`} style={style}>
-      <span className="flex h-[34px] w-[34px] items-center justify-center rounded-[9px] bg-card-hi">
-        <DocGlyph size={16} color={tint} />
-      </span>
-      <span className="min-w-0">
-        <span className="block text-[14.5px] font-semibold tracking-[-0.15px] text-ink">{name}</span>
-        <span className="block text-[11px] tracking-[0.3px] text-faint">{kind}</span>
-      </span>
-    </div>
-  );
-}
 
 /** Krovvi's words: 16 points on a 27.2 line, full width, no bubble and no name. */
 export function AnswerText({ children, className, style }: { children: ReactNode; className?: string; style?: CSSProperties }) {

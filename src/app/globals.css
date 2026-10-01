@@ -146,12 +146,6 @@ body {
     transform: translateY(-110%) scale(0.94);
   }
 }
-@keyframes k-slide-left {
-  from {
-    opacity: 0;
-    transform: translateX(24px);
-  }
-}
 @keyframes k-press {
   0%,
   100% {
@@ -168,49 +162,6 @@ body {
   }
   to {
     clip-path: inset(0 0 0 0);
-  }
-}
-@keyframes k-blip {
-  0% {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-  25% {
-    opacity: 1;
-    transform: scale(1.25);
-  }
-  100% {
-    opacity: 0.35;
-    transform: scale(1);
-  }
-}
-/* A light passing down a list: each line brightens on its turn, then rests. */
-@keyframes k-hl {
-  0%,
-  100% {
-    color: var(--soft);
-  }
-  4%,
-  11% {
-    color: var(--fg);
-  }
-  18% {
-    color: var(--soft);
-  }
-}
-@keyframes k-shift {
-  from {
-    transform: translateY(var(--from, -100px));
-  }
-}
-@keyframes k-done-text {
-  from {
-    color: var(--fg);
-    text-decoration-color: transparent;
-  }
-  to {
-    color: var(--muted);
-    text-decoration-color: var(--soft);
   }
 }
 @keyframes k-gone {
@@ -232,32 +183,6 @@ body {
     transform: scaleX(0);
   }
 }
-@keyframes k-fill {
-  from {
-    stroke-dashoffset: var(--len, 70);
-  }
-}
-@keyframes k-check-in {
-  from {
-    opacity: 0;
-    transform: scale(0.4);
-  }
-}
-@keyframes k-grow-x {
-  from {
-    transform: scaleX(0);
-  }
-}
-@keyframes k-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 /* The brand's brightness wave: the KThinking keyframes from the app. */
 @keyframes k-wave {
   0% {
@@ -304,16 +229,6 @@ body {
     opacity: 1 !important;
   }
 }
-@keyframes k-breathe {
-  0%,
-  100% {
-    opacity: 0.45;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 /* A voice, as the app's record screen draws it. */
 @keyframes k-speak {
   0%,
@@ -342,92 +257,12 @@ body {
     transform: translateX(0);
   }
 }
-@keyframes k-orbit {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes k-orbit-back {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-/* A dot travelling in to the K from wherever it came from. */
-@keyframes k-inflow {
-  0% {
-    opacity: 0;
-    transform: translate(var(--x), var(--y)) scale(0.6);
-  }
-  20% {
-    opacity: 0.9;
-  }
-  85% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(0, 0) scale(0.3);
-  }
-}
-
-@keyframes k-label {
-  0%,
-  100% {
-    color: var(--faint);
-  }
-  6%,
-  18% {
-    color: var(--fg);
-  }
-  30% {
-    color: var(--faint);
-  }
-}
-@keyframes k-node {
-  0%,
-  100% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-  6%,
-  18% {
-    opacity: 1;
-    transform: scale(1.5);
-  }
-  30% {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-}
-
-@keyframes k-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-.float {
-  animation: k-float var(--dur, 7s) ease-in-out var(--delay, 0s) infinite;
-}
-
-@keyframes k-play {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
 /* Held until scrolled into view (components/in-view.tsx). */
 [data-inview="0"] .anim,
 [data-inview="0"] .anim-loop,
 [data-inview="0"] .seq {
-  animation-play-state: paused;
+  /* important: a step's own inline animation would otherwise start at load, before anyone sees it */
+  animation-play-state: paused !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -439,10 +274,6 @@ body {
   .anim,
   .anim-loop,
   .bar,
-  .float,
-  .orbit,
-  .orbit-back,
-  .inflow,
   .ticker {
     animation: none !important;
   }
@@ -455,10 +286,6 @@ body {
 }
 
 /* A quiet fade at the sides of the inputs orbit, so chips leave rather than clip. */
-.edgefade {
-  -webkit-mask-image: radial-gradient(ellipse at center, black 55%, transparent 78%);
-  mask-image: radial-gradient(ellipse at center, black 55%, transparent 78%);
-}
 
 .tabular {
   font-variant-numeric: tabular-nums;
@@ -646,50 +473,6 @@ body {
   }
   50% {
     transform: translateY(-1.6px);
-  }
-}
-/* A control being used now and then: pressed, with a ring leaving it; a source playing through. */
-@keyframes k-tap {
-  0%,
-  64%,
-  100% {
-    transform: scale(1);
-  }
-  70% {
-    transform: scale(0.93);
-  }
-  78% {
-    transform: scale(1.02);
-  }
-  84% {
-    transform: scale(1);
-  }
-}
-@keyframes k-ripple {
-  0%,
-  68% {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  72% {
-    opacity: 0.85;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.45);
-  }
-}
-@keyframes k-play-through {
-  0% {
-    transform: scaleX(0);
-  }
-  88% {
-    transform: scaleX(1);
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

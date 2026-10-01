@@ -77,38 +77,6 @@ export function Play({ className, size = 9 }: { className?: string; size?: numbe
   );
 }
 
-export function UndoGlyph() {
-  return (
-    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" stroke="#EDEDEB" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M4.5 1 1.5 4l3 3" />
-      <path d="M1.8 4h6.7a4 4 0 0 1 0 8H5" />
-    </svg>
-  );
-}
-
-export function UndoPill() {
-  return (
-    <span className="flex h-[30px] items-center gap-[6px] rounded-full bg-card-hi px-[12px] text-[14px] font-medium text-ink">
-      <UndoGlyph />
-      Undo
-    </span>
-  );
-}
-
-/** The record mark: the app's dot mic (design/mic-marks.html). */
-export function DotMic({ size = 22, color = "#0A0A0A" }: { size?: number; color?: string }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="8" y="2.5" width="8" height="13" rx="4" fill={color} />
-      <circle cx="12" cy="6.2" r="1.35" fill="#EDEDEB" />
-      <circle cx="12" cy="9" r="1.35" fill="#EDEDEB" />
-      <circle cx="12" cy="11.8" r="1.35" fill="#EDEDEB" />
-      <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0" fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M12 18v4.5M8.8 22.5h6.4" stroke={color} strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 /** The seven-dot K, as the app's Krovvi glyph. */
 export function KGlyph({ size = 18, color = "#EDEDEB" }: { size?: number; color?: string }) {
   const dots: Array<[number, number]> = [[40, 28], [40, 60], [40, 92], [61, 45], [82, 30], [61, 75], [82, 90]];
