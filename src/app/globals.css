@@ -184,6 +184,20 @@ body {
     transform: scale(1);
   }
 }
+/* A light passing down a list: each line brightens on its turn, then rests. */
+@keyframes k-hl {
+  0%,
+  100% {
+    color: var(--soft);
+  }
+  4%,
+  11% {
+    color: var(--fg);
+  }
+  18% {
+    color: var(--soft);
+  }
+}
 @keyframes k-shift {
   from {
     transform: translateY(var(--from, -100px));

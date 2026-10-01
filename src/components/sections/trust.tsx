@@ -18,8 +18,8 @@ function Glyph({ name }: { name: Mark }) {
     <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
       {name === "tap" && (
         <>
-          <circle cx="11" cy="11" r="8.5" {...p} />
-          <circle cx="11" cy="11" r="3" fill="#EDEDEB" />
+          <rect x="4.5" y="9.5" width="13" height="9" rx="2.2" {...p} />
+          <path d="M7.5 9.5V7a3.5 3.5 0 0 1 7 0v2.5" {...p} />
         </>
       )}
       {name === "play" && (
@@ -36,10 +36,7 @@ function Glyph({ name }: { name: Mark }) {
       )}
       {name === "lines" && (
         <>
-          <circle cx="5" cy="7" r="1.3" fill="#EDEDEB" />
-          <circle cx="5" cy="11" r="1.3" fill="#EDEDEB" />
-          <circle cx="5" cy="15" r="1.3" fill="#EDEDEB" />
-          <path d="M8.5 7h9M8.5 11h9M8.5 15h6" {...p} />
+          <path d="M4 7h14M4 11h14M4 15h9" {...p} />
         </>
       )}
       {name === "no" && (

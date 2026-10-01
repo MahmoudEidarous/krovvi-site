@@ -1,5 +1,5 @@
 import { an } from "@/lib/anim";
-import { Card, Check, DotInitial, KGlyph, Play } from "./ui";
+import { Card, Check, Initial, KGlyph, Play } from "./ui";
 
 /* ── It remembers: a moment played back, the words arriving with the sound ── */
 
@@ -15,7 +15,7 @@ export function RememberVisual() {
     <div className="grid gap-4 md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
       <div className="rounded-[22px] bg-ground p-5">
         <div className="flex items-center gap-3">
-          <DotInitial letter="K" size={40} ink="var(--clay)" />
+          <Initial letter="K" size={40} ink="var(--clay)" />
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-semibold text-ink">Karim Nabil</div>
             <div className="text-[12.5px] text-faint">Call with Karim · Monday</div>
@@ -79,12 +79,12 @@ function Bars({ tone }: { tone: string }) {
 
 /* ── It knows who matters: your people, closest first, with twelve weeks of talk ── */
 
-const PEOPLE: Array<{ letter: string; ink: string; name: string; line: string; weeks: number[] }> = [
-  { letter: "S", ink: "var(--sand)", name: "Sara Ali", line: "Waiting on your new deck", weeks: [1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1] },
-  { letter: "M", ink: "var(--bone)", name: "Mom", line: "Dinner on Sunday at 7", weeks: [1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1] },
-  { letter: "K", ink: "var(--clay)", name: "Karim Nabil", line: "You owe him the signed quote", weeks: [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1] },
-  { letter: "L", ink: "var(--brass)", name: "Lina", line: "Picks up the kids on Wednesday", weeks: [1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0] },
-  { letter: "O", ink: "var(--ash)", name: "Omar", line: "Review on Thursday at 10", weeks: [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1] },
+const PEOPLE: Array<{ letter: string; ink: string; name: string; line: string; last: string }> = [
+  { letter: "S", ink: "var(--sand)", name: "Sara Ali", line: "Waiting on your new deck", last: "Tuesday" },
+  { letter: "M", ink: "var(--bone)", name: "Mom", line: "Dinner on Sunday at 7", last: "Saturday" },
+  { letter: "K", ink: "var(--clay)", name: "Karim Nabil", line: "You owe him the signed quote", last: "Monday" },
+  { letter: "L", ink: "var(--brass)", name: "Lina", line: "Has the kids on Wednesday", last: "Monday" },
+  { letter: "O", ink: "var(--ash)", name: "Omar", line: "Review on Thursday at 10", last: "Last week" },
 ];
 
 export function PeopleVisual() {
@@ -93,38 +93,28 @@ export function PeopleVisual() {
       <div className="rounded-[22px] bg-ground p-4 md:p-5">
         <div className="flex items-baseline justify-between px-1">
           <span className="text-[13px] font-semibold text-muted">Closest now</span>
-          <span className="text-[12px] text-faint">Last 12 weeks</span>
+          <span className="text-[12px] text-faint">Last talked</span>
         </div>
         <div className="mt-2 flex flex-col">
           {PEOPLE.map((p, i) => (
             <div
               key={p.name}
-              className="anim flex items-start gap-3 border-t border-line/70 py-[12px] first:border-t-0"
+              className="anim flex items-center gap-3 border-t border-line/70 py-[12px] first:border-t-0"
               style={an("k-rise", 200 + i * 160, 700)}
             >
-              <DotInitial letter={p.letter} size={38} ink={p.ink} />
+              <Initial letter={p.letter} size={38} ink={p.ink} />
               <div className="min-w-0 flex-1">
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="text-[15px] font-semibold text-ink">{p.name}</span>
-                  <span className="flex shrink-0 gap-[3px]">
-                    {p.weeks.map((on, w) => (
-                      <span
-                        key={w}
-                        className="anim h-[5px] w-[5px] rounded-full bg-ink"
-                        style={{ ...an("k-fade", 700 + i * 160 + w * 45, 400), opacity: on ? 0.95 : 0.16 }}
-                      />
-                    ))}
-                  </span>
-                </div>
+                <div className="text-[15px] font-semibold text-ink">{p.name}</div>
                 <div className="text-[13px] leading-[1.4] text-muted">{p.line}</div>
               </div>
+              <span className="shrink-0 text-[12.5px] text-faint">{p.last}</span>
             </div>
           ))}
         </div>
       </div>
       <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1500, 800)}>
         <div className="flex items-center gap-3">
-          <DotInitial letter="S" size={34} ink="var(--sand)" />
+          <Initial letter="S" size={34} ink="var(--sand)" />
           <div>
             <div className="text-[15px] font-semibold text-ink">Where things stand with Sara</div>
             <div className="text-[12.5px] text-faint">Before your 6:17 meeting</div>
@@ -153,9 +143,7 @@ export function ReadOnYouVisual() {
   ];
   return (
     <div className="rounded-[22px] bg-ground p-5">
-      <div className="flex items-center gap-2 text-[13px] font-semibold text-muted">
-        <KGlyph size={13} color="#8F8F8A" /> Krovvi&apos;s read on you
-      </div>
+      <div className="text-[13px] font-semibold text-muted">Krovvi&apos;s read on you</div>
       <div className="mt-4 flex flex-col gap-4">
         {groups.map(([label, lines], g) => (
           <div key={label} className="anim" style={an("k-rise", 200 + g * 220, 700)}>
@@ -211,7 +199,7 @@ export function ChangedVisual() {
       </div>
       <div className="anim rounded-[22px] bg-ground p-5" style={an("k-rise", 1700, 700)}>
         <div className="flex items-center gap-3">
-          <DotInitial letter="M" size={34} ink="var(--ash)" />
+          <Initial letter="M" size={34} ink="var(--ash)" />
           <div className="min-w-0 flex-1">
             <div className="text-[15px] font-semibold text-ink">Mona still has the old date</div>
             <div className="text-[13px] text-muted">You told her October 3, last week</div>

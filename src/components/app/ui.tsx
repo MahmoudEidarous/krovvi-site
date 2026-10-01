@@ -129,43 +129,25 @@ export function Check({ done = false, className, style }: { done?: boolean; clas
   );
 }
 
-/* ── People's initials, drawn in dots, as the app draws them ─────────────── */
+/* ── People: a plain initial on a soft tint of their own colour ─────────── */
 
-const LETTERS: Record<string, string[]> = {
-  S: [".###.", "#...#", "#....", ".###.", "....#", "#...#", ".###."],
-  K: ["#...#", "#..#.", "#.#..", "##...", "#.#..", "#..#.", "#...#"],
-  M: ["#...#", "##.##", "#.#.#", "#...#", "#...#", "#...#", "#...#"],
-  O: [".###.", "#...#", "#...#", "#...#", "#...#", "#...#", ".###."],
-  L: ["#....", "#....", "#....", "#....", "#....", "#....", "#####"],
-  N: ["#...#", "##..#", "#.#.#", "#..##", "#...#", "#...#", "#...#"],
-  R: ["####.", "#...#", "#...#", "####.", "#.#..", "#..#.", "#...#"],
-};
-
-export function DotInitial({ letter, size = 56, ink = "var(--sand)", ring = true }: {
+export function Initial({ letter, size = 56, ink = "var(--sand)" }: {
   letter: string;
   size?: number;
   ink?: string;
-  ring?: boolean;
 }) {
-  const rows = LETTERS[letter] ?? LETTERS.S;
-  const pitch = size * 0.085;
-  const r = pitch * 0.34;
-  const w = pitch * 4;
-  const h = pitch * 6;
-  const ox = (size - w) / 2;
-  const oy = (size - h) / 2;
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center rounded-full ${ring ? "bg-card-hi" : ""}`}
-      style={{ width: size, height: size }}
+      className="inline-flex shrink-0 items-center justify-center rounded-full font-semibold"
+      style={{
+        width: size,
+        height: size,
+        fontSize: Math.round(size * 0.42),
+        color: ink,
+        background: `color-mix(in srgb, ${ink} 15%, #161615)`,
+      }}
     >
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true">
-        {rows.flatMap((row, y) =>
-          row.split("").map((c, x) =>
-            c === "#" ? <circle key={`${x}-${y}`} cx={ox + x * pitch} cy={oy + y * pitch} r={r} fill={ink} /> : null
-          )
-        )}
-      </svg>
+      {letter}
     </span>
   );
 }
