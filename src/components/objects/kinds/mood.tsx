@@ -17,7 +17,10 @@ type Ink = "warm" | "warmSoft" | "soft" | "coldSoft" | "cold";
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/mood.ts MoodView), the parts the page draws. */
 interface MoodView {
   today: string;
+  /** The first day it was kept: a day before it was never asked, so it stays blank. */
+  since: string;
   year: number;
+  logged: number;
   todayLevel: number | null;
   months: number[][];
   scale: Array<{ level: number; words: Words; ink: Ink }>;
@@ -29,7 +32,9 @@ const INKS: Record<Ink, string> = { warm: INK.warm, warmSoft: "#D8C49B", soft: I
 const MONTHS = { en: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], ar: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] };
 
 const C = {
-  nothing: { en: "Nothing said today", ar: "لسه مفيش حاجة النهارده" },
+  nothing: { en: "Nothing said today yet", ar: "لسه مفيش حاجة النهارده" },
+  nothingAtAll: { en: "Nothing said yet", ar: "لسه مفيش حاجة" },
+  nothingYet: { en: "Each day said becomes a dot on the year.", ar: "كل يوم بيتقال بيبقى نقطة في السنة." },
   dayDot: { en: "Each dot is a day.", ar: "كل نقطة يوم." },
   week: { en: "Last 7 days", ar: "آخر 7 أيام" },
   colorsOnly: { en: "You see the colors, never the notes.", ar: "بتشوف الألوان بس، مش الملحوظات." },
@@ -45,8 +50,18 @@ export const Page: KindPage = ({ view, lang }) => {
     <div>
       <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "22px 12px", gap: 16 }}>
         <div className="flex flex-col items-center" style={{ gap: 2 }}>
-          <span style={{ ...STEP.display, fontSize: 44, lineHeight: "50px", color: today ? inkOf(today.level) : INK.fg }}>{today ? say(today.words, lang) : say(C.nothing, lang)}</span>
+          {today ? (
+            <span style={{ ...STEP.display, fontSize: 44, lineHeight: "50px", color: inkOf(today.level) }}>{say(today.words, lang)}</span>
+          ) : (
+            <span style={{ ...STEP.figure }}>{say(v.logged ? C.nothing : C.nothingAtAll, lang)}</span>
+          )}
         </div>
+        {v.logged === 0 && !today ? (
+          <span className="text-center" style={{ ...STEP.body, color: INK.soft, padding: "6px 8px" }}>
+            {say(C.nothingYet, lang)}
+          </span>
+        ) : (
+        <>
         <div className="flex" style={{ gap: 6 }} role="img" aria-label={`${v.year}: ${v.scale.map((s) => `${say(s.words, lang)} ${v.counts[s.level - 1]}`).join(", ")}`}>
           <div className="flex flex-col" style={{ gap: 3 }} aria-hidden>
             {MONTHS[lang].map((m, i) => (
@@ -85,17 +100,30 @@ export const Page: KindPage = ({ view, lang }) => {
           ))}
         </div>
         <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.dayDot, lang)}</span>
+        </>
+        )}
       </section>
 
       <div className="text-center" style={{ ...STEP.meta, color: INK.muted, margin: "0 0 12px" }}>
         {say(C.colorsOnly, lang)}
       </div>
 
-      <Section title={say(C.week, lang)}>
-        <div className="flex justify-center" style={{ padding: "6px 0 14px" }}>
-          <DotLine dots={v.week.map((d) => (d.level ? { on: true, tint: inkOf(d.level) } : { on: false, now: d.day === v.today }))} dot={16} gap={10} />
-        </div>
-      </Section>
+      {v.logged ? (
+        <Section title={say(C.week, lang)}>
+          <div className="flex justify-between" style={{ padding: "6px 16px 14px" }}>
+            {v.week.map((d) => (
+              <span key={d.day} className="flex flex-col items-center" style={{ gap: 6, minWidth: 36 }}>
+                {d.day < v.since ? (
+                  <span style={{ width: 18, height: 18 }} />
+                ) : (
+                  <DotLine dots={[d.level ? { on: true, tint: inkOf(d.level) } : { on: false, now: d.day === v.today }]} dot={16} />
+                )}
+                <span style={{ ...STEP.meta, fontSize: 11, color: d.day === v.today ? INK.fg : INK.muted }}>{say(d.label, lang)}</span>
+              </span>
+            ))}
+          </div>
+        </Section>
+      ) : null}
     </div>
   );
 };
