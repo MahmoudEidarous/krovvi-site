@@ -149,7 +149,8 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
         <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "20px 16px", gap: 12 }} aria-label={top.map((p) => `${p.place}. ${p.name}, ${p.right}`).join(". ")}>
           <span style={{ ...STEP.label, color: INK.muted }}>{say(C.podium, lang)}</span>
           <div className="flex items-end justify-center" style={{ gap: 18 }}>
-            {top.map((p) => (
+            {/* A podium's own shape: the first in the middle, the second beside it, the third on the other side. */}
+            {(top.length === 3 ? [top[1], top[0], top[2]] : top).map((p) => (
               <div key={p.id} className="flex flex-col items-center" style={{ gap: 6, width: 84 }}>
                 <Face name={p.name} size={36} />
                 <span style={{ ...STEP.label }}>{p.you ? say(C.you, lang) : <bdi dir={dirOf(p.name)}>{p.name}</bdi>}</span>
