@@ -1,1 +1,5022 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "Dinners",
+    "emoji": "🍲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Dinners",
+      "emoji": "🍲",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [],
+      "ideas": [],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": null
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": null,
+      "toShop": [],
+      "shopping": null,
+      "counts": {
+        "ideas": 0,
+        "matches": 0,
+        "planned": 0,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "dinners-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "Dinners",
+    "emoji": "🍲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Dinners",
+      "emoji": "🍲",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [
+        {
+          "id": "imealtaco0001",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados",
+            "salsa"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealtaco0001",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados",
+            "salsa"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        },
+        {
+          "id": "imealpast0001",
+          "name": "Pasta bake",
+          "emoji": "🍝",
+          "ingredients": [
+            "pasta",
+            "tomato sauce",
+            "cheese"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 3,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": [
+            "2026-10-06"
+          ]
+        },
+        {
+          "id": "imealfish0001",
+          "name": "Grilled fish",
+          "emoji": "🐟",
+          "ingredients": [
+            "fish",
+            "lemons"
+          ],
+          "minutes": 25,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsald0001",
+          "name": "Chicken salad",
+          "emoji": "🥗",
+          "ingredients": [
+            "chicken",
+            "lettuce",
+            "tomatoes"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "mine": null,
+          "yes": 2,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealpizz0001",
+          "name": "Pizza night",
+          "emoji": "🍕",
+          "ingredients": [
+            "pizza dough",
+            "mozzarella",
+            "tomato sauce"
+          ],
+          "minutes": 45,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealcurr0001",
+          "name": "Veggie curry",
+          "emoji": "🍛",
+          "ingredients": [
+            "chickpeas",
+            "rice",
+            "coconut milk"
+          ],
+          "minutes": 35,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsoup0001",
+          "name": "Lentil soup",
+          "emoji": "🥣",
+          "ingredients": [
+            "lentils",
+            "onions"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealwrap0001",
+          "name": "Veggie wraps",
+          "emoji": "🌯",
+          "ingredients": [
+            "tortillas",
+            "peppers",
+            "cheese"
+          ],
+          "minutes": 15,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": {
+            "plan": "iplantoday001",
+            "idea": "imealtaco0001",
+            "name": "Tacos",
+            "emoji": "🌮",
+            "minutes": 30,
+            "sent": true
+          }
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": {
+            "plan": "iplantue00001",
+            "idea": "imealpast0001",
+            "name": "Pasta bake",
+            "emoji": "🍝",
+            "minutes": 40,
+            "sent": false
+          }
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": {
+        "plan": "iplantoday001",
+        "idea": "imealtaco0001",
+        "name": "Tacos",
+        "emoji": "🌮",
+        "minutes": 30,
+        "sent": true
+      },
+      "toShop": [
+        {
+          "name": "pasta",
+          "for": [
+            "Pasta bake"
+          ]
+        },
+        {
+          "name": "tomato sauce",
+          "for": [
+            "Pasta bake"
+          ]
+        },
+        {
+          "name": "cheese",
+          "for": [
+            "Pasta bake"
+          ]
+        }
+      ],
+      "shopping": null,
+      "counts": {
+        "ideas": 8,
+        "matches": 1,
+        "planned": 2,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "It's a match: Tacos",
+          "ar": "اتفقنا: Tacos"
+        },
+        "moment": "match"
+      },
+      {
+        "at": 1791010800000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "Tacos tonight",
+          "ar": "Tacos النهارده"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "dinners-ar": {
+    "ok": true,
+    "kind": "meals",
+    "title": "عشا الأسبوع",
+    "emoji": "🍲",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "عشا الأسبوع",
+      "emoji": "🍲",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "سام",
+          "you": false
+        },
+        {
+          "id": "mleo0000000",
+          "name": "ليو",
+          "you": false
+        },
+        {
+          "id": "mmia0000000",
+          "name": "ميا",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [
+        {
+          "id": "imealtaco0001",
+          "name": "تاكو",
+          "emoji": "🌮",
+          "ingredients": [
+            "تورتيلا",
+            "لحمة مفرومة",
+            "أفوكادو",
+            "صلصة"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealtaco0001",
+          "name": "تاكو",
+          "emoji": "🌮",
+          "ingredients": [
+            "تورتيلا",
+            "لحمة مفرومة",
+            "أفوكادو",
+            "صلصة"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        },
+        {
+          "id": "imealpast0001",
+          "name": "مكرونة في الفرن",
+          "emoji": "🍝",
+          "ingredients": [
+            "مكرونة",
+            "صلصة طماطم",
+            "جبنة"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 3,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": [
+            "2026-10-06"
+          ]
+        },
+        {
+          "id": "imealfish0001",
+          "name": "سمك مشوي",
+          "emoji": "🐟",
+          "ingredients": [
+            "سمك",
+            "لمون"
+          ],
+          "minutes": 25,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsald0001",
+          "name": "سلطة فراخ",
+          "emoji": "🥗",
+          "ingredients": [
+            "فراخ",
+            "خس",
+            "طماطم"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false
+          },
+          "mine": null,
+          "yes": 2,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealpizz0001",
+          "name": "ليلة بيتزا",
+          "emoji": "🍕",
+          "ingredients": [
+            "عجينة بيتزا",
+            "موتزاريلا",
+            "صلصة طماطم"
+          ],
+          "minutes": 45,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealcurr0001",
+          "name": "كاري خضار",
+          "emoji": "🍛",
+          "ingredients": [
+            "حمص",
+            "رز",
+            "لبن جوز الهند"
+          ],
+          "minutes": 35,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsoup0001",
+          "name": "شوربة عدس",
+          "emoji": "🥣",
+          "ingredients": [
+            "عدس",
+            "بصل"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealwrap0001",
+          "name": "راب خضار",
+          "emoji": "🌯",
+          "ingredients": [
+            "تورتيلا",
+            "فلفل ألوان",
+            "جبنة"
+          ],
+          "minutes": 15,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "ليو",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "ميا",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": {
+            "plan": "iplantoday001",
+            "idea": "imealtaco0001",
+            "name": "تاكو",
+            "emoji": "🌮",
+            "minutes": 30,
+            "sent": true
+          }
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": {
+            "plan": "iplantue00001",
+            "idea": "imealpast0001",
+            "name": "مكرونة في الفرن",
+            "emoji": "🍝",
+            "minutes": 40,
+            "sent": false
+          }
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": {
+        "plan": "iplantoday001",
+        "idea": "imealtaco0001",
+        "name": "تاكو",
+        "emoji": "🌮",
+        "minutes": 30,
+        "sent": true
+      },
+      "toShop": [
+        {
+          "name": "مكرونة",
+          "for": [
+            "مكرونة في الفرن"
+          ]
+        },
+        {
+          "name": "صلصة طماطم",
+          "for": [
+            "مكرونة في الفرن"
+          ]
+        },
+        {
+          "name": "جبنة",
+          "for": [
+            "مكرونة في الفرن"
+          ]
+        }
+      ],
+      "shopping": null,
+      "counts": {
+        "ideas": 8,
+        "matches": 1,
+        "planned": 2,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "ميا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "ميا"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "محمود",
+        "line": {
+          "en": "It's a match: تاكو",
+          "ar": "اتفقنا: تاكو"
+        },
+        "moment": "match"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "busy-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "Shared kitchen",
+    "emoji": "🍳",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Shared kitchen",
+      "emoji": "🍳",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        },
+        {
+          "id": "momar000000",
+          "name": "Omar",
+          "you": false
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        },
+        {
+          "id": "mkarim00000",
+          "name": "Karim",
+          "you": false
+        },
+        {
+          "id": "msara000000",
+          "name": "Sara",
+          "you": false
+        },
+        {
+          "id": "malex000000",
+          "name": "Alex",
+          "you": false
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false
+        },
+        {
+          "id": "mnoah000000",
+          "name": "Noah",
+          "you": false
+        },
+        {
+          "id": "mzoe0000000",
+          "name": "Zoe",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [
+        {
+          "id": "imealbusy0000",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 12,
+          "of": 12,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "planned": []
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealbusy0000",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 12,
+          "of": 12,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0001",
+          "name": "Pasta bake",
+          "emoji": "🍝",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0002",
+          "name": "Chicken salad",
+          "emoji": "🥗",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0003",
+          "name": "Pizza night",
+          "emoji": "🍕",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0004",
+          "name": "Veggie curry",
+          "emoji": "🍛",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0005",
+          "name": "Lentil soup",
+          "emoji": "🥣",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 7,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0006",
+          "name": "Veggie wraps",
+          "emoji": "🌯",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0007",
+          "name": "Burgers",
+          "emoji": "🍔",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0008",
+          "name": "Stir fry",
+          "emoji": "🥡",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0009",
+          "name": "Omelettes",
+          "emoji": "🍳",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0010",
+          "name": "Tacos 2",
+          "emoji": "🌮",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0011",
+          "name": "Pasta bake 2",
+          "emoji": "🍝",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0012",
+          "name": "Chicken salad 2",
+          "emoji": "🥗",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0013",
+          "name": "Pizza night 2",
+          "emoji": "🍕",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0014",
+          "name": "Veggie curry 2",
+          "emoji": "🍛",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0015",
+          "name": "Lentil soup 2",
+          "emoji": "🥣",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 7,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0016",
+          "name": "Veggie wraps 2",
+          "emoji": "🌯",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0017",
+          "name": "Burgers 2",
+          "emoji": "🍔",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0018",
+          "name": "Stir fry 2",
+          "emoji": "🥡",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0019",
+          "name": "Omelettes 2",
+          "emoji": "🍳",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0020",
+          "name": "Tacos 3",
+          "emoji": "🌮",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 7,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0021",
+          "name": "Pasta bake 3",
+          "emoji": "🍝",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0022",
+          "name": "Chicken salad 3",
+          "emoji": "🥗",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0023",
+          "name": "Pizza night 3",
+          "emoji": "🍕",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0024",
+          "name": "Veggie curry 3",
+          "emoji": "🍛",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0025",
+          "name": "Lentil soup 3",
+          "emoji": "🥣",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0026",
+          "name": "Veggie wraps 3",
+          "emoji": "🌯",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0027",
+          "name": "Burgers 3",
+          "emoji": "🍔",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0028",
+          "name": "Stir fry 3",
+          "emoji": "🥡",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0029",
+          "name": "Omelettes 3",
+          "emoji": "🍳",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0030",
+          "name": "Tacos 4",
+          "emoji": "🌮",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 7,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0031",
+          "name": "Pasta bake 4",
+          "emoji": "🍝",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0032",
+          "name": "Chicken salad 4",
+          "emoji": "🥗",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0033",
+          "name": "Pizza night 4",
+          "emoji": "🍕",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0034",
+          "name": "Veggie curry 4",
+          "emoji": "🍛",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0035",
+          "name": "Lentil soup 4",
+          "emoji": "🥣",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 7,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0036",
+          "name": "Veggie wraps 4",
+          "emoji": "🌯",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0037",
+          "name": "Burgers 4",
+          "emoji": "🍔",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0038",
+          "name": "Stir fry 4",
+          "emoji": "🥡",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 50,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealbusy0039",
+          "name": "Omelettes 4",
+          "emoji": "🍳",
+          "ingredients": [
+            "onions",
+            "garlic"
+          ],
+          "minutes": 60,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 8,
+          "of": 12,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": null
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": null,
+      "toShop": [],
+      "shopping": null,
+      "counts": {
+        "ideas": 40,
+        "matches": 1,
+        "planned": 0,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "match-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "Dinners",
+    "emoji": "🍲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Dinners",
+      "emoji": "🍲",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [
+        {
+          "id": "imealtaco0002",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 2,
+          "of": 2,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "planned": []
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealtaco0002",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 2,
+          "of": 2,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": null
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": null,
+      "toShop": [],
+      "shopping": null,
+      "counts": {
+        "ideas": 1,
+        "matches": 1,
+        "planned": 0,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [
+      {
+        "at": 1791017940000,
+        "name": "Sam",
+        "line": {
+          "en": "It's a match: Tacos",
+          "ar": "اتفقنا: Tacos"
+        },
+        "moment": "match"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "solo-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "My dinners",
+    "emoji": "🍽️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "My dinners",
+      "emoji": "🍽️",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        }
+      ],
+      "solo": true,
+      "canSwipe": false,
+      "deck": [],
+      "matches": [
+        {
+          "id": "imealsald0002",
+          "name": "Chicken salad",
+          "emoji": "🥗",
+          "ingredients": [
+            "chicken",
+            "lettuce"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 1,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "planned": []
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealsald0002",
+          "name": "Chicken salad",
+          "emoji": "🥗",
+          "ingredients": [
+            "chicken",
+            "lettuce"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 1,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "planned": []
+        },
+        {
+          "id": "imealsoup0002",
+          "name": "Lentil soup",
+          "emoji": "🥣",
+          "ingredients": [
+            "lentils",
+            "onions"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 1,
+          "waiting": [],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealcurr0002",
+          "name": "Veggie curry",
+          "emoji": "🍛",
+          "ingredients": [
+            "chickpeas",
+            "rice"
+          ],
+          "minutes": 35,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 1,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": null
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": null,
+      "toShop": [],
+      "shopping": null,
+      "counts": {
+        "ideas": 3,
+        "matches": 1,
+        "planned": 0,
+        "toSwipe": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "meals",
+    "title": "Dinners",
+    "emoji": "🍲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Dinners",
+      "emoji": "🍲",
+      "voters": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": true
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false
+        }
+      ],
+      "solo": false,
+      "canSwipe": true,
+      "deck": [
+        {
+          "id": "imealfish0001",
+          "name": "Grilled fish",
+          "emoji": "🐟",
+          "ingredients": [
+            "fish",
+            "lemons"
+          ],
+          "minutes": 25,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealpizz0001",
+          "name": "Pizza night",
+          "emoji": "🍕",
+          "ingredients": [
+            "pizza dough",
+            "mozzarella",
+            "tomato sauce"
+          ],
+          "minutes": 45,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealcurr0001",
+          "name": "Veggie curry",
+          "emoji": "🍛",
+          "ingredients": [
+            "chickpeas",
+            "rice",
+            "coconut milk"
+          ],
+          "minutes": 35,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsoup0001",
+          "name": "Lentil soup",
+          "emoji": "🥣",
+          "ingredients": [
+            "lentils",
+            "onions"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealwrap0001",
+          "name": "Veggie wraps",
+          "emoji": "🌯",
+          "ingredients": [
+            "tortillas",
+            "peppers",
+            "cheese"
+          ],
+          "minutes": 15,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": true
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "matches": [
+        {
+          "id": "imealtaco0001",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados",
+            "salsa"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": "yes",
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "imealtaco0001",
+          "name": "Tacos",
+          "emoji": "🌮",
+          "ingredients": [
+            "tortillas",
+            "beef",
+            "avocados",
+            "salsa"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": "yes",
+          "yes": 4,
+          "of": 4,
+          "waiting": [],
+          "match": true,
+          "out": false,
+          "faces": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "planned": [
+            "2026-10-03"
+          ]
+        },
+        {
+          "id": "imealpast0001",
+          "name": "Pasta bake",
+          "emoji": "🍝",
+          "ingredients": [
+            "pasta",
+            "tomato sauce",
+            "cheese"
+          ],
+          "minutes": 40,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": "yes",
+          "yes": 3,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": [
+            "2026-10-06"
+          ]
+        },
+        {
+          "id": "imealfish0001",
+          "name": "Grilled fish",
+          "emoji": "🐟",
+          "ingredients": [
+            "fish",
+            "lemons"
+          ],
+          "minutes": 25,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": true,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsald0001",
+          "name": "Chicken salad",
+          "emoji": "🥗",
+          "ingredients": [
+            "chicken",
+            "lettuce",
+            "tomatoes"
+          ],
+          "minutes": 20,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": true
+          },
+          "mine": "yes",
+          "yes": 2,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealpizz0001",
+          "name": "Pizza night",
+          "emoji": "🍕",
+          "ingredients": [
+            "pizza dough",
+            "mozzarella",
+            "tomato sauce"
+          ],
+          "minutes": 45,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 1,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealcurr0001",
+          "name": "Veggie curry",
+          "emoji": "🍛",
+          "ingredients": [
+            "chickpeas",
+            "rice",
+            "coconut milk"
+          ],
+          "minutes": 35,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealsoup0001",
+          "name": "Lentil soup",
+          "emoji": "🥣",
+          "ingredients": [
+            "lentils",
+            "onions"
+          ],
+          "minutes": 30,
+          "note": null,
+          "suggested": true,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        },
+        {
+          "id": "imealwrap0001",
+          "name": "Veggie wraps",
+          "emoji": "🌯",
+          "ingredients": [
+            "tortillas",
+            "peppers",
+            "cheese"
+          ],
+          "minutes": 15,
+          "note": null,
+          "suggested": false,
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": true
+          },
+          "mine": null,
+          "yes": 0,
+          "of": 4,
+          "waiting": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ],
+          "match": false,
+          "out": false,
+          "faces": [],
+          "planned": []
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-10-03",
+          "words": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "today": true,
+          "meal": {
+            "plan": "iplantoday001",
+            "idea": "imealtaco0001",
+            "name": "Tacos",
+            "emoji": "🌮",
+            "minutes": 30,
+            "sent": true
+          }
+        },
+        {
+          "day": "2026-10-04",
+          "words": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-05",
+          "words": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-06",
+          "words": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "today": false,
+          "meal": {
+            "plan": "iplantue00001",
+            "idea": "imealpast0001",
+            "name": "Pasta bake",
+            "emoji": "🍝",
+            "minutes": 40,
+            "sent": false
+          }
+        },
+        {
+          "day": "2026-10-07",
+          "words": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-08",
+          "words": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "today": false,
+          "meal": null
+        },
+        {
+          "day": "2026-10-09",
+          "words": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "today": false,
+          "meal": null
+        }
+      ],
+      "tonight": {
+        "plan": "iplantoday001",
+        "idea": "imealtaco0001",
+        "name": "Tacos",
+        "emoji": "🌮",
+        "minutes": 30,
+        "sent": true
+      },
+      "toShop": [
+        {
+          "name": "pasta",
+          "for": [
+            "Pasta bake"
+          ]
+        },
+        {
+          "name": "tomato sauce",
+          "for": [
+            "Pasta bake"
+          ]
+        },
+        {
+          "name": "cheese",
+          "for": [
+            "Pasta bake"
+          ]
+        }
+      ],
+      "shopping": null,
+      "counts": {
+        "ideas": 8,
+        "matches": 1,
+        "planned": 2,
+        "toSwipe": 5
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      }
+    ],
+    "ops": [
+      "idea",
+      "swipe",
+      "plan",
+      "unplan"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "It's a match: Tacos",
+          "ar": "اتفقنا: Tacos"
+        },
+        "moment": "match"
+      },
+      {
+        "at": 1791010800000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "Tacos tonight",
+          "ar": "Tacos النهارده"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "match": {
+        "en": "It’s a match",
+        "ar": "اتفقنا"
+      }
+    },
+    "kindName": {
+      "en": "Meals",
+      "ar": "الأكلات"
+    },
+    "kindEmoji": "🍲"
+  }
+}

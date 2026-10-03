@@ -1,1 +1,3549 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Which car",
+    "emoji": "🚗",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Which car",
+      "emoji": "🚗",
+      "options": [],
+      "balance": null,
+      "leader": null,
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [],
+      "counts": {
+        "options": 0,
+        "points": 0,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "flats-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Which flat",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Which flat",
+      "emoji": "🏠",
+      "options": [
+        {
+          "id": "idecideelm001",
+          "name": "Elm Street",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$1,900"
+            },
+            {
+              "label": "To work",
+              "value": "12 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "2"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0001",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Cheaper rent",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0002",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Close to work",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0007",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Quiet street",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0003",
+              "option": "idecideelm001",
+              "side": "against",
+              "text": "No elevator",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 6,
+          "againstWeight": 1,
+          "score": 5,
+          "lead": true,
+          "sealed": false
+        },
+        {
+          "id": "idecideoak001",
+          "name": "Oak Avenue",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$2,050"
+            },
+            {
+              "label": "To work",
+              "value": "35 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "3"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0004",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "Big kitchen",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0005",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "A third room for guests",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0006",
+              "option": "idecideoak001",
+              "side": "against",
+              "text": "Long commute",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 3,
+          "againstWeight": 3,
+          "score": 0,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "Elm Street",
+            "ar": "Elm Street"
+          },
+          "option": "idecideelm001",
+          "dots": [
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0007",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 9
+        },
+        "right": {
+          "label": {
+            "en": "Oak Avenue",
+            "ar": "Oak Avenue"
+          },
+          "option": "idecideoak001",
+          "dots": [
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0005",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0003",
+              "by": "msam0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 4
+        },
+        "tilt": 0.38,
+        "even": false
+      },
+      "leader": "idecideelm001",
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [
+        "Rent",
+        "To work",
+        "Rooms"
+      ],
+      "counts": {
+        "options": 2,
+        "points": 7,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [
+      {
+        "at": 1791010800000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam added a point for Oak Avenue: Big kitchen",
+          "ar": "Sam ضاف ميزة لـ Oak Avenue: Big kitchen"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "flats-ar": {
+    "ok": true,
+    "kind": "decide",
+    "title": "أنهي شقة",
+    "emoji": "🏠",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "أنهي شقة",
+      "emoji": "🏠",
+      "options": [
+        {
+          "id": "idecideelm001",
+          "name": "شارع النخيل",
+          "facts": [
+            {
+              "label": "الإيجار",
+              "value": "$1,900"
+            },
+            {
+              "label": "للشغل",
+              "value": "12 دقيقة"
+            },
+            {
+              "label": "الأوض",
+              "value": "2"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0001",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "إيجار أرخص",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0002",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "قريبة من الشغل",
+              "weight": 3,
+              "from": {
+                "label": "مكالمتك مع سام يوم الخميس",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "المشوار هيموتني"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0007",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "شارع هادي",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0003",
+              "option": "idecideelm001",
+              "side": "against",
+              "text": "مفيش أسانسير",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "سام",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 6,
+          "againstWeight": 1,
+          "score": 5,
+          "lead": true,
+          "sealed": false
+        },
+        {
+          "id": "idecideoak001",
+          "name": "شارع الزيتون",
+          "facts": [
+            {
+              "label": "الإيجار",
+              "value": "$2,050"
+            },
+            {
+              "label": "للشغل",
+              "value": "35 دقيقة"
+            },
+            {
+              "label": "الأوض",
+              "value": "3"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0004",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "مطبخ كبير",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "سام",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0005",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "أوضة تالتة للضيوف",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "سام",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0006",
+              "option": "idecideoak001",
+              "side": "against",
+              "text": "المشوار طويل",
+              "weight": 3,
+              "from": {
+                "label": "مكالمتك مع سام يوم الخميس",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "المشوار هيموتني"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 3,
+          "againstWeight": 3,
+          "score": 0,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "شارع النخيل",
+            "ar": "شارع النخيل"
+          },
+          "option": "idecideelm001",
+          "dots": [
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0007",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 9
+        },
+        "right": {
+          "label": {
+            "en": "شارع الزيتون",
+            "ar": "شارع الزيتون"
+          },
+          "option": "idecideoak001",
+          "dots": [
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0005",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0003",
+              "by": "msam0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 4
+        },
+        "tilt": 0.38,
+        "even": false
+      },
+      "leader": "idecideelm001",
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [
+        "الإيجار",
+        "للشغل",
+        "الأوض"
+      ],
+      "counts": {
+        "options": 2,
+        "points": 7,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      }
+    ],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "venue-busy-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Offsite venue",
+    "emoji": "🏕️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Offsite venue",
+      "emoji": "🏕️",
+      "options": [
+        {
+          "id": "idecidevenu01",
+          "name": "The lake house",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$2000"
+            },
+            {
+              "label": "Drive",
+              "value": "30 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0001",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 2 about The lake house",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0002",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 3 about The lake house",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0004",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 5 about The lake house",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0005",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 6 about The lake house",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0007",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 8 about The lake house",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0008",
+              "option": "idecidevenu01",
+              "side": "for",
+              "text": "Good thing 9 about The lake house",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0000",
+              "option": "idecidevenu01",
+              "side": "against",
+              "text": "Hard thing 1 about The lake house",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0003",
+              "option": "idecidevenu01",
+              "side": "against",
+              "text": "Hard thing 4 about The lake house",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0006",
+              "option": "idecidevenu01",
+              "side": "against",
+              "text": "Hard thing 7 about The lake house",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0009",
+              "option": "idecidevenu01",
+              "side": "against",
+              "text": "Hard thing 10 about The lake house",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 15,
+          "againstWeight": 4,
+          "score": 11,
+          "lead": false,
+          "sealed": false
+        },
+        {
+          "id": "idecidevenu02",
+          "name": "A city hotel",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$3000"
+            },
+            {
+              "label": "Drive",
+              "value": "60 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0010",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 1 about A city hotel",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0011",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 2 about A city hotel",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0013",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 4 about A city hotel",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0014",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 5 about A city hotel",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0016",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 7 about A city hotel",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0017",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 8 about A city hotel",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0019",
+              "option": "idecidevenu02",
+              "side": "for",
+              "text": "Good thing 10 about A city hotel",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0012",
+              "option": "idecidevenu02",
+              "side": "against",
+              "text": "Hard thing 3 about A city hotel",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0015",
+              "option": "idecidevenu02",
+              "side": "against",
+              "text": "Hard thing 6 about A city hotel",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0018",
+              "option": "idecidevenu02",
+              "side": "against",
+              "text": "Hard thing 9 about A city hotel",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 17,
+          "againstWeight": 3,
+          "score": 14,
+          "lead": false,
+          "sealed": false
+        },
+        {
+          "id": "idecidevenu03",
+          "name": "The farm",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$4000"
+            },
+            {
+              "label": "Drive",
+              "value": "90 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0020",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 1 about The farm",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0022",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 3 about The farm",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0023",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 4 about The farm",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0025",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 6 about The farm",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0026",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 7 about The farm",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0028",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 9 about The farm",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0029",
+              "option": "idecidevenu03",
+              "side": "for",
+              "text": "Good thing 10 about The farm",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0021",
+              "option": "idecidevenu03",
+              "side": "against",
+              "text": "Hard thing 2 about The farm",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0024",
+              "option": "idecidevenu03",
+              "side": "against",
+              "text": "Hard thing 5 about The farm",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0027",
+              "option": "idecidevenu03",
+              "side": "against",
+              "text": "Hard thing 8 about The farm",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 18,
+          "againstWeight": 3,
+          "score": 15,
+          "lead": false,
+          "sealed": false
+        },
+        {
+          "id": "idecidevenu04",
+          "name": "A beach resort",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$5000"
+            },
+            {
+              "label": "Drive",
+              "value": "120 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0031",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 2 about A beach resort",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0032",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 3 about A beach resort",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0034",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 5 about A beach resort",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0035",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 6 about A beach resort",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0037",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 8 about A beach resort",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0038",
+              "option": "idecidevenu04",
+              "side": "for",
+              "text": "Good thing 9 about A beach resort",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0030",
+              "option": "idecidevenu04",
+              "side": "against",
+              "text": "Hard thing 1 about A beach resort",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0033",
+              "option": "idecidevenu04",
+              "side": "against",
+              "text": "Hard thing 4 about A beach resort",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0036",
+              "option": "idecidevenu04",
+              "side": "against",
+              "text": "Hard thing 7 about A beach resort",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0039",
+              "option": "idecidevenu04",
+              "side": "against",
+              "text": "Hard thing 10 about A beach resort",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 15,
+          "againstWeight": 4,
+          "score": 11,
+          "lead": false,
+          "sealed": false
+        },
+        {
+          "id": "idecidevenu05",
+          "name": "The mountain lodge",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$6000"
+            },
+            {
+              "label": "Drive",
+              "value": "150 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0040",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 1 about The mountain lodge",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0041",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 2 about The mountain lodge",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0043",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 4 about The mountain lodge",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0044",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 5 about The mountain lodge",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0046",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 7 about The mountain lodge",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0047",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 8 about The mountain lodge",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0049",
+              "option": "idecidevenu05",
+              "side": "for",
+              "text": "Good thing 10 about The mountain lodge",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0042",
+              "option": "idecidevenu05",
+              "side": "against",
+              "text": "Hard thing 3 about The mountain lodge",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0045",
+              "option": "idecidevenu05",
+              "side": "against",
+              "text": "Hard thing 6 about The mountain lodge",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0048",
+              "option": "idecidevenu05",
+              "side": "against",
+              "text": "Hard thing 9 about The mountain lodge",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 17,
+          "againstWeight": 3,
+          "score": 14,
+          "lead": false,
+          "sealed": false
+        },
+        {
+          "id": "idecidevenu06",
+          "name": "Our office",
+          "facts": [
+            {
+              "label": "Price",
+              "value": "$7000"
+            },
+            {
+              "label": "Drive",
+              "value": "180 min"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidevp0050",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 1 about Our office",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0052",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 3 about Our office",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0053",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 4 about Our office",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0055",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 6 about Our office",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0056",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 7 about Our office",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0058",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 9 about Our office",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0059",
+              "option": "idecidevenu06",
+              "side": "for",
+              "text": "Good thing 10 about Our office",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidevp0051",
+              "option": "idecidevenu06",
+              "side": "against",
+              "text": "Hard thing 2 about Our office",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0054",
+              "option": "idecidevenu06",
+              "side": "against",
+              "text": "Hard thing 5 about Our office",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidevp0057",
+              "option": "idecidevenu06",
+              "side": "against",
+              "text": "Hard thing 8 about Our office",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 18,
+          "againstWeight": 3,
+          "score": 15,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "The farm",
+            "ar": "The farm"
+          },
+          "option": "idecidevenu03",
+          "dots": [
+            {
+              "point": "idecidevp0020",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0020",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0020",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0022",
+              "by": "mmaya000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0022",
+              "by": "mmaya000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0023",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0023",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0023",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0025",
+              "by": "malex000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0025",
+              "by": "malex000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0026",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0026",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0026",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0028",
+              "by": "mnoah000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0028",
+              "by": "mnoah000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0029",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0029",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0029",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0051",
+              "by": "msara000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0054",
+              "by": "mmia0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0057",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 21
+        },
+        "right": {
+          "label": {
+            "en": "Our office",
+            "ar": "Our office"
+          },
+          "option": "idecidevenu06",
+          "dots": [
+            {
+              "point": "idecidevp0050",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0050",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0050",
+              "by": "mkarim00000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0052",
+              "by": "malex000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0052",
+              "by": "malex000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0053",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0053",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0053",
+              "by": "mleo0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0055",
+              "by": "mnoah000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0055",
+              "by": "mnoah000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0056",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0056",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0056",
+              "by": "mzoe0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0058",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0058",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0059",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0059",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0059",
+              "by": "mlina000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0021",
+              "by": "momar000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0024",
+              "by": "msara000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidevp0027",
+              "by": "mmia0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 21
+        },
+        "tilt": 0,
+        "even": true
+      },
+      "leader": null,
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [
+        "Price",
+        "Drive"
+      ],
+      "counts": {
+        "options": 6,
+        "points": 60,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "sealed-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Which flat",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Which flat",
+      "emoji": "🏠",
+      "options": [
+        {
+          "id": "idecideelm001",
+          "name": "Elm Street",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$1,900"
+            },
+            {
+              "label": "To work",
+              "value": "12 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "2"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0001",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Cheaper rent",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            },
+            {
+              "id": "idecidept0002",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Close to work",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            },
+            {
+              "id": "idecidept0007",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Quiet street",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0003",
+              "option": "idecideelm001",
+              "side": "against",
+              "text": "No elevator",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 6,
+          "againstWeight": 1,
+          "score": 5,
+          "lead": true,
+          "sealed": true
+        },
+        {
+          "id": "idecideoak001",
+          "name": "Oak Avenue",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$2,050"
+            },
+            {
+              "label": "To work",
+              "value": "35 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "3"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0004",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "Big kitchen",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0005",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "A third room for guests",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0006",
+              "option": "idecideoak001",
+              "side": "against",
+              "text": "Long commute",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            }
+          ],
+          "forWeight": 3,
+          "againstWeight": 3,
+          "score": 0,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "Elm Street",
+            "ar": "Elm Street"
+          },
+          "option": "idecideelm001",
+          "dots": [
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0007",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 9
+        },
+        "right": {
+          "label": {
+            "en": "Oak Avenue",
+            "ar": "Oak Avenue"
+          },
+          "option": "idecideoak001",
+          "dots": [
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0005",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0003",
+              "by": "msam0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 4
+        },
+        "tilt": 0.38,
+        "even": false
+      },
+      "leader": "idecideelm001",
+      "state": "sealed",
+      "seal": {
+        "option": "idecideelm001",
+        "name": "Elm Street",
+        "why": "Close to work, and cheaper",
+        "at": 1791016200000,
+        "by": {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        "reasons": [
+          {
+            "id": "idecidept0001",
+            "text": "Cheaper rent",
+            "side": "for",
+            "option": "idecideelm001"
+          },
+          {
+            "id": "idecidept0002",
+            "text": "Close to work",
+            "side": "for",
+            "option": "idecideelm001"
+          },
+          {
+            "id": "idecidept0006",
+            "text": "Long commute",
+            "side": "against",
+            "option": "idecideoak001"
+          },
+          {
+            "id": "idecidept0007",
+            "text": "Quiet street",
+            "side": "for",
+            "option": "idecideelm001"
+          }
+        ],
+        "leansAway": false
+      },
+      "cracks": [],
+      "factLabels": [
+        "Rent",
+        "To work",
+        "Rooms"
+      ],
+      "counts": {
+        "options": 2,
+        "points": 7,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [
+      {
+        "at": 1791016200000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "Decided: Elm Street",
+          "ar": "اتقرر: Elm Street"
+        },
+        "moment": "seal"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "cracked-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Which flat",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Which flat",
+      "emoji": "🏠",
+      "options": [
+        {
+          "id": "idecideelm001",
+          "name": "Elm Street",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$2,100"
+            },
+            {
+              "label": "To work",
+              "value": "12 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "2"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0001",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Cheaper rent",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": {
+                "fact": "The landlord now asks $2,100",
+                "from": {
+                  "label": "your call with the landlord today",
+                  "note": "note-landlord",
+                  "atMs": 95000,
+                  "quote": null
+                },
+                "at": 1791017400000,
+                "by": {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud",
+                  "you": false
+                }
+              },
+              "reason": true
+            },
+            {
+              "id": "idecidept0002",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Close to work",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            },
+            {
+              "id": "idecidept0007",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Quiet street",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0003",
+              "option": "idecideelm001",
+              "side": "against",
+              "text": "No elevator",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 4,
+          "againstWeight": 1,
+          "score": 3,
+          "lead": true,
+          "sealed": true
+        },
+        {
+          "id": "idecideoak001",
+          "name": "Oak Avenue",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$2,050"
+            },
+            {
+              "label": "To work",
+              "value": "35 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "3"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0004",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "Big kitchen",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0005",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "A third room for guests",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0006",
+              "option": "idecideoak001",
+              "side": "against",
+              "text": "Long commute",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": true
+            }
+          ],
+          "forWeight": 3,
+          "againstWeight": 3,
+          "score": 0,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "Elm Street",
+            "ar": "Elm Street"
+          },
+          "option": "idecideelm001",
+          "dots": [
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": true
+            },
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": true
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0007",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 7
+        },
+        "right": {
+          "label": {
+            "en": "Oak Avenue",
+            "ar": "Oak Avenue"
+          },
+          "option": "idecideoak001",
+          "dots": [
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0005",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0003",
+              "by": "msam0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 4
+        },
+        "tilt": 0.27,
+        "even": false
+      },
+      "leader": "idecideelm001",
+      "state": "cracked",
+      "seal": {
+        "option": "idecideelm001",
+        "name": "Elm Street",
+        "why": "Close to work, and cheaper",
+        "at": 1790413200000,
+        "by": {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        "reasons": [
+          {
+            "id": "idecidept0001",
+            "text": "Cheaper rent",
+            "side": "for",
+            "option": "idecideelm001"
+          },
+          {
+            "id": "idecidept0002",
+            "text": "Close to work",
+            "side": "for",
+            "option": "idecideelm001"
+          },
+          {
+            "id": "idecidept0006",
+            "text": "Long commute",
+            "side": "against",
+            "option": "idecideoak001"
+          },
+          {
+            "id": "idecidept0007",
+            "text": "Quiet street",
+            "side": "for",
+            "option": "idecideelm001"
+          }
+        ],
+        "leansAway": false
+      },
+      "cracks": [
+        {
+          "point": "idecidept0001",
+          "text": "Cheaper rent",
+          "option": "idecideelm001",
+          "fact": "The landlord now asks $2,100",
+          "from": {
+            "label": "your call with the landlord today",
+            "note": "note-landlord",
+            "atMs": 95000,
+            "quote": null
+          },
+          "at": 1791017400000,
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          }
+        }
+      ],
+      "factLabels": [
+        "Rent",
+        "To work",
+        "Rooms"
+      ],
+      "counts": {
+        "options": 2,
+        "points": 7,
+        "cracked": 1
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [
+      {
+        "at": 1791017400000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "A reason changed: Cheaper rent",
+          "ar": "سبب اتغير: Cheaper rent"
+        },
+        "moment": "crack"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "job-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "The job offer",
+    "emoji": "💼",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "The job offer",
+      "emoji": "💼",
+      "options": [
+        {
+          "id": "idecidejob001",
+          "name": "Take the new job",
+          "facts": [
+            {
+              "label": "Pay",
+              "value": "+18%"
+            },
+            {
+              "label": "Start",
+              "value": "November"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidejp0001",
+              "option": "idecidejob001",
+              "side": "for",
+              "text": "Better pay",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidejp0002",
+              "option": "idecidejob001",
+              "side": "for",
+              "text": "A team I would learn from",
+              "weight": 3,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidejp0003",
+              "option": "idecidejob001",
+              "side": "against",
+              "text": "Leaving my team mid project",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidejp0004",
+              "option": "idecidejob001",
+              "side": "against",
+              "text": "Longer commute",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 5,
+          "againstWeight": 3,
+          "score": 2,
+          "lead": true,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "For",
+            "ar": "مع"
+          },
+          "option": "idecidejob001",
+          "dots": [
+            {
+              "point": "idecidejp0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 5
+        },
+        "right": {
+          "label": {
+            "en": "Against",
+            "ar": "ضد"
+          },
+          "option": "idecidejob001",
+          "dots": [
+            {
+              "point": "idecidejp0003",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0003",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidejp0004",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 3
+        },
+        "tilt": 0.25,
+        "even": false
+      },
+      "leader": "idecidejob001",
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [
+        "Pay",
+        "Start"
+      ],
+      "counts": {
+        "options": 1,
+        "points": 4,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "decide",
+    "title": "Which flat",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Which flat",
+      "emoji": "🏠",
+      "options": [
+        {
+          "id": "idecideelm001",
+          "name": "Elm Street",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$1,900"
+            },
+            {
+              "label": "To work",
+              "value": "12 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "2"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0001",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Cheaper rent",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0002",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Close to work",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0007",
+              "option": "idecideelm001",
+              "side": "for",
+              "text": "Quiet street",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0003",
+              "option": "idecideelm001",
+              "side": "against",
+              "text": "No elevator",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": true
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 6,
+          "againstWeight": 1,
+          "score": 5,
+          "lead": true,
+          "sealed": false
+        },
+        {
+          "id": "idecideoak001",
+          "name": "Oak Avenue",
+          "facts": [
+            {
+              "label": "Rent",
+              "value": "$2,050"
+            },
+            {
+              "label": "To work",
+              "value": "35 min"
+            },
+            {
+              "label": "Rooms",
+              "value": "3"
+            }
+          ],
+          "for": [
+            {
+              "id": "idecidept0004",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "Big kitchen",
+              "weight": 2,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": true
+              },
+              "cracked": null,
+              "reason": false
+            },
+            {
+              "id": "idecidept0005",
+              "option": "idecideoak001",
+              "side": "for",
+              "text": "A third room for guests",
+              "weight": 1,
+              "from": null,
+              "by": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": true
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "against": [
+            {
+              "id": "idecidept0006",
+              "option": "idecideoak001",
+              "side": "against",
+              "text": "Long commute",
+              "weight": 3,
+              "from": {
+                "label": "your call with Sam on Thursday",
+                "note": "note-flat-call",
+                "atMs": 421000,
+                "quote": "the commute would kill me"
+              },
+              "by": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "cracked": null,
+              "reason": false
+            }
+          ],
+          "forWeight": 3,
+          "againstWeight": 3,
+          "score": 0,
+          "lead": false,
+          "sealed": false
+        }
+      ],
+      "balance": {
+        "left": {
+          "label": {
+            "en": "Elm Street",
+            "ar": "Elm Street"
+          },
+          "option": "idecideelm001",
+          "dots": [
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0001",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0002",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0007",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0006",
+              "by": "mmahmoud000",
+              "cracked": false
+            }
+          ],
+          "weight": 9
+        },
+        "right": {
+          "label": {
+            "en": "Oak Avenue",
+            "ar": "Oak Avenue"
+          },
+          "option": "idecideoak001",
+          "dots": [
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0004",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0005",
+              "by": "msam0000000",
+              "cracked": false
+            },
+            {
+              "point": "idecidept0003",
+              "by": "msam0000000",
+              "cracked": false
+            }
+          ],
+          "weight": 4
+        },
+        "tilt": 0.38,
+        "even": false
+      },
+      "leader": "idecideelm001",
+      "state": "open",
+      "seal": null,
+      "cracks": [],
+      "factLabels": [
+        "Rent",
+        "To work",
+        "Rooms"
+      ],
+      "counts": {
+        "options": 2,
+        "points": 7,
+        "cracked": 0
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [],
+    "ops": [
+      "option",
+      "point",
+      "edit"
+    ],
+    "activity": [
+      {
+        "at": 1791010800000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam added a point for Oak Avenue: Big kitchen",
+          "ar": "Sam ضاف ميزة لـ Oak Avenue: Big kitchen"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "seal": {
+        "en": "Decided",
+        "ar": "اتقرر"
+      },
+      "crack": {
+        "en": "A reason changed",
+        "ar": "سبب اتغير"
+      }
+    },
+    "kindName": {
+      "en": "Decide",
+      "ar": "قرار"
+    },
+    "kindEmoji": "⚖️"
+  }
+}

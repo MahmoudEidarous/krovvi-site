@@ -1,1 +1,2861 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "todo",
+    "title": "Move",
+    "emoji": "📦",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Move",
+      "emoji": "📦",
+      "open": [],
+      "done": [],
+      "counts": {
+        "open": 0,
+        "done": 0,
+        "late": 0,
+        "today": 0,
+        "total": 0
+      },
+      "allClear": false,
+      "tally": {
+        "dots": [],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        }
+      ],
+      "next": null,
+      "leftWords": {
+        "en": "Nothing on it yet",
+        "ar": "لسه فاضية"
+      },
+      "shared": false
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  },
+  "house-en": {
+    "ok": true,
+    "kind": "todo",
+    "title": "House",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "House",
+      "emoji": "🏠",
+      "open": [
+        {
+          "id": "itaskbins0001",
+          "text": "Take the bins out",
+          "day": "2026-10-03",
+          "time": "20:00",
+          "when": "today",
+          "dueWords": {
+            "en": "Today 8:00 PM",
+            "ar": "النهارده 8:00 م"
+          },
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskboil0001",
+          "text": "Book the boiler check",
+          "day": "2026-10-02",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklamp0001",
+          "text": "Change the kitchen bulb",
+          "day": "2026-10-06",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Tuesday",
+            "ar": "التلات"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskrent0001",
+          "text": "Send the rent receipt to the landlord",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": {
+            "note": "note-house-call",
+            "atMs": 754000,
+            "quote": "send me the receipt by Monday",
+            "label": "the call with the landlord",
+            "commitment": null
+          }
+        },
+        {
+          "id": "itaskplnt0001",
+          "text": "Water the plants",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        }
+      ],
+      "done": [
+        {
+          "id": "itaskdish0001",
+          "text": "Fix the dishwasher door",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791007200000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskwifi0001",
+          "text": "Call about the wifi",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790924400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskkeys0001",
+          "text": "Copy the spare keys",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790838000000,
+            "by": {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        }
+      ],
+      "counts": {
+        "open": 5,
+        "done": 3,
+        "late": 1,
+        "today": 1,
+        "total": 8
+      },
+      "allClear": false,
+      "tally": {
+        "dots": [
+          {
+            "done": true,
+            "by": "mmahmoud000"
+          },
+          {
+            "done": true,
+            "by": "msam0000000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          }
+        ],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 1
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        }
+      ],
+      "next": {
+        "id": "itaskboil0001",
+        "text": "Book the boiler check",
+        "day": "2026-10-02",
+        "time": null,
+        "when": "late",
+        "dueWords": {
+          "en": "Yesterday",
+          "ar": "امبارح"
+        },
+        "who": null,
+        "addedBy": {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false
+        },
+        "done": null,
+        "from": null
+      },
+      "leftWords": {
+        "en": "5 to do",
+        "ar": "فاضل 5 مهام"
+      },
+      "shared": true
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina ticked Fix the dishwasher door",
+          "ar": "Lina خلّص Fix the dishwasher door"
+        },
+        "moment": null
+      },
+      {
+        "at": 1790924400000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam ticked Call about the wifi",
+          "ar": "Sam خلّص Call about the wifi"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  },
+  "house-ar": {
+    "ok": true,
+    "kind": "todo",
+    "title": "البيت",
+    "emoji": "🏠",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "البيت",
+      "emoji": "🏠",
+      "open": [
+        {
+          "id": "itaskbins0001",
+          "text": "نطلع الزبالة",
+          "day": "2026-10-03",
+          "time": "20:00",
+          "when": "today",
+          "dueWords": {
+            "en": "Today 8:00 PM",
+            "ar": "النهارده 8:00 م"
+          },
+          "who": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskboil0001",
+          "text": "نحجز كشف السخان",
+          "day": "2026-10-02",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklamp0001",
+          "text": "نغير لمبة المطبخ",
+          "day": "2026-10-06",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Tuesday",
+            "ar": "التلات"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskrent0001",
+          "text": "نبعت إيصال الإيجار لصاحب الشقة",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": {
+            "note": "note-house-call",
+            "atMs": 754000,
+            "quote": "ابعتلي الإيصال قبل الاتنين",
+            "label": "المكالمة مع صاحب الشقة",
+            "commitment": null
+          }
+        },
+        {
+          "id": "itaskplnt0001",
+          "text": "نسقي الزرع",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "لينا",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        }
+      ],
+      "done": [
+        {
+          "id": "itaskdish0001",
+          "text": "نصلح باب غسالة الأطباق",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791007200000,
+            "by": {
+              "id": "mlina000000",
+              "name": "لينا",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskwifi0001",
+          "text": "نكلم شركة النت",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790924400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskkeys0001",
+          "text": "ننسخ مفتاح احتياطي",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790838000000,
+            "by": {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        }
+      ],
+      "counts": {
+        "open": 5,
+        "done": 3,
+        "late": 1,
+        "today": 1,
+        "total": 8
+      },
+      "allClear": false,
+      "tally": {
+        "dots": [
+          {
+            "done": true,
+            "by": "mmahmoud000"
+          },
+          {
+            "done": true,
+            "by": "msam0000000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          }
+        ],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 1
+        },
+        {
+          "id": "msam0000000",
+          "name": "سام",
+          "you": false,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "لينا",
+          "you": false,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        }
+      ],
+      "next": {
+        "id": "itaskboil0001",
+        "text": "نحجز كشف السخان",
+        "day": "2026-10-02",
+        "time": null,
+        "when": "late",
+        "dueWords": {
+          "en": "Yesterday",
+          "ar": "امبارح"
+        },
+        "who": null,
+        "addedBy": {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "gone": false
+        },
+        "done": null,
+        "from": null
+      },
+      "leftWords": {
+        "en": "5 to do",
+        "ar": "فاضل 5 مهام"
+      },
+      "shared": true
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      }
+    ],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "لينا",
+        "line": {
+          "en": "لينا ticked نصلح باب غسالة الأطباق",
+          "ar": "لينا خلّص نصلح باب غسالة الأطباق"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  },
+  "launch-busy-en": {
+    "ok": true,
+    "kind": "todo",
+    "title": "Launch",
+    "emoji": "🚀",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Launch",
+      "emoji": "🚀",
+      "open": [
+        {
+          "id": "itasklnch0001",
+          "text": "Record the demo video",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0002",
+          "text": "Check the pricing page copy",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0004",
+          "text": "Book the room for the party",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": {
+            "note": "note-kickoff-01",
+            "atMs": 1312000,
+            "quote": "can someone get us a room for the party",
+            "label": "the kickoff call",
+            "commitment": null
+          }
+        },
+        {
+          "id": "itasklnch0005",
+          "text": "Order the stickers",
+          "day": "2026-10-09",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "mkarim00000",
+            "name": "Karim",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0007",
+          "text": "Fix the empty state on Home",
+          "day": "2026-10-01",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0008",
+          "text": "Ask Karim for the final logo",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mleo0000000",
+            "name": "Leo",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0010",
+          "text": "Write the launch post (2)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "mnoah000000",
+            "name": "Noah",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0011",
+          "text": "Record the demo video (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0013",
+          "text": "Send the press list to Maya (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0014",
+          "text": "Book the room for the party (2)",
+          "day": "2026-10-01",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0016",
+          "text": "Test sign up on an old phone (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0017",
+          "text": "Fix the empty state on Home (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mkarim00000",
+            "name": "Karim",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0019",
+          "text": "Draft the thank you mail (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0020",
+          "text": "Write the launch post (3)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "mleo0000000",
+            "name": "Leo",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0022",
+          "text": "Check the pricing page copy (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mnoah000000",
+            "name": "Noah",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0023",
+          "text": "Send the press list to Maya (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0025",
+          "text": "Order the stickers (3)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0026",
+          "text": "Test sign up on an old phone (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0028",
+          "text": "Ask Karim for the final logo (3)",
+          "day": "2026-10-01",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "who": {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0029",
+          "text": "Draft the thank you mail (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mkarim00000",
+            "name": "Karim",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0031",
+          "text": "Record the demo video (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0032",
+          "text": "Check the pricing page copy (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mleo0000000",
+            "name": "Leo",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0034",
+          "text": "Book the room for the party (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mnoah000000",
+            "name": "Noah",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0035",
+          "text": "Order the stickers (4)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0037",
+          "text": "Fix the empty state on Home (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnch0038",
+          "text": "Ask Karim for the final logo (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklnchmov1",
+          "text": "Send Karim the signed contract",
+          "day": "2026-10-05",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Monday",
+            "ar": "الاتنين"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": {
+            "note": null,
+            "atMs": null,
+            "quote": null,
+            "label": "Tasks",
+            "commitment": "7b1e2c9a-launch"
+          }
+        }
+      ],
+      "done": [
+        {
+          "id": "itasklnch0000",
+          "text": "Write the launch post",
+          "day": "2026-10-09",
+          "time": null,
+          "when": null,
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791014400000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0003",
+          "text": "Send the press list to Maya",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791003600000,
+            "by": {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0006",
+          "text": "Test sign up on an old phone",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "msara000000",
+            "name": "Sara",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790992800000,
+            "by": {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0009",
+          "text": "Draft the thank you mail",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmia0000000",
+            "name": "Mia",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790982000000,
+            "by": {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0012",
+          "text": "Check the pricing page copy (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790971200000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0015",
+          "text": "Order the stickers (2)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": null,
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790960400000,
+            "by": {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0018",
+          "text": "Ask Karim for the final logo (2)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "msara000000",
+            "name": "Sara",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790949600000,
+            "by": {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0021",
+          "text": "Record the demo video (3)",
+          "day": "2026-10-01",
+          "time": null,
+          "when": null,
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "who": {
+            "id": "mmia0000000",
+            "name": "Mia",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790938800000,
+            "by": {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0024",
+          "text": "Book the room for the party (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790928000000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0027",
+          "text": "Fix the empty state on Home (3)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790917200000,
+            "by": {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0030",
+          "text": "Write the launch post (4)",
+          "day": "2026-10-09",
+          "time": null,
+          "when": null,
+          "dueWords": {
+            "en": "Friday",
+            "ar": "الجمعة"
+          },
+          "who": {
+            "id": "msara000000",
+            "name": "Sara",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790906400000,
+            "by": {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0033",
+          "text": "Send the press list to Maya (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmia0000000",
+            "name": "Mia",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790895600000,
+            "by": {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0036",
+          "text": "Test sign up on an old phone (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790884800000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itasklnch0039",
+          "text": "Draft the thank you mail (4)",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790874000000,
+            "by": {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        }
+      ],
+      "counts": {
+        "open": 27,
+        "done": 14,
+        "late": 3,
+        "today": 0,
+        "total": 41
+      },
+      "allClear": false,
+      "tally": {
+        "dots": [
+          {
+            "done": true,
+            "by": "mkarim00000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": true,
+            "by": "mzoe0000000"
+          },
+          {
+            "done": true,
+            "by": "mleo0000000"
+          },
+          {
+            "done": true,
+            "by": "mkarim00000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": true,
+            "by": "mzoe0000000"
+          },
+          {
+            "done": true,
+            "by": "mleo0000000"
+          },
+          {
+            "done": true,
+            "by": "mkarim00000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": true,
+            "by": "mzoe0000000"
+          },
+          {
+            "done": true,
+            "by": "mleo0000000"
+          },
+          {
+            "done": true,
+            "by": "mkarim00000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          }
+        ],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "gone": false,
+          "open": 4,
+          "done": 0
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "gone": false,
+          "open": 4,
+          "done": 4
+        },
+        {
+          "id": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false,
+          "gone": false,
+          "open": 3,
+          "done": 0
+        },
+        {
+          "id": "mkarim00000",
+          "name": "Karim",
+          "you": false,
+          "gone": false,
+          "open": 3,
+          "done": 4
+        },
+        {
+          "id": "msara000000",
+          "name": "Sara",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        },
+        {
+          "id": "malex000000",
+          "name": "Alex",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false,
+          "gone": false,
+          "open": 3,
+          "done": 3
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 0
+        },
+        {
+          "id": "mnoah000000",
+          "name": "Noah",
+          "you": false,
+          "gone": false,
+          "open": 3,
+          "done": 0
+        },
+        {
+          "id": "mzoe0000000",
+          "name": "Zoe",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 3
+        }
+      ],
+      "next": {
+        "id": "itasklnch0007",
+        "text": "Fix the empty state on Home",
+        "day": "2026-10-01",
+        "time": null,
+        "when": "late",
+        "dueWords": {
+          "en": "Thu 1 Oct",
+          "ar": "الخميس 1 أكتوبر"
+        },
+        "who": null,
+        "addedBy": {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false
+        },
+        "done": null,
+        "from": null
+      },
+      "leftWords": {
+        "en": "27 to do",
+        "ar": "فاضل 27 مهمة"
+      },
+      "shared": true
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  },
+  "clear-en": {
+    "ok": true,
+    "kind": "todo",
+    "title": "Party prep",
+    "emoji": "🎉",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Party prep",
+      "emoji": "🎉",
+      "open": [],
+      "done": [
+        {
+          "id": "itaskcake0001",
+          "text": "Pick up the cake",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791017700000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskchar0001",
+          "text": "Charge the speaker",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791010800000,
+            "by": {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskinvt0001",
+          "text": "Send the invites",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790931600000,
+            "by": {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        }
+      ],
+      "counts": {
+        "open": 0,
+        "done": 3,
+        "late": 0,
+        "today": 0,
+        "total": 3
+      },
+      "allClear": true,
+      "tally": {
+        "dots": [
+          {
+            "done": true,
+            "by": "mmahmoud000"
+          },
+          {
+            "done": true,
+            "by": "mmahmoud000"
+          },
+          {
+            "done": true,
+            "by": "msam0000000"
+          }
+        ],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 2
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 1
+        }
+      ],
+      "next": null,
+      "leftWords": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      },
+      "shared": true
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [
+      {
+        "at": 1791017700000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam ticked Pick up the cake",
+          "ar": "Sam خلّص Pick up the cake"
+        },
+        "moment": "clear"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "todo",
+    "title": "House",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "House",
+      "emoji": "🏠",
+      "open": [
+        {
+          "id": "itaskbins0001",
+          "text": "Take the bins out",
+          "day": "2026-10-03",
+          "time": "20:00",
+          "when": "today",
+          "dueWords": {
+            "en": "Today 8:00 PM",
+            "ar": "النهارده 8:00 م"
+          },
+          "who": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": true,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskboil0001",
+          "text": "Book the boiler check",
+          "day": "2026-10-02",
+          "time": null,
+          "when": "late",
+          "dueWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itasklamp0001",
+          "text": "Change the kitchen bulb",
+          "day": "2026-10-06",
+          "time": null,
+          "when": "soon",
+          "dueWords": {
+            "en": "Tuesday",
+            "ar": "التلات"
+          },
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        },
+        {
+          "id": "itaskrent0001",
+          "text": "Send the rent receipt to the landlord",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": {
+            "note": "note-house-call",
+            "atMs": 754000,
+            "quote": "send me the receipt by Monday",
+            "label": "the call with the landlord",
+            "commitment": null
+          }
+        },
+        {
+          "id": "itaskplnt0001",
+          "text": "Water the plants",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "gone": false
+          },
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": null,
+          "from": null
+        }
+      ],
+      "done": [
+        {
+          "id": "itaskdish0001",
+          "text": "Fix the dishwasher door",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1791007200000,
+            "by": {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskwifi0001",
+          "text": "Call about the wifi",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790924400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true,
+              "gone": false
+            }
+          },
+          "from": null
+        },
+        {
+          "id": "itaskkeys0001",
+          "text": "Copy the spare keys",
+          "day": null,
+          "time": null,
+          "when": null,
+          "dueWords": null,
+          "who": null,
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "gone": false
+          },
+          "done": {
+            "at": 1790838000000,
+            "by": {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false,
+              "gone": false
+            }
+          },
+          "from": null
+        }
+      ],
+      "counts": {
+        "open": 5,
+        "done": 3,
+        "late": 1,
+        "today": 1,
+        "total": 8
+      },
+      "allClear": false,
+      "tally": {
+        "dots": [
+          {
+            "done": true,
+            "by": "mmahmoud000"
+          },
+          {
+            "done": true,
+            "by": "msam0000000"
+          },
+          {
+            "done": true,
+            "by": "mlina000000"
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          },
+          {
+            "done": false,
+            "by": null
+          }
+        ],
+        "perDot": 1
+      },
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false,
+          "open": 0,
+          "done": 1
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": true,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "gone": false,
+          "open": 1,
+          "done": 1
+        }
+      ],
+      "next": {
+        "id": "itaskboil0001",
+        "text": "Book the boiler check",
+        "day": "2026-10-02",
+        "time": null,
+        "when": "late",
+        "dueWords": {
+          "en": "Yesterday",
+          "ar": "امبارح"
+        },
+        "who": null,
+        "addedBy": {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "gone": false
+        },
+        "done": null,
+        "from": null
+      },
+      "leftWords": {
+        "en": "5 to do",
+        "ar": "فاضل 5 مهام"
+      },
+      "shared": true
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "add",
+      "tick",
+      "untick"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina ticked Fix the dishwasher door",
+          "ar": "Lina خلّص Fix the dishwasher door"
+        },
+        "moment": null
+      },
+      {
+        "at": 1790924400000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam ticked Call about the wifi",
+          "ar": "Sam خلّص Call about the wifi"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "clear": {
+        "en": "All clear",
+        "ar": "كله خلص"
+      }
+    },
+    "kindName": {
+      "en": "To-do",
+      "ar": "المهام"
+    },
+    "kindEmoji": "✅"
+  }
+}

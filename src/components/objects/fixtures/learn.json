@@ -1,1 +1,2545 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "History: the talk",
+    "emoji": "📜",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "History: the talk",
+      "emoji": "📜",
+      "source": "Tuesday’s talk",
+      "questions": [],
+      "current": null,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 0,
+        "done": false
+      },
+      "host": false,
+      "podium": [],
+      "podiumReady": false,
+      "finished": 0
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "study-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "Biology: cells",
+    "emoji": "🧬",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Biology: cells",
+      "emoji": "🧬",
+      "source": "Biology, Friday’s lecture",
+      "questions": [
+        {
+          "id": "ilearncell001",
+          "n": 1,
+          "q": "Where does the cell make most of its energy?",
+          "choices": [
+            "The ribosome",
+            "The mitochondria",
+            "The nucleus",
+            "The cell wall"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 754000,
+          "atWords": "12:34",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell002",
+          "n": 2,
+          "q": "What does the nucleus hold?",
+          "choices": [
+            "The cell’s DNA",
+            "Its water",
+            "Its sugar",
+            "Its proteins only"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 312000,
+          "atWords": "5:12",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell003",
+          "n": 3,
+          "q": "Which cells have a cell wall?",
+          "choices": [
+            "Neither",
+            "Animal cells",
+            "Plant cells",
+            "Both"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1105000,
+          "atWords": "18:25",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell004",
+          "n": 4,
+          "q": "What do ribosomes make?",
+          "choices": [
+            "Fat",
+            "DNA",
+            "Sugar",
+            "Proteins"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1480000,
+          "atWords": "24:40",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell005",
+          "n": 5,
+          "q": "What lets things in and out of the cell?",
+          "choices": [
+            "The nucleus",
+            "The wall",
+            "The membrane",
+            "The ribosome"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1920000,
+          "atWords": "32:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell006",
+          "n": 6,
+          "q": "Where does photosynthesis happen?",
+          "choices": [
+            "In chloroplasts",
+            "In ribosomes",
+            "In the nucleus",
+            "In mitochondria"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 2340000,
+          "atWords": "39:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 0,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 6,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "right": null,
+          "answered": 3,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "right": null,
+          "answered": 1,
+          "done": false,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 1
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [
+      {
+        "at": 1791014760000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam finished: 5 of 6 right",
+          "ar": "Sam خلّص: 5 من 6 صح"
+        },
+        "moment": "podium"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "study-ar": {
+    "ok": true,
+    "kind": "learn",
+    "title": "أحياء: الخلية",
+    "emoji": "🧬",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "أحياء: الخلية",
+      "emoji": "🧬",
+      "source": "محاضرة الأحياء يوم الجمعة",
+      "questions": [
+        {
+          "id": "ilearncell001",
+          "n": 1,
+          "q": "الخلية بتعمل أغلب طاقتها فين؟",
+          "choices": [
+            "الميتوكوندريا",
+            "الريبوسوم",
+            "جدار الخلية",
+            "النواة"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 754000,
+          "atWords": "12:34",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "لينا",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell002",
+          "n": 2,
+          "q": "النواة فيها إيه؟",
+          "choices": [
+            "البروتينات بس",
+            "السكر",
+            "الـ DNA بتاع الخلية",
+            "المية"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 312000,
+          "atWords": "5:12",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell003",
+          "n": 3,
+          "q": "أنهي خلايا ليها جدار؟",
+          "choices": [
+            "الخلايا الحيوانية",
+            "الخلايا النباتية",
+            "ولا واحدة",
+            "الاتنين"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1105000,
+          "atWords": "18:25",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "محمود",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell004",
+          "n": 4,
+          "q": "الريبوسومات بتعمل إيه؟",
+          "choices": [
+            "بروتينات",
+            "DNA",
+            "سكر",
+            "دهون"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1480000,
+          "atWords": "24:40",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell005",
+          "n": 5,
+          "q": "إيه اللي بيدخّل ويطلّع الحاجات من الخلية؟",
+          "choices": [
+            "الغشاء",
+            "الريبوسوم",
+            "النواة",
+            "الجدار"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1920000,
+          "atWords": "32:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell006",
+          "n": 6,
+          "q": "البناء الضوئي بيحصل فين؟",
+          "choices": [
+            "في الميتوكوندريا",
+            "في الريبوسومات",
+            "في البلاستيدات الخضرا",
+            "في النواة"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 2340000,
+          "atWords": "39:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 0,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 6,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "msam0000000",
+          "name": "سام",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "right": null,
+          "answered": 3,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "لينا",
+          "you": false,
+          "right": null,
+          "answered": 1,
+          "done": false,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 1
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      }
+    ],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "class-busy-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "History: twelve dates",
+    "emoji": "📜",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "History: twelve dates",
+      "emoji": "📜",
+      "source": "Year 9 history",
+      "questions": [
+        {
+          "id": "ilearnhist000",
+          "n": 1,
+          "q": "Question 1: which year did event 1 happen?",
+          "choices": [
+            "1900",
+            "1930",
+            "1920",
+            "1910"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 60000,
+          "atWords": "1:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist001",
+          "n": 2,
+          "q": "Question 2: which year did event 2 happen?",
+          "choices": [
+            "1931",
+            "1921",
+            "1901",
+            "1911"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 120000,
+          "atWords": "2:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist002",
+          "n": 3,
+          "q": "Question 3: which year did event 3 happen?",
+          "choices": [
+            "1932",
+            "1922",
+            "1912",
+            "1902"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 180000,
+          "atWords": "3:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist003",
+          "n": 4,
+          "q": "Question 4: which year did event 4 happen?",
+          "choices": [
+            "1923",
+            "1913",
+            "1903",
+            "1933"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 240000,
+          "atWords": "4:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist004",
+          "n": 5,
+          "q": "Question 5: which year did event 5 happen?",
+          "choices": [
+            "1924",
+            "1934",
+            "1914",
+            "1904"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 300000,
+          "atWords": "5:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist005",
+          "n": 6,
+          "q": "Question 6: which year did event 6 happen?",
+          "choices": [
+            "1915",
+            "1905",
+            "1925",
+            "1935"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 360000,
+          "atWords": "6:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist006",
+          "n": 7,
+          "q": "Question 7: which year did event 7 happen?",
+          "choices": [
+            "1916",
+            "1936",
+            "1906",
+            "1926"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 420000,
+          "atWords": "7:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist007",
+          "n": 8,
+          "q": "Question 8: which year did event 8 happen?",
+          "choices": [
+            "1917",
+            "1907",
+            "1937",
+            "1927"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 480000,
+          "atWords": "8:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist008",
+          "n": 9,
+          "q": "Question 9: which year did event 9 happen?",
+          "choices": [
+            "1938",
+            "1928",
+            "1918",
+            "1908"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 540000,
+          "atWords": "9:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist009",
+          "n": 10,
+          "q": "Question 10: which year did event 10 happen?",
+          "choices": [
+            "1929",
+            "1919",
+            "1909",
+            "1939"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 600000,
+          "atWords": "10:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist010",
+          "n": 11,
+          "q": "Question 11: which year did event 11 happen?",
+          "choices": [
+            "1940",
+            "1930",
+            "1920",
+            "1910"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 660000,
+          "atWords": "11:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnhist011",
+          "n": 12,
+          "q": "Question 12: which year did event 12 happen?",
+          "choices": [
+            "1911",
+            "1931",
+            "1921",
+            "1941"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 720000,
+          "atWords": "12:00",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim",
+              "you": false
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 0,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 12,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "mkarim00000",
+          "name": "Karim",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "msara000000",
+          "name": "Sara",
+          "you": false,
+          "right": null,
+          "answered": 12,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mzoe0000000",
+          "name": "Zoe",
+          "you": false,
+          "right": null,
+          "answered": 10,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mnoah000000",
+          "name": "Noah",
+          "you": false,
+          "right": null,
+          "answered": 9,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false,
+          "right": null,
+          "answered": 8,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false,
+          "right": null,
+          "answered": 7,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "malex000000",
+          "name": "Alex",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": false,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 6
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "podium-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "Biology: cells",
+    "emoji": "🧬",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Biology: cells",
+      "emoji": "🧬",
+      "source": "Biology, Friday’s lecture",
+      "questions": [
+        {
+          "id": "ilearnpodm001",
+          "n": 1,
+          "q": "Where does the cell make most of its energy?",
+          "choices": [
+            "The ribosome",
+            "The mitochondria",
+            "The nucleus",
+            "The cell wall"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 754000,
+          "atWords": "12:34",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnpodm002",
+          "n": 2,
+          "q": "What does the nucleus hold?",
+          "choices": [
+            "The cell’s DNA",
+            "Its water",
+            "Its sugar",
+            "Its proteins only"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 312000,
+          "atWords": "5:12",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnpodm003",
+          "n": 3,
+          "q": "Which cells have a cell wall?",
+          "choices": [
+            "Neither",
+            "Animal cells",
+            "Plant cells",
+            "Both"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1105000,
+          "atWords": "18:25",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnpodm004",
+          "n": 4,
+          "q": "What do ribosomes make?",
+          "choices": [
+            "Fat",
+            "DNA",
+            "Sugar",
+            "Proteins"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1480000,
+          "atWords": "24:40",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnpodm005",
+          "n": 5,
+          "q": "What lets things in and out of the cell?",
+          "choices": [
+            "The nucleus",
+            "The wall",
+            "The membrane",
+            "The ribosome"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1920000,
+          "atWords": "32:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnpodm006",
+          "n": 6,
+          "q": "Where does photosynthesis happen?",
+          "choices": [
+            "In chloroplasts",
+            "In ribosomes",
+            "In the nucleus",
+            "In mitochondria"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 2340000,
+          "atWords": "39:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 0,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 6,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 3
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [
+      {
+        "at": 1791017940000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "Mahmoud finished: 6 of 6 right",
+          "ar": "Mahmoud خلّص: 6 من 6 صح"
+        },
+        "moment": "perfect"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "Biology: cells",
+    "emoji": "🧬",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Biology: cells",
+      "emoji": "🧬",
+      "source": "Biology, Friday’s lecture",
+      "questions": [
+        {
+          "id": "ilearncell001",
+          "n": 1,
+          "q": "Where does the cell make most of its energy?",
+          "choices": [
+            "The ribosome",
+            "The mitochondria",
+            "The nucleus",
+            "The cell wall"
+          ],
+          "answer": 1,
+          "why": "The lecture called the mitochondria the cell’s power plant.",
+          "atMs": 754000,
+          "atWords": "12:34",
+          "note": "note-bio-0210",
+          "mine": {
+            "pick": 1,
+            "right": true
+          },
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina",
+              "you": true
+            }
+          ],
+          "picks": [
+            [],
+            [
+              {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": true
+              }
+            ],
+            [],
+            []
+          ],
+          "rightCount": 3
+        },
+        {
+          "id": "ilearncell002",
+          "n": 2,
+          "q": "What does the nucleus hold?",
+          "choices": [
+            "The cell’s DNA",
+            "Its water",
+            "Its sugar",
+            "Its proteins only"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 312000,
+          "atWords": "5:12",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell003",
+          "n": 3,
+          "q": "Which cells have a cell wall?",
+          "choices": [
+            "Neither",
+            "Animal cells",
+            "Plant cells",
+            "Both"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1105000,
+          "atWords": "18:25",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell004",
+          "n": 4,
+          "q": "What do ribosomes make?",
+          "choices": [
+            "Fat",
+            "DNA",
+            "Sugar",
+            "Proteins"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1480000,
+          "atWords": "24:40",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell005",
+          "n": 5,
+          "q": "What lets things in and out of the cell?",
+          "choices": [
+            "The nucleus",
+            "The wall",
+            "The membrane",
+            "The ribosome"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 1920000,
+          "atWords": "32:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearncell006",
+          "n": 6,
+          "q": "Where does photosynthesis happen?",
+          "choices": [
+            "In chloroplasts",
+            "In ribosomes",
+            "In the nucleus",
+            "In mitochondria"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 2340000,
+          "atWords": "39:00",
+          "note": "note-bio-0210",
+          "mine": null,
+          "answered": [
+            {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 1,
+      "you": {
+        "right": 1,
+        "answered": 1,
+        "total": 6,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "right": null,
+          "answered": 6,
+          "done": true,
+          "place": 1
+        },
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "right": null,
+          "answered": 3,
+          "done": false,
+          "place": 1
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": true,
+          "right": null,
+          "answered": 1,
+          "done": false,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 1
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [
+      {
+        "at": 1791014760000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam finished: 5 of 6 right",
+          "ar": "Sam خلّص: 5 من 6 صح"
+        },
+        "moment": "podium"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  },
+  "solo-en": {
+    "ok": true,
+    "kind": "learn",
+    "title": "Spanish: the café",
+    "emoji": "🗣️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Spanish: the café",
+      "emoji": "🗣️",
+      "source": "Spanish class, week 3",
+      "questions": [
+        {
+          "id": "ilearnspan001",
+          "n": 1,
+          "q": "How do you ask for the bill?",
+          "choices": [
+            "Una mesa, por favor",
+            "El menú, por favor",
+            "La cuenta, por favor"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 95000,
+          "atWords": "1:35",
+          "note": null,
+          "mine": null,
+          "answered": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud",
+              "you": false
+            }
+          ],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnspan002",
+          "n": 2,
+          "q": "What is \"agua con gas\"?",
+          "choices": [
+            "Hot water",
+            "Still water",
+            "Sparkling water"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 410000,
+          "atWords": "6:50",
+          "note": null,
+          "mine": null,
+          "answered": [],
+          "picks": null,
+          "rightCount": null
+        },
+        {
+          "id": "ilearnspan003",
+          "n": 3,
+          "q": "What does \"para llevar\" mean?",
+          "choices": [
+            "To stay",
+            "To take away",
+            "To share"
+          ],
+          "answer": null,
+          "why": null,
+          "atMs": 820000,
+          "atWords": "13:40",
+          "note": null,
+          "mine": null,
+          "answered": [],
+          "picks": null,
+          "rightCount": null
+        }
+      ],
+      "current": 0,
+      "you": {
+        "right": 0,
+        "answered": 0,
+        "total": 3,
+        "done": false
+      },
+      "host": false,
+      "podium": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "right": null,
+          "answered": 1,
+          "done": false,
+          "place": 1
+        }
+      ],
+      "podiumReady": false,
+      "finished": 0
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "answer",
+      "again"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "podium": {
+        "en": "Round done",
+        "ar": "خلصت الجولة"
+      },
+      "perfect": {
+        "en": "Every one right",
+        "ar": "كله صح"
+      }
+    },
+    "kindName": {
+      "en": "Learn",
+      "ar": "مذاكرة"
+    },
+    "kindEmoji": "🧠"
+  }
+}
