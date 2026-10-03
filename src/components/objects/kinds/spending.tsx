@@ -83,9 +83,12 @@ const CATS: Array<[string, MarkName, Words]> = [
   ["eating", "utensils", { en: "Eating out", ar: "أكل برا" }],
   ["transport", "car", { en: "Getting around", ar: "مواصلات" }],
   ["home", "house", { en: "Home", ar: "البيت" }],
+  ["bills", "receipt", { en: "Bills", ar: "فواتير" }],
   ["shopping", "bag", { en: "Shopping", ar: "شوبينج" }],
   ["fun", "ticket", { en: "Going out", ar: "خروج" }],
   ["health", "heart", { en: "Health", ar: "صحة" }],
+  ["travel", "plane", { en: "Travel", ar: "سفر" }],
+  ["gifts", "gift", { en: "Gifts", ar: "هدايا" }],
   ["other", "tag", { en: "Other", ar: "حاجات تانية" }],
 ];
 
