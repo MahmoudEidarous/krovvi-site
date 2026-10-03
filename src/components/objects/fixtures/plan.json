@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Game night",
-      "emoji": "🎲",
       "note": null,
       "phase": "open",
       "closed": false,
@@ -30,7 +29,6 @@
                 "en": "Fri 9 Oct, 8:00 PM",
                 "ar": "الجمعة 9 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-09",
               "time": "20:00",
               "yes": [],
@@ -49,7 +47,6 @@
                 "en": "Sat 10 Oct, 8:00 PM",
                 "ar": "السبت 10 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-10",
               "time": "20:00",
               "yes": [],
@@ -127,13 +124,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Game night",
-      "emoji": "🎲",
       "note": "Bring a game you love",
       "phase": "open",
       "closed": false,
@@ -157,7 +153,6 @@
                 "en": "Fri 9 Oct, 8:00 PM",
                 "ar": "الجمعة 9 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-09",
               "time": "20:00",
               "yes": [
@@ -194,7 +189,6 @@
                 "en": "Sat 10 Oct, 8:00 PM",
                 "ar": "السبت 10 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-10",
               "time": "20:00",
               "yes": [
@@ -223,7 +217,6 @@
                 "en": "Sun 11 Oct, 6:00 PM",
                 "ar": "الحد 11 أكتوبر، 6:00 م"
               },
-              "emoji": null,
               "day": "2026-10-11",
               "time": "18:00",
               "yes": [
@@ -259,7 +252,6 @@
                 "en": "Sam’s place",
                 "ar": "Sam’s place"
               },
-              "emoji": "🏠",
               "day": null,
               "time": null,
               "yes": [
@@ -287,7 +279,6 @@
                 "en": "Lina’s place",
                 "ar": "Lina’s place"
               },
-              "emoji": "🏡",
               "day": null,
               "time": null,
               "yes": [
@@ -458,13 +449,12 @@
     "ok": true,
     "kind": "plan",
     "title": "ليلة ألعاب",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "ليلة ألعاب",
-      "emoji": "🎲",
       "note": "هات لعبة بتحبها",
       "phase": "open",
       "closed": false,
@@ -488,7 +478,6 @@
                 "en": "Fri 9 Oct, 8:00 PM",
                 "ar": "الجمعة 9 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-09",
               "time": "20:00",
               "yes": [
@@ -525,7 +514,6 @@
                 "en": "Sat 10 Oct, 8:00 PM",
                 "ar": "السبت 10 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-10",
               "time": "20:00",
               "yes": [
@@ -554,7 +542,6 @@
                 "en": "Sun 11 Oct, 6:00 PM",
                 "ar": "الحد 11 أكتوبر، 6:00 م"
               },
-              "emoji": null,
               "day": "2026-10-11",
               "time": "18:00",
               "yes": [
@@ -590,7 +577,6 @@
                 "en": "عند سام",
                 "ar": "عند سام"
               },
-              "emoji": "🏠",
               "day": null,
               "time": null,
               "yes": [
@@ -618,7 +604,6 @@
                 "en": "عند لينا",
                 "ar": "عند لينا"
               },
-              "emoji": "🏡",
               "day": null,
               "time": null,
               "yes": [
@@ -789,13 +774,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Maya’s birthday",
-    "emoji": "🎉",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 140,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎉",
       "note": null,
       "phase": "open",
       "closed": false,
@@ -819,7 +803,6 @@
                 "en": "Fri 16 Oct, 7:30 PM",
                 "ar": "الجمعة 16 أكتوبر، 7:30 م"
               },
-              "emoji": null,
               "day": "2026-10-16",
               "time": "19:30",
               "yes": [
@@ -860,7 +843,6 @@
                 "en": "Sat 17 Oct, 1:00 PM",
                 "ar": "السبت 17 أكتوبر، 1:00 م"
               },
-              "emoji": null,
               "day": "2026-10-17",
               "time": "13:00",
               "yes": [
@@ -901,7 +883,6 @@
                 "en": "Sat 17 Oct, 8:00 PM",
                 "ar": "السبت 17 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-17",
               "time": "20:00",
               "yes": [
@@ -942,7 +923,6 @@
                 "en": "Sun 18 Oct, 12:00 PM",
                 "ar": "الحد 18 أكتوبر، 12:00 م"
               },
-              "emoji": null,
               "day": "2026-10-18",
               "time": "12:00",
               "yes": [
@@ -983,7 +963,6 @@
                 "en": "Fri 23 Oct, 7:30 PM",
                 "ar": "الجمعة 23 أكتوبر، 7:30 م"
               },
-              "emoji": null,
               "day": "2026-10-23",
               "time": "19:30",
               "yes": [
@@ -1032,7 +1011,6 @@
                 "en": "The rooftop",
                 "ar": "The rooftop"
               },
-              "emoji": "🌇",
               "day": null,
               "time": null,
               "yes": [
@@ -1073,7 +1051,6 @@
                 "en": "Karim’s garden",
                 "ar": "Karim’s garden"
               },
-              "emoji": "🌳",
               "day": null,
               "time": null,
               "yes": [
@@ -1114,7 +1091,6 @@
                 "en": "Bowling alley",
                 "ar": "Bowling alley"
               },
-              "emoji": "🎳",
               "day": null,
               "time": null,
               "yes": [
@@ -1155,7 +1131,6 @@
                 "en": "Pizza place",
                 "ar": "Pizza place"
               },
-              "emoji": "🍕",
               "day": null,
               "time": null,
               "yes": [
@@ -1208,7 +1183,6 @@
                 "en": "Dinner and cake",
                 "ar": "Dinner and cake"
               },
-              "emoji": "🎂",
               "day": null,
               "time": null,
               "yes": [
@@ -1245,7 +1219,6 @@
                 "en": "Karaoke",
                 "ar": "Karaoke"
               },
-              "emoji": "🎤",
               "day": null,
               "time": null,
               "yes": [
@@ -1286,7 +1259,6 @@
                 "en": "Picnic",
                 "ar": "Picnic"
               },
-              "emoji": "🧺",
               "day": null,
               "time": null,
               "yes": [
@@ -1327,7 +1299,6 @@
                 "en": "Escape room",
                 "ar": "Escape room"
               },
-              "emoji": "🗝️",
               "day": null,
               "time": null,
               "yes": [
@@ -1368,7 +1339,6 @@
                 "en": "Board games",
                 "ar": "Board games"
               },
-              "emoji": "🎲",
               "day": null,
               "time": null,
               "yes": [
@@ -1409,7 +1379,6 @@
                 "en": "Movie night",
                 "ar": "Movie night"
               },
-              "emoji": "🎬",
               "day": null,
               "time": null,
               "yes": [
@@ -1680,13 +1649,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 31,
     "view": {
       "title": "Game night",
-      "emoji": "🎲",
       "note": "Bring a game you love",
       "phase": "decided",
       "closed": false,
@@ -1710,7 +1678,6 @@
                 "en": "Fri 9 Oct, 8:00 PM",
                 "ar": "الجمعة 9 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-09",
               "time": "20:00",
               "yes": [
@@ -1747,7 +1714,6 @@
                 "en": "Sat 10 Oct, 8:00 PM",
                 "ar": "السبت 10 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-10",
               "time": "20:00",
               "yes": [
@@ -1776,7 +1742,6 @@
                 "en": "Sun 11 Oct, 6:00 PM",
                 "ar": "الحد 11 أكتوبر، 6:00 م"
               },
-              "emoji": null,
               "day": "2026-10-11",
               "time": "18:00",
               "yes": [
@@ -1812,7 +1777,6 @@
                 "en": "Sam’s place",
                 "ar": "Sam’s place"
               },
-              "emoji": "🏠",
               "day": null,
               "time": null,
               "yes": [
@@ -1840,7 +1804,6 @@
                 "en": "Lina’s place",
                 "ar": "Lina’s place"
               },
-              "emoji": "🏡",
               "day": null,
               "time": null,
               "yes": [
@@ -2028,13 +1991,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Friday dinner",
-    "emoji": "🍽️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Friday dinner",
-      "emoji": "🍽️",
       "note": null,
       "phase": "open",
       "closed": true,
@@ -2058,7 +2020,6 @@
                 "en": "Thai corner",
                 "ar": "Thai corner"
               },
-              "emoji": "🍜",
               "day": null,
               "time": null,
               "yes": [
@@ -2086,7 +2047,6 @@
                 "en": "Pizza place",
                 "ar": "Pizza place"
               },
-              "emoji": "🍕",
               "day": null,
               "time": null,
               "yes": [
@@ -2220,13 +2180,12 @@
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Game night",
-      "emoji": "🎲",
       "note": "Bring a game you love",
       "phase": "open",
       "closed": false,
@@ -2250,7 +2209,6 @@
                 "en": "Fri 9 Oct, 8:00 PM",
                 "ar": "الجمعة 9 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-09",
               "time": "20:00",
               "yes": [
@@ -2287,7 +2245,6 @@
                 "en": "Sat 10 Oct, 8:00 PM",
                 "ar": "السبت 10 أكتوبر، 8:00 م"
               },
-              "emoji": null,
               "day": "2026-10-10",
               "time": "20:00",
               "yes": [
@@ -2316,7 +2273,6 @@
                 "en": "Sun 11 Oct, 6:00 PM",
                 "ar": "الحد 11 أكتوبر، 6:00 م"
               },
-              "emoji": null,
               "day": "2026-10-11",
               "time": "18:00",
               "yes": [
@@ -2352,7 +2308,6 @@
                 "en": "Sam’s place",
                 "ar": "Sam’s place"
               },
-              "emoji": "🏠",
               "day": null,
               "time": null,
               "yes": [
@@ -2380,7 +2335,6 @@
                 "en": "Lina’s place",
                 "ar": "Lina’s place"
               },
-              "emoji": "🏡",
               "day": null,
               "time": null,
               "yes": [
