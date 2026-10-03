@@ -1,1 +1,2546 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Game night",
+    "emoji": "🎲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Game night",
+      "emoji": "🎲",
+      "note": null,
+      "phase": "open",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ino0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 9 Oct, 8:00 PM",
+                "ar": "الجمعة 9 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-09",
+              "time": "20:00",
+              "yes": [],
+              "maybe": [],
+              "score": 0,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ino0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 10 Oct, 8:00 PM",
+                "ar": "السبت 10 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-10",
+              "time": "20:00",
+              "yes": [],
+              "maybe": [],
+              "score": 0,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        }
+      ],
+      "voted": 0,
+      "people": 1,
+      "waiting": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud"
+        }
+      ],
+      "rsvp": {
+        "yes": [],
+        "maybe": [],
+        "no": [],
+        "headcount": 0,
+        "you": null
+      },
+      "when": null,
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "game-night-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Game night",
+    "emoji": "🎲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Game night",
+      "emoji": "🎲",
+      "note": "Bring a game you love",
+      "phase": "open",
+      "closed": false,
+      "closesAt": 1791482400000,
+      "closesWords": {
+        "en": "Votes close Thu 8 Oct, 9:00 PM",
+        "ar": "التصويت بيقفل الخميس 8 أكتوبر، 9:00 م"
+      },
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ipw0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 9 Oct, 8:00 PM",
+                "ar": "الجمعة 9 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-09",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                }
+              ],
+              "score": 3.5,
+              "leading": true,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 10 Oct, 8:00 PM",
+                "ar": "السبت 10 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-10",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "score": 1.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000003",
+              "group": "when",
+              "words": {
+                "en": "Sun 11 Oct, 6:00 PM",
+                "ar": "الحد 11 أكتوبر، 6:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-11",
+              "time": "18:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        },
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ipr0000000001",
+              "group": "where",
+              "words": {
+                "en": "Sam’s place",
+                "ar": "Sam’s place"
+              },
+              "emoji": "🏠",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": true,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ipr0000000002",
+              "group": "where",
+              "words": {
+                "en": "Lina’s place",
+                "ar": "Lina’s place"
+              },
+              "emoji": "🏡",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mlina000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        }
+      ],
+      "voted": 5,
+      "people": 6,
+      "waiting": [
+        {
+          "id": "mkarim00000",
+          "name": "Karim"
+        }
+      ],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0
+          }
+        ],
+        "maybe": [
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 0
+          }
+        ],
+        "no": [],
+        "headcount": 3,
+        "you": null
+      },
+      "when": null,
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790934120000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya: Fri 9 Oct, 8:00 PM if need be",
+          "ar": "Maya: الجمعة 9 أكتوبر، 8:00 م لو لزم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "game-night-ar": {
+    "ok": true,
+    "kind": "plan",
+    "title": "ليلة ألعاب",
+    "emoji": "🎲",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "ليلة ألعاب",
+      "emoji": "🎲",
+      "note": "هات لعبة بتحبها",
+      "phase": "open",
+      "closed": false,
+      "closesAt": 1791482400000,
+      "closesWords": {
+        "en": "Votes close Thu 8 Oct, 9:00 PM",
+        "ar": "التصويت بيقفل الخميس 8 أكتوبر، 9:00 م"
+      },
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ipw0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 9 Oct, 8:00 PM",
+                "ar": "الجمعة 9 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-09",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "محمود"
+                },
+                {
+                  "id": "msam0000000",
+                  "name": "سام"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "لينا"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmaya000000",
+                  "name": "مايا"
+                }
+              ],
+              "score": 3.5,
+              "leading": true,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 10 Oct, 8:00 PM",
+                "ar": "السبت 10 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-10",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "عمر"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "لينا"
+                }
+              ],
+              "score": 1.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000003",
+              "group": "when",
+              "words": {
+                "en": "Sun 11 Oct, 6:00 PM",
+                "ar": "الحد 11 أكتوبر، 6:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-11",
+              "time": "18:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "سام"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        },
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ipr0000000001",
+              "group": "where",
+              "words": {
+                "en": "عند سام",
+                "ar": "عند سام"
+              },
+              "emoji": "🏠",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "محمود"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "عمر"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": true,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ipr0000000002",
+              "group": "where",
+              "words": {
+                "en": "عند لينا",
+                "ar": "عند لينا"
+              },
+              "emoji": "🏡",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "لينا"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mlina000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        }
+      ],
+      "voted": 5,
+      "people": 6,
+      "waiting": [
+        {
+          "id": "mkarim00000",
+          "name": "كريم"
+        }
+      ],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "سام",
+            "plus": 1
+          },
+          {
+            "id": "mlina000000",
+            "name": "لينا",
+            "plus": 0
+          }
+        ],
+        "maybe": [
+          {
+            "id": "momar000000",
+            "name": "عمر",
+            "plus": 0
+          }
+        ],
+        "no": [],
+        "headcount": 3,
+        "you": null
+      },
+      "when": null,
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790934120000,
+        "name": "مايا",
+        "line": {
+          "en": "مايا: Fri 9 Oct, 8:00 PM if need be",
+          "ar": "مايا: الجمعة 9 أكتوبر، 8:00 م لو لزم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "birthday-busy-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Maya’s birthday",
+    "emoji": "🎉",
+    "lang": "en",
+    "state": "live",
+    "version": 140,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎉",
+      "note": null,
+      "phase": "open",
+      "closed": false,
+      "closesAt": 1791622800000,
+      "closesWords": {
+        "en": "Votes close Sat 10 Oct, 12:00 PM",
+        "ar": "التصويت بيقفل السبت 10 أكتوبر، 12:00 م"
+      },
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ibo0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 16 Oct, 7:30 PM",
+                "ar": "الجمعة 16 أكتوبر، 7:30 م"
+              },
+              "emoji": null,
+              "day": "2026-10-16",
+              "time": "19:30",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                }
+              ],
+              "score": 4,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 17 Oct, 1:00 PM",
+                "ar": "السبت 17 أكتوبر، 1:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-17",
+              "time": "13:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000003",
+              "group": "when",
+              "words": {
+                "en": "Sat 17 Oct, 8:00 PM",
+                "ar": "السبت 17 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-17",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "score": 4,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mlina000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000004",
+              "group": "when",
+              "words": {
+                "en": "Sun 18 Oct, 12:00 PM",
+                "ar": "الحد 18 أكتوبر، 12:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-18",
+              "time": "12:00",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                },
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                },
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "momar000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000005",
+              "group": "when",
+              "words": {
+                "en": "Fri 23 Oct, 7:30 PM",
+                "ar": "الجمعة 23 أكتوبر، 7:30 م"
+              },
+              "emoji": null,
+              "day": "2026-10-23",
+              "time": "19:30",
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                }
+              ],
+              "score": 3.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmaya000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        },
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ibo0000000006",
+              "group": "where",
+              "words": {
+                "en": "The rooftop",
+                "ar": "The rooftop"
+              },
+              "emoji": "🌇",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                },
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mkarim00000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000007",
+              "group": "where",
+              "words": {
+                "en": "Karim’s garden",
+                "ar": "Karim’s garden"
+              },
+              "emoji": "🌳",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                },
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msara000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000008",
+              "group": "where",
+              "words": {
+                "en": "Bowling alley",
+                "ar": "Bowling alley"
+              },
+              "emoji": "🎳",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                },
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "malex000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000009",
+              "group": "where",
+              "words": {
+                "en": "Pizza place",
+                "ar": "Pizza place"
+              },
+              "emoji": "🍕",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                },
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mleo0000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        },
+        {
+          "group": "what",
+          "label": {
+            "en": "What",
+            "ar": "إيه"
+          },
+          "options": [
+            {
+              "id": "ibo0000000010",
+              "group": "what",
+              "words": {
+                "en": "Dinner and cake",
+                "ar": "Dinner and cake"
+              },
+              "emoji": "🎂",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                }
+              ],
+              "score": 3.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmia0000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000011",
+              "group": "what",
+              "words": {
+                "en": "Karaoke",
+                "ar": "Karaoke"
+              },
+              "emoji": "🎤",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mnoah000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000012",
+              "group": "what",
+              "words": {
+                "en": "Picnic",
+                "ar": "Picnic"
+              },
+              "emoji": "🧺",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                },
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                }
+              ],
+              "score": 4,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mzoe0000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000013",
+              "group": "what",
+              "words": {
+                "en": "Escape room",
+                "ar": "Escape room"
+              },
+              "emoji": "🗝️",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                },
+                {
+                  "id": "mnoah000000",
+                  "name": "Noah"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                }
+              ],
+              "score": 4.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000014",
+              "group": "what",
+              "words": {
+                "en": "Board games",
+                "ar": "Board games"
+              },
+              "emoji": "🎲",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                },
+                {
+                  "id": "mleo0000000",
+                  "name": "Leo"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "mzoe0000000",
+                  "name": "Zoe"
+                }
+              ],
+              "score": 4,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ibo0000000015",
+              "group": "what",
+              "words": {
+                "en": "Movie night",
+                "ar": "Movie night"
+              },
+              "emoji": "🎬",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                },
+                {
+                  "id": "mmia0000000",
+                  "name": "Mia"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "score": 3.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mlina000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        }
+      ],
+      "voted": 12,
+      "people": 12,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 2
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0
+          },
+          {
+            "id": "mkarim00000",
+            "name": "Karim",
+            "plus": 0
+          },
+          {
+            "id": "mleo0000000",
+            "name": "Leo",
+            "plus": 0
+          }
+        ],
+        "maybe": [
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 0
+          },
+          {
+            "id": "malex000000",
+            "name": "Alex",
+            "plus": 0
+          }
+        ],
+        "no": [
+          {
+            "id": "msara000000",
+            "name": "Sara"
+          }
+        ],
+        "headcount": 8,
+        "you": null
+      },
+      "when": null,
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "reveal-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Game night",
+    "emoji": "🎲",
+    "lang": "en",
+    "state": "live",
+    "version": 31,
+    "view": {
+      "title": "Game night",
+      "emoji": "🎲",
+      "note": "Bring a game you love",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": 1791482400000,
+      "closesWords": {
+        "en": "Votes close Thu 8 Oct, 9:00 PM",
+        "ar": "التصويت بيقفل الخميس 8 أكتوبر، 9:00 م"
+      },
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ipw0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 9 Oct, 8:00 PM",
+                "ar": "الجمعة 9 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-09",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                }
+              ],
+              "score": 3.5,
+              "leading": true,
+              "won": true,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 10 Oct, 8:00 PM",
+                "ar": "السبت 10 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-10",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "score": 1.5,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000003",
+              "group": "when",
+              "words": {
+                "en": "Sun 11 Oct, 6:00 PM",
+                "ar": "الحد 11 أكتوبر، 6:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-11",
+              "time": "18:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            }
+          ],
+          "decided": "ipw0000000001",
+          "settledBy": "owner",
+          "tie": []
+        },
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ipr0000000001",
+              "group": "where",
+              "words": {
+                "en": "Sam’s place",
+                "ar": "Sam’s place"
+              },
+              "emoji": "🏠",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": true,
+              "won": true,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ipr0000000002",
+              "group": "where",
+              "words": {
+                "en": "Lina’s place",
+                "ar": "Lina’s place"
+              },
+              "emoji": "🏡",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mlina000000",
+              "yours": false
+            }
+          ],
+          "decided": "ipr0000000001",
+          "settledBy": "votes",
+          "tie": []
+        }
+      ],
+      "voted": 5,
+      "people": 6,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0
+          },
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 1
+          }
+        ],
+        "maybe": [
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 0
+          }
+        ],
+        "no": [],
+        "headcount": 6,
+        "you": null
+      },
+      "when": {
+        "day": "2026-10-09",
+        "time": "20:00",
+        "words": {
+          "en": "Fri 9 Oct, 8:00 PM",
+          "ar": "الجمعة 9 أكتوبر، 8:00 م"
+        },
+        "daysLeft": 6,
+        "leftWords": {
+          "en": "In 6 days",
+          "ar": "بعد 6 أيام"
+        }
+      },
+      "place": "Sam’s place",
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791017880000,
+        "name": "Mahmoud",
+        "line": {
+          "en": "Decided: Fri 9 Oct, 8:00 PM",
+          "ar": "اتحسمت: الجمعة 9 أكتوبر، 8:00 م"
+        },
+        "moment": "reveal"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "tie-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Friday dinner",
+    "emoji": "🍽️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Friday dinner",
+      "emoji": "🍽️",
+      "note": null,
+      "phase": "open",
+      "closed": true,
+      "closesAt": 1790953200000,
+      "closesWords": {
+        "en": "Voting closed Fri 2 Oct, 6:00 PM",
+        "ar": "التصويت قفل الجمعة 2 أكتوبر، 6:00 م"
+      },
+      "groups": [
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ito0000000001",
+              "group": "where",
+              "words": {
+                "en": "Thai corner",
+                "ar": "Thai corner"
+              },
+              "emoji": "🍜",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ito0000000002",
+              "group": "where",
+              "words": {
+                "en": "Pizza place",
+                "ar": "Pizza place"
+              },
+              "emoji": "🍕",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": [
+            "ito0000000001",
+            "ito0000000002"
+          ]
+        }
+      ],
+      "voted": 4,
+      "people": 4,
+      "waiting": [],
+      "rsvp": {
+        "yes": [],
+        "maybe": [],
+        "no": [],
+        "headcount": 0,
+        "you": null
+      },
+      "when": {
+        "day": "2026-10-09",
+        "time": "19:30",
+        "words": {
+          "en": "Fri 9 Oct, 7:30 PM",
+          "ar": "الجمعة 9 أكتوبر، 7:30 م"
+        },
+        "daysLeft": 6,
+        "leftWords": {
+          "en": "In 6 days",
+          "ar": "بعد 6 أيام"
+        }
+      },
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Game night",
+    "emoji": "🎲",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Game night",
+      "emoji": "🎲",
+      "note": "Bring a game you love",
+      "phase": "open",
+      "closed": false,
+      "closesAt": 1791482400000,
+      "closesWords": {
+        "en": "Votes close Thu 8 Oct, 9:00 PM",
+        "ar": "التصويت بيقفل الخميس 8 أكتوبر، 9:00 م"
+      },
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "ipw0000000001",
+              "group": "when",
+              "words": {
+                "en": "Fri 9 Oct, 8:00 PM",
+                "ar": "الجمعة 9 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-09",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                }
+              ],
+              "score": 3.5,
+              "leading": true,
+              "won": false,
+              "youVote": "yes",
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sat 10 Oct, 8:00 PM",
+                "ar": "السبت 10 أكتوبر، 8:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-10",
+              "time": "20:00",
+              "yes": [
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "score": 1.5,
+              "leading": false,
+              "won": false,
+              "youVote": "maybe",
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "ipw0000000003",
+              "group": "when",
+              "words": {
+                "en": "Sun 11 Oct, 6:00 PM",
+                "ar": "الحد 11 أكتوبر، 6:00 م"
+              },
+              "emoji": null,
+              "day": "2026-10-11",
+              "time": "18:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        },
+        {
+          "group": "where",
+          "label": {
+            "en": "Where",
+            "ar": "فين"
+          },
+          "options": [
+            {
+              "id": "ipr0000000001",
+              "group": "where",
+              "words": {
+                "en": "Sam’s place",
+                "ar": "Sam’s place"
+              },
+              "emoji": "🏠",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                }
+              ],
+              "maybe": [],
+              "score": 2,
+              "leading": true,
+              "won": false,
+              "youVote": null,
+              "by": "msam0000000",
+              "yours": false
+            },
+            {
+              "id": "ipr0000000002",
+              "group": "where",
+              "words": {
+                "en": "Lina’s place",
+                "ar": "Lina’s place"
+              },
+              "emoji": "🏡",
+              "day": null,
+              "time": null,
+              "yes": [
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                }
+              ],
+              "maybe": [],
+              "score": 1,
+              "leading": false,
+              "won": false,
+              "youVote": "yes",
+              "by": "mlina000000",
+              "yours": true
+            }
+          ],
+          "decided": null,
+          "settledBy": null,
+          "tie": []
+        }
+      ],
+      "voted": 5,
+      "people": 6,
+      "waiting": [
+        {
+          "id": "mkarim00000",
+          "name": "Karim"
+        }
+      ],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0
+          }
+        ],
+        "maybe": [
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 0
+          }
+        ],
+        "no": [],
+        "headcount": 3,
+        "you": "yes"
+      },
+      "when": null,
+      "place": null,
+      "what": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790934120000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya: Fri 9 Oct, 8:00 PM if need be",
+          "ar": "Maya: الجمعة 9 أكتوبر، 8:00 م لو لزم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    },
+    "kindEmoji": "📅"
+  }
+}

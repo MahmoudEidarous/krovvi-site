@@ -1,1 +1,6407 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "My money",
+    "emoji": "💳",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "My money",
+      "emoji": "💳",
+      "currency": "USD",
+      "budget": 150000,
+      "budgetWords": {
+        "en": "$1,500",
+        "ar": "$1,500"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 0,
+      "spends": 0,
+      "billsPaid": 0,
+      "due": 0,
+      "left": 150000,
+      "perDay": 5172,
+      "pace": 135484,
+      "words": {
+        "left": {
+          "en": "$1,500 left",
+          "ar": "فاضل $1,500"
+        },
+        "perDay": {
+          "en": "About $51.72 a day",
+          "ar": "حوالي $51.72 في اليوم"
+        },
+        "spent": {
+          "en": "$0 spent",
+          "ar": "اتصرف $0"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 100,
+        "held": 0,
+        "gone": 0,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($15)",
+          "ar": "كل نقطة 1% من الميزانية ($15)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 0,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 0,
+      "cats": [],
+      "list": [],
+      "bills": [],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 0,
+          "amountWords": {
+            "en": "$0",
+            "ar": "$0"
+          }
+        }
+      ],
+      "last": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "home-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Home",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Home",
+      "emoji": "🏠",
+      "currency": "USD",
+      "budget": 200000,
+      "budgetWords": {
+        "en": "$2,000",
+        "ar": "$2,000"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 98650,
+      "spends": 8650,
+      "billsPaid": 90000,
+      "due": 10500,
+      "left": 90850,
+      "perDay": 3132,
+      "pace": 180645,
+      "words": {
+        "left": {
+          "en": "$908.50 left",
+          "ar": "فاضل $908.50"
+        },
+        "perDay": {
+          "en": "About $31.32 a day",
+          "ar": "حوالي $31.32 في اليوم"
+        },
+        "spent": {
+          "en": "$986.50 spent",
+          "ar": "اتصرف $986.50"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 45,
+        "held": 5,
+        "gone": 50,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($20)",
+          "ar": "كل نقطة 1% من الميزانية ($20)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 6200,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": true,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 4450,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 1,
+      "cats": [
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          }
+        },
+        {
+          "cat": "transport",
+          "emoji": "🚕",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          }
+        },
+        {
+          "cat": "eating",
+          "emoji": "🍽️",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          }
+        },
+        {
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": -2000,
+          "amountWords": {
+            "en": "-$20",
+            "ar": "-$20"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ihs0000000004",
+          "what": "Shoes",
+          "amount": 2000,
+          "amountWords": {
+            "en": "$20",
+            "ar": "$20"
+          },
+          "refund": true,
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000003",
+          "what": "Fuel",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000002",
+          "what": "Coffee",
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000001",
+          "what": "Groceries",
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        }
+      ],
+      "bills": [
+        {
+          "id": "ihb0000000001",
+          "name": "Rent",
+          "emoji": "🏠",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "Mahmoud",
+              "ar": "Mahmoud"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ihb0000000002",
+          "name": "Gym",
+          "emoji": "🏋️",
+          "amount": 3000,
+          "amountWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "due": 2,
+          "dueDay": "2026-10-02",
+          "dueWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "paid": null,
+          "status": "late",
+          "words": {
+            "en": "Due yesterday",
+            "ar": "كانت امبارح"
+          }
+        },
+        {
+          "id": "ihb0000000003",
+          "name": "Phone",
+          "emoji": "📱",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          }
+        },
+        {
+          "id": "ihb0000000004",
+          "name": "Internet",
+          "emoji": "🌐",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 4450,
+          "amountWords": {
+            "en": "$44.50",
+            "ar": "$44.50"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": 4200,
+          "amountWords": {
+            "en": "$42",
+            "ar": "$42"
+          }
+        }
+      ],
+      "last": {
+        "spent": 113000,
+        "words": {
+          "en": "$1,130",
+          "ar": "$1,130"
+        }
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [
+      {
+        "at": 1791016200000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina: $20 back for Shoes",
+          "ar": "Lina: مرتجع Shoes $20"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "home-ar": {
+    "ok": true,
+    "kind": "spending",
+    "title": "البيت",
+    "emoji": "🏠",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "البيت",
+      "emoji": "🏠",
+      "currency": "USD",
+      "budget": 200000,
+      "budgetWords": {
+        "en": "$2,000",
+        "ar": "$2,000"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 98650,
+      "spends": 8650,
+      "billsPaid": 90000,
+      "due": 10500,
+      "left": 90850,
+      "perDay": 3132,
+      "pace": 180645,
+      "words": {
+        "left": {
+          "en": "$908.50 left",
+          "ar": "فاضل $908.50"
+        },
+        "perDay": {
+          "en": "About $31.32 a day",
+          "ar": "حوالي $31.32 في اليوم"
+        },
+        "spent": {
+          "en": "$986.50 spent",
+          "ar": "اتصرف $986.50"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 45,
+        "held": 5,
+        "gone": 50,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($20)",
+          "ar": "كل نقطة 1% من الميزانية ($20)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 6200,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": true,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 4450,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 1,
+      "cats": [
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          }
+        },
+        {
+          "cat": "transport",
+          "emoji": "🚕",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          }
+        },
+        {
+          "cat": "eating",
+          "emoji": "🍽️",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          }
+        },
+        {
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": -2000,
+          "amountWords": {
+            "en": "-$20",
+            "ar": "-$20"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ihs0000000004",
+          "what": "الجزمة",
+          "amount": 2000,
+          "amountWords": {
+            "en": "$20",
+            "ar": "$20"
+          },
+          "refund": true,
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "لينا",
+            "ar": "لينا"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000003",
+          "what": "بنزين",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "محمود",
+            "ar": "محمود"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000002",
+          "what": "قهوة",
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "محمود",
+            "ar": "محمود"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000001",
+          "what": "بقالة",
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "لينا",
+            "ar": "لينا"
+          },
+          "yours": false
+        }
+      ],
+      "bills": [
+        {
+          "id": "ihb0000000001",
+          "name": "الإيجار",
+          "emoji": "🏠",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "محمود",
+              "ar": "محمود"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ihb0000000002",
+          "name": "الجيم",
+          "emoji": "🏋️",
+          "amount": 3000,
+          "amountWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "due": 2,
+          "dueDay": "2026-10-02",
+          "dueWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "paid": null,
+          "status": "late",
+          "words": {
+            "en": "Due yesterday",
+            "ar": "كانت امبارح"
+          }
+        },
+        {
+          "id": "ihb0000000003",
+          "name": "الموبايل",
+          "emoji": "📱",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          }
+        },
+        {
+          "id": "ihb0000000004",
+          "name": "النت",
+          "emoji": "🌐",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "amount": 4450,
+          "amountWords": {
+            "en": "$44.50",
+            "ar": "$44.50"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "لينا",
+          "you": false,
+          "amount": 4200,
+          "amountWords": {
+            "en": "$42",
+            "ar": "$42"
+          }
+        }
+      ],
+      "last": {
+        "spent": 113000,
+        "words": {
+          "en": "$1,130",
+          "ar": "$1,130"
+        }
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      }
+    ],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [
+      {
+        "at": 1791016200000,
+        "name": "لينا",
+        "line": {
+          "en": "لينا: $20 back for الجزمة",
+          "ar": "لينا: مرتجع الجزمة $20"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "flat-busy-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "The flat",
+    "emoji": "🔑",
+    "lang": "en",
+    "state": "live",
+    "version": 220,
+    "view": {
+      "title": "The flat",
+      "emoji": "🔑",
+      "currency": "EUR",
+      "budget": 600000,
+      "budgetWords": {
+        "en": "€6,000",
+        "ar": "€6,000"
+      },
+      "period": {
+        "start": "2026-09-25",
+        "end": "2026-10-24",
+        "days": 30,
+        "today": 9,
+        "left": 22,
+        "words": {
+          "en": "25 Sep to 24 Oct",
+          "ar": "من 25 سبتمبر لـ 24 أكتوبر"
+        }
+      },
+      "spent": 699800,
+      "spends": 564660,
+      "billsPaid": 135140,
+      "due": 4500,
+      "left": -104300,
+      "perDay": null,
+      "pace": 420000,
+      "words": {
+        "left": {
+          "en": "€1,043 past the budget",
+          "ar": "€1,043 زيادة عن الميزانية"
+        },
+        "perDay": null,
+        "spent": {
+          "en": "€6,998 spent",
+          "ar": "اتصرف €6,998"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 0,
+        "held": 1,
+        "gone": 99,
+        "legend": {
+          "en": "Each dot is 1% of the budget (€60)",
+          "ar": "كل نقطة 1% من الميزانية (€60)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-09-25",
+          "spent": 65286,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-09-26",
+          "spent": 66510,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-09-27",
+          "spent": 67734,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-09-28",
+          "spent": 59958,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-09-29",
+          "spent": 52182,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-09-30",
+          "spent": 71406,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-01",
+          "spent": 63437,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 63528,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 54619,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 0,
+      "cats": [
+        {
+          "cat": "eating",
+          "emoji": "🍽️",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 143677,
+          "amountWords": {
+            "en": "€1,436.77",
+            "ar": "€1,436.77"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 143553,
+          "amountWords": {
+            "en": "€1,435.53",
+            "ar": "€1,435.53"
+          }
+        },
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 135140,
+          "amountWords": {
+            "en": "€1,351.40",
+            "ar": "€1,351.40"
+          }
+        },
+        {
+          "cat": "home",
+          "emoji": "🏠",
+          "name": {
+            "en": "Home",
+            "ar": "البيت"
+          },
+          "amount": 75396,
+          "amountWords": {
+            "en": "€753.96",
+            "ar": "€753.96"
+          }
+        },
+        {
+          "cat": "health",
+          "emoji": "💊",
+          "name": {
+            "en": "Health",
+            "ar": "صحة"
+          },
+          "amount": 69242,
+          "amountWords": {
+            "en": "€692.42",
+            "ar": "€692.42"
+          }
+        },
+        {
+          "cat": "fun",
+          "emoji": "🎟️",
+          "name": {
+            "en": "Going out",
+            "ar": "خروج"
+          },
+          "amount": 67819,
+          "amountWords": {
+            "en": "€678.19",
+            "ar": "€678.19"
+          }
+        },
+        {
+          "cat": "transport",
+          "emoji": "🚕",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 64973,
+          "amountWords": {
+            "en": "€649.73",
+            "ar": "€649.73"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ifs0000000096",
+          "what": "Market",
+          "amount": 7045,
+          "amountWords": {
+            "en": "€70.45",
+            "ar": "€70.45"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000095",
+          "what": "Pharmacy",
+          "amount": 3474,
+          "amountWords": {
+            "en": "€34.74",
+            "ar": "€34.74"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000105",
+          "what": "Groceries",
+          "amount": 3184,
+          "amountWords": {
+            "en": "€31.84",
+            "ar": "€31.84"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000104",
+          "what": "Market",
+          "amount": 8613,
+          "amountWords": {
+            "en": "€86.13",
+            "ar": "€86.13"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000103",
+          "what": "Pharmacy",
+          "amount": 5042,
+          "amountWords": {
+            "en": "€50.42",
+            "ar": "€50.42"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000102",
+          "what": "Cinema",
+          "amount": 1471,
+          "amountWords": {
+            "en": "€14.71",
+            "ar": "€14.71"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000101",
+          "what": "Cleaning things",
+          "amount": 6900,
+          "amountWords": {
+            "en": "€69",
+            "ar": "€69"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000100",
+          "what": "Bus pass top up",
+          "amount": 3329,
+          "amountWords": {
+            "en": "€33.29",
+            "ar": "€33.29"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000099",
+          "what": "Takeaway",
+          "amount": 8758,
+          "amountWords": {
+            "en": "€87.58",
+            "ar": "€87.58"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000098",
+          "what": "Coffee",
+          "amount": 5187,
+          "amountWords": {
+            "en": "€51.87",
+            "ar": "€51.87"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000097",
+          "what": "Groceries",
+          "amount": 1616,
+          "amountWords": {
+            "en": "€16.16",
+            "ar": "€16.16"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000084",
+          "what": "Bus pass top up",
+          "amount": 9193,
+          "amountWords": {
+            "en": "€91.93",
+            "ar": "€91.93"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000094",
+          "what": "Cinema",
+          "amount": 8903,
+          "amountWords": {
+            "en": "€89.03",
+            "ar": "€89.03"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000093",
+          "what": "Cleaning things",
+          "amount": 5332,
+          "amountWords": {
+            "en": "€53.32",
+            "ar": "€53.32"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000092",
+          "what": "Bus pass top up",
+          "amount": 1761,
+          "amountWords": {
+            "en": "€17.61",
+            "ar": "€17.61"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000091",
+          "what": "Takeaway",
+          "amount": 7190,
+          "amountWords": {
+            "en": "€71.90",
+            "ar": "€71.90"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000090",
+          "what": "Coffee",
+          "amount": 3619,
+          "amountWords": {
+            "en": "€36.19",
+            "ar": "€36.19"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000089",
+          "what": "Groceries",
+          "amount": 9048,
+          "amountWords": {
+            "en": "€90.48",
+            "ar": "€90.48"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000088",
+          "what": "Market",
+          "amount": 5477,
+          "amountWords": {
+            "en": "€54.77",
+            "ar": "€54.77"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000087",
+          "what": "Pharmacy",
+          "amount": 1906,
+          "amountWords": {
+            "en": "€19.06",
+            "ar": "€19.06"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000086",
+          "what": "Cinema",
+          "amount": 7335,
+          "amountWords": {
+            "en": "€73.35",
+            "ar": "€73.35"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000085",
+          "what": "Cleaning things",
+          "amount": 3764,
+          "amountWords": {
+            "en": "€37.64",
+            "ar": "€37.64"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000083",
+          "what": "Takeaway",
+          "amount": 5622,
+          "amountWords": {
+            "en": "€56.22",
+            "ar": "€56.22"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000082",
+          "what": "Coffee",
+          "amount": 2051,
+          "amountWords": {
+            "en": "€20.51",
+            "ar": "€20.51"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000081",
+          "what": "Groceries",
+          "amount": 7480,
+          "amountWords": {
+            "en": "€74.80",
+            "ar": "€74.80"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000080",
+          "what": "Market",
+          "amount": 3909,
+          "amountWords": {
+            "en": "€39.09",
+            "ar": "€39.09"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000079",
+          "what": "Pharmacy",
+          "amount": 9338,
+          "amountWords": {
+            "en": "€93.38",
+            "ar": "€93.38"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000078",
+          "what": "Cinema",
+          "amount": 5767,
+          "amountWords": {
+            "en": "€57.67",
+            "ar": "€57.67"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000077",
+          "what": "Cleaning things",
+          "amount": 2196,
+          "amountWords": {
+            "en": "€21.96",
+            "ar": "€21.96"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000076",
+          "what": "Bus pass top up",
+          "amount": 7625,
+          "amountWords": {
+            "en": "€76.25",
+            "ar": "€76.25"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000075",
+          "what": "Takeaway",
+          "amount": 4054,
+          "amountWords": {
+            "en": "€40.54",
+            "ar": "€40.54"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000074",
+          "what": "Coffee",
+          "amount": 9483,
+          "amountWords": {
+            "en": "€94.83",
+            "ar": "€94.83"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000073",
+          "what": "Groceries",
+          "amount": 5912,
+          "amountWords": {
+            "en": "€59.12",
+            "ar": "€59.12"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000072",
+          "what": "Market",
+          "amount": 2341,
+          "amountWords": {
+            "en": "€23.41",
+            "ar": "€23.41"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000071",
+          "what": "Pharmacy",
+          "amount": 7770,
+          "amountWords": {
+            "en": "€77.70",
+            "ar": "€77.70"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000070",
+          "what": "Cinema",
+          "amount": 4199,
+          "amountWords": {
+            "en": "€41.99",
+            "ar": "€41.99"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000069",
+          "what": "Cleaning things",
+          "amount": 9628,
+          "amountWords": {
+            "en": "€96.28",
+            "ar": "€96.28"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000068",
+          "what": "Bus pass top up",
+          "amount": 6057,
+          "amountWords": {
+            "en": "€60.57",
+            "ar": "€60.57"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000067",
+          "what": "Takeaway",
+          "amount": 2486,
+          "amountWords": {
+            "en": "€24.86",
+            "ar": "€24.86"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000066",
+          "what": "Coffee",
+          "amount": 7915,
+          "amountWords": {
+            "en": "€79.15",
+            "ar": "€79.15"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000065",
+          "what": "Groceries",
+          "amount": 4344,
+          "amountWords": {
+            "en": "€43.44",
+            "ar": "€43.44"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000064",
+          "what": "Market",
+          "amount": 9773,
+          "amountWords": {
+            "en": "€97.73",
+            "ar": "€97.73"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000063",
+          "what": "Pharmacy",
+          "amount": 6202,
+          "amountWords": {
+            "en": "€62.02",
+            "ar": "€62.02"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000062",
+          "what": "Cinema",
+          "amount": 2631,
+          "amountWords": {
+            "en": "€26.31",
+            "ar": "€26.31"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000061",
+          "what": "Cleaning things",
+          "amount": 8060,
+          "amountWords": {
+            "en": "€80.60",
+            "ar": "€80.60"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-30",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000060",
+          "what": "Bus pass top up",
+          "amount": 4489,
+          "amountWords": {
+            "en": "€44.89",
+            "ar": "€44.89"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000059",
+          "what": "Takeaway",
+          "amount": 918,
+          "amountWords": {
+            "en": "€9.18",
+            "ar": "€9.18"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000058",
+          "what": "Coffee",
+          "amount": 6347,
+          "amountWords": {
+            "en": "€63.47",
+            "ar": "€63.47"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000057",
+          "what": "Groceries",
+          "amount": 2776,
+          "amountWords": {
+            "en": "€27.76",
+            "ar": "€27.76"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000056",
+          "what": "Market",
+          "amount": 8205,
+          "amountWords": {
+            "en": "€82.05",
+            "ar": "€82.05"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000055",
+          "what": "Pharmacy",
+          "amount": 4634,
+          "amountWords": {
+            "en": "€46.34",
+            "ar": "€46.34"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000054",
+          "what": "Cinema",
+          "amount": 1063,
+          "amountWords": {
+            "en": "€10.63",
+            "ar": "€10.63"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000053",
+          "what": "Cleaning things",
+          "amount": 6492,
+          "amountWords": {
+            "en": "€64.92",
+            "ar": "€64.92"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000052",
+          "what": "Bus pass top up",
+          "amount": 2921,
+          "amountWords": {
+            "en": "€29.21",
+            "ar": "€29.21"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000051",
+          "what": "Takeaway",
+          "amount": 8350,
+          "amountWords": {
+            "en": "€83.50",
+            "ar": "€83.50"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000050",
+          "what": "Coffee",
+          "amount": 4779,
+          "amountWords": {
+            "en": "€47.79",
+            "ar": "€47.79"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000049",
+          "what": "Groceries",
+          "amount": 1208,
+          "amountWords": {
+            "en": "€12.08",
+            "ar": "€12.08"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-29",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000048",
+          "what": "Market",
+          "amount": 6637,
+          "amountWords": {
+            "en": "€66.37",
+            "ar": "€66.37"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000047",
+          "what": "Pharmacy",
+          "amount": 3066,
+          "amountWords": {
+            "en": "€30.66",
+            "ar": "€30.66"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000046",
+          "what": "Cinema",
+          "amount": 8495,
+          "amountWords": {
+            "en": "€84.95",
+            "ar": "€84.95"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000045",
+          "what": "Cleaning things",
+          "amount": 4924,
+          "amountWords": {
+            "en": "€49.24",
+            "ar": "€49.24"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000044",
+          "what": "Bus pass top up",
+          "amount": 1353,
+          "amountWords": {
+            "en": "€13.53",
+            "ar": "€13.53"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000043",
+          "what": "Takeaway",
+          "amount": 6782,
+          "amountWords": {
+            "en": "€67.82",
+            "ar": "€67.82"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000042",
+          "what": "Coffee",
+          "amount": 3211,
+          "amountWords": {
+            "en": "€32.11",
+            "ar": "€32.11"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000041",
+          "what": "Groceries",
+          "amount": 8640,
+          "amountWords": {
+            "en": "€86.40",
+            "ar": "€86.40"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000040",
+          "what": "Market",
+          "amount": 5069,
+          "amountWords": {
+            "en": "€50.69",
+            "ar": "€50.69"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000039",
+          "what": "Pharmacy",
+          "amount": 1498,
+          "amountWords": {
+            "en": "€14.98",
+            "ar": "€14.98"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000038",
+          "what": "Cinema",
+          "amount": 6927,
+          "amountWords": {
+            "en": "€69.27",
+            "ar": "€69.27"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000037",
+          "what": "Cleaning things",
+          "amount": 3356,
+          "amountWords": {
+            "en": "€33.56",
+            "ar": "€33.56"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-28",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000036",
+          "what": "Bus pass top up",
+          "amount": 8785,
+          "amountWords": {
+            "en": "€87.85",
+            "ar": "€87.85"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000035",
+          "what": "Takeaway",
+          "amount": 5214,
+          "amountWords": {
+            "en": "€52.14",
+            "ar": "€52.14"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000034",
+          "what": "Coffee",
+          "amount": 1643,
+          "amountWords": {
+            "en": "€16.43",
+            "ar": "€16.43"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000033",
+          "what": "Groceries",
+          "amount": 7072,
+          "amountWords": {
+            "en": "€70.72",
+            "ar": "€70.72"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000032",
+          "what": "Market",
+          "amount": 3501,
+          "amountWords": {
+            "en": "€35.01",
+            "ar": "€35.01"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000031",
+          "what": "Pharmacy",
+          "amount": 8930,
+          "amountWords": {
+            "en": "€89.30",
+            "ar": "€89.30"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000030",
+          "what": "Cinema",
+          "amount": 5359,
+          "amountWords": {
+            "en": "€53.59",
+            "ar": "€53.59"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000029",
+          "what": "Cleaning things",
+          "amount": 1788,
+          "amountWords": {
+            "en": "€17.88",
+            "ar": "€17.88"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000028",
+          "what": "Bus pass top up",
+          "amount": 7217,
+          "amountWords": {
+            "en": "€72.17",
+            "ar": "€72.17"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000027",
+          "what": "Takeaway",
+          "amount": 3646,
+          "amountWords": {
+            "en": "€36.46",
+            "ar": "€36.46"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000026",
+          "what": "Coffee",
+          "amount": 9075,
+          "amountWords": {
+            "en": "€90.75",
+            "ar": "€90.75"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000025",
+          "what": "Groceries",
+          "amount": 5504,
+          "amountWords": {
+            "en": "€55.04",
+            "ar": "€55.04"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-27",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000024",
+          "what": "Market",
+          "amount": 1933,
+          "amountWords": {
+            "en": "€19.33",
+            "ar": "€19.33"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000023",
+          "what": "Pharmacy",
+          "amount": 7362,
+          "amountWords": {
+            "en": "€73.62",
+            "ar": "€73.62"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000022",
+          "what": "Cinema",
+          "amount": 3791,
+          "amountWords": {
+            "en": "€37.91",
+            "ar": "€37.91"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000021",
+          "what": "Cleaning things",
+          "amount": 9220,
+          "amountWords": {
+            "en": "€92.20",
+            "ar": "€92.20"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000020",
+          "what": "Bus pass top up",
+          "amount": 5649,
+          "amountWords": {
+            "en": "€56.49",
+            "ar": "€56.49"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000019",
+          "what": "Takeaway",
+          "amount": 2078,
+          "amountWords": {
+            "en": "€20.78",
+            "ar": "€20.78"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000018",
+          "what": "Coffee",
+          "amount": 7507,
+          "amountWords": {
+            "en": "€75.07",
+            "ar": "€75.07"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000017",
+          "what": "Groceries",
+          "amount": 3936,
+          "amountWords": {
+            "en": "€39.36",
+            "ar": "€39.36"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000016",
+          "what": "Market",
+          "amount": 9365,
+          "amountWords": {
+            "en": "€93.65",
+            "ar": "€93.65"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000015",
+          "what": "Pharmacy",
+          "amount": 5794,
+          "amountWords": {
+            "en": "€57.94",
+            "ar": "€57.94"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000014",
+          "what": "Cinema",
+          "amount": 2223,
+          "amountWords": {
+            "en": "€22.23",
+            "ar": "€22.23"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000013",
+          "what": "Cleaning things",
+          "amount": 7652,
+          "amountWords": {
+            "en": "€76.52",
+            "ar": "€76.52"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-26",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000012",
+          "what": "Bus pass top up",
+          "amount": 4081,
+          "amountWords": {
+            "en": "€40.81",
+            "ar": "€40.81"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000011",
+          "what": "Takeaway",
+          "amount": 9510,
+          "amountWords": {
+            "en": "€95.10",
+            "ar": "€95.10"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000010",
+          "what": "Coffee",
+          "amount": 5939,
+          "amountWords": {
+            "en": "€59.39",
+            "ar": "€59.39"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000009",
+          "what": "Groceries",
+          "amount": 2368,
+          "amountWords": {
+            "en": "€23.68",
+            "ar": "€23.68"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000008",
+          "what": "Market",
+          "amount": 7797,
+          "amountWords": {
+            "en": "€77.97",
+            "ar": "€77.97"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000007",
+          "what": "Pharmacy",
+          "amount": 4226,
+          "amountWords": {
+            "en": "€42.26",
+            "ar": "€42.26"
+          },
+          "refund": false,
+          "cat": "health",
+          "emoji": "💊",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000006",
+          "what": "Cinema",
+          "amount": 9655,
+          "amountWords": {
+            "en": "€96.55",
+            "ar": "€96.55"
+          },
+          "refund": false,
+          "cat": "fun",
+          "emoji": "🎟️",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000005",
+          "what": "Cleaning things",
+          "amount": 6084,
+          "amountWords": {
+            "en": "€60.84",
+            "ar": "€60.84"
+          },
+          "refund": false,
+          "cat": "home",
+          "emoji": "🏠",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000004",
+          "what": "Bus pass top up",
+          "amount": 2513,
+          "amountWords": {
+            "en": "€25.13",
+            "ar": "€25.13"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000003",
+          "what": "Takeaway",
+          "amount": 7942,
+          "amountWords": {
+            "en": "€79.42",
+            "ar": "€79.42"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000002",
+          "what": "Coffee",
+          "amount": 4371,
+          "amountWords": {
+            "en": "€43.71",
+            "ar": "€43.71"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ifs0000000001",
+          "what": "Groceries",
+          "amount": 800,
+          "amountWords": {
+            "en": "€8",
+            "ar": "€8"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-09-25",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        }
+      ],
+      "bills": [
+        {
+          "id": "ifb0000000001",
+          "name": "Rent",
+          "emoji": "🏠",
+          "amount": 120000,
+          "amountWords": {
+            "en": "€1,200",
+            "ar": "€1,200"
+          },
+          "due": 25,
+          "dueDay": "2026-09-25",
+          "dueWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "paid": {
+            "amount": 120000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "Mahmoud",
+              "ar": "Mahmoud"
+            },
+            "day": "2026-09-25"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ifb0000000002",
+          "name": "Power",
+          "emoji": "💡",
+          "amount": 9000,
+          "amountWords": {
+            "en": "€90",
+            "ar": "€90"
+          },
+          "due": 28,
+          "dueDay": "2026-09-28",
+          "dueWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "paid": {
+            "amount": 8640,
+            "by": "mlina000000",
+            "byName": {
+              "en": "Lina",
+              "ar": "Lina"
+            },
+            "day": "2026-09-28"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ifb0000000003",
+          "name": "Internet",
+          "emoji": "🌐",
+          "amount": 4000,
+          "amountWords": {
+            "en": "€40",
+            "ar": "€40"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 4000,
+            "by": "momar000000",
+            "byName": {
+              "en": "Omar",
+              "ar": "Omar"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ifb0000000004",
+          "name": "Phone",
+          "emoji": "📱",
+          "amount": 2500,
+          "amountWords": {
+            "en": "€25",
+            "ar": "€25"
+          },
+          "due": 5,
+          "dueDay": "2026-10-05",
+          "dueWords": {
+            "en": "Mon 5 Oct",
+            "ar": "الاتنين 5 أكتوبر"
+          },
+          "paid": {
+            "amount": 2500,
+            "by": "mmaya000000",
+            "byName": {
+              "en": "Maya",
+              "ar": "Maya"
+            },
+            "day": "2026-10-02"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ifb0000000005",
+          "name": "Water",
+          "emoji": "🚰",
+          "amount": 3000,
+          "amountWords": {
+            "en": "€30",
+            "ar": "€30"
+          },
+          "due": 10,
+          "dueDay": "2026-10-10",
+          "dueWords": {
+            "en": "Sat 10 Oct",
+            "ar": "السبت 10 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Sat 10 Oct",
+            "ar": "يوم السبت 10 أكتوبر"
+          }
+        },
+        {
+          "id": "ifb0000000006",
+          "name": "Streaming",
+          "emoji": "📺",
+          "amount": 1500,
+          "amountWords": {
+            "en": "€15",
+            "ar": "€15"
+          },
+          "due": 12,
+          "dueDay": "2026-10-12",
+          "dueWords": {
+            "en": "Mon 12 Oct",
+            "ar": "الاتنين 12 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Mon 12 Oct",
+            "ar": "يوم الاتنين 12 أكتوبر"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 139284,
+          "amountWords": {
+            "en": "€1,392.84",
+            "ar": "€1,392.84"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": 138946,
+          "amountWords": {
+            "en": "€1,389.46",
+            "ar": "€1,389.46"
+          }
+        },
+        {
+          "id": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": 141792,
+          "amountWords": {
+            "en": "€1,417.92",
+            "ar": "€1,417.92"
+          }
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false,
+          "amount": 144638,
+          "amountWords": {
+            "en": "€1,446.38",
+            "ar": "€1,446.38"
+          }
+        }
+      ],
+      "last": {
+        "spent": 530150,
+        "words": {
+          "en": "€5,301.50",
+          "ar": "€5,301.50"
+        }
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      }
+    ],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "bills-paid-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Home",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Home",
+      "emoji": "🏠",
+      "currency": "USD",
+      "budget": 200000,
+      "budgetWords": {
+        "en": "$2,000",
+        "ar": "$2,000"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 99400,
+      "spends": 5400,
+      "billsPaid": 94000,
+      "due": 0,
+      "left": 100600,
+      "perDay": 3468,
+      "pace": 180645,
+      "words": {
+        "left": {
+          "en": "$1,006 left",
+          "ar": "فاضل $1,006"
+        },
+        "perDay": {
+          "en": "About $34.68 a day",
+          "ar": "حوالي $34.68 في اليوم"
+        },
+        "spent": {
+          "en": "$994 spent",
+          "ar": "اتصرف $994"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 50,
+        "held": 0,
+        "gone": 50,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($20)",
+          "ar": "كل نقطة 1% من الميزانية ($20)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 0,
+          "none": true,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 5400,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 0,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 1,
+      "cats": [
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 94000,
+          "amountWords": {
+            "en": "$940",
+            "ar": "$940"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 5400,
+          "amountWords": {
+            "en": "$54",
+            "ar": "$54"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ips0000000001",
+          "what": "Groceries",
+          "amount": 5400,
+          "amountWords": {
+            "en": "$54",
+            "ar": "$54"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        }
+      ],
+      "bills": [
+        {
+          "id": "ipb0000000001",
+          "name": "Rent",
+          "emoji": "🏠",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "Mahmoud",
+              "ar": "Mahmoud"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ipb0000000002",
+          "name": "Phone",
+          "emoji": "📱",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 2,
+          "dueDay": "2026-10-02",
+          "dueWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "paid": {
+            "amount": 4000,
+            "by": "mlina000000",
+            "byName": {
+              "en": "Lina",
+              "ar": "Lina"
+            },
+            "day": "2026-10-03"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 0,
+          "amountWords": {
+            "en": "$0",
+            "ar": "$0"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": 5400,
+          "amountWords": {
+            "en": "$54",
+            "ar": "$54"
+          }
+        }
+      ],
+      "last": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [
+      {
+        "at": 1791017700000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina paid Phone",
+          "ar": "اتدفعت Phone"
+        },
+        "moment": "bills"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "partner-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Home",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Home",
+      "emoji": "🏠",
+      "currency": "USD",
+      "budget": 200000,
+      "budgetWords": {
+        "en": "$2,000",
+        "ar": "$2,000"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 98650,
+      "spends": 8650,
+      "billsPaid": 90000,
+      "due": 10500,
+      "left": 90850,
+      "perDay": 3132,
+      "pace": 180645,
+      "words": {
+        "left": {
+          "en": "$908.50 left",
+          "ar": "فاضل $908.50"
+        },
+        "perDay": {
+          "en": "About $31.32 a day",
+          "ar": "حوالي $31.32 في اليوم"
+        },
+        "spent": {
+          "en": "$986.50 spent",
+          "ar": "اتصرف $986.50"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 45,
+        "held": 5,
+        "gone": 50,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($20)",
+          "ar": "كل نقطة 1% من الميزانية ($20)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 6200,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": true,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 4450,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 1,
+      "cats": [
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          }
+        },
+        {
+          "cat": "transport",
+          "emoji": "🚕",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          }
+        },
+        {
+          "cat": "eating",
+          "emoji": "🍽️",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          }
+        },
+        {
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": -2000,
+          "amountWords": {
+            "en": "-$20",
+            "ar": "-$20"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ihs0000000004",
+          "what": "Shoes",
+          "amount": 2000,
+          "amountWords": {
+            "en": "$20",
+            "ar": "$20"
+          },
+          "refund": true,
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "You",
+            "ar": "إنت"
+          },
+          "yours": true
+        },
+        {
+          "id": "ihs0000000003",
+          "what": "Fuel",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000002",
+          "what": "Coffee",
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000001",
+          "what": "Groceries",
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "You",
+            "ar": "إنت"
+          },
+          "yours": true
+        }
+      ],
+      "bills": [
+        {
+          "id": "ihb0000000001",
+          "name": "Rent",
+          "emoji": "🏠",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "Mahmoud",
+              "ar": "Mahmoud"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ihb0000000002",
+          "name": "Gym",
+          "emoji": "🏋️",
+          "amount": 3000,
+          "amountWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "due": 2,
+          "dueDay": "2026-10-02",
+          "dueWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "paid": null,
+          "status": "late",
+          "words": {
+            "en": "Due yesterday",
+            "ar": "كانت امبارح"
+          }
+        },
+        {
+          "id": "ihb0000000003",
+          "name": "Phone",
+          "emoji": "📱",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          }
+        },
+        {
+          "id": "ihb0000000004",
+          "name": "Internet",
+          "emoji": "🌐",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 4450,
+          "amountWords": {
+            "en": "$44.50",
+            "ar": "$44.50"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": true,
+          "amount": 4200,
+          "amountWords": {
+            "en": "$42",
+            "ar": "$42"
+          }
+        }
+      ],
+      "last": {
+        "spent": 113000,
+        "words": {
+          "en": "$1,130",
+          "ar": "$1,130"
+        }
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [
+      {
+        "at": 1791016200000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina: $20 back for Shoes",
+          "ar": "Lina: مرتجع Shoes $20"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  },
+  "watcher-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Home",
+    "emoji": "🏠",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Home",
+      "emoji": "🏠",
+      "currency": "USD",
+      "budget": 200000,
+      "budgetWords": {
+        "en": "$2,000",
+        "ar": "$2,000"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 98650,
+      "spends": 8650,
+      "billsPaid": 90000,
+      "due": 10500,
+      "left": 90850,
+      "perDay": 3132,
+      "pace": 180645,
+      "words": {
+        "left": {
+          "en": "$908.50 left",
+          "ar": "فاضل $908.50"
+        },
+        "perDay": {
+          "en": "About $31.32 a day",
+          "ar": "حوالي $31.32 في اليوم"
+        },
+        "spent": {
+          "en": "$986.50 spent",
+          "ar": "اتصرف $986.50"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 45,
+        "held": 5,
+        "gone": 50,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($20)",
+          "ar": "كل نقطة 1% من الميزانية ($20)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 6200,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": true,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 4450,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 1,
+      "cats": [
+        {
+          "cat": "bills",
+          "emoji": "🧾",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "groceries",
+          "emoji": "🛒",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          }
+        },
+        {
+          "cat": "transport",
+          "emoji": "🚕",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          }
+        },
+        {
+          "cat": "eating",
+          "emoji": "🍽️",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          }
+        },
+        {
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": -2000,
+          "amountWords": {
+            "en": "-$20",
+            "ar": "-$20"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ihs0000000004",
+          "what": "Shopping",
+          "amount": 2000,
+          "amountWords": {
+            "en": "$20",
+            "ar": "$20"
+          },
+          "refund": true,
+          "cat": "shopping",
+          "emoji": "🛍️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000003",
+          "what": "Getting around",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "refund": false,
+          "cat": "transport",
+          "emoji": "🚕",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000002",
+          "what": "Eating out",
+          "amount": 450,
+          "amountWords": {
+            "en": "$4.50",
+            "ar": "$4.50"
+          },
+          "refund": false,
+          "cat": "eating",
+          "emoji": "🍽️",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "yours": false
+        },
+        {
+          "id": "ihs0000000001",
+          "what": "Groceries",
+          "amount": 6200,
+          "amountWords": {
+            "en": "$62",
+            "ar": "$62"
+          },
+          "refund": false,
+          "cat": "groceries",
+          "emoji": "🛒",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "yours": false
+        }
+      ],
+      "bills": [
+        {
+          "id": "ihb0000000001",
+          "name": "Rent",
+          "emoji": "🏠",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "Mahmoud",
+              "ar": "Mahmoud"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          }
+        },
+        {
+          "id": "ihb0000000002",
+          "name": "Gym",
+          "emoji": "🏋️",
+          "amount": 3000,
+          "amountWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "due": 2,
+          "dueDay": "2026-10-02",
+          "dueWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "paid": null,
+          "status": "late",
+          "words": {
+            "en": "Due yesterday",
+            "ar": "كانت امبارح"
+          }
+        },
+        {
+          "id": "ihb0000000003",
+          "name": "Phone",
+          "emoji": "📱",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          }
+        },
+        {
+          "id": "ihb0000000004",
+          "name": "Internet",
+          "emoji": "🌐",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          }
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 4450,
+          "amountWords": {
+            "en": "$44.50",
+            "ar": "$44.50"
+          }
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": 4200,
+          "amountWords": {
+            "en": "$42",
+            "ar": "$42"
+          }
+        }
+      ],
+      "last": {
+        "spent": 113000,
+        "words": {
+          "en": "$1,130",
+          "ar": "$1,130"
+        }
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [],
+    "activity": [
+      {
+        "at": 1791016200000,
+        "name": "Lina",
+        "line": {
+          "en": "A spend was added",
+          "ar": "اتضاف مصروف"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Spending",
+      "ar": "المصاريف"
+    },
+    "kindEmoji": "💳"
+  }
+}
