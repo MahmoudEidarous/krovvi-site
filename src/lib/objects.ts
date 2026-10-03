@@ -68,9 +68,15 @@ export function forgetSeat(token: string): void {
 
 export type Read<V = unknown> = { ok: true; page: PagePayload<V> } | { ok: false; gone: boolean };
 
-export async function readPage<V>(token: string, lang: Lang, seat?: string | null): Promise<Read<V>> {
+/**
+ * Read the object as this browser may see it. `first` marks the page's first
+ * read (o=1): the server counts it as one open of the link, and never the
+ * reads every five seconds after it.
+ */
+export async function readPage<V>(token: string, lang: Lang, seat?: string | null, first = false): Promise<Read<V>> {
   const params = new URLSearchParams({ t: token, lang });
   if (seat) params.set("s", seat);
+  if (first) params.set("o", "1");
   try {
     const res = await fetch(`${OBJECTS_API}?${params}`, { cache: "no-store" });
     if (res.status === 404 || res.status === 410) return { ok: false, gone: true };

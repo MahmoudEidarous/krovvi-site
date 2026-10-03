@@ -102,9 +102,9 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
     return () => clearInterval(id);
   }, []);
 
-  const refresh = useCallback(async () => {
+  const refresh = useCallback(async (first = false) => {
     if (!token) return;
-    const read = await readPage<V>(token, browserLang(), seatOf(token));
+    const read = await readPage<V>(token, browserLang(), seatOf(token), first);
     if (read.ok) {
       setOffline(false);
       setState({ kind: "ready", page: read.page });
@@ -112,10 +112,10 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
     else setOffline(true);
   }, [token]);
 
-  // Read now, then every five seconds while the page is in view.
+  // Read now (the one read counted as an open of the link), then every five seconds while the page is in view.
   useEffect(() => {
     if (!token) return;
-    void refresh();
+    void refresh(true);
     const id = setInterval(() => {
       if (document.visibilityState === "visible") void refresh();
     }, 5_000);
