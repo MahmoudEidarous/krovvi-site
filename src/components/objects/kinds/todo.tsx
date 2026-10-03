@@ -32,7 +32,8 @@ interface TodoTask {
 interface TodoView {
   open: TodoTask[];
   done: TodoTask[];
-  counts: { open: number; done: number; total: number };
+  counts: { open: number; done: number; late: number; total: number };
+  allClear: boolean;
   tally: { dots: Array<{ done: boolean; by: string | null }>; perDot: number };
   leftWords: Words;
   shared: boolean;
@@ -42,8 +43,7 @@ interface TodoView {
 const C = {
   toDo: { en: "To do", ar: "المطلوب" },
   done: { en: "Done", ar: "خلصانة" },
-  legend: { en: "Each dot is a task, filled in the color of who did it", ar: "كل نقطة مهمة، ومليانة بلون اللي عملها" },
-  late: { en: "Late", ar: "متأخرة" },
+  allClear: { en: "All clear", ar: "كله خلص" },
   yours: { en: "Yours", ar: "عليك" },
   you: { en: "You", ar: "إنت" },
   tick: { en: "Tick", ar: "خلّص" },
@@ -53,15 +53,18 @@ const C = {
   empty: { en: "Nothing on it yet", ar: "لسه فاضية" },
 } satisfies Record<string, Words>;
 
-const lateOn = (due: Words): Words => ({ en: `Late, ${due.en}`, ar: `متأخرة، ${due.ar}` });
+const lateOn = (due: Words): Words => ({ en: `Due ${due.en.charAt(0).toLowerCase()}${due.en.slice(1)}`, ar: `كانت ${due.ar}` });
+const lateCount = (n: number, lang: "en" | "ar") => (lang === "ar" ? (n === 1 ? "واحدة متأخرة" : `${n} متأخرين`) : n === 1 ? "1 is late" : `${n} are late`);
+const leftAndDone = (open: number, done: number, lang: "en" | "ar") =>
+  lang === "ar" ? (done ? `${open} مطلوب · ${done} خلصانة` : `${open} مطلوب`) : done ? `${open} to do · ${done} done` : `${open} to do`;
 const personLine = (open: number, done: number): Words => ({ en: `${open} to do, ${done} done`, ar: `عليه ${open}، خلّص ${done}` });
 
+/** Under a task: who did it (ticked), else who it is for, and where it came from. Its day is across from it. */
 function subOf(t: TodoTask, lang: "en" | "ar"): string {
   const parts: string[] = [];
-  if (t.dueWords && !t.done) parts.push(say(t.when === "late" ? lateOn(t.dueWords) : t.dueWords, lang));
-  if (t.who && !t.done) parts.push(t.who.you ? say(C.yours, lang) : t.who.name);
-  if (t.done?.by) parts.push(t.done.by.you ? say(C.you, lang) : t.done.by.name);
-  if (t.from?.label) parts.push(t.from.label);
+  if (t.done) parts.push(t.done.by?.you ? (lang === "ar" ? "إنت عملتها" : "Done by you") : lang === "ar" ? `عملها ${t.done.by?.name ?? ""}` : `Done by ${t.done.by?.name ?? ""}`);
+  else if (t.who) parts.push(t.who.you ? say(C.yours, lang) : t.who.name);
+  if (t.from?.label) parts.push(lang === "ar" ? `من ${t.from.label}` : `From ${t.from.label}`);
   return parts.join(" · ");
 }
 
@@ -87,26 +90,32 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
       <Row
         key={t.id}
         first={i === 0}
-        lead={<Tick done={!!t.done} by={t.done?.by?.name ?? null} onClick={can(op) && !busy ? () => void act(op, { task: t.id }) : undefined} label={`${say(t.done ? C.untick : C.tick, lang)}: ${t.text}`} />}
+        lead={<Tick done={!!t.done} onClick={can(op) && !busy ? () => void act(op, { task: t.id }) : undefined} label={`${say(t.done ? C.untick : C.tick, lang)}: ${t.text}`} />}
         title={t.text}
         sub={subOf(t, lang) || null}
         muted={!!t.done}
-        value={t.who && !t.done && !t.who.you ? <Face name={t.who.name} size={24} /> : undefined}
+        value={
+          t.dueWords && !t.done ? (
+            <span style={{ ...STEP.meta, color: t.when === "late" ? INK.warm : t.when === "today" ? INK.soft : INK.muted, whiteSpace: "nowrap" }}>{say(t.when === "late" ? lateOn(t.dueWords) : t.dueWords, lang)}</span>
+          ) : undefined
+        }
       />
     );
   };
   return (
     <div>
-      <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "24px 16px", gap: 18 }}>
-        <span style={{ ...STEP.display, textAlign: "center" }}>
-          <bdi dir={dirOf(say(v.leftWords, lang))}>{say(v.leftWords, lang)}</bdi>
+      <section className="mb-3 flex items-center" style={{ background: INK.surface, borderRadius: 17, padding: "16px", gap: 16 }}>
+        <span className="min-w-0 flex-1">
+          <span className="block" style={STEP.title}>
+            {v.allClear ? say(C.allClear, lang) : v.counts.total ? leftAndDone(v.counts.open, v.counts.done, lang) : say(C.empty, lang)}
+          </span>
+          {v.counts.late ? <span className="block" style={{ ...STEP.meta, color: INK.warm }}>{lateCount(v.counts.late, lang)}</span> : null}
         </span>
         {v.counts.total ? (
-          <div style={{ maxWidth: 10 * 14 + 9 * 8 }}>
-            <DotLine dots={dots} dot={12} gap={8} label={`${v.counts.total}, ${v.counts.done}`} />
+          <div style={{ maxWidth: 12 * 10 + 11 * 5 }}>
+            <DotLine dots={dots} dot={8} gap={5} label={`${v.counts.total}, ${v.counts.done}`} />
           </div>
         ) : null}
-        <span style={{ ...STEP.meta, color: INK.muted, textAlign: "center" }}>{v.counts.total ? say(C.legend, lang) : say(C.empty, lang)}</span>
       </section>
       {v.open.length ? <Section title={`${say(C.toDo, lang)} · ${v.open.length}`}>{v.open.map(row)}</Section> : null}
       {v.done.length ? (
