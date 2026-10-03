@@ -10,29 +10,37 @@ import { OBJECTS_API } from "@/lib/objects";
  * read, for the card a messaging app draws under the link.
  */
 
-/** The one picture every shared link shows in a messaging app (app/opengraph-image.png), never the content. */
-const BRAND = { url: "/opengraph-image.png", width: 1200, height: 630, alt: "Krovvi" };
-const LINE = "Open it to see it and take part. No app needed.";
+/**
+ * The picture a messaging app shows under the link: the K, the wordmark and
+ * "Shared from Krovvi" in the object's own language (public/object-card-*.png),
+ * never its content. Not the site's picture, whose sample chat a reader could
+ * take for what was shared.
+ */
+const CARD = (lang: "en" | "ar") => ({ url: `/object-card-${lang}.png`, width: 1200, height: 630, alt: lang === "ar" ? "متشارك من كروفي" : "Shared from Krovvi" });
+const LINE = { en: "Open it to see it and take part. No app needed.", ar: "افتحه عشان تشوفه وتشارك فيه. من غير تطبيق." };
 
 export async function generateMetadata({ params }: { params: Promise<{ token: string }> }): Promise<Metadata> {
   const { token } = await params;
   let title = "Krovvi";
+  let lang: "en" | "ar" = "en";
   if (/^[A-Za-z0-9_-]{20,40}$/.test(token)) {
     try {
       const res = await fetch(`${OBJECTS_API}?t=${encodeURIComponent(token)}&meta=1`, { cache: "no-store", signal: AbortSignal.timeout(2500) });
-      const meta = (await res.json()) as { ok?: boolean; title?: string };
+      const meta = (await res.json()) as { ok?: boolean; title?: string; lang?: string };
       if (meta.ok && meta.title) title = meta.title;
+      if (meta.lang === "ar") lang = "ar";
     } catch {
       // The preview keeps the plain name; the page still opens.
     }
   }
+  const card = CARD(lang);
   return {
     title,
-    description: LINE,
+    description: LINE[lang],
     robots: { index: false, follow: false, nocache: true },
-    // The page's own tags replace the site's, its picture with them: the one Krovvi picture, named again here.
-    openGraph: { type: "website", siteName: "Krovvi", title, description: LINE, images: [BRAND] },
-    twitter: { card: "summary_large_image", title, description: LINE, images: [BRAND.url] },
+    // The page's own tags replace the site's, its picture with them.
+    openGraph: { type: "website", siteName: "Krovvi", title, description: LINE[lang], images: [card] },
+    twitter: { card: "summary_large_image", title, description: LINE[lang], images: [card.url] },
   };
 }
 
