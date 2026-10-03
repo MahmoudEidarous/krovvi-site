@@ -44,7 +44,7 @@ const C = {
   youAtStore: { en: "You’re at the store", ar: "إنت في المحل" },
   before: { en: "Bought before", ar: "اتجاب قبل كده" },
   beforeHint: { en: "Tap one to put it back on the list.", ar: "دوس على أي واحدة ترجعها للقايمة." },
-  emptyHint: { en: "Nothing on the list", ar: "القايمة فاضية" },
+  emptyHint: { en: "Things to get show here when someone adds them.", ar: "الحاجات المطلوبة بتظهر هنا أول ما حد يضيفها." },
   got: { en: "Got it", ar: "جبتها" },
   putBack: { en: "Put back on the list", ar: "رجّعها للقايمة" },
   addAgain: { en: "Add again", ar: "ضيفها تاني" },
