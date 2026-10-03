@@ -2,10 +2,11 @@
 
 /**
  * Workout on the page, drawn as the app draws its screen (catch8
- * src/components/objects/kinds/workout): the latest session as rows with a
- * dot per set (bone where a line holds a best), or the latest run as its
- * route of dots; the week; the bests, one row per exercise; and Send kudos,
- * the one button a buddy has, once per session or run.
+ * src/components/objects/kinds/workout): the latest session (its name and
+ * day, exercises, sets and what was lifted, a new best in bone, each
+ * exercise once with everything done in it and a dot per set), or the latest
+ * run (distance, time, pace, its route); the week against the aim; the
+ * bests; and Send kudos, the one button a buddy has.
  */
 
 import { say, type Lang, type Words } from "@/lib/objects";
@@ -24,6 +25,8 @@ interface Session {
   type: "session";
   id: string;
   name: string;
+  day: string;
+  time: string;
   dayWords: Words;
   lines: Line[];
   volume: number;
@@ -32,6 +35,10 @@ interface Session {
 interface Run {
   type: "run";
   id: string;
+  sport: string;
+  name: string | null;
+  day: string;
+  time: string;
   metres: number | null;
   secs: number | null;
   words: Words;
@@ -41,6 +48,7 @@ interface Run {
   kudos: Array<{ id: string; name: string }>;
 }
 interface WorkoutView {
+  today: string;
   units: { weight: "kg" | "lb"; distance: "km" | "mi" };
   week: { days: Array<{ day: string; label: Words; trained: boolean; today: boolean }>; trained: number; goal: number | null };
   latest: Session | Run | null;
@@ -50,18 +58,33 @@ interface WorkoutView {
 }
 
 const C = {
-  setDot: { en: "Each dot is a set. A bone dot is a line that holds a best.", ar: "كل نقطة مجموعة. النقطة البيج سطر فيه رقم قياسي." },
-  kmDot: { en: "Each dot is a kilometre.", ar: "كل نقطة كيلومتر." },
-  miDot: { en: "Each dot is a mile.", ar: "كل نقطة ميل." },
   week: { en: "Last 7 days", ar: "آخر 7 أيام" },
   bests: { en: "Bests", ar: "الأرقام القياسية" },
-  recent: { en: "Recent", ar: "اللي فات" },
+  recent: { en: "Before", ar: "اللي قبل كده" },
   kudos: { en: "Send kudos", ar: "ابعت تحية" },
   sent: { en: "You sent kudos", ar: "بعتّ تحية" },
   nothing: { en: "Nothing logged yet", ar: "لسه مفيش تمرين متسجل" },
+  best: { en: "Best", ar: "رقم قياسي" },
+  newBest: { en: "New best", ar: "رقم قياسي جديد" },
+  fresh: { en: "New", ar: "جديد" },
+  exercises: { en: "Exercises", ar: "تمارين" },
+  sets: { en: "Sets", ar: "مجموعات" },
+  time: { en: "Time", ar: "الوقت" },
+  pace: { en: "Pace", ar: "السرعة" },
+  then: { en: ", then ", ar: "، وبعدها " },
 } satisfies Record<string, Words>;
 
+const SPORT: Record<string, Words> = {
+  run: { en: "Run", ar: "جري" },
+  walk: { en: "Walk", ar: "مشي" },
+  ride: { en: "Ride", ar: "عجلة" },
+  swim: { en: "Swim", ar: "سباحة" },
+  row: { en: "Row", ar: "تجديف" },
+  hike: { en: "Hike", ar: "هايكنج" },
+};
+
 const sep = (lang: Lang) => (lang === "ar" ? "، " : ", ");
+const fold = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");
 
 function clock(secs: number): string {
   const s = Math.round(secs);
@@ -71,39 +94,79 @@ function clock(secs: number): string {
   return h ? `${h}:${pad(m)}:${pad(s % 60)}` : `${m}:${pad(s % 60)}`;
 }
 
-function SessionHero({ s, v, lang }: { s: Session; v: WorkoutView; lang: Lang }) {
+/** "7:40 AM", "7:40 م": a session's clock time. */
+function timeLabel(time: string, lang: Lang): string {
+  const [h, m] = time.split(":").map(Number);
+  const twelve = ((h + 11) % 12) + 1;
+  return lang === "ar" ? `${twelve}:${String(m).padStart(2, "0")} ${h < 12 ? "ص" : "م"}` : `${twelve}:${String(m).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`;
+}
+
+/** Inside the last week: a best set then is a new one. */
+function fresh(day: string, today: string): boolean {
+  const ms = (d: string) => Date.UTC(Number(d.slice(0, 4)), Number(d.slice(5, 7)) - 1, Number(d.slice(8, 10)));
+  return ms(today) - ms(day) < 7 * 86_400_000;
+}
+
+/** Each exercise once, however many times it was said, with every line of it in order. */
+function groupsOf(s: Session, lang: Lang) {
+  const out: Array<{ key: string; exercise: string; lines: Line[]; sets: number; best: boolean; words: string }> = [];
+  for (const l of s.lines) {
+    const key = fold(l.exercise) || l.id;
+    const g = out.find((x) => x.key === key);
+    if (g) {
+      g.lines.push(l);
+      g.sets += l.sets;
+      g.best = g.best || l.best;
+    } else out.push({ key, exercise: l.exercise, lines: [l], sets: l.sets, best: l.best, words: "" });
+  }
+  for (const g of out) g.words = g.lines.map((l) => say(l.words, lang)).join(say(C.then, lang));
+  return out;
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col" style={{ gap: 16 }}>
+    <div className="flex flex-col items-center" style={{ minWidth: 72, gap: 1 }}>
+      <span style={{ ...STEP.meta, color: INK.muted }}>{label}</span>
+      <span style={STEP.title}>{value}</span>
+    </div>
+  );
+}
+
+function SessionHero({ s, v, lang }: { s: Session; v: WorkoutView; lang: Lang }) {
+  const groups = groupsOf(s, lang);
+  const sets = groups.reduce((n, g) => n + g.sets, 0);
+  const isFresh = fresh(s.day, v.today);
+  return (
+    <div className="flex flex-col" style={{ gap: 18 }}>
       <div className="flex flex-col items-center" style={{ gap: 2 }}>
-        <bdi style={{ ...STEP.title }} dir="auto">
+        <bdi style={{ ...STEP.title, fontSize: 22, lineHeight: "28px" }} dir="auto">
           {s.name}
         </bdi>
-        <span style={{ ...STEP.meta, color: INK.muted }}>{say(s.dayWords, lang)}</span>
-        {s.volume ? (
-          <>
-            <span style={{ ...STEP.display, fontSize: 44, lineHeight: "50px", marginTop: 8 }}>{s.volume.toLocaleString("en-US")}</span>
-            <span style={{ ...STEP.meta, color: INK.muted }}>{v.units.weight === "kg" ? (lang === "ar" ? "كجم اترفعوا" : "kg lifted") : lang === "ar" ? "رطل اترفعوا" : "lb lifted"}</span>
-          </>
-        ) : null}
+        <span style={{ ...STEP.meta, color: INK.muted }}>{`${say(s.dayWords, lang)}${sep(lang)}${timeLabel(s.time, lang)}`}</span>
       </div>
-      <div className="flex flex-col" style={{ gap: 8 }}>
-        {s.lines.map((l) => (
-          <div key={l.id} className="flex items-center" style={{ gap: 12 }} aria-label={`${l.exercise}, ${say(l.words, lang)}`}>
+      <div className="flex justify-center" style={{ gap: 32 }}>
+        <Stat label={say(C.exercises, lang)} value={String(groups.length)} />
+        <Stat label={say(C.sets, lang)} value={String(sets)} />
+        {s.volume ? <Stat label={v.units.weight === "kg" ? (lang === "ar" ? "كجم اترفعوا" : "kg lifted") : lang === "ar" ? "رطل اترفعوا" : "lb lifted"} value={s.volume.toLocaleString("en-US")} /> : null}
+      </div>
+      <div className="flex flex-col" style={{ gap: 12 }}>
+        {groups.map((g) => (
+          <div key={g.key} className="flex items-center" style={{ gap: 12 }} aria-label={`${g.exercise}, ${g.words}`}>
             <span className="min-w-0 flex-1">
-              <span className="block" style={{ ...STEP.body }}>
-                <bdi dir="auto">{l.exercise}</bdi>
+              <span className="flex items-center" style={{ gap: 8 }}>
+                <span style={STEP.body}>
+                  <bdi dir="auto">{g.exercise}</bdi>
+                </span>
+                {g.best ? <span style={{ ...STEP.meta, color: INK.pick, fontWeight: 600 }}>{say(isFresh ? C.newBest : C.best, lang)}</span> : null}
               </span>
               <span className="block" style={{ ...STEP.meta, color: INK.muted }}>
-                {say(l.words, lang)}
+                {g.words}
               </span>
             </span>
-            <DotLine dots={Array.from({ length: Math.min(l.sets, 12) }, () => ({ on: true, tint: l.best ? INK.pick : INK.fg }))} dot={10} gap={6} />
+            <DotLine dots={Array.from({ length: Math.min(g.sets, 10) }, () => ({ on: true, tint: INK.fg }))} dot={9} gap={5} />
           </div>
         ))}
       </div>
-      <span className="text-center" style={{ ...STEP.meta, color: INK.muted }}>
-        {say(C.setDot, lang)}
-      </span>
     </div>
   );
 }
@@ -114,24 +177,49 @@ function RunHero({ r, v, lang }: { r: Run; v: WorkoutView; lang: Lang }) {
   const whole = Math.floor(units);
   const part = units - whole;
   const dots: Dot[] = [
-    ...Array.from({ length: Math.min(whole, 42) }, () => ({ on: true, tint: r.best ? INK.pick : INK.fg })),
-    ...(part >= 0.1 && whole < 42 ? [{ on: Math.max(0.35, part), tint: r.best ? INK.pick : INK.fg }] : []),
+    ...Array.from({ length: Math.min(whole, 42) }, () => ({ on: true, tint: INK.fg })),
+    ...(part >= 0.1 && whole < 42 ? [{ on: Math.max(0.35, part), tint: INK.fg }] : []),
   ];
   const shown = units ? Number(units.toFixed(units >= 10 ? 1 : 2)).toString() : null;
   return (
-    <div className="flex flex-col items-center" style={{ gap: 14 }} aria-label={`${say(r.words, lang)}${r.pace ? `, ${say(r.pace, lang)}` : ""}`}>
-      <span style={{ ...STEP.title }}>{say(r.dayWords, lang)}</span>
-      {shown ? (
-        <span dir="ltr" className="inline-flex items-baseline" style={{ gap: 6 }}>
-          <span style={{ ...STEP.display, fontSize: 44, lineHeight: "50px" }}>{shown}</span>
-          <span style={{ ...STEP.title, color: INK.muted }}>{v.units.distance === "km" ? (lang === "ar" ? "كم" : "km") : lang === "ar" ? "ميل" : "mi"}</span>
-        </span>
+    <div className="flex flex-col items-center" style={{ gap: 16 }} aria-label={`${say(r.words, lang)}${r.pace ? `, ${say(r.pace, lang)}` : ""}`}>
+      <div className="flex flex-col items-center" style={{ gap: 2 }}>
+        <span style={{ ...STEP.title, fontSize: 22, lineHeight: "28px" }}>{r.name ?? say(SPORT[r.sport] ?? SPORT.run, lang)}</span>
+        <span style={{ ...STEP.meta, color: INK.muted }}>{`${say(r.dayWords, lang)}${sep(lang)}${timeLabel(r.time, lang)}`}</span>
+        {shown ? (
+          <span dir="ltr" className="inline-flex items-baseline" style={{ gap: 6, marginTop: 10 }}>
+            <span style={{ ...STEP.display, fontSize: 48, lineHeight: "54px" }}>{shown}</span>
+            <span style={{ ...STEP.title, color: INK.muted }}>{v.units.distance === "km" ? (lang === "ar" ? "كم" : "km") : lang === "ar" ? "ميل" : "mi"}</span>
+          </span>
+        ) : null}
+        {r.best ? <span style={{ ...STEP.label, color: INK.pick }}>{say(C.newBest, lang)}</span> : null}
+      </div>
+      {r.secs || r.pace ? (
+        <div className="flex justify-center" style={{ gap: 32 }}>
+          {r.secs ? <Stat label={say(C.time, lang)} value={clock(r.secs)} /> : null}
+          {r.pace ? <Stat label={say(C.pace, lang)} value={say(r.pace, lang)} /> : null}
+        </div>
       ) : null}
-      <span style={{ ...STEP.body, color: INK.soft }}>{[r.secs ? clock(r.secs) : null, r.pace ? say(r.pace, lang) : null].filter(Boolean).join(sep(lang))}</span>
-      <DotLine dots={dots} dot={12} gap={8} />
-      <span style={{ ...STEP.meta, color: INK.muted }}>{say(v.units.distance === "km" ? C.kmDot : C.miDot, lang)}</span>
+      {dots.length ? <DotLine dots={dots} dot={11} gap={8} /> : null}
     </div>
   );
+}
+
+/** "Kudos from Leo", "Kudos from Leo and 3 more". */
+function kudosFrom(names: string[], lang: Lang): string {
+  const two = (a: string, b: string) => (lang === "ar" ? `${a} و${b}` : `${a} and ${b}`);
+  const who = names.length === 1 ? names[0] : names.length === 2 ? two(names[0], names[1]) : lang === "ar" ? `${names[0]} و${names.length - 1} كمان` : `${names[0]} and ${names.length - 1} more`;
+  return lang === "ar" ? `تحية من ${who}` : `Kudos from ${who}`;
+}
+
+/** "2 days trained, aiming for 4", "4 days trained, aim reached". */
+function trained(n: number, aim: number | null, lang: Lang): string {
+  if (lang === "ar") {
+    const base = n === 1 ? "اتمرنت يوم" : n === 2 ? "اتمرنت يومين" : `اتمرنت ${n} أيام`;
+    return aim ? (n >= aim ? `${base}، وصلت للهدف` : `${base}، الهدف ${aim}`) : base;
+  }
+  const base = `${n} ${n === 1 ? "day" : "days"} trained`;
+  return aim ? (n >= aim ? `${base}, aim reached` : `${base}, aiming for ${aim}`) : base;
 }
 
 export const Page: KindPage = ({ view, lang, act, can, busy }) => {
@@ -148,11 +236,18 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
   }
   return (
     <div>
-      <section className="mb-3 flex flex-col" style={{ background: INK.surface, borderRadius: 17, padding: "22px 16px", gap: 16 }}>
+      <section className="mb-3 flex flex-col" style={{ background: INK.surface, borderRadius: 17, padding: "22px 16px 20px", gap: 18 }}>
         {latest ? latest.type === "session" ? <SessionHero s={latest} v={v} lang={lang} /> : <RunHero r={latest} v={v} lang={lang} /> : <span className="text-center" style={{ ...STEP.body, color: INK.muted }}>{say(C.nothing, lang)}</span>}
         {latest && (latest.kudos.length || mayKudos || v.kudosFor?.sent) ? (
           <div className="flex items-center justify-between">
-            {latest.kudos.length ? <FaceStack names={latest.kudos.map((k) => k.name)} size={24} /> : <span />}
+            {latest.kudos.length ? (
+              <span className="flex min-w-0 items-center" style={{ gap: 8 }}>
+                <FaceStack names={latest.kudos.map((k) => k.name)} size={24} />
+                <span className="truncate" style={{ ...STEP.meta, color: INK.muted }}>{kudosFrom(latest.kudos.map((k) => k.name), lang)}</span>
+              </span>
+            ) : (
+              <span />
+            )}
             {mayKudos ? <Pill text={say(C.kudos, lang)} strong disabled={busy} onClick={() => void act("kudos", { to: v.kudosFor!.id })} /> : v.kudosFor?.sent ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.sent, lang)}</span> : null}
           </div>
         ) : null}
@@ -167,15 +262,13 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
             </div>
           ))}
         </div>
-        <div style={{ ...STEP.meta, color: INK.muted, padding: "8px 16px 12px", borderTop: `0.5px solid ${INK.line}` }}>
-          {lang === "ar" ? `${v.week.trained} من 7 أيام${v.week.goal ? `، الهدف ${v.week.goal}` : ""}` : `${v.week.trained} of 7 days${v.week.goal ? `, aim ${v.week.goal}` : ""}`}
-        </div>
+        <div style={{ ...STEP.meta, color: INK.muted, padding: "8px 16px 12px", borderTop: `0.5px solid ${INK.line}` }}>{trained(v.week.trained, v.week.goal, lang)}</div>
       </Section>
 
       {groups.length ? (
         <Section title={say(C.bests, lang)}>
           {groups.slice(0, 12).map((g, i) => (
-            <Row key={g.name} first={i === 0} title={g.name} sub={g.words.join(sep(lang))} value={g.fresh ? <DotLine dots={[{ on: true, tint: INK.pick }]} dot={8} /> : undefined} />
+            <Row key={g.name} first={i === 0} title={g.name} sub={g.words.join(sep(lang))} value={g.fresh ? <span style={{ ...STEP.meta, color: INK.pick, fontWeight: 600 }}>{say(C.fresh, lang)}</span> : undefined} />
           ))}
         </Section>
       ) : null}
@@ -190,7 +283,7 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
                 key={r.id}
                 first={i === 0}
                 title={r.type === "session" ? r.name : say(r.words, lang)}
-                sub={r.type === "session" ? r.lines.map((l) => l.exercise).join(sep(lang)) : r.pace ? say(r.pace, lang) : null}
+                sub={r.type === "session" ? groupsOf(r, lang).map((g) => g.exercise).join(sep(lang)) : r.pace ? say(r.pace, lang) : null}
                 value={<span style={{ ...STEP.meta, color: INK.muted }}>{say(r.dayWords, lang)}</span>}
               />
             ))}
