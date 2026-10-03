@@ -1,1 +1,2165 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "meds",
+    "title": "My medicines",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 2,
+    "view": {
+      "title": "My medicines",
+      "emoji": "💊",
+      "forName": null,
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedvitd00001",
+          "name": "Vitamin D",
+          "dose": "1,000 IU",
+          "time": "21:00",
+          "label": {
+            "en": "9:00 PM",
+            "ar": "9:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 0,
+      "total": 1,
+      "allGiven": false,
+      "next": {
+        "med": "imedvitd00001",
+        "name": "Vitamin D",
+        "time": "21:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "9:00 PM",
+          "ar": "9:00 م"
+        },
+        "at": 1791050400000
+      },
+      "meds": [
+        {
+          "id": "imedvitd00001",
+          "name": "Vitamin D",
+          "dose": "1,000 IU",
+          "times": [
+            "21:00"
+          ],
+          "per": 1,
+          "left": 30,
+          "daysLeft": 30,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 9:00 PM",
+            "ar": "الساعة 9:00 م"
+          }
+        }
+      ],
+      "low": [],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 0,
+          "total": 0
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 0,
+          "total": 1
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "mom-en": {
+    "ok": true,
+    "kind": "meds",
+    "title": "Mom’s medicines",
+    "emoji": "💊",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Mom’s medicines",
+      "emoji": "💊",
+      "forName": "Mom",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000000",
+          "byName": "Lina",
+          "at": "08:05"
+        },
+        {
+          "med": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "momar000000",
+          "byName": "Omar",
+          "at": "09:20"
+        },
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 2,
+      "total": 3,
+      "allGiven": false,
+      "next": {
+        "med": "imedmetf00001",
+        "name": "Metformin",
+        "time": "20:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "at": 1791046800000
+      },
+      "meds": [
+        {
+          "id": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 34,
+          "daysLeft": 17,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood sugar",
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM and 8:00 PM",
+            "ar": "الساعة 8:00 ص و8:00 م"
+          }
+        },
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 5,
+          "daysLeft": 5,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood pressure",
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedpara00001",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 1,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "daysLeft": 5
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 2,
+          "total": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791013200000,
+        "name": "Sara",
+        "line": {
+          "en": "Sara gave a Paracetamol",
+          "ar": "Sara: جرعة Paracetamol اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791008400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar gave the 9:00 AM Amlodipine",
+          "ar": "Omar: جرعة 9:00 ص من Amlodipine اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina gave the 8:00 AM Metformin",
+          "ar": "Lina: جرعة 8:00 ص من Metformin اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "mom-ar": {
+    "ok": true,
+    "kind": "meds",
+    "title": "أدوية ماما",
+    "emoji": "💊",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "أدوية ماما",
+      "emoji": "💊",
+      "forName": "ماما",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000001",
+          "byName": "ليلى",
+          "at": "08:05"
+        },
+        {
+          "med": "imedamlo00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "momar000001",
+          "byName": "عمر",
+          "at": "09:20"
+        },
+        {
+          "med": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 2,
+      "total": 3,
+      "allGiven": false,
+      "next": {
+        "med": "imedmetf00002",
+        "name": "Metformin",
+        "time": "20:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "at": 1791046800000
+      },
+      "meds": [
+        {
+          "id": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 34,
+          "daysLeft": 17,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "للسكر",
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM and 8:00 PM",
+            "ar": "الساعة 8:00 ص و8:00 م"
+          }
+        },
+        {
+          "id": "imedamlo00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 5,
+          "daysLeft": 5,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "للضغط",
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedpara00002",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 1,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedamlo00002",
+          "name": "Amlodipine",
+          "daysLeft": 5
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 2,
+          "total": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000001",
+        "name": "ليلى",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000001",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000001",
+        "name": "سارة",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000001",
+        "name": "عمر"
+      },
+      {
+        "id": "msara000001",
+        "name": "سارة"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "busy-en": {
+    "ok": true,
+    "kind": "meds",
+    "title": "Grandpa’s medicines",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Grandpa’s medicines",
+      "emoji": "💊",
+      "forName": "Grandpa",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedbusy00004",
+          "name": "Levothyroxine",
+          "dose": "50 mcg",
+          "time": "06:30",
+          "label": {
+            "en": "6:30 AM",
+            "ar": "6:30 ص"
+          },
+          "state": "given",
+          "by": "mfam0000002",
+          "byName": "Karim",
+          "at": "06:30"
+        },
+        {
+          "med": "imedbusy00005",
+          "name": "Amoxicillin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mfam0000003",
+          "byName": "Maya",
+          "at": "08:00"
+        },
+        {
+          "med": "imedbusy00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000000",
+          "byName": "Lina",
+          "at": "08:00"
+        },
+        {
+          "med": "imedbusy00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "mfam0000000",
+          "byName": "Omar",
+          "at": "09:00"
+        },
+        {
+          "med": "imedbusy00007",
+          "name": "A medicine with a very long name that keeps going",
+          "dose": "1 tablet",
+          "time": "12:00",
+          "label": {
+            "en": "12:00 PM",
+            "ar": "12:00 م"
+          },
+          "state": "due",
+          "by": null,
+          "byName": null,
+          "at": null
+        },
+        {
+          "med": "imedbusy00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "14:00",
+          "label": {
+            "en": "2:00 PM",
+            "ar": "2:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        },
+        {
+          "med": "imedbusy00005",
+          "name": "Amoxicillin",
+          "dose": "500 mg",
+          "time": "16:00",
+          "label": {
+            "en": "4:00 PM",
+            "ar": "4:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        },
+        {
+          "med": "imedbusy00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        },
+        {
+          "med": "imedbusy00003",
+          "name": "Atorvastatin",
+          "dose": "20 mg",
+          "time": "21:00",
+          "label": {
+            "en": "9:00 PM",
+            "ar": "9:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        },
+        {
+          "med": "imedbusy00005",
+          "name": "Amoxicillin",
+          "dose": "500 mg",
+          "time": "23:59",
+          "label": {
+            "en": "11:59 PM",
+            "ar": "11:59 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 4,
+      "total": 10,
+      "allGiven": false,
+      "next": {
+        "med": "imedbusy00007",
+        "name": "A medicine with a very long name that keeps going",
+        "time": "12:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "12:00 PM",
+          "ar": "12:00 م"
+        },
+        "at": 1791018000000
+      },
+      "meds": [
+        {
+          "id": "imedbusy00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "14:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 90,
+          "daysLeft": 30,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM, 2:00 PM and 8:00 PM",
+            "ar": "الساعة 8:00 ص, 2:00 م و8:00 م"
+          }
+        },
+        {
+          "id": "imedbusy00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 28,
+          "daysLeft": 28,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedbusy00003",
+          "name": "Atorvastatin",
+          "dose": "20 mg",
+          "times": [
+            "21:00"
+          ],
+          "per": 1,
+          "left": 6,
+          "daysLeft": 6,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 9:00 PM",
+            "ar": "الساعة 9:00 م"
+          }
+        },
+        {
+          "id": "imedbusy00004",
+          "name": "Levothyroxine",
+          "dose": "50 mcg",
+          "times": [
+            "06:30"
+          ],
+          "per": 1,
+          "left": 60,
+          "daysLeft": 60,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "before breakfast",
+          "today": 0,
+          "when": {
+            "en": "At 6:30 AM",
+            "ar": "الساعة 6:30 ص"
+          }
+        },
+        {
+          "id": "imedbusy00005",
+          "name": "Amoxicillin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "16:00",
+            "23:59"
+          ],
+          "per": 1,
+          "left": 12,
+          "daysLeft": 4,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": "2026-10-06",
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM, 4:00 PM and 11:59 PM, until Tue 6 Oct",
+            "ar": "الساعة 8:00 ص, 4:00 م و11:59 م، لحد التلات 6 أكتوبر"
+          }
+        },
+        {
+          "id": "imedbusy00006",
+          "name": "Vitamin D",
+          "dose": "50,000 IU",
+          "times": [
+            "10:00"
+          ],
+          "per": 1,
+          "left": 4,
+          "daysLeft": 28,
+          "low": false,
+          "asNeeded": false,
+          "days": [
+            1
+          ],
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "Mon, at 10:00 am",
+            "ar": "الاتنين، الساعة 10:00 ص"
+          }
+        },
+        {
+          "id": "imedbusy00007",
+          "name": "A medicine with a very long name that keeps going",
+          "dose": "1 tablet",
+          "times": [
+            "12:00"
+          ],
+          "per": 0.5,
+          "left": 15,
+          "daysLeft": 30,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "At 12:00 PM",
+            "ar": "الساعة 12:00 م"
+          }
+        },
+        {
+          "id": "imedbusy00008",
+          "name": "Ibuprofen",
+          "dose": "200 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 0,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedbusy00003",
+          "name": "Atorvastatin",
+          "daysLeft": 6
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 7,
+          "total": 7
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 8,
+          "total": 8
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 10,
+          "total": 10
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 10,
+          "total": 10
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 10,
+          "total": 10
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 10,
+          "total": 10
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 4,
+          "total": 10
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000001",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000002",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000003",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000004",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000005",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000006",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000007",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000008",
+        "name": "Nora",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000009",
+        "name": "Adam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mfam0000010",
+        "name": "Dad",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mfam0000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mfam0000001",
+        "name": "Sara"
+      },
+      {
+        "id": "mfam0000002",
+        "name": "Karim"
+      },
+      {
+        "id": "mfam0000003",
+        "name": "Maya"
+      },
+      {
+        "id": "mfam0000004",
+        "name": "Sam"
+      },
+      {
+        "id": "mfam0000005",
+        "name": "Alex"
+      },
+      {
+        "id": "mfam0000006",
+        "name": "Leo"
+      },
+      {
+        "id": "mfam0000007",
+        "name": "Mia"
+      },
+      {
+        "id": "mfam0000008",
+        "name": "Nora"
+      },
+      {
+        "id": "mfam0000009",
+        "name": "Adam"
+      },
+      {
+        "id": "mfam0000010",
+        "name": "Dad"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "allgiven-en": {
+    "ok": true,
+    "kind": "meds",
+    "title": "Mom’s medicines",
+    "emoji": "💊",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Mom’s medicines",
+      "emoji": "💊",
+      "forName": "Mom",
+      "today": "2026-10-03",
+      "clock": "20:30",
+      "ring": [
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000000",
+          "byName": "Lina",
+          "at": "08:05"
+        },
+        {
+          "med": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "momar000000",
+          "byName": "Omar",
+          "at": "09:20"
+        },
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "given",
+          "by": "msara000000",
+          "byName": "Sara",
+          "at": "20:10"
+        }
+      ],
+      "given": 3,
+      "total": 3,
+      "allGiven": true,
+      "next": {
+        "med": "imedmetf00001",
+        "name": "Metformin",
+        "time": "08:00",
+        "day": "2026-10-04",
+        "label": {
+          "en": "8:00 AM",
+          "ar": "8:00 ص"
+        },
+        "at": 1791090000000
+      },
+      "meds": [
+        {
+          "id": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 34,
+          "daysLeft": 17,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood sugar",
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM and 8:00 PM",
+            "ar": "الساعة 8:00 ص و8:00 م"
+          }
+        },
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 5,
+          "daysLeft": 5,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood pressure",
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedpara00001",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 1,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "daysLeft": 5
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 3,
+          "total": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791047400000,
+        "name": "Sara",
+        "line": {
+          "en": "Sara gave the 8:00 PM Metformin",
+          "ar": "Sara: جرعة 8:00 م من Metformin اتاخدت"
+        },
+        "moment": "day"
+      },
+      {
+        "at": 1791013200000,
+        "name": "Sara",
+        "line": {
+          "en": "Sara gave a Paracetamol",
+          "ar": "Sara: جرعة Paracetamol اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791008400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar gave the 9:00 AM Amlodipine",
+          "ar": "Omar: جرعة 9:00 ص من Amlodipine اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina gave the 8:00 AM Metformin",
+          "ar": "Lina: جرعة 8:00 ص من Metformin اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "meds",
+    "title": "Mom’s medicines",
+    "emoji": "💊",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Mom’s medicines",
+      "emoji": "💊",
+      "forName": "Mom",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000000",
+          "byName": "Lina",
+          "at": "08:05"
+        },
+        {
+          "med": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "momar000000",
+          "byName": "Omar",
+          "at": "09:20"
+        },
+        {
+          "med": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 2,
+      "total": 3,
+      "allGiven": false,
+      "next": {
+        "med": "imedmetf00001",
+        "name": "Metformin",
+        "time": "20:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "at": 1791046800000
+      },
+      "meds": [
+        {
+          "id": "imedmetf00001",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 34,
+          "daysLeft": 17,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood sugar",
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM and 8:00 PM",
+            "ar": "الساعة 8:00 ص و8:00 م"
+          }
+        },
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 5,
+          "daysLeft": 5,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "for blood pressure",
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedpara00001",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 1,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedamlo00001",
+          "name": "Amlodipine",
+          "daysLeft": 5
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 2,
+          "total": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "momar000000",
+    "seats": [
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791013200000,
+        "name": "Sara",
+        "line": {
+          "en": "Sara gave a Paracetamol",
+          "ar": "Sara: جرعة Paracetamol اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791008400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar gave the 9:00 AM Amlodipine",
+          "ar": "Omar: جرعة 9:00 ص من Amlodipine اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina gave the 8:00 AM Metformin",
+          "ar": "Lina: جرعة 8:00 ص من Metformin اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  },
+  "guest-ar": {
+    "ok": true,
+    "kind": "meds",
+    "title": "أدوية ماما",
+    "emoji": "💊",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "أدوية ماما",
+      "emoji": "💊",
+      "forName": "ماما",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "ring": [
+        {
+          "med": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "08:00",
+          "label": {
+            "en": "8:00 AM",
+            "ar": "8:00 ص"
+          },
+          "state": "given",
+          "by": "mlina000001",
+          "byName": "ليلى",
+          "at": "08:05"
+        },
+        {
+          "med": "imedamlo00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "time": "09:00",
+          "label": {
+            "en": "9:00 AM",
+            "ar": "9:00 ص"
+          },
+          "state": "given",
+          "by": "momar000001",
+          "byName": "عمر",
+          "at": "09:20"
+        },
+        {
+          "med": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "time": "20:00",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "state": "later",
+          "by": null,
+          "byName": null,
+          "at": null
+        }
+      ],
+      "given": 2,
+      "total": 3,
+      "allGiven": false,
+      "next": {
+        "med": "imedmetf00002",
+        "name": "Metformin",
+        "time": "20:00",
+        "day": "2026-10-03",
+        "label": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "at": 1791046800000
+      },
+      "meds": [
+        {
+          "id": "imedmetf00002",
+          "name": "Metformin",
+          "dose": "500 mg",
+          "times": [
+            "08:00",
+            "20:00"
+          ],
+          "per": 1,
+          "left": 34,
+          "daysLeft": 17,
+          "low": false,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "للسكر",
+          "today": 0,
+          "when": {
+            "en": "At 8:00 AM and 8:00 PM",
+            "ar": "الساعة 8:00 ص و8:00 م"
+          }
+        },
+        {
+          "id": "imedamlo00002",
+          "name": "Amlodipine",
+          "dose": "5 mg",
+          "times": [
+            "09:00"
+          ],
+          "per": 1,
+          "left": 5,
+          "daysLeft": 5,
+          "low": true,
+          "asNeeded": false,
+          "days": null,
+          "until": null,
+          "note": "للضغط",
+          "today": 0,
+          "when": {
+            "en": "At 9:00 AM",
+            "ar": "الساعة 9:00 ص"
+          }
+        },
+        {
+          "id": "imedpara00002",
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "times": [],
+          "per": 1,
+          "left": null,
+          "daysLeft": null,
+          "low": false,
+          "asNeeded": true,
+          "days": null,
+          "until": null,
+          "note": null,
+          "today": 1,
+          "when": {
+            "en": "As needed",
+            "ar": "عند اللزوم"
+          }
+        }
+      ],
+      "low": [
+        {
+          "id": "imedamlo00002",
+          "name": "Amlodipine",
+          "daysLeft": 5
+        }
+      ],
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "given": 2,
+          "total": 3
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "given": 3,
+          "total": 3
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "given": 2,
+          "total": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mlina000001",
+        "name": "ليلى",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000001",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000001",
+        "name": "سارة",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msara000001",
+    "seats": [
+      {
+        "id": "momar000001",
+        "name": "عمر"
+      }
+    ],
+    "ops": [
+      "give",
+      "ungive",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All of today’s doses given",
+        "ar": "كل جرعات النهارده اتاخدت"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Meds",
+      "ar": "الأدوية"
+    },
+    "kindEmoji": "💊"
+  }
+}

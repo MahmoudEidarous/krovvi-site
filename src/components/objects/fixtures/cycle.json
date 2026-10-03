@@ -1,1 +1,791 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "unknown",
+      "phaseWords": {
+        "en": "Nothing logged yet",
+        "ar": "لسه مفيش حاجة متسجلة"
+      },
+      "next": null,
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "between-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": "🌙",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-21",
+        "inDays": 18,
+        "words": {
+          "en": "Next period in about 18 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 18 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      }
+    ],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "between-ar": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "الدورة",
+    "emoji": "🌙",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "الدورة",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-21",
+        "inDays": 18,
+        "words": {
+          "en": "Next period in about 18 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 18 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "msara000001",
+        "name": "سارة",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00001",
+        "name": "كريم",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mkarim00001",
+        "name": "كريم"
+      }
+    ],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "period-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "period",
+      "phaseWords": {
+        "en": "Period",
+        "ar": "في الدورة"
+      },
+      "next": {
+        "day": "2026-10-30",
+        "inDays": 27,
+        "words": {
+          "en": "Next period in about 27 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 27 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      }
+    ],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "soon-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "soon",
+      "phaseWords": {
+        "en": "Period may start soon",
+        "ar": "الدورة ممكن تيجي قريب"
+      },
+      "next": {
+        "day": "2026-10-05",
+        "inDays": 2,
+        "words": {
+          "en": "Next period in about 2 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي يومين (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "late-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "late",
+      "phaseWords": {
+        "en": "Later than the estimate",
+        "ar": "متأخرة عن التقدير"
+      },
+      "next": {
+        "day": "2026-09-28",
+        "inDays": -5,
+        "words": {
+          "en": "The estimate was 5 days ago",
+          "ar": "التقدير كان من 5 أيام"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      }
+    ],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "irregular-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-12",
+        "inDays": 9,
+        "words": {
+          "en": "Next period in about 9 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 9 أيام (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "learned-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "period",
+      "phaseWords": {
+        "en": "Period",
+        "ar": "في الدورة"
+      },
+      "next": {
+        "day": "2026-11-01",
+        "inDays": 29,
+        "words": {
+          "en": "Next period in about 29 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 29 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "busy-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-11",
+        "inDays": 8,
+        "words": {
+          "en": "Next period in about 8 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 8 أيام (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      }
+    ],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "partner-en": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "Cycle",
+    "emoji": "🌙",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Cycle",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-21",
+        "inDays": 18,
+        "words": {
+          "en": "Next period in about 18 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 18 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "malex000000",
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  },
+  "partner-ar": {
+    "ok": true,
+    "kind": "cycle",
+    "title": "الدورة",
+    "emoji": "🌙",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "الدورة",
+      "emoji": "🌙",
+      "today": "2026-10-03",
+      "owner": false,
+      "phase": "between",
+      "phaseWords": {
+        "en": "Between periods",
+        "ar": "بين الدورتين"
+      },
+      "next": {
+        "day": "2026-10-21",
+        "inDays": 18,
+        "words": {
+          "en": "Next period in about 18 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 18 يوم (تقدير)"
+        }
+      },
+      "cycleDay": null,
+      "periodDay": null,
+      "lengths": null,
+      "ring": null,
+      "periods": null,
+      "logs": null
+    },
+    "members": [
+      {
+        "id": "msara000001",
+        "name": "سارة",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00001",
+        "name": "كريم",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mkarim00001",
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Cycle",
+      "ar": "الدورة"
+    },
+    "kindEmoji": "🌙"
+  }
+}
