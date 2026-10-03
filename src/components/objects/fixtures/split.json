@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "split",
     "title": "Game night snacks",
-    "emoji": "🎲",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Game night snacks",
-      "emoji": "🎲",
       "currency": "USD",
       "total": 0,
       "totalWords": {
@@ -139,13 +138,12 @@
     "ok": true,
     "kind": "split",
     "title": "Lisbon",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Lisbon",
-      "emoji": "🇵🇹",
       "currency": "EUR",
       "total": 81900,
       "totalWords": {
@@ -230,7 +228,6 @@
         {
           "id": "ispl000000005",
           "what": "Museum tickets",
-          "emoji": "🎟️",
           "amount": 3000,
           "amountWords": {
             "en": "€30",
@@ -274,7 +271,6 @@
         {
           "id": "ispl000000004",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 4650,
           "amountWords": {
             "en": "€46.50",
@@ -327,7 +323,6 @@
         {
           "id": "ispl000000002",
           "what": "Dinner in Alfama",
-          "emoji": "🍽️",
           "amount": 8400,
           "amountWords": {
             "en": "€84",
@@ -380,7 +375,6 @@
         {
           "id": "ispl000000003",
           "what": "Taxi from the airport",
-          "emoji": "🚕",
           "amount": 1850,
           "amountWords": {
             "en": "€18.50",
@@ -433,7 +427,6 @@
         {
           "id": "ispl000000001",
           "what": "Apartment",
-          "emoji": "🏠",
           "amount": 64000,
           "amountWords": {
             "en": "€640",
@@ -591,13 +584,12 @@
     "ok": true,
     "kind": "split",
     "title": "لشبونة",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "لشبونة",
-      "emoji": "🇵🇹",
       "currency": "EUR",
       "total": 81900,
       "totalWords": {
@@ -682,7 +674,6 @@
         {
           "id": "isar000000005",
           "what": "تذاكر المتحف",
-          "emoji": "🎟️",
           "amount": 3000,
           "amountWords": {
             "en": "€30",
@@ -726,7 +717,6 @@
         {
           "id": "isar000000004",
           "what": "بقالة",
-          "emoji": "🛒",
           "amount": 4650,
           "amountWords": {
             "en": "€46.50",
@@ -779,7 +769,6 @@
         {
           "id": "isar000000002",
           "what": "عشا في ألفاما",
-          "emoji": "🍽️",
           "amount": 8400,
           "amountWords": {
             "en": "€84",
@@ -832,7 +821,6 @@
         {
           "id": "isar000000003",
           "what": "تاكسي من المطار",
-          "emoji": "🚕",
           "amount": 1850,
           "amountWords": {
             "en": "€18.50",
@@ -885,7 +873,6 @@
         {
           "id": "isar000000001",
           "what": "الشقة",
-          "emoji": "🏠",
           "amount": 64000,
           "amountWords": {
             "en": "€640",
@@ -1034,13 +1021,12 @@
     "ok": true,
     "kind": "split",
     "title": "Summer house",
-    "emoji": "🏖️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 160,
     "view": {
       "title": "Summer house",
-      "emoji": "🏖️",
       "currency": "EUR",
       "total": 1524825,
       "totalWords": {
@@ -1359,7 +1345,6 @@
         {
           "id": "isum000000150",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 10931,
           "amountWords": {
             "en": "€109.31",
@@ -1493,7 +1478,6 @@
         {
           "id": "isum000000149",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 3012,
           "amountWords": {
             "en": "€30.12",
@@ -1627,7 +1611,6 @@
         {
           "id": "isum000000148",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 13093,
           "amountWords": {
             "en": "€130.93",
@@ -1761,7 +1744,6 @@
         {
           "id": "isum000000147",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 5174,
           "amountWords": {
             "en": "€51.74",
@@ -1895,7 +1877,6 @@
         {
           "id": "isum000000146",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 15255,
           "amountWords": {
             "en": "€152.55",
@@ -1957,7 +1938,6 @@
         {
           "id": "isum000000145",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 7336,
           "amountWords": {
             "en": "€73.36",
@@ -2091,7 +2071,6 @@
         {
           "id": "isum000000144",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 17417,
           "amountWords": {
             "en": "€174.17",
@@ -2225,7 +2204,6 @@
         {
           "id": "isum000000143",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 9498,
           "amountWords": {
             "en": "€94.98",
@@ -2359,7 +2337,6 @@
         {
           "id": "isum000000142",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 1579,
           "amountWords": {
             "en": "€15.79",
@@ -2493,7 +2470,6 @@
         {
           "id": "isum000000141",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 11660,
           "amountWords": {
             "en": "€116.60",
@@ -2555,7 +2531,6 @@
         {
           "id": "isum000000140",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 3741,
           "amountWords": {
             "en": "€37.41",
@@ -2689,7 +2664,6 @@
         {
           "id": "isum000000139",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 13822,
           "amountWords": {
             "en": "€138.22",
@@ -2823,7 +2797,6 @@
         {
           "id": "isum000000138",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 5903,
           "amountWords": {
             "en": "€59.03",
@@ -2957,7 +2930,6 @@
         {
           "id": "isum000000137",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 15984,
           "amountWords": {
             "en": "€159.84",
@@ -3091,7 +3063,6 @@
         {
           "id": "isum000000136",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 8065,
           "amountWords": {
             "en": "€80.65",
@@ -3153,7 +3124,6 @@
         {
           "id": "isum000000135",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 18146,
           "amountWords": {
             "en": "€181.46",
@@ -3287,7 +3257,6 @@
         {
           "id": "isum000000134",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 10227,
           "amountWords": {
             "en": "€102.27",
@@ -3421,7 +3390,6 @@
         {
           "id": "isum000000133",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 2308,
           "amountWords": {
             "en": "€23.08",
@@ -3555,7 +3523,6 @@
         {
           "id": "isum000000132",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 12389,
           "amountWords": {
             "en": "€123.89",
@@ -3689,7 +3656,6 @@
         {
           "id": "isum000000131",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 4470,
           "amountWords": {
             "en": "€44.70",
@@ -3751,7 +3717,6 @@
         {
           "id": "isum000000130",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 14551,
           "amountWords": {
             "en": "€145.51",
@@ -3885,7 +3850,6 @@
         {
           "id": "isum000000129",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 6632,
           "amountWords": {
             "en": "€66.32",
@@ -4019,7 +3983,6 @@
         {
           "id": "isum000000128",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 16713,
           "amountWords": {
             "en": "€167.13",
@@ -4153,7 +4116,6 @@
         {
           "id": "isum000000127",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 8794,
           "amountWords": {
             "en": "€87.94",
@@ -4287,7 +4249,6 @@
         {
           "id": "isum000000126",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 18875,
           "amountWords": {
             "en": "€188.75",
@@ -4349,7 +4310,6 @@
         {
           "id": "isum000000125",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 10956,
           "amountWords": {
             "en": "€109.56",
@@ -4483,7 +4443,6 @@
         {
           "id": "isum000000124",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 3037,
           "amountWords": {
             "en": "€30.37",
@@ -4617,7 +4576,6 @@
         {
           "id": "isum000000123",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 13118,
           "amountWords": {
             "en": "€131.18",
@@ -4751,7 +4709,6 @@
         {
           "id": "isum000000122",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 5199,
           "amountWords": {
             "en": "€51.99",
@@ -4885,7 +4842,6 @@
         {
           "id": "isum000000121",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 15280,
           "amountWords": {
             "en": "€152.80",
@@ -4947,7 +4903,6 @@
         {
           "id": "isum000000120",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 7361,
           "amountWords": {
             "en": "€73.61",
@@ -5081,7 +5036,6 @@
         {
           "id": "isum000000119",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 17442,
           "amountWords": {
             "en": "€174.42",
@@ -5215,7 +5169,6 @@
         {
           "id": "isum000000118",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 9523,
           "amountWords": {
             "en": "€95.23",
@@ -5349,7 +5302,6 @@
         {
           "id": "isum000000117",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 1604,
           "amountWords": {
             "en": "€16.04",
@@ -5483,7 +5435,6 @@
         {
           "id": "isum000000116",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 11685,
           "amountWords": {
             "en": "€116.85",
@@ -5545,7 +5496,6 @@
         {
           "id": "isum000000115",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 3766,
           "amountWords": {
             "en": "€37.66",
@@ -5679,7 +5629,6 @@
         {
           "id": "isum000000114",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 13847,
           "amountWords": {
             "en": "€138.47",
@@ -5813,7 +5762,6 @@
         {
           "id": "isum000000113",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 5928,
           "amountWords": {
             "en": "€59.28",
@@ -5947,7 +5895,6 @@
         {
           "id": "isum000000112",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 16009,
           "amountWords": {
             "en": "€160.09",
@@ -6081,7 +6028,6 @@
         {
           "id": "isum000000111",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 8090,
           "amountWords": {
             "en": "€80.90",
@@ -6143,7 +6089,6 @@
         {
           "id": "isum000000110",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 18171,
           "amountWords": {
             "en": "€181.71",
@@ -6277,7 +6222,6 @@
         {
           "id": "isum000000109",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 10252,
           "amountWords": {
             "en": "€102.52",
@@ -6411,7 +6355,6 @@
         {
           "id": "isum000000108",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 2333,
           "amountWords": {
             "en": "€23.33",
@@ -6545,7 +6488,6 @@
         {
           "id": "isum000000107",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 12414,
           "amountWords": {
             "en": "€124.14",
@@ -6679,7 +6621,6 @@
         {
           "id": "isum000000106",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 4495,
           "amountWords": {
             "en": "€44.95",
@@ -6741,7 +6682,6 @@
         {
           "id": "isum000000105",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 14576,
           "amountWords": {
             "en": "€145.76",
@@ -6875,7 +6815,6 @@
         {
           "id": "isum000000104",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 6657,
           "amountWords": {
             "en": "€66.57",
@@ -7009,7 +6948,6 @@
         {
           "id": "isum000000103",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 16738,
           "amountWords": {
             "en": "€167.38",
@@ -7143,7 +7081,6 @@
         {
           "id": "isum000000102",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 8819,
           "amountWords": {
             "en": "€88.19",
@@ -7277,7 +7214,6 @@
         {
           "id": "isum000000101",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 18900,
           "amountWords": {
             "en": "€189",
@@ -7339,7 +7275,6 @@
         {
           "id": "isum000000100",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 10981,
           "amountWords": {
             "en": "€109.81",
@@ -7473,7 +7408,6 @@
         {
           "id": "isum000000099",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 3062,
           "amountWords": {
             "en": "€30.62",
@@ -7607,7 +7541,6 @@
         {
           "id": "isum000000098",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 13143,
           "amountWords": {
             "en": "€131.43",
@@ -7741,7 +7674,6 @@
         {
           "id": "isum000000097",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 5224,
           "amountWords": {
             "en": "€52.24",
@@ -7875,7 +7807,6 @@
         {
           "id": "isum000000096",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 15305,
           "amountWords": {
             "en": "€153.05",
@@ -7937,7 +7868,6 @@
         {
           "id": "isum000000095",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 7386,
           "amountWords": {
             "en": "€73.86",
@@ -8071,7 +8001,6 @@
         {
           "id": "isum000000094",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 17467,
           "amountWords": {
             "en": "€174.67",
@@ -8205,7 +8134,6 @@
         {
           "id": "isum000000093",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 9548,
           "amountWords": {
             "en": "€95.48",
@@ -8339,7 +8267,6 @@
         {
           "id": "isum000000092",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 1629,
           "amountWords": {
             "en": "€16.29",
@@ -8473,7 +8400,6 @@
         {
           "id": "isum000000091",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 11710,
           "amountWords": {
             "en": "€117.10",
@@ -8535,7 +8461,6 @@
         {
           "id": "isum000000090",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 3791,
           "amountWords": {
             "en": "€37.91",
@@ -8669,7 +8594,6 @@
         {
           "id": "isum000000089",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 13872,
           "amountWords": {
             "en": "€138.72",
@@ -8803,7 +8727,6 @@
         {
           "id": "isum000000088",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 5953,
           "amountWords": {
             "en": "€59.53",
@@ -8937,7 +8860,6 @@
         {
           "id": "isum000000087",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 16034,
           "amountWords": {
             "en": "€160.34",
@@ -9071,7 +8993,6 @@
         {
           "id": "isum000000086",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 8115,
           "amountWords": {
             "en": "€81.15",
@@ -9133,7 +9054,6 @@
         {
           "id": "isum000000085",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 18196,
           "amountWords": {
             "en": "€181.96",
@@ -9267,7 +9187,6 @@
         {
           "id": "isum000000084",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 10277,
           "amountWords": {
             "en": "€102.77",
@@ -9401,7 +9320,6 @@
         {
           "id": "isum000000083",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 2358,
           "amountWords": {
             "en": "€23.58",
@@ -9535,7 +9453,6 @@
         {
           "id": "isum000000082",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 12439,
           "amountWords": {
             "en": "€124.39",
@@ -9669,7 +9586,6 @@
         {
           "id": "isum000000081",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 4520,
           "amountWords": {
             "en": "€45.20",
@@ -9731,7 +9647,6 @@
         {
           "id": "isum000000080",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 14601,
           "amountWords": {
             "en": "€146.01",
@@ -9865,7 +9780,6 @@
         {
           "id": "isum000000079",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 6682,
           "amountWords": {
             "en": "€66.82",
@@ -9999,7 +9913,6 @@
         {
           "id": "isum000000078",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 16763,
           "amountWords": {
             "en": "€167.63",
@@ -10133,7 +10046,6 @@
         {
           "id": "isum000000077",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 8844,
           "amountWords": {
             "en": "€88.44",
@@ -10267,7 +10179,6 @@
         {
           "id": "isum000000076",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 18925,
           "amountWords": {
             "en": "€189.25",
@@ -10329,7 +10240,6 @@
         {
           "id": "isum000000075",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 11006,
           "amountWords": {
             "en": "€110.06",
@@ -10463,7 +10373,6 @@
         {
           "id": "isum000000074",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 3087,
           "amountWords": {
             "en": "€30.87",
@@ -10597,7 +10506,6 @@
         {
           "id": "isum000000073",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 13168,
           "amountWords": {
             "en": "€131.68",
@@ -10731,7 +10639,6 @@
         {
           "id": "isum000000072",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 5249,
           "amountWords": {
             "en": "€52.49",
@@ -10865,7 +10772,6 @@
         {
           "id": "isum000000071",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 15330,
           "amountWords": {
             "en": "€153.30",
@@ -10927,7 +10833,6 @@
         {
           "id": "isum000000070",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 7411,
           "amountWords": {
             "en": "€74.11",
@@ -11061,7 +10966,6 @@
         {
           "id": "isum000000069",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 17492,
           "amountWords": {
             "en": "€174.92",
@@ -11195,7 +11099,6 @@
         {
           "id": "isum000000068",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 9573,
           "amountWords": {
             "en": "€95.73",
@@ -11329,7 +11232,6 @@
         {
           "id": "isum000000067",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 1654,
           "amountWords": {
             "en": "€16.54",
@@ -11463,7 +11365,6 @@
         {
           "id": "isum000000066",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 11735,
           "amountWords": {
             "en": "€117.35",
@@ -11525,7 +11426,6 @@
         {
           "id": "isum000000065",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 3816,
           "amountWords": {
             "en": "€38.16",
@@ -11659,7 +11559,6 @@
         {
           "id": "isum000000064",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 13897,
           "amountWords": {
             "en": "€138.97",
@@ -11793,7 +11692,6 @@
         {
           "id": "isum000000063",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 5978,
           "amountWords": {
             "en": "€59.78",
@@ -11927,7 +11825,6 @@
         {
           "id": "isum000000062",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 16059,
           "amountWords": {
             "en": "€160.59",
@@ -12061,7 +11958,6 @@
         {
           "id": "isum000000061",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 8140,
           "amountWords": {
             "en": "€81.40",
@@ -12123,7 +12019,6 @@
         {
           "id": "isum000000060",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 18221,
           "amountWords": {
             "en": "€182.21",
@@ -12257,7 +12152,6 @@
         {
           "id": "isum000000059",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 10302,
           "amountWords": {
             "en": "€103.02",
@@ -12391,7 +12285,6 @@
         {
           "id": "isum000000058",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 2383,
           "amountWords": {
             "en": "€23.83",
@@ -12525,7 +12418,6 @@
         {
           "id": "isum000000057",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 12464,
           "amountWords": {
             "en": "€124.64",
@@ -12659,7 +12551,6 @@
         {
           "id": "isum000000056",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 4545,
           "amountWords": {
             "en": "€45.45",
@@ -12721,7 +12612,6 @@
         {
           "id": "isum000000055",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 14626,
           "amountWords": {
             "en": "€146.26",
@@ -12855,7 +12745,6 @@
         {
           "id": "isum000000054",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 6707,
           "amountWords": {
             "en": "€67.07",
@@ -12989,7 +12878,6 @@
         {
           "id": "isum000000053",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 16788,
           "amountWords": {
             "en": "€167.88",
@@ -13123,7 +13011,6 @@
         {
           "id": "isum000000052",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 8869,
           "amountWords": {
             "en": "€88.69",
@@ -13257,7 +13144,6 @@
         {
           "id": "isum000000051",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 18950,
           "amountWords": {
             "en": "€189.50",
@@ -13319,7 +13205,6 @@
         {
           "id": "isum000000050",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 11031,
           "amountWords": {
             "en": "€110.31",
@@ -13453,7 +13338,6 @@
         {
           "id": "isum000000049",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 3112,
           "amountWords": {
             "en": "€31.12",
@@ -13587,7 +13471,6 @@
         {
           "id": "isum000000048",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 13193,
           "amountWords": {
             "en": "€131.93",
@@ -13721,7 +13604,6 @@
         {
           "id": "isum000000047",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 5274,
           "amountWords": {
             "en": "€52.74",
@@ -13855,7 +13737,6 @@
         {
           "id": "isum000000046",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 15355,
           "amountWords": {
             "en": "€153.55",
@@ -13917,7 +13798,6 @@
         {
           "id": "isum000000045",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 7436,
           "amountWords": {
             "en": "€74.36",
@@ -14051,7 +13931,6 @@
         {
           "id": "isum000000044",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 17517,
           "amountWords": {
             "en": "€175.17",
@@ -14185,7 +14064,6 @@
         {
           "id": "isum000000043",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 9598,
           "amountWords": {
             "en": "€95.98",
@@ -14319,7 +14197,6 @@
         {
           "id": "isum000000042",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 1679,
           "amountWords": {
             "en": "€16.79",
@@ -14453,7 +14330,6 @@
         {
           "id": "isum000000041",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 11760,
           "amountWords": {
             "en": "€117.60",
@@ -14515,7 +14391,6 @@
         {
           "id": "isum000000040",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 3841,
           "amountWords": {
             "en": "€38.41",
@@ -14649,7 +14524,6 @@
         {
           "id": "isum000000039",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 13922,
           "amountWords": {
             "en": "€139.22",
@@ -14783,7 +14657,6 @@
         {
           "id": "isum000000038",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 6003,
           "amountWords": {
             "en": "€60.03",
@@ -14917,7 +14790,6 @@
         {
           "id": "isum000000037",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 16084,
           "amountWords": {
             "en": "€160.84",
@@ -15051,7 +14923,6 @@
         {
           "id": "isum000000036",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 8165,
           "amountWords": {
             "en": "€81.65",
@@ -15113,7 +14984,6 @@
         {
           "id": "isum000000035",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 18246,
           "amountWords": {
             "en": "€182.46",
@@ -15247,7 +15117,6 @@
         {
           "id": "isum000000034",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 10327,
           "amountWords": {
             "en": "€103.27",
@@ -15381,7 +15250,6 @@
         {
           "id": "isum000000033",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 2408,
           "amountWords": {
             "en": "€24.08",
@@ -15515,7 +15383,6 @@
         {
           "id": "isum000000032",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 12489,
           "amountWords": {
             "en": "€124.89",
@@ -15649,7 +15516,6 @@
         {
           "id": "isum000000031",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 4570,
           "amountWords": {
             "en": "€45.70",
@@ -15711,7 +15577,6 @@
         {
           "id": "isum000000030",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 14651,
           "amountWords": {
             "en": "€146.51",
@@ -15845,7 +15710,6 @@
         {
           "id": "isum000000029",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 6732,
           "amountWords": {
             "en": "€67.32",
@@ -15979,7 +15843,6 @@
         {
           "id": "isum000000028",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 16813,
           "amountWords": {
             "en": "€168.13",
@@ -16113,7 +15976,6 @@
         {
           "id": "isum000000027",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 8894,
           "amountWords": {
             "en": "€88.94",
@@ -16247,7 +16109,6 @@
         {
           "id": "isum000000026",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 18975,
           "amountWords": {
             "en": "€189.75",
@@ -16309,7 +16170,6 @@
         {
           "id": "isum000000025",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 11056,
           "amountWords": {
             "en": "€110.56",
@@ -16443,7 +16303,6 @@
         {
           "id": "isum000000024",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 3137,
           "amountWords": {
             "en": "€31.37",
@@ -16577,7 +16436,6 @@
         {
           "id": "isum000000023",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 13218,
           "amountWords": {
             "en": "€132.18",
@@ -16711,7 +16569,6 @@
         {
           "id": "isum000000022",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 5299,
           "amountWords": {
             "en": "€52.99",
@@ -16845,7 +16702,6 @@
         {
           "id": "isum000000021",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 15380,
           "amountWords": {
             "en": "€153.80",
@@ -16907,7 +16763,6 @@
         {
           "id": "isum000000020",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 7461,
           "amountWords": {
             "en": "€74.61",
@@ -17041,7 +16896,6 @@
         {
           "id": "isum000000019",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 17542,
           "amountWords": {
             "en": "€175.42",
@@ -17175,7 +17029,6 @@
         {
           "id": "isum000000018",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 9623,
           "amountWords": {
             "en": "€96.23",
@@ -17309,7 +17162,6 @@
         {
           "id": "isum000000017",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 1704,
           "amountWords": {
             "en": "€17.04",
@@ -17443,7 +17295,6 @@
         {
           "id": "isum000000016",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 11785,
           "amountWords": {
             "en": "€117.85",
@@ -17505,7 +17356,6 @@
         {
           "id": "isum000000015",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 3866,
           "amountWords": {
             "en": "€38.66",
@@ -17639,7 +17489,6 @@
         {
           "id": "isum000000014",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 13947,
           "amountWords": {
             "en": "€139.47",
@@ -17773,7 +17622,6 @@
         {
           "id": "isum000000013",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 6028,
           "amountWords": {
             "en": "€60.28",
@@ -17907,7 +17755,6 @@
         {
           "id": "isum000000012",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 16109,
           "amountWords": {
             "en": "€161.09",
@@ -18041,7 +17888,6 @@
         {
           "id": "isum000000011",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 8190,
           "amountWords": {
             "en": "€81.90",
@@ -18103,7 +17949,6 @@
         {
           "id": "isum000000010",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 18271,
           "amountWords": {
             "en": "€182.71",
@@ -18237,7 +18082,6 @@
         {
           "id": "isum000000009",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 10352,
           "amountWords": {
             "en": "€103.52",
@@ -18371,7 +18215,6 @@
         {
           "id": "isum000000008",
           "what": "Coffee",
-          "emoji": "☕",
           "amount": 2433,
           "amountWords": {
             "en": "€24.33",
@@ -18505,7 +18348,6 @@
         {
           "id": "isum000000007",
           "what": "Pizza night",
-          "emoji": "🍕",
           "amount": 12514,
           "amountWords": {
             "en": "€125.14",
@@ -18639,7 +18481,6 @@
         {
           "id": "isum000000006",
           "what": "Market",
-          "emoji": "🧺",
           "amount": 4595,
           "amountWords": {
             "en": "€45.95",
@@ -18701,7 +18542,6 @@
         {
           "id": "isum000000005",
           "what": "Ice cream",
-          "emoji": "🍦",
           "amount": 14676,
           "amountWords": {
             "en": "€146.76",
@@ -18835,7 +18675,6 @@
         {
           "id": "isum000000004",
           "what": "Boat day",
-          "emoji": "⛵",
           "amount": 6757,
           "amountWords": {
             "en": "€67.57",
@@ -18969,7 +18808,6 @@
         {
           "id": "isum000000003",
           "what": "Fuel",
-          "emoji": "⛽",
           "amount": 16838,
           "amountWords": {
             "en": "€168.38",
@@ -19103,7 +18941,6 @@
         {
           "id": "isum000000002",
           "what": "Dinner out",
-          "emoji": "🍽️",
           "amount": 8919,
           "amountWords": {
             "en": "€89.19",
@@ -19237,7 +19074,6 @@
         {
           "id": "isum000000001",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 1000,
           "amountWords": {
             "en": "€10",
@@ -19509,13 +19345,12 @@
     "ok": true,
     "kind": "split",
     "title": "Dinner at Sara’s",
-    "emoji": "🍝",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Dinner at Sara’s",
-      "emoji": "🍝",
       "currency": "USD",
       "total": 9000,
       "totalWords": {
@@ -19577,7 +19412,6 @@
         {
           "id": "idin000000001",
           "what": "Dinner",
-          "emoji": "🍝",
           "amount": 9000,
           "amountWords": {
             "en": "$90",
@@ -19751,13 +19585,12 @@
     "ok": true,
     "kind": "split",
     "title": "Lisbon",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Lisbon",
-      "emoji": "🇵🇹",
       "currency": "EUR",
       "total": 81900,
       "totalWords": {
@@ -19848,7 +19681,6 @@
         {
           "id": "ispl000000005",
           "what": "Museum tickets",
-          "emoji": "🎟️",
           "amount": 3000,
           "amountWords": {
             "en": "€30",
@@ -19892,7 +19724,6 @@
         {
           "id": "ispl000000004",
           "what": "Groceries",
-          "emoji": "🛒",
           "amount": 4650,
           "amountWords": {
             "en": "€46.50",
@@ -19945,7 +19776,6 @@
         {
           "id": "ispl000000002",
           "what": "Dinner in Alfama",
-          "emoji": "🍽️",
           "amount": 8400,
           "amountWords": {
             "en": "€84",
@@ -19998,7 +19828,6 @@
         {
           "id": "ispl000000003",
           "what": "Taxi from the airport",
-          "emoji": "🚕",
           "amount": 1850,
           "amountWords": {
             "en": "€18.50",
@@ -20051,7 +19880,6 @@
         {
           "id": "ispl000000001",
           "what": "Apartment",
-          "emoji": "🏠",
           "amount": 64000,
           "amountWords": {
             "en": "€640",

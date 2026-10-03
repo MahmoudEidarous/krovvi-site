@@ -15,8 +15,9 @@
 
 import { useEffect, useState } from "react";
 
-import { say, type Words } from "@/lib/objects";
+import { say, type Lang, type Words } from "@/lib/objects";
 import { EASE, FaceStack, INK, Pill, Row, Section, STEP, Tick, dirOf } from "../kit";
+import { Mark, isMark, type MarkName } from "../mark";
 import type { KindPage } from "../types";
 
 /** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
@@ -38,7 +39,7 @@ interface Leg {
 }
 interface Booking {
   id: string;
-  emoji: string;
+  mark: string;
   title: string;
   whenWords: Words;
   code: string | null;
@@ -46,7 +47,6 @@ interface Booking {
 interface Idea {
   id: string;
   text: string;
-  emoji: string | null;
   votes: Array<{ id: string; name: string }>;
   youVoted: boolean;
 }
@@ -64,9 +64,9 @@ interface TripView {
   datesWords: Words | null;
   leftWords: Words;
   route: { stops: Stop[]; legs: Leg[] };
-  next: { id: string; title: string; emoji: string; whenWords: Words; inWords: Words } | null;
+  next: { id: string; title: string; mark: string; whenWords: Words; inWords: Words } | null;
   bookings: Booking[];
-  plan: Array<{ day: string; label: Words; today: boolean; things: Array<{ id: string; text: string; emoji: string; timeWords: Words | null }> }>;
+  plan: Array<{ day: string; label: Words; today: boolean; things: Array<{ id: string; text: string; timeWords: Words | null }> }>;
   ideas: Idea[];
   packing: { items: Pack[]; you: { left: number; total: number } | null };
 }
@@ -74,7 +74,6 @@ interface TripView {
 const C = {
   daysToGo: { en: "days to go", ar: "يوم فاضل" },
   daysToGoFew: { en: "days to go", ar: "أيام فاضلة" },
-  legend: { en: "Each dot under a place is a day there; each dot on the way is an hour", ar: "كل نقطة تحت المكان يوم فيه، وكل نقطة في الطريق ساعة" },
   hours: { en: "h", ar: "س" },
   nextUp: { en: "Next up", ar: "اللي جاي" },
   code: { en: "Code", ar: "الكود" },
@@ -94,7 +93,6 @@ const C = {
   vote: { en: "vote", ar: "صوت" },
 } satisfies Record<string, Words>;
 
-const MARKS: Record<string, string> = { flight: "✈️", train: "🚆", bus: "🚌", ferry: "⛴️" };
 
 function Route({ view, lang }: { view: TripView; lang: "en" | "ar" }) {
   const { stops, legs } = view.route;
@@ -114,44 +112,46 @@ function Route({ view, lang }: { view: TripView; lang: "en" | "ar" }) {
                 <span className="block" style={s.kind === "home" ? { ...STEP.meta, color: INK.muted } : { ...STEP.title }}>
                   <bdi dir={dirOf(s.place)}>{s.place}</bdi>
                 </span>
-                {s.days.length ? (
-                  <span className="flex flex-wrap items-center" style={{ gap: 5, marginTop: 6 }}>
-                    {s.days.map((d) => (
-                      <span
-                        key={d.day}
-                        aria-hidden
-                        className="block rounded-full"
-                        style={{
-                          width: d.today ? 12 : 9,
-                          height: d.today ? 12 : 9,
-                          boxSizing: "border-box",
-                          background: d.past || d.today ? INK.fg : "transparent",
-                          border: d.past || d.today ? "none" : `1.5px solid ${INK.faint}`,
-                          opacity: d.past && !d.today ? 0.55 : 1,
-                          transition: `background-color 260ms ${EASE}`,
-                        }}
-                      />
-                    ))}
-                  </span>
-                ) : null}
+                {stayWords(s.days, lang) ? <span className="block" style={{ ...STEP.meta, color: here ? INK.pick : INK.muted }}>{stayWords(s.days, lang)}</span> : null}
               </span>
             </div>
             {i < stops.length - 1 ? (
               <div className="flex items-center" style={{ gap: 12, padding: "4px 0" }}>
-                <span className="flex shrink-0 flex-col items-center" style={{ width: 16, gap: 3 }} aria-hidden>
-                  {leg && leg.hours ? (
-                    Array.from({ length: leg.hours }, (_, h) => <span key={h} className="block rounded-full" style={{ width: 3, height: 3, background: leg.booking === next ? INK.pick : leg.past ? INK.faint : INK.soft }} />)
-                  ) : (
-                    <span className="block" style={{ width: 1, height: 18, background: INK.line }} />
-                  )}
+                <span className="flex shrink-0 flex-col items-center" style={{ width: 16 }} aria-hidden>
+                  <span className="block" style={{ width: 1.5, height: 30, borderRadius: 1, background: leg && leg.booking === next ? INK.pick : INK.line }} />
                 </span>
-                {leg && MARKS[leg.kind] ? <span style={{ ...STEP.meta, color: leg.booking === next ? INK.pick : INK.muted }}>{`${MARKS[leg.kind]} ${leg.hours ? `${leg.hours} ${say(C.hours, lang)}` : ""}`}</span> : null}
+                {leg && LEG_MARK[leg.kind] ? (
+                  <span className="inline-flex items-center" style={{ gap: 6, ...STEP.meta, color: leg.booking === next ? INK.pick : INK.muted }}>
+                    <Mark name={LEG_MARK[leg.kind]} size={14} color={leg.booking === next ? INK.pick : INK.muted} />
+                    {leg.hours ? `${leg.hours} ${say(C.hours, lang)}` : null}
+                  </span>
+                ) : null}
               </div>
             ) : null}
           </div>
         );
       })}
     </div>
+  );
+}
+
+/** "4 days", or "Day 2 of 4" while they are there. */
+function stayWords(days: Array<{ today: boolean }>, lang: Lang): string | null {
+  if (!days.length) return null;
+  const at = days.findIndex((d) => d.today);
+  const n = days.length;
+  if (at >= 0) return lang === "ar" ? `اليوم ${at + 1} من ${n}` : `Day ${at + 1} of ${n}`;
+  return lang === "ar" ? (n === 1 ? "يوم" : n === 2 ? "يومين" : n <= 10 ? `${n} أيام` : `${n} يوم`) : n === 1 ? "1 day" : `${n} days`;
+}
+
+const LEG_MARK: Record<string, MarkName> = { flight: "plane", train: "train", bus: "bus", ferry: "boat", car: "car" };
+
+/** A mark in its coin, a row's lead. */
+function Coin({ mark }: { mark: string }) {
+  return (
+    <span className="flex items-center justify-center" style={{ width: 30, height: 30, borderRadius: 9, background: INK.surfaceHi }} aria-hidden>
+      <Mark name={isMark(mark) ? mark : "pin"} size={16} color={INK.soft} />
+    </span>
   );
 }
 
@@ -197,16 +197,13 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
         {counting ? <span style={{ ...STEP.title, color: INK.muted }}>{say(v.daysToGo! <= 10 ? C.daysToGoFew : C.daysToGo, lang)}</span> : null}
         {v.datesWords ? <span style={{ ...STEP.body, color: INK.soft }}>{say(v.datesWords, lang)}</span> : null}
         <Route view={v} lang={lang} />
-        <span className="text-center" style={{ ...STEP.meta, color: INK.muted }}>
-          {say(C.legend, lang)}
-        </span>
       </section>
 
       {next ? (
         <Section title={say(C.nextUp, lang)}>
           <Row
             first
-            lead={<span style={{ fontSize: 20 }} aria-hidden>{next.emoji}</span>}
+            lead={<Coin mark={next.mark} />}
             title={next.title}
             sub={list([say(next.whenWords, lang), say(v.next!.inWords, lang).toLowerCase()], lang)}
             value={next.code ? <span style={{ ...STEP.label, color: INK.pick }}>{`${say(C.code, lang)} ${next.code}`}</span> : undefined}
@@ -222,7 +219,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               first={i === 0}
               lead={<span style={{ ...STEP.label, color: d.today ? INK.pick : INK.muted }}>{i + 1}</span>}
               title={say(d.label, lang)}
-              sub={d.things.length ? list(d.things.map((t) => `${t.timeWords ? `${say(t.timeWords, lang)} ` : ""}${t.emoji} ${t.text}`), lang) : say(C.free, lang)}
+              sub={d.things.length ? list(d.things.map((t) => `${t.timeWords ? `${say(t.timeWords, lang)} ` : ""}${t.text}`), lang) : say(C.free, lang)}
               muted={!d.things.length}
             />
           ))}
@@ -238,8 +235,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               <Row
                 key={x.id}
                 first={i === 0}
-                lead={names.length ? <FaceStack names={names} size={22} max={3} /> : <span style={{ fontSize: 20 }} aria-hidden>{x.emoji ?? "📍"}</span>}
-                title={`${x.emoji ? `${x.emoji} ` : ""}${x.text}`}
+                lead={names.length ? <FaceStack names={names} size={22} max={3} /> : <Coin mark="pin" />}
+                title={x.text}
                 sub={names.length ? `${names.length} ${say(names.length === 1 ? C.vote : C.votes, lang)}: ${list(names, lang)}` : null}
                 value={can("vote") ? <Pill text={say(youLike ? C.liked : C.like, lang)} strong={!youLike} disabled={busy} onClick={() => void like(x)} /> : undefined}
               />
@@ -270,7 +267,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               <Row
                 key={p.id}
                 first={i === 0}
-                lead={<Tick done={mine} by={mine ? me?.name : null} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
+                lead={<Tick done={mine} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
                 title={p.text}
                 sub={p.done ? say(C.everyone, lang) : by.length ? `${say(C.packedBy, lang)} ${list(by, lang)}` : null}
                 muted={mine}
@@ -288,7 +285,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               <Row
                 key={p.id}
                 first={i === 0}
-                lead={<Tick done={by.length > 0} by={by[0] ?? null} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
+                lead={<Tick done={by.length > 0} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
                 title={p.text}
                 sub={by.length ? `${say(C.packedBy, lang)} ${list(by, lang)}` : null}
                 muted={by.length > 0}

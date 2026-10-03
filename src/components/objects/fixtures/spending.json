@@ -658,19 +658,6 @@
             "en": "$4.50",
             "ar": "$4.50"
           }
-        },
-        {
-          "cat": "shopping",
-          "mark": "bag",
-          "name": {
-            "en": "Shopping",
-            "ar": "شوبينج"
-          },
-          "amount": -2000,
-          "amountWords": {
-            "en": "-$20",
-            "ar": "-$20"
-          }
         }
       ],
       "list": [
@@ -1289,19 +1276,6 @@
           "amountWords": {
             "en": "$4.50",
             "ar": "$4.50"
-          }
-        },
-        {
-          "cat": "shopping",
-          "mark": "bag",
-          "name": {
-            "en": "Shopping",
-            "ar": "شوبينج"
-          },
-          "amount": -2000,
-          "amountWords": {
-            "en": "-$20",
-            "ar": "-$20"
           }
         }
       ],
@@ -5453,19 +5427,6 @@
             "en": "$4.50",
             "ar": "$4.50"
           }
-        },
-        {
-          "cat": "shopping",
-          "mark": "bag",
-          "name": {
-            "en": "Shopping",
-            "ar": "شوبينج"
-          },
-          "amount": -2000,
-          "amountWords": {
-            "en": "-$20",
-            "ar": "-$20"
-          }
         }
       ],
       "list": [
@@ -6080,19 +6041,6 @@
           "amountWords": {
             "en": "$4.50",
             "ar": "$4.50"
-          }
-        },
-        {
-          "cat": "shopping",
-          "mark": "bag",
-          "name": {
-            "en": "Shopping",
-            "ar": "شوبينج"
-          },
-          "amount": -2000,
-          "amountWords": {
-            "en": "-$20",
-            "ar": "-$20"
           }
         }
       ],
