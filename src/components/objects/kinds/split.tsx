@@ -42,7 +42,7 @@ interface Transfer {
 interface Expense {
   id: string;
   what: string;
-  emoji: string | null;
+  paidBy: string;
   amount: number;
   payer: Words;
   dayWords: Words;
@@ -79,7 +79,10 @@ const C = {
   settleOne: { en: "1 transfer settles everyone", ar: "تحويل واحد ويخلص الكل" },
   settleMany: { en: "transfers settle everyone", ar: "تحويلات وتخلصوا كلكم" },
   settleUp: { en: "Settle up", ar: "التسوية" },
-  paid: { en: "Paid", ar: "اتدفع" },
+  paid: { en: "Mark paid", ar: "اتدفع" },
+  getsBack: { en: "Gets back", ar: "ليه" },
+  owes: { en: "Owes", ar: "عليه" },
+  even: { en: "Square", ar: "خالص" },
   balances: { en: "Balances", ar: "الحسابات" },
   costs: { en: "Expenses", ar: "المصاريف" },
   transfers: { en: "Transfers", ar: "التحويلات" },
@@ -205,7 +208,6 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
         <div style={{ padding: "8px 0 4px" }}>
           <Flow view={v} size={276} hidden={hidden} />
         </div>
-        {transfers.length ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(v.dot.words, lang)}</span> : null}
       </section>
 
       {transfers.length ? (
@@ -256,7 +258,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               first={i === 0}
               lead={<Face name={p.name} size={28} />}
               title={p.you ? `${p.name} (${say(C.you, lang)})` : p.name}
-              sub={say(p.words, lang)}
+              sub={say(p.net > 0 ? C.getsBack : p.net < 0 ? C.owes : C.even, lang)}
               muted={p.removed}
               value={p.net ? <Money minor={Math.abs(p.net)} currency={v.currency} lang={lang} step="body" color={p.net > 0 ? INK.fg : INK.soft} /> : undefined}
             />
@@ -273,7 +275,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               <Row
                 key={e.id}
                 first={i === 0}
-                lead={<span style={{ fontSize: 20 }} aria-hidden>{e.emoji ?? "🧾"}</span>}
+                lead={<Face name={names.get(e.paidBy) ?? say(e.payer, lang)} size={28} />}
                 title={e.what}
                 sub={list([who, say(e.dayWords, lang), part, e.original && `${say(C.was, lang)} ${say(e.original.words, lang)}`], lang)}
                 value={<Money minor={e.amount} currency={v.currency} lang={lang} step="body" />}
