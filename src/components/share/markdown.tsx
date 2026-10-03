@@ -10,7 +10,7 @@
  * Anything it does not know is drawn as plain words, never as raw markup.
  */
 
-import { Fragment, type ReactNode } from "react";
+import { createContext, Fragment, useContext, type ReactNode } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
 import { BlockView } from "./blocks";
@@ -28,6 +28,37 @@ export interface RenderEnv {
 /* ------------------------------------------------------------------ */
 
 const INLINE = /(`[^`\n]+`)|(\*\*[^*\n]+\*\*|__[^_\n]+__)|(\*[^*\n]+\*|(?<![\w])_[^_\n]+_(?![\w]))|(\[[^\]\n]+\]\([^)\s]+\))|(https?:\/\/[^\s<>()]+[^\s<>().,;:!?'"])/g;
+
+/** The copy's photos and files, by the index its words name them by (share:file?m=). */
+export const ShareMedia = createContext<Record<number, { url: string; mime: string }>>({});
+
+const FORMAT_OF: Array<[RegExp, string, string]> = [
+  [/pdf/, "PDF", "#E5484D"],
+  [/wordprocessing|msword/, "DOC", "#3E7BFA"],
+  [/spreadsheet|excel|csv/, "XLS", "#30A46C"],
+  [/presentation|powerpoint/, "PPT", "#F76B15"],
+];
+
+/** A file Krovvi made in the chat: its name in the words, opening the file itself. */
+function FileLink({ index, words }: { index: number; words: string }) {
+  const file = useContext(ShareMedia)[index];
+  if (!file) return <bdi>{words}</bdi>;
+  const [, badge, tint] = FORMAT_OF.find(([rx]) => rx.test(file.mime)) ?? [null, "FILE", INK.surfaceHi];
+  return (
+    <a
+      href={file.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center rounded-full align-baseline active:opacity-70"
+      style={{ ...STEP.meta, fontWeight: 500, color: INK.fg, background: INK.surfaceHi, padding: "1px 8px 1px 3px", margin: "0 2px" }}
+    >
+      <span className="rounded-full" style={{ fontSize: 9, lineHeight: "16px", fontWeight: 700, color: "#fff", background: tint, padding: "0 5px", marginInlineEnd: 5 }}>
+        {badge}
+      </span>
+      <bdi>{words}</bdi>
+    </a>
+  );
+}
 
 function Receipt({ href, words }: { href: string; words: string }) {
   const q = new URLSearchParams(href.slice(href.indexOf("?") + 1));
@@ -58,7 +89,9 @@ export function inline(text: string, key = "i"): ReactNode[] {
     else if (link) {
       const lm = /^\[([^\]]+)\]\(([^)\s]+)\)$/.exec(link)!;
       const [, words, href] = lm;
+      const file = /^share:file\?m=(\d{1,4})$/.exec(href);
       if (href.startsWith("share:receipt")) out.push(<Receipt key={k} href={href} words={words} />);
+      else if (file) out.push(<FileLink key={k} index={Number(file[1])} words={words} />);
       else if (/^(https?:|mailto:|tel:)/i.test(href))
         out.push(
           <a key={k} href={href} target="_blank" rel="noopener noreferrer nofollow" style={{ color: INK.soft, textDecoration: "underline", textDecorationColor: "rgba(169,168,162,0.4)", textUnderlineOffset: 3 }}>

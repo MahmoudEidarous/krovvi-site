@@ -14,7 +14,7 @@ import { Fragment } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
 import { BURST_SEP, replyParts, type ReplyPart } from "@/lib/answer/reply-format";
-import { inline, Markdown, type RenderEnv } from "./markdown";
+import { inline, Markdown, ShareMedia, type RenderEnv } from "./markdown";
 import type { ShareCard } from "./cards";
 
 export interface SnapTurn {
@@ -61,6 +61,8 @@ function Badge({ emoji, side }: { emoji: string; side: "start" | "end" }) {
 /** The person's messages: one group of bubbles on the right, Krovvi's reaction on the last one. */
 function Person({ texts, photos, media, reaction }: { texts: string[]; photos: number[]; media: MediaUrls; reaction: string | null }) {
   const shown = texts.map((t) => t.trim()).filter(Boolean);
+  // A turn of Krovvi's own (a made file's receipt) has no message of theirs above it.
+  if (!shown.length && !photos.length) return null;
   return (
     <div className="flex flex-col items-end" style={{ gap: 4, margin: "16px 0 4px" }}>
       {photos.length ? (
@@ -184,12 +186,12 @@ function Turn({ turn, media, lang }: { turn: SnapTurn; media: MediaUrls; lang: "
 
 export function ChatView({ snapshot, media, lang }: { snapshot: ChatSnapshot; media: MediaUrls; lang: "en" | "ar" }) {
   return (
-    <div>
+    <ShareMedia.Provider value={media}>
       {snapshot.turns.map((t, n) => (
         <Fragment key={n}>
           <Turn turn={t} media={media} lang={lang} />
         </Fragment>
       ))}
-    </div>
+    </ShareMedia.Provider>
   );
 }
