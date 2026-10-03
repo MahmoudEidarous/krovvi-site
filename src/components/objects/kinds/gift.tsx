@@ -34,7 +34,6 @@ interface Pledge {
 interface Idea {
   id: string;
   text: string;
-  emoji: string | null;
   priceWords: Words | null;
   why: string | null;
   memory: boolean;
@@ -54,6 +53,8 @@ interface GiftView {
   open: boolean;
   pledges: Pledge[];
   ideas: Idea[];
+  occasion: string | null;
+  dayWords: Words | null;
   leftWords: Words | null;
   secret: Words;
   alert: Words | null;
@@ -62,8 +63,9 @@ interface GiftView {
 const C = {
   of: { en: "of", ar: "من" },
   soFar: { en: "so far", ar: "لحد دلوقتي" },
-  in: { en: "in", ar: "معاكم" },
-  paid: { en: "paid", ar: "وصل" },
+  in: { en: "chipping in", ar: "داخلين" },
+  paid: { en: "paid", ar: "دفعوا" },
+  likes: { en: "like it", ar: "عاجبهم" },
   nobody: { en: "Nobody in yet", ar: "لسه محدش دخل" },
   yourPart: { en: "Your part", ar: "نصيبك" },
   imIn: { en: "I’m in for", ar: "هدخل بـ" },
@@ -167,10 +169,13 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
   const count = v.count + (mine && !held ? 1 : 0);
   const paidCount = v.pledges.filter((p) => p.paid && !p.you).length + (part?.paid ? 1 : 0);
 
-  const step = 5 * 10 ** decimalsOf(v.currency);
-  const even = v.goal ? v.goal / Math.max(1, page.members.length) : 4 * step;
-  const round = (minor: number) => Math.max(step, Math.round(minor / step) * step);
-  const quick = [...new Set([round(even / 2), round(even), round(even * 1.5)])];
+  // The even share of the goal, in whole units, with a round amount either side ($50, $67, $100 for $200 among three), as the app offers.
+  const unit = 10 ** decimalsOf(v.currency);
+  const NICE = [5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100, 150, 200, 250, 300, 400, 500, 750, 1000, 1500, 2000, 2500, 3000, 5000, 10000];
+  const share = v.goal ? Math.max(1, Math.round(v.goal / Math.max(1, page.members.length, count + (part ? 0 : 1)) / unit)) : null;
+  const quick = share === null
+    ? [20, 50, 100].map((n) => n * unit)
+    : [...new Set([[...NICE].reverse().find((n) => n <= share * 0.8) ?? null, share, NICE.find((n) => n >= share * 1.25) ?? null].filter((n): n is number => n !== null))].sort((a, b) => a - b).map((n) => n * unit);
 
   const pledge = async (amount: number) => {
     if (me) setMine({ amount, paid: part?.paid ?? false });
@@ -207,8 +212,13 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
           <span style={{ ...STEP.title, color: INK.muted }}>{v.goalWords ? `${say(C.of, lang)} ${say(v.goalWords, lang)}` : say(C.soFar, lang)}</span>
         </span>
         <span style={{ ...STEP.body, color: INK.soft }}>
-          {count ? list([`${count} ${say(C.in, lang)}`, `${paidCount} ${say(C.paid, lang)}`, v.leftWords && say(v.leftWords, lang).toLowerCase()], lang) : say(C.nobody, lang)}
+          {count ? list([`${count} ${say(C.in, lang)}`, paidCount > 0 && `${paidCount} ${say(C.paid, lang)}`], lang) : say(C.nobody, lang)}
         </span>
+        {v.occasion || v.dayWords ? (
+          <span style={{ ...STEP.meta, color: INK.muted }}>
+            {list([v.occasion && `${v.occasion.charAt(0).toUpperCase()}${v.occasion.slice(1)}`, v.dayWords && say(v.dayWords, lang), v.leftWords && say(v.leftWords, lang).toLowerCase()], lang)}
+          </span>
+        ) : null}
         <div style={{ padding: "12px 0" }}>
           <Box total={v.box.dots} filled={filled} solid={solid} open={open} label={`${text(pledged, v.currency, lang)}. ${say(v.box.legend, lang)}`} />
         </div>
@@ -227,9 +237,11 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
           ) : null}
           <div className="flex flex-wrap items-center" style={{ gap: 8, padding: part ? "4px 16px 14px" : "6px 16px 14px" }}>
             {!part ? <span style={{ ...STEP.label, color: INK.muted }}>{say(C.imIn, lang)}</span> : null}
-            {quick.map((amount) => (
-              <Pill key={amount} text={text(amount, v.currency, lang)} strong={!part} disabled={busy} onClick={() => void pledge(amount)} />
-            ))}
+            {quick
+              .filter((amount) => amount !== part?.amount)
+              .map((amount) => (
+                <Pill key={amount} text={text(amount, v.currency, lang)} strong={!part && share !== null && amount === share * unit} disabled={busy} onClick={() => void pledge(amount)} />
+              ))}
             <form
               className="flex items-center"
               style={{ gap: 6 }}
@@ -283,9 +295,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               <Row
                 key={x.id}
                 first={i === 0}
-                lead={<span style={{ fontSize: 20 }} aria-hidden>{x.emoji ?? "🎁"}</span>}
                 title={x.picked ? list([x.text, say(C.picked, lang)], lang) : x.text}
-                sub={[list([x.priceWords && say(x.priceWords, lang), votes > 0 && `${votes} ♥`], lang), x.why ? `${x.why}${x.memory ? ` (${say(C.memory, lang)})` : ""}` : null].filter(Boolean).join(". ")}
+                sub={[list([x.priceWords && say(x.priceWords, lang), votes > 0 && `${votes} ${say(C.likes, lang)}`], lang), x.why ? `${x.why}${x.memory ? ` (${say(C.memory, lang)})` : ""}` : null].filter(Boolean).join(". ")}
                 value={
                   can("vote") ? (
                     <Pill
