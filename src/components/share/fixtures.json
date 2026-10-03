@@ -1,0 +1,412 @@
+{
+  "chat-en": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "Maadi or Zamalek",
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Mahmoud",
+    "made_at": 1791016200000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "Maadi or Zamalek",
+      "lang": "en",
+      "dir": "ltr",
+      "made_at": 1791016200000,
+      "name": "Mahmoud",
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "Maadi or Zamalek, which flat is better for us?",
+          "photos": [],
+          "a": "<react>🤔</react><say>Good one. Maadi wins on money, Zamalek on time.</say>\n## The two flats\n\n| | Maadi | Zamalek |\n|---|---|---|\n| Rent | $1,400 | $1,800 |\n| Commute | 45 min | 15 min |\n| Deposit | 2 months | 1 month |\n\n```options\nMaadi | $1,400 | Garden flat, quieter | Bigger, but the commute takes an hour and a half a day | pick: cheaper and calmer\nZamalek | $1,800 | City flat | Close to work and to friends\n```\n\nThe rent goes up 10% in April ([Call with the landlord](share:receipt?title=Call+with+the+landlord&kind=voice&t=95000)).\n\n<say>Want me to count down to the move?</say>",
+          "style": "mixed",
+          "reactions": {
+            "0": "😂"
+          },
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014520000,
+          "q": "yes please\n⁣\nwe move on the 16th",
+          "photos": [],
+          "a": "<react>🫡</react><say>Done. 13 days to go.</say>\n\n```card\nfcdfixture001\n```",
+          "style": "mixed",
+          "reactions": {
+            "0": "🔥"
+          },
+          "heard": {},
+          "cards": {
+            "fcdfixture001": {
+              "kind": "object",
+              "data": {
+                "kind": "object",
+                "objectKind": "countdown",
+                "title": "Lisbon",
+                "emoji": "🇵🇹",
+                "view": {
+                  "title": "Lisbon",
+                  "emoji": "🇵🇹",
+                  "day": "2026-10-16",
+                  "time": "09:30",
+                  "daysLeft": 13,
+                  "startsAt": 1792132200000,
+                  "phase": "counting",
+                  "dots": {
+                    "total": 20,
+                    "fallen": 7,
+                    "perDot": 1
+                  },
+                  "counting": [
+                    {
+                      "id": "mmahmoud000",
+                      "name": "Mahmoud",
+                      "you": false
+                    },
+                    {
+                      "id": "msam0000000",
+                      "name": "Sam",
+                      "you": false
+                    },
+                    {
+                      "id": "mlina000000",
+                      "name": "Lina",
+                      "you": false
+                    }
+                  ],
+                  "youCount": false,
+                  "dayWords": {
+                    "en": "Fri 16 Oct",
+                    "ar": "الجمعة 16 أكتوبر"
+                  },
+                  "timeWords": {
+                    "en": "9:30 AM",
+                    "ar": "9:30 ص"
+                  },
+                  "leftWords": {
+                    "en": "13 days to go",
+                    "ar": "فاضل 13 يوم"
+                  }
+                },
+                "at": 1791018000000,
+                "lang": "en"
+              }
+            }
+          },
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014580000,
+          "q": "what will the weather be like that week? and send me the moving list as a file",
+          "photos": [
+            1
+          ],
+          "a": "<say>Mild and dry, good for moving.</say>\n```card\nwweather00001\n```\n\n```stats\nBoxes | 34 | about 3 a room\nMovers | 2 | Thursday 9 AM\nBudget | $420 | ▲ $60 vs the quote\n```\n\n```steps\nBook the van | Thursday, 9 AM | 10 min\nPack the kitchen last | Keep two plates out | 1 h\nRead the meter | Photo before you leave | 5 min\n```\n\n<say>The list is attached.</say>",
+          "style": "mixed",
+          "reactions": {},
+          "heard": {},
+          "cards": {
+            "wweather00001": {
+              "kind": "weather",
+              "data": {
+                "kind": "weather",
+                "place": "Lisbon",
+                "timeZone": "Europe/Lisbon",
+                "asOf": 1791014400000,
+                "now": {
+                  "temp": 22,
+                  "symbol": "fair_day",
+                  "wind": 4,
+                  "humidity": 60,
+                  "feels": null
+                },
+                "hours": [
+                  {
+                    "at": 1791014400000,
+                    "temp": 18,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791018000000,
+                    "temp": 20,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791021600000,
+                    "temp": 21,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791025200000,
+                    "temp": 22,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791028800000,
+                    "temp": 23,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791032400000,
+                    "temp": 23,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791036000000,
+                    "temp": 23,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791039600000,
+                    "temp": 22,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791043200000,
+                    "temp": 20,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "at": 1791046800000,
+                    "temp": 19,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  }
+                ],
+                "days": [
+                  {
+                    "date": "2026-10-16",
+                    "high": 24,
+                    "low": 16,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "date": "2026-10-17",
+                    "high": 23,
+                    "low": 16,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  },
+                  {
+                    "date": "2026-10-18",
+                    "high": 22,
+                    "low": 16,
+                    "symbol": "fair_day",
+                    "rain": 2
+                  },
+                  {
+                    "date": "2026-10-19",
+                    "high": 21,
+                    "low": 16,
+                    "symbol": "fair_day",
+                    "rain": 0
+                  }
+                ],
+                "source": "MET Norway"
+              }
+            }
+          },
+          "files": [
+            {
+              "title": "Moving list.pdf",
+              "format": "pdf",
+              "media": 0
+            }
+          ],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014640000,
+          "q": "which day for the movers?",
+          "photos": [],
+          "a": "Thursday or Friday?",
+          "style": "classic",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": {
+            "questions": [
+              {
+                "question": "Which day for the movers?",
+                "choices": [
+                  "Thursday",
+                  "Friday"
+                ]
+              }
+            ],
+            "answered": "Thursday"
+          },
+          "stopped": false
+        },
+        {
+          "at": 1791014700000,
+          "q": "Thursday",
+          "photos": [],
+          "a": "Thursday at 9 AM. I put it in your calendar.<heard t=\"t6\"/>And yes, Friday stays free for the cleaning.",
+          "style": "classic",
+          "reactions": {},
+          "heard": {
+            "t6": "keep friday free"
+          },
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014820000,
+          "q": "thanks!!",
+          "photos": [],
+          "a": "<react>❤️</react>",
+          "style": "mixed",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": [
+      {
+        "id": 0,
+        "url": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKMSAwIG9iago8PD4+CmVuZG9iagp0cmFpbGVyCjw8Pj4KJSVFT0YK",
+        "mime": "application/pdf"
+      },
+      {
+        "id": 1,
+        "url": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22440%22%20height%3D%22440%22%3E%3Crect%20width%3D%22440%22%20height%3D%22440%22%20fill%3D%22%232a2620%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22180%22%20r%3D%2270%22%20fill%3D%22%23c98a62%22%2F%3E%3Crect%20x%3D%22230%22%20y%3D%22120%22%20width%3D%22140%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22%23b0a89d%22%2F%3E%3C%2Fsvg%3E",
+        "mime": "image/jpeg"
+      }
+    ]
+  },
+  "chat-ar": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "المعادي ولا الزمالك",
+    "lang": "ar",
+    "dir": "rtl",
+    "name": null,
+    "made_at": 1791015000000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "المعادي ولا الزمالك",
+      "lang": "ar",
+      "dir": "rtl",
+      "made_at": 1791015000000,
+      "name": null,
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "المعادي ولا الزمالك، أنهي شقة أحسن لينا؟",
+          "photos": [],
+          "a": "<react>🤔</react><say>سؤال حلو. المعادي أوفر، والزمالك أقرب.</say>\n| | المعادي | الزمالك |\n|---|---|---|\n| الإيجار | 1,400 دولار | 1,800 دولار |\n| المشوار | 45 دقيقة | 15 دقيقة |\n\n```facts\nالتأمين | شهرين\nالزيادة | 10% في أبريل\n```\n\n<say>أعدّلك الأيام لحد النقل؟</say>",
+          "style": "mixed",
+          "reactions": {
+            "0": "😂"
+          },
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014520000,
+          "q": "آه يا ريت",
+          "photos": [],
+          "a": "<react>👍</react><say>تمام، عملتهولك.</say>\n\n```card\nfcdfixture001\n```",
+          "style": "mixed",
+          "reactions": {},
+          "heard": {},
+          "cards": {
+            "fcdfixture001": {
+              "kind": "object",
+              "data": {
+                "kind": "object",
+                "objectKind": "countdown",
+                "title": "امتحان الكيمياء",
+                "emoji": "🧪",
+                "view": {
+                  "title": "امتحان الكيمياء",
+                  "emoji": "🧪",
+                  "day": "2026-10-15",
+                  "time": null,
+                  "daysLeft": 12,
+                  "startsAt": 1792011600000,
+                  "phase": "counting",
+                  "dots": {
+                    "total": 14,
+                    "fallen": 2,
+                    "perDot": 1
+                  },
+                  "counting": [
+                    {
+                      "id": "mmahmoud000",
+                      "name": "محمود",
+                      "you": false
+                    }
+                  ],
+                  "youCount": false,
+                  "dayWords": {
+                    "en": "Thu 15 Oct",
+                    "ar": "الخميس 15 أكتوبر"
+                  },
+                  "timeWords": null,
+                  "leftWords": {
+                    "en": "12 days to go",
+                    "ar": "فاضل 12 يوم"
+                  }
+                },
+                "at": 1791018000000,
+                "lang": "ar"
+              }
+            }
+          },
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014580000,
+          "q": "شكرا",
+          "photos": [],
+          "a": "<react>❤️</react>",
+          "style": "mixed",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": []
+  }
+}
