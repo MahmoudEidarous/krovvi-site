@@ -123,9 +123,12 @@ export interface Dot {
 
 const fillOf = (d: Dot) => (typeof d.on === "number" ? Math.max(0, Math.min(1, d.on)) : d.on ? 1 : 0);
 
+/** A hundredth of a pixel: the server's HTML and the browser then write the same number, so a page hydrates clean. */
+const px = (v: number) => Math.round(v * 100) / 100;
+
 function DotSpan({ d, size, style }: { d: Dot; size: number; style?: CSSProperties }) {
   const fill = fillOf(d);
-  const s = d.now ? size + 2 : size;
+  const s = px(d.now ? size + 2 : size);
   return (
     <span aria-hidden style={{ position: "absolute", width: s, height: s, marginLeft: -s / 2, marginTop: -s / 2, ...style }}>
       <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: INK.track }} />
@@ -147,13 +150,13 @@ function DotSpan({ d, size, style }: { d: Dot; size: number; style?: CSSProperti
 /** Dots around a circle, clockwise from twelve o'clock. */
 export function DotRing({ size, dots, dot, inset = 0, label }: { size: number; dots: Dot[]; dot?: number; inset?: number; label?: string }) {
   const n = Math.max(1, dots.length);
-  const d = dot ?? Math.max(4, Math.min(14, ((Math.PI * (size - inset * 2)) / n) * 0.62));
+  const d = px(dot ?? Math.max(4, Math.min(14, ((Math.PI * (size - inset * 2)) / n) * 0.62)));
   const radius = size / 2 - inset - d / 2 - 1;
   return (
     <div style={{ position: "relative", width: size, height: size }} role={label ? "img" : undefined} aria-label={label} aria-hidden={label ? undefined : true}>
       {dots.map((x, i) => {
         const a = -Math.PI / 2 + (i / n) * Math.PI * 2;
-        return <DotSpan key={i} d={x} size={d} style={{ left: size / 2 + Math.cos(a) * radius, top: size / 2 + Math.sin(a) * radius }} />;
+        return <DotSpan key={i} d={x} size={d} style={{ left: px(size / 2 + Math.cos(a) * radius), top: px(size / 2 + Math.sin(a) * radius) }} />;
       })}
     </div>
   );
@@ -376,7 +379,7 @@ export function Pill({ text, onClick, strong, disabled }: { text: string; onClic
 /* ------------------------------------------------------------------ */
 
 /** A burst of dots and one short line, once, for a real win. With reduced motion, the line alone. */
-export function Moment({ line, play }: { line: string; play: number }) {
+export function Moment({ line, play, burst = true }: { line: string; play: number; /** False for a moment that is not a win (the kind's momentFeel): the line, no dots. */ burst?: boolean }) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -385,7 +388,7 @@ export function Moment({ line, play }: { line: string; play: number }) {
     const hide = setTimeout(() => setVisible(false), 1400);
     const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
     const c = canvas.current;
-    if (reduce || !c) return () => clearTimeout(hide);
+    if (reduce || !burst || !c) return () => clearTimeout(hide);
     const ctx = c.getContext("2d");
     if (!ctx) return () => clearTimeout(hide);
     const size = 300;
@@ -419,6 +422,8 @@ export function Moment({ line, play }: { line: string; play: number }) {
       cancelAnimationFrame(frame);
       clearTimeout(hide);
     };
+    // How it looks rides with its play: a new burst only for a new play.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [play]);
   if (!visible) return null;
   return (
