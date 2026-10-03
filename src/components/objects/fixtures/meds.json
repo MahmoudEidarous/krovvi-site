@@ -9,7 +9,6 @@
     "version": 2,
     "view": {
       "title": "My medicines",
-      "emoji": "💊",
       "forName": null,
       "today": "2026-10-03",
       "clock": "12:00",
@@ -154,8 +153,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -169,13 +168,12 @@
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": "💊",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Mom’s medicines",
-      "emoji": "💊",
       "forName": "Mom",
       "today": "2026-10-03",
       "clock": "12:00",
@@ -448,8 +446,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -463,13 +461,12 @@
     "ok": true,
     "kind": "meds",
     "title": "أدوية ماما",
-    "emoji": "💊",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "أدوية ماما",
-      "emoji": "💊",
       "forName": "ماما",
       "today": "2026-10-03",
       "clock": "12:00",
@@ -714,8 +711,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -735,7 +732,6 @@
     "version": 7,
     "view": {
       "title": "Grandpa’s medicines",
-      "emoji": "💊",
       "forName": "Grandpa",
       "today": "2026-10-03",
       "clock": "12:00",
@@ -1296,8 +1292,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -1311,13 +1307,12 @@
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": "💊",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Mom’s medicines",
-      "emoji": "💊",
       "forName": "Mom",
       "today": "2026-10-03",
       "clock": "20:30",
@@ -1599,8 +1594,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -1614,13 +1609,12 @@
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": "💊",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Mom’s medicines",
-      "emoji": "💊",
       "forName": "Mom",
       "today": "2026-10-03",
       "clock": "12:00",
@@ -1889,8 +1883,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
@@ -1904,13 +1898,12 @@
     "ok": true,
     "kind": "meds",
     "title": "أدوية ماما",
-    "emoji": "💊",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "أدوية ماما",
-      "emoji": "💊",
       "forName": "ماما",
       "today": "2026-10-03",
       "clock": "12:00",
@@ -2151,8 +2144,8 @@
     "role": "member",
     "momentWords": {
       "day": {
-        "en": "All of today’s doses given",
-        "ar": "كل جرعات النهارده اتاخدت"
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
       }
     },
     "momentFeel": {},
