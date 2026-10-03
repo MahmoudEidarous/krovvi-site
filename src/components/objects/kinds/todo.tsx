@@ -68,8 +68,18 @@ function subOf(t: TodoTask, lang: "en" | "ar"): string {
 export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
   const v = view as TodoView;
   const [allDone, setAllDone] = useState(false);
-  const nameOf = (id: string | null) => (id ? (page.members.find((m) => m.id === id)?.name ?? "") : "");
-  const dots: Dot[] = v.tally.dots.map((d) => ({ on: d.done, tint: d.by ? tintOf(nameOf(d.by)) : INK.fg }));
+  // Who ticked each dot, by name for its tint: from the view's own people first, since a card frozen in a shared chat comes with no members.
+  const names = new Map<string, string>();
+  for (const t of [...v.open, ...v.done]) {
+    if (t.who) names.set(t.who.id, t.who.name);
+    if (t.done?.by) names.set(t.done.by.id, t.done.by.name);
+  }
+  for (const p of v.people) names.set(p.id, p.name);
+  for (const m of page.members) names.set(m.id, m.name);
+  const dots: Dot[] = v.tally.dots.map((d) => {
+    const name = d.by ? names.get(d.by) : undefined;
+    return { on: d.done, tint: name ? tintOf(name) : INK.fg };
+  });
   const done = allDone ? v.done : v.done.slice(0, 6);
   const row = (t: TodoTask, i: number) => {
     const op = t.done ? "untick" : "tick";

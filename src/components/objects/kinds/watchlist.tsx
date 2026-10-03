@@ -90,7 +90,7 @@ function standing(t: WatchTitle, solo: boolean, lang: "en" | "ar"): string {
 }
 
 /** A title's tile: its initials in Krovvi's dots in its own tint, on a quiet wash of the tint; an Arabic title's letters read from the right. */
-function TitleTile({ t, size, radius = 11 }: { t: Pick<WatchTitle, "name" | "initials" | "tint">; size: number; radius?: number }) {
+function TitleTile({ t, size, radius = 11 }: { t: Pick<WatchTitle, "name" | "initials" | "tint" | "type">; size: number; radius?: number }) {
   const tint = VOICE[t.tint % VOICE.length];
   const dots = useMemo(() => {
     const letters = Array.from(t.initials).slice(0, 2).map((ch) => initialOf(ch));
@@ -120,6 +120,11 @@ function TitleTile({ t, size, radius = 11 }: { t: Pick<WatchTitle, "name" | "ini
             <circle key={i} cx={d.cx} cy={d.cy} r={dots.r} fill={tint} />
           ))}
         </svg>
+      ) : t.initials === "?" ? (
+        // No letters to draw ("1917"): the mark for what it is, a film or a show.
+        <span className="relative" style={{ fontSize: size * 0.4, lineHeight: 1 }}>
+          {t.type === "show" ? "📺" : "🎬"}
+        </span>
       ) : (
         <span className="relative" style={{ ...STEP.display, color: tint, fontSize: size * 0.36 }}>
           {t.initials}

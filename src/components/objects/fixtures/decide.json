@@ -52,6 +52,12 @@
         "ar": "سبب اتغير"
       }
     },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
+      }
+    },
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
@@ -396,6 +402,12 @@
         "ar": "سبب اتغير"
       }
     },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
+      }
+    },
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
@@ -728,6 +740,12 @@
       "crack": {
         "en": "A reason changed",
         "ar": "سبب اتغير"
+      }
+    },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
       }
     },
     "kindName": {
@@ -2197,6 +2215,12 @@
         "ar": "سبب اتغير"
       }
     },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
+      }
+    },
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
@@ -2576,6 +2600,12 @@
       "crack": {
         "en": "A reason changed",
         "ar": "سبب اتغير"
+      }
+    },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
       }
     },
     "kindName": {
@@ -2992,6 +3022,12 @@
         "ar": "سبب اتغير"
       }
     },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
+      }
+    },
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
@@ -3199,6 +3235,12 @@
       "crack": {
         "en": "A reason changed",
         "ar": "سبب اتغير"
+      }
+    },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
       }
     },
     "kindName": {
@@ -3538,6 +3580,12 @@
       "crack": {
         "en": "A reason changed",
         "ar": "سبب اتغير"
+      }
+    },
+    "momentFeel": {
+      "crack": {
+        "burst": false,
+        "haptic": "crack"
       }
     },
     "kindName": {
