@@ -20,6 +20,9 @@ import { say, type Words } from "@/lib/objects";
 import { EASE, Face, INK, Money, Pill, Row, Section, STEP, Tick } from "../kit";
 import type { KindPage } from "../types";
 
+/** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/spending.ts SpendingView). */
 interface Bill {
   id: string;
@@ -152,7 +155,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
 
   const over = v.left < 0;
   const n = v.period.left;
-  const month = `${say(v.period.words, lang)}, ${n === 1 ? say(C.lastDay, lang) : `${n} ${say(n <= 10 ? C.daysLeftFew : C.daysLeft, lang)}`}`;
+  const month = list([say(v.period.words, lang), n === 1 ? say(C.lastDay, lang) : `${n} ${say(n <= 10 ? C.daysLeftFew : C.daysLeft, lang)}`], lang);
   const most = Math.max(1, ...v.days.map((d) => d.spent));
   return (
     <div>
@@ -170,7 +173,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
       </section>
 
       <Section title={say(C.thisMonth, lang)}>
-        <div dir="ltr" className="flex flex-wrap" style={{ gap: 5, padding: "6px 16px 0" }} aria-label={`${v.quiet} ${say(v.quiet === 1 ? C.quietOne : C.quietMany, lang)}`}>
+        <div className="flex flex-wrap" style={{ gap: 5, padding: "6px 16px 0" }} aria-label={`${v.quiet} ${say(v.quiet === 1 ? C.quietOne : C.quietMany, lang)}`}>
           {v.days.map((d) => {
             const s = d.today ? 11 : 9;
             return (
@@ -191,7 +194,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
           })}
         </div>
         <p style={{ ...STEP.meta, color: INK.muted, padding: "10px 16px 4px" }}>
-          {`${say(v.words.spent, lang)}${v.quiet ? `, ${v.quiet === 1 ? say(C.quietOne, lang) : `${v.quiet} ${say(C.quietMany, lang)}`}` : ""}${v.last ? `. ${say(C.lastMonth, lang)}: ${say(v.last.words, lang)}` : ""}`}
+          {`${list([say(v.words.spent, lang), v.quiet > 0 && (v.quiet === 1 ? say(C.quietOne, lang) : `${v.quiet} ${say(C.quietMany, lang)}`)], lang)}${v.last ? `. ${say(C.lastMonth, lang)}: ${say(v.last.words, lang)}` : ""}`}
         </p>
         <p style={{ ...STEP.meta, color: INK.muted, padding: "0 16px 12px" }}>{say(C.strip, lang)}</p>
       </Section>
@@ -262,7 +265,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               first={i === 0}
               lead={<span style={{ fontSize: 20 }} aria-hidden>{x.emoji}</span>}
               title={x.refund ? `${x.what} (${say(C.back, lang)})` : x.what}
-              sub={`${say(x.byName, lang)}, ${say(x.dayWords, lang)}`}
+              sub={list([say(x.byName, lang), say(x.dayWords, lang)], lang)}
               value={<Money minor={x.amount} currency={v.currency} lang={lang} step="body" color={x.refund ? INK.soft : INK.fg} sign={x.refund} />}
             />
           ))

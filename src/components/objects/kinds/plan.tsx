@@ -20,6 +20,9 @@ import { say, type Words } from "@/lib/objects";
 import { EASE, FaceStack, INK, Pill, Section, STEP, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
+/** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/plan.ts PlanView). */
 type Vote = "yes" | "maybe" | null;
 type Answer = "yes" | "maybe" | "no";
@@ -132,7 +135,7 @@ function OptionButton({ o, g, lang, onVote, disabled }: { o: Opt; g: Group; lang
       }}
       onContextMenu={(e) => e.preventDefault()}
       aria-pressed={!!o.youVote}
-      aria-label={`${words}: ${o.yes.length} ${say(C.yes, lang)}${o.maybe.length ? `, ${o.maybe.length} ${say(C.maybeShort, lang)}` : ""}`}
+      aria-label={`${words}: ${list([`${o.yes.length} ${say(C.yes, lang)}`, o.maybe.length > 0 && `${o.maybe.length} ${say(C.maybeShort, lang)}`], lang)}`}
       className="flex w-full items-center text-start active:scale-[0.99]"
       style={{
         gap: 12,
@@ -165,7 +168,7 @@ function OptionButton({ o, g, lang, onVote, disabled }: { o: Opt; g: Group; lang
         </span>
         {count ? (
           <span className="block" style={{ ...STEP.meta, color: INK.muted }}>
-            {`${o.yes.length} ${say(C.yes, lang)}${o.maybe.length ? `, ${o.maybe.length} ${say(C.maybeShort, lang)}` : ""}`}
+            {list([`${o.yes.length} ${say(C.yes, lang)}`, o.maybe.length > 0 && `${o.maybe.length} ${say(C.maybeShort, lang)}`], lang)}
           </span>
         ) : null}
       </span>
@@ -264,13 +267,13 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
             {v.when ? <span style={{ ...STEP.title, color: INK.soft }}>{say(v.when.leftWords, lang)}</span> : null}
             {v.when && (v.place || v.what) ? (
               <span style={{ ...STEP.body, color: INK.soft }}>
-                <bdi dir={dirOf(v.place ?? v.what ?? "")}>{[v.place, v.what].filter(Boolean).join(", ")}</bdi>
+                <bdi dir={dirOf(v.place ?? v.what ?? "")}>{list([v.place, v.what], lang)}</bdi>
               </span>
             ) : null}
           </div>
         ) : (
           <div className="flex flex-col items-center text-center" style={{ gap: 4 }}>
-            <span style={{ ...STEP.label, color: INK.muted }}>{`${say(open.label, lang)}?`}</span>
+            <span style={{ ...STEP.label, color: INK.muted }}>{`${say(open.label, lang)}${lang === "ar" ? "؟" : "?"}`}</span>
             <span style={{ ...STEP.figure }}>
               <bdi dir={dirOf(point ?? "")}>{point}</bdi>
             </span>
@@ -291,7 +294,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
         {!decided && open ? (
           <div className="flex w-full flex-wrap items-center justify-between" style={{ gap: 8 }}>
             <span style={{ ...STEP.meta, color: INK.muted }}>
-              {`${v.voted} ${say(C.of, lang)} ${v.people} ${say(C.voted, lang)}${v.closesWords && !v.closed ? `, ${lower(say(v.closesWords, lang))}` : ""}`}
+              {list([`${v.voted} ${say(C.of, lang)} ${v.people} ${say(C.voted, lang)}`, v.closesWords && !v.closed && lower(say(v.closesWords, lang))], lang)}
               {v.closed ? `. ${say(C.closedNote, lang)}` : ""}
             </span>
             {mayVote ? (
@@ -314,7 +317,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
       {groups
         .filter((g) => g !== open)
         .map((g) => (
-          <Section key={g.group} title={`${say(g.label, lang)}?`}>
+          <Section key={g.group} title={`${say(g.label, lang)}${lang === "ar" ? "؟" : "?"}`}>
             <div className="flex flex-col" style={{ gap: 8, padding: "4px 12px 12px" }}>
               {g.options.map((o) => (
                 <OptionButton key={o.id} o={o} g={g} lang={lang} disabled={!can("vote") || !!g.decided || v.closed} onVote={can("vote") && !g.decided && !v.closed ? vote : undefined} />

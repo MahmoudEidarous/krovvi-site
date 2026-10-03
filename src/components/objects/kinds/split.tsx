@@ -19,6 +19,9 @@ import { say, type Words } from "@/lib/objects";
 import { EASE, Face, FaceStack, INK, Money, Pill, Row, Section, STEP, moneyParts, tintOf } from "../kit";
 import type { KindPage } from "../types";
 
+/** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/split.ts SplitView). */
 interface Person {
   id: string;
@@ -272,7 +275,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 first={i === 0}
                 lead={<span style={{ fontSize: 20 }} aria-hidden>{e.emoji ?? "🧾"}</span>}
                 title={e.what}
-                sub={[who, say(e.dayWords, lang), part, e.original ? `${say(C.was, lang)} ${say(e.original.words, lang)}` : null].filter(Boolean).join(", ")}
+                sub={list([who, say(e.dayWords, lang), part, e.original && `${say(C.was, lang)} ${say(e.original.words, lang)}`], lang)}
                 value={<Money minor={e.amount} currency={v.currency} lang={lang} step="body" />}
               />
             );

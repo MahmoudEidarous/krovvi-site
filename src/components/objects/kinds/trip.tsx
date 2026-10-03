@@ -19,6 +19,9 @@ import { say, type Words } from "@/lib/objects";
 import { EASE, FaceStack, INK, Pill, Row, Section, STEP, Tick, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
+/** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/trip.ts TripView). */
 interface Stop {
   place: string;
@@ -205,7 +208,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
             first
             lead={<span style={{ fontSize: 20 }} aria-hidden>{next.emoji}</span>}
             title={next.title}
-            sub={`${say(next.whenWords, lang)}, ${say(v.next!.inWords, lang).toLowerCase()}`}
+            sub={list([say(next.whenWords, lang), say(v.next!.inWords, lang).toLowerCase()], lang)}
             value={next.code ? <span style={{ ...STEP.label, color: INK.pick }}>{`${say(C.code, lang)} ${next.code}`}</span> : undefined}
           />
         </Section>
@@ -219,7 +222,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               first={i === 0}
               lead={<span style={{ ...STEP.label, color: d.today ? INK.pick : INK.muted }}>{i + 1}</span>}
               title={say(d.label, lang)}
-              sub={d.things.length ? d.things.map((t) => `${t.timeWords ? `${say(t.timeWords, lang)} ` : ""}${t.emoji} ${t.text}`).join(", ") : say(C.free, lang)}
+              sub={d.things.length ? list(d.things.map((t) => `${t.timeWords ? `${say(t.timeWords, lang)} ` : ""}${t.emoji} ${t.text}`), lang) : say(C.free, lang)}
               muted={!d.things.length}
             />
           ))}
@@ -237,7 +240,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 first={i === 0}
                 lead={names.length ? <FaceStack names={names} size={22} max={3} /> : <span style={{ fontSize: 20 }} aria-hidden>{x.emoji ?? "📍"}</span>}
                 title={`${x.emoji ? `${x.emoji} ` : ""}${x.text}`}
-                sub={names.length ? `${names.length} ${say(names.length === 1 ? C.vote : C.votes, lang)}: ${names.join(", ")}` : null}
+                sub={names.length ? `${names.length} ${say(names.length === 1 ? C.vote : C.votes, lang)}: ${list(names, lang)}` : null}
                 value={can("vote") ? <Pill text={say(youLike ? C.liked : C.like, lang)} strong={!youLike} disabled={busy} onClick={() => void like(x)} /> : undefined}
               />
             );
@@ -269,7 +272,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 first={i === 0}
                 lead={<Tick done={mine} by={mine ? me?.name : null} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
                 title={p.text}
-                sub={p.done ? say(C.everyone, lang) : by.length ? `${say(C.packedBy, lang)} ${by.join(", ")}` : null}
+                sub={p.done ? say(C.everyone, lang) : by.length ? `${say(C.packedBy, lang)} ${list(by, lang)}` : null}
                 muted={mine}
               />
             );
@@ -287,7 +290,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 first={i === 0}
                 lead={<Tick done={by.length > 0} by={by[0] ?? null} label={p.text} onClick={can("packed") && me && !busy ? () => void pack(p) : undefined} />}
                 title={p.text}
-                sub={by.length ? `${say(C.packedBy, lang)} ${by.join(", ")}` : null}
+                sub={by.length ? `${say(C.packedBy, lang)} ${list(by, lang)}` : null}
                 muted={by.length > 0}
               />
             );

@@ -322,6 +322,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -958,6 +959,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -1594,6 +1596,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -4659,6 +4662,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -5133,6 +5137,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -5765,6 +5770,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
@@ -6378,8 +6384,8 @@
         "at": 1791016200000,
         "name": "Lina",
         "line": {
-          "en": "Lina: $20 back for Shoes",
-          "ar": "Lina: مرتجع Shoes $20"
+          "en": "A spend was added",
+          "ar": "اتضاف مصروف"
         },
         "moment": null
       }
@@ -6391,6 +6397,7 @@
         "ar": "الفواتير اتدفعت"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"

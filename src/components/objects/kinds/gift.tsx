@@ -18,6 +18,9 @@ import { say, type Words } from "@/lib/objects";
 import { EASE, Face, INK, Money, Pill, Row, Section, STEP, Tick, dirOf, moneyParts } from "../kit";
 import type { KindPage } from "../types";
 
+/** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/gift.ts GiftView). */
 interface Pledge {
   id: string;
@@ -204,7 +207,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
           <span style={{ ...STEP.title, color: INK.muted }}>{v.goalWords ? `${say(C.of, lang)} ${say(v.goalWords, lang)}` : say(C.soFar, lang)}</span>
         </span>
         <span style={{ ...STEP.body, color: INK.soft }}>
-          {count ? [`${count} ${say(C.in, lang)}`, `${paidCount} ${say(C.paid, lang)}`, v.leftWords ? say(v.leftWords, lang).toLowerCase() : null].filter(Boolean).join(", ") : say(C.nobody, lang)}
+          {count ? list([`${count} ${say(C.in, lang)}`, `${paidCount} ${say(C.paid, lang)}`, v.leftWords && say(v.leftWords, lang).toLowerCase()], lang) : say(C.nobody, lang)}
         </span>
         <div style={{ padding: "12px 0" }}>
           <Box total={v.box.dots} filled={filled} solid={solid} open={open} label={`${text(pledged, v.currency, lang)}. ${say(v.box.legend, lang)}`} />
@@ -281,8 +284,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 key={x.id}
                 first={i === 0}
                 lead={<span style={{ fontSize: 20 }} aria-hidden>{x.emoji ?? "🎁"}</span>}
-                title={x.picked ? `${x.text}, ${say(C.picked, lang)}` : x.text}
-                sub={[[x.priceWords ? say(x.priceWords, lang) : null, votes ? `${votes} ♥` : null].filter(Boolean).join(", "), x.why ? `${x.why}${x.memory ? ` (${say(C.memory, lang)})` : ""}` : null].filter(Boolean).join(". ")}
+                title={x.picked ? list([x.text, say(C.picked, lang)], lang) : x.text}
+                sub={[list([x.priceWords && say(x.priceWords, lang), votes > 0 && `${votes} ♥`], lang), x.why ? `${x.why}${x.memory ? ` (${say(C.memory, lang)})` : ""}` : null].filter(Boolean).join(". ")}
                 value={
                   can("vote") ? (
                     <Pill
