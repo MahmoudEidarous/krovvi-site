@@ -24,11 +24,11 @@ interface Person {
   inRow: number;
   more: boolean;
   last30: number;
+  week?: { done: number; of: number };
 }
 interface Habit {
   id: string;
   name: string;
-  emoji: string;
   every: "day" | "days" | "week";
   remind: string | null;
   often: Words;
@@ -43,8 +43,12 @@ interface HabitsView {
 
 const C = {
   dayDot: { en: "Each dot is a day.", ar: "كل نقطة يوم." },
-  doneToday: { en: "done today", ar: "اتعملوا النهارده" },
+  today: { en: "Today", ar: "النهارده" },
+  allDone: { en: "All done today", ar: "كله تم النهارده" },
+  nothingDue: { en: "Nothing due today", ar: "مفيش حاجة عليك النهارده" },
   nothing: { en: "No habits yet", ar: "لسه مفيش عادات" },
+  inARow: { en: "In a row", ar: "ورا بعض" },
+  rest: { en: "Not due today", ar: "مش عليها النهارده" },
 } satisfies Record<string, Words>;
 
 function daysAr(n: number): string {
@@ -108,50 +112,69 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
   const v = view as HabitsView;
   const pact = v.people.length > 1;
   const checks = can("check");
+  const me = v.people.find((p) => p.you) ?? null;
+  // Today's habits for the reader: due today, done today, or a week habit with times still to go.
+  const today = me
+    ? v.habits.filter((h) => {
+        const row = h.people.find((p) => p.id === me.id);
+        return !!row && (h.dueToday || row.doneToday || (h.every === "week" && !!row.week && row.week.done < row.week.of));
+      })
+    : [];
+  const headline = v.you && v.you.due ? (v.you.done >= v.you.due ? say(C.allDone, lang) : lang === "ar" ? `${v.you.done} من ${v.you.due} اتعملوا` : `${v.you.done} of ${v.you.due} done`) : say(C.nothingDue, lang);
   return (
     <div>
-      {v.you ? (
-        <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "22px 16px", gap: 2 }}>
-          <span style={{ ...STEP.display, fontSize: 44, lineHeight: "50px" }}>{lang === "ar" ? `${v.you.done} من ${v.you.due}` : `${v.you.done} of ${v.you.due}`}</span>
-          <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.doneToday, lang)}</span>
+      {me && v.habits.length ? (
+        <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "20px 12px 22px", gap: 18 }}>
+          <span className="flex flex-col items-center" style={{ gap: 2 }}>
+            <span style={{ ...STEP.label, color: INK.muted }}>{say(C.today, lang)}</span>
+            <span style={STEP.title}>{headline}</span>
+          </span>
+          {today.length ? (
+            <div className="flex flex-wrap justify-center" style={{ rowGap: 16, columnGap: 8 }}>
+              {today.map((h) => {
+                const row = h.people.find((p) => p.id === me.id)!;
+                return (
+                  <div key={h.id} className="flex flex-col items-center" style={{ width: 96, gap: 8 }}>
+                    <Tick
+                      done={row.doneToday}
+                      size={58}
+                      label={lang === "ar" ? `علّم إن ${h.name} اتعملت النهارده` : `Mark ${h.name} done today`}
+                      onClick={checks && !busy ? () => void act(row.doneToday ? "uncheck" : "check", { habit: h.id }) : undefined}
+                    />
+                    <span className="text-center" style={{ ...STEP.meta, color: row.doneToday ? INK.fg : INK.soft, maxWidth: 96, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
+                      <bdi dir="auto">{h.name}</bdi>
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
         </section>
       ) : null}
 
       {v.habits.map((h) => {
         const mine = h.people.find((p) => p.you);
         const people = mine ? [mine, ...h.people.filter((p) => p.id !== mine.id)] : h.people;
+        const often = [say(h.often, lang), !h.dueToday && h.every !== "week" ? say(C.rest, lang) : null].filter(Boolean).join(" · ");
         return (
           <Section key={h.id}>
-            <div className="flex items-center" style={{ gap: 12, padding: "14px 16px 8px" }}>
-              <span style={{ ...STEP.title, width: 28, textAlign: "center" }} aria-hidden>
-                {h.emoji}
-              </span>
+            <div className="flex items-end" style={{ gap: 12, padding: "14px 16px 6px" }}>
               <span className="min-w-0 flex-1">
                 <span className="block" style={{ ...STEP.title }}>
                   <bdi dir="auto">{h.name}</bdi>
                 </span>
                 <span className="block" style={{ ...STEP.meta, color: INK.muted }}>
-                  {say(h.often, lang)}
+                  {often}
                 </span>
               </span>
-              {checks ? (
-                <Tick
-                  done={!!mine?.doneToday}
-                  size={30}
-                  label={lang === "ar" ? `علّم إن ${h.name} اتعملت النهارده` : `Mark ${h.name} done today`}
-                  onClick={busy ? undefined : () => void act(mine?.doneToday ? "uncheck" : "check", { habit: h.id })}
-                />
-              ) : null}
+              <span style={{ ...STEP.meta, color: INK.muted, paddingBottom: 1 }}>{say(C.inARow, lang)}</span>
             </div>
             {people.map((p) => (
-              <div key={p.id} className="flex items-center" style={{ gap: 10, padding: "8px 16px" }} aria-label={`${p.name}, ${count(p, h.every === "week", lang)}, ${p.last30}/30`}>
+              <div key={p.id} className="flex items-center" style={{ gap: 10, padding: "7px 16px" }} aria-label={`${p.name}, ${count(p, h.every === "week", lang)}, ${p.last30}/30`}>
                 {pact ? <Face name={p.name} size={22} /> : null}
                 <Chain dots={p.dots} tint={pact ? tintOf(p.name) : INK.fg} />
-                <span className="min-w-0 flex-1" style={{ textAlign: "end" }}>
-                  <span className="block" style={{ ...STEP.meta, color: INK.soft }}>
-                    {count(p, h.every === "week", lang)}
-                  </span>
-                  <span className="block" style={{ ...STEP.meta, color: INK.muted }}>{`${p.last30}/30`}</span>
+                <span className="min-w-0 flex-1" style={{ ...STEP.label, color: p.inRow ? INK.fg : INK.muted, textAlign: "end", whiteSpace: "nowrap" }}>
+                  {count(p, h.every === "week", lang)}
                 </span>
               </div>
             ))}
