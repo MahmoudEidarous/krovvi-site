@@ -15,10 +15,12 @@ import { initialOf } from "@/lib/letter-dots";
 import { dirOf, INK, STEP, VOICE } from "../kit";
 import { Mark, type MarkName } from "../mark";
 
-export function NameTile({ t, size, radius = 11, fallback = "film" }: { t: { name: string; initials: string; tint: number }; size: number; radius?: number; fallback?: MarkName }) {
-  const tint = VOICE[t.tint % VOICE.length];
+export function NameTile({ t, size, radius = 11, fallback = "film" }: { t: { name: string; initials?: string; tint?: number }; size: number; radius?: number; fallback?: MarkName }) {
+  // A payload from a server older than this page (no initials yet) draws the mark rather than breaking.
+  const initials = t.initials || "?";
+  const tint = VOICE[(t.tint ?? 0) % VOICE.length];
   const dots = useMemo(() => {
-    const letters = Array.from(t.initials).slice(0, 2).map((ch) => initialOf(ch));
+    const letters = Array.from(initials).slice(0, 2).map((ch) => initialOf(ch));
     if (!letters.length || letters.some((l) => "text" in l)) return null;
     const drawn = letters as Array<{ dots: Array<[number, number]>; cols: number; rows: number }>;
     const order = dirOf(t.name) === "rtl" ? [...drawn].reverse() : drawn;
@@ -35,7 +37,7 @@ export function NameTile({ t, size, radius = 11, fallback = "film" }: { t: { nam
       at += l.cols + 1.5;
     }
     return { out, r: pitch * 0.36 };
-  }, [t.initials, t.name, size]);
+  }, [initials, t.name, size]);
   return (
     <span className="relative inline-flex shrink-0 items-center justify-center overflow-hidden" style={{ width: size, height: size, borderRadius: radius, background: INK.surfaceHi }} aria-hidden>
       <span className="absolute inset-0" style={{ background: tint, opacity: 0.16 }} />
@@ -45,13 +47,13 @@ export function NameTile({ t, size, radius = 11, fallback = "film" }: { t: { nam
             <circle key={i} cx={d.cx} cy={d.cy} r={dots.r} fill={tint} />
           ))}
         </svg>
-      ) : t.initials === "?" ? (
+      ) : initials === "?" ? (
         <span className="relative inline-flex">
           <Mark name={fallback} size={Math.round(size * 0.42)} color={tint} />
         </span>
       ) : (
         <span className="relative" style={{ ...STEP.display, color: tint, fontSize: size * 0.36 }}>
-          {t.initials}
+          {initials}
         </span>
       )}
     </span>
