@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ token: st
   if (/^[A-Za-z0-9_-]{20,40}$/.test(token)) {
     try {
       const res = await fetch(`${OBJECTS_API}?t=${encodeURIComponent(token)}&meta=1`, { cache: "no-store", signal: AbortSignal.timeout(2500) });
-      const meta = (await res.json()) as { ok?: boolean; title?: string; emoji?: string | null };
-      if (meta.ok && meta.title) title = `${meta.emoji ? `${meta.emoji} ` : ""}${meta.title}`;
+      const meta = (await res.json()) as { ok?: boolean; title?: string };
+      if (meta.ok && meta.title) title = meta.title;
     } catch {
       // The preview keeps the plain name; the page still opens.
     }

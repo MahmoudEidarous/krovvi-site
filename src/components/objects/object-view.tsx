@@ -15,6 +15,7 @@ import { Mark } from "@/components/mark";
 import { JOIN_URL } from "@/lib/site";
 import { act as actOn, browserLang, forgetSeat, readPage, say, seatOf, takeSeat, undo as undoOn, type Lang, type PagePayload, type Words } from "@/lib/objects";
 import { dirOf, Face, FaceStack, INK, Moment, Row, Section, STEP } from "./kit";
+import { KindMark } from "./mark";
 import { KIND_PAGES } from "./kinds";
 
 const C = {
@@ -177,8 +178,8 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
   return (
     <Shell lang={lang}>
       <header className="flex items-center gap-3" style={{ padding: "8px 0 16px" }}>
-        <span className="flex shrink-0 items-center justify-center" style={{ width: 48, height: 48, borderRadius: 14, background: INK.surfaceHi, fontSize: 26 }} aria-hidden>
-          {page.emoji ?? page.kindEmoji}
+        <span className="flex shrink-0 items-center justify-center" style={{ width: 48, height: 48, borderRadius: 14, background: INK.surfaceHi }} aria-hidden>
+          <KindMark kind={page.kind} size={26} />
         </span>
         <span className="min-w-0 flex-1">
           <h1 className="truncate" style={{ ...STEP.title, fontSize: 20, lineHeight: "25px", textAlign: "start" }}>

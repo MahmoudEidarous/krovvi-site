@@ -9,6 +9,7 @@
 
 import { INK, STEP } from "@/components/objects/kit";
 import { KIND_PAGES } from "@/components/objects/kinds";
+import { KindMark } from "@/components/objects/mark";
 import type { PagePayload } from "@/lib/objects";
 
 export interface ShareCard {
@@ -108,7 +109,6 @@ function FrozenObject({ data, lang }: { data: any; lang: "en" | "ar" }) {
     ok: true,
     kind: data.objectKind,
     title: data.title,
-    emoji: data.emoji,
     lang: data.lang ?? lang,
     state: "live",
     version: 0,
@@ -121,13 +121,12 @@ function FrozenObject({ data, lang }: { data: any; lang: "en" | "ar" }) {
     role: "viewer",
     momentWords: {},
     kindName: { en: data.objectKind, ar: data.objectKind },
-    kindEmoji: data.emoji ?? "",
   } as unknown as PagePayload;
   return (
     <div className="mb-3" style={{ ...CARD, padding: 12 }}>
       <div className="flex items-center gap-3" style={{ padding: "4px 4px 12px" }}>
-        <span className="flex items-center justify-center" style={{ width: 36, height: 36, borderRadius: 11, background: INK.surfaceHi, fontSize: 20 }} aria-hidden>
-          {data.emoji}
+        <span className="flex items-center justify-center" style={{ width: 36, height: 36, borderRadius: 11, background: INK.surfaceHi }} aria-hidden>
+          <KindMark kind={data.objectKind} size={20} />
         </span>
         <span className="min-w-0 flex-1">
           <span className="block truncate" style={{ ...STEP.title, textAlign: "start" }}>
