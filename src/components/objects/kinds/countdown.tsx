@@ -14,7 +14,6 @@ import type { KindPage } from "../types";
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/countdown.ts CountdownView). */
 interface CountdownView {
   title: string;
-  emoji: string;
   day: string;
   time: string | null;
   daysLeft: number;
@@ -37,6 +36,7 @@ const C = {
   few: { en: "days to go", ar: "أيام فاضلة" },
   many: { en: "days to go", ar: "يوم فاضل" },
   you: { en: "you", ar: "إنت" },
+  youCap: { en: "You", ar: "إنت" },
 } satisfies Record<string, Words>;
 
 export const Page: KindPage = ({ view, lang, act, can, busy }) => {
@@ -66,7 +66,8 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
         }
       >
         {v.counting.map((c, i) => (
-          <Row key={c.id} first={i === 0} lead={<Face name={c.name} size={30} />} title={c.you ? `${c.name} (${say(C.you, lang)})` : c.name} />
+          // "You" across from the name, never glued to it, so an Arabic name never pulls it to the wrong side.
+          <Row key={c.id} first={i === 0} lead={<Face name={c.name} size={30} />} title={c.name} value={c.you ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.youCap, lang)}</span> : undefined} />
         ))}
       </Section>
     </div>

@@ -84,6 +84,7 @@ const C = {
   add: { en: "Add", ar: "ضيف" },
   placeholder: { en: "A present idea", ar: "فكرة هدية" },
   you: { en: "you", ar: "إنت" },
+  youCap: { en: "You", ar: "إنت" },
 } satisfies Record<string, Words>;
 
 const DECIMALS: Record<string, number> = { JPY: 0, KRW: 0, KWD: 3, BHD: 3, OMR: 3, JOD: 3, TND: 3 };
@@ -272,7 +273,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               key={p.id}
               first={i === 0}
               lead={<Face name={p.name} size={28} />}
-              title={p.you ? `${p.name} (${say(C.you, lang)})` : p.name}
+              title={p.name}
+              sub={p.you ? say(C.youCap, lang) : null}
               value={
                 <span className="flex items-center" style={{ gap: 12 }}>
                   {p.you && part ? <Money minor={part.amount} currency={v.currency} lang={lang} step="body" /> : p.amount !== null ? <Money minor={p.amount} currency={v.currency} lang={lang} step="body" /> : null}
@@ -281,7 +283,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               }
             />
           ))}
-          {mine && !held && me ? <Row lead={<Face name={me.name} size={28} />} title={`${me.name} (${say(C.you, lang)})`} value={<Money minor={mine.amount} currency={v.currency} lang={lang} step="body" />} /> : null}
+          {mine && !held && me ? <Row lead={<Face name={me.name} size={28} />} title={me.name} sub={say(C.youCap, lang)} value={<Money minor={mine.amount} currency={v.currency} lang={lang} step="body" />} /> : null}
           <p style={{ ...STEP.meta, color: INK.muted, padding: "8px 16px 12px" }}>{say(C.hidden, lang)}</p>
         </Section>
       ) : null}

@@ -50,6 +50,8 @@ const C = {
   yes: { en: "Yes", ar: "آه" },
   no: { en: "No", ar: "لأ" },
   swipedAll: { en: "You’ve swiped them all", ar: "خلّصت كل الأفكار" },
+  nothingYet: { en: "Nothing to swipe yet", ar: "لسه مفيش حاجة" },
+  nothingYetHint: { en: "When dinner ideas come in, they show here.", ar: "لما تيجي أفكار للعشا، هتظهر هنا." },
   week: { en: "This week", ar: "الأسبوع ده" },
   tonight: { en: "Tonight", ar: "النهارده" },
   matches: { en: "Everyone said yes", ar: "الكل قال آه" },
@@ -119,6 +121,13 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
   }));
   return (
     <div>
+      {/* A link opened on a list with nothing in it yet: say so plainly, never an empty page. */}
+      {!v.canSwipe && !v.ideas.length ? (
+        <section className="mb-3 flex flex-col items-center text-center" style={{ background: INK.surface, borderRadius: 17, padding: "28px 20px", gap: 6 }}>
+          <span style={STEP.title}>{say(C.nothingYet, lang)}</span>
+          <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.nothingYetHint, lang)}</span>
+        </section>
+      ) : null}
       {v.canSwipe ? (
         <div className="mb-4">
           <Deck lang={lang}
@@ -130,7 +139,11 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
             height={340}
             empty={
               <div className="flex h-full w-full items-center justify-center" style={{ background: INK.surface, borderRadius: 17 }}>
-                <span style={STEP.title}>{say(C.swipedAll, lang)}</span>
+                {/* Swiped through, or nothing yet: a guest on a new list is never told they swiped it all. */}
+                <span className="flex flex-col items-center text-center" style={{ gap: 6, padding: "0 24px" }}>
+                  <span style={STEP.title}>{say(v.ideas.length ? C.swipedAll : C.nothingYet, lang)}</span>
+                  {v.ideas.length ? null : <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.nothingYetHint, lang)}</span>}
+                </span>
               </div>
             }
           />

@@ -61,6 +61,8 @@ const C = {
   markWatched: { en: "Watched", ar: "اتفرجنا" },
   notWatched: { en: "Not watched", ar: "لسه" },
   swipedAll: { en: "Nothing left to swipe", ar: "مفيش حاجة تانية" },
+  nothingYet: { en: "Nothing to swipe yet", ar: "لسه مفيش حاجة" },
+  nothingYetHint: { en: "When someone says a film or a show, it shows here.", ar: "لما حد يقول على فيلم أو مسلسل، هيظهر هنا." },
   movie: { en: "Film", ar: "فيلم" },
   show: { en: "Show", ar: "مسلسل" },
   everyoneSaidYes: { en: "Everyone said yes", ar: "الكل قال آه" },
@@ -127,6 +129,13 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
   };
   return (
     <div>
+      {/* A link opened on a list with nothing in it yet: say so plainly, never an empty page. */}
+      {!pick && !v.canSwipe && !v.counts.list && !v.counts.watched ? (
+        <section className="mb-3 flex flex-col items-center text-center" style={{ background: INK.surface, borderRadius: 17, padding: "28px 20px", gap: 6 }}>
+          <span style={STEP.title}>{say(C.nothingYet, lang)}</span>
+          <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.nothingYetHint, lang)}</span>
+        </section>
+      ) : null}
       {pick ? (
         <section className="mb-3 flex items-center" style={{ gap: 14, background: INK.surfaceHi, borderRadius: 17, padding: 16 }} aria-label={`${say(C.tonight, lang)}: ${pick.name}`}>
           <NameTile t={pick} size={88} fallback={pick.type === "show" ? "show" : "film"} />
@@ -151,7 +160,11 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
             noLabel={say(C.no, lang)}
             empty={
               <div className="flex h-full w-full items-center justify-center" style={{ background: INK.surface, borderRadius: 17 }}>
-                <span style={STEP.title}>{say(C.swipedAll, lang)}</span>
+                {/* Swiped through, or nothing yet: a guest on a new list is never told they swiped it all. */}
+                <span className="flex flex-col items-center text-center" style={{ gap: 6, padding: "0 24px" }}>
+                  <span style={STEP.title}>{say(v.counts.list || v.counts.watched ? C.swipedAll : C.nothingYet, lang)}</span>
+                  {v.counts.list || v.counts.watched ? null : <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.nothingYetHint, lang)}</span>}
+                </span>
               </div>
             }
           />
