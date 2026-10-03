@@ -20,6 +20,8 @@ export interface PageProps<V = unknown> {
   busy: boolean;
   /** The moment the page was drawn at, ticking once a minute. */
   now: number;
+  /** The link's token, for what lives at its own address (the calendar file); none in the dev fixtures. */
+  token?: string;
 }
 
 export type KindPage = ComponentType<PageProps<any>>;

@@ -238,7 +238,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
       ) : null}
 
       {View ? (
-        <View page={page} view={page.view} lang={lang} act={act} can={(op) => page.ops.includes(op)} busy={busy} now={now} />
+        <View page={page} view={page.view} lang={lang} act={act} can={(op) => page.ops.includes(op)} busy={busy} now={now} token={token} />
       ) : (
         <Section>
           <p className="p-6 text-center" style={{ ...STEP.body, color: INK.muted }}>

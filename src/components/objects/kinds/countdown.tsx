@@ -8,6 +8,7 @@
  */
 
 import { say, type Words } from "@/lib/objects";
+import { AddToCalendar } from "../add-to-calendar";
 import { DotField, Face, INK, Pill, Row, Section, STEP } from "../kit";
 import type { KindPage } from "../types";
 
@@ -39,7 +40,7 @@ const C = {
   youCap: { en: "You", ar: "إنت" },
 } satisfies Record<string, Words>;
 
-export const Page: KindPage = ({ view, lang, act, can, busy }) => {
+export const Page: KindPage = ({ page, view, lang, act, can, busy, token }) => {
   const v = view as CountdownView;
   const big = v.phase === "today" ? say(C.today, lang) : v.phase === "over" ? say(v.leftWords, lang) : String(v.daysLeft);
   const under = v.phase === "counting" ? (v.daysLeft === 1 ? say(v.leftWords, lang) : say(v.daysLeft <= 10 ? C.few : C.many, lang)) : "";
@@ -54,6 +55,7 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
         </div>
         <DotField total={v.dots.total} left={v.dots.total - v.dots.fallen} cols={cols} dot={14} gap={10} label={`${v.dots.total - v.dots.fallen}`} />
         <span style={{ ...STEP.meta, color: INK.muted }}>{say(v.dots.perDot === 1 ? C.dayDot : C.weekDot, lang)}</span>
+        {token && v.phase !== "over" ? <AddToCalendar token={token} lang={lang} version={page.version} /> : null}
       </section>
       <Section
         title={say(C.counting, lang)}

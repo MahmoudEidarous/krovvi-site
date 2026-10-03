@@ -17,6 +17,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { say, type Words } from "@/lib/objects";
+import { AddToCalendar } from "../add-to-calendar";
 import { EASE, FaceStack, INK, Pill, Section, STEP, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
@@ -192,7 +193,7 @@ function OptionButton({ o, g, lang, onVote, disabled }: { o: Opt; g: Group; lang
   );
 }
 
-export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
+export const Page: KindPage = ({ page, view, lang, act, can, busy, token }) => {
   const v = view as PlanView;
   const me = page.members.find((m) => m.you) ?? null;
   const person = me ? { id: me.id, name: me.name } : null;
@@ -277,6 +278,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 <bdi dir={dirOf(v.place ?? v.what ?? "")}>{list([v.place, v.what], lang)}</bdi>
               </span>
             ) : null}
+            {token && v.when && v.when.daysLeft >= 0 ? <AddToCalendar token={token} lang={lang} version={page.version} /> : null}
           </div>
         ) : (
           <div className="flex flex-col items-center text-center" style={{ gap: 4 }}>
