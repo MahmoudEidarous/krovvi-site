@@ -10,11 +10,12 @@
  * Anything it does not know is drawn as plain words, never as raw markup.
  */
 
-import { createContext, Fragment, useContext, type ReactNode } from "react";
+import { createContext, Fragment, useContext, useState, type ReactNode } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
-import { BlockView } from "./blocks";
+import { BLOCK_LANGS, BlockView } from "./blocks";
 import { CardView, type ShareCard } from "./cards";
+import { Diagram } from "./diagram";
 
 const BODY = { fontSize: 16, lineHeight: "26px", letterSpacing: "-0.15px", color: INK.fg } as const;
 
@@ -301,16 +302,44 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
         const card = env.cards[id];
         return card ? <CardView card={card} lang={env.lang} /> : null;
       }
-      const drawn = <BlockView lang={block.lang} content={block.content} env={env} />;
-      if (drawn) return drawn;
-      if (["mermaid", "diagram", "flowchart", "sequence", "graph"].includes(block.lang)) return null;
-      return (
-        <pre dir="ltr" className="mb-3 overflow-x-auto" style={{ fontFamily: "Menlo, monospace", fontSize: 13, lineHeight: "20px", background: INK.surface, borderRadius: 17, padding: "12px 16px", color: INK.fg }}>
-          {block.content}
-        </pre>
-      );
+      if (block.lang === "mermaid") return <Diagram code={block.content} />;
+      // Krovvi's own blocks; every other fence is code, drawn as code (a JSX element is never empty, so ask by name).
+      if (BLOCK_LANGS.has(block.lang)) return <BlockView lang={block.lang} content={block.content} env={env} />;
+      if (["diagram", "flowchart", "sequence", "graph"].includes(block.lang)) return null;
+      return <CodeBlock code={block.content} lang={block.lang} chatLang={env.lang} />;
     }
   }
+}
+
+/**
+ * A block of code, as the app draws it (components/answer/code-block.tsx):
+ * its language, a Copy button, and lines that are never wrapped, since a line
+ * of code broken in two is a different line; a long one slides sideways.
+ */
+function CodeBlock({ code, lang, chatLang }: { code: string; lang: string; chatLang: "en" | "ar" }) {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(code.replace(/\n$/, ""));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    } catch {
+      // No clipboard here: the words can still be selected.
+    }
+  };
+  return (
+    <div className="mb-3" dir="ltr" style={{ background: INK.surface, borderRadius: 17, overflow: "hidden" }}>
+      <div className="flex items-center justify-between" style={{ padding: "6px 8px 0 16px", minHeight: 32 }}>
+        <span style={{ ...STEP.meta, color: INK.faint }}>{lang}</span>
+        <button type="button" onClick={copy} className="rounded-full active:opacity-70" style={{ ...STEP.meta, fontWeight: 600, color: copied ? INK.fg : INK.soft, padding: "4px 8px" }}>
+          {chatLang === "ar" ? (copied ? "اتنسخ" : "انسخ") : copied ? "Copied" : "Copy"}
+        </button>
+      </div>
+      <pre className="overflow-x-auto" style={{ fontFamily: "Menlo, monospace", fontSize: 13, lineHeight: "20px", padding: "4px 16px 12px", margin: 0, color: INK.fg }}>
+        {code.replace(/\n$/, "")}
+      </pre>
+    </div>
+  );
 }
 
 /** One answer part's words, drawn. */

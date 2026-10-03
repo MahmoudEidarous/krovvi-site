@@ -22,16 +22,18 @@ export interface ShareRead {
   media: Array<{ id: number; url: string; mime: string }>;
 }
 
-export type ShareState = { ok: true; share: ShareRead } | { ok: false; off: boolean };
+/** Read, turned off (410), not a link (404), or not reached at all (no network, or the door answered with a fault): only the last is worth trying again. */
+export type ShareState = { ok: true; share: ShareRead } | { ok: false; off: boolean; offline?: boolean };
 
 export async function readShare(token: string): Promise<ShareState> {
   try {
     const res = await fetch(`${SHARE_API}?t=${encodeURIComponent(token)}`, { cache: "no-store" });
     if (res.status === 410) return { ok: false, off: true };
+    if (res.status >= 500) return { ok: false, off: false, offline: true };
     const body = (await res.json()) as ShareRead | { ok: false; off?: boolean };
     return body.ok ? { ok: true, share: body as ShareRead } : { ok: false, off: !!(body as { off?: boolean }).off };
   } catch {
-    return { ok: false, off: false };
+    return { ok: false, off: false, offline: true };
   }
 }
 

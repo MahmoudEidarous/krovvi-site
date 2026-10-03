@@ -376,6 +376,19 @@
           "files": [],
           "ask": null,
           "stopped": false
+        },
+        {
+          "at": 1791014940000,
+          "q": "one more thing, draft a message to the landlord about the deposit",
+          "photos": [],
+          "a": "<say>Here you go. Copy it as it is.</say>\n```\nHi Mr. Adel, we move out on the 16th. Could we do the walkthrough that morning, so the deposit is settled before we leave?\n```\n\nAnd the day itself:\n\n```mermaid\nflowchart LR\n  A[Van at 9 AM] --> B[Load the boxes]\n  B --> C[Read the meter]\n  C --> D[Drive to Zamalek]\n```",
+          "style": "mixed",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
         }
       ]
     },

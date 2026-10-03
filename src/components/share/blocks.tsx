@@ -27,6 +27,9 @@ function Rule() {
   return <div style={{ height: 0.5, background: INK.line, marginInlineStart: 16 }} />;
 }
 
+/** The fences BlockView draws as Krovvi's own blocks; any other fence is code. */
+export const BLOCK_LANGS: ReadonlySet<string> = new Set(["stats", "steps", "checklist", "links", "facts", "options", "flow", "math", "latex", "tex"]);
+
 export function BlockView({ lang, content, env }: { lang: string; content: string; env: RenderEnv }) {
   const k = lang;
   if (lang === "stats") {
