@@ -9,7 +9,6 @@
     "version": 1,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -167,13 +166,12 @@
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": "🍽️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -360,13 +358,12 @@
     "ok": true,
     "kind": "food",
     "title": "الأكل",
-    "emoji": "🥗",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "الأكل",
-      "emoji": "🥗",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -559,7 +556,6 @@
     "version": 7,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -784,13 +780,12 @@
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": "🍽️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -983,7 +978,6 @@
     "version": 7,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -1134,13 +1128,12 @@
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": "🍽️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Food",
-      "emoji": "🍽️",
       "today": "2026-10-03",
       "full": false,
       "goal": {
@@ -1322,13 +1315,12 @@
     "ok": true,
     "kind": "food",
     "title": "الأكل",
-    "emoji": "🥗",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "الأكل",
-      "emoji": "🥗",
       "today": "2026-10-03",
       "full": false,
       "goal": {

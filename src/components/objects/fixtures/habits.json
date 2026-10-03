@@ -9,13 +9,11 @@
     "version": 2,
     "view": {
       "title": "Habits",
-      "emoji": "✅",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabnew000001",
           "name": "Read 20 pages",
-          "emoji": "📖",
           "every": "day",
           "days": null,
           "times": null,
@@ -121,19 +119,17 @@
     "ok": true,
     "kind": "habits",
     "title": "My habits",
-    "emoji": "✅",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "My habits",
-      "emoji": "✅",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabread00001",
           "name": "Read 20 pages",
-          "emoji": "📖",
           "every": "day",
           "days": null,
           "times": null,
@@ -193,7 +189,6 @@
         {
           "id": "ihabwalk00001",
           "name": "Walk",
-          "emoji": "🚶",
           "every": "days",
           "days": [
             1,
@@ -259,7 +254,6 @@
         {
           "id": "ihabgym000001",
           "name": "Gym",
-          "emoji": "🏋️",
           "every": "week",
           "days": null,
           "times": 3,
@@ -319,7 +313,6 @@
         {
           "id": "ihabwater0001",
           "name": "Water, 8 glasses",
-          "emoji": "💧",
           "every": "day",
           "days": null,
           "times": null,
@@ -435,19 +428,17 @@
     "ok": true,
     "kind": "habits",
     "title": "عاداتي",
-    "emoji": "✅",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "عاداتي",
-      "emoji": "✅",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabread00002",
           "name": "القراية",
-          "emoji": "📖",
           "every": "day",
           "days": null,
           "times": null,
@@ -507,7 +498,6 @@
         {
           "id": "ihabwalk00002",
           "name": "المشي",
-          "emoji": "🚶",
           "every": "days",
           "days": [
             0,
@@ -573,7 +563,6 @@
         {
           "id": "ihabgym000002",
           "name": "الجيم",
-          "emoji": "🏋️",
           "every": "week",
           "days": null,
           "times": 3,
@@ -633,7 +622,6 @@
         {
           "id": "ihabwater0002",
           "name": "المية",
-          "emoji": "💧",
           "every": "day",
           "days": null,
           "times": null,
@@ -739,19 +727,17 @@
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": "🚶",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "10k steps",
-      "emoji": "🚶",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabsteps0001",
           "name": "10k steps",
-          "emoji": "🚶",
           "every": "day",
           "days": null,
           "times": null,
@@ -997,19 +983,17 @@
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": "🚶",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "10k steps",
-      "emoji": "🚶",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabsteps0001",
           "name": "10k steps",
-          "emoji": "🚶",
           "every": "day",
           "days": null,
           "times": null,
@@ -1270,13 +1254,11 @@
     "version": 7,
     "view": {
       "title": "Morning crew",
-      "emoji": "✅",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabbusyrun01",
           "name": "Run or walk for thirty minutes before breakfast, rain or shine",
-          "emoji": "🏃",
           "every": "day",
           "days": null,
           "times": null,
@@ -1766,7 +1748,6 @@
         {
           "id": "ihabbusystr01",
           "name": "Stretch",
-          "emoji": "🧘",
           "every": "days",
           "days": [
             1,
@@ -2477,19 +2458,17 @@
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": "🚶",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "10k steps",
-      "emoji": "🚶",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabsteps0001",
           "name": "10k steps",
-          "emoji": "🚶",
           "every": "day",
           "days": null,
           "times": null,
@@ -2734,19 +2713,17 @@
     "ok": true,
     "kind": "habits",
     "title": "مشي كل يوم",
-    "emoji": "🚶",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "مشي كل يوم",
-      "emoji": "🚶",
       "today": "2026-10-03",
       "habits": [
         {
           "id": "ihabsteps0002",
           "name": "10 آلاف خطوة",
-          "emoji": "🚶",
           "every": "day",
           "days": null,
           "times": null,

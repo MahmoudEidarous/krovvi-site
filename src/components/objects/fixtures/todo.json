@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "todo",
     "title": "Move",
-    "emoji": "📦",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Move",
-      "emoji": "📦",
       "open": [],
       "done": [],
       "counts": {
@@ -77,13 +76,12 @@
     "ok": true,
     "kind": "todo",
     "title": "House",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "House",
-      "emoji": "🏠",
       "open": [
         {
           "id": "itaskbins0001",
@@ -450,13 +448,12 @@
     "ok": true,
     "kind": "todo",
     "title": "البيت",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "البيت",
-      "emoji": "🏠",
       "open": [
         {
           "id": "itaskbins0001",
@@ -814,13 +811,12 @@
     "ok": true,
     "kind": "todo",
     "title": "Launch",
-    "emoji": "🚀",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Launch",
-      "emoji": "🚀",
       "open": [
         {
           "id": "itasklnch0001",
@@ -2305,13 +2301,12 @@
     "ok": true,
     "kind": "todo",
     "title": "Party prep",
-    "emoji": "🎉",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Party prep",
-      "emoji": "🎉",
       "open": [],
       "done": [
         {
@@ -2499,13 +2494,12 @@
     "ok": true,
     "kind": "todo",
     "title": "House",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "House",
-      "emoji": "🏠",
       "open": [
         {
           "id": "itaskbins0001",

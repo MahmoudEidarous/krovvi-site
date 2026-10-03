@@ -9,7 +9,6 @@
     "version": 1,
     "view": {
       "title": "Training",
-      "emoji": "🏋️",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -123,13 +122,12 @@
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": "🏋️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Training",
-      "emoji": "🏋️",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -907,13 +905,12 @@
     "ok": true,
     "kind": "workout",
     "title": "التمرين",
-    "emoji": "💪",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "التمرين",
-      "emoji": "💪",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -1459,7 +1456,6 @@
     "version": 7,
     "view": {
       "title": "Gym",
-      "emoji": "🏋️",
       "today": "2026-10-03",
       "units": {
         "weight": "lb",
@@ -3881,13 +3877,12 @@
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": "🏋️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Training",
-      "emoji": "🏋️",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -4691,13 +4686,12 @@
     "ok": true,
     "kind": "workout",
     "title": "Running",
-    "emoji": "🏃",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Running",
-      "emoji": "🏃",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -5070,13 +5064,12 @@
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": "🏋️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Training",
-      "emoji": "🏋️",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",
@@ -5849,13 +5842,12 @@
     "ok": true,
     "kind": "workout",
     "title": "التمرين",
-    "emoji": "💪",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "التمرين",
-      "emoji": "💪",
       "today": "2026-10-03",
       "units": {
         "weight": "kg",

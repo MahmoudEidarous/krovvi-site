@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "spending",
     "title": "My money",
-    "emoji": "💳",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "My money",
-      "emoji": "💳",
       "currency": "USD",
       "budget": 150000,
       "budgetWords": {
@@ -333,13 +332,12 @@
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Home",
-      "emoji": "🏠",
       "currency": "USD",
       "budget": 200000,
       "budgetWords": {
@@ -611,7 +609,7 @@
       "cats": [
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -624,7 +622,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -637,7 +635,7 @@
         },
         {
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "name": {
             "en": "Getting around",
             "ar": "مواصلات"
@@ -650,7 +648,7 @@
         },
         {
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "name": {
             "en": "Eating out",
             "ar": "أكل برا"
@@ -663,7 +661,7 @@
         },
         {
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "name": {
             "en": "Shopping",
             "ar": "شوبينج"
@@ -686,7 +684,7 @@
           },
           "refund": true,
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -709,7 +707,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -732,7 +730,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -755,7 +753,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -773,7 +771,6 @@
         {
           "id": "ihb0000000001",
           "name": "Rent",
-          "emoji": "🏠",
           "amount": 90000,
           "amountWords": {
             "en": "$900",
@@ -803,7 +800,6 @@
         {
           "id": "ihb0000000002",
           "name": "Gym",
-          "emoji": "🏋️",
           "amount": 3000,
           "amountWords": {
             "en": "$30",
@@ -825,7 +821,6 @@
         {
           "id": "ihb0000000003",
           "name": "Phone",
-          "emoji": "📱",
           "amount": 4000,
           "amountWords": {
             "en": "$40",
@@ -847,7 +842,6 @@
         {
           "id": "ihb0000000004",
           "name": "Internet",
-          "emoji": "🌐",
           "amount": 3500,
           "amountWords": {
             "en": "$35",
@@ -970,13 +964,12 @@
     "ok": true,
     "kind": "spending",
     "title": "البيت",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "البيت",
-      "emoji": "🏠",
       "currency": "USD",
       "budget": 200000,
       "budgetWords": {
@@ -1248,7 +1241,7 @@
       "cats": [
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -1261,7 +1254,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -1274,7 +1267,7 @@
         },
         {
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "name": {
             "en": "Getting around",
             "ar": "مواصلات"
@@ -1287,7 +1280,7 @@
         },
         {
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "name": {
             "en": "Eating out",
             "ar": "أكل برا"
@@ -1300,7 +1293,7 @@
         },
         {
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "name": {
             "en": "Shopping",
             "ar": "شوبينج"
@@ -1323,7 +1316,7 @@
           },
           "refund": true,
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -1346,7 +1339,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -1369,7 +1362,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -1392,7 +1385,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -1410,7 +1403,6 @@
         {
           "id": "ihb0000000001",
           "name": "الإيجار",
-          "emoji": "🏠",
           "amount": 90000,
           "amountWords": {
             "en": "$900",
@@ -1440,7 +1432,6 @@
         {
           "id": "ihb0000000002",
           "name": "الجيم",
-          "emoji": "🏋️",
           "amount": 3000,
           "amountWords": {
             "en": "$30",
@@ -1462,7 +1453,6 @@
         {
           "id": "ihb0000000003",
           "name": "الموبايل",
-          "emoji": "📱",
           "amount": 4000,
           "amountWords": {
             "en": "$40",
@@ -1484,7 +1474,6 @@
         {
           "id": "ihb0000000004",
           "name": "النت",
-          "emoji": "🌐",
           "amount": 3500,
           "amountWords": {
             "en": "$35",
@@ -1607,13 +1596,12 @@
     "ok": true,
     "kind": "spending",
     "title": "The flat",
-    "emoji": "🔑",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 220,
     "view": {
       "title": "The flat",
-      "emoji": "🔑",
       "currency": "EUR",
       "budget": 600000,
       "budgetWords": {
@@ -1875,7 +1863,7 @@
       "cats": [
         {
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "name": {
             "en": "Eating out",
             "ar": "أكل برا"
@@ -1888,7 +1876,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -1901,7 +1889,7 @@
         },
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -1914,7 +1902,7 @@
         },
         {
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "name": {
             "en": "Home",
             "ar": "البيت"
@@ -1927,7 +1915,7 @@
         },
         {
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "name": {
             "en": "Health",
             "ar": "صحة"
@@ -1940,7 +1928,7 @@
         },
         {
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "name": {
             "en": "Going out",
             "ar": "خروج"
@@ -1953,7 +1941,7 @@
         },
         {
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "name": {
             "en": "Getting around",
             "ar": "مواصلات"
@@ -1976,7 +1964,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -1999,7 +1987,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2022,7 +2010,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2045,7 +2033,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2068,7 +2056,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2091,7 +2079,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2114,7 +2102,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2137,7 +2125,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2160,7 +2148,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2183,7 +2171,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2206,7 +2194,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -2229,7 +2217,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2252,7 +2240,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2275,7 +2263,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2298,7 +2286,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2321,7 +2309,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2344,7 +2332,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2367,7 +2355,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2390,7 +2378,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2413,7 +2401,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2436,7 +2424,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2459,7 +2447,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -2482,7 +2470,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2505,7 +2493,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2528,7 +2516,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2551,7 +2539,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2574,7 +2562,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2597,7 +2585,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2620,7 +2608,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2643,7 +2631,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2666,7 +2654,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2689,7 +2677,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2712,7 +2700,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -2735,7 +2723,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2758,7 +2746,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2781,7 +2769,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2804,7 +2792,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2827,7 +2815,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2850,7 +2838,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2873,7 +2861,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2896,7 +2884,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2919,7 +2907,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2942,7 +2930,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2965,7 +2953,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -2988,7 +2976,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-30",
           "dayWords": {
             "en": "Wed 30 Sep",
@@ -3011,7 +2999,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3034,7 +3022,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3057,7 +3045,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3080,7 +3068,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3103,7 +3091,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3126,7 +3114,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3149,7 +3137,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3172,7 +3160,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3195,7 +3183,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3218,7 +3206,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3241,7 +3229,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3264,7 +3252,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-29",
           "dayWords": {
             "en": "Tue 29 Sep",
@@ -3287,7 +3275,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3310,7 +3298,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3333,7 +3321,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3356,7 +3344,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3379,7 +3367,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3402,7 +3390,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3425,7 +3413,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3448,7 +3436,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3471,7 +3459,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3494,7 +3482,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3517,7 +3505,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3540,7 +3528,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-28",
           "dayWords": {
             "en": "Mon 28 Sep",
@@ -3563,7 +3551,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3586,7 +3574,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3609,7 +3597,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3632,7 +3620,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3655,7 +3643,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3678,7 +3666,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3701,7 +3689,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3724,7 +3712,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3747,7 +3735,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3770,7 +3758,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3793,7 +3781,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3816,7 +3804,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-27",
           "dayWords": {
             "en": "Sun 27 Sep",
@@ -3839,7 +3827,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3862,7 +3850,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3885,7 +3873,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3908,7 +3896,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3931,7 +3919,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3954,7 +3942,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -3977,7 +3965,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4000,7 +3988,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4023,7 +4011,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4046,7 +4034,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4069,7 +4057,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4092,7 +4080,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-26",
           "dayWords": {
             "en": "Sat 26 Sep",
@@ -4115,7 +4103,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4138,7 +4126,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4161,7 +4149,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4184,7 +4172,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4207,7 +4195,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4230,7 +4218,7 @@
           },
           "refund": false,
           "cat": "health",
-          "emoji": "💊",
+          "mark": "heart",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4253,7 +4241,7 @@
           },
           "refund": false,
           "cat": "fun",
-          "emoji": "🎟️",
+          "mark": "ticket",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4276,7 +4264,7 @@
           },
           "refund": false,
           "cat": "home",
-          "emoji": "🏠",
+          "mark": "house",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4299,7 +4287,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4322,7 +4310,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4345,7 +4333,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4368,7 +4356,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-09-25",
           "dayWords": {
             "en": "Fri 25 Sep",
@@ -4386,7 +4374,6 @@
         {
           "id": "ifb0000000001",
           "name": "Rent",
-          "emoji": "🏠",
           "amount": 120000,
           "amountWords": {
             "en": "€1,200",
@@ -4416,7 +4403,6 @@
         {
           "id": "ifb0000000002",
           "name": "Power",
-          "emoji": "💡",
           "amount": 9000,
           "amountWords": {
             "en": "€90",
@@ -4446,7 +4432,6 @@
         {
           "id": "ifb0000000003",
           "name": "Internet",
-          "emoji": "🌐",
           "amount": 4000,
           "amountWords": {
             "en": "€40",
@@ -4476,7 +4461,6 @@
         {
           "id": "ifb0000000004",
           "name": "Phone",
-          "emoji": "📱",
           "amount": 2500,
           "amountWords": {
             "en": "€25",
@@ -4506,7 +4490,6 @@
         {
           "id": "ifb0000000005",
           "name": "Water",
-          "emoji": "🚰",
           "amount": 3000,
           "amountWords": {
             "en": "€30",
@@ -4528,7 +4511,6 @@
         {
           "id": "ifb0000000006",
           "name": "Streaming",
-          "emoji": "📺",
           "amount": 1500,
           "amountWords": {
             "en": "€15",
@@ -4673,13 +4655,12 @@
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Home",
-      "emoji": "🏠",
       "currency": "USD",
       "budget": 200000,
       "budgetWords": {
@@ -4951,7 +4932,7 @@
       "cats": [
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -4964,7 +4945,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -4987,7 +4968,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-02",
           "dayWords": {
             "en": "Fri 2 Oct",
@@ -5005,7 +4986,6 @@
         {
           "id": "ipb0000000001",
           "name": "Rent",
-          "emoji": "🏠",
           "amount": 90000,
           "amountWords": {
             "en": "$900",
@@ -5035,7 +5015,6 @@
         {
           "id": "ipb0000000002",
           "name": "Phone",
-          "emoji": "📱",
           "amount": 4000,
           "amountWords": {
             "en": "$40",
@@ -5148,13 +5127,12 @@
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Home",
-      "emoji": "🏠",
       "currency": "USD",
       "budget": 200000,
       "budgetWords": {
@@ -5426,7 +5404,7 @@
       "cats": [
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -5439,7 +5417,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -5452,7 +5430,7 @@
         },
         {
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "name": {
             "en": "Getting around",
             "ar": "مواصلات"
@@ -5465,7 +5443,7 @@
         },
         {
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "name": {
             "en": "Eating out",
             "ar": "أكل برا"
@@ -5478,7 +5456,7 @@
         },
         {
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "name": {
             "en": "Shopping",
             "ar": "شوبينج"
@@ -5501,7 +5479,7 @@
           },
           "refund": true,
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -5524,7 +5502,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -5547,7 +5525,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -5570,7 +5548,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -5588,7 +5566,6 @@
         {
           "id": "ihb0000000001",
           "name": "Rent",
-          "emoji": "🏠",
           "amount": 90000,
           "amountWords": {
             "en": "$900",
@@ -5618,7 +5595,6 @@
         {
           "id": "ihb0000000002",
           "name": "Gym",
-          "emoji": "🏋️",
           "amount": 3000,
           "amountWords": {
             "en": "$30",
@@ -5640,7 +5616,6 @@
         {
           "id": "ihb0000000003",
           "name": "Phone",
-          "emoji": "📱",
           "amount": 4000,
           "amountWords": {
             "en": "$40",
@@ -5662,7 +5637,6 @@
         {
           "id": "ihb0000000004",
           "name": "Internet",
-          "emoji": "🌐",
           "amount": 3500,
           "amountWords": {
             "en": "$35",
@@ -5781,13 +5755,12 @@
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Home",
-      "emoji": "🏠",
       "currency": "USD",
       "budget": 200000,
       "budgetWords": {
@@ -6059,7 +6032,7 @@
       "cats": [
         {
           "cat": "bills",
-          "emoji": "🧾",
+          "mark": "receipt",
           "name": {
             "en": "Bills",
             "ar": "فواتير"
@@ -6072,7 +6045,7 @@
         },
         {
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "name": {
             "en": "Groceries",
             "ar": "بقالة"
@@ -6085,7 +6058,7 @@
         },
         {
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "name": {
             "en": "Getting around",
             "ar": "مواصلات"
@@ -6098,7 +6071,7 @@
         },
         {
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "name": {
             "en": "Eating out",
             "ar": "أكل برا"
@@ -6111,7 +6084,7 @@
         },
         {
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "name": {
             "en": "Shopping",
             "ar": "شوبينج"
@@ -6134,7 +6107,7 @@
           },
           "refund": true,
           "cat": "shopping",
-          "emoji": "🛍️",
+          "mark": "bag",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -6157,7 +6130,7 @@
           },
           "refund": false,
           "cat": "transport",
-          "emoji": "🚕",
+          "mark": "car",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -6180,7 +6153,7 @@
           },
           "refund": false,
           "cat": "eating",
-          "emoji": "🍽️",
+          "mark": "utensils",
           "day": "2026-10-03",
           "dayWords": {
             "en": "Sat 3 Oct",
@@ -6203,7 +6176,7 @@
           },
           "refund": false,
           "cat": "groceries",
-          "emoji": "🛒",
+          "mark": "cart",
           "day": "2026-10-01",
           "dayWords": {
             "en": "Thu 1 Oct",
@@ -6221,7 +6194,6 @@
         {
           "id": "ihb0000000001",
           "name": "Rent",
-          "emoji": "🏠",
           "amount": 90000,
           "amountWords": {
             "en": "$900",
@@ -6251,7 +6223,6 @@
         {
           "id": "ihb0000000002",
           "name": "Gym",
-          "emoji": "🏋️",
           "amount": 3000,
           "amountWords": {
             "en": "$30",
@@ -6273,7 +6244,6 @@
         {
           "id": "ihb0000000003",
           "name": "Phone",
-          "emoji": "📱",
           "amount": 4000,
           "amountWords": {
             "en": "$40",
@@ -6295,7 +6265,6 @@
         {
           "id": "ihb0000000004",
           "name": "Internet",
-          "emoji": "🌐",
           "amount": 3500,
           "amountWords": {
             "en": "$35",

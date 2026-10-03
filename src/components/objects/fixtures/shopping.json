@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": "🛒",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Groceries",
-      "emoji": "🛒",
       "aisles": [],
       "cart": [],
       "recent": [],
@@ -64,13 +63,12 @@
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": "🛒",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Groceries",
-      "emoji": "🛒",
       "aisles": [
         {
           "aisle": "produce",
@@ -82,7 +80,6 @@
             {
               "id": "ishoptoma0001",
               "name": "tomatoes",
-              "emoji": "🍅",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -99,7 +96,6 @@
             {
               "id": "ishopavoc0001",
               "name": "avocados",
-              "emoji": "🥑",
               "qty": "3",
               "note": "ripe ones",
               "aisle": "produce",
@@ -127,7 +123,6 @@
             {
               "id": "ishoptort0001",
               "name": "tortillas",
-              "emoji": "🫓",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -155,7 +150,6 @@
             {
               "id": "ishopegg00001",
               "name": "eggs",
-              "emoji": "🥚",
               "qty": "12",
               "note": null,
               "aisle": "dairy",
@@ -172,7 +166,6 @@
             {
               "id": "ishopmilk0001",
               "name": "milk",
-              "emoji": "🥛",
               "qty": "2 liters",
               "note": null,
               "aisle": "dairy",
@@ -198,7 +191,6 @@
             {
               "id": "ishoprice0001",
               "name": "rice",
-              "emoji": "🍚",
               "qty": "1 kg",
               "note": null,
               "aisle": "pantry",
@@ -215,7 +207,6 @@
             {
               "id": "ishopcoff0001",
               "name": "coffee beans",
-              "emoji": "☕",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -241,7 +232,6 @@
             {
               "id": "ishopsoap0001",
               "name": "dish soap",
-              "emoji": "🧽",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -262,7 +252,6 @@
         {
           "id": "ishopbred0001",
           "name": "bread",
-          "emoji": "🍞",
           "qty": null,
           "note": null,
           "aisle": "bakery",
@@ -286,7 +275,6 @@
         {
           "id": "ishopbana0001",
           "name": "bananas",
-          "emoji": "🍌",
           "qty": null,
           "note": null,
           "aisle": "produce",
@@ -311,18 +299,15 @@
       "recent": [
         {
           "id": "ishopoliv0001",
-          "name": "olive oil",
-          "emoji": "🫒"
+          "name": "olive oil"
         },
         {
           "id": "ishopappl0001",
-          "name": "apples",
-          "emoji": "🍎"
+          "name": "apples"
         },
         {
           "id": "ishopyogu0001",
-          "name": "yogurt",
-          "emoji": "🥣"
+          "name": "yogurt"
         }
       ],
       "shopping": [
@@ -415,13 +400,12 @@
     "ok": true,
     "kind": "shopping",
     "title": "طلبات البيت",
-    "emoji": "🛒",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "طلبات البيت",
-      "emoji": "🛒",
       "aisles": [
         {
           "aisle": "produce",
@@ -433,7 +417,6 @@
             {
               "id": "ishoptoma0001",
               "name": "طماطم",
-              "emoji": "🍅",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -450,7 +433,6 @@
             {
               "id": "ishopavoc0001",
               "name": "أفوكادو",
-              "emoji": "🥑",
               "qty": "3",
               "note": "مستوية",
               "aisle": "produce",
@@ -478,7 +460,6 @@
             {
               "id": "ishoptort0001",
               "name": "تورتيلا",
-              "emoji": "🫓",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -506,7 +487,6 @@
             {
               "id": "ishopegg00001",
               "name": "بيض",
-              "emoji": "🥚",
               "qty": "12",
               "note": null,
               "aisle": "dairy",
@@ -523,7 +503,6 @@
             {
               "id": "ishopmilk0001",
               "name": "لبن",
-              "emoji": "🥛",
               "qty": "2 لتر",
               "note": null,
               "aisle": "dairy",
@@ -549,7 +528,6 @@
             {
               "id": "ishoprice0001",
               "name": "رز",
-              "emoji": "🍚",
               "qty": "1 كيلو",
               "note": null,
               "aisle": "pantry",
@@ -566,7 +544,6 @@
             {
               "id": "ishopcoff0001",
               "name": "بن",
-              "emoji": "☕",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -592,7 +569,6 @@
             {
               "id": "ishopsoap0001",
               "name": "صابون مواعين",
-              "emoji": "🧽",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -613,7 +589,6 @@
         {
           "id": "ishopbred0001",
           "name": "عيش",
-          "emoji": "🍞",
           "qty": null,
           "note": null,
           "aisle": "bakery",
@@ -637,7 +612,6 @@
         {
           "id": "ishopbana0001",
           "name": "موز",
-          "emoji": "🍌",
           "qty": null,
           "note": null,
           "aisle": "produce",
@@ -662,18 +636,15 @@
       "recent": [
         {
           "id": "ishopoliv0001",
-          "name": "زيت زيتون",
-          "emoji": "🫒"
+          "name": "زيت زيتون"
         },
         {
           "id": "ishopappl0001",
-          "name": "تفاح",
-          "emoji": "🍎"
+          "name": "تفاح"
         },
         {
           "id": "ishopyogu0001",
-          "name": "زبادي",
-          "emoji": "🥣"
+          "name": "زبادي"
         }
       ],
       "shopping": [
@@ -757,13 +728,12 @@
     "ok": true,
     "kind": "shopping",
     "title": "Flat 4B",
-    "emoji": "🏢",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Flat 4B",
-      "emoji": "🏢",
       "aisles": [
         {
           "aisle": "produce",
@@ -775,7 +745,6 @@
             {
               "id": "ishopbulk0000",
               "name": "apples 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -792,7 +761,6 @@
             {
               "id": "ishopbulk0013",
               "name": "apples 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -809,7 +777,6 @@
             {
               "id": "ishopbulk0026",
               "name": "apples 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -826,7 +793,6 @@
             {
               "id": "ishopbulk0039",
               "name": "apples 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -843,7 +809,6 @@
             {
               "id": "ishopbulk0052",
               "name": "apples 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -869,7 +834,6 @@
             {
               "id": "ishopbulk0001",
               "name": "pears 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -886,7 +850,6 @@
             {
               "id": "ishopbulk0014",
               "name": "pears 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -903,7 +866,6 @@
             {
               "id": "ishopbulk0027",
               "name": "pears 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -920,7 +882,6 @@
             {
               "id": "ishopbulk0040",
               "name": "pears 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -937,7 +898,6 @@
             {
               "id": "ishopbulk0053",
               "name": "pears 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -963,7 +923,6 @@
             {
               "id": "ishopbulk0002",
               "name": "bagels 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "meat",
@@ -980,7 +939,6 @@
             {
               "id": "ishopbulk0015",
               "name": "bagels 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "meat",
@@ -997,7 +955,6 @@
             {
               "id": "ishopbulk0028",
               "name": "bagels 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "meat",
@@ -1014,7 +971,6 @@
             {
               "id": "ishopbulk0041",
               "name": "bagels 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "meat",
@@ -1031,7 +987,6 @@
             {
               "id": "ishopbulk0054",
               "name": "bagels 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "meat",
@@ -1057,7 +1012,6 @@
             {
               "id": "ishopbulk0003",
               "name": "chicken 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "dairy",
@@ -1074,7 +1028,6 @@
             {
               "id": "ishopbulk0016",
               "name": "chicken 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "dairy",
@@ -1091,7 +1044,6 @@
             {
               "id": "ishopbulk0029",
               "name": "chicken 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "dairy",
@@ -1108,7 +1060,6 @@
             {
               "id": "ishopbulk0042",
               "name": "chicken 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "dairy",
@@ -1125,7 +1076,6 @@
             {
               "id": "ishopbulk0055",
               "name": "chicken 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "dairy",
@@ -1151,7 +1101,6 @@
             {
               "id": "ishopbulk0004",
               "name": "cheese 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "frozen",
@@ -1168,7 +1117,6 @@
             {
               "id": "ishopbulk0017",
               "name": "cheese 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "frozen",
@@ -1185,7 +1133,6 @@
             {
               "id": "ishopbulk0030",
               "name": "cheese 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "frozen",
@@ -1202,7 +1149,6 @@
             {
               "id": "ishopbulk0043",
               "name": "cheese 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "frozen",
@@ -1219,7 +1165,6 @@
             {
               "id": "ishopbulk0056",
               "name": "cheese 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "frozen",
@@ -1245,7 +1190,6 @@
             {
               "id": "ishopbulk0005",
               "name": "peas 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -1262,7 +1206,6 @@
             {
               "id": "ishopbulk0018",
               "name": "peas 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -1279,7 +1222,6 @@
             {
               "id": "ishopbulk0031",
               "name": "peas 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -1296,7 +1238,6 @@
             {
               "id": "ishopbulk0044",
               "name": "peas 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -1313,7 +1254,6 @@
             {
               "id": "ishopbulk0057",
               "name": "peas 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -1339,7 +1279,6 @@
             {
               "id": "ishopbulk0006",
               "name": "pasta 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "snacks",
@@ -1356,7 +1295,6 @@
             {
               "id": "ishopbulk0019",
               "name": "pasta 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "snacks",
@@ -1373,7 +1311,6 @@
             {
               "id": "ishopbulk0032",
               "name": "pasta 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "snacks",
@@ -1390,7 +1327,6 @@
             {
               "id": "ishopbulk0045",
               "name": "pasta 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "snacks",
@@ -1407,7 +1343,6 @@
             {
               "id": "ishopbulk0058",
               "name": "pasta 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "snacks",
@@ -1433,7 +1368,6 @@
             {
               "id": "ishopbulk0007",
               "name": "crackers 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "drinks",
@@ -1450,7 +1384,6 @@
             {
               "id": "ishopbulk0020",
               "name": "crackers 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "drinks",
@@ -1467,7 +1400,6 @@
             {
               "id": "ishopbulk0033",
               "name": "crackers 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "drinks",
@@ -1484,7 +1416,6 @@
             {
               "id": "ishopbulk0046",
               "name": "crackers 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "drinks",
@@ -1501,7 +1432,6 @@
             {
               "id": "ishopbulk0059",
               "name": "crackers 5",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "drinks",
@@ -1527,7 +1457,6 @@
             {
               "id": "ishopbulk0008",
               "name": "sparkling water 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -1544,7 +1473,6 @@
             {
               "id": "ishopbulk0021",
               "name": "sparkling water 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -1561,7 +1489,6 @@
             {
               "id": "ishopbulk0034",
               "name": "sparkling water 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -1578,7 +1505,6 @@
             {
               "id": "ishopbulk0047",
               "name": "sparkling water 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -1604,7 +1530,6 @@
             {
               "id": "ishopbulk0009",
               "name": "paper towels 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "care",
@@ -1621,7 +1546,6 @@
             {
               "id": "ishopbulk0022",
               "name": "paper towels 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "care",
@@ -1638,7 +1562,6 @@
             {
               "id": "ishopbulk0035",
               "name": "paper towels 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "care",
@@ -1655,7 +1578,6 @@
             {
               "id": "ishopbulk0048",
               "name": "paper towels 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "care",
@@ -1681,7 +1603,6 @@
             {
               "id": "ishopbulk0010",
               "name": "shampoo 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "baby",
@@ -1698,7 +1619,6 @@
             {
               "id": "ishopbulk0023",
               "name": "shampoo 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "baby",
@@ -1715,7 +1635,6 @@
             {
               "id": "ishopbulk0036",
               "name": "shampoo 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "baby",
@@ -1732,7 +1651,6 @@
             {
               "id": "ishopbulk0049",
               "name": "shampoo 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "baby",
@@ -1758,7 +1676,6 @@
             {
               "id": "ishopbulk0011",
               "name": "wipes 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pets",
@@ -1775,7 +1692,6 @@
             {
               "id": "ishopbulk0024",
               "name": "wipes 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pets",
@@ -1792,7 +1708,6 @@
             {
               "id": "ishopbulk0037",
               "name": "wipes 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pets",
@@ -1809,7 +1724,6 @@
             {
               "id": "ishopbulk0050",
               "name": "wipes 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "pets",
@@ -1835,7 +1749,6 @@
             {
               "id": "ishopbulk0012",
               "name": "cat food 1",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "other",
@@ -1852,7 +1765,6 @@
             {
               "id": "ishopbulk0025",
               "name": "cat food 2",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "other",
@@ -1869,7 +1781,6 @@
             {
               "id": "ishopbulk0038",
               "name": "cat food 3",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "other",
@@ -1886,7 +1797,6 @@
             {
               "id": "ishopbulk0051",
               "name": "cat food 4",
-              "emoji": "🛒",
               "qty": null,
               "note": null,
               "aisle": "other",
@@ -1907,123 +1817,99 @@
       "recent": [
         {
           "id": "ishopbulk0060",
-          "name": "sparkling water 5",
-          "emoji": "🛒"
+          "name": "sparkling water 5"
         },
         {
           "id": "ishopbulk0061",
-          "name": "paper towels 5",
-          "emoji": "🛒"
+          "name": "paper towels 5"
         },
         {
           "id": "ishopbulk0062",
-          "name": "shampoo 5",
-          "emoji": "🛒"
+          "name": "shampoo 5"
         },
         {
           "id": "ishopbulk0063",
-          "name": "wipes 5",
-          "emoji": "🛒"
+          "name": "wipes 5"
         },
         {
           "id": "ishopbulk0064",
-          "name": "cat food 5",
-          "emoji": "🛒"
+          "name": "cat food 5"
         },
         {
           "id": "ishopbulk0065",
-          "name": "apples 6",
-          "emoji": "🛒"
+          "name": "apples 6"
         },
         {
           "id": "ishopbulk0066",
-          "name": "pears 6",
-          "emoji": "🛒"
+          "name": "pears 6"
         },
         {
           "id": "ishopbulk0067",
-          "name": "bagels 6",
-          "emoji": "🛒"
+          "name": "bagels 6"
         },
         {
           "id": "ishopbulk0068",
-          "name": "chicken 6",
-          "emoji": "🛒"
+          "name": "chicken 6"
         },
         {
           "id": "ishopbulk0069",
-          "name": "cheese 6",
-          "emoji": "🛒"
+          "name": "cheese 6"
         },
         {
           "id": "ishopbulk0070",
-          "name": "peas 6",
-          "emoji": "🛒"
+          "name": "peas 6"
         },
         {
           "id": "ishopbulk0071",
-          "name": "pasta 6",
-          "emoji": "🛒"
+          "name": "pasta 6"
         },
         {
           "id": "ishopbulk0072",
-          "name": "crackers 6",
-          "emoji": "🛒"
+          "name": "crackers 6"
         },
         {
           "id": "ishopbulk0073",
-          "name": "sparkling water 6",
-          "emoji": "🛒"
+          "name": "sparkling water 6"
         },
         {
           "id": "ishopbulk0074",
-          "name": "paper towels 6",
-          "emoji": "🛒"
+          "name": "paper towels 6"
         },
         {
           "id": "ishopbulk0075",
-          "name": "shampoo 6",
-          "emoji": "🛒"
+          "name": "shampoo 6"
         },
         {
           "id": "ishopbulk0076",
-          "name": "wipes 6",
-          "emoji": "🛒"
+          "name": "wipes 6"
         },
         {
           "id": "ishopbulk0077",
-          "name": "cat food 6",
-          "emoji": "🛒"
+          "name": "cat food 6"
         },
         {
           "id": "ishopbulk0078",
-          "name": "apples 7",
-          "emoji": "🛒"
+          "name": "apples 7"
         },
         {
           "id": "ishopbulk0079",
-          "name": "pears 7",
-          "emoji": "🛒"
+          "name": "pears 7"
         },
         {
           "id": "ishopbulk0080",
-          "name": "bagels 7",
-          "emoji": "🛒"
+          "name": "bagels 7"
         },
         {
           "id": "ishopbulk0081",
-          "name": "chicken 7",
-          "emoji": "🛒"
+          "name": "chicken 7"
         },
         {
           "id": "ishopbulk0082",
-          "name": "cheese 7",
-          "emoji": "🛒"
+          "name": "cheese 7"
         },
         {
           "id": "ishopbulk0083",
-          "name": "peas 7",
-          "emoji": "🛒"
+          "name": "peas 7"
         }
       ],
       "shopping": [],
@@ -2210,19 +2096,17 @@
     "ok": true,
     "kind": "shopping",
     "title": "Party",
-    "emoji": "🎉",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Party",
-      "emoji": "🎉",
       "aisles": [],
       "cart": [
         {
           "id": "ishopchip0001",
           "name": "chips",
-          "emoji": "🥔",
           "qty": null,
           "note": null,
           "aisle": "snacks",
@@ -2246,7 +2130,6 @@
         {
           "id": "ishopsoda0001",
           "name": "lemonade",
-          "emoji": "🍋",
           "qty": null,
           "note": null,
           "aisle": "drinks",
@@ -2270,7 +2153,6 @@
         {
           "id": "ishopice00001",
           "name": "ice",
-          "emoji": "🧊",
           "qty": null,
           "note": null,
           "aisle": "frozen",
@@ -2367,13 +2249,12 @@
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": "🛒",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Groceries",
-      "emoji": "🛒",
       "aisles": [
         {
           "aisle": "produce",
@@ -2385,7 +2266,6 @@
             {
               "id": "ishoptoma0001",
               "name": "tomatoes",
-              "emoji": "🍅",
               "qty": null,
               "note": null,
               "aisle": "produce",
@@ -2402,7 +2282,6 @@
             {
               "id": "ishopavoc0001",
               "name": "avocados",
-              "emoji": "🥑",
               "qty": "3",
               "note": "ripe ones",
               "aisle": "produce",
@@ -2430,7 +2309,6 @@
             {
               "id": "ishoptort0001",
               "name": "tortillas",
-              "emoji": "🫓",
               "qty": null,
               "note": null,
               "aisle": "bakery",
@@ -2458,7 +2336,6 @@
             {
               "id": "ishopegg00001",
               "name": "eggs",
-              "emoji": "🥚",
               "qty": "12",
               "note": null,
               "aisle": "dairy",
@@ -2475,7 +2352,6 @@
             {
               "id": "ishopmilk0001",
               "name": "milk",
-              "emoji": "🥛",
               "qty": "2 liters",
               "note": null,
               "aisle": "dairy",
@@ -2501,7 +2377,6 @@
             {
               "id": "ishoprice0001",
               "name": "rice",
-              "emoji": "🍚",
               "qty": "1 kg",
               "note": null,
               "aisle": "pantry",
@@ -2518,7 +2393,6 @@
             {
               "id": "ishopcoff0001",
               "name": "coffee beans",
-              "emoji": "☕",
               "qty": null,
               "note": null,
               "aisle": "pantry",
@@ -2544,7 +2418,6 @@
             {
               "id": "ishopsoap0001",
               "name": "dish soap",
-              "emoji": "🧽",
               "qty": null,
               "note": null,
               "aisle": "household",
@@ -2565,7 +2438,6 @@
         {
           "id": "ishopbred0001",
           "name": "bread",
-          "emoji": "🍞",
           "qty": null,
           "note": null,
           "aisle": "bakery",
@@ -2589,7 +2461,6 @@
         {
           "id": "ishopbana0001",
           "name": "bananas",
-          "emoji": "🍌",
           "qty": null,
           "note": null,
           "aisle": "produce",
@@ -2614,18 +2485,15 @@
       "recent": [
         {
           "id": "ishopoliv0001",
-          "name": "olive oil",
-          "emoji": "🫒"
+          "name": "olive oil"
         },
         {
           "id": "ishopappl0001",
-          "name": "apples",
-          "emoji": "🍎"
+          "name": "apples"
         },
         {
           "id": "ishopyogu0001",
-          "name": "yogurt",
-          "emoji": "🥣"
+          "name": "yogurt"
         }
       ],
       "shopping": [
