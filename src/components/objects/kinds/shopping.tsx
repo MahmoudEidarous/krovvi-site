@@ -2,14 +2,14 @@
 
 /**
  * Shopping on the page, drawn as the app draws its screen (catch8
- * src/components/objects/kinds/shopping): who is at the store, the tiles by
- * aisle as the hero (a tap puts a thing in the cart), the cart as dots in the
- * tint of who got each thing, and what was bought before, one tap from the
- * list again. For a partner without the app this page is the list itself.
+ * src/components/objects/kinds/shopping): who is at the store, what is
+ * left aisle by aisle as rows a thumb can tick (a tick puts a thing in the
+ * cart), the cart with who got what, and what was bought before, one tap
+ * from the list again. For a partner without the app this page is the list.
  */
 
 import { say, type Words } from "@/lib/objects";
-import { DotLine, Face, INK, Pill, Section, STEP, dirOf, tintOf, type Dot } from "../kit";
+import { Face, INK, Pill, Row, Section, STEP, Tick, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
 /** The view as the core sends it (catch8 kinds/shopping.ts ShoppingView), the fields drawn here. */
@@ -21,8 +21,9 @@ interface Person {
 interface ShopTile {
   id: string;
   name: string;
-  emoji: string;
   qty: string | null;
+  note: string | null;
+  addedBy: Person | null;
   for: string[];
   fresh: boolean;
   got: { at: number; by: Person | null } | null;
@@ -30,7 +31,7 @@ interface ShopTile {
 interface ShoppingView {
   aisles: Array<{ aisle: string; words: Words; tiles: ShopTile[] }>;
   cart: ShopTile[];
-  recent: Array<{ id: string; name: string; emoji: string }>;
+  recent: Array<{ id: string; name: string }>;
   shopping: Array<Person & { since: number }>;
   counts: { open: number; cart: number; had: number };
   allGot: boolean;
@@ -39,10 +40,10 @@ interface ShoppingView {
 
 const C = {
   inCart: { en: "In the cart", ar: "في العربية" },
-  cartLegend: { en: "Each dot is a thing in the cart, in the color of who got it", ar: "كل نقطة حاجة في العربية، بلون اللي جابها" },
   atStore: { en: "I’m at the store", ar: "أنا في المحل" },
   youAtStore: { en: "You’re at the store", ar: "إنت في المحل" },
   before: { en: "Bought before", ar: "اتجاب قبل كده" },
+  beforeHint: { en: "Tap one to put it back on the list.", ar: "دوس على أي واحدة ترجعها للقايمة." },
   emptyHint: { en: "Nothing on the list", ar: "القايمة فاضية" },
   got: { en: "Got it", ar: "جبتها" },
   putBack: { en: "Put back on the list", ar: "رجّعها للقايمة" },
@@ -52,22 +53,17 @@ const C = {
 } satisfies Record<string, Words>;
 
 const forMeals = (meals: string[]): Words => ({ en: `for ${meals.join(", ")}`, ar: `لـ ${meals.join("، ")}` });
+const gotBy = (p: Person | null, lang: "en" | "ar") => (p?.you ? (lang === "ar" ? "إنت جبتها" : "You got it") : p ? (lang === "ar" ? `${p.name} جابها` : `${p.name} got it`) : lang === "ar" ? "اتجابت" : "Got");
 
-function Chip({ emoji, name, onClick, label, struck }: { emoji: string; name: string; onClick?: () => void; label: string; struck?: boolean }) {
-  return (
-    <button type="button" onClick={onClick} disabled={!onClick} aria-label={label} className="inline-flex items-center rounded-full active:scale-[0.97]" style={{ gap: 6, padding: "0 10px", height: 32, background: INK.surfaceHi, transition: "transform 110ms" }}>
-      <span aria-hidden>{emoji}</span>
-      <span style={{ ...STEP.label, color: INK.soft, textDecoration: struck ? "line-through" : undefined }}>
-        <bdi dir={dirOf(name)}>{name}</bdi>
-      </span>
-    </button>
-  );
+/** Under a thing: how much, the note, the meals it is for, and who added it when someone else did. */
+function subOf(t: ShopTile, lang: "en" | "ar"): string | null {
+  const parts = [t.qty, t.note, t.for.length ? say(forMeals(t.for), lang) : null, t.fresh && t.addedBy && !t.addedBy.you ? (lang === "ar" ? `ضافها ${t.addedBy.name}` : `Added by ${t.addedBy.name}`) : null].filter(Boolean);
+  return parts.length ? parts.join(" · ") : null;
 }
 
 export const Page: KindPage = ({ view, lang, act, can, busy }) => {
   const v = view as ShoppingView;
   const shopper = v.shopping[0];
-  const cartDots: Dot[] = v.cart.map((t) => ({ on: true, tint: t.got?.by ? tintOf(t.got.by.name) : INK.fg }));
   const youShop = v.shopping.some((s) => s.you);
   return (
     <div>
@@ -84,47 +80,26 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
         </div>
       ) : null}
       {v.counts.open ? (
-        <section className="mb-3" style={{ background: INK.surface, borderRadius: 17, padding: "4px 12px 12px" }}>
-          {v.aisles.map((a) => (
-            <div key={a.aisle} style={{ paddingTop: 10 }}>
-              <h3 style={{ ...STEP.label, color: INK.muted, padding: "0 4px 8px" }}>{say(a.words, lang)}</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-4" style={{ gap: 8 }}>
-                {a.tiles.map((t) => (
-                  <button
-                    key={t.id}
-                    type="button"
-                    disabled={!can("got") || busy}
-                    onClick={() => void act("got", { item: t.id })}
-                    aria-label={`${t.name}${t.qty ? `, ${t.qty}` : ""}. ${say(C.got, lang)}`}
-                    className="relative flex flex-col items-center justify-center active:scale-[0.96]"
-                    style={{ minHeight: 104, borderRadius: 11, background: INK.surfaceHi, padding: "10px 6px", gap: 4, transition: "transform 110ms" }}
-                  >
-                    <span aria-hidden style={{ fontSize: 32, lineHeight: "38px" }}>
-                      {t.emoji}
-                    </span>
-                    <span style={{ ...STEP.label, fontWeight: 500, textAlign: "center" }}>
-                      <bdi dir={dirOf(t.name)}>{t.name}</bdi>
-                    </span>
-                    {t.for.length ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(forMeals(t.for), lang)}</span> : null}
-                    {t.qty ? (
-                      <span className="absolute" style={{ top: 6, insetInlineEnd: 6, ...STEP.meta, color: INK.soft, background: INK.surface, borderRadius: 9, padding: "1px 6px" }}>
-                        <bdi dir={dirOf(t.qty)}>{t.qty}</bdi>
-                      </span>
-                    ) : null}
-                    {t.fresh ? (
-                      <span className="absolute" style={{ top: 6, insetInlineStart: 8, ...STEP.meta, fontWeight: 600, color: INK.soft }}>
-                        {say(C.fresh, lang)}
-                      </span>
-                    ) : null}
-                  </button>
-                ))}
-              </div>
-            </div>
+        <section className="mb-3" style={{ background: INK.surface, borderRadius: 17, paddingBottom: 4 }}>
+          {v.aisles.map((a, n) => (
+          <div key={a.aisle}>
+            <h3 style={{ ...STEP.label, color: INK.muted, padding: `${n ? 18 : 12}px 16px 2px` }}>{say(a.words, lang)}</h3>
+            {a.tiles.map((t, i) => (
+              <Row
+                key={t.id}
+                first={i === 0}
+                lead={<Tick done={false} label={`${say(C.got, lang)}: ${t.name}`} onClick={can("got") && !busy ? () => void act("got", { item: t.id }) : undefined} />}
+                title={t.name}
+                sub={subOf(t, lang)}
+                value={t.fresh ? <span style={{ ...STEP.meta, color: INK.soft, fontWeight: 600 }}>{say(C.fresh, lang)}</span> : undefined}
+              />
+            ))}
+          </div>
           ))}
         </section>
       ) : (
         <section className="mb-3 flex flex-col items-center" style={{ background: INK.surface, borderRadius: 17, padding: "28px 16px", gap: 10 }}>
-          <span style={{ ...STEP.display, textAlign: "center" }}>{say(v.leftWords, lang)}</span>
+          <span style={{ ...STEP.title, textAlign: "center" }}>{say(v.leftWords, lang)}</span>
           {!v.allGot ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.emptyHint, lang)}</span> : null}
         </section>
       )}
@@ -135,24 +110,38 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
       ) : null}
       {v.counts.cart ? (
         <Section title={`${say(C.inCart, lang)} · ${v.counts.cart}`}>
-          <div className="flex flex-col" style={{ padding: "12px 16px", gap: 10 }}>
-            <DotLine dots={cartDots} dot={10} gap={6} label={`${say(C.inCart, lang)}: ${v.counts.cart}`} />
-            <div className="flex flex-wrap" style={{ gap: 6 }}>
-              {v.cart.map((t) => (
-                <Chip key={t.id} emoji={t.emoji} name={t.name} struck onClick={can("ungot") && !busy ? () => void act("ungot", { item: t.id }) : undefined} label={`${t.name}. ${say(C.putBack, lang)}`} />
-              ))}
-            </div>
-            <span style={{ ...STEP.meta, color: INK.muted }}>{say(C.cartLegend, lang)}</span>
-          </div>
+          {v.cart.map((t, i) => (
+            <Row
+              key={t.id}
+              first={i === 0}
+              muted
+              lead={<Tick done label={`${t.name}. ${say(C.putBack, lang)}`} onClick={can("ungot") && !busy ? () => void act("ungot", { item: t.id }) : undefined} />}
+              title={t.name}
+              sub={gotBy(t.got?.by ?? null, lang)}
+            />
+          ))}
         </Section>
       ) : null}
       {v.recent.length ? (
         <Section title={say(C.before, lang)}>
-          <div className="flex flex-wrap" style={{ padding: "12px 16px", gap: 6 }}>
+          <div className="flex flex-wrap" style={{ padding: "8px 16px 4px", gap: 6 }}>
             {v.recent.map((r) => (
-              <Chip key={r.id} emoji={r.emoji} name={r.name} onClick={can("add") && !busy ? () => void act("add", { items: [{ name: r.name }] }) : undefined} label={`${r.name}. ${say(C.addAgain, lang)}`} />
+              <button
+                key={r.id}
+                type="button"
+                onClick={can("add") && !busy ? () => void act("add", { items: [{ name: r.name }] }) : undefined}
+                disabled={!can("add") || busy}
+                aria-label={`${r.name}. ${say(C.addAgain, lang)}`}
+                className="inline-flex items-center rounded-full active:scale-[0.97]"
+                style={{ padding: "0 12px", height: 32, background: INK.surfaceHi, transition: "transform 110ms" }}
+              >
+                <span style={{ ...STEP.label, color: INK.soft }}>
+                  <bdi dir={dirOf(r.name)}>{r.name}</bdi>
+                </span>
+              </button>
             ))}
           </div>
+          {can("add") ? <div style={{ ...STEP.meta, color: INK.muted, padding: "6px 16px 12px" }}>{say(C.beforeHint, lang)}</div> : <div style={{ height: 8 }} />}
         </Section>
       ) : null}
     </div>
