@@ -69,8 +69,21 @@ function Person({ texts, photos, media, reaction }: { texts: string[]; photos: n
         <div className="flex flex-wrap justify-end" style={{ gap: 4, maxWidth: "78%" }}>
           {photos.map((p) =>
             media[p] ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img key={p} src={media[p].url} alt="" className="object-cover" style={{ width: photos.length === 1 ? 220 : 120, height: photos.length === 1 ? 220 : 120, borderRadius: 13 }} />
+              // A tap opens the photo whole, in its own tab.
+              <a key={p} href={media[p].url} target="_blank" rel="noopener noreferrer" className="block active:opacity-80">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={media[p].url}
+                  alt=""
+                  className="object-cover"
+                  style={{ width: photos.length === 1 ? 220 : 120, height: photos.length === 1 ? 220 : 120, borderRadius: 13 }}
+                  // A photo that is gone (or whose hour-long link ran out) leaves no broken picture behind.
+                  onError={(e) => {
+                    const link = e.currentTarget.parentElement;
+                    if (link) link.style.display = "none";
+                  }}
+                />
+              </a>
             ) : null
           )}
         </div>
