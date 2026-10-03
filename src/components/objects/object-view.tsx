@@ -59,6 +59,30 @@ type State<V> = { kind: "loading" } | { kind: "gone" } | { kind: "ready"; page: 
  * `token` reads the live object; `fixture` draws a payload with no network
  * (dev mode: the core's own fixtures, src/components/objects/fixtures).
  */
+/** Kinds that are one person's own (a food day, a cycle): the people in them only look. Kept with catch8's core (spec.personal). */
+const PERSONAL = new Set(["food", "workout", "mood", "cycle"]);
+
+/**
+ * Under the title, as the app says it: the kind, then who it is with ("To-do ·
+ * With Sam and Lina", past two names a count); a personal kind says whose it
+ * is ("Shared by Alex"). The kind steps aside when the title is its own name.
+ */
+function headLine(page: PagePayload, lang: Lang): string {
+  const kind = say(page.kindName, lang);
+  const owner = page.members.find((m) => m.role === "owner");
+  const others = page.members.filter((m) => !m.you).map((m) => m.name);
+  const two = (a: string, b: string) => (lang === "ar" ? `${a} و${b}` : `${a} and ${b}`);
+  const names = others.length === 1 ? others[0] : others.length === 2 ? two(others[0], others[1]) : lang === "ar" ? `${others.length} أشخاص` : `${others.length} people`;
+  const people =
+    PERSONAL.has(page.kind) && owner && !owner.you
+      ? lang === "ar" ? `شاركه ${owner.name}` : `Shared by ${owner.name}`
+      : !others.length
+        ? lang === "ar" ? "شخص واحد" : "Just one"
+        : lang === "ar" ? `مع ${names}` : `With ${names}`;
+  const title = page.title.trim().toLowerCase();
+  return title === page.kindName.en.toLowerCase() || title === page.kindName.ar ? people : `${kind} · ${people}`;
+}
+
 export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: PagePayload<V> }) {
   const [state, setState] = useState<State<V>>(fixture ? { kind: "ready", page: fixture } : { kind: "loading" });
   const [lang, setLang] = useState<Lang>("en");
@@ -186,7 +210,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
             <bdi dir={dirOf(page.title)}>{page.title}</bdi>
           </h1>
           <span className="block" style={{ ...STEP.meta, color: INK.muted }}>
-            {`${say(page.kindName, lang)} · ${names.length === 1 ? say(C.justOne, lang) : `${names.length} ${say(C.people, lang)}`}`}
+            {headLine(page, lang)}
           </span>
         </span>
         {names.length > 1 ? <FaceStack names={names} size={26} /> : null}
