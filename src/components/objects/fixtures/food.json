@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 1,
@@ -159,14 +158,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "day-en": {
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -351,14 +348,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "day-ar": {
     "ok": true,
     "kind": "food",
     "title": "الأكل",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -543,14 +538,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -773,14 +766,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "protein-en": {
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -965,14 +956,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "nogoal-en": {
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1121,14 +1110,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "buddy-en": {
     "ok": true,
     "kind": "food",
     "title": "Food",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1308,14 +1295,12 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   },
   "buddy-ar": {
     "ok": true,
     "kind": "food",
     "title": "الأكل",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1495,7 +1480,6 @@
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
-    },
-    "kindEmoji": "🍽️"
+    }
   }
 }

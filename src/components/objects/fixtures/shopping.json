@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -56,14 +55,12 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   },
   "groceries-en": {
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -393,14 +390,12 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   },
   "groceries-ar": {
     "ok": true,
     "kind": "shopping",
     "title": "طلبات البيت",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -721,14 +716,12 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "shopping",
     "title": "Flat 4B",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2089,14 +2082,12 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   },
   "allgot-en": {
     "ok": true,
     "kind": "shopping",
     "title": "Party",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2242,14 +2233,12 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "shopping",
     "title": "Groceries",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2574,7 +2563,6 @@
     "kindName": {
       "en": "Shopping",
       "ar": "المشتريات"
-    },
-    "kindEmoji": "🛒"
+    }
   }
 }

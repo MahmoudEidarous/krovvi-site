@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "split",
     "title": "Game night snacks",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -131,14 +130,12 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   },
   "lisbon-en": {
     "ok": true,
     "kind": "split",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -577,14 +574,12 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   },
   "lisbon-ar": {
     "ok": true,
     "kind": "split",
     "title": "لشبونة",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1014,14 +1009,12 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   },
   "summer-busy-en": {
     "ok": true,
     "kind": "split",
     "title": "Summer house",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 160,
@@ -19338,14 +19331,12 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   },
   "square-en": {
     "ok": true,
     "kind": "split",
     "title": "Dinner at Sara’s",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -19578,14 +19569,12 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "split",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -20026,7 +20015,6 @@
     "kindName": {
       "en": "Split",
       "ar": "تقسيم"
-    },
-    "kindEmoji": "🤝"
+    }
   }
 }

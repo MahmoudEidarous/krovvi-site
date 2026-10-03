@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -134,14 +133,12 @@
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
-    },
-    "kindEmoji": "⏳"
+    }
   },
   "exam-ar": {
     "ok": true,
     "kind": "countdown",
     "title": "امتحان الكيمياء",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -203,14 +200,12 @@
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
-    },
-    "kindEmoji": "⏳"
+    }
   },
   "wedding-weeks-en": {
     "ok": true,
     "kind": "countdown",
     "title": "Sara’s wedding",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -293,14 +288,12 @@
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
-    },
-    "kindEmoji": "⏳"
+    }
   },
   "today-en": {
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -431,14 +424,12 @@
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
-    },
-    "kindEmoji": "⏳"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -565,7 +556,6 @@
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
-    },
-    "kindEmoji": "⏳"
+    }
   }
 }

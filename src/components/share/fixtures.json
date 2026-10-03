@@ -50,10 +50,8 @@
                 "kind": "object",
                 "objectKind": "countdown",
                 "title": "Lisbon",
-                "emoji": "🇵🇹",
                 "view": {
                   "title": "Lisbon",
-                  "emoji": "🇵🇹",
                   "day": "2026-10-16",
                   "time": "09:30",
                   "daysLeft": 13,
@@ -102,7 +100,6 @@
                     "id": "ocdlisbon0001",
                     "kind": "countdown",
                     "title": "Lisbon",
-                    "emoji": "🇵🇹",
                     "lang": "en",
                     "tz": "Africa/Cairo",
                     "settings": {
@@ -454,10 +451,8 @@
                 "kind": "object",
                 "objectKind": "countdown",
                 "title": "امتحان الكيمياء",
-                "emoji": "🧪",
                 "view": {
                   "title": "امتحان الكيمياء",
-                  "emoji": "🧪",
                   "day": "2026-10-15",
                   "time": null,
                   "daysLeft": 12,
@@ -493,7 +488,6 @@
                     "id": "ocdexam000001",
                     "kind": "countdown",
                     "title": "امتحان الكيمياء",
-                    "emoji": "🧪",
                     "lang": "ar",
                     "tz": "Africa/Cairo",
                     "settings": {

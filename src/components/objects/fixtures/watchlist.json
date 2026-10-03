@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -78,14 +77,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "night-en": {
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -583,14 +580,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "night-ar": {
     "ok": true,
     "kind": "watchlist",
     "title": "سهرة الفيلم",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1079,14 +1074,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "watchlist",
     "title": "Flat 4B",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -4632,14 +4625,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "match-en": {
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -4848,14 +4839,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "solo-en": {
     "ok": true,
     "kind": "watchlist",
     "title": "To watch",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5025,14 +5014,12 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5648,7 +5635,6 @@
     "kindName": {
       "en": "Watchlist",
       "ar": "نتفرج على إيه"
-    },
-    "kindEmoji": "🎬"
+    }
   }
 }

@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 1,
@@ -53,14 +52,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "between-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -130,14 +127,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "between-ar": {
     "ok": true,
     "kind": "cycle",
     "title": "الدورة",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -207,14 +202,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "period-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -284,14 +277,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "soon-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -348,14 +339,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "late-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -425,14 +414,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "irregular-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -489,14 +476,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "learned-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -553,14 +538,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -630,14 +613,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "partner-en": {
     "ok": true,
     "kind": "cycle",
     "title": "Cycle",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -702,14 +683,12 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   },
   "partner-ar": {
     "ok": true,
     "kind": "cycle",
     "title": "الدورة",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -774,7 +753,6 @@
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
-    },
-    "kindEmoji": "🌙"
+    }
   }
 }

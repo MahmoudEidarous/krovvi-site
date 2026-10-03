@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -117,14 +116,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "game-night-en": {
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -442,14 +439,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "game-night-ar": {
     "ok": true,
     "kind": "plan",
     "title": "ليلة ألعاب",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -767,14 +762,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "birthday-busy-en": {
     "ok": true,
     "kind": "plan",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 140,
@@ -1642,14 +1635,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "reveal-en": {
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 31,
@@ -1984,14 +1975,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "tie-en": {
     "ok": true,
     "kind": "plan",
     "title": "Friday dinner",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2173,14 +2162,12 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "plan",
     "title": "Game night",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2494,7 +2481,6 @@
     "kindName": {
       "en": "Plan",
       "ar": "خطة"
-    },
-    "kindEmoji": "📅"
+    }
   }
 }

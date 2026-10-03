@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "todo",
     "title": "Move",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -69,14 +68,12 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "house-en": {
     "ok": true,
     "kind": "todo",
     "title": "House",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -441,14 +438,12 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "house-ar": {
     "ok": true,
     "kind": "todo",
     "title": "البيت",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -804,14 +799,12 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "launch-busy-en": {
     "ok": true,
     "kind": "todo",
     "title": "Launch",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2294,14 +2287,12 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "clear-en": {
     "ok": true,
     "kind": "todo",
     "title": "Party prep",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2487,14 +2478,12 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "todo",
     "title": "House",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2855,7 +2844,6 @@
     "kindName": {
       "en": "To-do",
       "ar": "المهام"
-    },
-    "kindEmoji": "✅"
+    }
   }
 }

@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "meds",
     "title": "My medicines",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 2,
@@ -161,14 +160,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "mom-en": {
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -454,14 +451,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "mom-ar": {
     "ok": true,
     "kind": "meds",
     "title": "أدوية ماما",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -719,14 +714,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "meds",
     "title": "Grandpa’s medicines",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1300,14 +1293,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "allgiven-en": {
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1602,14 +1593,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "meds",
     "title": "Mom’s medicines",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1891,14 +1880,12 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   },
   "guest-ar": {
     "ok": true,
     "kind": "meds",
     "title": "أدوية ماما",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -2152,7 +2139,6 @@
     "kindName": {
       "en": "Meds",
       "ar": "الأدوية"
-    },
-    "kindEmoji": "💊"
+    }
   }
 }

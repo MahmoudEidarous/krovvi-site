@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "mood",
     "title": "Mood",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 1,
@@ -542,14 +541,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "year-en": {
     "ok": true,
     "kind": "mood",
     "title": "Mood",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1229,14 +1226,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "year-ar": {
     "ok": true,
     "kind": "mood",
     "title": "المود",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1916,14 +1911,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "mood",
     "title": "Every day",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2626,14 +2619,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "month-en": {
     "ok": true,
     "kind": "mood",
     "title": "Mood",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3309,14 +3300,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "partner-en": {
     "ok": true,
     "kind": "mood",
     "title": "Mood",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3991,14 +3980,12 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   },
   "partner-ar": {
     "ok": true,
     "kind": "mood",
     "title": "المود",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -4673,7 +4660,6 @@
     "kindName": {
       "en": "Mood",
       "ar": "المود"
-    },
-    "kindEmoji": "🌤️"
+    }
   }
 }

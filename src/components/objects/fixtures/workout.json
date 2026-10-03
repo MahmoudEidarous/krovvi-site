@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 1,
@@ -115,14 +114,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "week-en": {
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -898,14 +895,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "week-ar": {
     "ok": true,
     "kind": "workout",
     "title": "التمرين",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1443,14 +1438,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "workout",
     "title": "Gym",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3870,14 +3863,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "best-en": {
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -4679,14 +4670,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "runner-en": {
     "ok": true,
     "kind": "workout",
     "title": "Running",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5057,14 +5046,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "buddy-en": {
     "ok": true,
     "kind": "workout",
     "title": "Training",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5835,14 +5822,12 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   },
   "buddy-ar": {
     "ok": true,
     "kind": "workout",
     "title": "التمرين",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -6375,7 +6360,6 @@
     "kindName": {
       "en": "Workout",
       "ar": "التمرين"
-    },
-    "kindEmoji": "🏋️"
+    }
   }
 }

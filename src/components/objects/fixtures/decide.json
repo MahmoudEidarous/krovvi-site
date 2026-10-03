@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "decide",
     "title": "Which car",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -60,14 +59,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "flats-en": {
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -409,14 +406,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "flats-ar": {
     "ok": true,
     "kind": "decide",
     "title": "أنهي شقة",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -748,14 +743,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "venue-busy-en": {
     "ok": true,
     "kind": "decide",
     "title": "Offsite venue",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2220,14 +2213,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "sealed-en": {
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2606,14 +2597,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "cracked-en": {
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3025,14 +3014,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "job-en": {
     "ok": true,
     "kind": "decide",
     "title": "The job offer",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3239,14 +3226,12 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3583,7 +3568,6 @@
     "kindName": {
       "en": "Decide",
       "ar": "قرار"
-    },
-    "kindEmoji": "⚖️"
+    }
   }
 }

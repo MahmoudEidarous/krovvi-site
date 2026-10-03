@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "spending",
     "title": "My money",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -325,14 +324,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "home-en": {
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -944,14 +941,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "home-ar": {
     "ok": true,
     "kind": "spending",
     "title": "البيت",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1563,14 +1558,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "flat-busy-en": {
     "ok": true,
     "kind": "spending",
     "title": "The flat",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 220,
@@ -4622,14 +4615,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "bills-paid-en": {
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5094,14 +5085,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "partner-en": {
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5709,14 +5698,12 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   },
   "watcher-en": {
     "ok": true,
     "kind": "spending",
     "title": "Home",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -6318,7 +6305,6 @@
     "kindName": {
       "en": "Spending",
       "ar": "المصاريف"
-    },
-    "kindEmoji": "💳"
+    }
   }
 }

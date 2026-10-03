@@ -20,7 +20,6 @@ export interface PagePayload<V = unknown> {
   ok: true;
   kind: string;
   title: string;
-  emoji: string | null;
   lang: Lang;
   state: "live" | "done" | "archived";
   version: number;
@@ -36,7 +35,6 @@ export interface PagePayload<V = unknown> {
   /** How a moment that is not a win feels: no dots for one whose burst is false. */
   momentFeel?: Record<string, { burst?: boolean; haptic?: "moment" | "crack" }>;
   kindName: Words;
-  kindEmoji: string;
 }
 
 export const OBJECTS_API = process.env.NEXT_PUBLIC_OBJECTS_API ?? "https://eybepawprfhrvcnpggwk.supabase.co/functions/v1/objects";

@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "meals",
     "title": "Dinners",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -144,14 +143,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "dinners-en": {
     "ok": true,
     "kind": "meals",
     "title": "Dinners",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -788,14 +785,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "dinners-ar": {
     "ok": true,
     "kind": "meals",
     "title": "عشا الأسبوع",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1423,14 +1418,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "meals",
     "title": "Shared kitchen",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3750,14 +3743,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "match-en": {
     "ok": true,
     "kind": "meals",
     "title": "Dinners",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -3986,14 +3977,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "solo-en": {
     "ok": true,
     "kind": "meals",
     "title": "My dinners",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -4240,14 +4229,12 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "meals",
     "title": "Dinners",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5104,7 +5091,6 @@
     "kindName": {
       "en": "Meals",
       "ar": "الأكلات"
-    },
-    "kindEmoji": "🍲"
+    }
   }
 }

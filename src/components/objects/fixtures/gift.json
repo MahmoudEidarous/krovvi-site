@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -117,14 +116,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "maya-en": {
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -380,14 +377,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "maya-ar": {
     "ok": true,
     "kind": "gift",
     "title": "عيد ميلاد مايا",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -643,14 +638,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "leo-busy-en": {
     "ok": true,
     "kind": "gift",
     "title": "Leo’s leaving present",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 90,
@@ -1202,14 +1195,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "open-en": {
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 22,
@@ -1503,14 +1494,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1768,14 +1757,12 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   },
   "alert-en": {
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2046,7 +2033,6 @@
     "kindName": {
       "en": "Gift",
       "ar": "هدية"
-    },
-    "kindEmoji": "🎁"
+    }
   }
 }

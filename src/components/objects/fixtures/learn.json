@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "learn",
     "title": "History: the talk",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -55,14 +54,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "study-en": {
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -354,14 +351,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "study-ar": {
     "ok": true,
     "kind": "learn",
     "title": "أحياء: الخلية",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -643,14 +638,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "class-busy-en": {
     "ok": true,
     "kind": "learn",
     "title": "History: twelve dates",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1748,14 +1741,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "podium-en": {
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2087,14 +2078,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2406,14 +2395,12 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   },
   "solo-en": {
     "ok": true,
     "kind": "learn",
     "title": "Spanish: the café",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2539,7 +2526,6 @@
     "kindName": {
       "en": "Learn",
       "ar": "مذاكرة"
-    },
-    "kindEmoji": "🧠"
+    }
   }
 }

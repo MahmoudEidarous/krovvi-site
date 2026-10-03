@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "habits",
     "title": "Habits",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 2,
@@ -112,14 +111,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "solo-en": {
     "ok": true,
     "kind": "habits",
     "title": "My habits",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -421,14 +418,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "solo-ar": {
     "ok": true,
     "kind": "habits",
     "title": "عاداتي",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -720,14 +715,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "pact-en": {
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -976,14 +969,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "together-en": {
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1241,14 +1232,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "busy-en": {
     "ok": true,
     "kind": "habits",
     "title": "Morning crew",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2451,14 +2440,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "habits",
     "title": "10k steps",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -2706,14 +2693,12 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   },
   "guest-ar": {
     "ok": true,
     "kind": "habits",
     "title": "مشي كل يوم",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -2881,7 +2866,6 @@
     "kindName": {
       "en": "Habits",
       "ar": "العادات"
-    },
-    "kindEmoji": "✅"
+    }
   }
 }

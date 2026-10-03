@@ -205,7 +205,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
             <Pill text={say(C.addButton, lang)} strong disabled={busy || !what.trim() || !amount} onClick={() => void add()} />
           </form>
           <div className="flex flex-wrap" style={{ gap: 6, padding: "0 12px 12px" }}>
-            {CATS.map(([key, emoji, name]) => (
+            {CATS.map(([key, mark, name]) => (
               <button
                 key={key}
                 type="button"
@@ -215,7 +215,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 style={{ ...STEP.meta, padding: "6px 10px", background: cat === key ? INK.fg : INK.surfaceHi, color: cat === key ? INK.bg : INK.fg, transition: `background-color 150ms ${EASE}, color 150ms ${EASE}` }}
               >
                 <span className="inline-flex items-center" style={{ gap: 6 }}>
-                  <Mark name={emoji} size={14} color={cat === key ? INK.bg : INK.soft} />
+                  <Mark name={mark} size={14} color={cat === key ? INK.bg : INK.soft} />
                   {say(name, lang)}
                 </span>
               </button>

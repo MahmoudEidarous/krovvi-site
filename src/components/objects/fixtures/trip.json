@@ -3,7 +3,6 @@
     "ok": true,
     "kind": "trip",
     "title": "Mountain weekend",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -148,14 +147,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "lisbon-en": {
     "ok": true,
     "kind": "trip",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -773,14 +770,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "lisbon-ar": {
     "ok": true,
     "kind": "trip",
     "title": "لشبونة",
-    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
@@ -1398,14 +1393,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "planning-en": {
     "ok": true,
     "kind": "trip",
     "title": "Japan someday",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -1541,14 +1534,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "road-busy-en": {
     "ok": true,
     "kind": "trip",
     "title": "Iceland road trip",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 300,
@@ -4370,14 +4361,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "day-one-en": {
     "ok": true,
     "kind": "trip",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -4995,14 +4984,12 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   },
   "guest-en": {
     "ok": true,
     "kind": "trip",
     "title": "Lisbon",
-    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
@@ -5619,7 +5606,6 @@
     "kindName": {
       "en": "Trip",
       "ar": "رحلة"
-    },
-    "kindEmoji": "✈️"
+    }
   }
 }
