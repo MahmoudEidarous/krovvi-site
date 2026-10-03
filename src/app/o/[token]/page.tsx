@@ -10,6 +10,8 @@ import { OBJECTS_API } from "@/lib/objects";
  * read, for the card a messaging app draws under the link.
  */
 
+/** The one picture every shared link shows in a messaging app (app/opengraph-image.png), never the content. */
+const BRAND = { url: "/opengraph-image.png", width: 1200, height: 630, alt: "Krovvi" };
 const LINE = "Open it to see it and take part. No app needed.";
 
 export async function generateMetadata({ params }: { params: Promise<{ token: string }> }): Promise<Metadata> {
@@ -28,8 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ token: st
     title,
     description: LINE,
     robots: { index: false, follow: false, nocache: true },
-    openGraph: { type: "website", siteName: "Krovvi", title, description: LINE },
-    twitter: { card: "summary", title, description: LINE },
+    // The page's own tags replace the site's, its picture with them: the one Krovvi picture, named again here.
+    openGraph: { type: "website", siteName: "Krovvi", title, description: LINE, images: [BRAND] },
+    twitter: { card: "summary_large_image", title, description: LINE, images: [BRAND.url] },
   };
 }
 
