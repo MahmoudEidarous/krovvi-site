@@ -1,1 +1,5723 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Mountain weekend",
+    "emoji": "🏔️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Mountain weekend",
+      "emoji": "🏔️",
+      "start": "2026-10-30",
+      "end": "2026-11-01",
+      "days": 3,
+      "datesWords": {
+        "en": "Fri 30 Oct to Sun 1 Nov",
+        "ar": "من الجمعة 30 أكتوبر لـ الحد 1 نوفمبر"
+      },
+      "phase": "before",
+      "daysToGo": 27,
+      "dayOf": null,
+      "leftWords": {
+        "en": "27 days to go",
+        "ar": "فاضل 27 يوم"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "Mountain weekend",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-30",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-31",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-11-01",
+                "past": false,
+                "today": false
+              }
+            ]
+          }
+        ],
+        "legs": []
+      },
+      "next": null,
+      "bookings": [],
+      "plan": [
+        {
+          "day": "2026-10-30",
+          "label": {
+            "en": "Day 1, Fri 30 Oct",
+            "ar": "اليوم 1، الجمعة 30 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-31",
+          "label": {
+            "en": "Day 2, Sat 31 Oct",
+            "ar": "اليوم 2، السبت 31 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-11-01",
+          "label": {
+            "en": "Day 3, Sun 1 Nov",
+            "ar": "اليوم 3، الحد 1 نوفمبر"
+          },
+          "today": false,
+          "things": []
+        }
+      ],
+      "ideas": [],
+      "packing": {
+        "items": [],
+        "you": null,
+        "done": false
+      },
+      "split": null,
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "lisbon-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "start": "2026-10-16",
+      "end": "2026-10-23",
+      "days": 8,
+      "datesWords": {
+        "en": "Fri 16 Oct to Fri 23 Oct",
+        "ar": "من الجمعة 16 أكتوبر لـ الجمعة 23 أكتوبر"
+      },
+      "phase": "before",
+      "daysToGo": 13,
+      "dayOf": null,
+      "leftWords": {
+        "en": "13 days to go",
+        "ar": "فاضل 13 يوم"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          },
+          {
+            "place": "Lisbon",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-16",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-17",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-18",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-19",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Porto",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-20",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-21",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-22",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-23",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          }
+        ],
+        "legs": [
+          {
+            "from": "Cairo",
+            "to": "Lisbon",
+            "kind": "flight",
+            "booking": "itb0000000001",
+            "hours": 6,
+            "past": false
+          },
+          {
+            "from": "Lisbon",
+            "to": "Porto",
+            "kind": "train",
+            "booking": "itb0000000003",
+            "hours": 3,
+            "past": false
+          },
+          {
+            "from": "Porto",
+            "to": "Cairo",
+            "kind": "flight",
+            "booking": "itb0000000005",
+            "hours": 5,
+            "past": false
+          }
+        ]
+      },
+      "next": {
+        "id": "itb0000000001",
+        "title": "TP 1234 Cairo to Lisbon",
+        "emoji": "✈️",
+        "whenWords": {
+          "en": "Fri 16 Oct, 9:30 AM",
+          "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+        },
+        "inWords": {
+          "en": "In 13 days",
+          "ar": "بعد 13 يوم"
+        }
+      },
+      "bookings": [
+        {
+          "id": "itb0000000001",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1234 Cairo to Lisbon",
+          "from": "Cairo",
+          "to": "Lisbon",
+          "place": null,
+          "city": null,
+          "day": "2026-10-16",
+          "time": "09:30",
+          "endDay": "2026-10-16",
+          "endTime": "13:10",
+          "startAt": 1792132200000,
+          "endAt": 1792152600000,
+          "whenWords": {
+            "en": "Fri 16 Oct, 9:30 AM",
+            "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+          },
+          "number": "TP1234",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": true
+        },
+        {
+          "id": "itb0000000002",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Casa Alfama",
+          "from": null,
+          "to": null,
+          "place": "Rua dos Remédios 12, Alfama",
+          "city": "Lisbon",
+          "day": "2026-10-16",
+          "time": null,
+          "endDay": "2026-10-20",
+          "endTime": null,
+          "startAt": 1792159200000,
+          "endAt": 1792490400000,
+          "whenWords": {
+            "en": "Fri 16 Oct",
+            "ar": "الجمعة 16 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000003",
+          "kind": "train",
+          "emoji": "🚆",
+          "title": "Alfa Pendular to Porto",
+          "from": "Lisbon",
+          "to": "Porto",
+          "place": null,
+          "city": null,
+          "day": "2026-10-20",
+          "time": "14:10",
+          "endDay": null,
+          "endTime": "17:05",
+          "startAt": 1792501800000,
+          "endAt": 1792512300000,
+          "whenWords": {
+            "en": "Tue 20 Oct, 2:10 PM",
+            "ar": "التلات 20 أكتوبر، 2:10 م"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000004",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Ribeira flat",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Porto",
+          "day": "2026-10-20",
+          "time": null,
+          "endDay": "2026-10-23",
+          "endTime": null,
+          "startAt": 1792504800000,
+          "endAt": 1792749600000,
+          "whenWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000005",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1235 Porto to Cairo",
+          "from": "Porto",
+          "to": "Cairo",
+          "place": null,
+          "city": null,
+          "day": "2026-10-23",
+          "time": "18:40",
+          "endDay": "2026-10-24",
+          "endTime": "01:20",
+          "startAt": 1792777200000,
+          "endAt": 1792794000000,
+          "whenWords": {
+            "en": "Fri 23 Oct, 6:40 PM",
+            "ar": "الجمعة 23 أكتوبر، 6:40 م"
+          },
+          "number": "TP1235",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        }
+      ],
+      "plan": [
+        {
+          "day": "2026-10-16",
+          "label": {
+            "en": "Day 1, Fri 16 Oct",
+            "ar": "اليوم 1، الجمعة 16 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000001",
+              "text": "TP 1234 Cairo to Lisbon",
+              "emoji": "✈️",
+              "time": "09:30",
+              "timeWords": {
+                "en": "9:30 AM",
+                "ar": "9:30 ص"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000002",
+              "text": "Casa Alfama",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-17",
+          "label": {
+            "en": "Day 2, Sat 17 Oct",
+            "ar": "اليوم 2، السبت 17 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-18",
+          "label": {
+            "en": "Day 3, Sun 18 Oct",
+            "ar": "اليوم 3، الحد 18 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iti0000000004",
+              "text": "Fado night",
+              "emoji": "🎶",
+              "time": "21:00",
+              "timeWords": {
+                "en": "9:00 PM",
+                "ar": "9:00 م"
+              }
+            }
+          ]
+        },
+        {
+          "day": "2026-10-19",
+          "label": {
+            "en": "Day 4, Mon 19 Oct",
+            "ar": "اليوم 4، الاتنين 19 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-20",
+          "label": {
+            "en": "Day 5, Tue 20 Oct",
+            "ar": "اليوم 5، التلات 20 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000003",
+              "text": "Alfa Pendular to Porto",
+              "emoji": "🚆",
+              "time": "14:10",
+              "timeWords": {
+                "en": "2:10 PM",
+                "ar": "2:10 م"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000004",
+              "text": "Ribeira flat",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-21",
+          "label": {
+            "en": "Day 6, Wed 21 Oct",
+            "ar": "اليوم 6، الأربع 21 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-22",
+          "label": {
+            "en": "Day 7, Thu 22 Oct",
+            "ar": "اليوم 7، الخميس 22 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-23",
+          "label": {
+            "en": "Day 8, Fri 23 Oct",
+            "ar": "اليوم 8، الجمعة 23 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000005",
+              "text": "TP 1235 Porto to Cairo",
+              "emoji": "✈️",
+              "time": "18:40",
+              "timeWords": {
+                "en": "6:40 PM",
+                "ar": "6:40 م"
+              }
+            }
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "iti0000000001",
+          "text": "Sintra",
+          "emoji": "🏰",
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "Sam",
+            "ar": "Sam"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000002",
+          "text": "Pastéis de Belém",
+          "emoji": "🥮",
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000003",
+          "text": "LX Factory",
+          "emoji": "🎨",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [
+          {
+            "id": "itp0000000001",
+            "text": "Passport",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000002",
+            "text": "Phone charger",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000003",
+            "text": "Plug adapter",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "itp0000000004",
+            "text": "Sunscreen",
+            "emoji": null,
+            "one": true,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000005",
+            "text": "Rain jacket",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          }
+        ],
+        "you": null,
+        "done": false
+      },
+      "split": "osplisbon0001",
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina packed Plug adapter",
+          "ar": "Plug adapter في شنطة Lina"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "lisbon-ar": {
+    "ok": true,
+    "kind": "trip",
+    "title": "لشبونة",
+    "emoji": "🇵🇹",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "لشبونة",
+      "emoji": "🇵🇹",
+      "start": "2026-10-16",
+      "end": "2026-10-23",
+      "days": 8,
+      "datesWords": {
+        "en": "Fri 16 Oct to Fri 23 Oct",
+        "ar": "من الجمعة 16 أكتوبر لـ الجمعة 23 أكتوبر"
+      },
+      "phase": "before",
+      "daysToGo": 13,
+      "dayOf": null,
+      "leftWords": {
+        "en": "13 days to go",
+        "ar": "فاضل 13 يوم"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "القاهرة",
+            "kind": "home",
+            "days": []
+          },
+          {
+            "place": "لشبونة",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-16",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-17",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-18",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-19",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "بورتو",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-20",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-21",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-22",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-23",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "القاهرة",
+            "kind": "home",
+            "days": []
+          }
+        ],
+        "legs": [
+          {
+            "from": "القاهرة",
+            "to": "لشبونة",
+            "kind": "flight",
+            "booking": "itb0000000001",
+            "hours": 6,
+            "past": false
+          },
+          {
+            "from": "لشبونة",
+            "to": "بورتو",
+            "kind": "train",
+            "booking": "itb0000000003",
+            "hours": 3,
+            "past": false
+          },
+          {
+            "from": "بورتو",
+            "to": "القاهرة",
+            "kind": "flight",
+            "booking": "itb0000000005",
+            "hours": 5,
+            "past": false
+          }
+        ]
+      },
+      "next": {
+        "id": "itb0000000001",
+        "title": "TP 1234 القاهرة لشبونة",
+        "emoji": "✈️",
+        "whenWords": {
+          "en": "Fri 16 Oct, 9:30 AM",
+          "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+        },
+        "inWords": {
+          "en": "In 13 days",
+          "ar": "بعد 13 يوم"
+        }
+      },
+      "bookings": [
+        {
+          "id": "itb0000000001",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1234 القاهرة لشبونة",
+          "from": "القاهرة",
+          "to": "لشبونة",
+          "place": null,
+          "city": null,
+          "day": "2026-10-16",
+          "time": "09:30",
+          "endDay": "2026-10-16",
+          "endTime": "13:10",
+          "startAt": 1792132200000,
+          "endAt": 1792152600000,
+          "whenWords": {
+            "en": "Fri 16 Oct, 9:30 AM",
+            "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+          },
+          "number": "TP1234",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": true
+        },
+        {
+          "id": "itb0000000002",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "كازا ألفاما",
+          "from": null,
+          "to": null,
+          "place": "روا دوس ريميديوس 12، ألفاما",
+          "city": "لشبونة",
+          "day": "2026-10-16",
+          "time": null,
+          "endDay": "2026-10-20",
+          "endTime": null,
+          "startAt": 1792159200000,
+          "endAt": 1792490400000,
+          "whenWords": {
+            "en": "Fri 16 Oct",
+            "ar": "الجمعة 16 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000003",
+          "kind": "train",
+          "emoji": "🚆",
+          "title": "القطر لبورتو",
+          "from": "لشبونة",
+          "to": "بورتو",
+          "place": null,
+          "city": null,
+          "day": "2026-10-20",
+          "time": "14:10",
+          "endDay": null,
+          "endTime": "17:05",
+          "startAt": 1792501800000,
+          "endAt": 1792512300000,
+          "whenWords": {
+            "en": "Tue 20 Oct, 2:10 PM",
+            "ar": "التلات 20 أكتوبر، 2:10 م"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000004",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "شقة ريبيرا",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "بورتو",
+          "day": "2026-10-20",
+          "time": null,
+          "endDay": "2026-10-23",
+          "endTime": null,
+          "startAt": 1792504800000,
+          "endAt": 1792749600000,
+          "whenWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000005",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1235 بورتو القاهرة",
+          "from": "بورتو",
+          "to": "القاهرة",
+          "place": null,
+          "city": null,
+          "day": "2026-10-23",
+          "time": "18:40",
+          "endDay": "2026-10-24",
+          "endTime": "01:20",
+          "startAt": 1792777200000,
+          "endAt": 1792794000000,
+          "whenWords": {
+            "en": "Fri 23 Oct, 6:40 PM",
+            "ar": "الجمعة 23 أكتوبر، 6:40 م"
+          },
+          "number": "TP1235",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        }
+      ],
+      "plan": [
+        {
+          "day": "2026-10-16",
+          "label": {
+            "en": "Day 1, Fri 16 Oct",
+            "ar": "اليوم 1، الجمعة 16 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000001",
+              "text": "TP 1234 القاهرة لشبونة",
+              "emoji": "✈️",
+              "time": "09:30",
+              "timeWords": {
+                "en": "9:30 AM",
+                "ar": "9:30 ص"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000002",
+              "text": "كازا ألفاما",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-17",
+          "label": {
+            "en": "Day 2, Sat 17 Oct",
+            "ar": "اليوم 2، السبت 17 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-18",
+          "label": {
+            "en": "Day 3, Sun 18 Oct",
+            "ar": "اليوم 3، الحد 18 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iti0000000004",
+              "text": "ليلة فادو",
+              "emoji": "🎶",
+              "time": "21:00",
+              "timeWords": {
+                "en": "9:00 PM",
+                "ar": "9:00 م"
+              }
+            }
+          ]
+        },
+        {
+          "day": "2026-10-19",
+          "label": {
+            "en": "Day 4, Mon 19 Oct",
+            "ar": "اليوم 4، الاتنين 19 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-20",
+          "label": {
+            "en": "Day 5, Tue 20 Oct",
+            "ar": "اليوم 5، التلات 20 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000003",
+              "text": "القطر لبورتو",
+              "emoji": "🚆",
+              "time": "14:10",
+              "timeWords": {
+                "en": "2:10 PM",
+                "ar": "2:10 م"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000004",
+              "text": "شقة ريبيرا",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-21",
+          "label": {
+            "en": "Day 6, Wed 21 Oct",
+            "ar": "اليوم 6، الأربع 21 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-22",
+          "label": {
+            "en": "Day 7, Thu 22 Oct",
+            "ar": "اليوم 7، الخميس 22 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-23",
+          "label": {
+            "en": "Day 8, Fri 23 Oct",
+            "ar": "اليوم 8، الجمعة 23 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000005",
+              "text": "TP 1235 بورتو القاهرة",
+              "emoji": "✈️",
+              "time": "18:40",
+              "timeWords": {
+                "en": "6:40 PM",
+                "ar": "6:40 م"
+              }
+            }
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "iti0000000001",
+          "text": "سينترا",
+          "emoji": "🏰",
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "سام",
+            "ar": "سام"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "سام"
+            },
+            {
+              "id": "mlina000000",
+              "name": "لينا"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000002",
+          "text": "حلويات بيليم",
+          "emoji": "🥮",
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "لينا",
+            "ar": "لينا"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000003",
+          "text": "إل إكس فاكتوري",
+          "emoji": "🎨",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "محمود",
+            "ar": "محمود"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [
+          {
+            "id": "itp0000000001",
+            "text": "الباسبور",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "محمود"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000002",
+            "text": "شاحن الموبايل",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "محمود"
+              },
+              {
+                "id": "msam0000000",
+                "name": "سام"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000003",
+            "text": "محول الفيشة",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mlina000000",
+                "name": "لينا"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "itp0000000004",
+            "text": "واقي الشمس",
+            "emoji": null,
+            "one": true,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000005",
+            "text": "جاكيت المطر",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          }
+        ],
+        "you": null,
+        "done": false
+      },
+      "split": "osplisbon0001",
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "سام",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "لينا",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "لينا",
+        "line": {
+          "en": "لينا packed محول الفيشة",
+          "ar": "محول الفيشة في شنطة لينا"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "planning-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Japan someday",
+    "emoji": "🗾",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Japan someday",
+      "emoji": "🗾",
+      "start": null,
+      "end": null,
+      "days": 0,
+      "datesWords": null,
+      "phase": "planning",
+      "daysToGo": null,
+      "dayOf": null,
+      "leftWords": {
+        "en": "No dates yet",
+        "ar": "لسه من غير مواعيد"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "Japan someday",
+            "kind": "stay",
+            "days": []
+          }
+        ],
+        "legs": []
+      },
+      "next": null,
+      "bookings": [],
+      "plan": [],
+      "ideas": [
+        {
+          "id": "iji0000000002",
+          "text": "Ramen in Tokyo",
+          "emoji": "🍜",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iji0000000001",
+          "text": "Kyoto temples",
+          "emoji": "⛩️",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [],
+        "you": null,
+        "done": false
+      },
+      "split": null,
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "road-busy-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Iceland road trip",
+    "emoji": "🇮🇸",
+    "lang": "en",
+    "state": "live",
+    "version": 300,
+    "view": {
+      "title": "Iceland road trip",
+      "emoji": "🇮🇸",
+      "start": "2026-11-02",
+      "end": "2026-11-09",
+      "days": 8,
+      "datesWords": {
+        "en": "Mon 2 Nov to Mon 9 Nov",
+        "ar": "من الاتنين 2 نوفمبر لـ الاتنين 9 نوفمبر"
+      },
+      "phase": "before",
+      "daysToGo": 30,
+      "dayOf": null,
+      "leftWords": {
+        "en": "30 days to go",
+        "ar": "فاضل 30 يوم"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "London",
+            "kind": "home",
+            "days": []
+          },
+          {
+            "place": "Reykjavik",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-11-02",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-11-03",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Vik",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-11-04",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-11-05",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Hofn",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-11-06",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-11-07",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Reykjavik",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-11-08",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-11-09",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "London",
+            "kind": "home",
+            "days": []
+          }
+        ],
+        "legs": [
+          {
+            "from": "London",
+            "to": "Reykjavik",
+            "kind": "flight",
+            "booking": "irb0000000001",
+            "hours": 3,
+            "past": false
+          },
+          {
+            "from": "Reykjavik",
+            "to": "Vik",
+            "kind": "way",
+            "booking": null,
+            "hours": 0,
+            "past": false
+          },
+          {
+            "from": "Vik",
+            "to": "Hofn",
+            "kind": "way",
+            "booking": null,
+            "hours": 0,
+            "past": false
+          },
+          {
+            "from": "Hofn",
+            "to": "Reykjavik",
+            "kind": "way",
+            "booking": null,
+            "hours": 0,
+            "past": false
+          },
+          {
+            "from": "Reykjavik",
+            "to": "London",
+            "kind": "flight",
+            "booking": "irb0000000008",
+            "hours": 3,
+            "past": false
+          }
+        ]
+      },
+      "next": {
+        "id": "irb0000000001",
+        "title": "FI 450 London to Reykjavik",
+        "emoji": "✈️",
+        "whenWords": {
+          "en": "Mon 2 Nov, 8:10 AM",
+          "ar": "الاتنين 2 نوفمبر، 8:10 ص"
+        },
+        "inWords": {
+          "en": "In 30 days",
+          "ar": "بعد 30 يوم"
+        }
+      },
+      "bookings": [
+        {
+          "id": "irb0000000001",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "FI 450 London to Reykjavik",
+          "from": "London",
+          "to": "Reykjavik",
+          "place": null,
+          "city": null,
+          "day": "2026-11-02",
+          "time": "08:10",
+          "endDay": null,
+          "endTime": "11:15",
+          "startAt": 1793607000000,
+          "endAt": 1793618100000,
+          "whenWords": {
+            "en": "Mon 2 Nov, 8:10 AM",
+            "ar": "الاتنين 2 نوفمبر، 8:10 ص"
+          },
+          "number": "FI450",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": true
+        },
+        {
+          "id": "irb0000000002",
+          "kind": "car",
+          "emoji": "🚗",
+          "title": "Two campervans",
+          "from": null,
+          "to": null,
+          "place": "Keflavik airport",
+          "city": "Reykjavik",
+          "day": "2026-11-02",
+          "time": null,
+          "endDay": null,
+          "endTime": null,
+          "startAt": 1793613600000,
+          "endAt": null,
+          "whenWords": {
+            "en": "Mon 2 Nov",
+            "ar": "الاتنين 2 نوفمبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000003",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Harbour hostel",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Reykjavik",
+          "day": "2026-11-02",
+          "time": null,
+          "endDay": "2026-11-04",
+          "endTime": null,
+          "startAt": 1793631600000,
+          "endAt": 1793790000000,
+          "whenWords": {
+            "en": "Mon 2 Nov",
+            "ar": "الاتنين 2 نوفمبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000004",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Farm cabins",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Vik",
+          "day": "2026-11-04",
+          "time": null,
+          "endDay": "2026-11-06",
+          "endTime": null,
+          "startAt": 1793804400000,
+          "endAt": 1793962800000,
+          "whenWords": {
+            "en": "Wed 4 Nov",
+            "ar": "الأربع 4 نوفمبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000005",
+          "kind": "event",
+          "emoji": "🎟️",
+          "title": "Glacier walk",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Vik",
+          "day": "2026-11-05",
+          "time": "10:00",
+          "endDay": null,
+          "endTime": "14:00",
+          "startAt": 1793872800000,
+          "endAt": 1793887200000,
+          "whenWords": {
+            "en": "Thu 5 Nov, 10:00 AM",
+            "ar": "الخميس 5 نوفمبر، 10:00 ص"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000006",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Lakeside lodge",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Hofn",
+          "day": "2026-11-06",
+          "time": null,
+          "endDay": "2026-11-08",
+          "endTime": null,
+          "startAt": 1793977200000,
+          "endAt": 1794135600000,
+          "whenWords": {
+            "en": "Fri 6 Nov",
+            "ar": "الجمعة 6 نوفمبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000007",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Old town rooms",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Reykjavik",
+          "day": "2026-11-08",
+          "time": null,
+          "endDay": "2026-11-09",
+          "endTime": null,
+          "startAt": 1794150000000,
+          "endAt": 1794222000000,
+          "whenWords": {
+            "en": "Sun 8 Nov",
+            "ar": "الحد 8 نوفمبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "irb0000000008",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "FI 451 Reykjavik to London",
+          "from": "Reykjavik",
+          "to": "London",
+          "place": null,
+          "city": null,
+          "day": "2026-11-09",
+          "time": "16:30",
+          "endDay": null,
+          "endTime": "19:40",
+          "startAt": 1794241800000,
+          "endAt": 1794253200000,
+          "whenWords": {
+            "en": "Mon 9 Nov, 4:30 PM",
+            "ar": "الاتنين 9 نوفمبر، 4:30 م"
+          },
+          "number": "FI451",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        }
+      ],
+      "plan": [
+        {
+          "day": "2026-11-02",
+          "label": {
+            "en": "Day 1, Mon 2 Nov",
+            "ar": "اليوم 1، الاتنين 2 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000001",
+              "text": "FI 450 London to Reykjavik",
+              "emoji": "✈️",
+              "time": "08:10",
+              "timeWords": {
+                "en": "8:10 AM",
+                "ar": "8:10 ص"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "irb0000000002",
+              "text": "Two campervans",
+              "emoji": "🚗",
+              "time": null,
+              "timeWords": null
+            },
+            {
+              "kind": "booking",
+              "id": "irb0000000003",
+              "text": "Harbour hostel",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-03",
+          "label": {
+            "en": "Day 2, Tue 3 Nov",
+            "ar": "اليوم 2، التلات 3 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iri0000000001",
+              "text": "Stop 1",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-04",
+          "label": {
+            "en": "Day 3, Wed 4 Nov",
+            "ar": "اليوم 3، الأربع 4 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000004",
+              "text": "Farm cabins",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            },
+            {
+              "kind": "idea",
+              "id": "iri0000000002",
+              "text": "Stop 2",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-05",
+          "label": {
+            "en": "Day 4, Thu 5 Nov",
+            "ar": "اليوم 4، الخميس 5 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000005",
+              "text": "Glacier walk",
+              "emoji": "🎟️",
+              "time": "10:00",
+              "timeWords": {
+                "en": "10:00 AM",
+                "ar": "10:00 ص"
+              }
+            },
+            {
+              "kind": "idea",
+              "id": "iri0000000003",
+              "text": "Stop 3",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-06",
+          "label": {
+            "en": "Day 5, Fri 6 Nov",
+            "ar": "اليوم 5، الجمعة 6 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000006",
+              "text": "Lakeside lodge",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            },
+            {
+              "kind": "idea",
+              "id": "iri0000000004",
+              "text": "Stop 4",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-07",
+          "label": {
+            "en": "Day 6, Sat 7 Nov",
+            "ar": "اليوم 6، السبت 7 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iri0000000005",
+              "text": "Stop 5",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-08",
+          "label": {
+            "en": "Day 7, Sun 8 Nov",
+            "ar": "اليوم 7، الحد 8 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000007",
+              "text": "Old town rooms",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            },
+            {
+              "kind": "idea",
+              "id": "iri0000000006",
+              "text": "Stop 6",
+              "emoji": "📍",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-11-09",
+          "label": {
+            "en": "Day 8, Mon 9 Nov",
+            "ar": "اليوم 8، الاتنين 9 نوفمبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "irb0000000008",
+              "text": "FI 451 Reykjavik to London",
+              "emoji": "✈️",
+              "time": "16:30",
+              "timeWords": {
+                "en": "4:30 PM",
+                "ar": "4:30 م"
+              }
+            }
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "iri0000000007",
+          "text": "Stop 7",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "msara000000",
+          "byName": {
+            "en": "Sara",
+            "ar": "Sara"
+          },
+          "votes": [
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000014",
+          "text": "Stop 14",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "Sam",
+            "ar": "Sam"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000021",
+          "text": "Stop 21",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mleo0000000",
+          "byName": {
+            "en": "Leo",
+            "ar": "Leo"
+          },
+          "votes": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000028",
+          "text": "Stop 28",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000013",
+          "text": "Stop 13",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000020",
+          "text": "Stop 20",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "malex000000",
+          "byName": {
+            "en": "Alex",
+            "ar": "Alex"
+          },
+          "votes": [
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000027",
+          "text": "Stop 27",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000012",
+          "text": "Stop 12",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mzoe0000000",
+          "byName": {
+            "en": "Zoe",
+            "ar": "Zoe"
+          },
+          "votes": [
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000019",
+          "text": "Stop 19",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "msara000000",
+          "byName": {
+            "en": "Sara",
+            "ar": "Sara"
+          },
+          "votes": [
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000026",
+          "text": "Stop 26",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "Sam",
+            "ar": "Sam"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000011",
+          "text": "Stop 11",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mnoah000000",
+          "byName": {
+            "en": "Noah",
+            "ar": "Noah"
+          },
+          "votes": [
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            },
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000018",
+          "text": "Stop 18",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mkarim00000",
+          "byName": {
+            "en": "Karim",
+            "ar": "Karim"
+          },
+          "votes": [
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000025",
+          "text": "Stop 25",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000010",
+          "text": "Stop 10",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmia0000000",
+          "byName": {
+            "en": "Mia",
+            "ar": "Mia"
+          },
+          "votes": [
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000017",
+          "text": "Stop 17",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "votes": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000024",
+          "text": "Stop 24",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mzoe0000000",
+          "byName": {
+            "en": "Zoe",
+            "ar": "Zoe"
+          },
+          "votes": [
+            {
+              "id": "mzoe0000000",
+              "name": "Zoe"
+            },
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000009",
+          "text": "Stop 9",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mleo0000000",
+          "byName": {
+            "en": "Leo",
+            "ar": "Leo"
+          },
+          "votes": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000016",
+          "text": "Stop 16",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "momar000000",
+          "byName": {
+            "en": "Omar",
+            "ar": "Omar"
+          },
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000023",
+          "text": "Stop 23",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mnoah000000",
+          "byName": {
+            "en": "Noah",
+            "ar": "Noah"
+          },
+          "votes": [
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000030",
+          "text": "Stop 30",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mkarim00000",
+          "byName": {
+            "en": "Karim",
+            "ar": "Karim"
+          },
+          "votes": [
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000008",
+          "text": "Stop 8",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "malex000000",
+          "byName": {
+            "en": "Alex",
+            "ar": "Alex"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000015",
+          "text": "Stop 15",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000022",
+          "text": "Stop 22",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmia0000000",
+          "byName": {
+            "en": "Mia",
+            "ar": "Mia"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iri0000000029",
+          "text": "Stop 29",
+          "emoji": null,
+          "place": null,
+          "link": null,
+          "by": "mmaya000000",
+          "byName": {
+            "en": "Maya",
+            "ar": "Maya"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [
+          {
+            "id": "irp0000000001",
+            "text": "Thing 1",
+            "emoji": null,
+            "one": true,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000002",
+            "text": "Thing 2",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000003",
+            "text": "Thing 3",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000004",
+            "text": "Thing 4",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000005",
+            "text": "Thing 5",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000006",
+            "text": "Thing 6",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              },
+              {
+                "id": "mzoe0000000",
+                "name": "Zoe"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000007",
+            "text": "Thing 7",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000008",
+            "text": "Thing 8",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000009",
+            "text": "Thing 9",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000010",
+            "text": "Thing 10",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000011",
+            "text": "Thing 11",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000012",
+            "text": "Thing 12",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000013",
+            "text": "Thing 13",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000014",
+            "text": "Thing 14",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000015",
+            "text": "Thing 15",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000016",
+            "text": "Thing 16",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000017",
+            "text": "Thing 17",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000018",
+            "text": "Thing 18",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000019",
+            "text": "Thing 19",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              },
+              {
+                "id": "mzoe0000000",
+                "name": "Zoe"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000020",
+            "text": "Thing 20",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000021",
+            "text": "Thing 21",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000022",
+            "text": "Thing 22",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000023",
+            "text": "Thing 23",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000024",
+            "text": "Thing 24",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000025",
+            "text": "Thing 25",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000026",
+            "text": "Thing 26",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000027",
+            "text": "Thing 27",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000028",
+            "text": "Thing 28",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000029",
+            "text": "Thing 29",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000030",
+            "text": "Thing 30",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000031",
+            "text": "Thing 31",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000032",
+            "text": "Thing 32",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              },
+              {
+                "id": "mzoe0000000",
+                "name": "Zoe"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000033",
+            "text": "Thing 33",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000034",
+            "text": "Thing 34",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000035",
+            "text": "Thing 35",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000036",
+            "text": "Thing 36",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000037",
+            "text": "Thing 37",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              },
+              {
+                "id": "mleo0000000",
+                "name": "Leo"
+              },
+              {
+                "id": "mmia0000000",
+                "name": "Mia"
+              },
+              {
+                "id": "mnoah000000",
+                "name": "Noah"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "irp0000000038",
+            "text": "Thing 38",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000039",
+            "text": "Thing 39",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              },
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              },
+              {
+                "id": "momar000000",
+                "name": "Omar"
+              },
+              {
+                "id": "mmaya000000",
+                "name": "Maya"
+              },
+              {
+                "id": "mkarim00000",
+                "name": "Karim"
+              },
+              {
+                "id": "msara000000",
+                "name": "Sara"
+              },
+              {
+                "id": "malex000000",
+                "name": "Alex"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "irp0000000040",
+            "text": "Thing 40",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          }
+        ],
+        "you": null,
+        "done": false
+      },
+      "split": null,
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        },
+        {
+          "id": "momar000000",
+          "name": "Omar",
+          "you": false
+        },
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        },
+        {
+          "id": "mkarim00000",
+          "name": "Karim",
+          "you": false
+        },
+        {
+          "id": "msara000000",
+          "name": "Sara",
+          "you": false
+        },
+        {
+          "id": "malex000000",
+          "name": "Alex",
+          "you": false
+        },
+        {
+          "id": "mleo0000000",
+          "name": "Leo",
+          "you": false
+        },
+        {
+          "id": "mmia0000000",
+          "name": "Mia",
+          "you": false
+        },
+        {
+          "id": "mnoah000000",
+          "name": "Noah",
+          "you": false
+        },
+        {
+          "id": "mzoe0000000",
+          "name": "Zoe",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "day-one-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "start": "2026-10-16",
+      "end": "2026-10-23",
+      "days": 8,
+      "datesWords": {
+        "en": "Fri 16 Oct to Fri 23 Oct",
+        "ar": "من الجمعة 16 أكتوبر لـ الجمعة 23 أكتوبر"
+      },
+      "phase": "during",
+      "daysToGo": 0,
+      "dayOf": 1,
+      "leftWords": {
+        "en": "Day 1 of 8",
+        "ar": "اليوم 1 من 8"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          },
+          {
+            "place": "Lisbon",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-16",
+                "past": false,
+                "today": true
+              },
+              {
+                "day": "2026-10-17",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-18",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-19",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Porto",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-20",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-21",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-22",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-23",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          }
+        ],
+        "legs": [
+          {
+            "from": "Cairo",
+            "to": "Lisbon",
+            "kind": "flight",
+            "booking": "itb0000000001",
+            "hours": 6,
+            "past": true
+          },
+          {
+            "from": "Lisbon",
+            "to": "Porto",
+            "kind": "train",
+            "booking": "itb0000000003",
+            "hours": 3,
+            "past": false
+          },
+          {
+            "from": "Porto",
+            "to": "Cairo",
+            "kind": "flight",
+            "booking": "itb0000000005",
+            "hours": 5,
+            "past": false
+          }
+        ]
+      },
+      "next": {
+        "id": "itb0000000002",
+        "title": "Casa Alfama",
+        "emoji": "🏨",
+        "whenWords": {
+          "en": "Fri 16 Oct",
+          "ar": "الجمعة 16 أكتوبر"
+        },
+        "inWords": {
+          "en": "Now",
+          "ar": "دلوقتي"
+        }
+      },
+      "bookings": [
+        {
+          "id": "itb0000000001",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1234 Cairo to Lisbon",
+          "from": "Cairo",
+          "to": "Lisbon",
+          "place": null,
+          "city": null,
+          "day": "2026-10-16",
+          "time": "09:30",
+          "endDay": "2026-10-16",
+          "endTime": "13:10",
+          "startAt": 1792132200000,
+          "endAt": 1792152600000,
+          "whenWords": {
+            "en": "Fri 16 Oct, 9:30 AM",
+            "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+          },
+          "number": "TP1234",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": true,
+          "next": false
+        },
+        {
+          "id": "itb0000000002",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Casa Alfama",
+          "from": null,
+          "to": null,
+          "place": "Rua dos Remédios 12, Alfama",
+          "city": "Lisbon",
+          "day": "2026-10-16",
+          "time": null,
+          "endDay": "2026-10-20",
+          "endTime": null,
+          "startAt": 1792159200000,
+          "endAt": 1792490400000,
+          "whenWords": {
+            "en": "Fri 16 Oct",
+            "ar": "الجمعة 16 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": true
+        },
+        {
+          "id": "itb0000000003",
+          "kind": "train",
+          "emoji": "🚆",
+          "title": "Alfa Pendular to Porto",
+          "from": "Lisbon",
+          "to": "Porto",
+          "place": null,
+          "city": null,
+          "day": "2026-10-20",
+          "time": "14:10",
+          "endDay": null,
+          "endTime": "17:05",
+          "startAt": 1792501800000,
+          "endAt": 1792512300000,
+          "whenWords": {
+            "en": "Tue 20 Oct, 2:10 PM",
+            "ar": "التلات 20 أكتوبر، 2:10 م"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000004",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Ribeira flat",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Porto",
+          "day": "2026-10-20",
+          "time": null,
+          "endDay": "2026-10-23",
+          "endTime": null,
+          "startAt": 1792504800000,
+          "endAt": 1792749600000,
+          "whenWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000005",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1235 Porto to Cairo",
+          "from": "Porto",
+          "to": "Cairo",
+          "place": null,
+          "city": null,
+          "day": "2026-10-23",
+          "time": "18:40",
+          "endDay": "2026-10-24",
+          "endTime": "01:20",
+          "startAt": 1792777200000,
+          "endAt": 1792794000000,
+          "whenWords": {
+            "en": "Fri 23 Oct, 6:40 PM",
+            "ar": "الجمعة 23 أكتوبر، 6:40 م"
+          },
+          "number": "TP1235",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        }
+      ],
+      "plan": [
+        {
+          "day": "2026-10-16",
+          "label": {
+            "en": "Day 1, Fri 16 Oct",
+            "ar": "اليوم 1، الجمعة 16 أكتوبر"
+          },
+          "today": true,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000001",
+              "text": "TP 1234 Cairo to Lisbon",
+              "emoji": "✈️",
+              "time": "09:30",
+              "timeWords": {
+                "en": "9:30 AM",
+                "ar": "9:30 ص"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000002",
+              "text": "Casa Alfama",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-17",
+          "label": {
+            "en": "Day 2, Sat 17 Oct",
+            "ar": "اليوم 2، السبت 17 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-18",
+          "label": {
+            "en": "Day 3, Sun 18 Oct",
+            "ar": "اليوم 3، الحد 18 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iti0000000004",
+              "text": "Fado night",
+              "emoji": "🎶",
+              "time": "21:00",
+              "timeWords": {
+                "en": "9:00 PM",
+                "ar": "9:00 م"
+              }
+            }
+          ]
+        },
+        {
+          "day": "2026-10-19",
+          "label": {
+            "en": "Day 4, Mon 19 Oct",
+            "ar": "اليوم 4، الاتنين 19 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-20",
+          "label": {
+            "en": "Day 5, Tue 20 Oct",
+            "ar": "اليوم 5، التلات 20 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000003",
+              "text": "Alfa Pendular to Porto",
+              "emoji": "🚆",
+              "time": "14:10",
+              "timeWords": {
+                "en": "2:10 PM",
+                "ar": "2:10 م"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000004",
+              "text": "Ribeira flat",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-21",
+          "label": {
+            "en": "Day 6, Wed 21 Oct",
+            "ar": "اليوم 6، الأربع 21 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-22",
+          "label": {
+            "en": "Day 7, Thu 22 Oct",
+            "ar": "اليوم 7، الخميس 22 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-23",
+          "label": {
+            "en": "Day 8, Fri 23 Oct",
+            "ar": "اليوم 8، الجمعة 23 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000005",
+              "text": "TP 1235 Porto to Cairo",
+              "emoji": "✈️",
+              "time": "18:40",
+              "timeWords": {
+                "en": "6:40 PM",
+                "ar": "6:40 م"
+              }
+            }
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "iti0000000001",
+          "text": "Sintra",
+          "emoji": "🏰",
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "Sam",
+            "ar": "Sam"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000002",
+          "text": "Pastéis de Belém",
+          "emoji": "🥮",
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000003",
+          "text": "LX Factory",
+          "emoji": "🎨",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [
+          {
+            "id": "itp0000000001",
+            "text": "Passport",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000002",
+            "text": "Phone charger",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000003",
+            "text": "Plug adapter",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": false,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "itp0000000004",
+            "text": "Sunscreen",
+            "emoji": null,
+            "one": true,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000005",
+            "text": "Rain jacket",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          }
+        ],
+        "you": null,
+        "done": false
+      },
+      "split": "osplisbon0001",
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina packed Plug adapter",
+          "ar": "Plug adapter في شنطة Lina"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "trip",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "start": "2026-10-16",
+      "end": "2026-10-23",
+      "days": 8,
+      "datesWords": {
+        "en": "Fri 16 Oct to Fri 23 Oct",
+        "ar": "من الجمعة 16 أكتوبر لـ الجمعة 23 أكتوبر"
+      },
+      "phase": "before",
+      "daysToGo": 13,
+      "dayOf": null,
+      "leftWords": {
+        "en": "13 days to go",
+        "ar": "فاضل 13 يوم"
+      },
+      "route": {
+        "stops": [
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          },
+          {
+            "place": "Lisbon",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-16",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-17",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-18",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-19",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Porto",
+            "kind": "stay",
+            "days": [
+              {
+                "day": "2026-10-20",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-21",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-22",
+                "past": false,
+                "today": false
+              },
+              {
+                "day": "2026-10-23",
+                "past": false,
+                "today": false
+              }
+            ]
+          },
+          {
+            "place": "Cairo",
+            "kind": "home",
+            "days": []
+          }
+        ],
+        "legs": [
+          {
+            "from": "Cairo",
+            "to": "Lisbon",
+            "kind": "flight",
+            "booking": "itb0000000001",
+            "hours": 6,
+            "past": false
+          },
+          {
+            "from": "Lisbon",
+            "to": "Porto",
+            "kind": "train",
+            "booking": "itb0000000003",
+            "hours": 3,
+            "past": false
+          },
+          {
+            "from": "Porto",
+            "to": "Cairo",
+            "kind": "flight",
+            "booking": "itb0000000005",
+            "hours": 5,
+            "past": false
+          }
+        ]
+      },
+      "next": {
+        "id": "itb0000000001",
+        "title": "TP 1234 Cairo to Lisbon",
+        "emoji": "✈️",
+        "whenWords": {
+          "en": "Fri 16 Oct, 9:30 AM",
+          "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+        },
+        "inWords": {
+          "en": "In 13 days",
+          "ar": "بعد 13 يوم"
+        }
+      },
+      "bookings": [
+        {
+          "id": "itb0000000001",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1234 Cairo to Lisbon",
+          "from": "Cairo",
+          "to": "Lisbon",
+          "place": null,
+          "city": null,
+          "day": "2026-10-16",
+          "time": "09:30",
+          "endDay": "2026-10-16",
+          "endTime": "13:10",
+          "startAt": 1792132200000,
+          "endAt": 1792152600000,
+          "whenWords": {
+            "en": "Fri 16 Oct, 9:30 AM",
+            "ar": "الجمعة 16 أكتوبر، 9:30 ص"
+          },
+          "number": "TP1234",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": true
+        },
+        {
+          "id": "itb0000000002",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Casa Alfama",
+          "from": null,
+          "to": null,
+          "place": "Rua dos Remédios 12, Alfama",
+          "city": "Lisbon",
+          "day": "2026-10-16",
+          "time": null,
+          "endDay": "2026-10-20",
+          "endTime": null,
+          "startAt": 1792159200000,
+          "endAt": 1792490400000,
+          "whenWords": {
+            "en": "Fri 16 Oct",
+            "ar": "الجمعة 16 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000003",
+          "kind": "train",
+          "emoji": "🚆",
+          "title": "Alfa Pendular to Porto",
+          "from": "Lisbon",
+          "to": "Porto",
+          "place": null,
+          "city": null,
+          "day": "2026-10-20",
+          "time": "14:10",
+          "endDay": null,
+          "endTime": "17:05",
+          "startAt": 1792501800000,
+          "endAt": 1792512300000,
+          "whenWords": {
+            "en": "Tue 20 Oct, 2:10 PM",
+            "ar": "التلات 20 أكتوبر، 2:10 م"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000004",
+          "kind": "stay",
+          "emoji": "🏨",
+          "title": "Ribeira flat",
+          "from": null,
+          "to": null,
+          "place": null,
+          "city": "Porto",
+          "day": "2026-10-20",
+          "time": null,
+          "endDay": "2026-10-23",
+          "endTime": null,
+          "startAt": 1792504800000,
+          "endAt": 1792749600000,
+          "whenWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "number": null,
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        },
+        {
+          "id": "itb0000000005",
+          "kind": "flight",
+          "emoji": "✈️",
+          "title": "TP 1235 Porto to Cairo",
+          "from": "Porto",
+          "to": "Cairo",
+          "place": null,
+          "city": null,
+          "day": "2026-10-23",
+          "time": "18:40",
+          "endDay": "2026-10-24",
+          "endTime": "01:20",
+          "startAt": 1792777200000,
+          "endAt": 1792794000000,
+          "whenWords": {
+            "en": "Fri 23 Oct, 6:40 PM",
+            "ar": "الجمعة 23 أكتوبر، 6:40 م"
+          },
+          "number": "TP1235",
+          "code": null,
+          "note": null,
+          "cost": null,
+          "past": false,
+          "next": false
+        }
+      ],
+      "plan": [
+        {
+          "day": "2026-10-16",
+          "label": {
+            "en": "Day 1, Fri 16 Oct",
+            "ar": "اليوم 1، الجمعة 16 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000001",
+              "text": "TP 1234 Cairo to Lisbon",
+              "emoji": "✈️",
+              "time": "09:30",
+              "timeWords": {
+                "en": "9:30 AM",
+                "ar": "9:30 ص"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000002",
+              "text": "Casa Alfama",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-17",
+          "label": {
+            "en": "Day 2, Sat 17 Oct",
+            "ar": "اليوم 2، السبت 17 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-18",
+          "label": {
+            "en": "Day 3, Sun 18 Oct",
+            "ar": "اليوم 3، الحد 18 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "idea",
+              "id": "iti0000000004",
+              "text": "Fado night",
+              "emoji": "🎶",
+              "time": "21:00",
+              "timeWords": {
+                "en": "9:00 PM",
+                "ar": "9:00 م"
+              }
+            }
+          ]
+        },
+        {
+          "day": "2026-10-19",
+          "label": {
+            "en": "Day 4, Mon 19 Oct",
+            "ar": "اليوم 4، الاتنين 19 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-20",
+          "label": {
+            "en": "Day 5, Tue 20 Oct",
+            "ar": "اليوم 5، التلات 20 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000003",
+              "text": "Alfa Pendular to Porto",
+              "emoji": "🚆",
+              "time": "14:10",
+              "timeWords": {
+                "en": "2:10 PM",
+                "ar": "2:10 م"
+              }
+            },
+            {
+              "kind": "booking",
+              "id": "itb0000000004",
+              "text": "Ribeira flat",
+              "emoji": "🏨",
+              "time": null,
+              "timeWords": null
+            }
+          ]
+        },
+        {
+          "day": "2026-10-21",
+          "label": {
+            "en": "Day 6, Wed 21 Oct",
+            "ar": "اليوم 6، الأربع 21 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-22",
+          "label": {
+            "en": "Day 7, Thu 22 Oct",
+            "ar": "اليوم 7، الخميس 22 أكتوبر"
+          },
+          "today": false,
+          "things": []
+        },
+        {
+          "day": "2026-10-23",
+          "label": {
+            "en": "Day 8, Fri 23 Oct",
+            "ar": "اليوم 8، الجمعة 23 أكتوبر"
+          },
+          "today": false,
+          "things": [
+            {
+              "kind": "booking",
+              "id": "itb0000000005",
+              "text": "TP 1235 Porto to Cairo",
+              "emoji": "✈️",
+              "time": "18:40",
+              "timeWords": {
+                "en": "6:40 PM",
+                "ar": "6:40 م"
+              }
+            }
+          ]
+        }
+      ],
+      "ideas": [
+        {
+          "id": "iti0000000001",
+          "text": "Sintra",
+          "emoji": "🏰",
+          "place": null,
+          "link": null,
+          "by": "msam0000000",
+          "byName": {
+            "en": "Sam",
+            "ar": "Sam"
+          },
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": true,
+          "day": null,
+          "time": null,
+          "yours": false
+        },
+        {
+          "id": "iti0000000002",
+          "text": "Pastéis de Belém",
+          "emoji": "🥮",
+          "place": null,
+          "link": null,
+          "by": "mlina000000",
+          "byName": {
+            "en": "Lina",
+            "ar": "Lina"
+          },
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            }
+          ],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": true
+        },
+        {
+          "id": "iti0000000003",
+          "text": "LX Factory",
+          "emoji": "🎨",
+          "place": null,
+          "link": null,
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "Mahmoud",
+            "ar": "Mahmoud"
+          },
+          "votes": [],
+          "youVoted": false,
+          "day": null,
+          "time": null,
+          "yours": false
+        }
+      ],
+      "packing": {
+        "items": [
+          {
+            "id": "itp0000000001",
+            "text": "Passport",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000002",
+            "text": "Phone charger",
+            "emoji": null,
+            "one": false,
+            "packedBy": [
+              {
+                "id": "mmahmoud000",
+                "name": "Mahmoud"
+              },
+              {
+                "id": "msam0000000",
+                "name": "Sam"
+              }
+            ],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000003",
+            "text": "Plug adapter",
+            "emoji": null,
+            "one": true,
+            "packedBy": [
+              {
+                "id": "mlina000000",
+                "name": "Lina"
+              }
+            ],
+            "youPacked": true,
+            "done": true,
+            "yours": false
+          },
+          {
+            "id": "itp0000000004",
+            "text": "Sunscreen",
+            "emoji": null,
+            "one": true,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          },
+          {
+            "id": "itp0000000005",
+            "text": "Rain jacket",
+            "emoji": null,
+            "one": false,
+            "packedBy": [],
+            "youPacked": false,
+            "done": false,
+            "yours": false
+          }
+        ],
+        "you": {
+          "left": 4,
+          "total": 5
+        },
+        "done": false
+      },
+      "split": "osplisbon0001",
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": true
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "idea",
+      "vote",
+      "pack",
+      "packed",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina packed Plug adapter",
+          "ar": "Plug adapter في شنطة Lina"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "packed": {
+        "en": "All packed",
+        "ar": "كله في الشنطة"
+      },
+      "start": {
+        "en": "Trip day",
+        "ar": "يوم السفر"
+      }
+    },
+    "kindName": {
+      "en": "Trip",
+      "ar": "رحلة"
+    },
+    "kindEmoji": "✈️"
+  }
+}

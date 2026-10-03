@@ -1,1 +1,2076 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Maya’s birthday",
+    "emoji": "🎂",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎂",
+      "for": "Maya",
+      "occasion": "birthday",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 0,
+      "paid": 0,
+      "pledgedWords": {
+        "en": "$0",
+        "ar": "$0"
+      },
+      "paidWords": {
+        "en": "$0",
+        "ar": "$0"
+      },
+      "count": 0,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 0,
+        "solid": 0,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": false,
+      "pledges": [],
+      "you": null,
+      "ideas": [],
+      "pick": null,
+      "waiting": 0,
+      "secret": {
+        "en": "A surprise for Maya. Keep it from them.",
+        "ar": "مفاجأة لـ Maya. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "maya-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Maya’s birthday",
+    "emoji": "🎂",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎂",
+      "for": "Maya",
+      "occasion": "birthday",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 14000,
+      "paid": 7000,
+      "pledgedWords": {
+        "en": "$140",
+        "ar": "$140"
+      },
+      "paidWords": {
+        "en": "$70",
+        "ar": "$70"
+      },
+      "count": 4,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 28,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": false,
+      "pledges": [
+        {
+          "id": "igp0000000001",
+          "by": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000002",
+          "by": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000003",
+          "by": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "igp0000000004",
+          "by": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": null,
+      "ideas": [
+        {
+          "id": "igi0000000001",
+          "text": "Film camera",
+          "emoji": "📷",
+          "price": 18000,
+          "priceWords": {
+            "en": "$180",
+            "ar": "$180"
+          },
+          "link": null,
+          "why": "She said she wants to shoot on film again",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000002",
+          "text": "Concert tickets",
+          "emoji": "🎟️",
+          "price": 16000,
+          "priceWords": {
+            "en": "$160",
+            "ar": "$160"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000003",
+          "text": "Cooking class",
+          "emoji": "🍳",
+          "price": 15000,
+          "priceWords": {
+            "en": "$150",
+            "ar": "$150"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "waiting": 2,
+      "secret": {
+        "en": "A surprise for Maya. Keep it from them.",
+        "ar": "مفاجأة لـ Maya. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790933400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar is in",
+          "ar": "Omar معاكم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "maya-ar": {
+    "ok": true,
+    "kind": "gift",
+    "title": "عيد ميلاد مايا",
+    "emoji": "🎂",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "عيد ميلاد مايا",
+      "emoji": "🎂",
+      "for": "مايا",
+      "occasion": "عيد ميلاد",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 14000,
+      "paid": 7000,
+      "pledgedWords": {
+        "en": "$140",
+        "ar": "$140"
+      },
+      "paidWords": {
+        "en": "$70",
+        "ar": "$70"
+      },
+      "count": 4,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 28,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": false,
+      "pledges": [
+        {
+          "id": "igp0000000001",
+          "by": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000002",
+          "by": "msam0000000",
+          "name": "سام",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000003",
+          "by": "mlina000000",
+          "name": "لينا",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "igp0000000004",
+          "by": "momar000000",
+          "name": "عمر",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": null,
+      "ideas": [
+        {
+          "id": "igi0000000001",
+          "text": "كاميرا فيلم",
+          "emoji": "📷",
+          "price": 18000,
+          "priceWords": {
+            "en": "$180",
+            "ar": "$180"
+          },
+          "link": null,
+          "why": "قالت إنها عايزة تصور بالفيلم تاني",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "محمود"
+            },
+            {
+              "id": "msam0000000",
+              "name": "سام"
+            },
+            {
+              "id": "momar000000",
+              "name": "عمر"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000002",
+          "text": "تذاكر حفلة",
+          "emoji": "🎟️",
+          "price": 16000,
+          "priceWords": {
+            "en": "$160",
+            "ar": "$160"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "لينا"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000003",
+          "text": "كورس طبخ",
+          "emoji": "🍳",
+          "price": 15000,
+          "priceWords": {
+            "en": "$150",
+            "ar": "$150"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "waiting": 2,
+      "secret": {
+        "en": "A surprise for مايا. Keep it from them.",
+        "ar": "مفاجأة لـ مايا. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790933400000,
+        "name": "عمر",
+        "line": {
+          "en": "عمر is in",
+          "ar": "عمر معاكم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "leo-busy-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Leo’s leaving present",
+    "emoji": "👋",
+    "lang": "en",
+    "state": "live",
+    "version": 90,
+    "view": {
+      "title": "Leo’s leaving present",
+      "emoji": "👋",
+      "for": "Leo",
+      "occasion": "leaving",
+      "day": "2026-10-23",
+      "dayWords": {
+        "en": "Fri 23 Oct",
+        "ar": "الجمعة 23 أكتوبر"
+      },
+      "daysLeft": 20,
+      "leftWords": {
+        "en": "In 20 days",
+        "ar": "بعد 20 يوم"
+      },
+      "currency": "EUR",
+      "goal": 50000,
+      "goalWords": {
+        "en": "€500",
+        "ar": "€500"
+      },
+      "pledged": 38500,
+      "paid": 14500,
+      "pledgedWords": {
+        "en": "€385",
+        "ar": "€385"
+      },
+      "paidWords": {
+        "en": "€145",
+        "ar": "€145"
+      },
+      "count": 11,
+      "box": {
+        "unit": 1000,
+        "dots": 50,
+        "filled": 38,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is €10",
+          "ar": "كل نقطة €10"
+        }
+      },
+      "open": false,
+      "pledges": [
+        {
+          "id": "ilp0000000001",
+          "by": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000002",
+          "by": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000003",
+          "by": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000004",
+          "by": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000005",
+          "by": "mmaya000000",
+          "name": "Maya",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000006",
+          "by": "mkarim00000",
+          "name": "Karim",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000007",
+          "by": "msara000000",
+          "name": "Sara",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000008",
+          "by": "malex000000",
+          "name": "Alex",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000009",
+          "by": "mmia0000000",
+          "name": "Mia",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000010",
+          "by": "mnoah000000",
+          "name": "Noah",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "ilp0000000011",
+          "by": "mzoe0000000",
+          "name": "Zoe",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": null,
+      "ideas": [
+        {
+          "id": "ili0000000003",
+          "text": "Plant and pot",
+          "emoji": null,
+          "price": 30000,
+          "priceWords": {
+            "en": "€300",
+            "ar": "€300"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000005",
+          "text": "Signed book",
+          "emoji": null,
+          "price": 40000,
+          "priceWords": {
+            "en": "€400",
+            "ar": "€400"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            },
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            },
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000007",
+          "text": "Hiking boots",
+          "emoji": null,
+          "price": 50000,
+          "priceWords": {
+            "en": "€500",
+            "ar": "€500"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "msara000000",
+              "name": "Sara"
+            },
+            {
+              "id": "malex000000",
+              "name": "Alex"
+            },
+            {
+              "id": "mmia0000000",
+              "name": "Mia"
+            },
+            {
+              "id": "mnoah000000",
+              "name": "Noah"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000002",
+          "text": "A weekend away",
+          "emoji": null,
+          "price": 25000,
+          "priceWords": {
+            "en": "€250",
+            "ar": "€250"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000004",
+          "text": "Coffee machine",
+          "emoji": null,
+          "price": 35000,
+          "priceWords": {
+            "en": "€350",
+            "ar": "€350"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            },
+            {
+              "id": "mmaya000000",
+              "name": "Maya"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000006",
+          "text": "Camera bag",
+          "emoji": null,
+          "price": 45000,
+          "priceWords": {
+            "en": "€450",
+            "ar": "€450"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mkarim00000",
+              "name": "Karim"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000001",
+          "text": "Good headphones",
+          "emoji": null,
+          "price": 20000,
+          "priceWords": {
+            "en": "€200",
+            "ar": "€200"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "ili0000000008",
+          "text": "Board game set",
+          "emoji": null,
+          "price": 55000,
+          "priceWords": {
+            "en": "€550",
+            "ar": "€550"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "waiting": 7,
+      "secret": {
+        "en": "A surprise for Leo. Keep it from them.",
+        "ar": "مفاجأة لـ Leo. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mben0000000",
+        "name": "Ben",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      },
+      {
+        "id": "mben0000000",
+        "name": "Ben"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "open-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Maya’s birthday",
+    "emoji": "🎂",
+    "lang": "en",
+    "state": "live",
+    "version": 22,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎂",
+      "for": "Maya",
+      "occasion": "birthday",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 20000,
+      "paid": 7000,
+      "pledgedWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "paidWords": {
+        "en": "$70",
+        "ar": "$70"
+      },
+      "count": 5,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 40,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": true,
+      "pledges": [
+        {
+          "id": "igp0000000001",
+          "by": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000002",
+          "by": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000003",
+          "by": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "igp0000000004",
+          "by": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "igp0000000005",
+          "by": "mkarim00000",
+          "name": "Karim",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": null,
+      "ideas": [
+        {
+          "id": "igi0000000001",
+          "text": "Film camera",
+          "emoji": "📷",
+          "price": 18000,
+          "priceWords": {
+            "en": "$180",
+            "ar": "$180"
+          },
+          "link": null,
+          "why": "She said she wants to shoot on film again",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": true,
+          "yours": false
+        },
+        {
+          "id": "igi0000000002",
+          "text": "Concert tickets",
+          "emoji": "🎟️",
+          "price": 16000,
+          "priceWords": {
+            "en": "$160",
+            "ar": "$160"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000003",
+          "text": "Cooking class",
+          "emoji": "🍳",
+          "price": 15000,
+          "priceWords": {
+            "en": "$150",
+            "ar": "$150"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": {
+        "id": "igi0000000001",
+        "text": "Film camera",
+        "emoji": "📷",
+        "price": 18000,
+        "priceWords": {
+          "en": "$180",
+          "ar": "$180"
+        },
+        "link": null,
+        "why": "She said she wants to shoot on film again",
+        "memory": true,
+        "votes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar"
+          }
+        ],
+        "youVoted": false,
+        "picked": true,
+        "yours": false
+      },
+      "waiting": 3,
+      "secret": {
+        "en": "A surprise for Maya. Keep it from them.",
+        "ar": "مفاجأة لـ Maya. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791017820000,
+        "name": "Karim",
+        "line": {
+          "en": "Karim is in",
+          "ar": "Karim معاكم"
+        },
+        "moment": "open"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Maya’s birthday",
+    "emoji": "🎂",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎂",
+      "for": "Maya",
+      "occasion": "birthday",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 14000,
+      "paid": 7000,
+      "pledgedWords": {
+        "en": "$140",
+        "ar": "$140"
+      },
+      "paidWords": {
+        "en": "$70",
+        "ar": "$70"
+      },
+      "count": 4,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 28,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": false,
+      "pledges": [
+        {
+          "id": "igp0000000001",
+          "by": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000002",
+          "by": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000003",
+          "by": "mlina000000",
+          "name": "Lina",
+          "you": true,
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "paid": false,
+          "yours": true
+        },
+        {
+          "id": "igp0000000004",
+          "by": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": {
+        "amount": 4000,
+        "paid": false
+      },
+      "ideas": [
+        {
+          "id": "igi0000000001",
+          "text": "Film camera",
+          "emoji": "📷",
+          "price": 18000,
+          "priceWords": {
+            "en": "$180",
+            "ar": "$180"
+          },
+          "link": null,
+          "why": "She said she wants to shoot on film again",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000002",
+          "text": "Concert tickets",
+          "emoji": "🎟️",
+          "price": 16000,
+          "priceWords": {
+            "en": "$160",
+            "ar": "$160"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": true,
+          "picked": false,
+          "yours": true
+        },
+        {
+          "id": "igi0000000003",
+          "text": "Cooking class",
+          "emoji": "🍳",
+          "price": 15000,
+          "priceWords": {
+            "en": "$150",
+            "ar": "$150"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "waiting": 2,
+      "secret": {
+        "en": "A surprise for Maya. Keep it from them.",
+        "ar": "مفاجأة لـ Maya. خليها سر."
+      },
+      "alert": null
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1790933400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar is in",
+          "ar": "Omar معاكم"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  },
+  "alert-en": {
+    "ok": true,
+    "kind": "gift",
+    "title": "Maya’s birthday",
+    "emoji": "🎂",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Maya’s birthday",
+      "emoji": "🎂",
+      "for": "Maya",
+      "occasion": "birthday",
+      "day": "2026-11-02",
+      "dayWords": {
+        "en": "Mon 2 Nov",
+        "ar": "الاتنين 2 نوفمبر"
+      },
+      "daysLeft": 30,
+      "leftWords": {
+        "en": "In 30 days",
+        "ar": "بعد 30 يوم"
+      },
+      "currency": "USD",
+      "goal": 20000,
+      "goalWords": {
+        "en": "$200",
+        "ar": "$200"
+      },
+      "pledged": 14000,
+      "paid": 7000,
+      "pledgedWords": {
+        "en": "$140",
+        "ar": "$140"
+      },
+      "paidWords": {
+        "en": "$70",
+        "ar": "$70"
+      },
+      "count": 4,
+      "box": {
+        "unit": 500,
+        "dots": 40,
+        "filled": 28,
+        "solid": 14,
+        "legend": {
+          "en": "Each dot is $5",
+          "ar": "كل نقطة $5"
+        }
+      },
+      "open": false,
+      "pledges": [
+        {
+          "id": "igp0000000001",
+          "by": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000002",
+          "by": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": true,
+          "yours": false
+        },
+        {
+          "id": "igp0000000003",
+          "by": "mlina000000",
+          "name": "Lina",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        },
+        {
+          "id": "igp0000000004",
+          "by": "momar000000",
+          "name": "Omar",
+          "you": false,
+          "amount": null,
+          "amountWords": null,
+          "paid": false,
+          "yours": false
+        }
+      ],
+      "you": null,
+      "ideas": [
+        {
+          "id": "igi0000000001",
+          "text": "Film camera",
+          "emoji": "📷",
+          "price": 18000,
+          "priceWords": {
+            "en": "$180",
+            "ar": "$180"
+          },
+          "link": null,
+          "why": "She said she wants to shoot on film again",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mmahmoud000",
+              "name": "Mahmoud"
+            },
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000002",
+          "text": "Concert tickets",
+          "emoji": "🎟️",
+          "price": 16000,
+          "priceWords": {
+            "en": "$160",
+            "ar": "$160"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        },
+        {
+          "id": "igi0000000003",
+          "text": "Cooking class",
+          "emoji": "🍳",
+          "price": 15000,
+          "priceWords": {
+            "en": "$150",
+            "ar": "$150"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "waiting": 2,
+      "secret": {
+        "en": "A surprise for Maya. Keep it from them.",
+        "ar": "مفاجأة لـ Maya. خليها سر."
+      },
+      "alert": {
+        "en": "Maya is in this one. If that is Maya, take them out so it stays a surprise.",
+        "ar": "Maya متضاف هنا. لو ده Maya، الاسم لازم يتشال عشان تفضل مفاجأة."
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      }
+    ],
+    "ops": [
+      "pledge",
+      "unpledge",
+      "paid",
+      "idea",
+      "vote",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791017400000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya took a seat",
+          "ar": "Maya دخلت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "open": {
+        "en": "The box is open",
+        "ar": "الصندوق اتفتح"
+      }
+    },
+    "kindName": {
+      "en": "Gift",
+      "ar": "هدية"
+    },
+    "kindEmoji": "🎁"
+  }
+}
