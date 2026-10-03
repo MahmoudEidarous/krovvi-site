@@ -33,6 +33,8 @@ export interface PagePayload<V = unknown> {
   role: Role;
   moments?: string[];
   momentWords: Record<string, Words>;
+  /** How a moment that is not a win feels: no dots for one whose burst is false. */
+  momentFeel?: Record<string, { burst?: boolean; haptic?: "moment" | "crack" }>;
   kindName: Words;
   kindEmoji: string;
 }
