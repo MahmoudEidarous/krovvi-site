@@ -19,7 +19,7 @@ export interface DeckCard {
   render: () => ReactNode;
 }
 
-export function Deck({ cards, onSwipe, height = 360, empty, yesLabel, noLabel, disabled }: { cards: DeckCard[]; onSwipe: (id: string, yes: boolean) => void; height?: number; empty: ReactNode; yesLabel: string; noLabel: string; disabled?: boolean }) {
+export function Deck({ cards, onSwipe, height = 360, empty, yesLabel, noLabel, disabled, lang = "en" }: { cards: DeckCard[]; onSwipe: (id: string, yes: boolean) => void; height?: number; empty: ReactNode; yesLabel: string; noLabel: string; disabled?: boolean; lang?: "en" | "ar" }) {
   const [gone, setGone] = useState<Set<string>>(new Set());
   const [x, setX] = useState(0);
   const [leaving, setLeaving] = useState<null | boolean>(null);
@@ -112,7 +112,8 @@ export function Deck({ cards, onSwipe, height = 360, empty, yesLabel, noLabel, d
         <button type="button" onClick={() => fling(false)} disabled={disabled} aria-label={noLabel} className="flex items-center justify-center rounded-full active:scale-[0.96] disabled:opacity-40" style={{ width: 56, height: 56, background: INK.surfaceHi, transition: "transform 110ms" }}>
           <Cross color={INK.fg} />
         </button>
-        <span style={{ ...STEP.meta, color: INK.muted }}>{live.length}</span>
+        {/* How many cards are left, said as such (the app's deck says the same). */}
+        <span style={{ ...STEP.meta, color: INK.muted }}>{lang === "ar" ? `فاضل ${live.length}` : `${live.length} left`}</span>
         <button type="button" onClick={() => fling(true)} disabled={disabled} aria-label={yesLabel} className="flex items-center justify-center rounded-full active:scale-[0.96] disabled:opacity-40" style={{ width: 56, height: 56, background: INK.fg, transition: "transform 110ms" }}>
           <Check color={INK.bg} />
         </button>

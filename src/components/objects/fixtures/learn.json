@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "learn",
     "title": "History: the talk",
-    "emoji": "📜",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "History: the talk",
-      "emoji": "📜",
       "source": "Tuesday’s talk",
       "questions": [],
       "current": null,
@@ -63,13 +62,12 @@
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": "🧬",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Biology: cells",
-      "emoji": "🧬",
       "source": "Biology, Friday’s lecture",
       "questions": [
         {
@@ -363,13 +361,12 @@
     "ok": true,
     "kind": "learn",
     "title": "أحياء: الخلية",
-    "emoji": "🧬",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "أحياء: الخلية",
-      "emoji": "🧬",
       "source": "محاضرة الأحياء يوم الجمعة",
       "questions": [
         {
@@ -653,13 +650,12 @@
     "ok": true,
     "kind": "learn",
     "title": "History: twelve dates",
-    "emoji": "📜",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "History: twelve dates",
-      "emoji": "📜",
       "source": "Year 9 history",
       "questions": [
         {
@@ -1759,13 +1755,12 @@
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": "🧬",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Biology: cells",
-      "emoji": "🧬",
       "source": "Biology, Friday’s lecture",
       "questions": [
         {
@@ -2099,13 +2094,12 @@
     "ok": true,
     "kind": "learn",
     "title": "Biology: cells",
-    "emoji": "🧬",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Biology: cells",
-      "emoji": "🧬",
       "source": "Biology, Friday’s lecture",
       "questions": [
         {
@@ -2419,13 +2413,12 @@
     "ok": true,
     "kind": "learn",
     "title": "Spanish: the café",
-    "emoji": "🗣️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Spanish: the café",
-      "emoji": "🗣️",
       "source": "Spanish class, week 3",
       "questions": [
         {

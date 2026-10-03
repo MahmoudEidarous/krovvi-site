@@ -34,7 +34,6 @@ interface Opt {
   id: string;
   group: "when" | "where" | "what";
   words: Words;
-  emoji: string | null;
   yes: Person[];
   maybe: Person[];
   score: number;
@@ -69,21 +68,22 @@ const C = {
   noVotes: { en: "No votes yet", ar: "لسه مفيش أصوات" },
   voted: { en: "voted", ar: "صوتوا" },
   of: { en: "of", ar: "من" },
-  hint: { en: "Tap every one you can make", ar: "دوس على كل اللي ينفعك" },
+  hint: { en: "Tap every one that works for you", ar: "دوس على كل اللي يناسبك" },
   ifNeedBe: { en: "If need be", ar: "لو لزم" },
   yes: { en: "yes", ar: "أيوه" },
   maybeShort: { en: "if need be", ar: "لو لزم" },
   decided: { en: "Decided", ar: "اتحسمت" },
-  going: { en: "Going", ar: "جايين" },
+  going: { en: "Going", ar: "جاي" },
   maybe: { en: "Maybe", ar: "يمكن" },
   cant: { en: "Can’t", ar: "مش هينفع" },
   coming: { en: "coming", ar: "جايين" },
   whoComes: { en: "Who’s coming", ar: "مين جاي" },
+  areYouComing: { en: "Are you coming?", ar: "هتيجي؟" },
+  justYou: { en: "Just you", ar: "لوحدك" },
   addOption: { en: "Add an option", ar: "ضيف اختيار" },
   add: { en: "Add", ar: "ضيف" },
   placeholderWhere: { en: "A place", ar: "مكان" },
   placeholderWhat: { en: "An idea", ar: "فكرة" },
-  bring: { en: "Bringing", ar: "معاك" },
   closedNote: { en: "Voting has closed", ar: "التصويت قفل" },
 } satisfies Record<string, Words>;
 
@@ -151,20 +151,27 @@ function OptionButton({ o, g, lang, onVote, disabled }: { o: Opt; g: Group; lang
         WebkitTouchCallout: "none",
       }}
     >
+      {/* The reader's own vote, the way a poll in a group chat marks it: an empty ring, a filled tick for yes, the tick in a ring for if need be. */}
       <span
         aria-hidden
-        className="shrink-0 rounded-full"
+        className="flex shrink-0 items-center justify-center rounded-full"
         style={{
-          width: 12,
-          height: 12,
+          width: 24,
+          height: 24,
           border: `1.5px solid ${o.youVote ? INK.fg : INK.faint}`,
-          background: o.youVote === "yes" ? INK.fg : o.youVote === "maybe" ? "rgba(237,237,235,0.4)" : "transparent",
+          background: o.youVote === "yes" ? INK.fg : "transparent",
           transition: `background-color 200ms ${EASE}, border-color 200ms ${EASE}`,
         }}
-      />
+      >
+        {o.youVote ? (
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2.5 6.2l2.3 2.3L9.6 3.6" stroke={o.youVote === "yes" ? INK.bg : INK.fg} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        ) : null}
+      </span>
       <span className="min-w-0 flex-1">
         <span className="block" style={{ ...(o.won ? STEP.title : STEP.body), color: lead ? INK.pick : INK.fg }}>
-          <bdi dir={dirOf(words)}>{`${o.emoji ? `${o.emoji} ` : ""}${words}`}</bdi>
+          <bdi dir={dirOf(words)}>{words}</bdi>
         </span>
         {count ? (
           <span className="block" style={{ ...STEP.meta, color: INK.muted }}>
@@ -357,7 +364,9 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
         </Section>
       ) : null}
 
-      <Section title={headcount ? `${headcount} ${say(C.coming, lang)}` : say(C.whoComes, lang)}>
+      {/* Answers mean something once there is a day to come to, or it is settled; before that they wait. */}
+      {decided || v.when ? (
+      <Section title={!you && can("rsvp") ? say(C.areYouComing, lang) : headcount ? `${headcount} ${say(C.coming, lang)}` : say(C.whoComes, lang)}>
         <div className="flex" style={{ gap: 8, padding: "4px 12px 12px" }}>
           {(["yes", "maybe", "no"] as const).map((a) => {
             const chosen = you === a;
@@ -370,21 +379,23 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
                 disabled={!can("rsvp")}
                 aria-pressed={chosen}
                 onClick={() => void rsvp(a, a === "yes" ? myPlus : 0)}
-                className="flex flex-1 flex-col items-center rounded-2xl active:scale-[0.97] disabled:opacity-60"
-                style={{ gap: 2, padding: "12px 6px", minHeight: 92, background: chosen ? INK.fg : INK.surfaceHi, color: chosen ? INK.bg : INK.fg, transition: `background-color 180ms ${EASE}, color 180ms ${EASE}, transform 110ms ${EASE}` }}
+                className="flex flex-1 flex-col items-center justify-center rounded-2xl active:scale-[0.97] disabled:opacity-60"
+                style={{ gap: 4, padding: "12px 6px", minHeight: 56, background: chosen ? INK.fg : INK.surfaceHi, color: chosen ? INK.bg : INK.fg, transition: `background-color 180ms ${EASE}, color 180ms ${EASE}, transform 110ms ${EASE}` }}
               >
                 <span style={{ ...STEP.label, fontWeight: 600 }}>{say(a === "yes" ? C.going : a === "maybe" ? C.maybe : C.cant, lang)}</span>
-                <span style={{ ...STEP.figure }}>{n}</span>
-                <span style={{ height: 22 }} className="flex items-center">
-                  {people.length ? <FaceStack names={people.map((p) => p.name)} size={18} max={3} /> : null}
-                </span>
+                {n ? <span style={{ ...STEP.figure }}>{n}</span> : null}
+                {people.length ? (
+                  <span style={{ height: 22 }} className="flex items-center">
+                    <FaceStack names={people.map((p) => p.name)} size={18} max={3} />
+                  </span>
+                ) : null}
               </button>
             );
           })}
         </div>
         {you === "yes" && can("rsvp") ? (
           <div className="flex items-center justify-between" style={{ padding: "0 16px 14px" }}>
-            <span style={{ ...STEP.label, color: INK.muted }}>{`${say(C.bring, lang)} +${myPlus}`}</span>
+            <span style={{ ...STEP.body, color: INK.soft }}>{myPlus ? (lang === "ar" ? `إنت + ${myPlus}` : `You + ${myPlus}`) : say(C.justYou, lang)}</span>
             <span className="flex" style={{ gap: 8 }}>
               <Pill text="−" disabled={busy || myPlus === 0} onClick={() => void rsvp("yes", Math.max(0, myPlus - 1))} />
               <Pill text="+" disabled={busy || myPlus >= 9} onClick={() => void rsvp("yes", Math.min(9, myPlus + 1))} />
@@ -392,6 +403,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
           </div>
         ) : null}
       </Section>
+      ) : null}
     </div>
   );
 };

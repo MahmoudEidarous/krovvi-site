@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": "🍿",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Movie night",
-      "emoji": "🍿",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -86,13 +85,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": "🍿",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Movie night",
-      "emoji": "🍿",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -592,13 +590,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "سهرة الفيلم",
-    "emoji": "🍿",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "سهرة الفيلم",
-      "emoji": "🍿",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -1089,13 +1086,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Flat 4B",
-    "emoji": "📺",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Flat 4B",
-      "emoji": "📺",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -4643,13 +4639,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": "🍿",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Movie night",
-      "emoji": "🍿",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -4860,13 +4855,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "To watch",
-    "emoji": "🎬",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "To watch",
-      "emoji": "🎬",
       "voters": [
         {
           "id": "mmahmoud000",
@@ -5038,13 +5032,12 @@
     "ok": true,
     "kind": "watchlist",
     "title": "Movie night",
-    "emoji": "🍿",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Movie night",
-      "emoji": "🍿",
       "voters": [
         {
           "id": "mmahmoud000",

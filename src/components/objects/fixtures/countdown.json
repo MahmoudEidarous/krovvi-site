@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Lisbon",
-      "emoji": "🇵🇹",
       "day": "2026-10-16",
       "time": "09:30",
       "daysLeft": 13,
@@ -128,9 +127,10 @@
     "momentWords": {
       "day": {
         "en": "It’s today",
-        "ar": "النهارده اليوم"
+        "ar": "النهارده هو اليوم"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
@@ -141,13 +141,12 @@
     "ok": true,
     "kind": "countdown",
     "title": "امتحان الكيمياء",
-    "emoji": "🧪",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "امتحان الكيمياء",
-      "emoji": "🧪",
       "day": "2026-10-15",
       "time": null,
       "daysLeft": 12,
@@ -197,9 +196,10 @@
     "momentWords": {
       "day": {
         "en": "It’s today",
-        "ar": "النهارده اليوم"
+        "ar": "النهارده هو اليوم"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
@@ -210,13 +210,12 @@
     "ok": true,
     "kind": "countdown",
     "title": "Sara’s wedding",
-    "emoji": "💍",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Sara’s wedding",
-      "emoji": "💍",
       "day": "2026-12-19",
       "time": "18:00",
       "daysLeft": 77,
@@ -287,9 +286,10 @@
     "momentWords": {
       "day": {
         "en": "It’s today",
-        "ar": "النهارده اليوم"
+        "ar": "النهارده هو اليوم"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
@@ -300,13 +300,12 @@
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Lisbon",
-      "emoji": "🇵🇹",
       "day": "2026-10-16",
       "time": "09:30",
       "daysLeft": 0,
@@ -425,9 +424,10 @@
     "momentWords": {
       "day": {
         "en": "It’s today",
-        "ar": "النهارده اليوم"
+        "ar": "النهارده هو اليوم"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"
@@ -438,13 +438,12 @@
     "ok": true,
     "kind": "countdown",
     "title": "Lisbon",
-    "emoji": "🇵🇹",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Lisbon",
-      "emoji": "🇵🇹",
       "day": "2026-10-16",
       "time": "09:30",
       "daysLeft": 13,
@@ -559,9 +558,10 @@
     "momentWords": {
       "day": {
         "en": "It’s today",
-        "ar": "النهارده اليوم"
+        "ar": "النهارده هو اليوم"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Countdown",
       "ar": "العد التنازلي"

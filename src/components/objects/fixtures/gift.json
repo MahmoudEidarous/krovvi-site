@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎂",
       "for": "Maya",
       "occasion": "birthday",
       "day": "2026-11-02",
@@ -56,8 +55,8 @@
       "pick": null,
       "waiting": 0,
       "secret": {
-        "en": "A surprise for Maya. Keep it from them.",
-        "ar": "مفاجأة لـ Maya. خليها سر."
+        "en": "A surprise for Maya: keep it secret.",
+        "ar": "مفاجأة لـ Maya: خليها سر."
       },
       "alert": null
     },
@@ -125,13 +124,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎂",
       "for": "Maya",
       "occasion": "birthday",
       "day": "2026-11-02",
@@ -219,7 +217,6 @@
         {
           "id": "igi0000000001",
           "text": "Film camera",
-          "emoji": "📷",
           "price": 18000,
           "priceWords": {
             "en": "$180",
@@ -249,7 +246,6 @@
         {
           "id": "igi0000000002",
           "text": "Concert tickets",
-          "emoji": "🎟️",
           "price": 16000,
           "priceWords": {
             "en": "$160",
@@ -271,7 +267,6 @@
         {
           "id": "igi0000000003",
           "text": "Cooking class",
-          "emoji": "🍳",
           "price": 15000,
           "priceWords": {
             "en": "$150",
@@ -289,8 +284,8 @@
       "pick": null,
       "waiting": 2,
       "secret": {
-        "en": "A surprise for Maya. Keep it from them.",
-        "ar": "مفاجأة لـ Maya. خليها سر."
+        "en": "A surprise for Maya: keep it secret.",
+        "ar": "مفاجأة لـ Maya: خليها سر."
       },
       "alert": null
     },
@@ -392,13 +387,12 @@
     "ok": true,
     "kind": "gift",
     "title": "عيد ميلاد مايا",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "عيد ميلاد مايا",
-      "emoji": "🎂",
       "for": "مايا",
       "occasion": "عيد ميلاد",
       "day": "2026-11-02",
@@ -486,7 +480,6 @@
         {
           "id": "igi0000000001",
           "text": "كاميرا فيلم",
-          "emoji": "📷",
           "price": 18000,
           "priceWords": {
             "en": "$180",
@@ -516,7 +509,6 @@
         {
           "id": "igi0000000002",
           "text": "تذاكر حفلة",
-          "emoji": "🎟️",
           "price": 16000,
           "priceWords": {
             "en": "$160",
@@ -538,7 +530,6 @@
         {
           "id": "igi0000000003",
           "text": "كورس طبخ",
-          "emoji": "🍳",
           "price": 15000,
           "priceWords": {
             "en": "$150",
@@ -556,8 +547,8 @@
       "pick": null,
       "waiting": 2,
       "secret": {
-        "en": "A surprise for مايا. Keep it from them.",
-        "ar": "مفاجأة لـ مايا. خليها سر."
+        "en": "A surprise for مايا: keep it secret.",
+        "ar": "مفاجأة لـ مايا: خليها سر."
       },
       "alert": null
     },
@@ -659,13 +650,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Leo’s leaving present",
-    "emoji": "👋",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 90,
     "view": {
       "title": "Leo’s leaving present",
-      "emoji": "👋",
       "for": "Leo",
       "occasion": "leaving",
       "day": "2026-10-23",
@@ -823,7 +813,6 @@
         {
           "id": "ili0000000003",
           "text": "Plant and pot",
-          "emoji": null,
           "price": 30000,
           "priceWords": {
             "en": "€300",
@@ -865,7 +854,6 @@
         {
           "id": "ili0000000005",
           "text": "Signed book",
-          "emoji": null,
           "price": 40000,
           "priceWords": {
             "en": "€400",
@@ -903,7 +891,6 @@
         {
           "id": "ili0000000007",
           "text": "Hiking boots",
-          "emoji": null,
           "price": 50000,
           "priceWords": {
             "en": "€500",
@@ -937,7 +924,6 @@
         {
           "id": "ili0000000002",
           "text": "A weekend away",
-          "emoji": null,
           "price": 25000,
           "priceWords": {
             "en": "€250",
@@ -967,7 +953,6 @@
         {
           "id": "ili0000000004",
           "text": "Coffee machine",
-          "emoji": null,
           "price": 35000,
           "priceWords": {
             "en": "€350",
@@ -993,7 +978,6 @@
         {
           "id": "ili0000000006",
           "text": "Camera bag",
-          "emoji": null,
           "price": 45000,
           "priceWords": {
             "en": "€450",
@@ -1015,7 +999,6 @@
         {
           "id": "ili0000000001",
           "text": "Good headphones",
-          "emoji": null,
           "price": 20000,
           "priceWords": {
             "en": "€200",
@@ -1032,7 +1015,6 @@
         {
           "id": "ili0000000008",
           "text": "Board game set",
-          "emoji": null,
           "price": 55000,
           "priceWords": {
             "en": "€550",
@@ -1050,8 +1032,8 @@
       "pick": null,
       "waiting": 7,
       "secret": {
-        "en": "A surprise for Leo. Keep it from them.",
-        "ar": "مفاجأة لـ Leo. خليها سر."
+        "en": "A surprise for Leo: keep it secret.",
+        "ar": "مفاجأة لـ Leo: خليها سر."
       },
       "alert": null
     },
@@ -1227,13 +1209,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 22,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎂",
       "for": "Maya",
       "occasion": "birthday",
       "day": "2026-11-02",
@@ -1331,7 +1312,6 @@
         {
           "id": "igi0000000001",
           "text": "Film camera",
-          "emoji": "📷",
           "price": 18000,
           "priceWords": {
             "en": "$180",
@@ -1361,7 +1341,6 @@
         {
           "id": "igi0000000002",
           "text": "Concert tickets",
-          "emoji": "🎟️",
           "price": 16000,
           "priceWords": {
             "en": "$160",
@@ -1383,7 +1362,6 @@
         {
           "id": "igi0000000003",
           "text": "Cooking class",
-          "emoji": "🍳",
           "price": 15000,
           "priceWords": {
             "en": "$150",
@@ -1401,7 +1379,6 @@
       "pick": {
         "id": "igi0000000001",
         "text": "Film camera",
-        "emoji": "📷",
         "price": 18000,
         "priceWords": {
           "en": "$180",
@@ -1430,8 +1407,8 @@
       },
       "waiting": 3,
       "secret": {
-        "en": "A surprise for Maya. Keep it from them.",
-        "ar": "مفاجأة لـ Maya. خليها سر."
+        "en": "A surprise for Maya: keep it secret.",
+        "ar": "مفاجأة لـ Maya: خليها سر."
       },
       "alert": null
     },
@@ -1533,13 +1510,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎂",
       "for": "Maya",
       "occasion": "birthday",
       "day": "2026-11-02",
@@ -1633,7 +1609,6 @@
         {
           "id": "igi0000000001",
           "text": "Film camera",
-          "emoji": "📷",
           "price": 18000,
           "priceWords": {
             "en": "$180",
@@ -1663,7 +1638,6 @@
         {
           "id": "igi0000000002",
           "text": "Concert tickets",
-          "emoji": "🎟️",
           "price": 16000,
           "priceWords": {
             "en": "$160",
@@ -1685,7 +1659,6 @@
         {
           "id": "igi0000000003",
           "text": "Cooking class",
-          "emoji": "🍳",
           "price": 15000,
           "priceWords": {
             "en": "$150",
@@ -1703,8 +1676,8 @@
       "pick": null,
       "waiting": 2,
       "secret": {
-        "en": "A surprise for Maya. Keep it from them.",
-        "ar": "مفاجأة لـ Maya. خليها سر."
+        "en": "A surprise for Maya: keep it secret.",
+        "ar": "مفاجأة لـ Maya: خليها سر."
       },
       "alert": null
     },
@@ -1802,13 +1775,12 @@
     "ok": true,
     "kind": "gift",
     "title": "Maya’s birthday",
-    "emoji": "🎂",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Maya’s birthday",
-      "emoji": "🎂",
       "for": "Maya",
       "occasion": "birthday",
       "day": "2026-11-02",
@@ -1896,7 +1868,6 @@
         {
           "id": "igi0000000001",
           "text": "Film camera",
-          "emoji": "📷",
           "price": 18000,
           "priceWords": {
             "en": "$180",
@@ -1926,7 +1897,6 @@
         {
           "id": "igi0000000002",
           "text": "Concert tickets",
-          "emoji": "🎟️",
           "price": 16000,
           "priceWords": {
             "en": "$160",
@@ -1948,7 +1918,6 @@
         {
           "id": "igi0000000003",
           "text": "Cooking class",
-          "emoji": "🍳",
           "price": 15000,
           "priceWords": {
             "en": "$150",
@@ -1966,8 +1935,8 @@
       "pick": null,
       "waiting": 2,
       "secret": {
-        "en": "A surprise for Maya. Keep it from them.",
-        "ar": "مفاجأة لـ Maya. خليها سر."
+        "en": "A surprise for Maya: keep it secret.",
+        "ar": "مفاجأة لـ Maya: خليها سر."
       },
       "alert": {
         "en": "Maya is in this one. If that is Maya, take them out so it stays a surprise.",

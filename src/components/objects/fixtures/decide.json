@@ -3,13 +3,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Which car",
-    "emoji": "🚗",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Which car",
-      "emoji": "🚗",
       "options": [],
       "balance": null,
       "leader": null,
@@ -68,13 +67,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Which flat",
-      "emoji": "🏠",
       "options": [
         {
           "id": "idecideelm001",
@@ -418,13 +416,12 @@
     "ok": true,
     "kind": "decide",
     "title": "أنهي شقة",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "ar",
     "state": "live",
     "version": 7,
     "view": {
       "title": "أنهي شقة",
-      "emoji": "🏠",
       "options": [
         {
           "id": "idecideelm001",
@@ -758,13 +755,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Offsite venue",
-    "emoji": "🏕️",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Offsite venue",
-      "emoji": "🏕️",
       "options": [
         {
           "id": "idecidevenu01",
@@ -2231,13 +2227,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Which flat",
-      "emoji": "🏠",
       "options": [
         {
           "id": "idecideelm001",
@@ -2618,13 +2613,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Which flat",
-      "emoji": "🏠",
       "options": [
         {
           "id": "idecideelm001",
@@ -3038,13 +3032,12 @@
     "ok": true,
     "kind": "decide",
     "title": "The job offer",
-    "emoji": "💼",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "The job offer",
-      "emoji": "💼",
       "options": [
         {
           "id": "idecidejob001",
@@ -3253,13 +3246,12 @@
     "ok": true,
     "kind": "decide",
     "title": "Which flat",
-    "emoji": "🏠",
+    "emoji": null,
     "lang": "en",
     "state": "live",
     "version": 7,
     "view": {
       "title": "Which flat",
-      "emoji": "🏠",
       "options": [
         {
           "id": "idecideelm001",
