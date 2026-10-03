@@ -1,1 +1,2712 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "Groceries",
+    "emoji": "🛒",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Groceries",
+      "emoji": "🛒",
+      "aisles": [],
+      "cart": [],
+      "recent": [],
+      "shopping": [],
+      "counts": {
+        "open": 0,
+        "cart": 0,
+        "had": 0
+      },
+      "allGot": false,
+      "leftWords": {
+        "en": "Nothing on the list",
+        "ar": "القايمة فاضية"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  },
+  "groceries-en": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "Groceries",
+    "emoji": "🛒",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Groceries",
+      "emoji": "🛒",
+      "aisles": [
+        {
+          "aisle": "produce",
+          "words": {
+            "en": "Fruit and veg",
+            "ar": "خضار وفاكهة"
+          },
+          "tiles": [
+            {
+              "id": "ishoptoma0001",
+              "name": "tomatoes",
+              "emoji": "🍅",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopavoc0001",
+              "name": "avocados",
+              "emoji": "🥑",
+              "qty": "3",
+              "note": "ripe ones",
+              "aisle": "produce",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "bakery",
+          "words": {
+            "en": "Bakery",
+            "ar": "عيش ومخبوزات"
+          },
+          "tiles": [
+            {
+              "id": "ishoptort0001",
+              "name": "tortillas",
+              "emoji": "🫓",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "dairy",
+          "words": {
+            "en": "Dairy and eggs",
+            "ar": "ألبان وبيض"
+          },
+          "tiles": [
+            {
+              "id": "ishopegg00001",
+              "name": "eggs",
+              "emoji": "🥚",
+              "qty": "12",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopmilk0001",
+              "name": "milk",
+              "emoji": "🥛",
+              "qty": "2 liters",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "pantry",
+          "words": {
+            "en": "Pantry",
+            "ar": "بقالة"
+          },
+          "tiles": [
+            {
+              "id": "ishoprice0001",
+              "name": "rice",
+              "emoji": "🍚",
+              "qty": "1 kg",
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopcoff0001",
+              "name": "coffee beans",
+              "emoji": "☕",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791017700000,
+              "fresh": true,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "household",
+          "words": {
+            "en": "Household",
+            "ar": "مستلزمات البيت"
+          },
+          "tiles": [
+            {
+              "id": "ishopsoap0001",
+              "name": "dish soap",
+              "emoji": "🧽",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        }
+      ],
+      "cart": [
+        {
+          "id": "ishopbred0001",
+          "name": "bread",
+          "emoji": "🍞",
+          "qty": null,
+          "note": null,
+          "aisle": "bakery",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017520000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          }
+        },
+        {
+          "id": "ishopbana0001",
+          "name": "bananas",
+          "emoji": "🍌",
+          "qty": null,
+          "note": null,
+          "aisle": "produce",
+          "for": [],
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          }
+        }
+      ],
+      "recent": [
+        {
+          "id": "ishopoliv0001",
+          "name": "olive oil",
+          "emoji": "🫒"
+        },
+        {
+          "id": "ishopappl0001",
+          "name": "apples",
+          "emoji": "🍎"
+        },
+        {
+          "id": "ishopyogu0001",
+          "name": "yogurt",
+          "emoji": "🥣"
+        }
+      ],
+      "shopping": [
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false,
+          "since": 1791017100000
+        }
+      ],
+      "counts": {
+        "open": 8,
+        "cart": 2,
+        "had": 3
+      },
+      "allGot": false,
+      "leftWords": {
+        "en": "8 to get",
+        "ar": "فاضل 8 حاجات"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [
+      {
+        "at": 1791017520000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam got bread",
+          "ar": "Sam جاب bread"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791017100000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam is at the store. Anything else?",
+          "ar": "Sam في المحل. محتاجين حاجة تانية؟"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  },
+  "groceries-ar": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "طلبات البيت",
+    "emoji": "🛒",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "طلبات البيت",
+      "emoji": "🛒",
+      "aisles": [
+        {
+          "aisle": "produce",
+          "words": {
+            "en": "Fruit and veg",
+            "ar": "خضار وفاكهة"
+          },
+          "tiles": [
+            {
+              "id": "ishoptoma0001",
+              "name": "طماطم",
+              "emoji": "🍅",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopavoc0001",
+              "name": "أفوكادو",
+              "emoji": "🥑",
+              "qty": "3",
+              "note": "مستوية",
+              "aisle": "produce",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "bakery",
+          "words": {
+            "en": "Bakery",
+            "ar": "عيش ومخبوزات"
+          },
+          "tiles": [
+            {
+              "id": "ishoptort0001",
+              "name": "تورتيلا",
+              "emoji": "🫓",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "dairy",
+          "words": {
+            "en": "Dairy and eggs",
+            "ar": "ألبان وبيض"
+          },
+          "tiles": [
+            {
+              "id": "ishopegg00001",
+              "name": "بيض",
+              "emoji": "🥚",
+              "qty": "12",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopmilk0001",
+              "name": "لبن",
+              "emoji": "🥛",
+              "qty": "2 لتر",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "سام",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "pantry",
+          "words": {
+            "en": "Pantry",
+            "ar": "بقالة"
+          },
+          "tiles": [
+            {
+              "id": "ishoprice0001",
+              "name": "رز",
+              "emoji": "🍚",
+              "qty": "1 كيلو",
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopcoff0001",
+              "name": "بن",
+              "emoji": "☕",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "سام",
+                "you": false
+              },
+              "addedAt": 1791017700000,
+              "fresh": true,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "household",
+          "words": {
+            "en": "Household",
+            "ar": "مستلزمات البيت"
+          },
+          "tiles": [
+            {
+              "id": "ishopsoap0001",
+              "name": "صابون مواعين",
+              "emoji": "🧽",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "محمود",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        }
+      ],
+      "cart": [
+        {
+          "id": "ishopbred0001",
+          "name": "عيش",
+          "emoji": "🍞",
+          "qty": null,
+          "note": null,
+          "aisle": "bakery",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017520000,
+            "by": {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            }
+          }
+        },
+        {
+          "id": "ishopbana0001",
+          "name": "موز",
+          "emoji": "🍌",
+          "qty": null,
+          "note": null,
+          "aisle": "produce",
+          "for": [],
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "سام",
+              "you": false
+            }
+          }
+        }
+      ],
+      "recent": [
+        {
+          "id": "ishopoliv0001",
+          "name": "زيت زيتون",
+          "emoji": "🫒"
+        },
+        {
+          "id": "ishopappl0001",
+          "name": "تفاح",
+          "emoji": "🍎"
+        },
+        {
+          "id": "ishopyogu0001",
+          "name": "زبادي",
+          "emoji": "🥣"
+        }
+      ],
+      "shopping": [
+        {
+          "id": "msam0000000",
+          "name": "سام",
+          "you": false,
+          "since": 1791017100000
+        }
+      ],
+      "counts": {
+        "open": 8,
+        "cart": 2,
+        "had": 3
+      },
+      "allGot": false,
+      "leftWords": {
+        "en": "8 to get",
+        "ar": "فاضل 8 حاجات"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      }
+    ],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [
+      {
+        "at": 1791017100000,
+        "name": "سام",
+        "line": {
+          "en": "سام is at the store. Anything else?",
+          "ar": "سام في المحل. محتاجين حاجة تانية؟"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  },
+  "busy-en": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "Flat 4B",
+    "emoji": "🏢",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Flat 4B",
+      "emoji": "🏢",
+      "aisles": [
+        {
+          "aisle": "produce",
+          "words": {
+            "en": "Fruit and veg",
+            "ar": "خضار وفاكهة"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0000",
+              "name": "apples 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0013",
+              "name": "apples 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0026",
+              "name": "apples 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0039",
+              "name": "apples 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0052",
+              "name": "apples 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "bakery",
+          "words": {
+            "en": "Bakery",
+            "ar": "عيش ومخبوزات"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0001",
+              "name": "pears 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0014",
+              "name": "pears 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [],
+              "addedBy": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0027",
+              "name": "pears 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [],
+              "addedBy": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0040",
+              "name": "pears 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [],
+              "addedBy": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0053",
+              "name": "pears 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [],
+              "addedBy": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "meat",
+          "words": {
+            "en": "Meat and fish",
+            "ar": "لحمة وسمك"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0002",
+              "name": "bagels 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "meat",
+              "for": [],
+              "addedBy": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0015",
+              "name": "bagels 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "meat",
+              "for": [],
+              "addedBy": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0028",
+              "name": "bagels 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "meat",
+              "for": [],
+              "addedBy": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0041",
+              "name": "bagels 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "meat",
+              "for": [],
+              "addedBy": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0054",
+              "name": "bagels 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "meat",
+              "for": [],
+              "addedBy": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "dairy",
+          "words": {
+            "en": "Dairy and eggs",
+            "ar": "ألبان وبيض"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0003",
+              "name": "chicken 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0016",
+              "name": "chicken 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0029",
+              "name": "chicken 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0042",
+              "name": "chicken 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0055",
+              "name": "chicken 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "frozen",
+          "words": {
+            "en": "Frozen",
+            "ar": "مجمدات"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0004",
+              "name": "cheese 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "frozen",
+              "for": [],
+              "addedBy": {
+                "id": "mmaya000000",
+                "name": "Maya",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0017",
+              "name": "cheese 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "frozen",
+              "for": [],
+              "addedBy": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0030",
+              "name": "cheese 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "frozen",
+              "for": [],
+              "addedBy": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0043",
+              "name": "cheese 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "frozen",
+              "for": [],
+              "addedBy": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0056",
+              "name": "cheese 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "frozen",
+              "for": [],
+              "addedBy": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "pantry",
+          "words": {
+            "en": "Pantry",
+            "ar": "بقالة"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0005",
+              "name": "peas 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mkarim00000",
+                "name": "Karim",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0018",
+              "name": "peas 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0031",
+              "name": "peas 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0044",
+              "name": "peas 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0057",
+              "name": "peas 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "snacks",
+          "words": {
+            "en": "Snacks",
+            "ar": "تسالي"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0006",
+              "name": "pasta 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "snacks",
+              "for": [],
+              "addedBy": {
+                "id": "msara000000",
+                "name": "Sara",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0019",
+              "name": "pasta 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "snacks",
+              "for": [],
+              "addedBy": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0032",
+              "name": "pasta 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "snacks",
+              "for": [],
+              "addedBy": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0045",
+              "name": "pasta 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "snacks",
+              "for": [],
+              "addedBy": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0058",
+              "name": "pasta 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "snacks",
+              "for": [],
+              "addedBy": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "drinks",
+          "words": {
+            "en": "Drinks",
+            "ar": "مشروبات"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0007",
+              "name": "crackers 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "drinks",
+              "for": [],
+              "addedBy": {
+                "id": "malex000000",
+                "name": "Alex",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0020",
+              "name": "crackers 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "drinks",
+              "for": [],
+              "addedBy": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0033",
+              "name": "crackers 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "drinks",
+              "for": [],
+              "addedBy": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0046",
+              "name": "crackers 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "drinks",
+              "for": [],
+              "addedBy": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0059",
+              "name": "crackers 5",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "drinks",
+              "for": [],
+              "addedBy": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "household",
+          "words": {
+            "en": "Household",
+            "ar": "مستلزمات البيت"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0008",
+              "name": "sparkling water 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mleo0000000",
+                "name": "Leo",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0021",
+              "name": "sparkling water 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0034",
+              "name": "sparkling water 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0047",
+              "name": "sparkling water 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "care",
+          "words": {
+            "en": "Personal care",
+            "ar": "عناية شخصية"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0009",
+              "name": "paper towels 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "care",
+              "for": [],
+              "addedBy": {
+                "id": "mmia0000000",
+                "name": "Mia",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0022",
+              "name": "paper towels 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "care",
+              "for": [],
+              "addedBy": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0035",
+              "name": "paper towels 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "care",
+              "for": [],
+              "addedBy": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0048",
+              "name": "paper towels 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "care",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "baby",
+          "words": {
+            "en": "Baby",
+            "ar": "أطفال"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0010",
+              "name": "shampoo 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "baby",
+              "for": [],
+              "addedBy": {
+                "id": "mnoah000000",
+                "name": "Noah",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0023",
+              "name": "shampoo 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "baby",
+              "for": [],
+              "addedBy": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0036",
+              "name": "shampoo 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "baby",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0049",
+              "name": "shampoo 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "baby",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "pets",
+          "words": {
+            "en": "Pets",
+            "ar": "حيوانات أليفة"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0011",
+              "name": "wipes 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pets",
+              "for": [],
+              "addedBy": {
+                "id": "mzoe0000000",
+                "name": "Zoe",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0024",
+              "name": "wipes 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pets",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0037",
+              "name": "wipes 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pets",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0050",
+              "name": "wipes 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "pets",
+              "for": [],
+              "addedBy": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "other",
+          "words": {
+            "en": "Other",
+            "ar": "حاجات تانية"
+          },
+          "tiles": [
+            {
+              "id": "ishopbulk0012",
+              "name": "cat food 1",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "other",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0025",
+              "name": "cat food 2",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "other",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0038",
+              "name": "cat food 3",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "other",
+              "for": [],
+              "addedBy": {
+                "id": "mlina000000",
+                "name": "Lina",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopbulk0051",
+              "name": "cat food 4",
+              "emoji": "🛒",
+              "qty": null,
+              "note": null,
+              "aisle": "other",
+              "for": [],
+              "addedBy": {
+                "id": "momar000000",
+                "name": "Omar",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        }
+      ],
+      "cart": [],
+      "recent": [
+        {
+          "id": "ishopbulk0060",
+          "name": "sparkling water 5",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0061",
+          "name": "paper towels 5",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0062",
+          "name": "shampoo 5",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0063",
+          "name": "wipes 5",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0064",
+          "name": "cat food 5",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0065",
+          "name": "apples 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0066",
+          "name": "pears 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0067",
+          "name": "bagels 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0068",
+          "name": "chicken 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0069",
+          "name": "cheese 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0070",
+          "name": "peas 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0071",
+          "name": "pasta 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0072",
+          "name": "crackers 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0073",
+          "name": "sparkling water 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0074",
+          "name": "paper towels 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0075",
+          "name": "shampoo 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0076",
+          "name": "wipes 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0077",
+          "name": "cat food 6",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0078",
+          "name": "apples 7",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0079",
+          "name": "pears 7",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0080",
+          "name": "bagels 7",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0081",
+          "name": "chicken 7",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0082",
+          "name": "cheese 7",
+          "emoji": "🛒"
+        },
+        {
+          "id": "ishopbulk0083",
+          "name": "peas 7",
+          "emoji": "🛒"
+        }
+      ],
+      "shopping": [],
+      "counts": {
+        "open": 60,
+        "cart": 0,
+        "had": 30
+      },
+      "allGot": false,
+      "leftWords": {
+        "en": "60 to get",
+        "ar": "فاضل 60 حاجة"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      },
+      {
+        "id": "mnoah000000",
+        "name": "Noah"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      }
+    ],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  },
+  "allgot-en": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "Party",
+    "emoji": "🎉",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Party",
+      "emoji": "🎉",
+      "aisles": [],
+      "cart": [
+        {
+          "id": "ishopchip0001",
+          "name": "chips",
+          "emoji": "🥔",
+          "qty": null,
+          "note": null,
+          "aisle": "snacks",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017880000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          }
+        },
+        {
+          "id": "ishopsoda0001",
+          "name": "lemonade",
+          "emoji": "🍋",
+          "qty": null,
+          "note": null,
+          "aisle": "drinks",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017760000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          }
+        },
+        {
+          "id": "ishopice00001",
+          "name": "ice",
+          "emoji": "🧊",
+          "qty": null,
+          "note": null,
+          "aisle": "frozen",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017640000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": false
+            }
+          }
+        }
+      ],
+      "recent": [],
+      "shopping": [],
+      "counts": {
+        "open": 0,
+        "cart": 3,
+        "had": 0
+      },
+      "allGot": true,
+      "leftWords": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [
+      {
+        "at": 1791017880000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam got everything",
+          "ar": "Sam جاب كل حاجة"
+        },
+        "moment": "allgot"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "shopping",
+    "title": "Groceries",
+    "emoji": "🛒",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Groceries",
+      "emoji": "🛒",
+      "aisles": [
+        {
+          "aisle": "produce",
+          "words": {
+            "en": "Fruit and veg",
+            "ar": "خضار وفاكهة"
+          },
+          "tiles": [
+            {
+              "id": "ishoptoma0001",
+              "name": "tomatoes",
+              "emoji": "🍅",
+              "qty": null,
+              "note": null,
+              "aisle": "produce",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopavoc0001",
+              "name": "avocados",
+              "emoji": "🥑",
+              "qty": "3",
+              "note": "ripe ones",
+              "aisle": "produce",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "bakery",
+          "words": {
+            "en": "Bakery",
+            "ar": "عيش ومخبوزات"
+          },
+          "tiles": [
+            {
+              "id": "ishoptort0001",
+              "name": "tortillas",
+              "emoji": "🫓",
+              "qty": null,
+              "note": null,
+              "aisle": "bakery",
+              "for": [
+                "Tacos"
+              ],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "dairy",
+          "words": {
+            "en": "Dairy and eggs",
+            "ar": "ألبان وبيض"
+          },
+          "tiles": [
+            {
+              "id": "ishopegg00001",
+              "name": "eggs",
+              "emoji": "🥚",
+              "qty": "12",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopmilk0001",
+              "name": "milk",
+              "emoji": "🥛",
+              "qty": "2 liters",
+              "note": null,
+              "aisle": "dairy",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": true
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "pantry",
+          "words": {
+            "en": "Pantry",
+            "ar": "بقالة"
+          },
+          "tiles": [
+            {
+              "id": "ishoprice0001",
+              "name": "rice",
+              "emoji": "🍚",
+              "qty": "1 kg",
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            },
+            {
+              "id": "ishopcoff0001",
+              "name": "coffee beans",
+              "emoji": "☕",
+              "qty": null,
+              "note": null,
+              "aisle": "pantry",
+              "for": [],
+              "addedBy": {
+                "id": "msam0000000",
+                "name": "Sam",
+                "you": true
+              },
+              "addedAt": 1791017700000,
+              "fresh": true,
+              "got": null
+            }
+          ]
+        },
+        {
+          "aisle": "household",
+          "words": {
+            "en": "Household",
+            "ar": "مستلزمات البيت"
+          },
+          "tiles": [
+            {
+              "id": "ishopsoap0001",
+              "name": "dish soap",
+              "emoji": "🧽",
+              "qty": null,
+              "note": null,
+              "aisle": "household",
+              "for": [],
+              "addedBy": {
+                "id": "mmahmoud000",
+                "name": "Mahmoud",
+                "you": false
+              },
+              "addedAt": 1791014400000,
+              "fresh": false,
+              "got": null
+            }
+          ]
+        }
+      ],
+      "cart": [
+        {
+          "id": "ishopbred0001",
+          "name": "bread",
+          "emoji": "🍞",
+          "qty": null,
+          "note": null,
+          "aisle": "bakery",
+          "for": [],
+          "addedBy": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017520000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            }
+          }
+        },
+        {
+          "id": "ishopbana0001",
+          "name": "bananas",
+          "emoji": "🍌",
+          "qty": null,
+          "note": null,
+          "aisle": "produce",
+          "for": [],
+          "addedBy": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": true
+          },
+          "addedAt": 1791014400000,
+          "fresh": false,
+          "got": {
+            "at": 1791017400000,
+            "by": {
+              "id": "msam0000000",
+              "name": "Sam",
+              "you": true
+            }
+          }
+        }
+      ],
+      "recent": [
+        {
+          "id": "ishopoliv0001",
+          "name": "olive oil",
+          "emoji": "🫒"
+        },
+        {
+          "id": "ishopappl0001",
+          "name": "apples",
+          "emoji": "🍎"
+        },
+        {
+          "id": "ishopyogu0001",
+          "name": "yogurt",
+          "emoji": "🥣"
+        }
+      ],
+      "shopping": [
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": true,
+          "since": 1791017100000
+        }
+      ],
+      "counts": {
+        "open": 8,
+        "cart": 2,
+        "had": 3
+      },
+      "allGot": false,
+      "leftWords": {
+        "en": "8 to get",
+        "ar": "فاضل 8 حاجات"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [],
+    "ops": [
+      "add",
+      "got",
+      "ungot",
+      "remove",
+      "edit",
+      "here"
+    ],
+    "activity": [
+      {
+        "at": 1791017520000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam got bread",
+          "ar": "Sam جاب bread"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791017100000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam is at the store. Anything else?",
+          "ar": "Sam في المحل. محتاجين حاجة تانية؟"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "allgot": {
+        "en": "All got",
+        "ar": "جبنا كل حاجة"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Shopping",
+      "ar": "المشتريات"
+    },
+    "kindEmoji": "🛒"
+  }
+}
