@@ -506,3 +506,19 @@ body {
 [data-onscreen="0"] .loop {
   animation-play-state: paused !important;
 }
+
+/* Objects (components/objects): a moment's line arrives, holds and goes, once. */
+@keyframes objMoment {
+  0% { opacity: 0; transform: translateY(6px); }
+  18% { opacity: 1; transform: none; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  @keyframes objMoment {
+    0% { opacity: 0; }
+    18% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+}

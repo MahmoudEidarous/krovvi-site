@@ -1,0 +1,571 @@
+{
+  "lisbon-en": {
+    "ok": true,
+    "kind": "countdown",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "day": "2026-10-16",
+      "time": "09:30",
+      "daysLeft": 13,
+      "startsAt": 1792132200000,
+      "phase": "counting",
+      "dots": {
+        "total": 20,
+        "fallen": 7,
+        "perDot": 1
+      },
+      "counting": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ],
+      "youCount": false,
+      "dayWords": {
+        "en": "Fri 16 Oct",
+        "ar": "الجمعة 16 أكتوبر"
+      },
+      "timeWords": {
+        "en": "9:30 AM",
+        "ar": "9:30 ص"
+      },
+      "leftWords": {
+        "en": "13 days to go",
+        "ar": "فاضل 13 يوم"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      }
+    ],
+    "ops": [
+      "count",
+      "uncount"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina is counting too",
+          "ar": "Lina بيعد معاك"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791000000000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam is counting too",
+          "ar": "Sam بيعد معاك"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده اليوم"
+      }
+    },
+    "kindName": {
+      "en": "Countdown",
+      "ar": "العد التنازلي"
+    },
+    "kindEmoji": "⏳"
+  },
+  "exam-ar": {
+    "ok": true,
+    "kind": "countdown",
+    "title": "امتحان الكيمياء",
+    "emoji": "🧪",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "امتحان الكيمياء",
+      "emoji": "🧪",
+      "day": "2026-10-15",
+      "time": null,
+      "daysLeft": 12,
+      "startsAt": 1792011600000,
+      "phase": "counting",
+      "dots": {
+        "total": 14,
+        "fallen": 2,
+        "perDot": 1
+      },
+      "counting": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false
+        }
+      ],
+      "youCount": false,
+      "dayWords": {
+        "en": "Thu 15 Oct",
+        "ar": "الخميس 15 أكتوبر"
+      },
+      "timeWords": null,
+      "leftWords": {
+        "en": "12 days to go",
+        "ar": "فاضل 12 يوم"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "count",
+      "uncount"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده اليوم"
+      }
+    },
+    "kindName": {
+      "en": "Countdown",
+      "ar": "العد التنازلي"
+    },
+    "kindEmoji": "⏳"
+  },
+  "wedding-weeks-en": {
+    "ok": true,
+    "kind": "countdown",
+    "title": "Sara’s wedding",
+    "emoji": "💍",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Sara’s wedding",
+      "emoji": "💍",
+      "day": "2026-12-19",
+      "time": "18:00",
+      "daysLeft": 77,
+      "startsAt": 1797696000000,
+      "phase": "counting",
+      "dots": {
+        "total": 16,
+        "fallen": 4,
+        "perDot": 7
+      },
+      "counting": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ],
+      "youCount": false,
+      "dayWords": {
+        "en": "Sat 19 Dec",
+        "ar": "السبت 19 ديسمبر"
+      },
+      "timeWords": {
+        "en": "6:00 PM",
+        "ar": "6:00 م"
+      },
+      "leftWords": {
+        "en": "77 days to go",
+        "ar": "فاضل 77 يوم"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      }
+    ],
+    "ops": [
+      "count",
+      "uncount"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده اليوم"
+      }
+    },
+    "kindName": {
+      "en": "Countdown",
+      "ar": "العد التنازلي"
+    },
+    "kindEmoji": "⏳"
+  },
+  "today-en": {
+    "ok": true,
+    "kind": "countdown",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "day": "2026-10-16",
+      "time": "09:30",
+      "daysLeft": 0,
+      "startsAt": 1792132200000,
+      "phase": "today",
+      "dots": {
+        "total": 20,
+        "fallen": 20,
+        "perDot": 1
+      },
+      "counting": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": false
+        }
+      ],
+      "youCount": false,
+      "dayWords": {
+        "en": "Fri 16 Oct",
+        "ar": "الجمعة 16 أكتوبر"
+      },
+      "timeWords": {
+        "en": "9:30 AM",
+        "ar": "9:30 ص"
+      },
+      "leftWords": {
+        "en": "Today",
+        "ar": "النهارده"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      }
+    ],
+    "ops": [
+      "count",
+      "uncount"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina is counting too",
+          "ar": "Lina بيعد معاك"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791000000000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam is counting too",
+          "ar": "Sam بيعد معاك"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده اليوم"
+      }
+    },
+    "kindName": {
+      "en": "Countdown",
+      "ar": "العد التنازلي"
+    },
+    "kindEmoji": "⏳"
+  },
+  "guest-en": {
+    "ok": true,
+    "kind": "countdown",
+    "title": "Lisbon",
+    "emoji": "🇵🇹",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Lisbon",
+      "emoji": "🇵🇹",
+      "day": "2026-10-16",
+      "time": "09:30",
+      "daysLeft": 13,
+      "startsAt": 1792132200000,
+      "phase": "counting",
+      "dots": {
+        "total": 20,
+        "fallen": 7,
+        "perDot": 1
+      },
+      "counting": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false
+        },
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        },
+        {
+          "id": "mlina000000",
+          "name": "Lina",
+          "you": true
+        }
+      ],
+      "youCount": true,
+      "dayWords": {
+        "en": "Fri 16 Oct",
+        "ar": "الجمعة 16 أكتوبر"
+      },
+      "timeWords": {
+        "en": "9:30 AM",
+        "ar": "9:30 ص"
+      },
+      "leftWords": {
+        "en": "13 days to go",
+        "ar": "فاضل 13 يوم"
+      }
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      }
+    ],
+    "you": "mlina000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      }
+    ],
+    "ops": [
+      "count",
+      "uncount"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina is counting too",
+          "ar": "Lina بيعد معاك"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791000000000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam is counting too",
+          "ar": "Sam بيعد معاك"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده اليوم"
+      }
+    },
+    "kindName": {
+      "en": "Countdown",
+      "ar": "العد التنازلي"
+    },
+    "kindEmoji": "⏳"
+  }
+}
