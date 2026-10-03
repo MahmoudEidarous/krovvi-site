@@ -105,6 +105,9 @@ const text = (minor: number, currency: string, lang: "en" | "ar") => {
 };
 
 /** The faces on a circle, the reader at the bottom, and each transfer's dots along a curve from payer to receiver (the app's Flow). */
+/** Two decimals: Safari's Math.cos and Math.hypot can differ from the server's in the last digit, so a longer number would not match the server's HTML once the page starts in the browser. */
+const px = (n: number) => Math.round(n * 100) / 100;
+
 function Flow({ view, size, hidden }: { view: SplitView; size: number; hidden: Set<string> }) {
   const me = view.people.findIndex((p) => p.you);
   const people = me > 0 ? [...view.people.slice(me), ...view.people.slice(0, me)] : view.people;
@@ -141,14 +144,14 @@ function Flow({ view, size, hidden }: { view: SplitView; size: number; hidden: S
   const top = Math.max(0, Math.min(...ys) - face / 2 - 2);
   const bottom = Math.min(size, Math.max(...ys) + face / 2 + 2);
   return (
-    <div dir="ltr" style={{ position: "relative", width: size, height: bottom - top }} aria-hidden>
+    <div dir="ltr" style={{ position: "relative", width: size, height: px(bottom - top) }} aria-hidden>
       {dots.map((d) => (
-        <span key={d.key} style={{ position: "absolute", left: d.x - 3.5, top: d.y - 3.5 - top, width: 7, height: 7, borderRadius: "50%", background: d.tint, opacity: d.o, transition: `left 320ms ${EASE}, top 320ms ${EASE}, opacity 320ms ${EASE}` }} />
+        <span key={d.key} style={{ position: "absolute", left: px(d.x - 3.5), top: px(d.y - 3.5 - top), width: 7, height: 7, borderRadius: "50%", background: d.tint, opacity: px(d.o), transition: `left 320ms ${EASE}, top 320ms ${EASE}, opacity 320ms ${EASE}` }} />
       ))}
       {people.map((p) => {
         const at = seat.get(p.id)!;
         return (
-          <span key={p.id} style={{ position: "absolute", left: at.x - face / 2, top: at.y - face / 2 - top, opacity: p.removed ? 0.5 : 1, lineHeight: 0 }}>
+          <span key={p.id} style={{ position: "absolute", left: px(at.x - face / 2), top: px(at.y - face / 2 - top), opacity: p.removed ? 0.5 : 1, lineHeight: 0 }}>
             <Face name={p.name} size={face} />
           </span>
         );
