@@ -1,1 +1,6381 @@
-{}
+{
+  "new-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Training",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Training",
+      "emoji": "🏋️",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": false,
+            "today": true
+          }
+        ],
+        "trained": 0,
+        "goal": null
+      },
+      "latest": null,
+      "recent": [],
+      "bests": [],
+      "kudosFor": null
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "week-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Training",
+    "emoji": "🏋️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Training",
+      "emoji": "🏋️",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": true,
+            "today": true
+          }
+        ],
+        "trained": 4,
+        "goal": 4
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwks000000006",
+        "name": "Push day",
+        "day": "2026-10-03",
+        "time": "08:00",
+        "dayWords": {
+          "en": "Today",
+          "ar": "النهارده"
+        },
+        "lines": [
+          {
+            "id": "iwkl000000060",
+            "exercise": "Bench press",
+            "sets": 3,
+            "reps": 8,
+            "kg": 60,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 60 kg",
+              "ar": "3 × 8 على 60 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000061",
+            "exercise": "Incline dumbbell press",
+            "sets": 3,
+            "reps": 10,
+            "kg": 22.5,
+            "secs": null,
+            "words": {
+              "en": "3 × 10 at 22.5 kg",
+              "ar": "3 × 10 على 22.5 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000062",
+            "exercise": "Dips",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000063",
+            "exercise": "Plank",
+            "sets": 1,
+            "reps": null,
+            "kg": null,
+            "secs": 90,
+            "words": {
+              "en": "1:30 hold",
+              "ar": "ثبات 1:30"
+            },
+            "best": true
+          }
+        ],
+        "volume": 2115,
+        "kudos": []
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwks000000006",
+          "name": "Push day",
+          "day": "2026-10-03",
+          "time": "08:00",
+          "dayWords": {
+            "en": "Today",
+            "ar": "النهارده"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000060",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 60,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 60 kg",
+                "ar": "3 × 8 على 60 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000061",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 22.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 22.5 kg",
+                "ar": "3 × 10 على 22.5 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000062",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000063",
+              "exercise": "Plank",
+              "sets": 1,
+              "reps": null,
+              "kg": null,
+              "secs": 90,
+              "words": {
+                "en": "1:30 hold",
+                "ar": "ثبات 1:30"
+              },
+              "best": true
+            }
+          ],
+          "volume": 2115,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000002",
+          "sport": "run",
+          "name": null,
+          "day": "2026-10-01",
+          "time": "07:10",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "metres": 5050,
+          "secs": 1600,
+          "words": {
+            "en": "Run 5.1 km in 26:40",
+            "ar": "جري 5.1 كم في 26:40"
+          },
+          "pace": {
+            "en": "5:17 /km",
+            "ar": "5:17 لكل كم"
+          },
+          "best": true,
+          "kudos": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwks000000005",
+          "name": "Pull day",
+          "day": "2026-09-30",
+          "time": "18:15",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000050",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 9,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 9",
+                "ar": "3 × 9"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000051",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 52.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 52.5 kg",
+                "ar": "3 × 10 على 52.5 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1575,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000004",
+          "name": "Legs",
+          "day": "2026-09-28",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000040",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 95,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 95 kg",
+                "ar": "3 × 5 على 95 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000041",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 10,
+              "kg": 16,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 16 kg",
+                "ar": "3 × 10 على 16 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1905,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-24",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Thu 24 Sep",
+            "ar": "الخميس 24 سبتمبر"
+          },
+          "metres": 5000,
+          "secs": 1650,
+          "words": {
+            "en": "Run 5 km in 27:30",
+            "ar": "جري 5 كم في 27:30"
+          },
+          "pace": {
+            "en": "5:30 /km",
+            "ar": "5:30 لكل كم"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000003",
+          "name": "Pull day",
+          "day": "2026-09-22",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 22 Sep",
+            "ar": "التلات 22 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000030",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 110,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 110 kg",
+                "ar": "3 × 5 على 110 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000031",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 8",
+                "ar": "3 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000032",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 50,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 50 kg",
+                "ar": "3 × 10 على 50 كجم"
+              },
+              "best": false
+            }
+          ],
+          "volume": 3150,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000002",
+          "name": "Push day",
+          "day": "2026-09-19",
+          "time": "18:30",
+          "dayWords": {
+            "en": "Sat 19 Sep",
+            "ar": "السبت 19 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000020",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 57.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 57.5 kg",
+                "ar": "3 × 8 على 57.5 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000021",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 20 kg",
+                "ar": "3 × 10 على 20 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000022",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            }
+          ],
+          "volume": 1980,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000001",
+          "name": "Legs",
+          "day": "2026-09-12",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 12 Sep",
+            "ar": "السبت 12 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000010",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 90,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 90 kg",
+                "ar": "3 × 5 على 90 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000011",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 70,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 70 kg",
+                "ar": "3 × 8 على 70 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 3030,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:bench press:e1rm",
+          "name": "Bench press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 60 kg × 8",
+            "ar": "أحسن مجموعة 60 كجم × 8"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:bench press:kg",
+          "name": "Bench press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 60 kg",
+            "ar": "أتقل وزن 60 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:dips:reps",
+          "name": "Dips",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:e1rm",
+          "name": "Incline dumbbell press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 22.5 kg × 10",
+            "ar": "أحسن مجموعة 22.5 كجم × 10"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:kg",
+          "name": "Incline dumbbell press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 22.5 kg",
+            "ar": "أتقل وزن 22.5 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:plank:secs",
+          "name": "Plank",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:30",
+            "ar": "أطول ثبات 1:30"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:5k",
+          "name": "Run",
+          "what": "5k",
+          "words": {
+            "en": "5K in 26:40",
+            "ar": "5 كم في 26:40"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 5.1 km",
+            "ar": "أطول مسافة 5.1 كم"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:e1rm",
+          "name": "Barbell row",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 52.5 kg × 10",
+            "ar": "أحسن مجموعة 52.5 كجم × 10"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:kg",
+          "name": "Barbell row",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 52.5 kg",
+            "ar": "أتقل وزن 52.5 كجم"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:pull-ups:reps",
+          "name": "Pull-ups",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 9",
+            "ar": "أكتر عدد 9"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:e1rm",
+          "name": "Squat",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 95 kg × 5",
+            "ar": "أحسن مجموعة 95 كجم × 5"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:kg",
+          "name": "Squat",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 95 kg",
+            "ar": "أتقل وزن 95 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:e1rm",
+          "name": "Walking lunges",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 16 kg × 10",
+            "ar": "أحسن مجموعة 16 كجم × 10"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:kg",
+          "name": "Walking lunges",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 16 kg",
+            "ar": "أتقل وزن 16 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:deadlift:e1rm",
+          "name": "Deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 110 kg × 5",
+            "ar": "أحسن مجموعة 110 كجم × 5"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:deadlift:kg",
+          "name": "Deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 110 kg",
+            "ar": "أتقل وزن 110 كجم"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:e1rm",
+          "name": "Romanian deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 70 kg × 8",
+            "ar": "أحسن مجموعة 70 كجم × 8"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:kg",
+          "name": "Romanian deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 70 kg",
+            "ar": "أتقل وزن 70 كجم"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwks000000006",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Karim",
+        "line": {
+          "en": "Bench press 3 × 8 at 60 kg, a new best",
+          "ar": "Bench press 3 × 8 على 60 كجم، رقم قياسي جديد"
+        },
+        "moment": "best"
+      },
+      {
+        "at": 1790835000000,
+        "name": "Leo",
+        "line": {
+          "en": "Leo sent kudos",
+          "ar": "تحية من Leo"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "week-ar": {
+    "ok": true,
+    "kind": "workout",
+    "title": "التمرين",
+    "emoji": "💪",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "التمرين",
+      "emoji": "💪",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": false,
+            "today": true
+          }
+        ],
+        "trained": 3,
+        "goal": 3
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwas000000004",
+        "name": "يوم الصدر",
+        "day": "2026-10-02",
+        "time": "19:30",
+        "dayWords": {
+          "en": "Yesterday",
+          "ar": "امبارح"
+        },
+        "lines": [
+          {
+            "id": "iwal000000040",
+            "exercise": "بنش برس",
+            "sets": 3,
+            "reps": 8,
+            "kg": 57.5,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 57.5 kg",
+              "ar": "3 × 8 على 57.5 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwal000000041",
+            "exercise": "متوازي",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": true
+          },
+          {
+            "id": "iwal000000042",
+            "exercise": "بلانك",
+            "sets": 1,
+            "reps": null,
+            "kg": null,
+            "secs": 75,
+            "words": {
+              "en": "1:15 hold",
+              "ar": "ثبات 1:15"
+            },
+            "best": true
+          }
+        ],
+        "volume": 1380,
+        "kudos": [
+          {
+            "id": "momar000001",
+            "name": "عمر",
+            "you": false
+          }
+        ]
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwas000000004",
+          "name": "يوم الصدر",
+          "day": "2026-10-02",
+          "time": "19:30",
+          "dayWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "lines": [
+            {
+              "id": "iwal000000040",
+              "exercise": "بنش برس",
+              "sets": 3,
+              "reps": 8,
+              "kg": 57.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 57.5 kg",
+                "ar": "3 × 8 على 57.5 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000041",
+              "exercise": "متوازي",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000042",
+              "exercise": "بلانك",
+              "sets": 1,
+              "reps": null,
+              "kg": null,
+              "secs": 75,
+              "words": {
+                "en": "1:15 hold",
+                "ar": "ثبات 1:15"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1380,
+          "kudos": [
+            {
+              "id": "momar000001",
+              "name": "عمر",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwas000000003",
+          "name": "يوم الضهر",
+          "day": "2026-09-29",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000030",
+              "exercise": "عقلة",
+              "sets": 3,
+              "reps": 6,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 6",
+                "ar": "3 × 6"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000031",
+              "exercise": "سحب بالبار",
+              "sets": 3,
+              "reps": 10,
+              "kg": 45,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 45 kg",
+                "ar": "3 × 10 على 45 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1350,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwar000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-27",
+          "time": "06:30",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "metres": 4000,
+          "secs": 1440,
+          "words": {
+            "en": "Run 4 km in 24:00",
+            "ar": "جري 4 كم في 24:00"
+          },
+          "pace": {
+            "en": "6:00 /km",
+            "ar": "6:00 لكل كم"
+          },
+          "best": true,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwas000000002",
+          "name": "يوم الصدر",
+          "day": "2026-09-25",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000020",
+              "exercise": "بنش برس",
+              "sets": 3,
+              "reps": 8,
+              "kg": 55,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 55 kg",
+                "ar": "3 × 8 على 55 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwal000000021",
+              "exercise": "متوازي",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            }
+          ],
+          "volume": 1320,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwas000000001",
+          "name": "يوم الرجل",
+          "day": "2026-09-21",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Mon 21 Sep",
+            "ar": "الاتنين 21 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000010",
+              "exercise": "سكوات",
+              "sets": 3,
+              "reps": 5,
+              "kg": 80,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 80 kg",
+                "ar": "3 × 5 على 80 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000011",
+              "exercise": "طعن بالدمبل",
+              "sets": 3,
+              "reps": 10,
+              "kg": 14,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 14 kg",
+                "ar": "3 × 10 على 14 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1620,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:بلانك:secs",
+          "name": "بلانك",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:15",
+            "ar": "أطول ثبات 1:15"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:بنش برس:e1rm",
+          "name": "بنش برس",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 57.5 kg × 8",
+            "ar": "أحسن مجموعة 57.5 كجم × 8"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:بنش برس:kg",
+          "name": "بنش برس",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 57.5 kg",
+            "ar": "أتقل وزن 57.5 كجم"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:متوازي:reps",
+          "name": "متوازي",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:سحب بالبار:e1rm",
+          "name": "سحب بالبار",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 45 kg × 10",
+            "ar": "أحسن مجموعة 45 كجم × 10"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:سحب بالبار:kg",
+          "name": "سحب بالبار",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 45 kg",
+            "ar": "أتقل وزن 45 كجم"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:عقله:reps",
+          "name": "عقلة",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 6",
+            "ar": "أكتر عدد 6"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 4 km",
+            "ar": "أطول مسافة 4 كم"
+          },
+          "day": "2026-09-27",
+          "fresh": true
+        },
+        {
+          "key": "best:سكوات:e1rm",
+          "name": "سكوات",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 80 kg × 5",
+            "ar": "أحسن مجموعة 80 كجم × 5"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:سكوات:kg",
+          "name": "سكوات",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 80 kg",
+            "ar": "أتقل وزن 80 كجم"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:طعن بالدمبل:e1rm",
+          "name": "طعن بالدمبل",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 14 kg × 10",
+            "ar": "أحسن مجموعة 14 كجم × 10"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:طعن بالدمبل:kg",
+          "name": "طعن بالدمبل",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 14 kg",
+            "ar": "أتقل وزن 14 كجم"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwas000000004",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00001",
+        "name": "كريم",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000001",
+        "name": "عمر",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000001",
+        "name": "عمر"
+      }
+    ],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [
+      {
+        "at": 1790965800000,
+        "name": "عمر",
+        "line": {
+          "en": "عمر sent kudos",
+          "ar": "تحية من عمر"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "busy-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Gym",
+    "emoji": null,
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Gym",
+      "emoji": "🏋️",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "lb",
+        "distance": "mi"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": true,
+            "today": true
+          }
+        ],
+        "trained": 6,
+        "goal": 5
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwbs000000016",
+        "name": "Push day",
+        "day": "2026-10-03",
+        "time": "18:00",
+        "dayWords": {
+          "en": "Today",
+          "ar": "النهارده"
+        },
+        "lines": [
+          {
+            "id": "iwbl000000160",
+            "exercise": "Bench press",
+            "sets": 4,
+            "reps": 8,
+            "kg": 90,
+            "secs": null,
+            "words": {
+              "en": "4 × 8 at 198.4 lb",
+              "ar": "4 × 8 على 198.4 رطل"
+            },
+            "best": true
+          },
+          {
+            "id": "iwbl000000161",
+            "exercise": "Overhead press",
+            "sets": 3,
+            "reps": 8,
+            "kg": 49,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 108 lb",
+              "ar": "3 × 8 على 108 رطل"
+            },
+            "best": true
+          },
+          {
+            "id": "iwbl000000162",
+            "exercise": "Incline dumbbell press",
+            "sets": 3,
+            "reps": 10,
+            "kg": 33,
+            "secs": null,
+            "words": {
+              "en": "3 × 10 at 72.8 lb",
+              "ar": "3 × 10 على 72.8 رطل"
+            },
+            "best": true
+          },
+          {
+            "id": "iwbl000000163",
+            "exercise": "Cable fly",
+            "sets": 3,
+            "reps": 12,
+            "kg": 24,
+            "secs": null,
+            "words": {
+              "en": "3 × 12 at 52.9 lb",
+              "ar": "3 × 12 على 52.9 رطل"
+            },
+            "best": true
+          },
+          {
+            "id": "iwbl000000164",
+            "exercise": "Triceps pushdown",
+            "sets": 3,
+            "reps": 12,
+            "kg": 33,
+            "secs": null,
+            "words": {
+              "en": "3 × 12 at 72.8 lb",
+              "ar": "3 × 12 على 72.8 رطل"
+            },
+            "best": true
+          },
+          {
+            "id": "iwbl000000165",
+            "exercise": "Dips",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": false
+          }
+        ],
+        "volume": 15648,
+        "kudos": [
+          {
+            "id": "mbuddy00000",
+            "name": "Sam",
+            "you": false
+          },
+          {
+            "id": "mbuddy00001",
+            "name": "Lina",
+            "you": false
+          },
+          {
+            "id": "mbuddy00002",
+            "name": "Omar",
+            "you": false
+          },
+          {
+            "id": "mbuddy00003",
+            "name": "Maya",
+            "you": false
+          },
+          {
+            "id": "mbuddy00004",
+            "name": "Alex",
+            "you": false
+          },
+          {
+            "id": "mbuddy00005",
+            "name": "Mia",
+            "you": false
+          }
+        ]
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwbs000000016",
+          "name": "Push day",
+          "day": "2026-10-03",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Today",
+            "ar": "النهارده"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000160",
+              "exercise": "Bench press",
+              "sets": 4,
+              "reps": 8,
+              "kg": 90,
+              "secs": null,
+              "words": {
+                "en": "4 × 8 at 198.4 lb",
+                "ar": "4 × 8 على 198.4 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000161",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 49,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 108 lb",
+                "ar": "3 × 8 على 108 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000162",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 33,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 72.8 lb",
+                "ar": "3 × 10 على 72.8 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000163",
+              "exercise": "Cable fly",
+              "sets": 3,
+              "reps": 12,
+              "kg": 24,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 52.9 lb",
+                "ar": "3 × 12 على 52.9 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000164",
+              "exercise": "Triceps pushdown",
+              "sets": 3,
+              "reps": 12,
+              "kg": 33,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 72.8 lb",
+                "ar": "3 × 12 على 72.8 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000165",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 15648,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000015",
+          "name": "Upper",
+          "day": "2026-10-02",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000150",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 5,
+              "kg": 94,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 207.2 lb",
+                "ar": "3 × 5 على 207.2 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000151",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 8,
+              "kg": 78,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 172 lb",
+                "ar": "3 × 8 على 172 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000152",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 6,
+              "kg": 51,
+              "secs": null,
+              "words": {
+                "en": "3 × 6 at 112.4 lb",
+                "ar": "3 × 6 على 112.4 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000153",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000154",
+              "exercise": "Lateral raise",
+              "sets": 3,
+              "reps": 15,
+              "kg": 15,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 33.1 lb",
+                "ar": "3 × 15 على 33.1 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000155",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 10,
+              "kg": 22,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 48.5 lb",
+                "ar": "3 × 10 على 48.5 رطل"
+              },
+              "best": true
+            }
+          ],
+          "volume": 12203,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "run",
+          "id": "iwbr000000002",
+          "sport": "run",
+          "name": "Long run",
+          "day": "2026-10-01",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "metres": 16093,
+          "secs": 5400,
+          "words": {
+            "en": "Run 10 mi in 1:30:00",
+            "ar": "جري 10 ميل في 1:30:00"
+          },
+          "pace": {
+            "en": "9:00 /mi",
+            "ar": "9:00 لكل ميل"
+          },
+          "best": true,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000014",
+          "name": "Legs",
+          "day": "2026-09-30",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000140",
+              "exercise": "Squat",
+              "sets": 4,
+              "reps": 6,
+              "kg": 126,
+              "secs": null,
+              "words": {
+                "en": "4 × 6 at 277.8 lb",
+                "ar": "4 × 6 على 277.8 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000141",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 106,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 233.7 lb",
+                "ar": "3 × 8 على 233.7 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000142",
+              "exercise": "Leg press",
+              "sets": 3,
+              "reps": 12,
+              "kg": 206,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 454.2 lb",
+                "ar": "3 × 12 على 454.2 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000143",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 12,
+              "kg": 26,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 57.3 lb",
+                "ar": "3 × 12 على 57.3 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000144",
+              "exercise": "Calf raise",
+              "sets": 4,
+              "reps": 15,
+              "kg": 66,
+              "secs": null,
+              "words": {
+                "en": "4 × 15 at 145.5 lb",
+                "ar": "4 × 15 على 145.5 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000145",
+              "exercise": "Plank",
+              "sets": 3,
+              "reps": null,
+              "kg": null,
+              "secs": 60,
+              "words": {
+                "en": "3 × 1:00",
+                "ar": "3 × 1:00"
+              },
+              "best": false
+            }
+          ],
+          "volume": 39419,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000013",
+          "name": "Pull day",
+          "day": "2026-09-29",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000130",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 156,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 343.9 lb",
+                "ar": "3 × 5 على 343.9 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000131",
+              "exercise": "Pull-ups",
+              "sets": 4,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "4 × 8",
+                "ar": "4 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000132",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 76,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 167.6 lb",
+                "ar": "3 × 10 على 167.6 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000133",
+              "exercise": "Face pull",
+              "sets": 3,
+              "reps": 15,
+              "kg": 26,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 57.3 lb",
+                "ar": "3 × 15 على 57.3 رطل"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000134",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 12,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 44.1 lb",
+                "ar": "3 × 12 على 44.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000135",
+              "exercise": "Hanging leg raise",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 14352,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "run",
+          "id": "iwbr000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-27",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "metres": 8047,
+          "secs": 2580,
+          "words": {
+            "en": "Run 5 mi in 43:00",
+            "ar": "جري 5 ميل في 43:00"
+          },
+          "pace": {
+            "en": "8:36 /mi",
+            "ar": "8:36 لكل ميل"
+          },
+          "best": false,
+          "kudos": [
+            {
+              "id": "mbuddy00000",
+              "name": "Sam",
+              "you": false
+            },
+            {
+              "id": "mbuddy00001",
+              "name": "Lina",
+              "you": false
+            },
+            {
+              "id": "mbuddy00002",
+              "name": "Omar",
+              "you": false
+            },
+            {
+              "id": "mbuddy00003",
+              "name": "Maya",
+              "you": false
+            },
+            {
+              "id": "mbuddy00004",
+              "name": "Alex",
+              "you": false
+            },
+            {
+              "id": "mbuddy00005",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000012",
+          "name": "Push day",
+          "day": "2026-09-26",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 26 Sep",
+            "ar": "السبت 26 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000120",
+              "exercise": "Bench press",
+              "sets": 4,
+              "reps": 8,
+              "kg": 88,
+              "secs": null,
+              "words": {
+                "en": "4 × 8 at 194 lb",
+                "ar": "4 × 8 على 194 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000121",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 47,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 103.6 lb",
+                "ar": "3 × 8 على 103.6 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000122",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 31,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 68.3 lb",
+                "ar": "3 × 10 على 68.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000123",
+              "exercise": "Cable fly",
+              "sets": 3,
+              "reps": 12,
+              "kg": 22,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 48.5 lb",
+                "ar": "3 × 12 على 48.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000124",
+              "exercise": "Triceps pushdown",
+              "sets": 3,
+              "reps": 12,
+              "kg": 31,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 68.3 lb",
+                "ar": "3 × 12 على 68.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000125",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 14952,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000011",
+          "name": "Upper",
+          "day": "2026-09-25",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000110",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 5,
+              "kg": 92,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 202.8 lb",
+                "ar": "3 × 5 على 202.8 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000111",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 8,
+              "kg": 76,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 167.6 lb",
+                "ar": "3 × 8 على 167.6 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000112",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 6,
+              "kg": 49,
+              "secs": null,
+              "words": {
+                "en": "3 × 6 at 108 lb",
+                "ar": "3 × 6 على 108 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000113",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000114",
+              "exercise": "Lateral raise",
+              "sets": 3,
+              "reps": 15,
+              "kg": 13,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 28.7 lb",
+                "ar": "3 × 15 على 28.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000115",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 10,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 44.1 lb",
+                "ar": "3 × 10 على 44.1 رطل"
+              },
+              "best": false
+            }
+          ],
+          "volume": 11621,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000010",
+          "name": "Legs",
+          "day": "2026-09-23",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Wed 23 Sep",
+            "ar": "الأربع 23 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000100",
+              "exercise": "Squat",
+              "sets": 4,
+              "reps": 6,
+              "kg": 124,
+              "secs": null,
+              "words": {
+                "en": "4 × 6 at 273.4 lb",
+                "ar": "4 × 6 على 273.4 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000101",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 104,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 229.3 lb",
+                "ar": "3 × 8 على 229.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000102",
+              "exercise": "Leg press",
+              "sets": 3,
+              "reps": 12,
+              "kg": 204,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 449.7 lb",
+                "ar": "3 × 12 على 449.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000103",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 12,
+              "kg": 24,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 52.9 lb",
+                "ar": "3 × 12 على 52.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000104",
+              "exercise": "Calf raise",
+              "sets": 4,
+              "reps": 15,
+              "kg": 64,
+              "secs": null,
+              "words": {
+                "en": "4 × 15 at 141.1 lb",
+                "ar": "4 × 15 على 141.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000105",
+              "exercise": "Plank",
+              "sets": 3,
+              "reps": null,
+              "kg": null,
+              "secs": 60,
+              "words": {
+                "en": "3 × 1:00",
+                "ar": "3 × 1:00"
+              },
+              "best": false
+            }
+          ],
+          "volume": 38625,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000009",
+          "name": "Pull day",
+          "day": "2026-09-22",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 22 Sep",
+            "ar": "التلات 22 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000090",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 154,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 339.5 lb",
+                "ar": "3 × 5 على 339.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000091",
+              "exercise": "Pull-ups",
+              "sets": 4,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "4 × 8",
+                "ar": "4 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000092",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 74,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 163.1 lb",
+                "ar": "3 × 10 على 163.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000093",
+              "exercise": "Face pull",
+              "sets": 3,
+              "reps": 15,
+              "kg": 24,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 52.9 lb",
+                "ar": "3 × 15 على 52.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000094",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 12,
+              "kg": 18,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 39.7 lb",
+                "ar": "3 × 12 على 39.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000095",
+              "exercise": "Hanging leg raise",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 13797,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000008",
+          "name": "Push day",
+          "day": "2026-09-19",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 19 Sep",
+            "ar": "السبت 19 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000080",
+              "exercise": "Bench press",
+              "sets": 4,
+              "reps": 8,
+              "kg": 86,
+              "secs": null,
+              "words": {
+                "en": "4 × 8 at 189.6 lb",
+                "ar": "4 × 8 على 189.6 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000081",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 45,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 99.2 lb",
+                "ar": "3 × 8 على 99.2 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000082",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 29,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 63.9 lb",
+                "ar": "3 × 10 على 63.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000083",
+              "exercise": "Cable fly",
+              "sets": 3,
+              "reps": 12,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 44.1 lb",
+                "ar": "3 × 12 على 44.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000084",
+              "exercise": "Triceps pushdown",
+              "sets": 3,
+              "reps": 12,
+              "kg": 29,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 63.9 lb",
+                "ar": "3 × 12 على 63.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000085",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 14255,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000007",
+          "name": "Upper",
+          "day": "2026-09-18",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Fri 18 Sep",
+            "ar": "الجمعة 18 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000070",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 5,
+              "kg": 90,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 198.4 lb",
+                "ar": "3 × 5 على 198.4 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000071",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 8,
+              "kg": 74,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 163.1 lb",
+                "ar": "3 × 8 على 163.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000072",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 6,
+              "kg": 47,
+              "secs": null,
+              "words": {
+                "en": "3 × 6 at 103.6 lb",
+                "ar": "3 × 6 على 103.6 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000073",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000074",
+              "exercise": "Lateral raise",
+              "sets": 3,
+              "reps": 15,
+              "kg": 11,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 24.3 lb",
+                "ar": "3 × 15 على 24.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000075",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 10,
+              "kg": 18,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 39.7 lb",
+                "ar": "3 × 10 على 39.7 رطل"
+              },
+              "best": false
+            }
+          ],
+          "volume": 11039,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000006",
+          "name": "Legs",
+          "day": "2026-09-16",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Wed 16 Sep",
+            "ar": "الأربع 16 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000060",
+              "exercise": "Squat",
+              "sets": 4,
+              "reps": 6,
+              "kg": 122,
+              "secs": null,
+              "words": {
+                "en": "4 × 6 at 269 lb",
+                "ar": "4 × 6 على 269 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000061",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 102,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 224.9 lb",
+                "ar": "3 × 8 على 224.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000062",
+              "exercise": "Leg press",
+              "sets": 3,
+              "reps": 12,
+              "kg": 202,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 445.3 lb",
+                "ar": "3 × 12 على 445.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000063",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 12,
+              "kg": 22,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 48.5 lb",
+                "ar": "3 × 12 على 48.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000064",
+              "exercise": "Calf raise",
+              "sets": 4,
+              "reps": 15,
+              "kg": 62,
+              "secs": null,
+              "words": {
+                "en": "4 × 15 at 136.7 lb",
+                "ar": "4 × 15 على 136.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000065",
+              "exercise": "Plank",
+              "sets": 3,
+              "reps": null,
+              "kg": null,
+              "secs": 60,
+              "words": {
+                "en": "3 × 1:00",
+                "ar": "3 × 1:00"
+              },
+              "best": false
+            }
+          ],
+          "volume": 37831,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000005",
+          "name": "Pull day",
+          "day": "2026-09-15",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 15 Sep",
+            "ar": "التلات 15 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000050",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 152,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 335.1 lb",
+                "ar": "3 × 5 على 335.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000051",
+              "exercise": "Pull-ups",
+              "sets": 4,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "4 × 8",
+                "ar": "4 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000052",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 72,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 158.7 lb",
+                "ar": "3 × 10 على 158.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000053",
+              "exercise": "Face pull",
+              "sets": 3,
+              "reps": 15,
+              "kg": 22,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 48.5 lb",
+                "ar": "3 × 15 على 48.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000054",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 12,
+              "kg": 16,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 35.3 lb",
+                "ar": "3 × 12 على 35.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000055",
+              "exercise": "Hanging leg raise",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": false
+            }
+          ],
+          "volume": 13241,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000004",
+          "name": "Push day",
+          "day": "2026-09-12",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 12 Sep",
+            "ar": "السبت 12 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000040",
+              "exercise": "Bench press",
+              "sets": 4,
+              "reps": 8,
+              "kg": 84,
+              "secs": null,
+              "words": {
+                "en": "4 × 8 at 185.2 lb",
+                "ar": "4 × 8 على 185.2 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000041",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 43,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 94.8 lb",
+                "ar": "3 × 8 على 94.8 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000042",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 27,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 59.5 lb",
+                "ar": "3 × 10 على 59.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000043",
+              "exercise": "Cable fly",
+              "sets": 3,
+              "reps": 12,
+              "kg": 18,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 39.7 lb",
+                "ar": "3 × 12 على 39.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000044",
+              "exercise": "Triceps pushdown",
+              "sets": 3,
+              "reps": 12,
+              "kg": 27,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 59.5 lb",
+                "ar": "3 × 12 على 59.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000045",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            }
+          ],
+          "volume": 13558,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000003",
+          "name": "Upper",
+          "day": "2026-09-11",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Fri 11 Sep",
+            "ar": "الجمعة 11 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000030",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 5,
+              "kg": 88,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 194 lb",
+                "ar": "3 × 5 على 194 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000031",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 8,
+              "kg": 72,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 158.7 lb",
+                "ar": "3 × 8 على 158.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000032",
+              "exercise": "Overhead press",
+              "sets": 3,
+              "reps": 6,
+              "kg": 45,
+              "secs": null,
+              "words": {
+                "en": "3 × 6 at 99.2 lb",
+                "ar": "3 × 6 على 99.2 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000033",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": true
+            },
+            {
+              "id": "iwbl000000034",
+              "exercise": "Lateral raise",
+              "sets": 3,
+              "reps": 15,
+              "kg": 9,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 19.8 lb",
+                "ar": "3 × 15 على 19.8 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000035",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 10,
+              "kg": 16,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 35.3 lb",
+                "ar": "3 × 10 على 35.3 رطل"
+              },
+              "best": false
+            }
+          ],
+          "volume": 10457,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000002",
+          "name": "Legs",
+          "day": "2026-09-09",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Wed 9 Sep",
+            "ar": "الأربع 9 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000020",
+              "exercise": "Squat",
+              "sets": 4,
+              "reps": 6,
+              "kg": 120,
+              "secs": null,
+              "words": {
+                "en": "4 × 6 at 264.6 lb",
+                "ar": "4 × 6 على 264.6 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000021",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 100,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 220.5 lb",
+                "ar": "3 × 8 على 220.5 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000022",
+              "exercise": "Leg press",
+              "sets": 3,
+              "reps": 12,
+              "kg": 200,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 440.9 lb",
+                "ar": "3 × 12 على 440.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000023",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 12,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 44.1 lb",
+                "ar": "3 × 12 على 44.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000024",
+              "exercise": "Calf raise",
+              "sets": 4,
+              "reps": 15,
+              "kg": 60,
+              "secs": null,
+              "words": {
+                "en": "4 × 15 at 132.3 lb",
+                "ar": "4 × 15 على 132.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000025",
+              "exercise": "Plank",
+              "sets": 3,
+              "reps": null,
+              "kg": null,
+              "secs": 60,
+              "words": {
+                "en": "3 × 1:00",
+                "ar": "3 × 1:00"
+              },
+              "best": true
+            }
+          ],
+          "volume": 37038,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwbs000000001",
+          "name": "Pull day",
+          "day": "2026-09-08",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 8 Sep",
+            "ar": "التلات 8 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwbl000000010",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 150,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 330.7 lb",
+                "ar": "3 × 5 على 330.7 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000011",
+              "exercise": "Pull-ups",
+              "sets": 4,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "4 × 8",
+                "ar": "4 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000012",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 70,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 154.3 lb",
+                "ar": "3 × 10 على 154.3 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000013",
+              "exercise": "Face pull",
+              "sets": 3,
+              "reps": 15,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 15 at 44.1 lb",
+                "ar": "3 × 15 على 44.1 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000014",
+              "exercise": "Biceps curl",
+              "sets": 3,
+              "reps": 12,
+              "kg": 14,
+              "secs": null,
+              "words": {
+                "en": "3 × 12 at 30.9 lb",
+                "ar": "3 × 12 على 30.9 رطل"
+              },
+              "best": false
+            },
+            {
+              "id": "iwbl000000015",
+              "exercise": "Hanging leg raise",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            }
+          ],
+          "volume": 12685,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:bench press:e1rm",
+          "name": "Bench press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 198.4 lb × 8",
+            "ar": "أحسن مجموعة 198.4 رطل × 8"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:cable fly:e1rm",
+          "name": "Cable fly",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 52.9 lb × 12",
+            "ar": "أحسن مجموعة 52.9 رطل × 12"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:cable fly:kg",
+          "name": "Cable fly",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 52.9 lb",
+            "ar": "أتقل وزن 52.9 رطل"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:e1rm",
+          "name": "Incline dumbbell press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 72.8 lb × 10",
+            "ar": "أحسن مجموعة 72.8 رطل × 10"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:kg",
+          "name": "Incline dumbbell press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 72.8 lb",
+            "ar": "أتقل وزن 72.8 رطل"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:overhead press:e1rm",
+          "name": "Overhead press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 108 lb × 8",
+            "ar": "أحسن مجموعة 108 رطل × 8"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:triceps pushdown:e1rm",
+          "name": "Triceps pushdown",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 72.8 lb × 12",
+            "ar": "أحسن مجموعة 72.8 رطل × 12"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:triceps pushdown:kg",
+          "name": "Triceps pushdown",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 72.8 lb",
+            "ar": "أتقل وزن 72.8 رطل"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:kg",
+          "name": "Barbell row",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 172 lb",
+            "ar": "أتقل وزن 172 رطل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:bench press:kg",
+          "name": "Bench press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 207.2 lb",
+            "ar": "أتقل وزن 207.2 رطل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:biceps curl:e1rm",
+          "name": "Biceps curl",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 48.5 lb × 10",
+            "ar": "أحسن مجموعة 48.5 رطل × 10"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:biceps curl:kg",
+          "name": "Biceps curl",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 48.5 lb",
+            "ar": "أتقل وزن 48.5 رطل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:lateral raise:e1rm",
+          "name": "Lateral raise",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 33.1 lb × 15",
+            "ar": "أحسن مجموعة 33.1 رطل × 15"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:lateral raise:kg",
+          "name": "Lateral raise",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 33.1 lb",
+            "ar": "أتقل وزن 33.1 رطل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:overhead press:kg",
+          "name": "Overhead press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 112.4 lb",
+            "ar": "أتقل وزن 112.4 رطل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 10 mi",
+            "ar": "أطول مسافة 10 ميل"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:calf raise:e1rm",
+          "name": "Calf raise",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 145.5 lb × 15",
+            "ar": "أحسن مجموعة 145.5 رطل × 15"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:calf raise:kg",
+          "name": "Calf raise",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 145.5 lb",
+            "ar": "أتقل وزن 145.5 رطل"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:leg press:e1rm",
+          "name": "Leg press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 454.2 lb × 12",
+            "ar": "أحسن مجموعة 454.2 رطل × 12"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:leg press:kg",
+          "name": "Leg press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 454.2 lb",
+            "ar": "أتقل وزن 454.2 رطل"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:romanian deadlift:e1rm",
+          "name": "Romanian deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 233.7 lb × 8",
+            "ar": "أحسن مجموعة 233.7 رطل × 8"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:romanian deadlift:kg",
+          "name": "Romanian deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 233.7 lb",
+            "ar": "أتقل وزن 233.7 رطل"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:e1rm",
+          "name": "Squat",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 277.8 lb × 6",
+            "ar": "أحسن مجموعة 277.8 رطل × 6"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:kg",
+          "name": "Squat",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 277.8 lb",
+            "ar": "أتقل وزن 277.8 رطل"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:e1rm",
+          "name": "Walking lunges",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 57.3 lb × 12",
+            "ar": "أحسن مجموعة 57.3 رطل × 12"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:kg",
+          "name": "Walking lunges",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 57.3 lb",
+            "ar": "أتقل وزن 57.3 رطل"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:e1rm",
+          "name": "Barbell row",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 167.6 lb × 10",
+            "ar": "أحسن مجموعة 167.6 رطل × 10"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:deadlift:e1rm",
+          "name": "Deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 343.9 lb × 5",
+            "ar": "أحسن مجموعة 343.9 رطل × 5"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:deadlift:kg",
+          "name": "Deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 343.9 lb",
+            "ar": "أتقل وزن 343.9 رطل"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:face pull:e1rm",
+          "name": "Face pull",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 57.3 lb × 15",
+            "ar": "أحسن مجموعة 57.3 رطل × 15"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:face pull:kg",
+          "name": "Face pull",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 57.3 lb",
+            "ar": "أتقل وزن 57.3 رطل"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:dips:reps",
+          "name": "Dips",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        },
+        {
+          "key": "best:pull-ups:reps",
+          "name": "Pull-ups",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 10",
+            "ar": "أكتر عدد 10"
+          },
+          "day": "2026-09-11",
+          "fresh": false
+        },
+        {
+          "key": "best:plank:secs",
+          "name": "Plank",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:00",
+            "ar": "أطول ثبات 1:00"
+          },
+          "day": "2026-09-09",
+          "fresh": false
+        },
+        {
+          "key": "best:hanging leg raise:reps",
+          "name": "Hanging leg raise",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-09-08",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwbs000000016",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00001",
+        "name": "Lina",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00002",
+        "name": "Omar",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00003",
+        "name": "Maya",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00004",
+        "name": "Alex",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mbuddy00005",
+        "name": "Mia",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mbuddy00000",
+        "name": "Sam"
+      },
+      {
+        "id": "mbuddy00001",
+        "name": "Lina"
+      },
+      {
+        "id": "mbuddy00002",
+        "name": "Omar"
+      },
+      {
+        "id": "mbuddy00003",
+        "name": "Maya"
+      },
+      {
+        "id": "mbuddy00004",
+        "name": "Alex"
+      },
+      {
+        "id": "mbuddy00005",
+        "name": "Mia"
+      }
+    ],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "best-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Training",
+    "emoji": "🏋️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Training",
+      "emoji": "🏋️",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": true,
+            "today": true
+          }
+        ],
+        "trained": 4,
+        "goal": 4
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwks000000006",
+        "name": "Push day",
+        "day": "2026-10-03",
+        "time": "08:00",
+        "dayWords": {
+          "en": "Today",
+          "ar": "النهارده"
+        },
+        "lines": [
+          {
+            "id": "iwkl000000060",
+            "exercise": "Bench press",
+            "sets": 3,
+            "reps": 8,
+            "kg": 60,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 60 kg",
+              "ar": "3 × 8 على 60 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000061",
+            "exercise": "Incline dumbbell press",
+            "sets": 3,
+            "reps": 10,
+            "kg": 22.5,
+            "secs": null,
+            "words": {
+              "en": "3 × 10 at 22.5 kg",
+              "ar": "3 × 10 على 22.5 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000062",
+            "exercise": "Dips",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000063",
+            "exercise": "Plank",
+            "sets": 1,
+            "reps": null,
+            "kg": null,
+            "secs": 90,
+            "words": {
+              "en": "1:30 hold",
+              "ar": "ثبات 1:30"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000064",
+            "exercise": "Bench press",
+            "sets": 1,
+            "reps": 3,
+            "kg": 65,
+            "secs": null,
+            "words": {
+              "en": "65 kg × 3",
+              "ar": "65 كجم × 3"
+            },
+            "best": true
+          }
+        ],
+        "volume": 2310,
+        "kudos": []
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwks000000006",
+          "name": "Push day",
+          "day": "2026-10-03",
+          "time": "08:00",
+          "dayWords": {
+            "en": "Today",
+            "ar": "النهارده"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000060",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 60,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 60 kg",
+                "ar": "3 × 8 على 60 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000061",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 22.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 22.5 kg",
+                "ar": "3 × 10 على 22.5 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000062",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000063",
+              "exercise": "Plank",
+              "sets": 1,
+              "reps": null,
+              "kg": null,
+              "secs": 90,
+              "words": {
+                "en": "1:30 hold",
+                "ar": "ثبات 1:30"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000064",
+              "exercise": "Bench press",
+              "sets": 1,
+              "reps": 3,
+              "kg": 65,
+              "secs": null,
+              "words": {
+                "en": "65 kg × 3",
+                "ar": "65 كجم × 3"
+              },
+              "best": true
+            }
+          ],
+          "volume": 2310,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000002",
+          "sport": "run",
+          "name": null,
+          "day": "2026-10-01",
+          "time": "07:10",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "metres": 5050,
+          "secs": 1600,
+          "words": {
+            "en": "Run 5.1 km in 26:40",
+            "ar": "جري 5.1 كم في 26:40"
+          },
+          "pace": {
+            "en": "5:17 /km",
+            "ar": "5:17 لكل كم"
+          },
+          "best": true,
+          "kudos": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwks000000005",
+          "name": "Pull day",
+          "day": "2026-09-30",
+          "time": "18:15",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000050",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 9,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 9",
+                "ar": "3 × 9"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000051",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 52.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 52.5 kg",
+                "ar": "3 × 10 على 52.5 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1575,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000004",
+          "name": "Legs",
+          "day": "2026-09-28",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000040",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 95,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 95 kg",
+                "ar": "3 × 5 على 95 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000041",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 10,
+              "kg": 16,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 16 kg",
+                "ar": "3 × 10 على 16 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1905,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-24",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Thu 24 Sep",
+            "ar": "الخميس 24 سبتمبر"
+          },
+          "metres": 5000,
+          "secs": 1650,
+          "words": {
+            "en": "Run 5 km in 27:30",
+            "ar": "جري 5 كم في 27:30"
+          },
+          "pace": {
+            "en": "5:30 /km",
+            "ar": "5:30 لكل كم"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000003",
+          "name": "Pull day",
+          "day": "2026-09-22",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 22 Sep",
+            "ar": "التلات 22 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000030",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 110,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 110 kg",
+                "ar": "3 × 5 على 110 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000031",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 8",
+                "ar": "3 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000032",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 50,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 50 kg",
+                "ar": "3 × 10 على 50 كجم"
+              },
+              "best": false
+            }
+          ],
+          "volume": 3150,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000002",
+          "name": "Push day",
+          "day": "2026-09-19",
+          "time": "18:30",
+          "dayWords": {
+            "en": "Sat 19 Sep",
+            "ar": "السبت 19 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000020",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 57.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 57.5 kg",
+                "ar": "3 × 8 على 57.5 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000021",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 20 kg",
+                "ar": "3 × 10 على 20 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000022",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            }
+          ],
+          "volume": 1980,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000001",
+          "name": "Legs",
+          "day": "2026-09-12",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 12 Sep",
+            "ar": "السبت 12 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000010",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 90,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 90 kg",
+                "ar": "3 × 5 على 90 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000011",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 70,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 70 kg",
+                "ar": "3 × 8 على 70 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 3030,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:bench press:e1rm",
+          "name": "Bench press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 60 kg × 8",
+            "ar": "أحسن مجموعة 60 كجم × 8"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:bench press:kg",
+          "name": "Bench press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 65 kg",
+            "ar": "أتقل وزن 65 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:dips:reps",
+          "name": "Dips",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:e1rm",
+          "name": "Incline dumbbell press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 22.5 kg × 10",
+            "ar": "أحسن مجموعة 22.5 كجم × 10"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:kg",
+          "name": "Incline dumbbell press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 22.5 kg",
+            "ar": "أتقل وزن 22.5 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:plank:secs",
+          "name": "Plank",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:30",
+            "ar": "أطول ثبات 1:30"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:5k",
+          "name": "Run",
+          "what": "5k",
+          "words": {
+            "en": "5K in 26:40",
+            "ar": "5 كم في 26:40"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 5.1 km",
+            "ar": "أطول مسافة 5.1 كم"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:e1rm",
+          "name": "Barbell row",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 52.5 kg × 10",
+            "ar": "أحسن مجموعة 52.5 كجم × 10"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:kg",
+          "name": "Barbell row",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 52.5 kg",
+            "ar": "أتقل وزن 52.5 كجم"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:pull-ups:reps",
+          "name": "Pull-ups",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 9",
+            "ar": "أكتر عدد 9"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:e1rm",
+          "name": "Squat",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 95 kg × 5",
+            "ar": "أحسن مجموعة 95 كجم × 5"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:kg",
+          "name": "Squat",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 95 kg",
+            "ar": "أتقل وزن 95 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:e1rm",
+          "name": "Walking lunges",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 16 kg × 10",
+            "ar": "أحسن مجموعة 16 كجم × 10"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:kg",
+          "name": "Walking lunges",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 16 kg",
+            "ar": "أتقل وزن 16 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:deadlift:e1rm",
+          "name": "Deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 110 kg × 5",
+            "ar": "أحسن مجموعة 110 كجم × 5"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:deadlift:kg",
+          "name": "Deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 110 kg",
+            "ar": "أتقل وزن 110 كجم"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:e1rm",
+          "name": "Romanian deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 70 kg × 8",
+            "ar": "أحسن مجموعة 70 كجم × 8"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:kg",
+          "name": "Romanian deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 70 kg",
+            "ar": "أتقل وزن 70 كجم"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwks000000006",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Karim",
+        "line": {
+          "en": "Bench press 3 × 8 at 60 kg, a new best",
+          "ar": "Bench press 3 × 8 على 60 كجم، رقم قياسي جديد"
+        },
+        "moment": "best"
+      },
+      {
+        "at": 1790835000000,
+        "name": "Leo",
+        "line": {
+          "en": "Leo sent kudos",
+          "ar": "تحية من Leo"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "runner-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Running",
+    "emoji": "🏃",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Running",
+      "emoji": "🏃",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "mi"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": true,
+            "today": true
+          }
+        ],
+        "trained": 3,
+        "goal": null
+      },
+      "latest": {
+        "type": "run",
+        "id": "iwrr000000007",
+        "sport": "walk",
+        "name": null,
+        "day": "2026-10-03",
+        "time": "08:00",
+        "dayWords": {
+          "en": "Today",
+          "ar": "النهارده"
+        },
+        "metres": 3219,
+        "secs": 1260,
+        "words": {
+          "en": "Walk 2 mi in 21:00",
+          "ar": "مشي 2 ميل في 21:00"
+        },
+        "pace": {
+          "en": "10:30 /mi",
+          "ar": "10:30 لكل ميل"
+        },
+        "best": true,
+        "kudos": []
+      },
+      "recent": [
+        {
+          "type": "run",
+          "id": "iwrr000000007",
+          "sport": "walk",
+          "name": null,
+          "day": "2026-10-03",
+          "time": "08:00",
+          "dayWords": {
+            "en": "Today",
+            "ar": "النهارده"
+          },
+          "metres": 3219,
+          "secs": 1260,
+          "words": {
+            "en": "Walk 2 mi in 21:00",
+            "ar": "مشي 2 ميل في 21:00"
+          },
+          "pace": {
+            "en": "10:30 /mi",
+            "ar": "10:30 لكل ميل"
+          },
+          "best": true,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000006",
+          "sport": "run",
+          "name": "Half marathon",
+          "day": "2026-10-02",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "metres": 21082,
+          "secs": 6730,
+          "words": {
+            "en": "Run 13.1 mi in 1:52:10",
+            "ar": "جري 13.1 ميل في 1:52:10"
+          },
+          "pace": {
+            "en": "8:34 /mi",
+            "ar": "8:34 لكل ميل"
+          },
+          "best": true,
+          "kudos": [
+            {
+              "id": "mmia0000000",
+              "name": "Mia",
+              "you": false
+            }
+          ]
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000005",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-28",
+          "time": "06:45",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "metres": 8047,
+          "secs": 2700,
+          "words": {
+            "en": "Run 5 mi in 45:00",
+            "ar": "جري 5 ميل في 45:00"
+          },
+          "pace": {
+            "en": "9:00 /mi",
+            "ar": "9:00 لكل ميل"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000004",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-24",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Thu 24 Sep",
+            "ar": "الخميس 24 سبتمبر"
+          },
+          "metres": 4828,
+          "secs": 1500,
+          "words": {
+            "en": "Run 3 mi in 25:00",
+            "ar": "جري 3 ميل في 25:00"
+          },
+          "pace": {
+            "en": "8:20 /mi",
+            "ar": "8:20 لكل ميل"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000003",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-21",
+          "time": "06:30",
+          "dayWords": {
+            "en": "Mon 21 Sep",
+            "ar": "الاتنين 21 سبتمبر"
+          },
+          "metres": 9656,
+          "secs": 3300,
+          "words": {
+            "en": "Run 6 mi in 55:00",
+            "ar": "جري 6 ميل في 55:00"
+          },
+          "pace": {
+            "en": "9:10 /mi",
+            "ar": "9:10 لكل ميل"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000002",
+          "sport": "run",
+          "name": "5K race",
+          "day": "2026-09-17",
+          "time": "06:30",
+          "dayWords": {
+            "en": "Thu 17 Sep",
+            "ar": "الخميس 17 سبتمبر"
+          },
+          "metres": 5000,
+          "secs": 1530,
+          "words": {
+            "en": "Run 3.1 mi in 25:30",
+            "ar": "جري 3.1 ميل في 25:30"
+          },
+          "pace": {
+            "en": "8:12 /mi",
+            "ar": "8:12 لكل ميل"
+          },
+          "best": true,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwrr000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-13",
+          "time": "06:30",
+          "dayWords": {
+            "en": "Sun 13 Sep",
+            "ar": "الحد 13 سبتمبر"
+          },
+          "metres": 6437,
+          "secs": 2100,
+          "words": {
+            "en": "Run 4 mi in 35:00",
+            "ar": "جري 4 ميل في 35:00"
+          },
+          "pace": {
+            "en": "8:45 /mi",
+            "ar": "8:45 لكل ميل"
+          },
+          "best": false,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:@walk:far",
+          "name": "Walk",
+          "what": "far",
+          "words": {
+            "en": "Longest 2 mi",
+            "ar": "أطول مسافة 2 ميل"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 13.1 mi",
+            "ar": "أطول مسافة 13.1 ميل"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:half",
+          "name": "Run",
+          "what": "half",
+          "words": {
+            "en": "Half marathon in 1:52:10",
+            "ar": "نص ماراثون في 1:52:10"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:5k",
+          "name": "Run",
+          "what": "5k",
+          "words": {
+            "en": "5K in 25:30",
+            "ar": "5 كم في 25:30"
+          },
+          "day": "2026-09-17",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwrr000000007",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmia0000000",
+        "name": "Mia",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mmia0000000",
+        "name": "Mia"
+      }
+    ],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "buddy-en": {
+    "ok": true,
+    "kind": "workout",
+    "title": "Training",
+    "emoji": "🏋️",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Training",
+      "emoji": "🏋️",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": true,
+            "today": true
+          }
+        ],
+        "trained": 4,
+        "goal": 4
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwks000000006",
+        "name": "Push day",
+        "day": "2026-10-03",
+        "time": "08:00",
+        "dayWords": {
+          "en": "Today",
+          "ar": "النهارده"
+        },
+        "lines": [
+          {
+            "id": "iwkl000000060",
+            "exercise": "Bench press",
+            "sets": 3,
+            "reps": 8,
+            "kg": 60,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 60 kg",
+              "ar": "3 × 8 على 60 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000061",
+            "exercise": "Incline dumbbell press",
+            "sets": 3,
+            "reps": 10,
+            "kg": 22.5,
+            "secs": null,
+            "words": {
+              "en": "3 × 10 at 22.5 kg",
+              "ar": "3 × 10 على 22.5 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000062",
+            "exercise": "Dips",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": true
+          },
+          {
+            "id": "iwkl000000063",
+            "exercise": "Plank",
+            "sets": 1,
+            "reps": null,
+            "kg": null,
+            "secs": 90,
+            "words": {
+              "en": "1:30 hold",
+              "ar": "ثبات 1:30"
+            },
+            "best": true
+          }
+        ],
+        "volume": 2115,
+        "kudos": []
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwks000000006",
+          "name": "Push day",
+          "day": "2026-10-03",
+          "time": "08:00",
+          "dayWords": {
+            "en": "Today",
+            "ar": "النهارده"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000060",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 60,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 60 kg",
+                "ar": "3 × 8 على 60 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000061",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 22.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 22.5 kg",
+                "ar": "3 × 10 على 22.5 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000062",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000063",
+              "exercise": "Plank",
+              "sets": 1,
+              "reps": null,
+              "kg": null,
+              "secs": 90,
+              "words": {
+                "en": "1:30 hold",
+                "ar": "ثبات 1:30"
+              },
+              "best": true
+            }
+          ],
+          "volume": 2115,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000002",
+          "sport": "run",
+          "name": null,
+          "day": "2026-10-01",
+          "time": "07:10",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "metres": 5050,
+          "secs": 1600,
+          "words": {
+            "en": "Run 5.1 km in 26:40",
+            "ar": "جري 5.1 كم في 26:40"
+          },
+          "pace": {
+            "en": "5:17 /km",
+            "ar": "5:17 لكل كم"
+          },
+          "best": true,
+          "kudos": [
+            {
+              "id": "mleo0000000",
+              "name": "Leo",
+              "you": true
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwks000000005",
+          "name": "Pull day",
+          "day": "2026-09-30",
+          "time": "18:15",
+          "dayWords": {
+            "en": "Wed 30 Sep",
+            "ar": "الأربع 30 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000050",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 9,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 9",
+                "ar": "3 × 9"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000051",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 52.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 52.5 kg",
+                "ar": "3 × 10 على 52.5 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1575,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000004",
+          "name": "Legs",
+          "day": "2026-09-28",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Mon 28 Sep",
+            "ar": "الاتنين 28 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000040",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 95,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 95 kg",
+                "ar": "3 × 5 على 95 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000041",
+              "exercise": "Walking lunges",
+              "sets": 3,
+              "reps": 10,
+              "kg": 16,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 16 kg",
+                "ar": "3 × 10 على 16 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1905,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwkr000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-24",
+          "time": "07:00",
+          "dayWords": {
+            "en": "Thu 24 Sep",
+            "ar": "الخميس 24 سبتمبر"
+          },
+          "metres": 5000,
+          "secs": 1650,
+          "words": {
+            "en": "Run 5 km in 27:30",
+            "ar": "جري 5 كم في 27:30"
+          },
+          "pace": {
+            "en": "5:30 /km",
+            "ar": "5:30 لكل كم"
+          },
+          "best": false,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000003",
+          "name": "Pull day",
+          "day": "2026-09-22",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Tue 22 Sep",
+            "ar": "التلات 22 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000030",
+              "exercise": "Deadlift",
+              "sets": 3,
+              "reps": 5,
+              "kg": 110,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 110 kg",
+                "ar": "3 × 5 على 110 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwkl000000031",
+              "exercise": "Pull-ups",
+              "sets": 3,
+              "reps": 8,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 8",
+                "ar": "3 × 8"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000032",
+              "exercise": "Barbell row",
+              "sets": 3,
+              "reps": 10,
+              "kg": 50,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 50 kg",
+                "ar": "3 × 10 على 50 كجم"
+              },
+              "best": false
+            }
+          ],
+          "volume": 3150,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000002",
+          "name": "Push day",
+          "day": "2026-09-19",
+          "time": "18:30",
+          "dayWords": {
+            "en": "Sat 19 Sep",
+            "ar": "السبت 19 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000020",
+              "exercise": "Bench press",
+              "sets": 3,
+              "reps": 8,
+              "kg": 57.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 57.5 kg",
+                "ar": "3 × 8 على 57.5 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000021",
+              "exercise": "Incline dumbbell press",
+              "sets": 3,
+              "reps": 10,
+              "kg": 20,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 20 kg",
+                "ar": "3 × 10 على 20 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000022",
+              "exercise": "Dips",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            }
+          ],
+          "volume": 1980,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwks000000001",
+          "name": "Legs",
+          "day": "2026-09-12",
+          "time": "18:00",
+          "dayWords": {
+            "en": "Sat 12 Sep",
+            "ar": "السبت 12 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwkl000000010",
+              "exercise": "Squat",
+              "sets": 3,
+              "reps": 5,
+              "kg": 90,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 90 kg",
+                "ar": "3 × 5 على 90 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwkl000000011",
+              "exercise": "Romanian deadlift",
+              "sets": 3,
+              "reps": 8,
+              "kg": 70,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 70 kg",
+                "ar": "3 × 8 على 70 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 3030,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:bench press:e1rm",
+          "name": "Bench press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 60 kg × 8",
+            "ar": "أحسن مجموعة 60 كجم × 8"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:bench press:kg",
+          "name": "Bench press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 60 kg",
+            "ar": "أتقل وزن 60 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:dips:reps",
+          "name": "Dips",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:e1rm",
+          "name": "Incline dumbbell press",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 22.5 kg × 10",
+            "ar": "أحسن مجموعة 22.5 كجم × 10"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:incline dumbbell press:kg",
+          "name": "Incline dumbbell press",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 22.5 kg",
+            "ar": "أتقل وزن 22.5 كجم"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:plank:secs",
+          "name": "Plank",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:30",
+            "ar": "أطول ثبات 1:30"
+          },
+          "day": "2026-10-03",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:5k",
+          "name": "Run",
+          "what": "5k",
+          "words": {
+            "en": "5K in 26:40",
+            "ar": "5 كم في 26:40"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 5.1 km",
+            "ar": "أطول مسافة 5.1 كم"
+          },
+          "day": "2026-10-01",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:e1rm",
+          "name": "Barbell row",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 52.5 kg × 10",
+            "ar": "أحسن مجموعة 52.5 كجم × 10"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:barbell row:kg",
+          "name": "Barbell row",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 52.5 kg",
+            "ar": "أتقل وزن 52.5 كجم"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:pull-ups:reps",
+          "name": "Pull-ups",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 9",
+            "ar": "أكتر عدد 9"
+          },
+          "day": "2026-09-30",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:e1rm",
+          "name": "Squat",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 95 kg × 5",
+            "ar": "أحسن مجموعة 95 كجم × 5"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:squat:kg",
+          "name": "Squat",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 95 kg",
+            "ar": "أتقل وزن 95 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:e1rm",
+          "name": "Walking lunges",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 16 kg × 10",
+            "ar": "أحسن مجموعة 16 كجم × 10"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:walking lunges:kg",
+          "name": "Walking lunges",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 16 kg",
+            "ar": "أتقل وزن 16 كجم"
+          },
+          "day": "2026-09-28",
+          "fresh": true
+        },
+        {
+          "key": "best:deadlift:e1rm",
+          "name": "Deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 110 kg × 5",
+            "ar": "أحسن مجموعة 110 كجم × 5"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:deadlift:kg",
+          "name": "Deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 110 kg",
+            "ar": "أتقل وزن 110 كجم"
+          },
+          "day": "2026-09-22",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:e1rm",
+          "name": "Romanian deadlift",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 70 kg × 8",
+            "ar": "أحسن مجموعة 70 كجم × 8"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        },
+        {
+          "key": "best:romanian deadlift:kg",
+          "name": "Romanian deadlift",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 70 kg",
+            "ar": "أتقل وزن 70 كجم"
+          },
+          "day": "2026-09-12",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwks000000006",
+        "sent": false
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mleo0000000",
+    "seats": [],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Karim",
+        "line": {
+          "en": "Bench press 3 × 8 at 60 kg, a new best",
+          "ar": "Bench press 3 × 8 على 60 كجم، رقم قياسي جديد"
+        },
+        "moment": "best"
+      },
+      {
+        "at": 1790835000000,
+        "name": "Leo",
+        "line": {
+          "en": "Leo sent kudos",
+          "ar": "تحية من Leo"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  },
+  "buddy-ar": {
+    "ok": true,
+    "kind": "workout",
+    "title": "التمرين",
+    "emoji": "💪",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "التمرين",
+      "emoji": "💪",
+      "today": "2026-10-03",
+      "units": {
+        "weight": "kg",
+        "distance": "km"
+      },
+      "week": {
+        "days": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "trained": false,
+            "today": false
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "trained": true,
+            "today": false
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "trained": false,
+            "today": true
+          }
+        ],
+        "trained": 3,
+        "goal": 3
+      },
+      "latest": {
+        "type": "session",
+        "id": "iwas000000004",
+        "name": "يوم الصدر",
+        "day": "2026-10-02",
+        "time": "19:30",
+        "dayWords": {
+          "en": "Yesterday",
+          "ar": "امبارح"
+        },
+        "lines": [
+          {
+            "id": "iwal000000040",
+            "exercise": "بنش برس",
+            "sets": 3,
+            "reps": 8,
+            "kg": 57.5,
+            "secs": null,
+            "words": {
+              "en": "3 × 8 at 57.5 kg",
+              "ar": "3 × 8 على 57.5 كجم"
+            },
+            "best": true
+          },
+          {
+            "id": "iwal000000041",
+            "exercise": "متوازي",
+            "sets": 3,
+            "reps": 12,
+            "kg": null,
+            "secs": null,
+            "words": {
+              "en": "3 × 12",
+              "ar": "3 × 12"
+            },
+            "best": true
+          },
+          {
+            "id": "iwal000000042",
+            "exercise": "بلانك",
+            "sets": 1,
+            "reps": null,
+            "kg": null,
+            "secs": 75,
+            "words": {
+              "en": "1:15 hold",
+              "ar": "ثبات 1:15"
+            },
+            "best": true
+          }
+        ],
+        "volume": 1380,
+        "kudos": [
+          {
+            "id": "momar000001",
+            "name": "عمر",
+            "you": true
+          }
+        ]
+      },
+      "recent": [
+        {
+          "type": "session",
+          "id": "iwas000000004",
+          "name": "يوم الصدر",
+          "day": "2026-10-02",
+          "time": "19:30",
+          "dayWords": {
+            "en": "Yesterday",
+            "ar": "امبارح"
+          },
+          "lines": [
+            {
+              "id": "iwal000000040",
+              "exercise": "بنش برس",
+              "sets": 3,
+              "reps": 8,
+              "kg": 57.5,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 57.5 kg",
+                "ar": "3 × 8 على 57.5 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000041",
+              "exercise": "متوازي",
+              "sets": 3,
+              "reps": 12,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 12",
+                "ar": "3 × 12"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000042",
+              "exercise": "بلانك",
+              "sets": 1,
+              "reps": null,
+              "kg": null,
+              "secs": 75,
+              "words": {
+                "en": "1:15 hold",
+                "ar": "ثبات 1:15"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1380,
+          "kudos": [
+            {
+              "id": "momar000001",
+              "name": "عمر",
+              "you": true
+            }
+          ]
+        },
+        {
+          "type": "session",
+          "id": "iwas000000003",
+          "name": "يوم الضهر",
+          "day": "2026-09-29",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Tue 29 Sep",
+            "ar": "التلات 29 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000030",
+              "exercise": "عقلة",
+              "sets": 3,
+              "reps": 6,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 6",
+                "ar": "3 × 6"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000031",
+              "exercise": "سحب بالبار",
+              "sets": 3,
+              "reps": 10,
+              "kg": 45,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 45 kg",
+                "ar": "3 × 10 على 45 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1350,
+          "kudos": []
+        },
+        {
+          "type": "run",
+          "id": "iwar000000001",
+          "sport": "run",
+          "name": null,
+          "day": "2026-09-27",
+          "time": "06:30",
+          "dayWords": {
+            "en": "Sun 27 Sep",
+            "ar": "الحد 27 سبتمبر"
+          },
+          "metres": 4000,
+          "secs": 1440,
+          "words": {
+            "en": "Run 4 km in 24:00",
+            "ar": "جري 4 كم في 24:00"
+          },
+          "pace": {
+            "en": "6:00 /km",
+            "ar": "6:00 لكل كم"
+          },
+          "best": true,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwas000000002",
+          "name": "يوم الصدر",
+          "day": "2026-09-25",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Fri 25 Sep",
+            "ar": "الجمعة 25 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000020",
+              "exercise": "بنش برس",
+              "sets": 3,
+              "reps": 8,
+              "kg": 55,
+              "secs": null,
+              "words": {
+                "en": "3 × 8 at 55 kg",
+                "ar": "3 × 8 على 55 كجم"
+              },
+              "best": false
+            },
+            {
+              "id": "iwal000000021",
+              "exercise": "متوازي",
+              "sets": 3,
+              "reps": 10,
+              "kg": null,
+              "secs": null,
+              "words": {
+                "en": "3 × 10",
+                "ar": "3 × 10"
+              },
+              "best": false
+            }
+          ],
+          "volume": 1320,
+          "kudos": []
+        },
+        {
+          "type": "session",
+          "id": "iwas000000001",
+          "name": "يوم الرجل",
+          "day": "2026-09-21",
+          "time": "19:00",
+          "dayWords": {
+            "en": "Mon 21 Sep",
+            "ar": "الاتنين 21 سبتمبر"
+          },
+          "lines": [
+            {
+              "id": "iwal000000010",
+              "exercise": "سكوات",
+              "sets": 3,
+              "reps": 5,
+              "kg": 80,
+              "secs": null,
+              "words": {
+                "en": "3 × 5 at 80 kg",
+                "ar": "3 × 5 على 80 كجم"
+              },
+              "best": true
+            },
+            {
+              "id": "iwal000000011",
+              "exercise": "طعن بالدمبل",
+              "sets": 3,
+              "reps": 10,
+              "kg": 14,
+              "secs": null,
+              "words": {
+                "en": "3 × 10 at 14 kg",
+                "ar": "3 × 10 على 14 كجم"
+              },
+              "best": true
+            }
+          ],
+          "volume": 1620,
+          "kudos": []
+        }
+      ],
+      "bests": [
+        {
+          "key": "best:بلانك:secs",
+          "name": "بلانك",
+          "what": "secs",
+          "words": {
+            "en": "Longest hold 1:15",
+            "ar": "أطول ثبات 1:15"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:بنش برس:e1rm",
+          "name": "بنش برس",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 57.5 kg × 8",
+            "ar": "أحسن مجموعة 57.5 كجم × 8"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:بنش برس:kg",
+          "name": "بنش برس",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 57.5 kg",
+            "ar": "أتقل وزن 57.5 كجم"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:متوازي:reps",
+          "name": "متوازي",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 12",
+            "ar": "أكتر عدد 12"
+          },
+          "day": "2026-10-02",
+          "fresh": true
+        },
+        {
+          "key": "best:سحب بالبار:e1rm",
+          "name": "سحب بالبار",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 45 kg × 10",
+            "ar": "أحسن مجموعة 45 كجم × 10"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:سحب بالبار:kg",
+          "name": "سحب بالبار",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 45 kg",
+            "ar": "أتقل وزن 45 كجم"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:عقله:reps",
+          "name": "عقلة",
+          "what": "reps",
+          "words": {
+            "en": "Most reps 6",
+            "ar": "أكتر عدد 6"
+          },
+          "day": "2026-09-29",
+          "fresh": true
+        },
+        {
+          "key": "best:@run:far",
+          "name": "Run",
+          "what": "far",
+          "words": {
+            "en": "Longest 4 km",
+            "ar": "أطول مسافة 4 كم"
+          },
+          "day": "2026-09-27",
+          "fresh": true
+        },
+        {
+          "key": "best:سكوات:e1rm",
+          "name": "سكوات",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 80 kg × 5",
+            "ar": "أحسن مجموعة 80 كجم × 5"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:سكوات:kg",
+          "name": "سكوات",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 80 kg",
+            "ar": "أتقل وزن 80 كجم"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:طعن بالدمبل:e1rm",
+          "name": "طعن بالدمبل",
+          "what": "e1rm",
+          "words": {
+            "en": "Best set 14 kg × 10",
+            "ar": "أحسن مجموعة 14 كجم × 10"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        },
+        {
+          "key": "best:طعن بالدمبل:kg",
+          "name": "طعن بالدمبل",
+          "what": "kg",
+          "words": {
+            "en": "Heaviest 14 kg",
+            "ar": "أتقل وزن 14 كجم"
+          },
+          "day": "2026-09-21",
+          "fresh": false
+        }
+      ],
+      "kudosFor": {
+        "id": "iwas000000004",
+        "sent": true
+      }
+    },
+    "members": [
+      {
+        "id": "mkarim00001",
+        "name": "كريم",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000001",
+        "name": "عمر",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "momar000001",
+    "seats": [],
+    "ops": [
+      "kudos"
+    ],
+    "activity": [
+      {
+        "at": 1790965800000,
+        "name": "عمر",
+        "line": {
+          "en": "عمر sent kudos",
+          "ar": "تحية من عمر"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "best": {
+        "en": "New best",
+        "ar": "رقم قياسي جديد"
+      }
+    },
+    "kindName": {
+      "en": "Workout",
+      "ar": "التمرين"
+    },
+    "kindEmoji": "🏋️"
+  }
+}
