@@ -66,7 +66,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
   const [busy, setBusy] = useState(false);
   const [asking, setAsking] = useState<null | { op: string; args?: Record<string, unknown> }>(null);
   const [problem, setProblem] = useState<string | null>(null);
-  const [moment, setMoment] = useState<{ line: string; play: number }>({ line: "", play: 0 });
+  const [moment, setMoment] = useState<{ line: string; play: number; burst: boolean }>({ line: "", play: 0, burst: true });
   const [lastEvent, setLastEvent] = useState<{ event: number; line: string } | null>(null);
   const [offline, setOffline] = useState(false);
 
@@ -106,7 +106,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
     (page: PagePayload<V>) => {
       const name = page.moments?.[0];
       const words = name ? page.momentWords[name] : null;
-      if (words) setMoment((m) => ({ line: say(words, lang), play: m.play + 1 }));
+      if (words) setMoment((m) => ({ line: say(words, lang), play: m.play + 1, burst: page.momentFeel?.[name!]?.burst !== false }));
     },
     [lang]
   );
@@ -284,7 +284,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
         />
       ) : null}
 
-      <Moment line={moment.line} play={moment.play} />
+      <Moment line={moment.line} play={moment.play} burst={moment.burst} />
     </Shell>
   );
 }
