@@ -108,7 +108,7 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
                     {t.for.length ? <span style={{ ...STEP.meta, color: INK.muted }}>{say(forMeals(t.for), lang)}</span> : null}
                     {t.qty ? (
                       <span className="absolute" style={{ top: 6, insetInlineEnd: 6, ...STEP.meta, color: INK.soft, background: INK.surface, borderRadius: 9, padding: "1px 6px" }}>
-                        {t.qty}
+                        <bdi dir={dirOf(t.qty)}>{t.qty}</bdi>
                       </span>
                     ) : null}
                     {t.fresh ? (
