@@ -156,6 +156,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -332,29 +333,11 @@
     ],
     "activity": [
       {
-        "at": 1791045000000,
-        "name": "Alex",
-        "line": {
-          "en": "Salmon, rice and greens, about 640 kcal",
-          "ar": "Salmon, rice and greens، حوالي 640 سعرة"
-        },
-        "moment": null
-      },
-      {
         "at": 1791043200000,
         "name": "Sam",
         "line": {
           "en": "Sam cheered",
           "ar": "تشجيع من Sam"
-        },
-        "moment": null
-      },
-      {
-        "at": 1791032400000,
-        "name": "Alex",
-        "line": {
-          "en": "An apple and peanut butter, about 270 kcal",
-          "ar": "An apple and peanut butter، حوالي 270 سعرة"
         },
         "moment": null
       }
@@ -366,6 +349,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -558,6 +542,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -788,6 +773,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -964,29 +950,11 @@
     ],
     "activity": [
       {
-        "at": 1791045000000,
-        "name": "Alex",
-        "line": {
-          "en": "Salmon, rice and greens, about 640 kcal",
-          "ar": "Salmon, rice and greens، حوالي 640 سعرة"
-        },
-        "moment": null
-      },
-      {
         "at": 1791043200000,
         "name": "Sam",
         "line": {
           "en": "Sam cheered",
           "ar": "تشجيع من Sam"
-        },
-        "moment": null
-      },
-      {
-        "at": 1791032400000,
-        "name": "Alex",
-        "line": {
-          "en": "An apple and peanut butter, about 270 kcal",
-          "ar": "An apple and peanut butter، حوالي 270 سعرة"
         },
         "moment": null
       }
@@ -998,6 +966,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -1154,6 +1123,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -1325,29 +1295,11 @@
     ],
     "activity": [
       {
-        "at": 1791045000000,
-        "name": "Alex",
-        "line": {
-          "en": "Salmon, rice and greens, about 640 kcal",
-          "ar": "Salmon, rice and greens، حوالي 640 سعرة"
-        },
-        "moment": null
-      },
-      {
         "at": 1791043200000,
         "name": "Sam",
         "line": {
           "en": "Sam cheered",
           "ar": "تشجيع من Sam"
-        },
-        "moment": null
-      },
-      {
-        "at": 1791032400000,
-        "name": "Alex",
-        "line": {
-          "en": "An apple and peanut butter, about 270 kcal",
-          "ar": "An apple and peanut butter، حوالي 270 سعرة"
         },
         "moment": null
       }
@@ -1359,6 +1311,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"
@@ -1546,6 +1499,7 @@
         "ar": "هدف البروتين اتحقق"
       }
     },
+    "momentFeel": {},
     "kindName": {
       "en": "Food",
       "ar": "الأكل"

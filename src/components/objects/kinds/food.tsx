@@ -9,7 +9,7 @@
  */
 
 import { say, type Lang, type Words } from "@/lib/objects";
-import { EASE, Face, INK, Pill, Row, Section, STEP, type Dot } from "../kit";
+import { DotRing, Face, INK, Pill, Row, Section, STEP, type Dot } from "../kit";
 import type { KindPage } from "../types";
 
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/food.ts FoodView), the parts the page draws. */
@@ -49,31 +49,8 @@ function legend(kcal: number, protein: number | null): Words {
     : { en: `Each dot is ${kcal} kcal.`, ar: `كل نقطة ${kcal} سعرة.` };
 }
 
-/** Positions rounded to a hundredth of a pixel, so the server's HTML and the browser's draw agree to the digit (no hydration mismatch). */
+/** Positions rounded to a hundredth of a pixel, as the kit's rings are, so the page hydrates clean. */
 const px = (n: number) => Math.round(n * 100) / 100;
-
-/**
- * Dots around a circle, clockwise from twelve: the kit's DotRing drawn with
- * rounded positions. Each dot is its track and its fill, easing in once.
- */
-function Ring({ size, dots, dot, inset = 0 }: { size: number; dots: Dot[]; dot: number; inset?: number }) {
-  const n = Math.max(1, dots.length);
-  const radius = size / 2 - inset - dot / 2 - 1;
-  return (
-    <div style={{ position: "relative", width: size, height: size }} aria-hidden>
-      {dots.map((d, i) => {
-        const a = -Math.PI / 2 + (i / n) * Math.PI * 2;
-        const fill = typeof d.on === "number" ? Math.max(0, Math.min(1, d.on)) : d.on ? 1 : 0;
-        return (
-          <span key={i} style={{ position: "absolute", left: px(size / 2 + Math.cos(a) * radius - dot / 2), top: px(size / 2 + Math.sin(a) * radius - dot / 2), width: dot, height: dot }}>
-            <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: INK.track }} />
-            <span style={{ position: "absolute", inset: 0, borderRadius: "50%", background: d.tint ?? INK.fg, opacity: fill, transform: `scale(${fill ? 1 : 0.4})`, transition: `opacity 260ms ${EASE}, transform 260ms ${EASE}` }} />
-          </span>
-        );
-      })}
-    </div>
-  );
-}
 
 function ringDots(r: FoodRing, tint: string): Dot[] {
   const lit = Math.min(r.filled, r.dots);
@@ -87,7 +64,7 @@ function Plate({ v, size, outer, inner, lang }: { v: FoodView; size: number; out
   const insetInner = Math.round(outer * 2.4 + (over ? outer * 1.6 : 4));
   return (
     <div style={{ position: "relative", width: size, height: size }} role="img" aria-label={`${say(v.words.kcal, lang)}${v.words.protein ? `. ${say(v.words.protein, lang)}` : ""}`}>
-      <Ring size={size} dots={ringDots(v.ring, INK.fg)} dot={outer} />
+      <DotRing size={size} dots={ringDots(v.ring, INK.fg)} dot={outer} />
       {Array.from({ length: Math.min(over, v.ring.dots) }, (_, i) => {
         const a = -Math.PI / 2 + (i / v.ring.dots) * Math.PI * 2;
         const d = Math.max(3, outer - 2);
@@ -95,7 +72,7 @@ function Plate({ v, size, outer, inner, lang }: { v: FoodView; size: number; out
       })}
       {v.inner ? (
         <div style={{ position: "absolute", inset: 0 }}>
-          <Ring size={size} dots={ringDots(v.inner, INK.pick)} dot={inner} inset={insetInner} />
+          <DotRing size={size} dots={ringDots(v.inner, INK.pick)} dot={inner} inset={insetInner} />
         </div>
       ) : null}
       <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ gap: 2 }} aria-hidden>
@@ -132,7 +109,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
             const lit = Math.min(20, Math.round((d.kcal / round) * 20));
             return (
               <div key={d.day} className="flex flex-col items-center" style={{ gap: 6, minWidth: 40 }} aria-label={`${say(d.label, lang)}: ${d.logged ? `${fig(d.kcal)} ${say(C.kcal, lang)}` : say(C.nothing, lang)}`}>
-                <Ring size={34} dots={Array.from({ length: 20 }, (_, i) => ({ on: i < lit, tint: d.today ? INK.fg : INK.soft }))} dot={3} />
+                <DotRing size={34} dots={Array.from({ length: 20 }, (_, i) => ({ on: i < lit, tint: d.today ? INK.fg : INK.soft }))} dot={3} />
                 <span style={{ ...STEP.meta, color: d.today ? INK.fg : INK.muted }}>{say(d.label, lang)}</span>
               </div>
             );
