@@ -13,6 +13,7 @@ import { say, type Words } from "@/lib/objects";
 import { DotLine, INK, Row, Section, STEP, dirOf, type Dot } from "../kit";
 import type { KindPage } from "../types";
 import { Deck } from "./meals/deck";
+import { NameTile } from "./name-tile";
 
 /** The view as the core sends it (catch8 kinds/meals.ts MealsView), the fields drawn here. */
 interface Person {
@@ -23,7 +24,8 @@ interface Person {
 export interface MealIdea {
   id: string;
   name: string;
-  emoji: string;
+  initials: string;
+  tint: number;
   ingredients: string[];
   minutes: number | null;
   suggested: boolean;
@@ -41,7 +43,7 @@ interface MealsView {
   deck: MealIdea[];
   matches: MealIdea[];
   ideas: MealIdea[];
-  week: Array<{ day: string; words: Words; today: boolean; meal: { name: string; emoji: string } | null }>;
+  week: Array<{ day: string; words: Words; today: boolean; meal: { name: string; initials: string; tint: number } | null }>;
 }
 
 const C = {
@@ -98,8 +100,8 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
     label: [i.name, i.minutes ? say(minutes(i.minutes), lang) : null, v.solo ? null : say(yesOf(i.yes, i.of), lang)].filter(Boolean).join(". "),
     render: () => (
       <div className="flex h-full flex-col items-center justify-center text-center" style={{ padding: "0 20px", gap: 8 }}>
-        <span aria-hidden style={{ fontSize: 84, lineHeight: "96px" }}>
-          {i.emoji}
+        <span style={{ marginBottom: 6 }}>
+          <NameTile t={i} size={104} radius={24} fallback="pot" />
         </span>
         <span style={{ ...STEP.display, fontSize: 30, lineHeight: "36px" }}>
           <bdi dir={dirOf(i.name)}>{i.name}</bdi>
@@ -119,7 +121,7 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
     <div>
       {v.canSwipe ? (
         <div className="mb-4">
-          <Deck
+          <Deck lang={lang}
             cards={cards}
             disabled={busy || !can("swipe")}
             onSwipe={(id, yes) => void act("swipe", { idea: id, yes })}
@@ -141,9 +143,7 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
             <div key={d.day} className="flex flex-1 flex-col items-center" style={{ gap: 6, padding: "8px 0", borderRadius: 11, background: d.today ? INK.surfaceHi : undefined }} aria-label={`${say(d.words, lang)}: ${d.meal ? d.meal.name : say(C.free, lang)}`}>
               <span style={{ ...STEP.meta, color: d.today ? INK.fg : INK.muted }}>{d.today ? say(C.tonight, lang) : say(d.words, lang)}</span>
               {d.meal ? (
-                <span aria-hidden style={{ fontSize: 22, lineHeight: "28px" }}>
-                  {d.meal.emoji}
-                </span>
+                <NameTile t={d.meal} size={30} radius={9} fallback="pot" />
               ) : (
                 <span className="rounded-full" style={{ width: 18, height: 18, border: `1.5px solid ${INK.faint}`, margin: "5px 0" }} />
               )}
@@ -154,14 +154,14 @@ export const Page: KindPage = ({ view, lang, act, can, busy }) => {
       {v.matches.length ? (
         <Section title={say(v.solo ? C.picks : C.matches, lang)}>
           {v.matches.map((i, n) => (
-            <Row key={i.id} first={n === 0} lead={<span aria-hidden style={STEP.title}>{i.emoji}</span>} title={i.name} sub={i.planned.length ? listOf(i.planned.map((d) => { const w = v.week.find((x) => x.day === d)!; return w.today ? say(C.tonight, lang) : say(w.words, lang); })) : null} />
+            <Row key={i.id} first={n === 0} lead={<NameTile t={i} size={32} radius={9} fallback="pot" />} title={i.name} sub={i.planned.length ? listOf(i.planned.map((d) => { const w = v.week.find((x) => x.day === d)!; return w.today ? say(C.tonight, lang) : say(w.words, lang); })) : null} />
           ))}
         </Section>
       ) : null}
       {v.ideas.length ? (
         <Section title={`${say(C.ideas, lang)} · ${v.ideas.length}`}>
           {v.ideas.map((i, n) => (
-            <Row key={i.id} first={n === 0} lead={<span aria-hidden style={STEP.title}>{i.emoji}</span>} title={i.name} sub={standing(i, v.solo, lang)} muted={i.out && !i.match} />
+            <Row key={i.id} first={n === 0} lead={<NameTile t={i} size={32} radius={9} fallback="pot" />} title={i.name} sub={standing(i, v.solo, lang)} muted={i.out && !i.match} />
           ))}
         </Section>
       ) : null}
