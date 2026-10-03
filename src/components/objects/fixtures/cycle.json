@@ -46,7 +46,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -120,7 +124,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -194,7 +202,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -268,7 +280,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -329,7 +345,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -403,7 +423,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -464,7 +488,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -525,7 +553,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -599,7 +631,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -668,7 +704,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
@@ -737,7 +777,11 @@
         "ar": "التقديرات بقت بتتعلم من دوراتك"
       }
     },
-    "momentFeel": {},
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
     "kindName": {
       "en": "Cycle",
       "ar": "الدورة"
