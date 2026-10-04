@@ -9,7 +9,7 @@
  * bests; and Send kudos, the one button a buddy has.
  */
 
-import { say, type Lang, type Words } from "@/lib/objects";
+import { say, type Lang, type Words, iso } from "@/lib/objects";
 import { DotLine, FaceStack, INK, Pill, Row, Section, STEP, type Dot } from "../kit";
 import type { KindPage } from "../types";
 
@@ -206,7 +206,8 @@ function RunHero({ r, v, lang }: { r: Run; v: WorkoutView; lang: Lang }) {
 }
 
 /** "Kudos from Leo", "Kudos from Leo and 3 more". */
-function kudosFrom(names: string[], lang: Lang): string {
+function kudosFrom(raw: string[], lang: Lang): string {
+  const names = raw.map(iso);
   const two = (a: string, b: string) => (lang === "ar" ? `${a} و${b}` : `${a} and ${b}`);
   const who = names.length === 1 ? names[0] : names.length === 2 ? two(names[0], names[1]) : lang === "ar" ? `${names[0]} و${names.length - 1} كمان` : `${names[0]} and ${names.length - 1} more`;
   return lang === "ar" ? `تحية من ${who}` : `Kudos from ${who}`;

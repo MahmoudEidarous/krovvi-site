@@ -13,7 +13,7 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 import { initialOf } from "@/lib/letter-dots";
-import { isArabicText, type Lang } from "@/lib/objects";
+import { bare, lineIsRtl, type Lang } from "@/lib/objects";
 
 /* ------------------------------------------------------------------ */
 /* Tokens: the app's (theme/tokens.ts, components/answer/look.ts).      */
@@ -50,16 +50,22 @@ export const STEP = {
 /** The app's one curve: fast off the mark, landing once. */
 export const EASE = "cubic-bezier(0.23, 1, 0.32, 1)";
 
+/** A line of ours made only of people's words (a list of names, a day's things): it reads in the page's own direction, not the first name's. */
+export function listOnly(text: string): boolean {
+  return (text.match(/\u2068/g)?.length ?? 0) >= 2 && !/[A-Za-z\u0600-\u06FF]/.test(text.replace(/\u2068[^\u2069]*\u2069/g, ""));
+}
+
 /** A text's own direction, inside the page's layout. */
 export function dirOf(text: string): "rtl" | "ltr" {
-  return isArabicText(text) ? "rtl" : "ltr";
+  return lineIsRtl(text) ? "rtl" : "ltr";
 }
 
 /* ------------------------------------------------------------------ */
 /* People.                                                              */
 /* ------------------------------------------------------------------ */
 
-export function tintOf(name: string): string {
+export function tintOf(raw: string): string {
+  const name = bare(raw);
   let h = 0;
   for (let i = 0; i < name.length; i += 1) h = (h * 31 + name.charCodeAt(i)) >>> 0;
   return VOICE[h % VOICE.length];
@@ -68,7 +74,7 @@ export function tintOf(name: string): string {
 /** A person's first letter in Krovvi's dots, in their own tint (the app's PersonFace). */
 export function Face({ name, size = 28 }: { name: string; size?: number }) {
   const tint = tintOf(name);
-  const initial = initialOf(name || "?");
+  const initial = initialOf(bare(name) || "?");
   if ("text" in initial) {
     return (
       <span className="inline-flex shrink-0 items-center justify-center rounded-full font-semibold" style={{ width: size, height: size, fontSize: size * 0.44, color: tint, background: INK.surfaceHi }} aria-hidden>
@@ -328,18 +334,18 @@ export function Section({ title, action, children }: { title?: string; action?: 
   );
 }
 
-export function Row({ lead, title, sub, value, onClick, first, muted }: { lead?: ReactNode; title: string; sub?: string | null; value?: ReactNode; onClick?: () => void; first?: boolean; muted?: boolean }) {
+export function Row({ lead, title, sub, value, onClick, first, muted, ours }: { lead?: ReactNode; title: string; sub?: string | null; value?: ReactNode; onClick?: () => void; first?: boolean; muted?: boolean; /** The title is one of the page's own sentences (a line of what happened): it reads in the page's direction. */ ours?: boolean }) {
   const body = (
     <div className="flex items-center" style={{ gap: 12, padding: "11px 16px", minHeight: 48 }}>
       {lead ? <span className="flex shrink-0 items-center justify-center" style={{ minWidth: 28 }}>{lead}</span> : null}
       {/* Each line lines up with the page (an English name stands where the Arabic ones do) and reads in its own letters' direction inside its bdi. */}
       <span className="min-w-0 flex-1">
         <span className="block" style={{ ...STEP.body, color: muted ? INK.muted : INK.fg, textAlign: "start" }}>
-          <bdi dir={dirOf(title)}>{title}</bdi>
+          {ours || listOnly(title) ? <span>{title}</span> : <bdi dir={dirOf(title)}>{title}</bdi>}
         </span>
         {sub ? (
           <span className="block" style={{ ...STEP.meta, color: INK.muted, textAlign: "start" }}>
-            <bdi dir={dirOf(sub)}>{sub}</bdi>
+            {listOnly(sub) ? <span>{sub}</span> : <bdi dir={dirOf(sub)}>{sub}</bdi>}
           </span>
         ) : null}
       </span>

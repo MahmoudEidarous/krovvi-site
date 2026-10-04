@@ -160,3 +160,24 @@ export function isArabicText(text: string): boolean {
   }
   return ar > la;
 }
+
+/** The text without direction marks (the core's bare): what a face's letter and tint are made from. */
+export function bare(text: string): string {
+  return text.replace(/[\u200E\u200F\u202A-\u202E\u2066-\u2069]/g, "");
+}
+
+/**
+ * Whether a line reads right to left by its own words, not by the isolated
+ * words of a person inside it (the core's lineIsRtl): "Sam pays you €206.66"
+ * with an Arabic Sam is English. A line that is only a person's words reads
+ * by their letters.
+ */
+export function lineIsRtl(text: string): boolean {
+  const own = text.replace(/\u2068[^\u2069]*\u2069/g, " ");
+  return isArabicText(/[A-Za-z\u0600-\u06FF]/.test(own) ? own : bare(text));
+}
+
+/** A person's words inside one of the page's own sentences, isolated (the core's iso). */
+export function iso(text: string): string {
+  return text ? `\u2068${text}\u2069` : text;
+}

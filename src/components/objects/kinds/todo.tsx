@@ -10,7 +10,7 @@
 
 import { useState } from "react";
 
-import { say, type Words } from "@/lib/objects";
+import { say, type Words, iso } from "@/lib/objects";
 import { DotLine, Face, INK, Pill, Row, Section, STEP, Tick, dirOf, tintOf, type Dot } from "../kit";
 import type { KindPage } from "../types";
 
@@ -62,9 +62,9 @@ const personLine = (open: number, done: number): Words => ({ en: `${open} to do,
 /** Under a task: who did it (ticked), else who it is for, and where it came from. Its day is across from it. */
 function subOf(t: TodoTask, lang: "en" | "ar"): string {
   const parts: string[] = [];
-  if (t.done) parts.push(t.done.by?.you ? (lang === "ar" ? "إنت عملتها" : "Done by you") : lang === "ar" ? `عملها ${t.done.by?.name ?? ""}` : `Done by ${t.done.by?.name ?? ""}`);
+  if (t.done) parts.push(t.done.by?.you ? (lang === "ar" ? "إنت عملتها" : "Done by you") : t.done.by?.name ? (lang === "ar" ? `عملها ${iso(t.done.by.name)}` : `Done by ${iso(t.done.by.name)}`) : lang === "ar" ? "اتعملت" : "Done");
   else if (t.who) parts.push(t.who.you ? say(C.yours, lang) : t.who.name);
-  if (t.from?.label) parts.push(lang === "ar" ? `من ${t.from.label}` : `From ${t.from.label}`);
+  if (t.from?.label) parts.push(lang === "ar" ? `من ${iso(t.from.label)}` : `From ${iso(t.from.label)}`);
   return parts.join(" · ");
 }
 

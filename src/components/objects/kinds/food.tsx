@@ -8,7 +8,7 @@
  * meal (the core's shareSnap): there is nothing here that could draw one.
  */
 
-import { say, type Lang, type Words } from "@/lib/objects";
+import { say, type Lang, type Words, iso } from "@/lib/objects";
 import { DotRing, FaceStack, INK, Pill, Row, Section, STEP, type Dot } from "../kit";
 import type { KindPage } from "../types";
 
@@ -65,7 +65,8 @@ function middleOf(v: FoodView): { value: number; caption: Words } {
 }
 
 /** "Cheered by Sam", "Cheered by Sam and Lina", "Cheered by Sam and 3 more". */
-function cheeredBy(names: string[], lang: Lang): string {
+function cheeredBy(raw: string[], lang: Lang): string {
+  const names = raw.map(iso);
   if (lang === "ar") return `اتشجّع من ${names.length === 1 ? names[0] : names.length === 2 ? `${names[0]} و${names[1]}` : `${names[0]} و${names.length - 1} كمان`}`;
   return `Cheered by ${names.length === 1 ? names[0] : names.length === 2 ? `${names[0]} and ${names[1]}` : `${names[0]} and ${names.length - 1} more`}`;
 }
@@ -163,7 +164,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
 
       <Section
         title={say(C.cheers, lang)}
-        action={mayCheer ? <Pill text={lang === "ar" ? `شجّع ${owner}` : `Cheer ${owner} on`} strong disabled={busy} onClick={() => void act("cheer")} /> : undefined}
+        action={mayCheer ? <Pill text={lang === "ar" ? `شجّع ${iso(owner)}` : `Cheer ${iso(owner)} on`} strong disabled={busy} onClick={() => void act("cheer")} /> : undefined}
       >
         {v.cheers.length ? (
           <Row first lead={<FaceStack names={v.cheers.map((c) => c.name)} size={26} max={5} />} title={v.youCheered ? say(C.cheered, lang) : cheeredBy(v.cheers.map((c) => c.name), lang)} />

@@ -13,7 +13,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Mark } from "@/components/mark";
 import { JOIN_URL } from "@/lib/site";
-import { act as actOn, browserLang, forgetSeat, readPage, say, seatOf, takeSeat, undo as undoOn, type Lang, type PagePayload, type Words } from "@/lib/objects";
+import { act as actOn, browserLang, forgetSeat, readPage, say, seatOf, takeSeat, undo as undoOn, type Lang, type PagePayload, type Words, iso } from "@/lib/objects";
 import { dirOf, Face, FaceStack, INK, Moment, Row, Section, STEP } from "./kit";
 import { KindMark } from "./mark";
 import { KIND_PAGES } from "./kinds";
@@ -72,10 +72,10 @@ function headLine(page: PagePayload, lang: Lang): string {
   const owner = page.members.find((m) => m.role === "owner");
   const others = page.members.filter((m) => !m.you).map((m) => m.name);
   const two = (a: string, b: string) => (lang === "ar" ? `${a} و${b}` : `${a} and ${b}`);
-  const names = others.length === 1 ? others[0] : others.length === 2 ? two(others[0], others[1]) : lang === "ar" ? `${others.length} أشخاص` : `${others.length} people`;
+  const names = others.length === 1 ? iso(others[0]) : others.length === 2 ? two(iso(others[0]), iso(others[1])) : lang === "ar" ? `${others.length} أشخاص` : `${others.length} people`;
   const people =
     PERSONAL.has(page.kind) && owner && !owner.you
-      ? lang === "ar" ? `شاركه ${owner.name}` : `Shared by ${owner.name}`
+      ? lang === "ar" ? `شاركه ${iso(owner.name)}` : `Shared by ${iso(owner.name)}`
       : !others.length
         ? lang === "ar" ? "شخص واحد" : "Just one"
         : lang === "ar" ? `مع ${names}` : `With ${names}`;
@@ -265,6 +265,7 @@ export function ObjectView<V>({ token, fixture }: { token?: string; fixture?: Pa
               key={`${a.at}-${i}`}
               first={i === 0}
               lead={a.name ? <Face name={a.name} size={26} /> : <span style={{ width: 26 }} />}
+              ours
               title={say(a.line, lang)}
               value={<span style={{ ...STEP.meta, color: INK.muted }}>{ago(a.at, now, lang)}</span>}
             />

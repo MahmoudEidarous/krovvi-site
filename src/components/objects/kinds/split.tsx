@@ -15,12 +15,13 @@
 
 import { useEffect, useState } from "react";
 
-import { say, type Words } from "@/lib/objects";
+import { say, type Words, iso } from "@/lib/objects";
 import { EASE, Face, FaceStack, INK, Money, Pill, Row, Section, STEP, moneyParts, tintOf } from "../kit";
 import type { KindPage } from "../types";
 
 /** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
-const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+/** Parts joined in the page's language, each isolated so an Arabic name in an English list (or the reverse) keeps its place. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter((p): p is string => !!p).map(iso).join(lang === "ar" ? "، " : ", ");
 
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/split.ts SplitView). */
 interface Person {
@@ -260,7 +261,7 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy }) => {
               key={p.id}
               first={i === 0}
               lead={<Face name={p.name} size={28} />}
-              title={p.you ? `${p.name} (${say(C.you, lang)})` : p.name}
+              title={p.you ? `${iso(p.name)} (${say(C.you, lang)})` : p.name}
               sub={say(p.net > 0 ? C.getsBack : p.net < 0 ? C.owes : C.even, lang)}
               muted={p.removed}
               value={p.net ? <Money minor={Math.abs(p.net)} currency={v.currency} lang={lang} step="body" color={p.net > 0 ? INK.fg : INK.soft} /> : undefined}

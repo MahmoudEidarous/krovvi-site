@@ -8,7 +8,7 @@
  * from the list again. For a partner without the app this page is the list.
  */
 
-import { say, type Words } from "@/lib/objects";
+import { say, type Words, iso } from "@/lib/objects";
 import { Face, INK, Pill, Row, Section, STEP, Tick, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
@@ -52,12 +52,12 @@ const C = {
   fresh: { en: "New", ar: "جديد" },
 } satisfies Record<string, Words>;
 
-const forMeals = (meals: string[]): Words => ({ en: `for ${meals.join(", ")}`, ar: `لـ ${meals.join("، ")}` });
-const gotBy = (p: Person | null, lang: "en" | "ar") => (p?.you ? (lang === "ar" ? "إنت جبتها" : "You got it") : p ? (lang === "ar" ? `${p.name} جابها` : `${p.name} got it`) : lang === "ar" ? "اتجابت" : "Got");
+const forMeals = (meals: string[]): Words => ({ en: `for ${meals.map(iso).join(", ")}`, ar: `لـ ${meals.map(iso).join("، ")}` });
+const gotBy = (p: Person | null, lang: "en" | "ar") => (p?.you ? (lang === "ar" ? "إنت جبتها" : "You got it") : p ? (lang === "ar" ? `${iso(p.name)} جابها` : `${iso(p.name)} got it`) : lang === "ar" ? "اتجابت" : "Got");
 
 /** Under a thing: how much, the note, the meals it is for, and who added it when someone else did. */
 function subOf(t: ShopTile, lang: "en" | "ar"): string | null {
-  const parts = [t.qty, t.note, t.for.length ? say(forMeals(t.for), lang) : null, t.fresh && t.addedBy && !t.addedBy.you ? (lang === "ar" ? `ضافها ${t.addedBy.name}` : `Added by ${t.addedBy.name}`) : null].filter(Boolean);
+  const parts = [t.qty, t.note ? iso(t.note) : null, t.for.length ? say(forMeals(t.for), lang) : null, t.fresh && t.addedBy && !t.addedBy.you ? (lang === "ar" ? `ضافها ${iso(t.addedBy.name)}` : `Added by ${iso(t.addedBy.name)}`) : null].filter(Boolean);
   return parts.length ? parts.join(" · ") : null;
 }
 

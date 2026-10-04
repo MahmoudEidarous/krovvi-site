@@ -15,13 +15,14 @@
 
 import { useEffect, useState } from "react";
 
-import { say, type Lang, type Words } from "@/lib/objects";
+import { say, type Lang, type Words, iso } from "@/lib/objects";
 import { EASE, FaceStack, INK, Pill, Row, Section, STEP, Tick, dirOf } from "../kit";
 import { Mark, isMark, type MarkName } from "../mark";
 import type { KindPage } from "../types";
 
 /** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
-const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
+/** Parts joined in the page's language, each isolated so an Arabic name in an English list (or the reverse) keeps its place. */
+const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter((p): p is string => !!p).map(iso).join(lang === "ar" ? "، " : ", ");
 
 /** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/trip.ts TripView). */
 interface Stop {
