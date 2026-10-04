@@ -21,6 +21,52 @@ import { AddToCalendar } from "../add-to-calendar";
 import { EASE, FaceStack, INK, Pill, Section, STEP, dirOf } from "../kit";
 import type { KindPage } from "../types";
 
+/** A picked day in the page's words, "Fri 9 Oct", with the digits the rest of the page uses. */
+function dayWords(day: string, lang: "en" | "ar"): string {
+  const [y, m, d] = day.split("-").map(Number);
+  return new Intl.DateTimeFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-GB", { weekday: "short", day: "numeric", month: "short" }).format(new Date(y, m - 1, d));
+}
+
+/** A picked time in the page's words, "8:00 PM". */
+function timeWords(time: string, lang: "en" | "ar"): string {
+  const [h, min] = time.split(":").map(Number);
+  return new Intl.DateTimeFormat(lang === "ar" ? "ar-EG-u-nu-latn" : "en-US", { hour: "numeric", minute: "2-digit" }).format(new Date(2026, 0, 1, h, min));
+}
+
+/**
+ * A date or time box that reads everywhere. iOS Safari draws an empty date
+ * or time input as a blank box, with no hint and no icon, so a guest cannot
+ * tell what it is (catch8-1-4c's Safari pass). Words show what to pick, or
+ * what was picked, and the real input lies over them, transparent, so a tap
+ * still opens the phone's own picker. A computer's browser opens it with
+ * showPicker, since an invisible input has no icon to click. The input is 16
+ * pixels so iOS does not zoom the page when it opens.
+ */
+function PickBox({ type, value, onChange, shown, label, className }: { type: "date" | "time"; value: string; onChange: (v: string) => void; shown: string; label: string; className: string }) {
+  return (
+    <label className={`relative block rounded-2xl ${className}`} style={{ background: INK.surfaceHi }}>
+      <span aria-hidden className="block truncate" style={{ ...STEP.body, color: value ? INK.fg : INK.muted, padding: "12px 14px" }}>
+        {shown}
+      </span>
+      <input
+        type={type}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        onClick={(e) => {
+          try {
+            e.currentTarget.showPicker?.();
+          } catch {
+            // Some browsers open it on their own, or refuse outside a tap: the tap still focuses it.
+          }
+        }}
+        aria-label={label}
+        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        style={{ fontSize: 16, colorScheme: "dark" }}
+      />
+    </label>
+  );
+}
+
 /** Phrases said as one line in the reader's language: "a, b" in English, "a، b" in Arabic. */
 const list = (parts: Array<string | null | undefined | false>, lang: "en" | "ar"): string => parts.filter(Boolean).join(lang === "ar" ? "، " : ", ");
 
@@ -85,6 +131,8 @@ const C = {
   add: { en: "Add", ar: "ضيف" },
   placeholderWhere: { en: "A place", ar: "مكان" },
   placeholderWhat: { en: "An idea", ar: "فكرة" },
+  pickDay: { en: "Pick a day", ar: "اختار يوم" },
+  pickTime: { en: "Time", ar: "الساعة" },
   closedNote: { en: "Voting has closed", ar: "التصويت قفل" },
 } satisfies Record<string, Words>;
 
@@ -278,7 +326,6 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy, token }) => {
                 <bdi dir={dirOf(v.place ?? v.what ?? "")}>{list([v.place, v.what], lang)}</bdi>
               </span>
             ) : null}
-            {token && v.when && v.when.daysLeft >= 0 ? <AddToCalendar token={token} lang={lang} version={page.version} /> : null}
           </div>
         ) : (
           <div className="flex flex-col items-center text-center" style={{ gap: 4 }}>
@@ -293,6 +340,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy, token }) => {
             <bdi dir={dirOf(v.note)}>{v.note}</bdi>
           </span>
         ) : null}
+        {/* The day settled: it goes in the calendar from here, under what it is and what to bring (as in the app). */}
+        {(decided || !open) && token && v.when && v.when.daysLeft >= 0 ? <AddToCalendar token={token} lang={lang} version={page.version} /> : null}
         {open ? (
           <div className="flex w-full flex-col" style={{ gap: 8 }}>
             {open.options.map((o) => (
@@ -347,8 +396,8 @@ export const Page: KindPage = ({ page, view, lang, act, can, busy, token }) => {
           >
             {open.group === "when" ? (
               <>
-                <input type="date" value={day} onChange={(e) => setDay(e.target.value)} className="min-w-0 flex-1 rounded-2xl outline-none" style={{ ...STEP.body, background: INK.surfaceHi, color: INK.fg, padding: "12px 14px", colorScheme: "dark" }} aria-label={say(C.addOption, lang)} />
-                <input type="time" value={time} onChange={(e) => setTime(e.target.value)} className="w-[110px] rounded-2xl outline-none" style={{ ...STEP.body, background: INK.surfaceHi, color: INK.fg, padding: "12px 14px", colorScheme: "dark" }} />
+                <PickBox type="date" value={day} onChange={setDay} shown={day ? dayWords(day, lang) : say(C.pickDay, lang)} label={say(C.pickDay, lang)} className="min-w-0 flex-1" />
+                <PickBox type="time" value={time} onChange={setTime} shown={time ? timeWords(time, lang) : say(C.pickTime, lang)} label={say(C.pickTime, lang)} className="w-[110px] shrink-0" />
               </>
             ) : (
               <input
