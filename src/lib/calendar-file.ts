@@ -37,7 +37,7 @@ function dayAfter(day: string): string {
 
 /** Text in a calendar file: backslashes, semicolons, commas and line breaks are escaped. */
 function text(value: string): string {
-  return value.replace(/\\/g, "\\\\").replace(/;/g, "\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
+  return value.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r?\n/g, "\\n");
 }
 
 /** Lines past 75 bytes go on as indented lines, never splitting a letter: Arabic letters are two bytes each. */
