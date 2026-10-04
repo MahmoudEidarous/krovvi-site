@@ -53,7 +53,7 @@ const C = {
   empty: { en: "Nothing on it yet", ar: "لسه فاضية" },
 } satisfies Record<string, Words>;
 
-const lateOn = (due: Words): Words => ({ en: `Due ${due.en.charAt(0).toLowerCase()}${due.en.slice(1)}`, ar: `كانت ${due.ar}` });
+const lateOn = (due: Words): Words => ({ en: `Due ${/^(Yesterday|Today|Tomorrow|Tonight)\b/.test(due.en) ? `${due.en.charAt(0).toLowerCase()}${due.en.slice(1)}` : due.en}`, ar: `كانت ${due.ar}` });
 const lateCount = (n: number, lang: "en" | "ar") => (lang === "ar" ? (n === 1 ? "واحدة متأخرة" : `${n} متأخرين`) : n === 1 ? "1 is late" : `${n} are late`);
 const leftAndDone = (open: number, done: number, lang: "en" | "ar") =>
   lang === "ar" ? (done ? `${open} مطلوب · ${done} خلصانة` : `${open} مطلوب`) : done ? `${open} to do · ${done} done` : `${open} to do`;
