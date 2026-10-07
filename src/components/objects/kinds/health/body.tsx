@@ -351,7 +351,8 @@ function ResultLine({ x, lang, first }: { x: Result; lang: Lang; first: boolean 
           <Said text={x.test} />
           {range || out ? (
             <span className="block" style={{ ...STEP.meta, color: INK.muted, textAlign: "start" }}>
-              {range ? <bdi dir={dirOf(range)}>{range}</bdi> : null}
+              {/* The range is said in the page's words ("من 0.4 لـ 4 mIU/L"), so it reads the page's way whatever letters its unit has. */}
+              {range ? <bdi dir={lang === "ar" ? "rtl" : "ltr"}>{range}</bdi> : null}
               {range && out ? DOT : null}
               {out ? say(C.outside, lang) : null}
             </span>
