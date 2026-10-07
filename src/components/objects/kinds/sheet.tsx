@@ -65,6 +65,48 @@ export function over(hex: string, base: string, t: number): string {
 }
 
 /**
+ * The page held still while a sheet is over it. The body is pinned where it
+ * was and put back at the same place after: "overflow: hidden" on the body
+ * does nothing on this site, since html clips sideways (globals.css) and so
+ * the scrolling is html's. Pinned, the page is also kept out of the strips
+ * Safari on iOS 26 draws under its floating bar and under the clock, which a
+ * sheet's shade cannot reach: without this the bright page shows under an
+ * open sheet's bottom edge. Sheets are counted, so one opened from another
+ * does not move the page. Both are exported for any other sheet on the page
+ * (the shell's "Which one is you?" holds nothing yet).
+ */
+let held = 0;
+let heldAt = 0;
+let heldStyle: { position: string; top: string; left: string; right: string; width: string } | null = null;
+
+export function holdPage() {
+  held += 1;
+  if (held > 1) return;
+  const body = document.body.style;
+  heldAt = window.scrollY;
+  heldStyle = { position: body.position, top: body.top, left: body.left, right: body.right, width: body.width };
+  body.position = "fixed";
+  body.top = `${-heldAt}px`;
+  body.left = "0";
+  body.right = "0";
+  body.width = "100%";
+}
+
+export function letPageGo() {
+  if (held === 0) return;
+  held -= 1;
+  if (held > 0 || !heldStyle) return;
+  Object.assign(document.body.style, heldStyle);
+  heldStyle = null;
+  // The site scrolls smoothly by rule (globals.css); going back to where the page was must not be seen.
+  const root = document.documentElement.style;
+  const smooth = root.scrollBehavior;
+  root.scrollBehavior = "auto";
+  window.scrollTo(0, heldAt);
+  root.scrollBehavior = smooth;
+}
+
+/**
  * A sheet over the page. It closes on the shade, on its own button and on
  * Escape; the page behind stays where it was while it is open; and whatever
  * is in it scrolls inside it, never past it.
@@ -79,14 +121,13 @@ export function Sheet({ title, lang, onClose, children, foot, tall }: { title: s
   useEffect(() => {
     const before = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     panel.current?.focus({ preventScroll: true });
-    const was = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    holdPage();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close.current();
     };
     window.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = was;
+      letPageGo();
       window.removeEventListener("keydown", onKey);
       before?.focus({ preventScroll: true });
     };
