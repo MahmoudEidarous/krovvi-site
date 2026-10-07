@@ -75,6 +75,7 @@ export const KIND_MARK: Record<string, MarkName> = {
   watchlist: "show",
   countdown: "hourglass",
   kitchen: "pot",
+  health: "heart",
 };
 
 export function isMark(value: unknown): value is MarkName {
