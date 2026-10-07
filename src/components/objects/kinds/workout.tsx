@@ -7,13 +7,19 @@
  * exercise once with everything done in it and a dot per set), or the latest
  * run (distance, time, pace, its route); the week against the aim; the
  * bests; and Send kudos, the one button a buddy has.
+ *
+ * That is the page for a copy that still holds sessions. Since the ten apps
+ * (7 October 2026) a buddy's copy holds each day's totals and no session, and
+ * that view is drawn by ./workout/totals; this drawing stays for the pages
+ * the server sent before, so an old link keeps reading as it did.
  */
 
 import { say, type Lang, type Words, iso } from "@/lib/objects";
 import { DotLine, FaceStack, INK, Pill, Row, Section, STEP, type Dot } from "../kit";
 import type { KindPage } from "../types";
+import { Totals, isTotals } from "./workout/totals";
 
-/** The view as the core sends it (catch8 supabase/functions/_shared/objects/kinds/workout.ts WorkoutView), the parts the page draws. */
+/** The view as the core sent it before the ten apps (catch8 supabase/functions/_shared/objects/kinds/workout.ts WorkoutView), the parts the page draws. */
 interface Line {
   id: string;
   exercise: string;
@@ -223,7 +229,10 @@ function trained(n: number, aim: number | null, lang: Lang): string {
   return aim ? (n >= aim ? `${base}, aim reached` : `${base}, aiming for ${aim}`) : base;
 }
 
-export const Page: KindPage = ({ view, lang, act, can, busy }) => {
+export const Page: KindPage = (props) => {
+  // Since the ten apps a buddy's copy holds each day's totals and no session: that view has its own drawing.
+  if (isTotals(props.view)) return <Totals {...props} />;
+  const { view, lang, act, can, busy } = props;
   const v = view as WorkoutView;
   const latest = v.latest;
   const mayKudos = can("kudos") && v.kudosFor && !v.kudosFor.sent;
