@@ -21,6 +21,7 @@ import { Page as cycle } from "./cycle";
 import { Page as meals } from "./meals";
 import { Page as watchlist } from "./watchlist";
 import { Page as countdown } from "./countdown";
+import { Page as kitchen } from "./kitchen";
 import type { KindPage } from "../types";
 
-export const KIND_PAGES: Record<string, KindPage | null> = { food, workout, habits, todo, shopping, spending, split, trip, plan, meds, mood, learn, gift, decide, cycle, meals, watchlist, countdown };
+export const KIND_PAGES: Record<string, KindPage | null> = { food, workout, habits, todo, shopping, spending, split, trip, plan, meds, mood, learn, gift, decide, cycle, meals, watchlist, countdown, kitchen };
