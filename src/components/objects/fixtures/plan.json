@@ -75,12 +75,32 @@
         "yes": [],
         "maybe": [],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          }
+        ],
         "headcount": 0,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": null,
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -98,6 +118,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [],
@@ -110,6 +135,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -311,28 +340,62 @@
           {
             "id": "msam0000000",
             "name": "Sam",
-            "plus": 1
+            "plus": 1,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mlina000000",
             "name": "Lina",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "maybe": [
           {
             "id": "momar000000",
             "name": "Omar",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya"
+          },
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
         "headcount": 3,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": null,
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -411,6 +474,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [
@@ -433,6 +501,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -634,28 +706,62 @@
           {
             "id": "msam0000000",
             "name": "سام",
-            "plus": 1
+            "plus": 1,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mlina000000",
             "name": "لينا",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "maybe": [
           {
             "id": "momar000000",
             "name": "عمر",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "محمود"
+          },
+          {
+            "id": "mmaya000000",
+            "name": "مايا"
+          },
+          {
+            "id": "mkarim00000",
+            "name": "كريم"
+          }
+        ],
         "headcount": 3,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": null,
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -734,6 +840,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [
@@ -756,6 +867,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -1415,44 +1530,60 @@
           {
             "id": "mmahmoud000",
             "name": "Mahmoud",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "msam0000000",
             "name": "Sam",
-            "plus": 2
+            "plus": 2,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mlina000000",
             "name": "Lina",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mmaya000000",
             "name": "Maya",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mkarim00000",
             "name": "Karim",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mleo0000000",
             "name": "Leo",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "maybe": [
           {
             "id": "momar000000",
             "name": "Omar",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "malex000000",
             "name": "Alex",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "no": [
@@ -1461,12 +1592,40 @@
             "name": "Sara"
           }
         ],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmia0000000",
+            "name": "Mia"
+          },
+          {
+            "id": "mnoah000000",
+            "name": "Noah"
+          },
+          {
+            "id": "mzoe0000000",
+            "name": "Zoe"
+          }
+        ],
         "headcount": 8,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": null,
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -1617,6 +1776,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [],
@@ -1629,6 +1793,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -1825,34 +1993,54 @@
           {
             "id": "msam0000000",
             "name": "Sam",
-            "plus": 1
+            "plus": 1,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mlina000000",
             "name": "Lina",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mmahmoud000",
             "name": "Mahmoud",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mmaya000000",
             "name": "Maya",
-            "plus": 1
+            "plus": 1,
+            "note": null,
+            "reply": null
           }
         ],
         "maybe": [
           {
             "id": "momar000000",
             "name": "Omar",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
         "headcount": 6,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": {
         "day": "2026-10-09",
@@ -1865,10 +2053,22 @@
         "leftWords": {
           "en": "In 6 days",
           "ar": "بعد 6 أيام"
-        }
+        },
+        "since": "2026-10-01",
+        "total": 8
       },
       "place": "Sam’s place",
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -1947,6 +2147,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [
@@ -1969,6 +2174,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -2072,8 +2281,30 @@
         "yes": [],
         "maybe": [],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina"
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar"
+          }
+        ],
         "headcount": 0,
-        "you": null
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
       },
       "when": {
         "day": "2026-10-09",
@@ -2086,10 +2317,22 @@
         "leftWords": {
           "en": "In 6 days",
           "ar": "بعد 6 أيام"
-        }
+        },
+        "since": "2026-10-01",
+        "total": 8
       },
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -2144,6 +2387,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [],
@@ -2156,6 +2404,10 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},
@@ -2357,28 +2609,62 @@
           {
             "id": "msam0000000",
             "name": "Sam",
-            "plus": 1
+            "plus": 1,
+            "note": null,
+            "reply": null
           },
           {
             "id": "mlina000000",
             "name": "Lina",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "maybe": [
           {
             "id": "momar000000",
             "name": "Omar",
-            "plus": 0
+            "plus": 0,
+            "note": null,
+            "reply": null
           }
         ],
         "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya"
+          },
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
         "headcount": 3,
-        "you": "yes"
+        "limit": null,
+        "left": null,
+        "you": "yes",
+        "youWaiting": false
       },
       "when": null,
       "place": null,
-      "what": null
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
     },
     "members": [
       {
@@ -2453,6 +2739,11 @@
       "option",
       "vote",
       "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
       "remove"
     ],
     "activity": [
@@ -2475,6 +2766,3713 @@
       "day": {
         "en": "It’s today",
         "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "empty-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Dinner",
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Dinner",
+      "note": null,
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 1,
+      "waiting": [],
+      "rsvp": {
+        "yes": [],
+        "maybe": [],
+        "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          }
+        ],
+        "headcount": 0,
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": null,
+      "place": null,
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "party-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "My birthday",
+    "lang": "en",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "My birthday",
+      "note": "Bring a jacket, it gets cold up there.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1,
+            "note": "Bringing the speaker",
+            "reply": "No nuts"
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0,
+            "note": null,
+            "reply": "Vegetarian"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "Leo"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "Zoe",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": null,
+      "placeHidden": true,
+      "what": null,
+      "ask": "Anything you do not eat?",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "pizza and drinks",
+        "pay": "Cash on the night, or send it to my number.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "Headphones",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "A cookbook",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "A plant",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "A board game",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "He keeps borrowing ours",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "Running ten minutes late",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "Doors open at 7. Buzz 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam: Running ten minutes late",
+          "ar": "Sam: Running ten minutes late"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "party-ar": {
+    "ok": true,
+    "kind": "plan",
+    "title": "عيد ميلادي",
+    "lang": "ar",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "عيد ميلادي",
+      "note": "هاتوا جاكيت، الجو بيبرد فوق.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "سام",
+            "plus": 1,
+            "note": "جايب السماعة",
+            "reply": "من غير مكسرات"
+          },
+          {
+            "id": "mlina000000",
+            "name": "لينا",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "عمر",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "مايا",
+            "plus": 0,
+            "note": null,
+            "reply": "نباتية"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "ليو"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "زوي",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "كريم"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": null,
+      "placeHidden": true,
+      "what": null,
+      "ask": "في حاجة مبتاكلوهاش؟",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "البيتزا والمشروبات",
+        "pay": "كاش يوم الخروجة، أو ابعتوها على رقمي.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "سام",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "لينا",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "عمر",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "سماعة",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "كتاب طبخ",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "لينا",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "نبتة",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "لعبة بورد",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "دايما بيستلف بتاعتنا",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "عمر"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "هتأخر عشر دقايق",
+          "by": {
+            "id": "msam0000000",
+            "name": "سام"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "الباب بيفتح 7. اضغطوا 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "محمود"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "زوي",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "زوي"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "سام",
+        "line": {
+          "en": "سام: هتأخر عشر دقايق",
+          "ar": "سام: هتأخر عشر دقايق"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "party-guest-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "My birthday",
+    "lang": "en",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "My birthday",
+      "note": "Bring a jacket, it gets cold up there.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1,
+            "note": "Bringing the speaker",
+            "reply": "No nuts"
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0,
+            "note": null,
+            "reply": "Vegetarian"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "Leo"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "Zoe",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": "yes",
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": "The rooftop, 12 River Street",
+      "placeHidden": false,
+      "what": null,
+      "ask": "Anything you do not eat?",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "pizza and drinks",
+        "pay": "Cash on the night, or send it to my number.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "Headphones",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "A cookbook",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "A plant",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "A board game",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "He keeps borrowing ours",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "Running ten minutes late",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "Doors open at 7. Buzz 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mmaya000000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam: Running ten minutes late",
+          "ar": "Sam: Running ten minutes late"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "party-quiet-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "My birthday",
+    "lang": "en",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "My birthday",
+      "note": "Bring a jacket, it gets cold up there.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1,
+            "note": "Bringing the speaker",
+            "reply": "No nuts"
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0,
+            "note": null,
+            "reply": "Vegetarian"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "Leo"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "Zoe",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": null,
+      "placeHidden": true,
+      "what": null,
+      "ask": "Anything you do not eat?",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "pizza and drinks",
+        "pay": "Cash on the night, or send it to my number.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "Headphones",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "A cookbook",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "A plant",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "A board game",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "He keeps borrowing ours",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "Running ten minutes late",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "Doors open at 7. Buzz 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "mkarim00000",
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam: Running ten minutes late",
+          "ar": "Sam: Running ten minutes late"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "surprise-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Maya’s birthday",
+    "lang": "en",
+    "state": "live",
+    "version": 23,
+    "view": {
+      "title": "Maya’s birthday",
+      "note": null,
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 5,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "maybe": [],
+        "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar"
+          },
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
+        "headcount": 2,
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-20",
+        "time": null,
+        "words": {
+          "en": "Tue 20 Oct",
+          "ar": "التلات 20 أكتوبر"
+        },
+        "daysLeft": 17,
+        "leftWords": {
+          "en": "In 17 days",
+          "ar": "بعد 17 يوم"
+        },
+        "since": "2026-09-27",
+        "total": 23
+      },
+      "place": null,
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": "Maya",
+      "wish": false,
+      "secret": {
+        "en": "A surprise for ⁨Maya⁩: keep it secret.",
+        "ar": "مفاجأة لـ ⁨Maya⁩: خليها سر."
+      },
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": null,
+        "eachWords": null,
+        "goal": 12000,
+        "goalWords": {
+          "en": "$120",
+          "ar": "$120"
+        },
+        "what": "her present",
+        "pay": null,
+        "chipped": 12000,
+        "paid": 8000,
+        "chippedWords": {
+          "en": "$120",
+          "ar": "$120"
+        },
+        "paidWords": {
+          "en": "$80",
+          "ar": "$80"
+        },
+        "count": 4,
+        "rows": [
+          {
+            "id": "isc0000000001",
+            "by": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "isc0000000002",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "isc0000000003",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "isc0000000004",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": true
+      },
+      "gifts": [
+        {
+          "id": "isg0000000001",
+          "text": "Pasta maker",
+          "price": 8000,
+          "priceWords": {
+            "en": "$80",
+            "ar": "$80"
+          },
+          "link": null,
+          "why": "She keeps saying she wants to make her own",
+          "memory": true,
+          "votes": [
+            {
+              "id": "mlina000000",
+              "name": "Lina"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "isg0000000002",
+          "text": "Concert tickets",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [
+            {
+              "id": "msam0000000",
+              "name": "Sam"
+            },
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": true,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": {
+        "id": "isg0000000002",
+        "text": "Concert tickets",
+        "price": 12000,
+        "priceWords": {
+          "en": "$120",
+          "ar": "$120"
+        },
+        "link": null,
+        "why": null,
+        "memory": false,
+        "votes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar"
+          }
+        ],
+        "youVoted": false,
+        "picked": true,
+        "taken": null,
+        "hidden": false,
+        "yours": false
+      },
+      "posts": []
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791017940000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar chipped in",
+          "ar": "Omar شارك"
+        },
+        "moment": "pot"
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "countdown-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Exam",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Exam",
+      "note": null,
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 2,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "maybe": [],
+        "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          }
+        ],
+        "headcount": 1,
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-15",
+        "time": "09:00",
+        "words": {
+          "en": "Thu 15 Oct, 9:00 AM",
+          "ar": "الخميس 15 أكتوبر، 9:00 ص"
+        },
+        "daysLeft": 12,
+        "leftWords": {
+          "en": "In 12 days",
+          "ar": "بعد 12 يوم"
+        },
+        "since": "2026-09-13",
+        "total": 32
+      },
+      "place": null,
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "countdown-ar": {
+    "ok": true,
+    "kind": "plan",
+    "title": "الامتحان",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "الامتحان",
+      "note": null,
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 2,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "msam0000000",
+            "name": "سام",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "maybe": [],
+        "no": [],
+        "waitlist": [],
+        "quiet": [
+          {
+            "id": "mmahmoud000",
+            "name": "محمود"
+          }
+        ],
+        "headcount": 1,
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-15",
+        "time": "09:00",
+        "words": {
+          "en": "Thu 15 Oct, 9:00 AM",
+          "ar": "الخميس 15 أكتوبر، 9:00 ص"
+        },
+        "daysLeft": 12,
+        "leftWords": {
+          "en": "In 12 days",
+          "ar": "بعد 12 يوم"
+        },
+        "since": "2026-09-13",
+        "total": 32
+      },
+      "place": null,
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": null,
+      "gifts": [],
+      "pick": null,
+      "posts": []
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "past-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "Summer barbecue",
+    "lang": "en",
+    "state": "live",
+    "version": 96,
+    "view": {
+      "title": "Summer barbecue",
+      "note": null,
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [
+        {
+          "group": "when",
+          "label": {
+            "en": "When",
+            "ar": "إمتى"
+          },
+          "options": [
+            {
+              "id": "iqo0000000001",
+              "group": "when",
+              "words": {
+                "en": "Sat 27 Jun, 5:00 PM",
+                "ar": "السبت 27 يونيو، 5:00 م"
+              },
+              "day": "2026-06-27",
+              "time": "17:00",
+              "yes": [
+                {
+                  "id": "msam0000000",
+                  "name": "Sam"
+                },
+                {
+                  "id": "mlina000000",
+                  "name": "Lina"
+                },
+                {
+                  "id": "mmaya000000",
+                  "name": "Maya"
+                },
+                {
+                  "id": "mkarim00000",
+                  "name": "Karim"
+                },
+                {
+                  "id": "malex000000",
+                  "name": "Alex"
+                }
+              ],
+              "maybe": [],
+              "score": 5,
+              "leading": true,
+              "won": true,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            },
+            {
+              "id": "iqo0000000002",
+              "group": "when",
+              "words": {
+                "en": "Sun 28 Jun, 5:00 PM",
+                "ar": "الحد 28 يونيو، 5:00 م"
+              },
+              "day": "2026-06-28",
+              "time": "17:00",
+              "yes": [
+                {
+                  "id": "mmahmoud000",
+                  "name": "Mahmoud"
+                },
+                {
+                  "id": "momar000000",
+                  "name": "Omar"
+                },
+                {
+                  "id": "msara000000",
+                  "name": "Sara"
+                }
+              ],
+              "maybe": [],
+              "score": 3,
+              "leading": false,
+              "won": false,
+              "youVote": null,
+              "by": "mmahmoud000",
+              "yours": false
+            }
+          ],
+          "decided": "iqo0000000001",
+          "settledBy": "votes",
+          "tie": []
+        }
+      ],
+      "voted": 8,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 2,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mkarim00000",
+            "name": "Karim",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "malex000000",
+            "name": "Alex",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "msara000000",
+            "name": "Sara"
+          }
+        ],
+        "waitlist": [],
+        "quiet": [],
+        "headcount": 9,
+        "limit": null,
+        "left": null,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-06-27",
+        "time": "17:00",
+        "words": {
+          "en": "Sat 27 Jun, 5:00 PM",
+          "ar": "السبت 27 يونيو، 5:00 م"
+        },
+        "daysLeft": -98,
+        "leftWords": {
+          "en": "98 days ago",
+          "ar": "من 98 يوم"
+        },
+        "since": "2026-06-25",
+        "total": 2
+      },
+      "place": "The park by the river",
+      "placeHidden": false,
+      "what": null,
+      "ask": null,
+      "for": null,
+      "wish": false,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 2000,
+        "eachWords": {
+          "en": "$20",
+          "ar": "$20"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "food and charcoal",
+        "pay": null,
+        "chipped": 14000,
+        "paid": 14000,
+        "chippedWords": {
+          "en": "$140",
+          "ar": "$140"
+        },
+        "paidWords": {
+          "en": "$140",
+          "ar": "$140"
+        },
+        "count": 7,
+        "rows": [
+          {
+            "id": "iqc0000000001",
+            "by": "mmahmoud000",
+            "name": "Mahmoud",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000002",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000003",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000004",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000005",
+            "by": "mmaya000000",
+            "name": "Maya",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000006",
+            "by": "mkarim00000",
+            "name": "Karim",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "iqc0000000008",
+            "by": "malex000000",
+            "name": "Alex",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 0,
+        "reached": false
+      },
+      "gifts": [],
+      "pick": null,
+      "posts": [
+        {
+          "id": "iqp0000000012",
+          "text": "Thanks all, that was great",
+          "by": {
+            "id": "momar000000",
+            "name": "Omar"
+          },
+          "at": 1782694800000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000011",
+          "text": "I will get the charcoal",
+          "by": {
+            "id": "mlina000000",
+            "name": "Lina"
+          },
+          "at": 1782666000000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000010",
+          "text": "Sunday then",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1782637200000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000009",
+          "text": "Rain on Saturday, Sunday looks fine",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1782608400000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000008",
+          "text": "I can bring one",
+          "by": {
+            "id": "malex000000",
+            "name": "Alex"
+          },
+          "at": 1782579600000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000007",
+          "text": "Who has a grill?",
+          "by": {
+            "id": "msara000000",
+            "name": "Sara"
+          },
+          "at": 1782550800000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000006",
+          "text": "Thanks all, that was great",
+          "by": {
+            "id": "mkarim00000",
+            "name": "Karim"
+          },
+          "at": 1782522000000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000005",
+          "text": "I will get the charcoal",
+          "by": {
+            "id": "mmaya000000",
+            "name": "Maya"
+          },
+          "at": 1782493200000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000004",
+          "text": "Sunday then",
+          "by": {
+            "id": "momar000000",
+            "name": "Omar"
+          },
+          "at": 1782464400000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000003",
+          "text": "Rain on Saturday, Sunday looks fine",
+          "by": {
+            "id": "mlina000000",
+            "name": "Lina"
+          },
+          "at": 1782435600000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000002",
+          "text": "I can bring one",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1782406800000,
+          "yours": false
+        },
+        {
+          "id": "iqp0000000001",
+          "text": "Who has a grill?",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1782378000000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      },
+      {
+        "id": "malex000000",
+        "name": "Alex"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "rich-en": {
+    "ok": true,
+    "kind": "plan",
+    "title": "My birthday",
+    "lang": "en",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "My birthday",
+      "note": "Bring a jacket, it gets cold up there.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "Mahmoud",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "Sam",
+            "plus": 1,
+            "note": "Bringing the speaker",
+            "reply": "No nuts"
+          },
+          {
+            "id": "mlina000000",
+            "name": "Lina",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "Omar",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "Maya",
+            "plus": 0,
+            "note": null,
+            "reply": "Vegetarian"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "Leo"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "Zoe",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "Karim"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": null,
+      "placeHidden": true,
+      "what": null,
+      "ask": "Anything you do not eat?",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "pizza and drinks",
+        "pay": "Cash on the night, or send it to my number.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "Sam",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "Lina",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "Omar",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "Headphones",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "Sam",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "A cookbook",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "Lina",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "A plant",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "A board game",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "He keeps borrowing ours",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "Omar"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "Running ten minutes late",
+          "by": {
+            "id": "msam0000000",
+            "name": "Sam"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "Doors open at 7. Buzz 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "Mahmoud"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      },
+      {
+        "id": "mlina000000",
+        "name": "Lina"
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "Maya"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "Karim"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "Zoe"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "Leo"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam: Running ten minutes late",
+          "ar": "Sam: Running ten minutes late"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Plan",
+      "ar": "خطة"
+    }
+  },
+  "rich-ar": {
+    "ok": true,
+    "kind": "plan",
+    "title": "عيد ميلادي",
+    "lang": "ar",
+    "state": "live",
+    "version": 44,
+    "view": {
+      "title": "عيد ميلادي",
+      "note": "هاتوا جاكيت، الجو بيبرد فوق.",
+      "phase": "decided",
+      "closed": false,
+      "closesAt": null,
+      "closesWords": null,
+      "groups": [],
+      "voted": 0,
+      "people": 8,
+      "waiting": [],
+      "rsvp": {
+        "yes": [
+          {
+            "id": "mmahmoud000",
+            "name": "محمود",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "msam0000000",
+            "name": "سام",
+            "plus": 1,
+            "note": "جايب السماعة",
+            "reply": "من غير مكسرات"
+          },
+          {
+            "id": "mlina000000",
+            "name": "لينا",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "momar000000",
+            "name": "عمر",
+            "plus": 1,
+            "note": null,
+            "reply": null
+          },
+          {
+            "id": "mmaya000000",
+            "name": "مايا",
+            "plus": 0,
+            "note": null,
+            "reply": "نباتية"
+          }
+        ],
+        "maybe": [],
+        "no": [
+          {
+            "id": "mleo0000000",
+            "name": "ليو"
+          }
+        ],
+        "waitlist": [
+          {
+            "id": "mzoe0000000",
+            "name": "زوي",
+            "plus": 0,
+            "note": null,
+            "reply": null
+          }
+        ],
+        "quiet": [
+          {
+            "id": "mkarim00000",
+            "name": "كريم"
+          }
+        ],
+        "headcount": 7,
+        "limit": 7,
+        "left": 0,
+        "you": null,
+        "youWaiting": false
+      },
+      "when": {
+        "day": "2026-10-10",
+        "time": "19:00",
+        "words": {
+          "en": "Sat 10 Oct, 7:00 PM",
+          "ar": "السبت 10 أكتوبر، 7:00 م"
+        },
+        "daysLeft": 7,
+        "leftWords": {
+          "en": "In 7 days",
+          "ar": "بعد 7 أيام"
+        },
+        "since": "2026-09-28",
+        "total": 12
+      },
+      "place": null,
+      "placeHidden": true,
+      "what": null,
+      "ask": "في حاجة مبتاكلوهاش؟",
+      "for": null,
+      "wish": true,
+      "secret": null,
+      "alert": null,
+      "chip": {
+        "currency": "USD",
+        "each": 1500,
+        "eachWords": {
+          "en": "$15",
+          "ar": "$15"
+        },
+        "goal": null,
+        "goalWords": null,
+        "what": "البيتزا والمشروبات",
+        "pay": "كاش يوم الخروجة، أو ابعتوها على رقمي.",
+        "chipped": 7500,
+        "paid": 3000,
+        "chippedWords": {
+          "en": "$75",
+          "ar": "$75"
+        },
+        "paidWords": {
+          "en": "$30",
+          "ar": "$30"
+        },
+        "count": 3,
+        "rows": [
+          {
+            "id": "ipc0000000001",
+            "by": "msam0000000",
+            "name": "سام",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "paid",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000002",
+            "by": "mlina000000",
+            "name": "لينا",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "said",
+            "yours": false
+          },
+          {
+            "id": "ipc0000000003",
+            "by": "momar000000",
+            "name": "عمر",
+            "you": false,
+            "amount": null,
+            "amountWords": null,
+            "state": "in",
+            "yours": false
+          }
+        ],
+        "you": null,
+        "waiting": 2,
+        "reached": false
+      },
+      "gifts": [
+        {
+          "id": "ipg0000000001",
+          "text": "سماعة",
+          "price": 12000,
+          "priceWords": {
+            "en": "$120",
+            "ar": "$120"
+          },
+          "link": "https://example.com/headphones",
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "msam0000000",
+            "name": "سام",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000002",
+          "text": "كتاب طبخ",
+          "price": 3000,
+          "priceWords": {
+            "en": "$30",
+            "ar": "$30"
+          },
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": {
+            "id": "mlina000000",
+            "name": "لينا",
+            "you": false
+          },
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000003",
+          "text": "نبتة",
+          "price": null,
+          "priceWords": null,
+          "link": null,
+          "why": null,
+          "memory": false,
+          "votes": [],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        },
+        {
+          "id": "ipg0000000004",
+          "text": "لعبة بورد",
+          "price": 4500,
+          "priceWords": {
+            "en": "$45",
+            "ar": "$45"
+          },
+          "link": null,
+          "why": "دايما بيستلف بتاعتنا",
+          "memory": false,
+          "votes": [
+            {
+              "id": "momar000000",
+              "name": "عمر"
+            }
+          ],
+          "youVoted": false,
+          "picked": false,
+          "taken": null,
+          "hidden": false,
+          "yours": false
+        }
+      ],
+      "pick": null,
+      "posts": [
+        {
+          "id": "ipp0000000002",
+          "text": "هتأخر عشر دقايق",
+          "by": {
+            "id": "msam0000000",
+            "name": "سام"
+          },
+          "at": 1791007200000,
+          "yours": false
+        },
+        {
+          "id": "ipp0000000001",
+          "text": "الباب بيفتح 7. اضغطوا 4B.",
+          "by": {
+            "id": "mmahmoud000",
+            "name": "محمود"
+          },
+          "at": 1790924400000,
+          "yours": false
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "سام",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": false
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "زوي",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "سام"
+      },
+      {
+        "id": "mlina000000",
+        "name": "لينا"
+      },
+      {
+        "id": "momar000000",
+        "name": "عمر"
+      },
+      {
+        "id": "mmaya000000",
+        "name": "مايا"
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم"
+      },
+      {
+        "id": "mzoe0000000",
+        "name": "زوي"
+      },
+      {
+        "id": "mleo0000000",
+        "name": "ليو"
+      }
+    ],
+    "ops": [
+      "option",
+      "vote",
+      "rsvp",
+      "chip",
+      "paid",
+      "gift",
+      "take",
+      "post",
+      "remove"
+    ],
+    "activity": [
+      {
+        "at": 1791007200000,
+        "name": "سام",
+        "line": {
+          "en": "سام: هتأخر عشر دقايق",
+          "ar": "سام: هتأخر عشر دقايق"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "reveal": {
+        "en": "Decided",
+        "ar": "اتحسمت"
+      },
+      "day": {
+        "en": "It’s today",
+        "ar": "النهارده"
+      },
+      "pot": {
+        "en": "The goal is reached",
+        "ar": "المبلغ اكتمل"
       }
     },
     "momentFeel": {},

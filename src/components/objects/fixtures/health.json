@@ -1,0 +1,3137 @@
+{
+  "empty-en": {
+    "ok": true,
+    "kind": "health",
+    "title": "Health",
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Health",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": true,
+      "forName": null,
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": false,
+      "hero": {
+        "kind": "empty",
+        "big": {
+          "en": "Nothing today",
+          "ar": "مفيش حاجة النهارده"
+        },
+        "line": null
+      },
+      "meds": {
+        "ring": [],
+        "given": 0,
+        "total": 0,
+        "allGiven": false,
+        "next": null,
+        "meds": [],
+        "low": [],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 0,
+            "total": 0
+          }
+        ]
+      },
+      "cycle": null,
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [],
+      "visits": {
+        "next": null,
+        "upcoming": [],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [],
+      "empty": true
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "rich-en": {
+    "ok": true,
+    "kind": "health",
+    "title": "Health",
+    "lang": "en",
+    "state": "live",
+    "version": 412,
+    "view": {
+      "title": "Health",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": true,
+      "forName": null,
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": false,
+      "hero": {
+        "kind": "cycle",
+        "big": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "line": {
+          "en": "Next period in about 17 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+        }
+      },
+      "meds": {
+        "ring": [],
+        "given": 0,
+        "total": 0,
+        "allGiven": false,
+        "next": null,
+        "meds": [],
+        "low": [],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 0,
+            "total": 0
+          }
+        ]
+      },
+      "cycle": {
+        "phase": "between",
+        "phaseWords": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "next": {
+          "day": "2026-10-20",
+          "inDays": 17,
+          "words": {
+            "en": "Next period in about 17 days (an estimate)",
+            "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+          }
+        },
+        "cycleDay": null,
+        "periodDay": null,
+        "lengths": null,
+        "days": null,
+        "periods": null,
+        "logs": null,
+        "open": false
+      },
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [],
+      "visits": {
+        "next": null,
+        "upcoming": [],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "rich-ar": {
+    "ok": true,
+    "kind": "health",
+    "title": "الصحة",
+    "lang": "ar",
+    "state": "live",
+    "version": 188,
+    "view": {
+      "title": "الصحة",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": true,
+      "forName": null,
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": false,
+      "hero": {
+        "kind": "cycle",
+        "big": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "line": {
+          "en": "Next period in about 17 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+        }
+      },
+      "meds": {
+        "ring": [],
+        "given": 0,
+        "total": 0,
+        "allGiven": false,
+        "next": null,
+        "meds": [],
+        "low": [],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 0,
+            "total": 0
+          }
+        ]
+      },
+      "cycle": {
+        "phase": "between",
+        "phaseWords": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "next": {
+          "day": "2026-10-20",
+          "inDays": 17,
+          "words": {
+            "en": "Next period in about 17 days (an estimate)",
+            "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+          }
+        },
+        "cycleDay": null,
+        "periodDay": null,
+        "lengths": null,
+        "days": null,
+        "periods": null,
+        "logs": null,
+        "open": false
+      },
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [],
+      "visits": {
+        "next": null,
+        "upcoming": [],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mmariam0000",
+        "name": "مريم",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "mkarim00000",
+        "name": "كريم",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "mkarim00000",
+        "name": "كريم"
+      }
+    ],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "partner-en": {
+    "ok": true,
+    "kind": "health",
+    "title": "Health",
+    "lang": "en",
+    "state": "live",
+    "version": 412,
+    "view": {
+      "title": "Health",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": true,
+      "forName": null,
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": false,
+      "hero": {
+        "kind": "cycle",
+        "big": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "line": {
+          "en": "Next period in about 17 days (an estimate)",
+          "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+        }
+      },
+      "meds": {
+        "ring": [],
+        "given": 0,
+        "total": 0,
+        "allGiven": false,
+        "next": null,
+        "meds": [],
+        "low": [],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 0,
+            "total": 0
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 0,
+            "total": 0
+          }
+        ]
+      },
+      "cycle": {
+        "phase": "between",
+        "phaseWords": {
+          "en": "Between periods",
+          "ar": "بين الدورتين"
+        },
+        "next": {
+          "day": "2026-10-20",
+          "inDays": 17,
+          "words": {
+            "en": "Next period in about 17 days (an estimate)",
+            "ar": "الدورة الجاية بعد حوالي 17 يوم (تقدير)"
+          }
+        },
+        "cycleDay": null,
+        "periodDay": null,
+        "lengths": null,
+        "days": null,
+        "periods": null,
+        "logs": null,
+        "open": false
+      },
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [],
+      "visits": {
+        "next": null,
+        "upcoming": [],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "msam0000000",
+    "seats": [],
+    "ops": [],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "mom-en": {
+    "ok": true,
+    "kind": "health",
+    "title": "Mom",
+    "lang": "en",
+    "state": "live",
+    "version": 96,
+    "view": {
+      "title": "Mom",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": false,
+      "forName": "Mom",
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": true,
+      "hero": {
+        "kind": "next",
+        "big": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "line": {
+          "en": "Next: Metformin",
+          "ar": "الجاية: Metformin"
+        }
+      },
+      "meds": {
+        "ring": [
+          {
+            "med": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "time": "08:00",
+            "label": {
+              "en": "8:00 AM",
+              "ar": "8:00 ص"
+            },
+            "state": "given",
+            "by": "mlina000000",
+            "byName": "Lina",
+            "at": "08:05"
+          },
+          {
+            "med": "ihme000000002",
+            "name": "Amlodipine",
+            "dose": "5 mg",
+            "time": "09:00",
+            "label": {
+              "en": "9:00 AM",
+              "ar": "9:00 ص"
+            },
+            "state": "given",
+            "by": "momar000000",
+            "byName": "Omar",
+            "at": "09:20"
+          },
+          {
+            "med": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "time": "20:00",
+            "label": {
+              "en": "8:00 PM",
+              "ar": "8:00 م"
+            },
+            "state": "later",
+            "by": null,
+            "byName": null,
+            "at": null
+          }
+        ],
+        "given": 2,
+        "total": 3,
+        "allGiven": false,
+        "next": {
+          "med": "ihme000000001",
+          "name": "Metformin",
+          "time": "20:00",
+          "day": "2026-10-03",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "at": 1791046800000
+        },
+        "meds": [
+          {
+            "id": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "times": [
+              "08:00",
+              "20:00"
+            ],
+            "per": 1,
+            "left": 34,
+            "daysLeft": 17,
+            "low": false,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "blood sugar",
+            "today": 0,
+            "when": {
+              "en": "At 8:00 AM and 8:00 PM",
+              "ar": "الساعة 8:00 ص و8:00 م"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.5,
+              1,
+              1,
+              1,
+              0.5
+            ]
+          },
+          {
+            "id": "ihme000000002",
+            "name": "Amlodipine",
+            "dose": "5 mg",
+            "times": [
+              "09:00"
+            ],
+            "per": 1,
+            "left": 5,
+            "daysLeft": 5,
+            "low": true,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "blood pressure",
+            "today": 0,
+            "when": {
+              "en": "At 9:00 AM",
+              "ar": "الساعة 9:00 ص"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "ihme000000003",
+            "name": "Paracetamol",
+            "dose": "500 mg",
+            "times": [],
+            "per": 1,
+            "left": null,
+            "daysLeft": null,
+            "low": false,
+            "asNeeded": true,
+            "days": null,
+            "until": null,
+            "note": null,
+            "today": 0,
+            "when": {
+              "en": "As needed",
+              "ar": "عند اللزوم"
+            },
+            "days14": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "low": [
+          {
+            "id": "ihme000000002",
+            "name": "Amlodipine",
+            "daysLeft": 5
+          }
+        ],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 2,
+            "total": 3
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 2,
+            "total": 3
+          }
+        ]
+      },
+      "cycle": null,
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [
+          {
+            "day": "2026-09-04",
+            "mins": null
+          },
+          {
+            "day": "2026-09-05",
+            "mins": null
+          },
+          {
+            "day": "2026-09-06",
+            "mins": null
+          },
+          {
+            "day": "2026-09-07",
+            "mins": null
+          },
+          {
+            "day": "2026-09-08",
+            "mins": null
+          },
+          {
+            "day": "2026-09-09",
+            "mins": null
+          },
+          {
+            "day": "2026-09-10",
+            "mins": null
+          },
+          {
+            "day": "2026-09-11",
+            "mins": null
+          },
+          {
+            "day": "2026-09-12",
+            "mins": null
+          },
+          {
+            "day": "2026-09-13",
+            "mins": null
+          },
+          {
+            "day": "2026-09-14",
+            "mins": null
+          },
+          {
+            "day": "2026-09-15",
+            "mins": null
+          },
+          {
+            "day": "2026-09-16",
+            "mins": null
+          },
+          {
+            "day": "2026-09-17",
+            "mins": null
+          },
+          {
+            "day": "2026-09-18",
+            "mins": null
+          },
+          {
+            "day": "2026-09-19",
+            "mins": null
+          },
+          {
+            "day": "2026-09-20",
+            "mins": null
+          },
+          {
+            "day": "2026-09-21",
+            "mins": null
+          },
+          {
+            "day": "2026-09-22",
+            "mins": null
+          },
+          {
+            "day": "2026-09-23",
+            "mins": null
+          },
+          {
+            "day": "2026-09-24",
+            "mins": null
+          },
+          {
+            "day": "2026-09-25",
+            "mins": null
+          },
+          {
+            "day": "2026-09-26",
+            "mins": null
+          },
+          {
+            "day": "2026-09-27",
+            "mins": null
+          },
+          {
+            "day": "2026-09-28",
+            "mins": null
+          },
+          {
+            "day": "2026-09-29",
+            "mins": null
+          },
+          {
+            "day": "2026-09-30",
+            "mins": null
+          },
+          {
+            "day": "2026-10-01",
+            "mins": null
+          },
+          {
+            "day": "2026-10-02",
+            "mins": null
+          },
+          {
+            "day": "2026-10-03",
+            "mins": null
+          }
+        ],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [
+        {
+          "kind": "bp",
+          "name": {
+            "en": "Blood pressure",
+            "ar": "ضغط الدم"
+          },
+          "unit": {
+            "en": "mmHg",
+            "ar": "مم زئبق"
+          },
+          "latest": {
+            "id": "ihme000000067",
+            "day": "2026-10-02",
+            "time": "10:30",
+            "value": 132,
+            "value2": 82,
+            "note": null,
+            "said": {
+              "en": "132/82",
+              "ar": "132/82"
+            }
+          },
+          "series": [
+            {
+              "id": "ihme000000078",
+              "day": "2026-09-08",
+              "time": "10:30",
+              "value": 138,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "138/88",
+                "ar": "138/88"
+              }
+            },
+            {
+              "id": "ihme000000077",
+              "day": "2026-09-11",
+              "time": "10:30",
+              "value": 133,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "133/85",
+                "ar": "133/85"
+              }
+            },
+            {
+              "id": "ihme000000075",
+              "day": "2026-09-14",
+              "time": "10:30",
+              "value": 145,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "145/82",
+                "ar": "145/82"
+              }
+            },
+            {
+              "id": "ihme000000074",
+              "day": "2026-09-17",
+              "time": "10:30",
+              "value": 140,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "140/88",
+                "ar": "140/88"
+              }
+            },
+            {
+              "id": "ihme000000073",
+              "day": "2026-09-20",
+              "time": "10:30",
+              "value": 135,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "135/85",
+                "ar": "135/85"
+              }
+            },
+            {
+              "id": "ihme000000071",
+              "day": "2026-09-23",
+              "time": "10:30",
+              "value": 147,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "147/82",
+                "ar": "147/82"
+              }
+            },
+            {
+              "id": "ihme000000070",
+              "day": "2026-09-26",
+              "time": "10:30",
+              "value": 142,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "142/88",
+                "ar": "142/88"
+              }
+            },
+            {
+              "id": "ihme000000069",
+              "day": "2026-09-29",
+              "time": "10:30",
+              "value": 137,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "137/85",
+                "ar": "137/85"
+              }
+            },
+            {
+              "id": "ihme000000067",
+              "day": "2026-10-02",
+              "time": "10:30",
+              "value": 132,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "132/82",
+                "ar": "132/82"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "139/85",
+            "ar": "139/85"
+          }
+        },
+        {
+          "kind": "glucose",
+          "name": {
+            "en": "Blood sugar",
+            "ar": "سكر الدم"
+          },
+          "unit": {
+            "en": "mg/dL",
+            "ar": "مجم/دل"
+          },
+          "latest": {
+            "id": "ihme000000068",
+            "day": "2026-10-02",
+            "time": "07:40",
+            "value": 118,
+            "value2": null,
+            "note": null,
+            "said": {
+              "en": "118 mg/dL",
+              "ar": "118 مجم/دل"
+            }
+          },
+          "series": [
+            {
+              "id": "ihme000000076",
+              "day": "2026-09-14",
+              "time": "07:40",
+              "value": 144,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "144 mg/dL",
+                "ar": "144 مجم/دل"
+              }
+            },
+            {
+              "id": "ihme000000072",
+              "day": "2026-09-23",
+              "time": "07:40",
+              "value": 151,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "151 mg/dL",
+                "ar": "151 مجم/دل"
+              }
+            },
+            {
+              "id": "ihme000000068",
+              "day": "2026-10-02",
+              "time": "07:40",
+              "value": 118,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "118 mg/dL",
+                "ar": "118 مجم/دل"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "138 mg/dL",
+            "ar": "138 مجم/دل"
+          }
+        }
+      ],
+      "visits": {
+        "next": {
+          "id": "ihme000000079",
+          "day": "2026-10-07",
+          "time": "11:30",
+          "who": "Dr. Nabil",
+          "where": "Al Noor Hospital",
+          "why": "Blood pressure follow up",
+          "notes": null,
+          "changed": null,
+          "next": null,
+          "upcoming": true,
+          "dayWords": {
+            "en": "Wed 7 Oct",
+            "ar": "يوم الأربع 7 أكتوبر"
+          },
+          "file": null
+        },
+        "upcoming": [
+          {
+            "id": "ihme000000079",
+            "day": "2026-10-07",
+            "time": "11:30",
+            "who": "Dr. Nabil",
+            "where": "Al Noor Hospital",
+            "why": "Blood pressure follow up",
+            "notes": null,
+            "changed": null,
+            "next": null,
+            "upcoming": true,
+            "dayWords": {
+              "en": "Wed 7 Oct",
+              "ar": "يوم الأربع 7 أكتوبر"
+            },
+            "file": null
+          }
+        ],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [
+        {
+          "id": "ihme000000080",
+          "kind": "condition",
+          "name": "Type 2 diabetes",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000081",
+          "kind": "condition",
+          "name": "High blood pressure",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000082",
+          "kind": "allergy",
+          "name": "Aspirin",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000083",
+          "kind": "blood",
+          "name": "A+",
+          "note": null,
+          "day": null
+        }
+      ],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000000",
+        "name": "Omar"
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      }
+    ],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791008400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar gave the 9:00 AM Amlodipine",
+          "ar": "Omar: جرعة 9:00 ص من Amlodipine اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina gave the 8:00 AM Metformin",
+          "ar": "Lina: جرعة 8:00 ص من Metformin اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "mom-ar": {
+    "ok": true,
+    "kind": "health",
+    "title": "ماما",
+    "lang": "ar",
+    "state": "live",
+    "version": 96,
+    "view": {
+      "title": "ماما",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": false,
+      "forName": "ماما",
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": true,
+      "hero": {
+        "kind": "next",
+        "big": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "line": {
+          "en": "Next: ميتفورمين",
+          "ar": "الجاية: ميتفورمين"
+        }
+      },
+      "meds": {
+        "ring": [
+          {
+            "med": "ihma000000001",
+            "name": "ميتفورمين",
+            "dose": "500 مجم",
+            "time": "08:00",
+            "label": {
+              "en": "8:00 AM",
+              "ar": "8:00 ص"
+            },
+            "state": "given",
+            "by": "mlina000001",
+            "byName": "ليلى",
+            "at": "08:05"
+          },
+          {
+            "med": "ihma000000002",
+            "name": "أملوديبين",
+            "dose": "5 مجم",
+            "time": "09:00",
+            "label": {
+              "en": "9:00 AM",
+              "ar": "9:00 ص"
+            },
+            "state": "given",
+            "by": "momar000001",
+            "byName": "عمر",
+            "at": "09:20"
+          },
+          {
+            "med": "ihma000000001",
+            "name": "ميتفورمين",
+            "dose": "500 مجم",
+            "time": "20:00",
+            "label": {
+              "en": "8:00 PM",
+              "ar": "8:00 م"
+            },
+            "state": "later",
+            "by": null,
+            "byName": null,
+            "at": null
+          }
+        ],
+        "given": 2,
+        "total": 3,
+        "allGiven": false,
+        "next": {
+          "med": "ihma000000001",
+          "name": "ميتفورمين",
+          "time": "20:00",
+          "day": "2026-10-03",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "at": 1791046800000
+        },
+        "meds": [
+          {
+            "id": "ihma000000001",
+            "name": "ميتفورمين",
+            "dose": "500 مجم",
+            "times": [
+              "08:00",
+              "20:00"
+            ],
+            "per": 1,
+            "left": 34,
+            "daysLeft": 17,
+            "low": false,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "السكر",
+            "today": 0,
+            "when": {
+              "en": "At 8:00 AM and 8:00 PM",
+              "ar": "الساعة 8:00 ص و8:00 م"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.5,
+              1,
+              1,
+              1,
+              0.5
+            ]
+          },
+          {
+            "id": "ihma000000002",
+            "name": "أملوديبين",
+            "dose": "5 مجم",
+            "times": [
+              "09:00"
+            ],
+            "per": 1,
+            "left": 5,
+            "daysLeft": 5,
+            "low": true,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "الضغط",
+            "today": 0,
+            "when": {
+              "en": "At 9:00 AM",
+              "ar": "الساعة 9:00 ص"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "ihma000000003",
+            "name": "باراسيتامول",
+            "dose": "500 مجم",
+            "times": [],
+            "per": 1,
+            "left": null,
+            "daysLeft": null,
+            "low": false,
+            "asNeeded": true,
+            "days": null,
+            "until": null,
+            "note": null,
+            "today": 0,
+            "when": {
+              "en": "As needed",
+              "ar": "عند اللزوم"
+            },
+            "days14": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "low": [
+          {
+            "id": "ihma000000002",
+            "name": "أملوديبين",
+            "daysLeft": 5
+          }
+        ],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 2,
+            "total": 3
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 2,
+            "total": 3
+          }
+        ]
+      },
+      "cycle": null,
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [
+          {
+            "day": "2026-09-04",
+            "mins": null
+          },
+          {
+            "day": "2026-09-05",
+            "mins": null
+          },
+          {
+            "day": "2026-09-06",
+            "mins": null
+          },
+          {
+            "day": "2026-09-07",
+            "mins": null
+          },
+          {
+            "day": "2026-09-08",
+            "mins": null
+          },
+          {
+            "day": "2026-09-09",
+            "mins": null
+          },
+          {
+            "day": "2026-09-10",
+            "mins": null
+          },
+          {
+            "day": "2026-09-11",
+            "mins": null
+          },
+          {
+            "day": "2026-09-12",
+            "mins": null
+          },
+          {
+            "day": "2026-09-13",
+            "mins": null
+          },
+          {
+            "day": "2026-09-14",
+            "mins": null
+          },
+          {
+            "day": "2026-09-15",
+            "mins": null
+          },
+          {
+            "day": "2026-09-16",
+            "mins": null
+          },
+          {
+            "day": "2026-09-17",
+            "mins": null
+          },
+          {
+            "day": "2026-09-18",
+            "mins": null
+          },
+          {
+            "day": "2026-09-19",
+            "mins": null
+          },
+          {
+            "day": "2026-09-20",
+            "mins": null
+          },
+          {
+            "day": "2026-09-21",
+            "mins": null
+          },
+          {
+            "day": "2026-09-22",
+            "mins": null
+          },
+          {
+            "day": "2026-09-23",
+            "mins": null
+          },
+          {
+            "day": "2026-09-24",
+            "mins": null
+          },
+          {
+            "day": "2026-09-25",
+            "mins": null
+          },
+          {
+            "day": "2026-09-26",
+            "mins": null
+          },
+          {
+            "day": "2026-09-27",
+            "mins": null
+          },
+          {
+            "day": "2026-09-28",
+            "mins": null
+          },
+          {
+            "day": "2026-09-29",
+            "mins": null
+          },
+          {
+            "day": "2026-09-30",
+            "mins": null
+          },
+          {
+            "day": "2026-10-01",
+            "mins": null
+          },
+          {
+            "day": "2026-10-02",
+            "mins": null
+          },
+          {
+            "day": "2026-10-03",
+            "mins": null
+          }
+        ],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [
+        {
+          "kind": "bp",
+          "name": {
+            "en": "Blood pressure",
+            "ar": "ضغط الدم"
+          },
+          "unit": {
+            "en": "mmHg",
+            "ar": "مم زئبق"
+          },
+          "latest": {
+            "id": "ihma000000067",
+            "day": "2026-10-02",
+            "time": "10:30",
+            "value": 132,
+            "value2": 82,
+            "note": null,
+            "said": {
+              "en": "132/82",
+              "ar": "132/82"
+            }
+          },
+          "series": [
+            {
+              "id": "ihma000000078",
+              "day": "2026-09-08",
+              "time": "10:30",
+              "value": 138,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "138/88",
+                "ar": "138/88"
+              }
+            },
+            {
+              "id": "ihma000000077",
+              "day": "2026-09-11",
+              "time": "10:30",
+              "value": 133,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "133/85",
+                "ar": "133/85"
+              }
+            },
+            {
+              "id": "ihma000000075",
+              "day": "2026-09-14",
+              "time": "10:30",
+              "value": 145,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "145/82",
+                "ar": "145/82"
+              }
+            },
+            {
+              "id": "ihma000000074",
+              "day": "2026-09-17",
+              "time": "10:30",
+              "value": 140,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "140/88",
+                "ar": "140/88"
+              }
+            },
+            {
+              "id": "ihma000000073",
+              "day": "2026-09-20",
+              "time": "10:30",
+              "value": 135,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "135/85",
+                "ar": "135/85"
+              }
+            },
+            {
+              "id": "ihma000000071",
+              "day": "2026-09-23",
+              "time": "10:30",
+              "value": 147,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "147/82",
+                "ar": "147/82"
+              }
+            },
+            {
+              "id": "ihma000000070",
+              "day": "2026-09-26",
+              "time": "10:30",
+              "value": 142,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "142/88",
+                "ar": "142/88"
+              }
+            },
+            {
+              "id": "ihma000000069",
+              "day": "2026-09-29",
+              "time": "10:30",
+              "value": 137,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "137/85",
+                "ar": "137/85"
+              }
+            },
+            {
+              "id": "ihma000000067",
+              "day": "2026-10-02",
+              "time": "10:30",
+              "value": 132,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "132/82",
+                "ar": "132/82"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "139/85",
+            "ar": "139/85"
+          }
+        },
+        {
+          "kind": "glucose",
+          "name": {
+            "en": "Blood sugar",
+            "ar": "سكر الدم"
+          },
+          "unit": {
+            "en": "mg/dL",
+            "ar": "مجم/دل"
+          },
+          "latest": {
+            "id": "ihma000000068",
+            "day": "2026-10-02",
+            "time": "07:40",
+            "value": 118,
+            "value2": null,
+            "note": null,
+            "said": {
+              "en": "118 mg/dL",
+              "ar": "118 مجم/دل"
+            }
+          },
+          "series": [
+            {
+              "id": "ihma000000076",
+              "day": "2026-09-14",
+              "time": "07:40",
+              "value": 144,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "144 mg/dL",
+                "ar": "144 مجم/دل"
+              }
+            },
+            {
+              "id": "ihma000000072",
+              "day": "2026-09-23",
+              "time": "07:40",
+              "value": 151,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "151 mg/dL",
+                "ar": "151 مجم/دل"
+              }
+            },
+            {
+              "id": "ihma000000068",
+              "day": "2026-10-02",
+              "time": "07:40",
+              "value": 118,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "118 mg/dL",
+                "ar": "118 مجم/دل"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "138 mg/dL",
+            "ar": "138 مجم/دل"
+          }
+        }
+      ],
+      "visits": {
+        "next": {
+          "id": "ihma000000079",
+          "day": "2026-10-07",
+          "time": "11:30",
+          "who": "د. نبيل",
+          "where": "مستشفى النور",
+          "why": "متابعة الضغط",
+          "notes": null,
+          "changed": null,
+          "next": null,
+          "upcoming": true,
+          "dayWords": {
+            "en": "Wed 7 Oct",
+            "ar": "يوم الأربع 7 أكتوبر"
+          },
+          "file": null
+        },
+        "upcoming": [
+          {
+            "id": "ihma000000079",
+            "day": "2026-10-07",
+            "time": "11:30",
+            "who": "د. نبيل",
+            "where": "مستشفى النور",
+            "why": "متابعة الضغط",
+            "notes": null,
+            "changed": null,
+            "next": null,
+            "upcoming": true,
+            "dayWords": {
+              "en": "Wed 7 Oct",
+              "ar": "يوم الأربع 7 أكتوبر"
+            },
+            "file": null
+          }
+        ],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [
+        {
+          "id": "ihma000000080",
+          "kind": "condition",
+          "name": "سكر من النوع التاني",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihma000000081",
+          "kind": "condition",
+          "name": "ضغط عالي",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihma000000082",
+          "kind": "allergy",
+          "name": "أسبرين",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihma000000083",
+          "kind": "blood",
+          "name": "A+",
+          "note": null,
+          "day": null
+        }
+      ],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mlina000001",
+        "name": "ليلى",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000001",
+        "name": "عمر",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000001",
+        "name": "سارة",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "momar000001",
+        "name": "عمر"
+      },
+      {
+        "id": "msara000001",
+        "name": "سارة"
+      }
+    ],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791008400000,
+        "name": "عمر",
+        "line": {
+          "en": "عمر gave the 9:00 AM Amlodipine",
+          "ar": "عمر: جرعة 9:00 ص من أملوديبين اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "ليلى",
+        "line": {
+          "en": "ليلى gave the 8:00 AM Metformin",
+          "ar": "ليلى: جرعة 8:00 ص من ميتفورمين اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  },
+  "sibling-en": {
+    "ok": true,
+    "kind": "health",
+    "title": "Mom",
+    "lang": "en",
+    "state": "live",
+    "version": 96,
+    "view": {
+      "title": "Mom",
+      "today": "2026-10-03",
+      "clock": "12:00",
+      "own": false,
+      "forName": "Mom",
+      "share": {
+        "cycle": true,
+        "meds": false
+      },
+      "units": {
+        "temp": "c",
+        "weight": "kg",
+        "glucose": "mgdl"
+      },
+      "full": true,
+      "hero": {
+        "kind": "next",
+        "big": {
+          "en": "8:00 PM",
+          "ar": "8:00 م"
+        },
+        "line": {
+          "en": "Next: Metformin",
+          "ar": "الجاية: Metformin"
+        }
+      },
+      "meds": {
+        "ring": [
+          {
+            "med": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "time": "08:00",
+            "label": {
+              "en": "8:00 AM",
+              "ar": "8:00 ص"
+            },
+            "state": "given",
+            "by": "mlina000000",
+            "byName": "Lina",
+            "at": "08:05"
+          },
+          {
+            "med": "ihme000000002",
+            "name": "Amlodipine",
+            "dose": "5 mg",
+            "time": "09:00",
+            "label": {
+              "en": "9:00 AM",
+              "ar": "9:00 ص"
+            },
+            "state": "given",
+            "by": "momar000000",
+            "byName": "Omar",
+            "at": "09:20"
+          },
+          {
+            "med": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "time": "20:00",
+            "label": {
+              "en": "8:00 PM",
+              "ar": "8:00 م"
+            },
+            "state": "later",
+            "by": null,
+            "byName": null,
+            "at": null
+          }
+        ],
+        "given": 2,
+        "total": 3,
+        "allGiven": false,
+        "next": {
+          "med": "ihme000000001",
+          "name": "Metformin",
+          "time": "20:00",
+          "day": "2026-10-03",
+          "label": {
+            "en": "8:00 PM",
+            "ar": "8:00 م"
+          },
+          "at": 1791046800000
+        },
+        "meds": [
+          {
+            "id": "ihme000000001",
+            "name": "Metformin",
+            "dose": "500 mg",
+            "times": [
+              "08:00",
+              "20:00"
+            ],
+            "per": 1,
+            "left": 34,
+            "daysLeft": 17,
+            "low": false,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "blood sugar",
+            "today": 0,
+            "when": {
+              "en": "At 8:00 AM and 8:00 PM",
+              "ar": "الساعة 8:00 ص و8:00 م"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0.5,
+              1,
+              1,
+              1,
+              0.5
+            ]
+          },
+          {
+            "id": "ihme000000002",
+            "name": "Amlodipine",
+            "dose": "5 mg",
+            "times": [
+              "09:00"
+            ],
+            "per": 1,
+            "left": 5,
+            "daysLeft": 5,
+            "low": true,
+            "asNeeded": false,
+            "days": null,
+            "until": null,
+            "note": "blood pressure",
+            "today": 0,
+            "when": {
+              "en": "At 9:00 AM",
+              "ar": "الساعة 9:00 ص"
+            },
+            "days14": [
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "id": "ihme000000003",
+            "name": "Paracetamol",
+            "dose": "500 mg",
+            "times": [],
+            "per": 1,
+            "left": null,
+            "daysLeft": null,
+            "low": false,
+            "asNeeded": true,
+            "days": null,
+            "until": null,
+            "note": null,
+            "today": 0,
+            "when": {
+              "en": "As needed",
+              "ar": "عند اللزوم"
+            },
+            "days14": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        ],
+        "low": [
+          {
+            "id": "ihme000000002",
+            "name": "Amlodipine",
+            "daysLeft": 5
+          }
+        ],
+        "week": [
+          {
+            "day": "2026-09-27",
+            "label": {
+              "en": "Sun",
+              "ar": "الحد"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-28",
+            "label": {
+              "en": "Mon",
+              "ar": "الاتنين"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-09-29",
+            "label": {
+              "en": "Tue",
+              "ar": "التلات"
+            },
+            "given": 2,
+            "total": 3
+          },
+          {
+            "day": "2026-09-30",
+            "label": {
+              "en": "Wed",
+              "ar": "الأربع"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-01",
+            "label": {
+              "en": "Thu",
+              "ar": "الخميس"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-02",
+            "label": {
+              "en": "Fri",
+              "ar": "الجمعة"
+            },
+            "given": 3,
+            "total": 3
+          },
+          {
+            "day": "2026-10-03",
+            "label": {
+              "en": "Sat",
+              "ar": "السبت"
+            },
+            "given": 2,
+            "total": 3
+          }
+        ]
+      },
+      "cycle": null,
+      "sleep": {
+        "last": null,
+        "latest": null,
+        "nights": [
+          {
+            "day": "2026-09-04",
+            "mins": null
+          },
+          {
+            "day": "2026-09-05",
+            "mins": null
+          },
+          {
+            "day": "2026-09-06",
+            "mins": null
+          },
+          {
+            "day": "2026-09-07",
+            "mins": null
+          },
+          {
+            "day": "2026-09-08",
+            "mins": null
+          },
+          {
+            "day": "2026-09-09",
+            "mins": null
+          },
+          {
+            "day": "2026-09-10",
+            "mins": null
+          },
+          {
+            "day": "2026-09-11",
+            "mins": null
+          },
+          {
+            "day": "2026-09-12",
+            "mins": null
+          },
+          {
+            "day": "2026-09-13",
+            "mins": null
+          },
+          {
+            "day": "2026-09-14",
+            "mins": null
+          },
+          {
+            "day": "2026-09-15",
+            "mins": null
+          },
+          {
+            "day": "2026-09-16",
+            "mins": null
+          },
+          {
+            "day": "2026-09-17",
+            "mins": null
+          },
+          {
+            "day": "2026-09-18",
+            "mins": null
+          },
+          {
+            "day": "2026-09-19",
+            "mins": null
+          },
+          {
+            "day": "2026-09-20",
+            "mins": null
+          },
+          {
+            "day": "2026-09-21",
+            "mins": null
+          },
+          {
+            "day": "2026-09-22",
+            "mins": null
+          },
+          {
+            "day": "2026-09-23",
+            "mins": null
+          },
+          {
+            "day": "2026-09-24",
+            "mins": null
+          },
+          {
+            "day": "2026-09-25",
+            "mins": null
+          },
+          {
+            "day": "2026-09-26",
+            "mins": null
+          },
+          {
+            "day": "2026-09-27",
+            "mins": null
+          },
+          {
+            "day": "2026-09-28",
+            "mins": null
+          },
+          {
+            "day": "2026-09-29",
+            "mins": null
+          },
+          {
+            "day": "2026-09-30",
+            "mins": null
+          },
+          {
+            "day": "2026-10-01",
+            "mins": null
+          },
+          {
+            "day": "2026-10-02",
+            "mins": null
+          },
+          {
+            "day": "2026-10-03",
+            "mins": null
+          }
+        ],
+        "avg7": null,
+        "avg30": null,
+        "logged7": 0,
+        "need": null,
+        "short7": null,
+        "bedUsual": null,
+        "wakeUsual": null
+      },
+      "feels": {
+        "tracked": [],
+        "recent": []
+      },
+      "measures": [
+        {
+          "kind": "bp",
+          "name": {
+            "en": "Blood pressure",
+            "ar": "ضغط الدم"
+          },
+          "unit": {
+            "en": "mmHg",
+            "ar": "مم زئبق"
+          },
+          "latest": {
+            "id": "ihme000000067",
+            "day": "2026-10-02",
+            "time": "10:30",
+            "value": 132,
+            "value2": 82,
+            "note": null,
+            "said": {
+              "en": "132/82",
+              "ar": "132/82"
+            }
+          },
+          "series": [
+            {
+              "id": "ihme000000078",
+              "day": "2026-09-08",
+              "time": "10:30",
+              "value": 138,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "138/88",
+                "ar": "138/88"
+              }
+            },
+            {
+              "id": "ihme000000077",
+              "day": "2026-09-11",
+              "time": "10:30",
+              "value": 133,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "133/85",
+                "ar": "133/85"
+              }
+            },
+            {
+              "id": "ihme000000075",
+              "day": "2026-09-14",
+              "time": "10:30",
+              "value": 145,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "145/82",
+                "ar": "145/82"
+              }
+            },
+            {
+              "id": "ihme000000074",
+              "day": "2026-09-17",
+              "time": "10:30",
+              "value": 140,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "140/88",
+                "ar": "140/88"
+              }
+            },
+            {
+              "id": "ihme000000073",
+              "day": "2026-09-20",
+              "time": "10:30",
+              "value": 135,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "135/85",
+                "ar": "135/85"
+              }
+            },
+            {
+              "id": "ihme000000071",
+              "day": "2026-09-23",
+              "time": "10:30",
+              "value": 147,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "147/82",
+                "ar": "147/82"
+              }
+            },
+            {
+              "id": "ihme000000070",
+              "day": "2026-09-26",
+              "time": "10:30",
+              "value": 142,
+              "value2": 88,
+              "note": null,
+              "said": {
+                "en": "142/88",
+                "ar": "142/88"
+              }
+            },
+            {
+              "id": "ihme000000069",
+              "day": "2026-09-29",
+              "time": "10:30",
+              "value": 137,
+              "value2": 85,
+              "note": null,
+              "said": {
+                "en": "137/85",
+                "ar": "137/85"
+              }
+            },
+            {
+              "id": "ihme000000067",
+              "day": "2026-10-02",
+              "time": "10:30",
+              "value": 132,
+              "value2": 82,
+              "note": null,
+              "said": {
+                "en": "132/82",
+                "ar": "132/82"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "139/85",
+            "ar": "139/85"
+          }
+        },
+        {
+          "kind": "glucose",
+          "name": {
+            "en": "Blood sugar",
+            "ar": "سكر الدم"
+          },
+          "unit": {
+            "en": "mg/dL",
+            "ar": "مجم/دل"
+          },
+          "latest": {
+            "id": "ihme000000068",
+            "day": "2026-10-02",
+            "time": "07:40",
+            "value": 118,
+            "value2": null,
+            "note": null,
+            "said": {
+              "en": "118 mg/dL",
+              "ar": "118 مجم/دل"
+            }
+          },
+          "series": [
+            {
+              "id": "ihme000000076",
+              "day": "2026-09-14",
+              "time": "07:40",
+              "value": 144,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "144 mg/dL",
+                "ar": "144 مجم/دل"
+              }
+            },
+            {
+              "id": "ihme000000072",
+              "day": "2026-09-23",
+              "time": "07:40",
+              "value": 151,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "151 mg/dL",
+                "ar": "151 مجم/دل"
+              }
+            },
+            {
+              "id": "ihme000000068",
+              "day": "2026-10-02",
+              "time": "07:40",
+              "value": 118,
+              "value2": null,
+              "note": null,
+              "said": {
+                "en": "118 mg/dL",
+                "ar": "118 مجم/دل"
+              }
+            }
+          ],
+          "avg30": {
+            "en": "138 mg/dL",
+            "ar": "138 مجم/دل"
+          }
+        }
+      ],
+      "visits": {
+        "next": {
+          "id": "ihme000000079",
+          "day": "2026-10-07",
+          "time": "11:30",
+          "who": "Dr. Nabil",
+          "where": "Al Noor Hospital",
+          "why": "Blood pressure follow up",
+          "notes": null,
+          "changed": null,
+          "next": null,
+          "upcoming": true,
+          "dayWords": {
+            "en": "Wed 7 Oct",
+            "ar": "يوم الأربع 7 أكتوبر"
+          },
+          "file": null
+        },
+        "upcoming": [
+          {
+            "id": "ihme000000079",
+            "day": "2026-10-07",
+            "time": "11:30",
+            "who": "Dr. Nabil",
+            "where": "Al Noor Hospital",
+            "why": "Blood pressure follow up",
+            "notes": null,
+            "changed": null,
+            "next": null,
+            "upcoming": true,
+            "dayWords": {
+              "en": "Wed 7 Oct",
+              "ar": "يوم الأربع 7 أكتوبر"
+            },
+            "file": null
+          }
+        ],
+        "past": []
+      },
+      "results": {
+        "reports": [],
+        "tests": [],
+        "out": 0
+      },
+      "facts": [
+        {
+          "id": "ihme000000080",
+          "kind": "condition",
+          "name": "Type 2 diabetes",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000081",
+          "kind": "condition",
+          "name": "High blood pressure",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000082",
+          "kind": "allergy",
+          "name": "Aspirin",
+          "note": null,
+          "day": null
+        },
+        {
+          "id": "ihme000000083",
+          "kind": "blood",
+          "name": "A+",
+          "note": null,
+          "day": null
+        }
+      ],
+      "empty": false
+    },
+    "members": [
+      {
+        "id": "mlina000000",
+        "name": "Lina",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "momar000000",
+        "name": "Omar",
+        "role": "member",
+        "you": true,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msara000000",
+        "name": "Sara",
+        "role": "member",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": "momar000000",
+    "seats": [
+      {
+        "id": "msara000000",
+        "name": "Sara"
+      }
+    ],
+    "ops": [
+      "take",
+      "untake",
+      "refill"
+    ],
+    "activity": [
+      {
+        "at": 1791008400000,
+        "name": "Omar",
+        "line": {
+          "en": "Omar gave the 9:00 AM Amlodipine",
+          "ar": "Omar: جرعة 9:00 ص من Amlodipine اتاخدت"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003900000,
+        "name": "Lina",
+        "line": {
+          "en": "Lina gave the 8:00 AM Metformin",
+          "ar": "Lina: جرعة 8:00 ص من Metformin اتاخدت"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "Done for today",
+        "ar": "خلاص كده النهارده"
+      },
+      "learned": {
+        "en": "Estimates now learn from your cycles",
+        "ar": "التقديرات بقت بتتعلم من دوراتك"
+      }
+    },
+    "momentFeel": {
+      "learned": {
+        "burst": false
+      }
+    },
+    "kindName": {
+      "en": "Health",
+      "ar": "الصحة"
+    }
+  }
+}

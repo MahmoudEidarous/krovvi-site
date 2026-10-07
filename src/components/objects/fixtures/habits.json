@@ -1,4 +1,2358 @@
 {
+  "rich-en": {
+    "ok": true,
+    "kind": "habits",
+    "title": "Habits",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Habits",
+      "today": "2026-10-03",
+      "habits": [
+        {
+          "id": "ihabrwater001",
+          "name": "Water",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": false,
+              "last30": 21,
+              "week": {
+                "done": 4,
+                "of": 7
+              },
+              "count": 5,
+              "total": 88,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "count",
+          "target": 8,
+          "unit": "glasses",
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": "drop"
+        },
+        {
+          "id": "ihabrstretc01",
+          "name": "Stretch",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": "07:30",
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 5,
+              "more": false,
+              "last30": 26,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 10,
+              "total": 72,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "time",
+          "target": 10,
+          "unit": "min",
+          "part": "morning",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabrread0001",
+          "name": "Read 20 pages",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "skip",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 2,
+              "more": false,
+              "last30": 25,
+              "week": {
+                "done": 4,
+                "of": 6
+              },
+              "count": 0,
+              "total": 103,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": 120,
+          "icon": "cap"
+        },
+        {
+          "id": "ihabrsugar001",
+          "name": "No sugar",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 6,
+              "more": false,
+              "last30": 28,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 0,
+              "total": 39,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "avoid",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabrgym00001",
+          "name": "Gym",
+          "every": "week",
+          "days": null,
+          "times": 3,
+          "remind": null,
+          "often": {
+            "en": "3 times a week",
+            "ar": "3 مرات في الأسبوع"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 1,
+              "more": false,
+              "last30": 11,
+              "week": {
+                "done": 2,
+                "of": 3
+              },
+              "count": 0,
+              "total": 46,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "afternoon",
+          "paused": false,
+          "goal": null,
+          "icon": "dumbbell"
+        },
+        {
+          "id": "ihabrwalk0001",
+          "name": "Evening walk",
+          "every": "gap",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every other day",
+            "ar": "يوم ويوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "open",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "open",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 3,
+              "more": false,
+              "last30": 12,
+              "week": {
+                "done": 3,
+                "of": 4
+              },
+              "count": 0,
+              "total": 26,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": null,
+          "icon": "shoe"
+        },
+        {
+          "id": "ihabrpiano001",
+          "name": "Piano",
+          "every": "days",
+          "days": [
+            1,
+            3,
+            5
+          ],
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Mon, Wed, Fri",
+            "ar": "الاتنين، الأربع، الجمعة"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": true,
+              "last30": 0,
+              "week": {
+                "done": 0,
+                "of": 0
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": true,
+          "goal": null,
+          "icon": null
+        }
+      ],
+      "people": [
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [
+      {
+        "at": 1791003600000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya did Stretch",
+          "ar": "Maya: تم Stretch"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
+  "rich-ar": {
+    "ok": true,
+    "kind": "habits",
+    "title": "العادات",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "العادات",
+      "today": "2026-10-03",
+      "habits": [
+        {
+          "id": "ihabrwater002",
+          "name": "المية",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": false,
+              "last30": 21,
+              "week": {
+                "done": 4,
+                "of": 7
+              },
+              "count": 5,
+              "total": 88,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "count",
+          "target": 8,
+          "unit": "كوبايات",
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": "drop"
+        },
+        {
+          "id": "ihabrstretc02",
+          "name": "تمرين إطالة",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": "07:30",
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 5,
+              "more": false,
+              "last30": 26,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 10,
+              "total": 72,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "time",
+          "target": 10,
+          "unit": "min",
+          "part": "morning",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabrread0002",
+          "name": "القراية",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "skip",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 2,
+              "more": false,
+              "last30": 25,
+              "week": {
+                "done": 4,
+                "of": 6
+              },
+              "count": 0,
+              "total": 103,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": 120,
+          "icon": "cap"
+        },
+        {
+          "id": "ihabrsugar002",
+          "name": "من غير سكر",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 6,
+              "more": false,
+              "last30": 28,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 0,
+              "total": 39,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "avoid",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabrgym00002",
+          "name": "الجيم",
+          "every": "week",
+          "days": null,
+          "times": 3,
+          "remind": null,
+          "often": {
+            "en": "3 times a week",
+            "ar": "3 مرات في الأسبوع"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 1,
+              "more": false,
+              "last30": 11,
+              "week": {
+                "done": 2,
+                "of": 3
+              },
+              "count": 0,
+              "total": 46,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "afternoon",
+          "paused": false,
+          "goal": null,
+          "icon": "dumbbell"
+        },
+        {
+          "id": "ihabrwalk0002",
+          "name": "مشي بالليل",
+          "every": "gap",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every other day",
+            "ar": "يوم ويوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "open",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "open",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 3,
+              "more": false,
+              "last30": 12,
+              "week": {
+                "done": 3,
+                "of": 4
+              },
+              "count": 0,
+              "total": 26,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": null,
+          "icon": "shoe"
+        },
+        {
+          "id": "ihabrpiano002",
+          "name": "البيانو",
+          "every": "days",
+          "days": [
+            1,
+            3,
+            5
+          ],
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Mon, Wed, Fri",
+            "ar": "الاتنين، الأربع، الجمعة"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": true,
+              "last30": 0,
+              "week": {
+                "done": 0,
+                "of": 0
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": true,
+          "goal": null,
+          "icon": null
+        }
+      ],
+      "people": [
+        {
+          "id": "mmaya000001",
+          "name": "مايا",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000001",
+        "name": "مايا",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [
+      {
+        "at": 1791003600000,
+        "name": "مايا",
+        "line": {
+          "en": "مايا did تمرين إطالة",
+          "ar": "مايا: تم تمرين إطالة"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
+  "draft-en": {
+    "ok": true,
+    "kind": "habits",
+    "title": "Habits",
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Habits",
+      "today": "2026-10-03",
+      "habits": [],
+      "people": [
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
+  "day-en": {
+    "ok": true,
+    "kind": "habits",
+    "title": "Habits",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Habits",
+      "today": "2026-10-03",
+      "habits": [
+        {
+          "id": "ihabdwater001",
+          "name": "Water",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 3,
+              "more": false,
+              "last30": 17,
+              "week": {
+                "done": 5,
+                "of": 7
+              },
+              "count": 5,
+              "total": 17,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "count",
+          "target": 8,
+          "unit": "glasses",
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabdstretch1",
+          "name": "Stretch",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": "07:30",
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 6,
+              "more": false,
+              "last30": 18,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 10,
+              "total": 18,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "time",
+          "target": 10,
+          "unit": "min",
+          "part": "morning",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabdread0001",
+          "name": "Read 20 pages",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "skip",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 15,
+              "more": false,
+              "last30": 25,
+              "week": {
+                "done": 5,
+                "of": 6
+              },
+              "count": 0,
+              "total": 41,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": 60,
+          "icon": "cap"
+        },
+        {
+          "id": "ihabdsugar001",
+          "name": "No sugar",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 6,
+              "more": false,
+              "last30": 20,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 0,
+              "total": 20,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "avoid",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabdgym00001",
+          "name": "Gym",
+          "every": "week",
+          "days": null,
+          "times": 3,
+          "remind": null,
+          "often": {
+            "en": "3 times a week",
+            "ar": "3 مرات في الأسبوع"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": false,
+              "last30": 11,
+              "week": {
+                "done": 2,
+                "of": 3
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "afternoon",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabdwalk0001",
+          "name": "Evening walk",
+          "every": "gap",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every other day",
+            "ar": "يوم ويوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "open",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 9,
+              "more": false,
+              "last30": 9,
+              "week": {
+                "done": 3,
+                "of": 4
+              },
+              "count": 0,
+              "total": 9,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabdpiano001",
+          "name": "Piano",
+          "every": "days",
+          "days": [
+            1,
+            3,
+            5
+          ],
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Mon, Wed, Fri",
+            "ar": "الاتنين، الأربع، الجمعة"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest",
+                "rest"
+              ],
+              "doneToday": false,
+              "inRow": 6,
+              "more": false,
+              "last30": 1,
+              "week": {
+                "done": 0,
+                "of": 0
+              },
+              "count": 0,
+              "total": 6,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": true,
+          "goal": null,
+          "icon": null
+        }
+      ],
+      "people": [
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [
+      {
+        "at": 1791010800000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya: Water 5 of 8",
+          "ar": "Maya: Water 5 من 8"
+        },
+        "moment": null
+      },
+      {
+        "at": 1791003600000,
+        "name": "Maya",
+        "line": {
+          "en": "Maya did Stretch",
+          "ar": "Maya: تم Stretch"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
+  "day-ar": {
+    "ok": true,
+    "kind": "habits",
+    "title": "العادات",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "العادات",
+      "today": "2026-10-03",
+      "habits": [
+        {
+          "id": "ihabawater001",
+          "name": "المية",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "done",
+                "open",
+                "done",
+                "open",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 4,
+              "more": false,
+              "last30": 9,
+              "week": {
+                "done": 5,
+                "of": 7
+              },
+              "count": 3,
+              "total": 9,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "count",
+          "target": 8,
+          "unit": "كوبايات",
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabaread0001",
+          "name": "القراية",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 3,
+              "more": false,
+              "last30": 24,
+              "week": {
+                "done": 6,
+                "of": 7
+              },
+              "count": 1,
+              "total": 25,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": 60,
+          "icon": null
+        },
+        {
+          "id": "ihabasugar001",
+          "name": "من غير سكر",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 13,
+              "more": false,
+              "last30": 13,
+              "week": {
+                "done": 7,
+                "of": 7
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "avoid",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihabawalk0001",
+          "name": "المشي",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000001",
+              "name": "مايا",
+              "you": false,
+              "dots": [
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "before",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "open",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "skip"
+              ],
+              "doneToday": false,
+              "inRow": 1,
+              "more": false,
+              "last30": 8,
+              "week": {
+                "done": 4,
+                "of": 6
+              },
+              "count": 0,
+              "total": 8,
+              "skipToday": true
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "time",
+          "target": 30,
+          "unit": "min",
+          "part": "morning",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        }
+      ],
+      "people": [
+        {
+          "id": "mmaya000001",
+          "name": "مايا",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000001",
+        "name": "مايا",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
+  "long-en": {
+    "ok": true,
+    "kind": "habits",
+    "title": "Habits",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Habits",
+      "today": "2026-10-03",
+      "habits": [
+        {
+          "id": "ihablread0001",
+          "name": "Read 20 pages",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "done",
+                "open",
+                "done",
+                "done",
+                "done",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 3,
+              "more": false,
+              "last30": 26,
+              "week": {
+                "done": 5,
+                "of": 7
+              },
+              "count": 0,
+              "total": 104,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "evening",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihablwater001",
+          "name": "Water",
+          "every": "day",
+          "days": null,
+          "times": null,
+          "remind": null,
+          "often": {
+            "en": "Every day",
+            "ar": "كل يوم"
+          },
+          "dueToday": true,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "done",
+                "open",
+                "open",
+                "done",
+                "open",
+                "done",
+                "open",
+                "open",
+                "done",
+                "open",
+                "done",
+                "open",
+                "open",
+                "done",
+                "open",
+                "done",
+                "open",
+                "open",
+                "done",
+                "open",
+                "done",
+                "open",
+                "open",
+                "done",
+                "open",
+                "done",
+                "open",
+                "today"
+              ],
+              "doneToday": false,
+              "inRow": 0,
+              "more": false,
+              "last30": 12,
+              "week": {
+                "done": 2,
+                "of": 7
+              },
+              "count": 5,
+              "total": 48,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": false,
+          "kind": "count",
+          "target": 8,
+          "unit": "glasses",
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        },
+        {
+          "id": "ihablgym00001",
+          "name": "Gym",
+          "every": "week",
+          "days": null,
+          "times": 3,
+          "remind": null,
+          "often": {
+            "en": "3 times a week",
+            "ar": "3 مرات في الأسبوع"
+          },
+          "dueToday": false,
+          "people": [
+            {
+              "id": "mmaya000000",
+              "name": "Maya",
+              "you": false,
+              "dots": [
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "done",
+                "rest",
+                "rest",
+                "done"
+              ],
+              "doneToday": true,
+              "inRow": 2,
+              "more": false,
+              "last30": 12,
+              "week": {
+                "done": 3,
+                "of": 3
+              },
+              "count": 1,
+              "total": 47,
+              "skipToday": false
+            }
+          ],
+          "everyoneToday": true,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
+        }
+      ],
+      "people": [
+        {
+          "id": "mmaya000000",
+          "name": "Maya",
+          "you": false
+        }
+      ],
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
+    },
+    "members": [
+      {
+        "id": "mmaya000000",
+        "name": "Maya",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "check",
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "day": {
+        "en": "All done today",
+        "ar": "كله تم النهارده"
+      },
+      "together": {
+        "en": "Everyone did it today",
+        "ar": "الكل عملها النهارده"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Habits",
+      "ar": "العادات"
+    }
+  },
   "new-en": {
     "ok": true,
     "kind": "habits",
@@ -64,10 +2418,20 @@
               "week": {
                 "done": 0,
                 "of": 1
-              }
+              },
+              "count": 0,
+              "total": 0,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -77,7 +2441,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -93,7 +2461,10 @@
     "seats": [],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [],
     "role": "member",
@@ -178,10 +2549,20 @@
               "week": {
                 "done": 7,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 36,
+              "skipToday": false
             }
           ],
-          "everyoneToday": true
+          "everyoneToday": true,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabwalk00001",
@@ -243,10 +2624,20 @@
               "week": {
                 "done": 5,
                 "of": 5
-              }
+              },
+              "count": 0,
+              "total": 19,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabgym000001",
@@ -302,10 +2693,20 @@
               "week": {
                 "done": 2,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabwater0001",
@@ -361,10 +2762,20 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 7,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -374,7 +2785,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -390,7 +2805,10 @@
     "seats": [],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [
       {
@@ -485,10 +2903,20 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 19,
+              "skipToday": false
             }
           ],
-          "everyoneToday": true
+          "everyoneToday": true,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabwalk00002",
@@ -550,10 +2978,20 @@
               "week": {
                 "done": 5,
                 "of": 5
-              }
+              },
+              "count": 0,
+              "total": 15,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabgym000002",
@@ -609,10 +3047,20 @@
               "week": {
                 "done": 1,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 7,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabwater0002",
@@ -668,10 +3116,20 @@
               "week": {
                 "done": 5,
                 "of": 6
-              }
+              },
+              "count": 0,
+              "total": 5,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -681,7 +3139,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": true,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -697,7 +3159,10 @@
     "seats": [],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [],
     "role": "member",
@@ -782,7 +3247,10 @@
               "week": {
                 "done": 7,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "msam0000000",
@@ -825,7 +3293,10 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 13,
+              "skipToday": false
             },
             {
               "id": "mlina000000",
@@ -868,10 +3339,20 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -891,7 +3372,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": false,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -932,7 +3417,10 @@
     ],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [
       {
@@ -1036,7 +3524,10 @@
               "week": {
                 "done": 7,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "msam0000000",
@@ -1079,7 +3570,10 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 13,
+              "skipToday": false
             },
             {
               "id": "mlina000000",
@@ -1122,10 +3616,20 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             }
           ],
-          "everyoneToday": true
+          "everyoneToday": true,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -1145,7 +3649,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": false,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -1186,7 +3694,10 @@
     ],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [
       {
@@ -1299,7 +3810,10 @@
               "week": {
                 "done": 3,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000000",
@@ -1342,7 +3856,10 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 19,
+              "skipToday": false
             },
             {
               "id": "mpact000001",
@@ -1385,7 +3902,10 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 21,
+              "skipToday": false
             },
             {
               "id": "mpact000002",
@@ -1428,7 +3948,10 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 22,
+              "skipToday": false
             },
             {
               "id": "mpact000003",
@@ -1471,7 +3994,10 @@
               "week": {
                 "done": 3,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000004",
@@ -1514,7 +4040,10 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 19,
+              "skipToday": false
             },
             {
               "id": "mpact000005",
@@ -1557,7 +4086,10 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 21,
+              "skipToday": false
             },
             {
               "id": "mpact000006",
@@ -1600,7 +4132,10 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 23,
+              "skipToday": false
             },
             {
               "id": "mpact000007",
@@ -1643,7 +4178,10 @@
               "week": {
                 "done": 3,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000008",
@@ -1686,7 +4224,10 @@
               "week": {
                 "done": 4,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 18,
+              "skipToday": false
             },
             {
               "id": "mpact000009",
@@ -1729,10 +4270,20 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 21,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         },
         {
           "id": "ihabbusystr01",
@@ -1792,7 +4343,10 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000000",
@@ -1835,7 +4389,10 @@
               "week": {
                 "done": 3,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000001",
@@ -1878,7 +4435,10 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000002",
@@ -1921,7 +4481,10 @@
               "week": {
                 "done": 3,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000003",
@@ -1964,7 +4527,10 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000004",
@@ -2007,7 +4573,10 @@
               "week": {
                 "done": 3,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000005",
@@ -2050,7 +4619,10 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000006",
@@ -2093,7 +4665,10 @@
               "week": {
                 "done": 3,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000007",
@@ -2136,7 +4711,10 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000008",
@@ -2179,7 +4757,10 @@
               "week": {
                 "done": 3,
                 "of": 3
-              }
+              },
+              "count": 0,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "mpact000009",
@@ -2222,10 +4803,20 @@
               "week": {
                 "done": 4,
                 "of": 4
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -2285,7 +4876,11 @@
           "you": false
         }
       ],
-      "you": null
+      "you": null,
+      "own": false,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -2422,7 +5017,10 @@
     ],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [],
     "role": "member",
@@ -2507,7 +5105,10 @@
               "week": {
                 "done": 7,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 14,
+              "skipToday": false
             },
             {
               "id": "msam0000000",
@@ -2550,7 +5151,10 @@
               "week": {
                 "done": 6,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 13,
+              "skipToday": false
             },
             {
               "id": "mlina000000",
@@ -2593,10 +5197,20 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 13,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -2619,7 +5233,11 @@
       "you": {
         "due": 1,
         "done": 0
-      }
+      },
+      "own": false,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -2656,7 +5274,10 @@
     ],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [
       {
@@ -2760,7 +5381,10 @@
               "week": {
                 "done": 7,
                 "of": 7
-              }
+              },
+              "count": 1,
+              "total": 10,
+              "skipToday": false
             },
             {
               "id": "msara000001",
@@ -2803,10 +5427,20 @@
               "week": {
                 "done": 5,
                 "of": 7
-              }
+              },
+              "count": 0,
+              "total": 8,
+              "skipToday": false
             }
           ],
-          "everyoneToday": false
+          "everyoneToday": false,
+          "kind": "check",
+          "target": null,
+          "unit": null,
+          "part": "any",
+          "paused": false,
+          "goal": null,
+          "icon": null
         }
       ],
       "people": [
@@ -2824,7 +5458,11 @@
       "you": {
         "due": 1,
         "done": 0
-      }
+      },
+      "own": false,
+      "part": "afternoon",
+      "feel": null,
+      "cheers": []
     },
     "members": [
       {
@@ -2848,7 +5486,10 @@
     "seats": [],
     "ops": [
       "check",
-      "uncheck"
+      "uncheck",
+      "skip",
+      "slip",
+      "cheer"
     ],
     "activity": [],
     "role": "member",

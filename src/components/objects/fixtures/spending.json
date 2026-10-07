@@ -1,4 +1,2229 @@
 {
+  "empty-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Money",
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Money",
+      "currency": "USD",
+      "budget": null,
+      "budgetWords": null,
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 0,
+      "spends": 0,
+      "billsPaid": 0,
+      "due": 0,
+      "left": 0,
+      "perDay": null,
+      "pace": 0,
+      "words": {
+        "left": {
+          "en": "$0 spent",
+          "ar": "اتصرف $0"
+        },
+        "perDay": null,
+        "spent": {
+          "en": "$0 spent",
+          "ar": "اتصرف $0"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 0,
+        "held": 0,
+        "gone": 100,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($0)",
+          "ar": "كل نقطة 1% من الميزانية ($0)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 0,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 0,
+      "cats": [],
+      "list": [],
+      "bills": [],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 0,
+          "amountWords": {
+            "en": "$0",
+            "ar": "$0"
+          }
+        }
+      ],
+      "last": null,
+      "caps": [],
+      "billsMonthly": 0,
+      "billsYearly": 0,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        0,
+        0,
+        0
+      ],
+      "runningLast": null,
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": []
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Money",
+      "ar": "الفلوس"
+    }
+  },
+  "rich-en": {
+    "ok": true,
+    "kind": "spending",
+    "title": "Money",
+    "lang": "en",
+    "state": "live",
+    "version": 900,
+    "view": {
+      "title": "Money",
+      "currency": "USD",
+      "budget": 260000,
+      "budgetWords": {
+        "en": "$2,600",
+        "ar": "$2,600"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 110415,
+      "spends": 20415,
+      "billsPaid": 90000,
+      "due": 10198,
+      "left": 139387,
+      "perDay": 4806,
+      "pace": 234839,
+      "words": {
+        "left": {
+          "en": "$1,393.87 left",
+          "ar": "فاضل $1,393.87"
+        },
+        "perDay": {
+          "en": "About $48.06 a day",
+          "ar": "حوالي $48.06 في اليوم"
+        },
+        "spent": {
+          "en": "$1,104.15 spent",
+          "ar": "اتصرف $1,104.15"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 54,
+        "held": 4,
+        "gone": 42,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($26)",
+          "ar": "كل نقطة 1% من الميزانية ($26)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 4250,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 11840,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 4325,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 0,
+      "cats": [
+        {
+          "cat": "bills",
+          "mark": "receipt",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "eating",
+          "mark": "utensils",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 5700,
+          "amountWords": {
+            "en": "$57",
+            "ar": "$57"
+          }
+        },
+        {
+          "cat": "shopping",
+          "mark": "bag",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": 5390,
+          "amountWords": {
+            "en": "$53.90",
+            "ar": "$53.90"
+          }
+        },
+        {
+          "cat": "transport",
+          "mark": "car",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4250,
+          "amountWords": {
+            "en": "$42.50",
+            "ar": "$42.50"
+          }
+        },
+        {
+          "cat": "gifts",
+          "mark": "gift",
+          "name": {
+            "en": "Gifts",
+            "ar": "هدايا"
+          },
+          "amount": 3800,
+          "amountWords": {
+            "en": "$38",
+            "ar": "$38"
+          }
+        },
+        {
+          "cat": "health",
+          "mark": "heart",
+          "name": {
+            "en": "Health",
+            "ar": "صحة"
+          },
+          "amount": 1275,
+          "amountWords": {
+            "en": "$12.75",
+            "ar": "$12.75"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "irs0000000266",
+          "what": "T-shirt",
+          "amount": 3050,
+          "amountWords": {
+            "en": "$30.50",
+            "ar": "$30.50"
+          },
+          "refund": false,
+          "cat": "shopping",
+          "mark": "bag",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "irv0000000002",
+          "what": "Pharmacy",
+          "amount": 1275,
+          "amountWords": {
+            "en": "$12.75",
+            "ar": "$12.75"
+          },
+          "refund": false,
+          "cat": "health",
+          "mark": "heart",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": true,
+          "from": "receipt"
+        },
+        {
+          "id": "irv0000000001",
+          "what": "Bookshop",
+          "amount": 2340,
+          "amountWords": {
+            "en": "$23.40",
+            "ar": "$23.40"
+          },
+          "refund": false,
+          "cat": "shopping",
+          "mark": "bag",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": true,
+          "from": "mail"
+        },
+        {
+          "id": "irs0000000265",
+          "what": "Birthday present",
+          "amount": 3800,
+          "amountWords": {
+            "en": "$38",
+            "ar": "$38"
+          },
+          "refund": false,
+          "cat": "gifts",
+          "mark": "gift",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "irs0000000264",
+          "what": "Dinner out",
+          "amount": 5700,
+          "amountWords": {
+            "en": "$57",
+            "ar": "$57"
+          },
+          "refund": false,
+          "cat": "eating",
+          "mark": "utensils",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "irs0000000263",
+          "what": "Fuel",
+          "amount": 4250,
+          "amountWords": {
+            "en": "$42.50",
+            "ar": "$42.50"
+          },
+          "refund": false,
+          "cat": "transport",
+          "mark": "car",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        }
+      ],
+      "bills": [
+        {
+          "id": "irb0000000001",
+          "name": "Rent",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "⁨Mahmoud⁩",
+              "ar": "⁨Mahmoud⁩"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
+        },
+        {
+          "id": "irb0000000004",
+          "name": "Streaming",
+          "amount": 1599,
+          "amountWords": {
+            "en": "$15.99",
+            "ar": "$15.99"
+          },
+          "due": 8,
+          "dueDay": "2026-10-08",
+          "dueWords": {
+            "en": "Thu 8 Oct",
+            "ar": "الخميس 8 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 8 Oct",
+            "ar": "يوم الخميس 8 أكتوبر"
+          },
+          "every": "month",
+          "sub": true,
+          "thisMonth": true,
+          "monthly": 1599
+        },
+        {
+          "id": "irb0000000005",
+          "name": "Music",
+          "amount": 1099,
+          "amountWords": {
+            "en": "$10.99",
+            "ar": "$10.99"
+          },
+          "due": 12,
+          "dueDay": "2026-10-12",
+          "dueWords": {
+            "en": "Mon 12 Oct",
+            "ar": "الاتنين 12 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Mon 12 Oct",
+            "ar": "يوم الاتنين 12 أكتوبر"
+          },
+          "every": "month",
+          "sub": true,
+          "thisMonth": true,
+          "monthly": 1099
+        },
+        {
+          "id": "irb0000000002",
+          "name": "Phone",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
+        },
+        {
+          "id": "irb0000000003",
+          "name": "Internet",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
+        },
+        {
+          "id": "irb0000000006",
+          "name": "Car insurance",
+          "amount": 42000,
+          "amountWords": {
+            "en": "$420",
+            "ar": "$420"
+          },
+          "due": 14,
+          "dueDay": "2026-11-14",
+          "dueWords": {
+            "en": "Sat 14 Nov",
+            "ar": "السبت 14 نوفمبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Sat 14 Nov",
+            "ar": "يوم السبت 14 نوفمبر"
+          },
+          "every": "year",
+          "sub": false,
+          "thisMonth": false,
+          "monthly": 3500
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "Mahmoud",
+          "you": false,
+          "amount": 20415,
+          "amountWords": {
+            "en": "$204.15",
+            "ar": "$204.15"
+          }
+        }
+      ],
+      "last": {
+        "spent": 212398,
+        "words": {
+          "en": "$2,123.98",
+          "ar": "$2,123.98"
+        }
+      },
+      "caps": [
+        {
+          "cat": "eating",
+          "mark": "utensils",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "cap": 30000,
+          "spent": 5700,
+          "left": 24300,
+          "words": {
+            "en": "$243 left of $300",
+            "ar": "فاضل $243 من $300"
+          }
+        },
+        {
+          "cat": "groceries",
+          "mark": "cart",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "cap": 60000,
+          "spent": 0,
+          "left": 60000,
+          "words": {
+            "en": "$600 left of $600",
+            "ar": "فاضل $600 من $600"
+          }
+        },
+        {
+          "cat": "fun",
+          "mark": "ticket",
+          "name": {
+            "en": "Going out",
+            "ar": "خروج"
+          },
+          "cap": 12000,
+          "spent": 0,
+          "left": 12000,
+          "words": {
+            "en": "$120 left of $120",
+            "ar": "فاضل $120 من $120"
+          }
+        }
+      ],
+      "billsMonthly": 103698,
+      "billsYearly": 1244376,
+      "goals": [
+        {
+          "id": "irg0000000001",
+          "name": "Lisbon",
+          "target": 150000,
+          "saved": 60000,
+          "by": "2027-06-01",
+          "words": {
+            "en": "$600 of $1,500",
+            "ar": "$600 من $1,500"
+          },
+          "reached": false
+        },
+        {
+          "id": "irg0000000002",
+          "name": "New laptop",
+          "target": 180000,
+          "saved": 135000,
+          "by": null,
+          "words": {
+            "en": "$1,350 of $1,800",
+            "ar": "$1,350 من $1,800"
+          },
+          "reached": false
+        }
+      ],
+      "review": [
+        {
+          "id": "irv0000000002",
+          "what": "Pharmacy",
+          "amount": 1275,
+          "amountWords": {
+            "en": "$12.75",
+            "ar": "$12.75"
+          },
+          "refund": false,
+          "cat": "health",
+          "mark": "heart",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": true,
+          "from": "receipt"
+        },
+        {
+          "id": "irv0000000001",
+          "what": "Bookshop",
+          "amount": 2340,
+          "amountWords": {
+            "en": "$23.40",
+            "ar": "$23.40"
+          },
+          "refund": false,
+          "cat": "shopping",
+          "mark": "bag",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨Mahmoud⁩",
+            "ar": "⁨Mahmoud⁩"
+          },
+          "yours": false,
+          "review": true,
+          "from": "mail"
+        }
+      ],
+      "incomes": [
+        {
+          "id": "iri0000000001",
+          "what": "Salary",
+          "amount": 320000,
+          "amountWords": {
+            "en": "$3,200",
+            "ar": "$3,200"
+          },
+          "day": "2026-10-01"
+        }
+      ],
+      "income": 320000,
+      "running": [
+        94250,
+        106090,
+        110415
+      ],
+      "runningLast": [
+        94950,
+        106350,
+        112650,
+        113250,
+        113250,
+        115800,
+        123600,
+        125999,
+        131299,
+        133599,
+        133599,
+        144698,
+        149948,
+        152448,
+        162598,
+        163348,
+        163348,
+        166048,
+        172148,
+        176148,
+        181298,
+        192998,
+        192998,
+        193698,
+        198798,
+        201448,
+        209548,
+        209998,
+        209998,
+        212398
+      ],
+      "catOrder": [
+        "eating",
+        "transport",
+        "groceries",
+        "shopping",
+        "gifts",
+        "fun",
+        "home",
+        "health",
+        "bills",
+        "travel",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Birthday present",
+          "cat": "gifts",
+          "mark": "gift",
+          "amount": 3800,
+          "count": 31
+        },
+        {
+          "what": "T-shirt",
+          "cat": "shopping",
+          "mark": "bag",
+          "amount": 3050,
+          "count": 30
+        },
+        {
+          "what": "Fuel",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4250,
+          "count": 28
+        },
+        {
+          "what": "Market",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 2400,
+          "count": 28
+        },
+        {
+          "what": "Coffee",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 28
+        },
+        {
+          "what": "Cinema",
+          "cat": "fun",
+          "mark": "ticket",
+          "amount": 2500,
+          "count": 28
+        },
+        {
+          "what": "Dinner out",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 5700,
+          "count": 17
+        },
+        {
+          "what": "Taxi",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 1650,
+          "count": 17
+        },
+        {
+          "what": "Cleaning things",
+          "cat": "home",
+          "mark": "house",
+          "amount": 2100,
+          "count": 17
+        },
+        {
+          "what": "Pharmacy",
+          "cat": "health",
+          "mark": "heart",
+          "amount": 1275,
+          "count": 15
+        },
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6750,
+          "count": 15
+        },
+        {
+          "what": "Lunch",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 1650,
+          "count": 13
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "Mahmoud",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [
+      {
+        "at": 1791014400000,
+        "name": null,
+        "line": {
+          "en": "Mahmoud: Pharmacy, $12.75",
+          "ar": "Mahmoud: Pharmacy $12.75"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Money",
+      "ar": "الفلوس"
+    }
+  },
+  "rich-ar": {
+    "ok": true,
+    "kind": "spending",
+    "title": "الفلوس",
+    "lang": "ar",
+    "state": "live",
+    "version": 400,
+    "view": {
+      "title": "الفلوس",
+      "currency": "USD",
+      "budget": 260000,
+      "budgetWords": {
+        "en": "$2,600",
+        "ar": "$2,600"
+      },
+      "period": {
+        "start": "2026-10-01",
+        "end": "2026-10-31",
+        "days": 31,
+        "today": 3,
+        "left": 29,
+        "words": {
+          "en": "October",
+          "ar": "أكتوبر"
+        }
+      },
+      "spent": 106800,
+      "spends": 16800,
+      "billsPaid": 90000,
+      "due": 10198,
+      "left": 143002,
+      "perDay": 4931,
+      "pace": 234839,
+      "words": {
+        "left": {
+          "en": "$1,430.02 left",
+          "ar": "فاضل $1,430.02"
+        },
+        "perDay": {
+          "en": "About $49.31 a day",
+          "ar": "حوالي $49.31 في اليوم"
+        },
+        "spent": {
+          "en": "$1,068 spent",
+          "ar": "اتصرف $1,068"
+        }
+      },
+      "jar": {
+        "dots": 100,
+        "full": 55,
+        "held": 4,
+        "gone": 41,
+        "legend": {
+          "en": "Each dot is 1% of the budget ($26)",
+          "ar": "كل نقطة 1% من الميزانية ($26)"
+        }
+      },
+      "days": [
+        {
+          "day": "2026-10-01",
+          "spent": 4250,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-02",
+          "spent": 9500,
+          "none": false,
+          "today": false,
+          "future": false
+        },
+        {
+          "day": "2026-10-03",
+          "spent": 3050,
+          "none": false,
+          "today": true,
+          "future": false
+        },
+        {
+          "day": "2026-10-04",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-05",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-06",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-07",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-08",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-09",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-10",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-11",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-12",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-13",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-14",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-15",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-16",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-17",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-18",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-19",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-20",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-21",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-22",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-23",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-24",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-25",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-26",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-27",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-28",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-29",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-30",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        },
+        {
+          "day": "2026-10-31",
+          "spent": 0,
+          "none": false,
+          "today": false,
+          "future": true
+        }
+      ],
+      "quiet": 0,
+      "cats": [
+        {
+          "cat": "bills",
+          "mark": "receipt",
+          "name": {
+            "en": "Bills",
+            "ar": "فواتير"
+          },
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          }
+        },
+        {
+          "cat": "eating",
+          "mark": "utensils",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "amount": 5700,
+          "amountWords": {
+            "en": "$57",
+            "ar": "$57"
+          }
+        },
+        {
+          "cat": "transport",
+          "mark": "car",
+          "name": {
+            "en": "Getting around",
+            "ar": "مواصلات"
+          },
+          "amount": 4250,
+          "amountWords": {
+            "en": "$42.50",
+            "ar": "$42.50"
+          }
+        },
+        {
+          "cat": "gifts",
+          "mark": "gift",
+          "name": {
+            "en": "Gifts",
+            "ar": "هدايا"
+          },
+          "amount": 3800,
+          "amountWords": {
+            "en": "$38",
+            "ar": "$38"
+          }
+        },
+        {
+          "cat": "shopping",
+          "mark": "bag",
+          "name": {
+            "en": "Shopping",
+            "ar": "شوبينج"
+          },
+          "amount": 3050,
+          "amountWords": {
+            "en": "$30.50",
+            "ar": "$30.50"
+          }
+        }
+      ],
+      "list": [
+        {
+          "id": "ias0000000091",
+          "what": "تيشيرت",
+          "amount": 3050,
+          "amountWords": {
+            "en": "$30.50",
+            "ar": "$30.50"
+          },
+          "refund": false,
+          "cat": "shopping",
+          "mark": "bag",
+          "day": "2026-10-03",
+          "dayWords": {
+            "en": "Sat 3 Oct",
+            "ar": "السبت 3 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨محمود⁩",
+            "ar": "⁨محمود⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "ias0000000090",
+          "what": "هدية عيد ميلاد",
+          "amount": 3800,
+          "amountWords": {
+            "en": "$38",
+            "ar": "$38"
+          },
+          "refund": false,
+          "cat": "gifts",
+          "mark": "gift",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨محمود⁩",
+            "ar": "⁨محمود⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "ias0000000089",
+          "what": "عشا برا",
+          "amount": 5700,
+          "amountWords": {
+            "en": "$57",
+            "ar": "$57"
+          },
+          "refund": false,
+          "cat": "eating",
+          "mark": "utensils",
+          "day": "2026-10-02",
+          "dayWords": {
+            "en": "Fri 2 Oct",
+            "ar": "الجمعة 2 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨محمود⁩",
+            "ar": "⁨محمود⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        },
+        {
+          "id": "ias0000000088",
+          "what": "بنزين",
+          "amount": 4250,
+          "amountWords": {
+            "en": "$42.50",
+            "ar": "$42.50"
+          },
+          "refund": false,
+          "cat": "transport",
+          "mark": "car",
+          "day": "2026-10-01",
+          "dayWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "by": "mmahmoud000",
+          "byName": {
+            "en": "⁨محمود⁩",
+            "ar": "⁨محمود⁩"
+          },
+          "yours": false,
+          "review": false,
+          "from": null
+        }
+      ],
+      "bills": [
+        {
+          "id": "iab0000000001",
+          "name": "الإيجار",
+          "amount": 90000,
+          "amountWords": {
+            "en": "$900",
+            "ar": "$900"
+          },
+          "due": 1,
+          "dueDay": "2026-10-01",
+          "dueWords": {
+            "en": "Thu 1 Oct",
+            "ar": "الخميس 1 أكتوبر"
+          },
+          "paid": {
+            "amount": 90000,
+            "by": "mmahmoud000",
+            "byName": {
+              "en": "⁨محمود⁩",
+              "ar": "⁨محمود⁩"
+            },
+            "day": "2026-10-01"
+          },
+          "status": "paid",
+          "words": {
+            "en": "Paid",
+            "ar": "اتدفعت"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
+        },
+        {
+          "id": "iab0000000004",
+          "name": "اشتراك أفلام",
+          "amount": 1599,
+          "amountWords": {
+            "en": "$15.99",
+            "ar": "$15.99"
+          },
+          "due": 8,
+          "dueDay": "2026-10-08",
+          "dueWords": {
+            "en": "Thu 8 Oct",
+            "ar": "الخميس 8 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 8 Oct",
+            "ar": "يوم الخميس 8 أكتوبر"
+          },
+          "every": "month",
+          "sub": true,
+          "thisMonth": true,
+          "monthly": 1599
+        },
+        {
+          "id": "iab0000000005",
+          "name": "اشتراك مزيكا",
+          "amount": 1099,
+          "amountWords": {
+            "en": "$10.99",
+            "ar": "$10.99"
+          },
+          "due": 12,
+          "dueDay": "2026-10-12",
+          "dueWords": {
+            "en": "Mon 12 Oct",
+            "ar": "الاتنين 12 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Mon 12 Oct",
+            "ar": "يوم الاتنين 12 أكتوبر"
+          },
+          "every": "month",
+          "sub": true,
+          "thisMonth": true,
+          "monthly": 1099
+        },
+        {
+          "id": "iab0000000002",
+          "name": "الموبايل",
+          "amount": 4000,
+          "amountWords": {
+            "en": "$40",
+            "ar": "$40"
+          },
+          "due": 15,
+          "dueDay": "2026-10-15",
+          "dueWords": {
+            "en": "Thu 15 Oct",
+            "ar": "الخميس 15 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Thu 15 Oct",
+            "ar": "يوم الخميس 15 أكتوبر"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
+        },
+        {
+          "id": "iab0000000003",
+          "name": "النت",
+          "amount": 3500,
+          "amountWords": {
+            "en": "$35",
+            "ar": "$35"
+          },
+          "due": 20,
+          "dueDay": "2026-10-20",
+          "dueWords": {
+            "en": "Tue 20 Oct",
+            "ar": "التلات 20 أكتوبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Tue 20 Oct",
+            "ar": "يوم التلات 20 أكتوبر"
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
+        },
+        {
+          "id": "iab0000000006",
+          "name": "تأمين العربية",
+          "amount": 42000,
+          "amountWords": {
+            "en": "$420",
+            "ar": "$420"
+          },
+          "due": 14,
+          "dueDay": "2026-11-14",
+          "dueWords": {
+            "en": "Sat 14 Nov",
+            "ar": "السبت 14 نوفمبر"
+          },
+          "paid": null,
+          "status": "due",
+          "words": {
+            "en": "Due Sat 14 Nov",
+            "ar": "يوم السبت 14 نوفمبر"
+          },
+          "every": "year",
+          "sub": false,
+          "thisMonth": false,
+          "monthly": 3500
+        }
+      ],
+      "people": [
+        {
+          "id": "mmahmoud000",
+          "name": "محمود",
+          "you": false,
+          "amount": 16800,
+          "amountWords": {
+            "en": "$168",
+            "ar": "$168"
+          }
+        }
+      ],
+      "last": {
+        "spent": 212398,
+        "words": {
+          "en": "$2,123.98",
+          "ar": "$2,123.98"
+        }
+      },
+      "caps": [
+        {
+          "cat": "eating",
+          "mark": "utensils",
+          "name": {
+            "en": "Eating out",
+            "ar": "أكل برا"
+          },
+          "cap": 30000,
+          "spent": 5700,
+          "left": 24300,
+          "words": {
+            "en": "$243 left of $300",
+            "ar": "فاضل $243 من $300"
+          }
+        },
+        {
+          "cat": "groceries",
+          "mark": "cart",
+          "name": {
+            "en": "Groceries",
+            "ar": "بقالة"
+          },
+          "cap": 60000,
+          "spent": 0,
+          "left": 60000,
+          "words": {
+            "en": "$600 left of $600",
+            "ar": "فاضل $600 من $600"
+          }
+        }
+      ],
+      "billsMonthly": 103698,
+      "billsYearly": 1244376,
+      "goals": [
+        {
+          "id": "iag0000000001",
+          "name": "رحلة لشبونة",
+          "target": 150000,
+          "saved": 60000,
+          "by": "2027-06-01",
+          "words": {
+            "en": "$600 of $1,500",
+            "ar": "$600 من $1,500"
+          },
+          "reached": false
+        }
+      ],
+      "review": [],
+      "incomes": [
+        {
+          "id": "iai0000000001",
+          "what": "المرتب",
+          "amount": 320000,
+          "amountWords": {
+            "en": "$3,200",
+            "ar": "$3,200"
+          },
+          "day": "2026-10-01"
+        }
+      ],
+      "income": 320000,
+      "running": [
+        94250,
+        103750,
+        106800
+      ],
+      "runningLast": [
+        94950,
+        106350,
+        112650,
+        113250,
+        113250,
+        115800,
+        123600,
+        125999,
+        131299,
+        133599,
+        133599,
+        144698,
+        149948,
+        152448,
+        162598,
+        163348,
+        163348,
+        166048,
+        172148,
+        176148,
+        181298,
+        192998,
+        192998,
+        193698,
+        198798,
+        201448,
+        209548,
+        209998,
+        209998,
+        212398
+      ],
+      "catOrder": [
+        "eating",
+        "transport",
+        "groceries",
+        "fun",
+        "gifts",
+        "home",
+        "shopping",
+        "health",
+        "bills",
+        "travel",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "قهوة",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 13
+        },
+        {
+          "what": "سوق",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 2400,
+          "count": 12
+        },
+        {
+          "what": "هدية عيد ميلاد",
+          "cat": "gifts",
+          "mark": "gift",
+          "amount": 3800,
+          "count": 10
+        },
+        {
+          "what": "سينما",
+          "cat": "fun",
+          "mark": "ticket",
+          "amount": 2500,
+          "count": 10
+        },
+        {
+          "what": "بنزين",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4250,
+          "count": 8
+        },
+        {
+          "what": "تاكسي",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 1650,
+          "count": 8
+        },
+        {
+          "what": "تيشيرت",
+          "cat": "shopping",
+          "mark": "bag",
+          "amount": 3050,
+          "count": 7
+        },
+        {
+          "what": "حاجات تنضيف",
+          "cat": "home",
+          "mark": "house",
+          "amount": 2100,
+          "count": 7
+        },
+        {
+          "what": "صيدلية",
+          "cat": "health",
+          "mark": "heart",
+          "amount": 2150,
+          "count": 6
+        },
+        {
+          "what": "غدا",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 1650,
+          "count": 4
+        },
+        {
+          "what": "عشا برا",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 5700,
+          "count": 3
+        },
+        {
+          "what": "بقالة",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6750,
+          "count": 3
+        }
+      ]
+    },
+    "members": [
+      {
+        "id": "mmahmoud000",
+        "name": "محمود",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "spend",
+      "edit",
+      "remove",
+      "pay",
+      "unpay"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "bills": {
+        "en": "Bills paid",
+        "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Money",
+      "ar": "الفلوس"
+    }
+  },
   "new-en": {
     "ok": true,
     "kind": "spending",
@@ -291,7 +2516,34 @@
           }
         }
       ],
-      "last": null
+      "last": null,
+      "caps": [],
+      "billsMonthly": 0,
+      "billsYearly": 0,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        0,
+        0,
+        0
+      ],
+      "runningLast": null,
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": []
     },
     "members": [
       {
@@ -318,12 +2570,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "home-en": {
@@ -679,7 +2935,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000003",
@@ -702,7 +2960,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000002",
@@ -725,7 +2985,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000001",
@@ -748,7 +3010,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -779,7 +3043,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
         },
         {
           "id": "ihb0000000002",
@@ -800,7 +3068,11 @@
           "words": {
             "en": "Due yesterday",
             "ar": "كانت امبارح"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3000
         },
         {
           "id": "ihb0000000003",
@@ -821,7 +3093,11 @@
           "words": {
             "en": "Due Thu 15 Oct",
             "ar": "يوم الخميس 15 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         },
         {
           "id": "ihb0000000004",
@@ -842,7 +3118,11 @@
           "words": {
             "en": "Due Tue 20 Oct",
             "ar": "يوم التلات 20 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
         }
       ],
       "people": [
@@ -873,7 +3153,94 @@
           "en": "$1,130",
           "ar": "$1,130"
         }
-      }
+      },
+      "caps": [],
+      "billsMonthly": 100500,
+      "billsYearly": 1206000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        96200,
+        96200,
+        98650
+      ],
+      "runningLast": [
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000
+      ],
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6200,
+          "count": 2
+        },
+        {
+          "what": "Fuel",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4000,
+          "count": 1
+        },
+        {
+          "what": "Coffee",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 1
+        },
+        {
+          "what": "Dinner out",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 8000,
+          "count": 1
+        }
+      ]
     },
     "members": [
       {
@@ -935,12 +3302,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "home-ar": {
@@ -1296,7 +3667,9 @@
             "en": "⁨لينا⁩",
             "ar": "⁨لينا⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000003",
@@ -1319,7 +3692,9 @@
             "en": "⁨محمود⁩",
             "ar": "⁨محمود⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000002",
@@ -1342,7 +3717,9 @@
             "en": "⁨محمود⁩",
             "ar": "⁨محمود⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000001",
@@ -1365,7 +3742,9 @@
             "en": "⁨لينا⁩",
             "ar": "⁨لينا⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -1396,7 +3775,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
         },
         {
           "id": "ihb0000000002",
@@ -1417,7 +3800,11 @@
           "words": {
             "en": "Due yesterday",
             "ar": "كانت امبارح"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3000
         },
         {
           "id": "ihb0000000003",
@@ -1438,7 +3825,11 @@
           "words": {
             "en": "Due Thu 15 Oct",
             "ar": "يوم الخميس 15 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         },
         {
           "id": "ihb0000000004",
@@ -1459,7 +3850,11 @@
           "words": {
             "en": "Due Tue 20 Oct",
             "ar": "يوم التلات 20 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
         }
       ],
       "people": [
@@ -1490,7 +3885,94 @@
           "en": "$1,130",
           "ar": "$1,130"
         }
-      }
+      },
+      "caps": [],
+      "billsMonthly": 100500,
+      "billsYearly": 1206000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        96200,
+        96200,
+        98650
+      ],
+      "runningLast": [
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000
+      ],
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "بقالة",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6200,
+          "count": 2
+        },
+        {
+          "what": "بنزين",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4000,
+          "count": 1
+        },
+        {
+          "what": "قهوة",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 1
+        },
+        {
+          "what": "عشا برا",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 8000,
+          "count": 1
+        }
+      ]
     },
     "members": [
       {
@@ -1552,12 +4034,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "flat-busy-en": {
@@ -1942,7 +4428,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000095",
@@ -1965,7 +4453,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000105",
@@ -1988,7 +4478,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000104",
@@ -2011,7 +4503,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000103",
@@ -2034,7 +4528,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000102",
@@ -2057,7 +4553,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000101",
@@ -2080,7 +4578,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000100",
@@ -2103,7 +4603,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000099",
@@ -2126,7 +4628,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000098",
@@ -2149,7 +4653,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000097",
@@ -2172,7 +4678,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000084",
@@ -2195,7 +4703,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000094",
@@ -2218,7 +4728,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000093",
@@ -2241,7 +4753,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000092",
@@ -2264,7 +4778,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000091",
@@ -2287,7 +4803,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000090",
@@ -2310,7 +4828,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000089",
@@ -2333,7 +4853,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000088",
@@ -2356,7 +4878,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000087",
@@ -2379,7 +4903,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000086",
@@ -2402,7 +4928,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000085",
@@ -2425,7 +4953,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000083",
@@ -2448,7 +4978,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000082",
@@ -2471,7 +5003,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000081",
@@ -2494,7 +5028,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000080",
@@ -2517,7 +5053,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000079",
@@ -2540,7 +5078,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000078",
@@ -2563,7 +5103,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000077",
@@ -2586,7 +5128,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000076",
@@ -2609,7 +5153,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000075",
@@ -2632,7 +5178,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000074",
@@ -2655,7 +5203,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000073",
@@ -2678,7 +5228,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000072",
@@ -2701,7 +5253,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000071",
@@ -2724,7 +5278,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000070",
@@ -2747,7 +5303,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000069",
@@ -2770,7 +5328,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000068",
@@ -2793,7 +5353,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000067",
@@ -2816,7 +5378,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000066",
@@ -2839,7 +5403,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000065",
@@ -2862,7 +5428,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000064",
@@ -2885,7 +5453,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000063",
@@ -2908,7 +5478,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000062",
@@ -2931,7 +5503,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000061",
@@ -2954,7 +5528,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000060",
@@ -2977,7 +5553,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000059",
@@ -3000,7 +5578,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000058",
@@ -3023,7 +5603,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000057",
@@ -3046,7 +5628,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000056",
@@ -3069,7 +5653,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000055",
@@ -3092,7 +5678,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000054",
@@ -3115,7 +5703,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000053",
@@ -3138,7 +5728,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000052",
@@ -3161,7 +5753,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000051",
@@ -3184,7 +5778,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000050",
@@ -3207,7 +5803,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000049",
@@ -3230,7 +5828,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000048",
@@ -3253,7 +5853,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000047",
@@ -3276,7 +5878,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000046",
@@ -3299,7 +5903,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000045",
@@ -3322,7 +5928,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000044",
@@ -3345,7 +5953,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000043",
@@ -3368,7 +5978,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000042",
@@ -3391,7 +6003,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000041",
@@ -3414,7 +6028,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000040",
@@ -3437,7 +6053,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000039",
@@ -3460,7 +6078,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000038",
@@ -3483,7 +6103,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000037",
@@ -3506,7 +6128,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000036",
@@ -3529,7 +6153,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000035",
@@ -3552,7 +6178,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000034",
@@ -3575,7 +6203,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000033",
@@ -3598,7 +6228,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000032",
@@ -3621,7 +6253,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000031",
@@ -3644,7 +6278,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000030",
@@ -3667,7 +6303,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000029",
@@ -3690,7 +6328,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000028",
@@ -3713,7 +6353,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000027",
@@ -3736,7 +6378,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000026",
@@ -3759,7 +6403,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000025",
@@ -3782,7 +6428,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000024",
@@ -3805,7 +6453,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000023",
@@ -3828,7 +6478,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000022",
@@ -3851,7 +6503,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000021",
@@ -3874,7 +6528,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000020",
@@ -3897,7 +6553,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000019",
@@ -3920,7 +6578,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000018",
@@ -3943,7 +6603,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000017",
@@ -3966,7 +6628,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000016",
@@ -3989,7 +6653,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000015",
@@ -4012,7 +6678,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000014",
@@ -4035,7 +6703,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000013",
@@ -4058,7 +6728,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000012",
@@ -4081,7 +6753,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000011",
@@ -4104,7 +6778,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000010",
@@ -4127,7 +6803,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000009",
@@ -4150,7 +6828,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000008",
@@ -4173,7 +6853,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000007",
@@ -4196,7 +6878,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000006",
@@ -4219,7 +6903,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000005",
@@ -4242,7 +6928,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000004",
@@ -4265,7 +6953,9 @@
             "en": "⁨Maya⁩",
             "ar": "⁨Maya⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000003",
@@ -4288,7 +6978,9 @@
             "en": "⁨Omar⁩",
             "ar": "⁨Omar⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000002",
@@ -4311,7 +7003,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ifs0000000001",
@@ -4334,7 +7028,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -4365,7 +7061,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 120000
         },
         {
           "id": "ifb0000000002",
@@ -4394,7 +7094,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 9000
         },
         {
           "id": "ifb0000000003",
@@ -4423,7 +7127,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         },
         {
           "id": "ifb0000000004",
@@ -4452,7 +7160,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 2500
         },
         {
           "id": "ifb0000000005",
@@ -4473,7 +7185,11 @@
           "words": {
             "en": "Due Sat 10 Oct",
             "ar": "يوم السبت 10 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3000
         },
         {
           "id": "ifb0000000006",
@@ -4494,7 +7210,11 @@
           "words": {
             "en": "Due Mon 12 Oct",
             "ar": "يوم الاتنين 12 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 1500
         }
       ],
       "people": [
@@ -4545,7 +7265,129 @@
           "en": "€5,301.50",
           "ar": "€5,301.50"
         }
-      }
+      },
+      "caps": [],
+      "billsMonthly": 140000,
+      "billsYearly": 1680000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        185286,
+        251796,
+        319530,
+        388128,
+        440310,
+        511716,
+        579153,
+        645181,
+        699800
+      ],
+      "runningLast": [
+        45351,
+        82953,
+        279806,
+        328910,
+        379265,
+        430871,
+        432460,
+        449653,
+        462985,
+        481456,
+        496066,
+        506815,
+        522703,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150,
+        530150
+      ],
+      "catOrder": [
+        "eating",
+        "groceries",
+        "transport",
+        "home",
+        "fun",
+        "health",
+        "bills",
+        "shopping",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 3184,
+          "count": 23
+        },
+        {
+          "what": "Bus pass top up",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 3329,
+          "count": 23
+        },
+        {
+          "what": "Takeaway",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 8758,
+          "count": 23
+        },
+        {
+          "what": "Coffee",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 5187,
+          "count": 23
+        },
+        {
+          "what": "Market",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 7045,
+          "count": 22
+        },
+        {
+          "what": "Pharmacy",
+          "cat": "health",
+          "mark": "heart",
+          "amount": 3474,
+          "count": 22
+        },
+        {
+          "what": "Cinema",
+          "cat": "fun",
+          "mark": "ticket",
+          "amount": 1471,
+          "count": 22
+        },
+        {
+          "what": "Cleaning things",
+          "cat": "home",
+          "mark": "house",
+          "amount": 6900,
+          "count": 22
+        }
+      ]
     },
     "members": [
       {
@@ -4609,12 +7451,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "bills-paid-en": {
@@ -4944,7 +7790,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -4975,7 +7823,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
         },
         {
           "id": "ipb0000000002",
@@ -5004,7 +7856,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         }
       ],
       "people": [
@@ -5029,7 +7885,42 @@
           }
         }
       ],
-      "last": null
+      "last": null,
+      "caps": [],
+      "billsMonthly": 94000,
+      "billsYearly": 1128000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        90000,
+        95400,
+        99400
+      ],
+      "runningLast": null,
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 5400,
+          "count": 1
+        }
+      ]
     },
     "members": [
       {
@@ -5079,12 +7970,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "partner-en": {
@@ -5440,7 +8335,9 @@
             "en": "You",
             "ar": "إنت"
           },
-          "yours": true
+          "yours": true,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000003",
@@ -5463,7 +8360,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000002",
@@ -5486,7 +8385,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000001",
@@ -5509,7 +8410,9 @@
             "en": "You",
             "ar": "إنت"
           },
-          "yours": true
+          "yours": true,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -5540,7 +8443,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
         },
         {
           "id": "ihb0000000002",
@@ -5561,7 +8468,11 @@
           "words": {
             "en": "Due yesterday",
             "ar": "كانت امبارح"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3000
         },
         {
           "id": "ihb0000000003",
@@ -5582,7 +8493,11 @@
           "words": {
             "en": "Due Thu 15 Oct",
             "ar": "يوم الخميس 15 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         },
         {
           "id": "ihb0000000004",
@@ -5603,7 +8518,11 @@
           "words": {
             "en": "Due Tue 20 Oct",
             "ar": "يوم التلات 20 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
         }
       ],
       "people": [
@@ -5634,7 +8553,94 @@
           "en": "$1,130",
           "ar": "$1,130"
         }
-      }
+      },
+      "caps": [],
+      "billsMonthly": 100500,
+      "billsYearly": 1206000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        96200,
+        96200,
+        98650
+      ],
+      "runningLast": [
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000
+      ],
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6200,
+          "count": 2
+        },
+        {
+          "what": "Fuel",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4000,
+          "count": 1
+        },
+        {
+          "what": "Coffee",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 1
+        },
+        {
+          "what": "Dinner out",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 8000,
+          "count": 1
+        }
+      ]
     },
     "members": [
       {
@@ -5692,12 +8698,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   },
   "watcher-en": {
@@ -6053,7 +9063,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000003",
@@ -6076,7 +9088,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000002",
@@ -6099,7 +9113,9 @@
             "en": "⁨Mahmoud⁩",
             "ar": "⁨Mahmoud⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         },
         {
           "id": "ihs0000000001",
@@ -6122,7 +9138,9 @@
             "en": "⁨Lina⁩",
             "ar": "⁨Lina⁩"
           },
-          "yours": false
+          "yours": false,
+          "review": false,
+          "from": null
         }
       ],
       "bills": [
@@ -6153,7 +9171,11 @@
           "words": {
             "en": "Paid",
             "ar": "اتدفعت"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 90000
         },
         {
           "id": "ihb0000000002",
@@ -6174,7 +9196,11 @@
           "words": {
             "en": "Due yesterday",
             "ar": "كانت امبارح"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3000
         },
         {
           "id": "ihb0000000003",
@@ -6195,7 +9221,11 @@
           "words": {
             "en": "Due Thu 15 Oct",
             "ar": "يوم الخميس 15 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 4000
         },
         {
           "id": "ihb0000000004",
@@ -6216,7 +9246,11 @@
           "words": {
             "en": "Due Tue 20 Oct",
             "ar": "يوم التلات 20 أكتوبر"
-          }
+          },
+          "every": "month",
+          "sub": false,
+          "thisMonth": true,
+          "monthly": 3500
         }
       ],
       "people": [
@@ -6247,7 +9281,87 @@
           "en": "$1,130",
           "ar": "$1,130"
         }
-      }
+      },
+      "caps": [],
+      "billsMonthly": 100500,
+      "billsYearly": 1206000,
+      "goals": [],
+      "review": [],
+      "incomes": [],
+      "income": 0,
+      "running": [
+        96200,
+        96200,
+        98650
+      ],
+      "runningLast": [
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        90000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        105000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000,
+        113000
+      ],
+      "catOrder": [
+        "groceries",
+        "eating",
+        "transport",
+        "home",
+        "bills",
+        "shopping",
+        "fun",
+        "health",
+        "travel",
+        "gifts",
+        "other"
+      ],
+      "picks": [
+        {
+          "what": "Eating out",
+          "cat": "eating",
+          "mark": "utensils",
+          "amount": 450,
+          "count": 2
+        },
+        {
+          "what": "Groceries",
+          "cat": "groceries",
+          "mark": "cart",
+          "amount": 6200,
+          "count": 2
+        },
+        {
+          "what": "Getting around",
+          "cat": "transport",
+          "mark": "car",
+          "amount": 4000,
+          "count": 1
+        }
+      ]
     },
     "members": [
       {
@@ -6299,12 +9413,16 @@
       "bills": {
         "en": "Bills paid",
         "ar": "الفواتير اتدفعت"
+      },
+      "goal": {
+        "en": "Goal reached",
+        "ar": "الهدف اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Spending",
-      "ar": "المصاريف"
+      "en": "Money",
+      "ar": "الفلوس"
     }
   }
 }

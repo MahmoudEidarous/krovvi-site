@@ -21,5 +21,7 @@ import cycle from "./cycle.json";
 import meals from "./meals.json";
 import watchlist from "./watchlist.json";
 import countdown from "./countdown.json";
+import kitchen from "./kitchen.json";
+import health from "./health.json";
 
-export const FIXTURES: Record<string, Record<string, unknown>> = { food, workout, habits, todo, shopping, spending, split, trip, plan, meds, mood, learn, gift, decide, cycle, meals, watchlist, countdown };
+export const FIXTURES: Record<string, Record<string, unknown>> = { food, workout, habits, todo, shopping, spending, split, trip, plan, meds, mood, learn, gift, decide, cycle, meals, watchlist, countdown, kitchen, health };

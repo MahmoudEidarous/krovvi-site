@@ -1,4 +1,749 @@
 {
+  "empty-en": {
+    "ok": true,
+    "kind": "food",
+    "title": "Nutrition",
+    "lang": "en",
+    "state": "live",
+    "version": 1,
+    "view": {
+      "title": "Nutrition",
+      "today": "2026-10-03",
+      "full": false,
+      "goal": {
+        "kcal": null,
+        "protein": null,
+        "carbs": null,
+        "fat": null
+      },
+      "totals": {
+        "kcal": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0
+      },
+      "ring": {
+        "dots": 40,
+        "filled": 0,
+        "perDot": 50
+      },
+      "inner": null,
+      "proteinReached": false,
+      "meals": null,
+      "photo": false,
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": true
+        }
+      ],
+      "cheers": [],
+      "youCheered": false,
+      "words": {
+        "kcal": {
+          "en": "0 kcal",
+          "ar": "0 سعرة"
+        },
+        "protein": null,
+        "left": null
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": false,
+        "totals": {
+          "kcal": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
+    },
+    "members": [
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "cheer"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "protein": {
+        "en": "Protein goal reached",
+        "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Nutrition",
+      "ar": "التغذية"
+    }
+  },
+  "rich-en": {
+    "ok": true,
+    "kind": "food",
+    "title": "Nutrition",
+    "lang": "en",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "Nutrition",
+      "today": "2026-10-03",
+      "full": false,
+      "goal": {
+        "kcal": 2200,
+        "protein": 120,
+        "carbs": 250,
+        "fat": 70
+      },
+      "totals": {
+        "kcal": 1715,
+        "protein": 107,
+        "carbs": 169,
+        "fat": 63
+      },
+      "ring": {
+        "dots": 44,
+        "filled": 34,
+        "perDot": 50
+      },
+      "inner": {
+        "dots": 24,
+        "filled": 21,
+        "perDot": 5
+      },
+      "proteinReached": false,
+      "meals": null,
+      "photo": false,
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "kcal": 2000,
+          "protein": 102,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "kcal": 0,
+          "protein": 0,
+          "logged": false,
+          "today": false
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "kcal": 1790,
+          "protein": 128,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "kcal": 1815,
+          "protein": 76,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "kcal": 1505,
+          "protein": 51,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "kcal": 1830,
+          "protein": 86,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "kcal": 1715,
+          "protein": 107,
+          "logged": true,
+          "today": true
+        }
+      ],
+      "cheers": [
+        {
+          "id": "msam0000000",
+          "name": "Sam",
+          "you": false
+        }
+      ],
+      "youCheered": false,
+      "words": {
+        "kcal": {
+          "en": "1,715 of 2,200 kcal",
+          "ar": "1,715 من 2,200 سعرة"
+        },
+        "protein": {
+          "en": "107 of 120 g protein",
+          "ar": "107 من 120 جرام بروتين"
+        },
+        "left": {
+          "en": "485 kcal left",
+          "ar": "فاضل 485 سعرة"
+        }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1715,
+          "protein": 107,
+          "carbs": 169,
+          "fat": 63
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": 2500,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
+    },
+    "members": [
+      {
+        "id": "malex000000",
+        "name": "Alex",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      },
+      {
+        "id": "msam0000000",
+        "name": "Sam",
+        "role": "viewer",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [
+      {
+        "id": "msam0000000",
+        "name": "Sam"
+      }
+    ],
+    "ops": [
+      "cheer"
+    ],
+    "activity": [
+      {
+        "at": 1791043200000,
+        "name": "Sam",
+        "line": {
+          "en": "Sam cheered",
+          "ar": "تشجيع من Sam"
+        },
+        "moment": null
+      }
+    ],
+    "role": "member",
+    "momentWords": {
+      "protein": {
+        "en": "Protein goal reached",
+        "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Nutrition",
+      "ar": "التغذية"
+    }
+  },
+  "rich-ar": {
+    "ok": true,
+    "kind": "food",
+    "title": "التغذية",
+    "lang": "ar",
+    "state": "live",
+    "version": 7,
+    "view": {
+      "title": "التغذية",
+      "today": "2026-10-03",
+      "full": false,
+      "goal": {
+        "kcal": 1800,
+        "protein": 100,
+        "carbs": null,
+        "fat": null
+      },
+      "totals": {
+        "kcal": 1675,
+        "protein": 103,
+        "carbs": 166,
+        "fat": 62
+      },
+      "ring": {
+        "dots": 36,
+        "filled": 34,
+        "perDot": 50
+      },
+      "inner": {
+        "dots": 20,
+        "filled": 21,
+        "perDot": 5
+      },
+      "proteinReached": true,
+      "meals": null,
+      "photo": false,
+      "week": [
+        {
+          "day": "2026-09-27",
+          "label": {
+            "en": "Sun",
+            "ar": "الحد"
+          },
+          "kcal": 1675,
+          "protein": 103,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-09-28",
+          "label": {
+            "en": "Mon",
+            "ar": "الاتنين"
+          },
+          "kcal": 1625,
+          "protein": 106,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-09-29",
+          "label": {
+            "en": "Tue",
+            "ar": "التلات"
+          },
+          "kcal": 1555,
+          "protein": 69,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-09-30",
+          "label": {
+            "en": "Wed",
+            "ar": "الأربع"
+          },
+          "kcal": 1675,
+          "protein": 103,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-01",
+          "label": {
+            "en": "Thu",
+            "ar": "الخميس"
+          },
+          "kcal": 1625,
+          "protein": 106,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-02",
+          "label": {
+            "en": "Fri",
+            "ar": "الجمعة"
+          },
+          "kcal": 1555,
+          "protein": 69,
+          "logged": true,
+          "today": false
+        },
+        {
+          "day": "2026-10-03",
+          "label": {
+            "en": "Sat",
+            "ar": "السبت"
+          },
+          "kcal": 1675,
+          "protein": 103,
+          "logged": true,
+          "today": true
+        }
+      ],
+      "cheers": [],
+      "youCheered": false,
+      "words": {
+        "kcal": {
+          "en": "1,675 of 1,800 kcal",
+          "ar": "1,675 من 1,800 سعرة"
+        },
+        "protein": {
+          "en": "103 of 100 g protein",
+          "ar": "103 من 100 جرام بروتين"
+        },
+        "left": {
+          "en": "125 kcal left",
+          "ar": "فاضل 125 سعرة"
+        }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1675,
+          "protein": 103,
+          "carbs": 166,
+          "fat": 62
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": 2000,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
+    },
+    "members": [
+      {
+        "id": "msara000000",
+        "name": "سارة",
+        "role": "owner",
+        "you": false,
+        "krovvi": false,
+        "joined": true
+      }
+    ],
+    "you": null,
+    "seats": [],
+    "ops": [
+      "cheer"
+    ],
+    "activity": [],
+    "role": "member",
+    "momentWords": {
+      "protein": {
+        "en": "Protein goal reached",
+        "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
+      }
+    },
+    "momentFeel": {},
+    "kindName": {
+      "en": "Nutrition",
+      "ar": "التغذية"
+    }
+  },
   "new-en": {
     "ok": true,
     "kind": "food",
@@ -129,7 +874,84 @@
           "en": "2,200 kcal left",
           "ar": "فاضل 2,200 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": false,
+        "totals": {
+          "kcal": 0,
+          "protein": 0,
+          "carbs": 0,
+          "fat": 0
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -152,12 +974,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "day-en": {
@@ -296,7 +1122,84 @@
           "en": "310 kcal left",
           "ar": "فاضل 310 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1890,
+          "protein": 114,
+          "carbs": 172,
+          "fat": 79
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -342,12 +1245,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "day-ar": {
@@ -486,7 +1393,84 @@
           "en": "230 kcal left",
           "ar": "فاضل 230 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1570,
+          "protein": 102,
+          "carbs": 139,
+          "fat": 62
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -532,12 +1516,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "busy-en": {
@@ -688,7 +1676,84 @@
           "ar": "133 من 150 جرام بروتين"
         },
         "left": null
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 2670,
+          "protein": 133,
+          "carbs": 304,
+          "fat": 99
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -760,12 +1825,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "protein-en": {
@@ -904,7 +1973,84 @@
           "en": "150 kcal left",
           "ar": "فاضل 150 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 2050,
+          "protein": 139,
+          "carbs": 178,
+          "fat": 82
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -950,12 +2096,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "nogoal-en": {
@@ -1081,7 +2231,84 @@
           "ar": "29 جرام بروتين"
         },
         "left": null
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 500,
+          "protein": 29,
+          "carbs": 62,
+          "fat": 15
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -1104,12 +2331,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "buddy-en": {
@@ -1248,7 +2479,84 @@
           "en": "310 kcal left",
           "ar": "فاضل 310 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1890,
+          "protein": 114,
+          "carbs": 172,
+          "fat": 79
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -1289,12 +2597,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   },
   "buddy-ar": {
@@ -1433,7 +2745,84 @@
           "en": "230 kcal left",
           "ar": "فاضل 230 سعرة"
         }
-      }
+      },
+      "day": {
+        "day": "2026-10-03",
+        "logged": true,
+        "totals": {
+          "kcal": 1570,
+          "protein": 102,
+          "carbs": 139,
+          "fat": 62
+        },
+        "more": {
+          "fibre": 0,
+          "sugar": 0,
+          "satfat": 0,
+          "sodium": 0
+        },
+        "slots": [
+          {
+            "slot": "breakfast",
+            "name": {
+              "en": "Breakfast",
+              "ar": "الفطار"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "lunch",
+            "name": {
+              "en": "Lunch",
+              "ar": "الغدا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "dinner",
+            "name": {
+              "en": "Dinner",
+              "ar": "العشا"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          },
+          {
+            "slot": "snack",
+            "name": {
+              "en": "Snacks",
+              "ar": "سناكس"
+            },
+            "kcal": 0,
+            "protein": 0,
+            "meals": []
+          }
+        ],
+        "meals": [],
+        "water": 0,
+        "weight": null
+      },
+      "more": {
+        "fibre": 0,
+        "sugar": 0,
+        "satfat": 0,
+        "sodium": 0
+      },
+      "water": {
+        "ml": 0,
+        "goal": null,
+        "glass": 250
+      },
+      "weight": null,
+      "recents": [],
+      "frequent": [],
+      "foods": [],
+      "sets": []
     },
     "members": [
       {
@@ -1474,12 +2863,16 @@
       "protein": {
         "en": "Protein goal reached",
         "ar": "هدف البروتين اتحقق"
+      },
+      "water": {
+        "en": "Water goal reached",
+        "ar": "هدف المية اتحقق"
       }
     },
     "momentFeel": {},
     "kindName": {
-      "en": "Food",
-      "ar": "الأكل"
+      "en": "Nutrition",
+      "ar": "التغذية"
     }
   }
 }
