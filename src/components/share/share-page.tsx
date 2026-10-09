@@ -1,11 +1,17 @@
 "use client";
 
 /**
- * A shared chat on its page: the title, who shared it (only if they chose to
- * say), when, every message as the app draws it, and two ways on: Continue in
- * Krovvi (the app copies it into their own account, where their Krovvi
- * answers from their own memory) or Get Krovvi. An open is counted only once
- * the page has really been seen for a few seconds; a report reaches a person.
+ * A shared chat on its page, kept to the point (the owner, 9 October 2026, of
+ * sharing a chat: "it should simple and jsut soo god at what it is do ... see
+ * what cahtgpt does make something simialr easy good and to the point"): the
+ * title, when it was shared, every message as the app draws it, and one way
+ * on at the foot. On an iPhone that is Continue in Krovvi (the app copies
+ * the chat into their own account, where their Krovvi answers from their own
+ * memory), and Get Krovvi is offered only when the app did not open. Anywhere
+ * else it is Get Krovvi. Nothing else asks for the app: the pill that stood
+ * in the top corner and the line under the button are gone. A link made with
+ * its sharer's name, which the app no longer offers, still says it. An open
+ * is counted only once the page has really been seen for a few seconds.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
@@ -18,22 +24,21 @@ import { JOIN_URL } from "@/lib/site";
 import { ChatView, type MediaUrls } from "./chat-view";
 
 const C = {
-  shared: { en: "Shared from Krovvi", ar: "متشارك من كروفي" },
   sharedBy: { en: "Shared by", ar: "شاركه" },
   off: { en: "This link was turned off", ar: "اللينك ده اتقفل" },
   offLine: { en: "Whoever shared it stopped sharing it.", ar: "اللي شاركه وقف المشاركة." },
   gone: { en: "This link doesn’t work", ar: "اللينك ده مش شغال" },
   goneLine: { en: "Check it was copied whole.", ar: "اتأكد إنه اتنسخ كامل." },
   cont: { en: "Continue in Krovvi", ar: "كمّل في كروفي" },
-  contLine: { en: "Pick it up in your own Krovvi. Your Krovvi answers from what it knows about you.", ar: "كمّلها في كروفي بتاعك. كروفي بتاعك بيرد من اللي يعرفه عنك." },
   get: { en: "Get Krovvi", ar: "حمّل كروفي" },
   report: { en: "Report this page", ar: "بلّغ عن الصفحة دي" },
-  reported: { en: "Thanks. A person will look at it.", ar: "شكرا. حد هيبص عليها." },
+  // Only what is true: the report is kept; nobody is promised to read it.
+  reported: { en: "Thanks. It was reported.", ar: "شكرا. البلاغ اتسجل." },
   offline: { en: "Can’t reach this chat right now", ar: "مش قادر أوصل للشات ده دلوقتي" },
   offlineLine: { en: "Check your connection, then try again.", ar: "اتأكد من النت وجرب تاني." },
   again: { en: "Try again", ar: "جرب تاني" },
   noApp: { en: "Didn’t open? Krovvi isn’t on this phone yet.", ar: "ما فتحش؟ كروفي مش على الموبايل ده لسه." },
-  notIphone: { en: "Krovvi is on iPhone. Open this link there to continue the chat.", ar: "كروفي على الآيفون. افتح اللينك ده من الآيفون عشان تكمّل الشات." },
+  notIphone: { en: "Krovvi is on iPhone.", ar: "كروفي على الآيفون." },
 } satisfies Record<string, Words>;
 
 /** How long the page waits for the app to take over before it says the app is not there. */
@@ -144,19 +149,12 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
   }, [state]);
 
   const shellDir = lang === "ar" ? "rtl" : "ltr";
+  // Whose page this is, and nothing to tap but the way home: the one way on is at the foot.
   const head = (
-    <div className="flex items-center justify-between" style={{ height: 56 }}>
+    <div className="flex items-center" style={{ height: 56 }}>
       <a href="/" className="flex items-center gap-2" aria-label="Krovvi">
         <Mark size={22} />
         <span style={{ ...STEP.label, fontWeight: 600 }}>Krovvi</span>
-      </a>
-      <a
-        href={JOIN_URL}
-        onClick={keepLink}
-        className="rounded-full"
-        style={{ ...STEP.label, fontWeight: 600, padding: "6px 12px", background: INK.surfaceHi }}
-      >
-        {say(C.get, lang)}
       </a>
     </div>
   );
@@ -195,7 +193,7 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
           <bdi dir="auto">{share.title}</bdi>
         </h1>
         <p style={{ ...STEP.meta, color: INK.muted, marginTop: 4 }}>
-          {share.name ? `${say(C.sharedBy, lang)} ${share.name}` : say(C.shared, lang)} · {day(share.made_at, lang)}
+          {share.name ? `${say(C.sharedBy, lang)} ${share.name} · ${day(share.made_at, lang)}` : day(share.made_at, lang)}
         </p>
       </header>
       <div dir={contentDir}>
@@ -250,9 +248,7 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
                     {say(C.get, lang)}
                   </a>
                 </div>
-              ) : (
-                <p className="mt-2 text-center" style={{ ...STEP.meta, color: INK.muted }}>{say(C.contLine, lang)}</p>
-              )}
+              ) : null}
             </>
           )}
         </div>
