@@ -71,6 +71,7 @@ export {
   ThisOrThat,
   GuessStep,
   GuessWon,
+  GuessThink,
   GuessQuestion,
   Trivia,
   EmojiRiddle,

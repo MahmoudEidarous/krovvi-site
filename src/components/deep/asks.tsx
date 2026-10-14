@@ -211,7 +211,7 @@ export function AskStack({
   className,
   style,
 }: Piece & {
-  /** "1 of 3"; one question alone says "Krovvi wants to know" in the app (t.people.qTitle). */
+  /** "1 of 3"; one question alone says "Krovvi wants to get this right" in the app (krovvi-stack.tsx:200, i18n.ts:1106). */
   label: string;
   next?: string[];
   /** The card on top: an AskCard. */
@@ -264,11 +264,11 @@ export function AskStack({
               </div>
             );
           })}
-        <div className={arrive ? "dk-ask-arrive" : undefined} style={{ position: "relative", zIndex: 100 }}>
+        <div key={`top:${label}`} className={arrive ? "dk-ask-arrive" : undefined} style={{ position: "relative", zIndex: 100 }}>
           {children}
         </div>
         {leaving ? (
-          <div className="dk-ask-away" style={{ position: "absolute", top: HEAD, left: 0, right: 0, zIndex: 101, pointerEvents: "none" }} aria-hidden="true">
+          <div key={`gone:${label}`} className="dk-ask-away" style={{ position: "absolute", top: HEAD, left: 0, right: 0, zIndex: 101, pointerEvents: "none" }} aria-hidden="true">
             {leaving}
           </div>
         ) : null}

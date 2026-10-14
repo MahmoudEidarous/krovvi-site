@@ -13,6 +13,7 @@ import {
   GameShelf,
   GuessQuestion,
   GuessStep,
+  GuessThink,
   GuessWon,
   KrovviBubbles,
   KrovviText,
@@ -26,6 +27,8 @@ import {
   type Truth,
 } from "@/components/deep";
 import { PhoneSky } from "@/components/sky/phone-sky";
+
+import { AnswerLoop, SwipeLoop } from "./loops";
 
 /**
  * The scenes of /dev/friend-games: each piece in a whole chat screen, with
@@ -303,7 +306,7 @@ export const SCENES: Scene[] = [
     draw: () => (
       <AsksChat>
         <AskStack label="1 of 3" next={NEXT}>
-          <AskCard {...SAM} answer="He runs the Northline account" />
+          <AskCard {...SAM} answer="We work together" />
         </AskStack>
       </AsksChat>
     ),
@@ -345,6 +348,22 @@ export const SCENES: Scene[] = [
         <Turn>
           <KrovviBubbles lines={["Got it! 🦒"]} />
           <GuessWon word="A giraffe" steps={5} />
+        </Turn>
+      </Chat>
+    ),
+  },
+  {
+    id: "guess-think",
+    title: "Guess what I'm thinking: think of anything",
+    draw: () => (
+      <Chat>
+        <Turn>
+          <KrovviBubbles lines={["Doing well, thanks for asking.", "Your Northline interview is at 2 today.", "Want a reminder at 1?"]} />
+        </Turn>
+        <MyBubble text="Let's play guess what I'm thinking" />
+        <Turn>
+          <KrovviBubbles lines={["Oh I love this one.", "Think of something, and I'll find it in 20 questions."]} />
+          <GuessThink />
         </Turn>
       </Chat>
     ),
@@ -489,5 +508,15 @@ export const SCENES: Scene[] = [
         </Turn>
       </Chat>
     ),
+  },
+  {
+    id: "loop-swipe",
+    title: "This or That: a swipe, played on a loop (moving)",
+    draw: () => <SwipeLoop />,
+  },
+  {
+    id: "loop-answers",
+    title: "Krovvi's questions: three answers, played on a loop (moving)",
+    draw: () => <AnswerLoop />,
   },
 ];

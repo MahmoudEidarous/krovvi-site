@@ -132,8 +132,8 @@ export function GameFolded({
 /** A quiet word that is a button: Your turn, Hint, Give up (parts.tsx:215-233, 256-258). */
 export function GameQuiet({ label, dim = false, className, style }: Piece & { label: string; dim?: boolean }) {
   return (
-    <span className={className} style={{ display: "inline-flex", padding: "4px 0", opacity: dim ? 0.4 : 1, ...style }}>
-      <span style={{ color: C.muted, fontSize: 13.5, fontWeight: 500 }}>{label}</span>
+    <span className={className} style={{ display: "flex", alignSelf: "flex-start", padding: "4px 0", opacity: dim ? 0.4 : 1, ...style }}>
+      <span style={{ color: C.muted, fontSize: 13.5, fontWeight: 500, whiteSpace: "nowrap" }}>{label}</span>
     </span>
   );
 }
@@ -322,7 +322,8 @@ function lean(pull: number, toward: 1 | -1): CSSProperties {
  * `pull` is how far a finger has the card, in points (below 0 toward the
  * left side, over 0 toward the right): the card follows and turns pull / 22
  * degrees, the side it leans to grows a hair and the other steps back. Change
- * it over time to draw a swipe. `chosen`: that side lights, the other steps
+ * it over time to draw a swipe: frame by frame, or in steps with `glide` (ms),
+ * which eases each change on the app's curve. `chosen`: that side lights, the other steps
  * back to 0.32, and Krovvi's guess shows on the side it guessed (`pop`: it
  * pops in, as at the tap). `leaving`: the card just chosen, drawn over this
  * one and lifting off toward its side (`from` is where it stood, 56 after a
@@ -333,6 +334,7 @@ export function ThisOrThat({
   at = 1,
   total = 10,
   pull = 0,
+  glide = 0,
   chosen = null,
   pop = false,
   line,
@@ -350,6 +352,7 @@ export function ThisOrThat({
   at?: number;
   total?: number;
   pull?: number;
+  glide?: number;
   chosen?: "a" | "b" | null;
   pop?: boolean;
   /** Krovvi's line under the deck ("I already guessed each of yours 😏"). */
@@ -376,16 +379,17 @@ export function ThisOrThat({
               style={{ position: "absolute", top: 0, left: INSET[depth], right: INSET[depth], height: CARD_H, borderRadius: 25, background: PLATE[depth], transform: `translateY(${depth === 1 ? PEEK[1] : PEEK[1] + PEEK[2]}px)`, zIndex: 10 - depth }}
             />
           ))}
-        <PairCard pair={pair} pull={pull} chosen={chosen} pop={pop} className={arrive ? "dk-tot-arrive" : undefined} />
-        {leaving ? <LeavingCard {...leaving} /> : null}
+        <PairCard key={`card${at}`} pair={pair} pull={pull} glide={glide} chosen={chosen} pop={pop} className={arrive ? "dk-tot-arrive" : undefined} />
+        {leaving ? <LeavingCard key={`gone${at}`} {...leaving} /> : null}
       </div>
       {line ? <div style={{ color: C.muted, fontSize: 13, lineHeight: "18px", marginTop: 8, padding: "0 4px" }}>{emo(line, 1.26)}</div> : null}
     </Game>
   );
 }
 
-function PairCard({ pair, pull = 0, chosen, pop = false, className, style }: Piece & { pair: Pair; pull?: number; chosen: "a" | "b" | null; pop?: boolean }) {
+function PairCard({ pair, pull = 0, glide = 0, chosen, pop = false, className, style }: Piece & { pair: Pair; pull?: number; glide?: number; chosen: "a" | "b" | null; pop?: boolean }) {
   const label = `${pair.a.label} or ${pair.b.label}`;
+  const ease = glide ? `transform ${glide}ms cubic-bezier(0.23, 1, 0.32, 1), opacity ${glide}ms cubic-bezier(0.23, 1, 0.32, 1)` : undefined;
   return (
     <div
       className={className}
@@ -401,14 +405,15 @@ function PairCard({ pair, pull = 0, chosen, pop = false, className, style }: Pie
         zIndex: 20,
         ...GAME_PANE,
         transform: pull ? `translateX(${pull}px) rotate(${pull / 22}deg)` : undefined,
+        transition: ease,
         ...style,
       }}
     >
       <div style={{ display: "flex", gap: 9, height: "100%" }}>
-        <div className="dk-tot-follow" style={{ flex: 1, minWidth: 0, ...lean(pull, -1) }}>
+        <div style={{ flex: 1, minWidth: 0, ...lean(pull, -1), transition: ease }}>
           <SideTile side={pair.a} picked={chosen === "a"} aside={chosen === "b"} guessed={chosen ? pair.guess === "a" : false} pop={pop} />
         </div>
-        <div className="dk-tot-follow" style={{ flex: 1, minWidth: 0, ...lean(pull, 1) }}>
+        <div style={{ flex: 1, minWidth: 0, ...lean(pull, 1), transition: ease }}>
           <SideTile side={pair.b} picked={chosen === "b"} aside={chosen === "a"} guessed={chosen ? pair.guess === "b" : false} pop={pop} />
         </div>
       </div>
@@ -501,6 +506,40 @@ export function GuessWon({ word, steps = 5, line, name = "Guess what I'm thinkin
         </span>
         <span style={{ color: C.fg, fontSize: 26, lineHeight: "33px", fontWeight: 700, letterSpacing: "-0.7px", textAlign: "center" }}>{word}</span>
         <span style={{ color: C.muted, fontSize: 13.5, lineHeight: "19px", textAlign: "center", marginTop: -6 }}>{line ?? `Got it in ${steps}`}</span>
+      </div>
+    </Game>
+  );
+}
+
+/**
+ * The start of a round (guess.tsx:48-76, 295-301): the ring with its
+ * question mark, "Think of anything" at 20 semibold, the line under it, and
+ * Got one, the bright thing; "20 questions" in the head. `ready`: Got one was
+ * tapped and steps back to 0.35 while it goes. `live`: the ring breathes.
+ */
+export function GuessThink({
+  of = 20,
+  title = "Think of anything",
+  line = "A person, an animal, a thing or a place. Keep it to yourself.",
+  ready = false,
+  live = false,
+  breath = 1,
+  name = "Guess what I'm thinking",
+  rise = false,
+  delay = 0,
+  className,
+  style,
+}: Piece & { of?: number; title?: string; line?: string; ready?: boolean; live?: boolean; breath?: number; name?: string; rise?: boolean; delay?: number }) {
+  return (
+    <Game rise={rise} delay={delay} className={className} style={style}>
+      <GameHead name={name} count={`${of} questions`} />
+      <div style={{ ...GAME_PANE, padding: 16 + HAIR, display: "flex", flexDirection: "column", alignItems: "center", gap: 12 }}>
+        <ThinkingMark size={54} live={live} breath={breath} />
+        <span style={{ color: C.fg, fontSize: 20, lineHeight: "26px", fontWeight: 600, letterSpacing: "-0.5px", textAlign: "center" }}>{title}</span>
+        <span style={{ color: C.muted, fontSize: 13.5, lineHeight: "19px", textAlign: "center", marginTop: -6 }}>{line}</span>
+        <div style={{ marginTop: 2, display: "flex" }}>
+          <GameBright label="Got one" dim={ready} />
+        </div>
       </div>
     </Game>
   );
@@ -752,13 +791,17 @@ const SHELF: Record<GameKind, { name: string; line: string }> = {
  * The ring with its question mark (guess.tsx:78-95): a 1.5 line of ivory at
  * half its light round a semibold "?". `live`: it breathes, 1100 ms each
  * way, the ring swelling 6 percent into full light and the mark rocking 12
- * degrees. Still, it stands at the top of its breath, as the captures show it.
+ * degrees. Still, `breath` says where in its breath it stands (0 to 1); every
+ * capture shows it full (1: 57 points across a 54 ring, at full light).
  */
-export function ThinkingMark({ size = 54, live = false }: { size?: number; live?: boolean }) {
+export function ThinkingMark({ size = 54, live = false, breath = 1 }: { size?: number; live?: boolean; breath?: number }) {
   return (
     <span style={{ position: "relative", width: size, height: size, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-      <span className={live ? "dk-think-ring" : undefined} style={{ position: "absolute", inset: 0, borderRadius: size / 2, boxShadow: "inset 0 0 0 1.5px rgba(237,237,235,0.5)", transform: live ? undefined : "scale(1.06)" }} />
-      <span className={live ? "dk-think-mark" : undefined} style={{ color: C.fg, fontWeight: 600, fontSize: size * 0.48, lineHeight: `${size * 0.6}px`, transform: live ? undefined : "rotate(6deg)" }}>
+      <span
+        className={live ? "dk-think-ring" : undefined}
+        style={{ position: "absolute", inset: 0, borderRadius: size / 2, boxShadow: "inset 0 0 0 1.5px rgba(237,237,235,0.5)", ...(live ? null : { opacity: 0.55 + 0.45 * breath, transform: `scale(${1 + 0.06 * breath})` }) }}
+      />
+      <span className={live ? "dk-think-mark" : undefined} style={{ color: C.fg, fontWeight: 600, fontSize: size * 0.48, lineHeight: `${size * 0.6}px`, transform: live ? undefined : `rotate(${-6 + 12 * breath}deg)` }}>
         ?
       </span>
     </span>
