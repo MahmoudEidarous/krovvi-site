@@ -8,6 +8,7 @@ import {
   DeepChat,
   EmojiRiddle,
   GameFolded,
+  GamesSheet,
   GameQuiet,
   GameShelf,
   GuessQuestion,
@@ -16,7 +17,7 @@ import {
   KrovviBubbles,
   KrovviText,
   MyBubble,
-  P,
+  PlusSheetWithPlay,
   ThisOrThat,
   Trivia,
   Turn,
@@ -47,9 +48,9 @@ const sky = (
   </>
 );
 
-function Chat({ children }: { children: ReactNode }) {
+function Chat({ children, over }: { children: ReactNode; over?: ReactNode }) {
   return (
-    <DeepChat sky={sky} veil>
+    <DeepChat sky={sky} veil over={over}>
       {children}
     </DeepChat>
   );
@@ -418,6 +419,73 @@ export const SCENES: Scene[] = [
         <Turn>
           <KrovviBubbles lines={["Pick one 👇"]} />
           <GameShelf />
+        </Turn>
+      </Chat>
+    ),
+  },
+  {
+    id: "shelf-played",
+    title: "The shelf, picked: its line, and the game dealt",
+    draw: () => (
+      <Chat>
+        <MyBubble text="I'm bored, let's play something" />
+        <Turn>
+          <KrovviBubbles lines={["Pick one 👇"]} />
+          <GameFolded text="Play something · This or That" chevron={false} />
+        </Turn>
+        <MyBubble text="Let's play This or That" />
+        <Turn>
+          <KrovviBubbles lines={["Yes! Let's play 🎲", "Here you go."]} />
+          <ThisOrThat pair={COFFEE} at={1} total={10} line="I already guessed each of yours 😏" />
+        </Turn>
+      </Chat>
+    ),
+  },
+  {
+    id: "plus-play",
+    title: "The + sheet with Play",
+    draw: () => (
+      <Chat over={<PlusSheetWithPlay />}>
+        <MyBubble text="I'm bored, let's play something" />
+        <Turn>
+          <KrovviBubbles lines={["Pick one 👇"]} />
+          <GameFolded text="Play something · This or That" chevron={false} />
+        </Turn>
+        <MyBubble text="Let's play This or That" />
+        <Turn>
+          <KrovviBubbles lines={["Yes! Let's play 🎲", "Here you go."]} />
+          <ThisOrThat pair={COFFEE} at={1} total={10} line="I already guessed each of yours 😏" />
+        </Turn>
+      </Chat>
+    ),
+  },
+  {
+    id: "play-sheet",
+    title: "Play: the shelf in its own sheet",
+    draw: () => (
+      <Chat over={<GamesSheet />}>
+        <MyBubble text="I'm bored, let's play something" />
+        <Turn>
+          <KrovviBubbles lines={["Pick one 👇"]} />
+          <GameFolded text="Play something · This or That" chevron={false} />
+        </Turn>
+        <MyBubble text="Let's play This or That" />
+        <Turn>
+          <KrovviBubbles lines={["Yes! Let's play 🎲", "Here you go."]} />
+          <ThisOrThat pair={COFFEE} at={1} total={10} line="I already guessed each of yours 😏" />
+        </Turn>
+      </Chat>
+    ),
+  },
+  {
+    id: "shelf-live",
+    title: "The games shelf, its marks alive (moving)",
+    draw: () => (
+      <Chat>
+        <MyBubble text="I'm bored, let's play something" />
+        <Turn>
+          <KrovviBubbles lines={["Pick one 👇"]} />
+          <GameShelf live />
         </Turn>
       </Chat>
     ),

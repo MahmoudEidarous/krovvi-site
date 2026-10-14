@@ -20,7 +20,8 @@ import "./games.css";
 import type { CSSProperties, ReactNode } from "react";
 
 import { emo, type Piece } from "./chat";
-import { ArrowUp, Check, Icon, KrovviK } from "./glyphs";
+import { ArrowUp, Check, Icon, KrovviK, Mic } from "./glyphs";
+import { Sheet } from "./sheets";
 import { C, HAIR } from "./tokens";
 
 const cx = (...names: Array<string | false | null | undefined>) => names.filter(Boolean).join(" ") || undefined;
@@ -747,27 +748,38 @@ const SHELF: Record<GameKind, { name: string; line: string }> = {
   emoji: { name: "Emoji riddles", line: "Read the emoji" },
 };
 
-/** The ring with its question mark (guess.tsx:78-95). `live`: it breathes. */
+/**
+ * The ring with its question mark (guess.tsx:78-95): a 1.5 line of ivory at
+ * half its light round a semibold "?". `live`: it breathes, 1100 ms each
+ * way, the ring swelling 6 percent into full light and the mark rocking 12
+ * degrees. Still, it stands at the top of its breath, as the captures show it.
+ */
 export function ThinkingMark({ size = 54, live = false }: { size?: number; live?: boolean }) {
   return (
     <span style={{ position: "relative", width: size, height: size, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-      <span className={live ? "dk-think-ring" : undefined} style={{ position: "absolute", inset: 0, borderRadius: size / 2, border: "1.5px solid rgba(237,237,235,0.5)", opacity: live ? undefined : 0.55 }} />
-      <span className={live ? "dk-think-mark" : undefined} style={{ color: C.fg, fontWeight: 600, fontSize: size * 0.48, lineHeight: `${size * 0.6}px`, transform: live ? undefined : "rotate(-6deg)" }}>
+      <span className={live ? "dk-think-ring" : undefined} style={{ position: "absolute", inset: 0, borderRadius: size / 2, boxShadow: "inset 0 0 0 1.5px rgba(237,237,235,0.5)", transform: live ? undefined : "scale(1.06)" }} />
+      <span className={live ? "dk-think-mark" : undefined} style={{ color: C.fg, fontWeight: 600, fontSize: size * 0.48, lineHeight: `${size * 0.6}px`, transform: live ? undefined : "rotate(6deg)" }}>
         ?
       </span>
     </span>
   );
 }
 
-/** Each game's small mark in the night's ivory, still, as the capture shows them mid beat (shelf.tsx:107-162, 222-232). */
-function ShelfMark({ kind, on }: { kind: GameKind; on: boolean }) {
+/**
+ * Each game's small mark in the night's ivory (shelf.tsx:107-162, 222-232):
+ * two sides trading the light, three lines with the middle one turning over,
+ * the breathing question, four answers lighting in turn, and two pictures
+ * taking turns. Still, each stands where the captures show it (one beat in);
+ * `live` runs the app's beat (games.css dk-mark-*).
+ */
+function ShelfMark({ kind, on, live = false }: { kind: GameKind; on: boolean; live?: boolean }) {
   const ink = on ? C.bg : C.fg;
-  if (kind === "guess") return <ThinkingMark size={32} />;
+  if (kind === "guess") return <ThinkingMark size={32} live={live} />;
   if (kind === "this_or_that") {
     return (
       <span style={{ display: "flex", gap: 4 }}>
-        <span style={{ width: 13, height: 20, borderRadius: 4, background: ink }} />
-        <span style={{ width: 13, height: 20, borderRadius: 4, background: ink, opacity: 0.3 }} />
+        <span className={live ? "dk-mark-a" : undefined} style={{ width: 13, height: 20, borderRadius: 4, background: ink }} />
+        <span className={live ? "dk-mark-b" : undefined} style={{ width: 13, height: 20, borderRadius: 4, background: ink, opacity: 0.3 }} />
       </span>
     );
   }
@@ -775,7 +787,7 @@ function ShelfMark({ kind, on }: { kind: GameKind; on: boolean }) {
     return (
       <span style={{ display: "flex", flexDirection: "column", gap: 4, width: 26 }}>
         <span style={{ height: 4, borderRadius: 2, width: 26, background: ink, opacity: 0.45 }} />
-        <span style={{ height: 4, borderRadius: 2, width: 19, background: ink }} />
+        <span className={live ? "dk-mark-turn" : undefined} style={{ height: 4, borderRadius: 2, width: 19, background: ink }} />
         <span style={{ height: 4, borderRadius: 2, width: 26, background: ink, opacity: 0.45 }} />
       </span>
     );
@@ -784,16 +796,23 @@ function ShelfMark({ kind, on }: { kind: GameKind; on: boolean }) {
     return (
       <span style={{ position: "relative", width: 25, height: 25, display: "flex", flexWrap: "wrap", gap: 3 }}>
         {[0, 1, 2, 3].map((i) => (
-          <span key={i} style={{ width: 11, height: 11, borderRadius: 3, border: `1.2px solid ${ink}`, opacity: 0.5 }} />
+          <span key={i} style={{ width: 11, height: 11, borderRadius: 3, boxShadow: `inset 0 0 0 1.2px ${ink}`, opacity: 0.5 }} />
         ))}
-        <span style={{ position: "absolute", left: 14, top: 0, width: 11, height: 11, borderRadius: 3, background: ink }} />
+        <span className={live ? "dk-mark-step" : undefined} style={{ position: "absolute", left: 0, top: 0, width: 11, height: 11, borderRadius: 3, background: ink, transform: "translate(0px, 13px)" }} />
       </span>
     );
   }
-  return <span style={{ width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, lineHeight: "28px" }}>{emo("🎬", 1.08)}</span>;
+  return (
+    <span style={{ position: "relative", width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, lineHeight: "28px" }}>
+      <span className={live ? "dk-mark-out" : undefined} style={{ position: "absolute", opacity: 0 }}>
+        {emo("🦁", 1)}
+      </span>
+      <span className={live ? "dk-mark-in" : undefined}>{emo("🎬", 1)}</span>
+    </span>
+  );
 }
 
-function ShelfTile({ kind, wide = false, on = false, off = false }: { kind: GameKind; wide?: boolean; on?: boolean; off?: boolean }) {
+function ShelfTile({ kind, wide = false, on = false, off = false, live = false }: { kind: GameKind; wide?: boolean; on?: boolean; off?: boolean; live?: boolean }) {
   const words = SHELF[kind];
   return (
     <span
@@ -813,7 +832,7 @@ function ShelfTile({ kind, wide = false, on = false, off = false }: { kind: Game
       }}
     >
       <span style={{ width: 36, height: 36, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-        <ShelfMark kind={kind} on={on} />
+        <ShelfMark kind={kind} on={on} live={live} />
       </span>
       <span style={{ display: "flex", flexDirection: "column", gap: 2, flex: wide ? 1 : undefined, minWidth: 0 }}>
         <span style={{ color: on ? C.bg : C.fg, fontSize: 15, lineHeight: "19px", fontWeight: 600, letterSpacing: "-0.25px", ...lines(2) }}>{words.name}</span>
@@ -826,21 +845,23 @@ function ShelfTile({ kind, wide = false, on = false, off = false }: { kind: Game
 /**
  * The shelf (shelf.tsx:26-105, styles 202-235): the games as tiles in
  * Krovvi's order, the first wide and the rest two by two, under "Play
- * something". `picked` lights one and steps the others back.
+ * something". `picked` lights one and steps the others back; `live` runs
+ * the marks' beat.
  */
 export function GameShelf({
   offer = ["this_or_that", "two_truths", "guess", "trivia", "emoji"],
   picked = null,
   title = "Play something",
+  live = false,
   rise = false,
   delay = 0,
   className,
   style,
-}: Piece & { offer?: GameKind[]; picked?: GameKind | null; title?: string; rise?: boolean; delay?: number }) {
+}: Piece & { offer?: GameKind[]; picked?: GameKind | null; title?: string; live?: boolean; rise?: boolean; delay?: number }) {
   const [lead, ...rest] = offer;
   const rows: GameKind[][] = [];
   for (let i = 0; i < rest.length; i += 2) rows.push(rest.slice(i, i + 2));
-  const tile = (kind: GameKind, wide = false) => <ShelfTile key={kind} kind={kind} wide={wide} on={picked === kind} off={!!picked && picked !== kind} />;
+  const tile = (kind: GameKind, wide = false) => <ShelfTile key={kind} kind={kind} wide={wide} on={picked === kind} off={!!picked && picked !== kind} live={live} />;
   return (
     <Game rise={rise} delay={delay} className={className} style={style}>
       <GameHead name={title} />
@@ -854,5 +875,104 @@ export function GameShelf({
         ))}
       </div>
     </Game>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Play, from the + sheet (games/shelf.tsx, plus-sheet.tsx)             */
+/* ------------------------------------------------------------------ */
+
+const f3 = (n: number) => Math.round(n * 1000) / 1000;
+
+/**
+ * Play's mark: a die showing one, in the icons' own line and dot, turned 8
+ * degrees (shelf.tsx:189-200): a round box three quarters of the size, its
+ * corners 0.28 of it, one dot of 0.15 (never under 3.2) in the middle.
+ */
+export function PlayMark({ size = 28, color = C.fg, weight = (1.9 * 28) / 24, className, style }: { size?: number; color?: string; weight?: number; className?: string; style?: CSSProperties }) {
+  const box = size * 0.74;
+  const dot = Math.max(3.2, size * 0.15);
+  const at = (size - box) / 2 + weight / 2;
+  return (
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className={className} style={{ display: "block", overflow: "visible", flexShrink: 0, ...style }} aria-hidden="true">
+      <g transform={`rotate(-8 ${f3(size / 2)} ${f3(size / 2)})`}>
+        <rect x={f3(at)} y={f3(at)} width={f3(box - weight)} height={f3(box - weight)} rx={f3(box * 0.28 - weight / 2)} fill="none" stroke={color} strokeWidth={weight} />
+        <circle cx={f3(size / 2)} cy={f3(size / 2)} r={f3(dot / 2)} fill={color} />
+      </g>
+    </svg>
+  );
+}
+
+/** One round of the + sheet (plus-sheet.tsx:98-157): glass 60 across (54 when five share the row), its name under it. */
+function PlusRound({ label, small = false, red = false, off = false, children }: { label: string; small?: boolean; red?: boolean; off?: boolean; children: ReactNode }) {
+  const d = small ? 54 : 60;
+  return (
+    <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 8, opacity: off ? 0.4 : 1 }}>
+      <span style={{ width: d, height: d, borderRadius: d / 2, background: red ? "rgba(255, 107, 94, 0.12)" : C.tile, ...edge(red ? "rgba(255, 107, 94, 0.35)" : C.sheetEdge), display: "flex", alignItems: "center", justifyContent: "center" }}>
+        {children}
+      </span>
+      <span style={{ color: C.fg2, fontSize: 13, letterSpacing: "-0.1px", textAlign: "center", ...lines(2) }}>{label}</span>
+    </div>
+  );
+}
+
+/**
+ * The + sheet as store build 20 draws it (plus-sheet.tsx:37-157): Camera,
+ * Photos, Files, Record where the chat is Home (`record`), and Play last,
+ * which opens the games' shelf. With five in the row the rounds are 54 and
+ * their icons 25, 4 apart; with four, 60 and 28, 8 apart.
+ */
+export function PlusSheetWithPlay({ record = false, recording = false, rise = false, scrim = true, className, style }: Piece & { record?: boolean; recording?: boolean; rise?: boolean; scrim?: boolean }) {
+  const five = record;
+  const icon = five ? 25 : 28;
+  const line = (1.9 * icon) / 24;
+  return (
+    <Sheet rise={rise} scrim={scrim} className={cx("dk-g-sheet", className)} style={style}>
+      <div style={{ display: "flex", gap: five ? 4 : 8, padding: "4px 0" }}>
+        <PlusRound label="Camera" small={five}>
+          <Icon name="camera" size={icon} color={C.fg} weight={line} />
+        </PlusRound>
+        <PlusRound label="Photos" small={five}>
+          <Icon name="picture" size={icon} color={C.fg} weight={line} />
+        </PlusRound>
+        <PlusRound label="Files" small={five}>
+          <Icon name="fileIn" size={icon} color={C.fg} weight={line} />
+        </PlusRound>
+        {record ? (
+          <PlusRound label={recording ? "Recording now" : "Record"} small red off={recording}>
+            <Mic size={icon} color="#FF6B5E" />
+          </PlusRound>
+        ) : null}
+        <PlusRound label="Play" small={five}>
+          <PlayMark size={icon} color={C.fg} weight={line} />
+        </PlusRound>
+      </div>
+    </Sheet>
+  );
+}
+
+/**
+ * Play's own sheet: the shelf at once, with no wait (shelf.tsx:164-187,
+ * 233-234): "Play something" at 17 semibold, and the games as tiles under it,
+ * 12 apart, straight on the sheet. `live` runs the marks' beat.
+ */
+export function GamesSheet({ picked = null, title = "Play something", live = false, rise = false, scrim = true, className, style }: Piece & { picked?: GameKind | null; title?: string; live?: boolean; rise?: boolean; scrim?: boolean }) {
+  const offer: GameKind[] = ["this_or_that", "two_truths", "guess", "trivia", "emoji"];
+  const [lead, ...rest] = offer;
+  const tile = (kind: GameKind, wide = false) => <ShelfTile key={kind} kind={kind} wide={wide} on={picked === kind} off={!!picked && picked !== kind} live={live} />;
+  return (
+    <Sheet rise={rise} scrim={scrim} className={cx("dk-g-sheet", className)} style={style}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, paddingBottom: 4 }}>
+        <div style={{ color: C.fg, fontSize: 17, fontWeight: 600, letterSpacing: "-0.3px", padding: "0 2px" }}>{title}</div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
+          <div style={{ display: "flex" }}>{tile(lead, true)}</div>
+          {[rest.slice(0, 2), rest.slice(2, 4)].map((row, i) => (
+            <div key={i} style={{ display: "flex", gap: 9 }}>
+              {row.map((kind) => tile(kind))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </Sheet>
   );
 }
