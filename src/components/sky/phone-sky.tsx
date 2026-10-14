@@ -34,7 +34,7 @@ const painted = new Map<string, Promise<string>>();
  */
 let queue: Promise<unknown> = Promise.resolve();
 
-function paint(seed: number, light: number): Promise<string> {
+export function paint(seed: number, light: number): Promise<string> {
   const key = `${seed}:${light}`;
   const known = painted.get(key);
   if (known) return known;
@@ -107,6 +107,42 @@ export function PhoneSky({ seed = 7, light = 1 }: { seed?: number; light?: numbe
         maskRepeat: "no-repeat",
         WebkitMaskRepeat: "no-repeat",
         opacity: url ? 1 : 0,
+      }}
+    />
+  );
+}
+
+/**
+ * The same still sky laid over a whole surface of any size (a tile of the
+ * page): the phone's picture repeated, at the phone's own scale, so a tile
+ * reads as a window onto the app's night.
+ */
+export function SkyFill({ seed = 7, light = 1, className, style }: { seed?: number; light?: number; className?: string; style?: React.CSSProperties }) {
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    let live = true;
+    void paint(seed, light).then((u) => {
+      if (live) setUrl(u);
+    });
+    return () => {
+      live = false;
+    };
+  }, [seed, light]);
+  const mask = url ? `url(${url})` : undefined;
+  return (
+    <div
+      aria-hidden="true"
+      className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ${className ?? ""}`}
+      style={{
+        background: "#EDEDEB",
+        maskImage: mask,
+        WebkitMaskImage: mask,
+        maskSize: "393px 852px",
+        WebkitMaskSize: "393px 852px",
+        maskRepeat: "repeat",
+        WebkitMaskRepeat: "repeat",
+        opacity: url ? 1 : 0,
+        ...style,
       }}
     />
   );

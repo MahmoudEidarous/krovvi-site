@@ -22,9 +22,6 @@ export function Closing() {
         >
           Join the beta
         </a>
-        <p style={an("k-fade", 2100, 900)} className="anim mt-8 max-w-[440px] text-pretty text-[14px] leading-[1.6] text-faint">
-          It always says it&apos;s an AI. No ads, and we never sell your data or use it to train AI.
-        </p>
       </InView>
     </section>
   );
