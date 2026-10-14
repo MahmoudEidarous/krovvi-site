@@ -102,6 +102,12 @@ body {
   transform-origin: 0 0;
 }
 
+/* A tile's picture of the app, drawn at the app's points and scaled the same way (components/films/scaled.tsx). */
+.scaled-canvas {
+  transform: scale(var(--k, 0));
+  transform-origin: 0 0;
+}
+
 .glow-warm {
   position: absolute;
   border-radius: 9999px;
@@ -594,5 +600,23 @@ body {
   .film-in > .film-inner,
   .caret {
     animation: none !important;
+  }
+}
+
+/* The Play die in the statement, shaken now and then: a lean one way, the other, and settled. */
+@keyframes k-roll {
+  0%,
+  58%,
+  100% {
+    transform: rotate(0deg);
+  }
+  66% {
+    transform: rotate(-16deg) scale(0.96);
+  }
+  76% {
+    transform: rotate(12deg);
+  }
+  86% {
+    transform: rotate(-4deg);
   }
 }

@@ -1,18 +1,14 @@
-import {
-  AdaptsVisual,
-  ChangedVisual,
-  PeopleVisual,
-  ReadOnYouVisual,
-  RememberVisual,
-  SpeakUpVisual,
-} from "@/components/app/bento-visuals";
+import { FunVisual, OrderVisual } from "@/components/films/tiles";
+import { CloseVisual, PeopleVisual, SendVisual, TextsFirstVisual } from "@/components/films/tiles-wait";
 import { InView } from "@/components/in-view";
 import { an } from "@/lib/anim";
 
 /**
- * What having Krovvi means, in six parts: it remembers, it knows who matters,
- * it understands you, it keeps up, it speaks up at the right time, and it
- * adapts to you over time. Each tile plays its own small film.
+ * What Krovvi is, in six parts, each shown as the moment it happens in
+ * today's app: it is fun to talk to, it knows your people (and asks when it
+ * isn't sure), it texts you first, you can send it anything, it is on your
+ * Home Screen, and it keeps your life in order. Each tile plays its own small
+ * film when it comes into view.
  */
 export function Bento() {
   return (
@@ -23,61 +19,60 @@ export function Bento() {
             className="anim text-balance text-[clamp(38px,6vw,72px)] font-semibold leading-[1.02] tracking-[-0.045em]"
             style={an("k-rise-lg", 0, 1000)}
           >
-            It remembers. It understands. It keeps up.
+            One friend. Your whole world.
           </h2>
           <p
             className="anim mx-auto mt-6 max-w-[620px] text-pretty text-[clamp(17px,2.2vw,20px)] leading-[1.6] text-muted"
             style={an("k-rise", 150, 900)}
           >
-            Krovvi learns from your real conversations and everything you share with it. So it knows things a chat box
-            never could.
+            It&apos;s the friend who remembers what matters to you, and can actually help.
           </p>
         </InView>
 
         <div className="mt-14 grid gap-4 md:mt-20 lg:grid-cols-3 lg:gap-5">
           <Tile
             className="lg:col-span-2"
-            title="It remembers exactly what was said."
-            body="Prices, promises, plans and dates, each with the moment it was said. Tap a line and hear it again."
+            title="It's fun to talk to."
+            body="Funny, honest and curious, with opinions of its own. Bored? It has a game for that."
           >
-            <RememberVisual />
+            <FunVisual />
           </Tile>
           <Tile
             align="start"
             bleed
             className="lg:row-span-2"
-            title="It knows the people in your life."
-            body="Who you talk with most, what you owe each other, and where things stand before you meet."
+            title="It knows your people."
+            body="Who they are to you, and what's going on with them. When it isn't sure, it asks."
           >
             <PeopleVisual />
           </Tile>
           <Tile
-            title="It understands what you're working toward."
-            body="Your goals, what you're still deciding, and how you like things done. See all of it, and fix any of it."
+            title="It texts you first."
+            body="When something matters, it writes first. Quiet the rest of the time."
           >
-            <ReadOnYouVisual />
+            <TextsFirstVisual />
           </Tile>
           <Tile
             align="center"
-            title="It keeps up when plans change."
-            body="A date moves, a price changes. Krovvi updates what it knows, and tells you who still has the old version."
+            title="Send it anything."
+            body="Voice notes, photos, links and files. It reads every one, and keeps what matters."
           >
-            <ChangedVisual />
+            <SendVisual />
           </Tile>
           <Tile
             align="center"
-            title="It speaks up at the right moment."
-            body="A heads-up before you meet, a nudge when something's due. Quiet the rest of the time."
+            title="It's on your Home Screen."
+            body="Its latest message, right where you'll see it. One tap, and you're talking."
           >
-            <SpeakUpVisual />
+            <CloseVisual />
           </Tile>
           <Tile
             align="center"
             className="lg:col-span-2"
-            title="It adapts to you over time."
-            body="Tell it once how you like things, and it remembers. Week by week, it works more your way."
+            title="It keeps your life in order."
+            body="Money, plans and trips, kept as you talk. Answers come as real screens, and it asks before anything goes out."
           >
-            <AdaptsVisual />
+            <OrderVisual />
           </Tile>
         </div>
       </div>

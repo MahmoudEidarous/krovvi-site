@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 
-import { ChatTellScreen, ShareScreen, UploadScreen } from "@/components/app/input-screens";
-import { BriefScreen, CaughtScreen } from "@/components/app/note-screens";
-import { RecordScreen } from "@/components/app/record-screen";
+import { CHECK_IN_LABEL, CheckInFilm, FRIEND_LABEL, FriendFilm, PLAN_LABEL, PlanFilm, type FilmProps } from "@/components/films/day";
+import { HELP_LABEL, HelpFilm, PLAY_LABEL, PlayFilm } from "@/components/films/day-wait";
+import { useFirstSeen } from "@/components/films/use-seen";
 import { InView } from "@/components/in-view";
 import { Phone } from "@/components/phone";
 import { an } from "@/lib/anim";
@@ -14,49 +14,59 @@ import { useReducedMotion } from "@/lib/use-reduced-motion";
 const EASE = [0.23, 1, 0.32, 1] as const;
 
 /**
- * Every way in, then what comes of it. One big word and one short line per
- * step; the phone shows the step happening in the app.
+ * A day with Krovvi, one moment per step: it checks in after the interview,
+ * you play at night, it helps the next morning, it plans Friday's dinner
+ * knowing who is coming, and a friend picks the chat up from a link. One big
+ * line and one short one per step; the phone plays the moment in the app.
  */
-type Step = { word: string; line: string; label: string; screen: () => React.ReactNode };
+type Step = { word: string; line: string; label: string; Film: (p: FilmProps) => React.ReactNode };
 
 const STEPS: Step[] = [
   {
-    word: "Talk.",
-    line: "Record a conversation in person, or send Krovvi to your Zoom, Meet or Teams call.",
-    label: "Recording in Krovvi: the timer runs and the voice moves.",
-    screen: () => <RecordScreen />,
+    word: "It checks in.",
+    line: "6:30 PM. It remembered your interview, and asks how it went.",
+    label: CHECK_IN_LABEL,
+    Film: CheckInFilm,
   },
   {
-    word: "Chat.",
-    line: "Ask it anything, or tell it something to keep. Type it or say it.",
-    label: "A chat with Krovvi: you tell it Lina has the kids on Wednesday, and it keeps that with Lina.",
-    screen: () => <ChatTellScreen />,
+    word: "You play.",
+    line: "11:40 PM. Two truths and a lie, written from what it knows about you.",
+    label: PLAY_LABEL,
+    Film: PlayFilm,
   },
   {
-    word: "Upload.",
-    line: "Photos, screenshots, PDFs and voice notes. It reads every one.",
-    label: "A lease added to Krovvi as a PDF, and what it found inside: the new rent and the notice period.",
-    screen: () => <UploadScreen />,
+    word: "It helps.",
+    line: "Next morning. A money question becomes a chart you can slide.",
+    label: HELP_LABEL,
+    Film: HelpFilm,
   },
   {
-    word: "Share.",
-    line: "Send a WhatsApp chat, a link or a video from whatever app you're in.",
-    label: "A WhatsApp chat shared to Krovvi from the share sheet, read and understood.",
-    screen: () => <ShareScreen />,
+    word: "It plans.",
+    line: "Friday dinner for four. It remembers Mona doesn't eat meat, and picks with her in mind.",
+    label: PLAN_LABEL,
+    Film: PlanFilm,
   },
   {
-    word: "It understands.",
-    line: "It works out what was promised, decided and paid, and who it's about.",
-    label: "What I caught: a task, a decision, a sum and a date, each with the second it was said.",
-    screen: () => <CaughtScreen />,
-  },
-  {
-    word: "It remembers.",
-    line: "Before you see someone, it tells you where things stand.",
-    label: "Sara Ali, in 25 minutes: last time, what you owe, what Sara owes you, and what is worth knowing.",
-    screen: () => <BriefScreen />,
+    word: "Friends join in.",
+    line: "Share the chat as a link. Your friends read it, and carry it on in their own Krovvi.",
+    label: FRIEND_LABEL,
+    Film: FriendFilm,
   },
 ];
+
+/** A step's own phone on small screens: its film plays when the phone comes into view. */
+function StepPhone({ step }: { step: Step }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const seen = useFirstSeen(ref, "0px 0px -25% 0px");
+  const reduced = useReducedMotion();
+  return (
+    <div ref={ref}>
+      <Phone label={step.label}>
+        <step.Film playing={seen} still={reduced} />
+      </Phone>
+    </div>
+  );
+}
 
 export function Story() {
   const [active, setActive] = useState(0);
@@ -104,10 +114,10 @@ export function Story() {
             className="anim mt-3 text-balance text-[clamp(38px,5.6vw,68px)] font-semibold leading-[1.02] tracking-[-0.045em]"
             style={an("k-rise-lg", 100, 1000)}
           >
-            Tell it things. Send it things.
+            A friend first. It also gets things done.
           </h2>
           <p className="anim mt-6 max-w-[520px] text-pretty text-[clamp(17px,2vw,20px)] leading-[1.6] text-muted" style={an("k-rise", 250, 900)}>
-            However it reaches Krovvi, it lands in one place, linked to the people and plans it&apos;s about.
+            It carries what matters from one moment to the next, so it never starts from zero.
           </p>
         </InView>
 
@@ -147,7 +157,10 @@ export function Story() {
                       exit={reduced ? undefined : { opacity: 0, scale: 1.01, filter: "blur(4px)" }}
                       transition={{ duration: 0.55, ease: EASE }}
                     >
-                      {seen ? STEPS[active].screen() : <div className="h-full w-full bg-ground" />}
+                      {seen ? (() => {
+                        const Film = STEPS[active].Film;
+                        return <Film playing still={reduced} />;
+                      })() : <div className="h-full w-full bg-ground" />}
                     </motion.div>
                   </AnimatePresence>
                 </Phone>
@@ -173,7 +186,7 @@ export function Story() {
               <h3 className="text-[52px] font-semibold leading-[1] tracking-[-0.05em]">{step.word}</h3>
               <p className="mt-4 text-pretty text-[17px] leading-[1.6] text-muted">{step.line}</p>
               <InView className="relative mx-auto mt-10 w-[min(300px,78vw)]">
-                <Phone label={step.label}>{step.screen()}</Phone>
+                <StepPhone step={step} />
               </InView>
             </div>
           ))}

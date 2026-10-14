@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Without scripts nothing would ever be scrolled into view: show every end state at once, and size
             the phone screens in CSS alone (right everywhere but Safari 26, which only matters with scripts off). */}
         <noscript>
-          <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}.phone-canvas{transform:scale(tan(atan2(100cqw,393px)))!important}`}</style>
+          <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}.phone-canvas{transform:scale(tan(atan2(100cqw,393px)))!important}.scaled-canvas{transform:scale(tan(atan2(100cqw,var(--sw))))!important}`}</style>
         </noscript>
         {/* The site, the company and the app for search engines and AI assistants (lib/identity.ts). */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataScript() }} />

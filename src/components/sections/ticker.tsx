@@ -1,27 +1,27 @@
-import { PersonFace, personTint } from "@/components/app/ui";
+import { DeepFace, personTint } from "@/components/deep";
 import { InView } from "@/components/in-view";
 
 /**
  * What people say, and what Krovvi understands from it. Each line is said
- * loosely, the way people talk; after the arrow is what Krovvi worked out,
- * which nobody said outright, with the kind of thing it is (the app's own
- * words: Still deciding, Decided, On your mind, A goal, Worth knowing).
- * Two rows drift past in opposite directions.
+ * loosely, the way people talk in a chat, a voice note or a message they
+ * pass on; after the arrow is what Krovvi took from it, which nobody said
+ * outright, with the kind of thing it is. Two rows drift past in opposite
+ * directions: what other people said, and what you said.
  */
 type Read = { who: string; said: string; means: string; kind: string };
 
 const THEM: Read[] = [
-  { who: "Karim Nabil", said: "We start the day the deposit clears.", means: "The kitchen waits on your deposit", kind: "Waiting on you" },
-  { who: "Sara Ali", said: "Let's see what the board says first.", means: "The launch date isn't final yet", kind: "Still deciding" },
-  { who: "Mom", said: "Your father hasn't been himself since the surgery.", means: "Worth checking in on your dad", kind: "Worth knowing" },
-  { who: "Omar", said: "I'm half thinking of leaving Atlas.", means: "Omar may be leaving Atlas", kind: "Worth knowing" },
-  { who: "Lina", said: "The kids won't stop talking about the trip.", means: "The trip matters to the kids", kind: "Noticed" },
+  { who: "Mona", said: "I've gone vegetarian, by the way!", means: "Pick places Mona can eat at", kind: "Worth knowing" },
+  { who: "Sam", said: "I'll send the contract by Monday.", means: "Sam owes you the contract", kind: "Due Monday" },
+  { who: "Lina", said: "The new flat in Lisbon has a spare room 👀", means: "You have a place to stay in Lisbon", kind: "Worth knowing" },
+  { who: "Omar", said: "Friday works. 8:30?", means: "Dinner with Omar, Friday at 8:30", kind: "Plans" },
+  { who: "Mom", said: "Don't forget your aunt's birthday on the 22nd.", means: "Your aunt's birthday, 22 October", kind: "A date" },
 ];
 
 const YOU: Read[] = [
+  { who: "You", said: "Big interview at Northline tomorrow.", means: "Ask how the interview went", kind: "Tomorrow" },
+  { who: "You", said: "Honestly, I'd rather text than call.", means: "You'd rather text than call", kind: "How you like it" },
   { who: "You", said: "I'm so done with this commute.", means: "The third time you've said it this month", kind: "On your mind" },
-  { who: "You", said: "If he asks for more than 45, we walk.", means: "Your limit with Karim is 45,000", kind: "Decided" },
-  { who: "You", said: "I'll deal with the landlord after the launch.", means: "The heater waits until after October 15", kind: "Waiting" },
   { who: "You", said: "I really want to run a 10K before the year's out.", means: "Run a 10K by December", kind: "A goal" },
 ];
 
@@ -33,7 +33,7 @@ function Line({ r }: { r: Read }) {
         <span className="text-[13px] font-semibold text-soft">You</span>
       ) : (
         <>
-          <PersonFace name={r.who} size={30} />
+          <DeepFace name={r.who} size={30} />
           <span className="text-[13px] font-semibold" style={{ color: personTint(r.who) }}>
             {r.who.split(" ")[0]}
           </span>

@@ -7,28 +7,31 @@ import { InView } from "@/components/in-view";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
 
 /**
- * The idea in one paragraph, lit word by word as it scrolls past. The four
- * ways in carry a small moving tile inside the sentence. One CSS variable
- * moves per frame; every word reads it and works out its own light.
+ * The idea in one paragraph, lit word by word as it scrolls past: a friend is
+ * someone you talk to all day, not a tool you open for a task. The four ways
+ * in carry a small moving tile inside the sentence. One CSS variable moves
+ * per frame; every word reads it and works out its own light.
  */
-type Piece = string | { mark: "talk" | "chat" | "upload" | "share" };
+type MarkName = "talk" | "send" | "play" | "share";
+type Piece = string | { mark: MarkName };
 
 const PIECES: Piece[] = [
-  ..."Most AI only knows what you type into it. Krovvi knows what's going on.".split(" "),
+  ..."You don't open a friend's chat for a task. You open it all day. Krovvi is that friend.".split(" "),
   "Talk", "to", "it", { mark: "talk" }, ".",
-  "Chat", "with", "it", { mark: "chat" }, ".",
-  "Upload", "anything", { mark: "upload" }, ".",
-  "Share", "from", "any", "app", { mark: "share" }, ".",
-  ..."It works out what it all means and who it's about. And it remembers, so you don't have to.".split(" "),
+  "Send", "it", "anything", { mark: "send" }, ".",
+  "Play", "with", "it", { mark: "play" }, ".",
+  "Bring", "friends", "in", { mark: "share" }, ".",
+  ..."It remembers what you said, brings it up later, and helps when it matters.".split(" "),
 ];
 
 /**
  * The pictures inside the sentence: small tiles in the app's graphite, lit
- * from above like a key, each with one live detail. A voice moving, a
- * message being typed, a page going up, the share arrow lifting. Each tile
- * grows into place as the light reaches it.
+ * from above like a key, each with one live detail. A voice moving, a page
+ * going up, the app's Play die being shaken (components/games/shelf.tsx
+ * PlayMark: a die showing one, leaned 8 degrees), the share arrow lifting.
+ * Each tile grows into place as the light reaches it.
  */
-function Mark({ mark }: { mark: "talk" | "chat" | "upload" | "share" }) {
+function Mark({ mark }: { mark: MarkName }) {
   const line = { fill: "none", stroke: "#F2F1EE", strokeWidth: 1.9, strokeLinecap: "round", strokeLinejoin: "round" } as const;
   return (
     <span
@@ -54,22 +57,15 @@ function Mark({ mark }: { mark: "talk" | "chat" | "upload" | "share" }) {
           ))}
         </span>
       )}
-      {mark === "chat" && (
-        <svg viewBox="0 0 24 24" className="h-[0.56em] w-[0.56em]">
-          {/* The app's own bubble: round corners, the bottom right one tucked. */}
-          <path d="M7.5 4.5h9a5 5 0 0 1 5 5v6.7a1.8 1.8 0 0 1-1.8 1.8H7.5a5 5 0 0 1-5-5V9.5a5 5 0 0 1 5-5Z" fill="#F2F1EE" />
-          <path d="M7 9.6h10" stroke="#1d1c1b" strokeWidth="1.9" strokeLinecap="round" />
-          <path
-            className="mark-loop"
-            d="M7 13.3h6.5"
-            stroke="#1d1c1b"
-            strokeWidth="1.9"
-            strokeLinecap="round"
-            style={{ transformBox: "fill-box", transformOrigin: "left center", animation: "k-type 2.6s var(--ease) infinite" }}
-          />
+      {mark === "play" && (
+        <svg viewBox="0 0 24 24" className="h-[0.6em] w-[0.6em]" style={{ overflow: "visible" }}>
+          <g className="mark-loop" style={{ transformBox: "fill-box", transformOrigin: "center", animation: "k-roll 2.4s var(--ease) infinite" }}>
+            <rect x="4.6" y="4.6" width="14.8" height="14.8" rx="4.2" {...line} transform="rotate(-8 12 12)" />
+            <circle cx="12" cy="12" r="1.9" fill="#F2F1EE" />
+          </g>
         </svg>
       )}
-      {mark === "upload" && (
+      {mark === "send" && (
         <svg viewBox="0 0 24 24" className="h-[0.56em] w-[0.56em]">
           <path d="M7 3h7l4.5 4.5V19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" {...line} />
           <path d="M14 3v4.5h4.5" {...line} />

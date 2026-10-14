@@ -454,7 +454,9 @@ export function MyBubble({ text, lines, reaction, rise = false, className, style
             style={{
               position: "relative",
               ...ANSWER,
-              background: "rgba(255,255,255,0.09)",
+              // The app's white at a whisper (rgba(255,255,255,0.09)) as it lands on the sky's black, solid: the site's
+              // phone sky stands still, so a star behind the words would stay there and read as a mark in them.
+              background: "#181818",
               borderRadius: 21,
               borderBottomRightRadius: last ? 7 : 21,
               padding: "7px 14px 8px",

@@ -10,10 +10,10 @@ export function Closing() {
       <InView className="relative mx-auto flex max-w-[900px] flex-col items-center">
         <KAlive size={132} />
         <h2 style={an("k-rise-lg", 1400, 1000)} className="anim mt-10 text-balance text-[clamp(40px,6.6vw,80px)] font-semibold leading-[1.02] tracking-[-0.045em]">
-          Krovvi keeps up, so you don&apos;t have to.
+          Meet your super friend.
         </h2>
         <p style={an("k-rise", 1600, 900)} className="anim mt-5 max-w-[520px] text-pretty text-[clamp(17px,2.2vw,20px)] leading-[1.6] text-muted">
-          It&apos;s in beta on iPhone now. Join, record your next real conversation, and see what Krovvi catches.
+          It&apos;s in beta on iPhone now. Join, say hi, and see what it remembers tomorrow.
         </p>
         <a
           href={JOIN_URL}
@@ -22,6 +22,9 @@ export function Closing() {
         >
           Join the beta
         </a>
+        <p style={an("k-fade", 2100, 900)} className="anim mt-8 max-w-[440px] text-pretty text-[14px] leading-[1.6] text-faint">
+          It always says it&apos;s an AI. No ads, and we never sell your data or use it to train AI.
+        </p>
       </InView>
     </section>
   );
