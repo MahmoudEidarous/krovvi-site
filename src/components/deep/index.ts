@@ -64,3 +64,23 @@ export { AppPage, PageGroup, TaskItem, AddItem } from "./page";
 export { SavingsCard, SavingsChart, SavingsSlider, SavingsTurn, SavingsQuestion, savingsGeometry, savingsGutter, type SavingsPlan } from "./answers";
 export { SavingsLive } from "./answers-live";
 export { CAR, TODAY, savingsWords, monthsTo, addMonths, showMonth, restingScale, type Day as SavingsDay, type Domain as SavingsDomain, type Geometry as SavingsGeometry, type SavingsWords } from "./savings";
+export {
+  KMark,
+  KrovviFace,
+  KrovviIcon,
+  Notification,
+  LockScreen,
+  LockWidgets,
+  KrovviWidget,
+  MessageWidget,
+  RecordWidget,
+  RecordDot,
+  HomeScreen,
+  WALLPAPER,
+  HOME_WALLPAPER,
+  WIDGET,
+  SKIES,
+  type KrovviNote,
+  type LockWidgetsProps,
+  type SkyName,
+} from "./outside";
