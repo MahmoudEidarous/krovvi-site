@@ -1,0 +1,272 @@
+/* The Deep kit's motion and base (src/components/deep). Every keyframe is the
+   app's own, with its file and line at catch8 272d7cc5. One curve everywhere:
+   theme/motion.ts:16, cubic-bezier(0.23, 1, 0.32, 1). Each keyframe ends on
+   the element's own resting style, so with motion reduced a piece simply
+   shows its end. */
+
+/* What every piece stands in: the app's system font, its words set on their
+   own lines (React Native gives a text with no line height the font's own,
+   which is CSS "normal"). */
+.dk {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+  line-height: normal;
+  color: #ededeb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left;
+  font-synthesis: none;
+}
+.dk *,
+.dk *::before,
+.dk *::after {
+  box-sizing: border-box;
+}
+
+/* An emoji in the kit's words (chat.tsx emo()): Chrome draws Apple Color Emoji
+   smaller than the phone does, so it is set a step larger there, with a little
+   more room after a space. WebKit (Safari on the Mac and every iPhone browser)
+   draws emoji with Core Text, as the app does, so it gets no correction. */
+.dk-emo {
+  font-size: var(--dk-emo, 1.17em);
+  line-height: 0;
+}
+.dk-emo-gap {
+  margin-left: 0.08em;
+}
+@supports (font: -apple-system-body) {
+  .dk-emo {
+    font-size: 1em;
+  }
+  .dk-emo-gap {
+    margin-left: 0;
+  }
+}
+
+/* A bubble arriving: a 180 ms fade with a 6 point rise (components/answer/reply.tsx:91-93). */
+@keyframes dk-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.dk-rise {
+  animation: dk-rise 180ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* A fade alone: the typing bubble (reply.tsx:593, 150 ms), the verbs under an answer (app/agent.tsx:5583-5612, 240 ms). */
+@keyframes dk-fade {
+  from {
+    opacity: 0;
+  }
+}
+.dk-fade {
+  animation: dk-fade var(--dk-dur, 150ms) cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* The star landing by an answer's first words: from a point, past its size, then still (reply.tsx:95-96, 420 ms). */
+@keyframes dk-bloom {
+  from {
+    transform: scale(0.2);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.dk-bloom {
+  animation: dk-bloom 420ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* Krovvi at work: the K's seven dots, each in its own light, lighting in the
+   order a hand draws the K, 1400 ms a pass, 140 ms apart (components/k-thinking.tsx:47-50, 93-102). */
+@keyframes dk-k-glow {
+  from {
+    opacity: 0.32;
+    transform: scale(1);
+  }
+  18% {
+    opacity: 1;
+    transform: scale(1.28);
+  }
+  62% {
+    opacity: 0.32;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.32;
+    transform: scale(1);
+  }
+}
+@keyframes dk-k-flat {
+  from {
+    opacity: 0.22;
+  }
+  18% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0.22;
+  }
+  to {
+    opacity: 0.22;
+  }
+}
+.dk-k-dot {
+  animation: var(--dk-k, dk-k-glow) 1400ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) infinite both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes dk-k-breathe {
+  from {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+/* The caret in the text box: ivory (app/agent.tsx:4774 selectionColor), blinking as iOS blinks it. */
+@keyframes dk-caret {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  55%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dk-caret {
+  animation: dk-caret 1060ms steps(1, end) infinite;
+}
+
+/* A sheet rising from below its place, and the scrim to 0.6 under it (components/sheet.tsx:171-177, 205-207, 240 ms). */
+@keyframes dk-sheet-up {
+  from {
+    transform: translateY(calc(100% + 8px));
+  }
+}
+.dk-sheet-up {
+  animation: dk-sheet-up 240ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+@keyframes dk-scrim {
+  from {
+    opacity: 0;
+  }
+}
+.dk-scrim {
+  animation: dk-scrim 240ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* A screen's rows rising in one after another, 320 ms, 45 ms apart (components/screen/bricks/rows.tsx:39-45). */
+@keyframes dk-row {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+.dk-row {
+  animation: dk-row 320ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* A unit of a progress filling (components/screen/bricks/progress.tsx:92-95, 420 ms, 90 ms apart). */
+@keyframes dk-dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+.dk-dot-in {
+  animation: dk-dot-in 420ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* A dotted bar filling once, as the answer brings it (progress.tsx:138-160, about 900 ms). */
+@keyframes dk-fill {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+.dk-fill {
+  animation: dk-fill 900ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* Speaking into the text box: the bars of the voice, newest on the right (components/waveform.tsx, 55 ms a sample). */
+@keyframes dk-voice {
+  0%,
+  100% {
+    transform: scaleY(var(--dk-lo, 0.15));
+  }
+  50% {
+    transform: scaleY(var(--dk-hi, 1));
+  }
+}
+.dk-voice {
+  animation: dk-voice var(--dk-dur, 900ms) ease-in-out var(--dk-delay, 0ms) infinite both;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dk-rise,
+  .dk-bloom,
+  .dk-sheet-up,
+  .dk-row,
+  .dk-dot-in,
+  .dk-fill,
+  .dk-voice {
+    animation: none;
+  }
+  .dk-fade,
+  .dk-scrim {
+    animation-name: dk-fade;
+  }
+  /* Under Reduce Motion the seven dots breathe together, gently, with no travel (k-thinking.tsx:91-102). */
+  .dk-k-dot {
+    animation: dk-k-breathe 1300ms ease-in-out infinite both;
+  }
+}
+
+/* The site's story only (home.tsx AppTile arrive): an app takes what was just sent to it, a small lift and a glow in its colour. */
+@keyframes dk-arrive {
+  0% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.dk-arrive {
+  animation: dk-arrive 620ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+@keyframes dk-arrive-glow {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.dk-arrive-glow {
+  pointer-events: none;
+  opacity: 0;
+  animation: dk-arrive-glow 1400ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dk-arrive,
+  .dk-arrive-glow {
+    animation: none;
+  }
+}

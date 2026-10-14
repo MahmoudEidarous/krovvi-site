@@ -522,3 +522,77 @@ body {
     100% { opacity: 0; }
   }
 }
+
+/* A text box's caret: blinks while it waits, holds still while letters arrive. */
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.08em;
+  margin-left: 2px;
+  margin-right: 1px;
+  vertical-align: -0.17em;
+  border-radius: 1px;
+  background: #ededeb;
+  animation: k-blink 1.06s steps(1) infinite;
+}
+.caret-on {
+  animation: none;
+}
+@keyframes k-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* A chat that plays itself (components/films/chat-film.tsx): a new piece grows
+   in at the foot so the thread slides up, and rises into place; a piece that
+   is done folds away. */
+.film-in {
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: k-grow 520ms var(--ease) both;
+}
+.film-gone {
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: k-shrink 420ms var(--ease) both;
+}
+.film-in > .film-inner,
+.film-gone > .film-inner {
+  min-height: 0;
+}
+.film-in > .film-inner {
+  animation: k-rise 620ms var(--ease) both;
+}
+@keyframes k-grow {
+  from {
+    grid-template-rows: 0fr;
+  }
+}
+@keyframes k-shrink {
+  to {
+    grid-template-rows: 0fr;
+    opacity: 0;
+  }
+}
+/* A piece that has folded away stays in the thread (hidden): its endless loops stop with it. */
+.film-gone .dk-k-dot,
+.film-gone .anim-loop {
+  animation-play-state: paused !important;
+}
+[data-onscreen="0"] .caret,
+[data-onscreen="0"] .dk-k-dot,
+[data-onscreen="0"] .anim-loop {
+  animation-play-state: paused !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  /* With no fold to watch, a piece that is done is simply not there. */
+  .film-gone {
+    display: none !important;
+  }
+  .film-in,
+  .film-in > .film-inner,
+  .caret {
+    animation: none !important;
+  }
+}
