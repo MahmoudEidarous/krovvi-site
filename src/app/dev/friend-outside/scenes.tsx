@@ -267,4 +267,19 @@ export const SCENES: Scene[] = [
     title: "Money: Overview",
     draw: () => <MoneyOverview />,
   },
+  {
+    id: "car-arrive",
+    title: "The screen arriving: the card rises and its line draws in",
+    draw: () => (
+      <DeepChat sky={sky} veil top={null} composer={null}>
+        <SavingsQuestion />
+        <SavingsTurn card={<SavingsCard rise draw />} />
+      </DeepChat>
+    ),
+  },
+  {
+    id: "lock-sky",
+    title: "The lock screen on the app's own night sky",
+    draw: () => <LockScreen wallpaper="night" sky={sky} notes={[NOTES[0]]} />,
+  },
 ];
