@@ -116,7 +116,7 @@ export const IDENTITY: Identity = {
 };
 
 /** The share image's alt text (the two .alt.txt files in src/app hold the same words). */
-export const SHARE_IMAGE_ALT = "The Krovvi K, eleven ivory dots on a night sky, with the words: The AI that knows your life.";
+export const SHARE_IMAGE_ALT = "The Krovvi K and the words: The AI that knows your life.";
 
 /** A page people can find: in the sitemap, in /llms.txt, and with its own title and description. */
 export interface SitePage {

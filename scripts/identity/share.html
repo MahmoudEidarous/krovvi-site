@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Krovvi share image</title>
+<!-- The picture a chat app shows under a link to krovvi.com (1200 x 630). Rendered by build.mjs:
+     ?v=a|b|c picks the layout, ?line= the tagline with "|" where it breaks. Stars: the app's own sky. -->
+<style>
+  html, body { margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden; position: relative;
+    background: #010101; color: #EDEDEB;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  canvas { position: absolute; inset: 0; width: 1200px; height: 630px; }
+  .k { display: block; flex: none; overflow: visible; }
+  .word { font-weight: 600; letter-spacing: -0.0475em; line-height: 1; }
+  .line { margin: 0; font-weight: 600; line-height: 1.02; }
+  .stage { position: absolute; inset: 0; }
+
+  /* A: the lockup at the top left, the tagline large under it. The lockup keeps the approved ratios
+     (identity.html: a 44 px K box, 18 px gap, a 40 px wordmark). The K's dots line up with the tagline's left edge. */
+  .a .lockup { position: absolute; left: calc(96px - 0.2792 * 66px); top: 66px; display: flex; align-items: center; gap: calc(0.45 * 60px); }
+  .a .k { width: 66px; height: 66px; }
+  .a .word { font-size: 60px; }
+  .a .line { position: absolute; left: 96px; top: 236px; font-size: 112px; letter-spacing: -0.042em; }
+
+  /* B: the tagline alone, very large, with the K small under it as a sign-off. */
+  .b .line { position: absolute; left: 0; right: 0; top: 118px; text-align: center; font-size: 124px; letter-spacing: -0.045em; }
+  .b .k { position: absolute; left: calc(50% - 40px); top: 452px; width: 80px; height: 80px; }
+
+  /* C: the stacked lockup (identity.html: a 52 px K box over a 30 px wordmark, 16 px apart), large, in the middle of the sky. */
+  .c .stack { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(0.533 * 92px); padding-bottom: 6px; }
+  .c .k { width: 188px; height: 188px; margin: -34px 0 -34px; }
+  .c .word { font-size: 92px; }
+</style>
+<body>
+<canvas id="sky"></canvas>
+<div class="stage" id="stage"></div>
+<script>
+const INK = "#EDEDEB";
+// The eleven-dot K (brand/mark-rest.svg): r 6.5 on a 120 grid.
+const K = [[40,28],[40,44],[40,60],[40,76],[40,92],[54,50],[68,40],[82,30],[54,70],[68,80],[82,90]];
+const mark = (cls = "k") => `<svg class="${cls}" viewBox="0 0 120 120" aria-hidden="true">${K.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="6.5" fill="${INK}"/>`).join("")}</svg>`;
+const params = new URLSearchParams(location.search);
+const esc = (t) => t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const TAGLINE = (params.get("line") || "The AI that knows|your life.").split("|").map(esc).join("<br>");
+
+const v = params.get("v") || "a";
+const stage = document.getElementById("stage");
+stage.className = `stage ${v}`;
+if (v === "a") stage.innerHTML = `<div class="lockup">${mark()}<span class="word">krovvi</span></div><h1 class="line">${TAGLINE}</h1>`;
+if (v === "b") stage.innerHTML = `<h1 class="line">${TAGLINE}</h1>${mark()}`;
+if (v === "c") stage.innerHTML = `<div class="stack">${mark()}<span class="word">krovvi</span></div>`;
+
+// The app's sky (catch8 src/lib/sky/stars.ts, DEPTH, seed 11), drawn as the app draws it (components/sky/stars.tsx).
+function seeded(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const DEPTH = [
+  { name: "far", density: 143, radius: [0.35, 0.6], alpha: [0.07, 0.22], breathe: 4, glow: 0, apart: 0 },
+  { name: "mid", density: 38.5, radius: [0.6, 0.95], alpha: [0.22, 0.55], breathe: 6, glow: 0, apart: 7 },
+  { name: "near", density: 9.1, radius: [1, 1.55], alpha: [0.55, 0.9], breathe: 3, glow: 4.2, apart: 46 },
+];
+function stars(width, height, seed = 11) {
+  const area = (width * height) / 100000;
+  return DEPTH.map((spec, index) => {
+    const rnd = seeded(seed * 7919 + index * 104729 + 1);
+    const count = Math.max(1, Math.round(spec.density * area));
+    const placed = [];
+    const far2 = spec.apart * spec.apart;
+    const near = (x, y) => placed.some((p) => { const dx = p.x - x; const dy = Math.min(Math.abs(p.y - y), height - Math.abs(p.y - y)); return dx * dx + dy * dy < far2; });
+    const out = [];
+    for (let i = 0; i < count; i++) {
+      let x = rnd() * width, y = rnd() * height;
+      for (let tries = 0; spec.apart > 0 && tries < 24 && near(x, y); tries++) { x = rnd() * width; y = rnd() * height; }
+      placed.push({ x, y });
+      const size = Math.min(1, Math.floor(rnd() * 2));
+      const light = Math.min(2, Math.floor(rnd() * 3));
+      Math.min(spec.breathe - 1, Math.floor(rnd() * spec.breathe));
+      out.push({ x, y, r: spec.radius[0] + (spec.radius[1] - spec.radius[0]) * size, a: spec.alpha[0] + ((spec.alpha[1] - spec.alpha[0]) * light) / 2 });
+    }
+    return { spec, stars: out };
+  });
+}
+
+// Points to pixels: the picture is shown about 300 to 400 points wide in a chat, so 1200 pixels hold a sky 400 points wide.
+const PX = 3;
+const W = 1200, H = 630;
+const GLOW_LIGHT = 0.32;
+// Stars keep clear of the mark and the words, by more for the bright ones, so no star reads as a dot of the K.
+const CLEAR = { far: 18, mid: 34, near: 64 };
+// Around the K itself, much more: its clearspace is open sky (identity.html: never add dots).
+const CLEAR_K = { far: 56, mid: 96, near: 150 };
+
+function keepOuts() {
+  const boxes = [];
+  for (const el of stage.querySelectorAll(".k")) {
+    const dots = [...el.querySelectorAll("circle")].map((c) => c.getBoundingClientRect());
+    boxes.push({ k: true, l: Math.min(...dots.map((d) => d.left)), t: Math.min(...dots.map((d) => d.top)), r: Math.max(...dots.map((d) => d.right)), b: Math.max(...dots.map((d) => d.bottom)) });
+  }
+  for (const el of stage.querySelectorAll(".word, .line")) {
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    for (const rect of range.getClientRects()) boxes.push({ l: rect.left, t: rect.top, r: rect.right, b: rect.bottom });
+  }
+  return boxes;
+}
+
+function draw() {
+  const canvas = document.getElementById("sky");
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  const ctx = canvas.getContext("2d");
+  ctx.scale(dpr, dpr);
+  const boxes = keepOuts();
+  const clear = (x, y, layer) => !boxes.some((b) => { const m = (b.k ? CLEAR_K : CLEAR)[layer]; return x > b.l - m && x < b.r + m && y > b.t - m && y < b.b + m; });
+  let shown = { far: 0, mid: 0, near: 0 };
+  for (const { spec, stars: list } of stars(W / PX, H / PX)) {
+    for (const s of list) {
+      const x = s.x * PX, y = s.y * PX, r = s.r * PX;
+      if (!clear(x, y, spec.name)) continue;
+      shown[spec.name]++;
+      if (spec.glow > 0) {
+        ctx.save();
+        ctx.filter = `blur(${r * spec.glow * 0.3}px)`;
+        ctx.globalAlpha = s.a * GLOW_LIGHT;
+        ctx.fillStyle = INK;
+        ctx.beginPath(); ctx.arc(x, y, (r * spec.glow) / 2, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      }
+      ctx.globalAlpha = s.a;
+      ctx.fillStyle = INK;
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+  }
+  ctx.globalAlpha = 1;
+  if (params.has("debug")) {
+    ctx.strokeStyle = "rgba(255,80,80,0.6)";
+    for (const b of boxes) ctx.strokeRect(b.l, b.t, b.r - b.l, b.b - b.t);
+  }
+  document.title = JSON.stringify(shown);
+}
+document.fonts.ready.then(draw);
+</script>
+</body>
+</html>
