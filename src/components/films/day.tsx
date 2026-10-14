@@ -12,7 +12,6 @@ import {
   MoveHeader,
   MyBubble,
   SavingsLive,
-  SavingsQuestion,
   SavingsTurn,
   ShareSheet,
   ShareTurn,
@@ -48,10 +47,10 @@ function Says({ lines, stagger = 420 }: { lines: string[]; stagger?: number }) {
 }
 
 /** A chat screen on the phone's still sky, at the hour of its moment. */
-function Screen({ time, seed, children, over }: { time?: string; seed?: number; children: ReactNode; over?: ReactNode }) {
+function Screen({ time, seed, children, over, foot = 24 }: { time?: string; seed?: number; children: ReactNode; over?: ReactNode; foot?: number }) {
   return (
     <div className="absolute inset-0">
-      <DeepChat sky={<PhoneSky seed={seed} />} veil time={time} over={over} columnStyle={{ gap: 0, paddingTop: 6 }}>
+      <DeepChat sky={<PhoneSky seed={seed} />} veil time={time} over={over} columnStyle={{ gap: 0, paddingTop: 6, paddingBottom: foot }}>
         {children}
       </DeepChat>
     </div>
@@ -171,24 +170,21 @@ const HELP: Beat[] = [
     id: "q",
     wait: 450,
     gap: 0,
-    show: () => (
-      <div className="dk-rise flex flex-col gap-[16px]">
-        <SavingsQuestion time="8:05 am" />
-      </div>
-    ),
+    // Asked plainly: Krovvi already knows what is saved and what goes in each month.
+    show: () => <MyBubble text="When can I buy the car?" rise />,
   },
   { id: "w", wait: 500, gap: 16, until: "a", show: () => <Working /> },
   // The answer and its screen; a beat after it lands, the slider is pulled from $400 to $700 as a finger would, and the date comes in.
-  { id: "a", wait: 1500, gap: 0, show: () => <SavingsTurn card={<SavingsLive value={400} auto={700} autoDelay={2600} autoMs={1300} interactive={false} rise />} /> },
+  { id: "a", wait: 1500, gap: 0, show: () => <SavingsTurn actions={false} card={<SavingsLive value={400} auto={700} autoDelay={2600} autoMs={1300} interactive={false} rise />} /> },
 ];
 
 export const HELP_LABEL =
-  "Next morning, 8:05. You ask: If I put away 400 a month, when can I buy the car? Krovvi: With $6,500 saved and $400 a month, you'd have the $20,000 by August 2029. Slide to see how much a bigger amount brings it in. A chart shows the savings line rising to the goal, with a slider for what you put away each month; it moves to $700, and the date comes in.";
+  "Next morning, 8:05. You ask: When can I buy the car? Krovvi already knows what you've saved: With $6,500 saved and $400 a month, you'd have the $20,000 by August 2029. Slide to see how much a bigger amount brings it in. A chart shows the savings line rising to the goal, with a slider for what you put away each month; it moves to $700, and the date comes in.";
 
 export function HelpFilm({ playing, still = false }: FilmProps) {
   const at = usePlayed(HELP, playing, still);
   return (
-    <Screen time="8:05" seed={23}>
+    <Screen time="8:05" seed={31} foot={8}>
       <Thread beats={HELP} at={at} />
     </Screen>
   );
