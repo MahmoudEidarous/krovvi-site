@@ -156,7 +156,7 @@ export function PlanFilm({ playing, still = false }: FilmProps) {
   return (
     <Screen
       time="4:12"
-      seed={53}
+      seed={31}
       over={
         sheet ? (
           <ShareSheet title="Friday dinner" rise={!still} cardSky={<PhoneSky seed={23} light={0.7} />}>

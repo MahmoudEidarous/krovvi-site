@@ -82,10 +82,10 @@ export function FunVisual() {
   const b = usePlayOnce(READ, ref);
   return (
     <div ref={ref} className="grid gap-4 md:grid-cols-2">
-      <SkyPanel h={340} seed={71} label="You write: I'm bored. Krovvi: Let's fix that. Quick round of This or That. Tap one, or swipe toward it.">
+      <SkyPanel h={340} seed={41} label="You write: I'm bored. Krovvi: Let's fix that. Quick round of This or That. Tap one, or swipe toward it.">
         <PanelThread beats={BORED} at={a} />
       </SkyPanel>
-      <SkyPanel h={340} seed={73} label="After the round, Krovvi: Ha, I knew you were a night owl. Didn't see the mountains coming though. I'll remember you'd rather text than call.">
+      <SkyPanel h={340} seed={53} label="After the round, Krovvi: Ha, I knew you were a night owl. Didn't see the mountains coming though. I'll remember you'd rather text than call.">
         <PanelThread beats={READ} at={b} />
       </SkyPanel>
     </div>
@@ -105,23 +105,38 @@ const LIT: Array<{ app: AppId; line: string; at: number }> = [
 
 const QUIET: AppId[] = ["todo", "nutrition", "habits", "kitchen", "health", "watch", "library", "meetings"].slice(0, 8) as AppId[];
 
+function AppsPanel({ cols, seen, reduced, className }: { cols: number; seen: boolean; reduced: boolean; className?: string }) {
+  const cell = 86;
+  const rows = Math.ceil((LIT.length + QUIET.length) / cols);
+  return (
+    <SkyPanel
+      className={className}
+      w={cols * cell + 48}
+      h={rows * 104 + 42}
+      seed={61}
+      label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan. To-do, Nutrition, Habits, Kitchen, Health, Watch, Library and Meetings stand beside them."
+    >
+      <div style={{ position: "absolute", inset: 0, padding: "26px 24px 0", display: "flex", flexWrap: "wrap" }}>
+        {LIT.map((t) => (
+          <AppTile key={t.app} app={t.app} width={cell} line={seen || reduced ? t.line : undefined} lit={seen || reduced} arrive={seen && !reduced ? t.at : undefined} />
+        ))}
+        {QUIET.map((app) => (
+          <AppTile key={app} app={app} width={cell} />
+        ))}
+      </div>
+    </SkyPanel>
+  );
+}
+
+/** The apps behind the chat, the four that just took something lit in turn: six across on a wide tile, four on a phone. */
 export function OrderVisual() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const seen = useFirstSeen(ref, "0px 0px -20% 0px");
-  const cell = 86;
   return (
     <div ref={ref}>
-      <SkyPanel w={6 * cell + 48} h={250} seed={79} label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan. To-do, Nutrition, Habits, Kitchen, Health, Watch, Library and Meetings stand beside them.">
-        <div style={{ position: "absolute", inset: 0, padding: "26px 24px 0", display: "flex", flexWrap: "wrap" }}>
-          {LIT.map((t) => (
-            <AppTile key={t.app} app={t.app} width={cell} line={seen || reduced ? t.line : undefined} lit={seen || reduced} arrive={seen && !reduced ? t.at : undefined} />
-          ))}
-          {QUIET.map((app) => (
-            <AppTile key={app} app={app} width={cell} />
-          ))}
-        </div>
-      </SkyPanel>
+      <AppsPanel cols={6} seen={seen} reduced={reduced} className="hidden md:block" />
+      <AppsPanel cols={4} seen={seen} reduced={reduced} className="md:hidden" />
     </div>
   );
 }

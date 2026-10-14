@@ -40,7 +40,7 @@ function Film({ beats, playing, still = false, time, seed }: FilmProps & { beats
   );
 }
 
-export const PlayFilm = (p: FilmProps) => <Film {...p} beats={PLAY} time="11:40" seed={61} />;
-export const HelpFilm = (p: FilmProps) => <Film {...p} beats={HELP} time="8:05" seed={67} />;
+export const PlayFilm = (p: FilmProps) => <Film {...p} beats={PLAY} time="11:40" seed={7} />;
+export const HelpFilm = (p: FilmProps) => <Film {...p} beats={HELP} time="8:05" seed={23} />;
 export const PLAY_LABEL = "11:40 PM. You say you're bored. Krovvi starts Two truths and a lie, about you: three things about your life, one of them made up.";
 export const HELP_LABEL = "Next morning. You ask: If I put away 400 a month, when can I buy the car? Krovvi: With $6,500 saved and $400 a month, you'd have the $20,000 by August 2029, with a chart you can slide.";

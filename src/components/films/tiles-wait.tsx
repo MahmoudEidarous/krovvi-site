@@ -21,7 +21,7 @@ export function PeopleVisual() {
     <div ref={ref} className="mx-auto w-[min(330px,100%)]">
       <Phone label="Krovvi asks a few quick questions about the people in your life.">
         <div className="absolute inset-0">
-          <DeepChat sky={<PhoneSky seed={83} />} veil columnStyle={{ gap: 0, paddingTop: 6 }}>
+          <DeepChat sky={<PhoneSky seed={19} />} veil columnStyle={{ gap: 0, paddingTop: 6 }}>
             <Thread beats={ASKS} at={at} />
           </DeepChat>
         </div>
@@ -39,7 +39,7 @@ export function TextsFirstVisual() {
   const at = usePlayOnce(FIRST, ref);
   return (
     <div ref={ref}>
-      <SkyPanel h={220} seed={89}>
+      <SkyPanel h={220} seed={7}>
         <PanelThread beats={FIRST} at={at} />
       </SkyPanel>
     </div>
@@ -56,7 +56,7 @@ export function SendVisual() {
   const at = usePlayOnce(SENT, ref);
   return (
     <div ref={ref}>
-      <SkyPanel h={220} seed={97}>
+      <SkyPanel h={220} seed={23}>
         <PanelThread beats={SENT} at={at} />
       </SkyPanel>
     </div>
@@ -65,7 +65,7 @@ export function SendVisual() {
 
 export function CloseVisual() {
   return (
-    <SkyPanel h={220} seed={101}>
+    <SkyPanel h={220} seed={31}>
       <div />
     </SkyPanel>
   );
