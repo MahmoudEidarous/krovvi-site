@@ -98,9 +98,9 @@ export const IDENTITY: Identity = {
   tagline: "The AI that knows your life.",
   title: "Krovvi: the AI that knows your life",
   description:
-    "Krovvi is a personal AI on iPhone that remembers your people and plans, talks first when something matters, and gets things done for you.",
+    "Krovvi is a personal AI on iPhone that remembers your people and plans, texts you first when something matters, and gets things done for you.",
   ogTitle: "Krovvi: the AI that knows your life",
-  ogDescription: "It remembers your people and your plans, talks first when something matters, and gets things done.",
+  ogDescription: "It remembers your people and your plans, texts you first when something matters, and gets things done.",
   category: "Personal AI for iPhone",
   mission: "Give everyone an AI that keeps up with their life.",
   status: "In beta on iPhone",
@@ -113,7 +113,8 @@ export const IDENTITY: Identity = {
   maker: "Delvnco", // from the privacy policy; owner to confirm the legal name before it goes in as legalName
   locale: "en_US",
   app: { operatingSystem: "iOS", device: "iPhone", category: "LifestyleApplication" }, // owner to confirm against App Store Connect
-  colors: { sky: "#010101", tile: "#0A0A0A", ink: "#EDEDEB" },
+  // The live pages stand on #0A0A0A: the browser bar and the manifest match them until the night look ships.
+  colors: { sky: "#0A0A0A", tile: "#0A0A0A", ink: "#EDEDEB" },
   logo: { path: "/brand/krovvi-512.png", size: 512 },
 };
 
