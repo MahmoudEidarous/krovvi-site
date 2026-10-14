@@ -731,10 +731,10 @@ function PlusIcon({ kind, size = 23, color = INK.fg }: { kind: "camera" | "pictu
 }
 
 /** The record dot (KrovviKit.swift RecordDot): recording's red, the one colour out here, in a little of its own light. */
-export function RecordDot({ size = 15, light = true }: { size?: number; light?: boolean }) {
+export function RecordDot({ size = 15, light = true, className, style }: Piece & { size?: number; light?: boolean }) {
   const reach = size * 2.3;
   return (
-    <span style={{ position: "relative", display: "block", width: size, height: size, flexShrink: 0 }}>
+    <span className={className} style={{ position: "relative", display: "block", width: size, height: size, flexShrink: 0, ...style }}>
       {light ? (
         <span
           style={{

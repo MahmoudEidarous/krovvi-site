@@ -240,6 +240,8 @@ export function SavingsLive({
     if (autoTimer.current) clearTimeout(autoTimer.current);
     e.currentTarget.setPointerCapture(e.pointerId);
     press.current = { id: e.pointerId, x0: e.clientX, dragging: false };
+    // A finger takes over from a driven move: the thumb is no longer held by it.
+    setHeld(false);
     // A tap jumps there (slider.tsx:108-110); the thumb glides to its step.
     const s = sliderShare(pointsAt(e.clientX), inner);
     take(range.min + s * (range.max - range.min));
@@ -274,6 +276,8 @@ export function SavingsLive({
     else if (e.key === "End") next = range.max;
     if (next === null) return;
     e.preventDefault();
+    if (autoTimer.current) clearTimeout(autoTimer.current);
+    setHeld(false);
     take(next);
     glide(fractionOf(last.current), GLIDE_MS);
   };
@@ -284,6 +288,7 @@ export function SavingsLive({
     const target = snap(auto);
     if (autoTimer.current) clearTimeout(autoTimer.current);
     autoTimer.current = setTimeout(() => {
+      cancelAnimationFrame(shareFrame.current);
       if (target === last.current) return;
       if (reduced) {
         take(target);

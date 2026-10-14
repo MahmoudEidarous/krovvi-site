@@ -123,9 +123,12 @@ export function VoiceNote({
   unheard = false,
   reading = false,
   width = VOICE_WIDTH,
+  rise = false,
   className,
   style,
 }: Piece & {
+  /** It arrives as a sent message does: a 180 ms fade and a 6 point rise (components/answer/reply.tsx:91-93). */
+  rise?: boolean;
   /** The clip's length. */
   ms?: number;
   /** Its loudness, 0 to 1, as many bars as kept (64). */
@@ -148,7 +151,7 @@ export function VoiceNote({
   const shown = playing || played > 0 ? voiceClock(at) : voiceClock(ms);
   return (
     <div
-      className={cx("dk", className)}
+      className={cx("dk", rise && "dk-rise", className)}
       role="group"
       aria-label={`Voice message, ${voiceClock(ms)}${about ? `. ${about}` : ""}`}
       style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", alignSelf: "flex-end", maxWidth: "82%", ...style }}
@@ -252,9 +255,9 @@ export const PHOTO_TILE = Math.floor((SCREEN.width - THREAD_SIDE * 2 - 12) / 3);
  * Krovvi's emoji on the first one's corner, when the message is only photos.
  * `reading`: the reading light over them while Krovvi looks.
  */
-export function SentPhotos({ photos, reaction, reading = false, tile = PHOTO_TILE, className, style }: Piece & { photos: Array<PhotoName | "receipt" | (string & {})>; reaction?: string; reading?: boolean; tile?: number }) {
+export function SentPhotos({ photos, reaction, reading = false, tile = PHOTO_TILE, rise = false, className, style }: Piece & { photos: Array<PhotoName | "receipt" | (string & {})>; reaction?: string; reading?: boolean; tile?: number; rise?: boolean }) {
   return (
-    <div className={cx("dk", className)} style={{ alignSelf: "flex-end", width: tile * 3 + 12, maxWidth: "100%", display: "flex", flexWrap: "wrap", justifyContent: "flex-end", gap: 6, ...style }}>
+    <div className={cx("dk", rise && "dk-rise", className)} style={{ alignSelf: "flex-end", width: tile * 3 + 12, maxWidth: "100%", display: "flex", flexWrap: "wrap", justifyContent: "flex-end", gap: 6, ...style }}>
       {photos.map((art, i) => (
         <span key={i} role="img" aria-label="Photo you attached" style={{ position: "relative", width: tile, height: tile, borderRadius: 12, overflow: "visible", flexShrink: 0 }}>
           <span style={{ position: "absolute", inset: 0, borderRadius: 12, overflow: "hidden" }}>
@@ -296,9 +299,11 @@ export function SentLink({
   picture,
   mark,
   reading = false,
+  rise = false,
   className,
   style,
 }: Piece & {
+  rise?: boolean;
   /** The page's title, from its preview tags. */
   title?: string;
   /** The site's name ("YouTube", or the address's host). */
@@ -312,7 +317,7 @@ export function SentLink({
   const wide = picture !== undefined;
   return (
     <div
-      className={cx("dk", className)}
+      className={cx("dk", rise && "dk-rise", className)}
       role="link"
       aria-label={`Open link: ${title || site}`}
       style={{ position: "relative", alignSelf: "flex-end", width: wide ? CARD_MAX : undefined, maxWidth: CARD_MAX, background: C.glass, border: `${HAIR}px solid ${C.glassEdge}`, borderRadius: 20, overflow: "hidden", ...style }}
@@ -366,11 +371,11 @@ function fileFace(name: string): { word: string; tint: string } {
  * page mark in the file's colour, its name 14.5 semibold, and what it is
  * under it, 11 points in faint ink.
  */
-export function SentFile({ name, reading = false, className, style }: Piece & { name: string; reading?: boolean }) {
+export function SentFile({ name, reading = false, rise = false, className, style }: Piece & { name: string; reading?: boolean; rise?: boolean }) {
   const face = fileFace(name);
   return (
     <div
-      className={cx("dk", className)}
+      className={cx("dk", rise && "dk-rise", className)}
       role="button"
       aria-label={`Open ${name}`}
       style={{ position: "relative", alignSelf: "stretch", display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", background: C.glass, border: `${HAIR}px solid ${C.glassEdge}`, borderRadius: 20, overflow: "hidden", ...style }}
