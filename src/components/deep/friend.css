@@ -83,17 +83,22 @@
   transform-origin: 50% 0%;
 }
 
-/* A voice message playing: the light moving over the dots while Krovvi listens (components/answer/reading-light.tsx). */
-@keyframes dkx-listen {
+/* Krovvi reading what the person sent (components/answer/reading-light.tsx): a band of
+   light crosses the photo, the file or the voice note's dots, rests, and comes round
+   again, 1500 ms a pass. The band's start and end are set on the element. */
+@keyframes dkx-read {
   from {
-    transform: translateX(-60%);
+    transform: translateX(var(--dk-from, -48px));
+  }
+  78% {
+    transform: translateX(var(--dk-to, 100px));
   }
   to {
-    transform: translateX(160%);
+    transform: translateX(var(--dk-to, 100px));
   }
 }
-.dkx-listen {
-  animation: dkx-listen 1600ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
+.dkx-read {
+  animation: dkx-read 1500ms cubic-bezier(0.45, 0.05, 0.25, 1) var(--dk-delay, 0ms) infinite both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -107,8 +112,9 @@
   .dkx-fade {
     animation-duration: 1ms;
   }
-  .dkx-listen {
+  /* Under Reduce Motion the reading light is not drawn at all (reading-light.tsx). */
+  .dkx-read {
     animation: none;
-    opacity: 0;
+    display: none;
   }
 }

@@ -1,6 +1,27 @@
 import type { ReactNode } from "react";
 
-import { DeepChat, HomeScreen, KrovviWidget, LockScreen, MessageWidget, Notification, RecordWidget, SavingsCard, SavingsQuestion, SavingsTurn } from "@/components/deep";
+import {
+  DateLine,
+  DeepChat,
+  HomeScreen,
+  KrovviBubbles,
+  KrovviWidget,
+  LockScreen,
+  MessageWidget,
+  MyBubble,
+  Notification,
+  RecordWidget,
+  SavingsCard,
+  SavingsQuestion,
+  SavingsTurn,
+  Sent,
+  SentFile,
+  SentLink,
+  SentPhotos,
+  Turn,
+  VoiceNote,
+  Working,
+} from "@/components/deep";
 import { SavingsLive } from "@/components/deep/answers-live";
 import { PhoneSky } from "@/components/sky/phone-sky";
 
@@ -170,5 +191,74 @@ export const SCENES: Scene[] = [
     id: "match-lock",
     title: "Match: lock-en.png (drawn for a 402 point phone)",
     draw: () => <LockScreen inline={`Krovvi: ${CAPTURE.call}`} widgets={{ text: CAPTURE.call, when: "now" }} buttons={false} />,
+  },
+  {
+    id: "sent-voice",
+    title: "Sent: a voice message, Krovvi listening",
+    draw: () => (
+      <DeepChat sky={sky} veil footer={<Working />}>
+        <DateLine day="Today" time="6:12 pm" />
+        <MyBubble text="Just got out of Northline" />
+        <VoiceNote ms={23000} about="How the Northline interview went" reading />
+      </DeepChat>
+    ),
+  },
+  {
+    id: "sent-voice-played",
+    title: "Sent: a voice message, playing, and Krovvi's answer",
+    draw: () => (
+      <DeepChat sky={sky} veil>
+        <DateLine day="Today" time="6:12 pm" />
+        <VoiceNote ms={23000} playing played={0.42} rate={1.5} about="How the Northline interview went" />
+        <Turn>
+          <KrovviBubbles lines={["That sounds like it went really well 🎉", "When do they say they'll get back to you?"]} />
+        </Turn>
+      </DeepChat>
+    ),
+  },
+  {
+    id: "sent-link",
+    title: "Sent: a link, as a card under the words",
+    draw: () => (
+      <DeepChat sky={sky} veil>
+        <DateLine day="Today" time="8:40 pm" />
+        <Sent>
+          <MyBubble text="This one for Friday? It goes along the river" />
+          <SentLink title="Six river routes for an evening run" site="Riverside Runs" picture="river" />
+        </Sent>
+        <Turn>
+          <KrovviBubbles lines={["The 8 km one starts ten minutes from you 👀", "Same as your usual Friday, just longer. Want it in your plans?"]} />
+        </Turn>
+      </DeepChat>
+    ),
+  },
+  {
+    id: "sent-photos",
+    title: "Sent: photos with the words",
+    draw: () => (
+      <DeepChat sky={sky} veil footer={<Working />}>
+        <DateLine day="Today" time="9:05 pm" />
+        <Sent>
+          <SentPhotos photos={["dinner", "receipt"]} reading />
+          <MyBubble text="Dinner with Omar and Mona. Can you split this three ways?" />
+        </Sent>
+      </DeepChat>
+    ),
+  },
+  {
+    id: "sent-file",
+    title: "Sent: a file, and photos alone with Krovvi's reaction",
+    draw: () => (
+      <DeepChat sky={sky} veil>
+        <DateLine day="Today" time="11:20 am" />
+        <Sent>
+          <SentFile name="Contract from Sam.pdf" />
+          <MyBubble text="Sam's contract came. Anything I should look at?" />
+        </Sent>
+        <Sent>
+          <SentPhotos photos={["city", "sea", "park"]} reaction="😍" />
+        </Sent>
+      </DeepChat>
+    ),
   },
 ];
