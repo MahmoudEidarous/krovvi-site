@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
+import { subpageMetadata } from "@/lib/identity";
 import { POLICY } from "./policy";
 
-export const metadata: Metadata = { title: "Privacy Policy, Krovvi" };
+/** "Privacy Policy | Krovvi", its own description and preview (lib/identity.ts). */
+export const metadata: Metadata = subpageMetadata("/privacy");
 
 /** Plain text with any email address turned into a link. */
 function Linked({ text }: { text: string }) {

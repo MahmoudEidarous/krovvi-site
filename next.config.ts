@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/o/:path*", headers: PRIVATE_LINK_HEADERS },
       { source: "/s/:path*", headers: PRIVATE_LINK_HEADERS },
+      // Dev views, now and later: never in a search engine, even one whose page forgets to say so.
+      { source: "/dev/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
     ];
   },
   async redirects() {

@@ -1,6 +1,10 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { DevObject } from "./dev-object";
+
+/** A dev view: never in a search engine. */
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 
 /**
  * Every kind's fixtures on the page, with no network, while building:

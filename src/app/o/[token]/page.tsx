@@ -40,7 +40,8 @@ export async function generateMetadata({ params }: { params: Promise<{ token: st
   const card = CARD(lang);
   const description = line ? `${line} ${NO_APP[lang]}` : LINE[lang];
   return {
-    title,
+    // Absolute: the object's own title, never the site's template around it.
+    title: { absolute: title },
     description,
     robots: { index: false, follow: false, nocache: true },
     // The page's own tags replace the site's, its picture with them.

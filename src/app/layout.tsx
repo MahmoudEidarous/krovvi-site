@@ -1,25 +1,40 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const description =
-  "Krovvi remembers what people told you, keeps track of what you promised, and notices what changed. So when you need it, it's already caught up.";
+import { IDENTITY, SITE_URL, structuredDataScript } from "@/lib/identity";
 
+/**
+ * What Google, a chat app's link preview and a home screen show of the site, all
+ * from lib/identity.ts. The pictures come from the file conventions beside this
+ * file: favicon.ico (16, 32 and 48), icon.svg, apple-icon.png (180),
+ * opengraph-image.png and twitter-image.png (1200 x 630), and manifest.ts.
+ *
+ * "./" is the page's own address: Next resolves it against each page's path, so
+ * every page's canonical and og:url name that page, and no page can inherit
+ * the home's (a canonical to the home on a noindex page could carry the
+ * noindex over to the home).
+ */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krovvi.com"),
-  title: "Krovvi: the AI that knows your life",
-  description,
+  metadataBase: new URL(SITE_URL),
+  title: { default: IDENTITY.title, template: IDENTITY.titleTemplate },
+  description: IDENTITY.description,
+  applicationName: IDENTITY.name,
+  alternates: { canonical: "./" },
   openGraph: {
     type: "website",
-    url: "https://krovvi.com",
-    siteName: "Krovvi",
-    title: "Krovvi",
-    description: "The AI that knows your life.",
+    url: "./",
+    siteName: IDENTITY.name,
+    title: IDENTITY.ogTitle,
+    description: IDENTITY.ogDescription,
+    locale: IDENTITY.locale,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Krovvi",
-    description: "The AI that knows your life.",
+    title: IDENTITY.ogTitle,
+    description: IDENTITY.ogDescription,
   },
+  // A home screen icon keeps the name short and opens the site in Safari: the app is the iPhone app, not this page.
+  appleWebApp: { title: IDENTITY.name, capable: false },
 };
 
 export const viewport: Viewport = {
@@ -27,7 +42,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   // Paint under the notch and the home indicator; the page is edge to edge dark.
   viewportFit: "cover",
-  themeColor: "#0a0a0a",
+  themeColor: IDENTITY.colors.sky,
   colorScheme: "dark",
 };
 
@@ -40,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <noscript>
           <style>{`.anim,.anim-loop,.seq{animation:none!important}.transient{display:none!important}.phone-canvas{transform:scale(tan(atan2(100cqw,393px)))!important}`}</style>
         </noscript>
+        {/* The site, the company and the app for search engines and AI assistants (lib/identity.ts). */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredDataScript() }} />
       </head>
       <body>{children}</body>
     </html>

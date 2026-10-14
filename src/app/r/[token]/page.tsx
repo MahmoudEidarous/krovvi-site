@@ -11,7 +11,8 @@ import { RecordPage } from "./record-page";
  * would tell the sender "they opened it" before anyone had.
  */
 export const metadata: Metadata = {
-  title: "What we agreed",
+  // Absolute: this exact title, never the site's template around it.
+  title: { absolute: "What we agreed" },
   description: "Open to confirm it or fix a line.",
   robots: { index: false, follow: false },
   openGraph: {

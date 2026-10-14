@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
+import { subpageMetadata } from "@/lib/identity";
 import { SUPPORT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Support, Krovvi" };
+/** "Support | Krovvi", its own description and preview (lib/identity.ts). */
+export const metadata: Metadata = subpageMetadata("/support");
 
 const p = "mt-4 text-[17px] leading-[1.7] text-soft";
 

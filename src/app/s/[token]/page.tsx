@@ -39,7 +39,8 @@ export async function generateMetadata({ params }: { params: Promise<{ token: st
   const line = lang === "ar" ? (name ? `شاركه ${name} من كروفي` : "متشارك من كروفي") : name ? `Shared by ${name} on Krovvi` : "Shared from Krovvi";
   const card = CARD[lang];
   return {
-    title,
+    // Absolute: the chat's own title, never the site's template around it.
+    title: { absolute: title },
     description: line,
     robots: { index: false, follow: false, nocache: true },
     // The page's own tags replace the site's, its picture with them.
