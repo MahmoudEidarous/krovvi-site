@@ -1,0 +1,364 @@
+/* The games' motion (src/components/deep/games.tsx), from the app's own
+   numbers at catch8 6edb7fca (store build 20), src/components/games/*.tsx.
+   The app moves these on Reanimated 4 springs; each spring is drawn here as
+   a CSS linear() curve sampled from the same physics (energy based end, as
+   Reanimated 4 ends them), cut where less than 0.2 percent of the move is
+   left:
+     SETTLE  damping 20, stiffness 230, mass 0.9 (parts.tsx:75, deck.tsx:186): 583 ms, 4.8 percent past its mark
+     POP     damping 13, stiffness 300, mass 0.6 (parts.tsx:77): 550 ms, 17.6 percent past
+   Every keyframe ends on the element's own resting style, so with motion
+   reduced a piece simply shows its end. */
+
+/* A game's first appearance (parts.tsx:57-73): 140 ms after Krovvi's words
+   it rises 14 points from 0.97 and fades in, on SETTLE. */
+@keyframes dk-game-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+}
+.dk-game-rise {
+  animation: dk-game-rise 583ms
+    linear(0, 0.0175, 0.0625, 0.1287, 0.2066, 0.2936, 0.3835, 0.4708, 0.5564, 0.6365, 0.7082, 0.7738, 0.8302, 0.8799, 0.9217, 0.9555, 0.9834, 1.0052, 1.0213, 1.0332, 1.041, 1.0457, 1.0478, 1.0478, 1.0462, 1.0434, 1.0399, 1.0359, 1.0317, 1.0274, 1.0232, 1.0193, 1.0156, 1.0123, 1.0094, 1.0068, 1.0047, 1.0029, 1.0014, 1.0002, 0.9993, 0.9987, 0.9982, 0.9979, 0.9977, 0.9977, 0.9977, 0.9978, 1)
+    calc(140ms + var(--dk-delay, 0ms)) both;
+}
+
+/* Two truths and a lie, the turn over (two-truths.tsx:170-191): each card
+   folds to its edge and opens again in 300 ms (Reanimated's default timing,
+   in and out on a square), 220 ms after the tap and 90 ms later for each
+   place away from the card tapped. What it shows changes at the middle, when
+   it is edge on: the lit front goes, and the tag and the note come. */
+@keyframes dk-tt-turn {
+  0% {
+    transform: perspective(800px) rotateX(0deg);
+    animation-timing-function: cubic-bezier(0.333, 0, 0.667, 0.333);
+  }
+  50% {
+    transform: perspective(800px) rotateX(90deg);
+    animation-timing-function: linear;
+  }
+  50.01% {
+    transform: perspective(800px) rotateX(-90deg);
+    animation-timing-function: cubic-bezier(0.333, 0.667, 0.667, 1);
+  }
+  100% {
+    transform: perspective(800px) rotateX(0deg);
+  }
+}
+.dk-tt-turn {
+  animation: dk-tt-turn 300ms linear calc(220ms + var(--dk-delay, 0ms)) both;
+}
+@keyframes dk-tt-back {
+  0%,
+  50% {
+    max-height: 0;
+  }
+  50.01%,
+  100% {
+    max-height: 480px;
+  }
+}
+.dk-tt-back {
+  animation: dk-tt-back 300ms linear calc(220ms + var(--dk-delay, 0ms)) both;
+}
+@keyframes dk-tt-lit {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+.dk-tt-lit {
+  opacity: 0;
+  animation: dk-tt-lit 300ms linear calc(220ms + var(--dk-delay, 0ms)) both;
+}
+
+/* This or That. Krovvi's guess pops onto the side it guessed, 110 ms after
+   the pick, from half its size on POP (this-or-that.tsx:269-274). */
+@keyframes dk-pop-half {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+.dk-tot-guess {
+  animation: dk-pop-half 550ms
+    linear(0, 0.0303, 0.1104, 0.2218, 0.3557, 0.4975, 0.6373, 0.7674, 0.88, 0.9769, 1.0537, 1.1105, 1.1483, 1.1691, 1.1755, 1.1705, 1.1567, 1.1368, 1.1133, 1.089, 1.0644, 1.0415, 1.0212, 1.0042, 0.9909, 0.9809, 0.9741, 0.9704, 0.9692, 0.97, 0.9724, 0.9759, 0.98, 0.9843, 0.9887, 0.9926, 0.9962, 0.9992, 1.0016, 1.0033, 1.0045, 1.0052, 1.0054, 1.0053, 1.0048, 1.0042, 1.0035, 1.0028, 1)
+    calc(110ms + var(--dk-delay, 0ms)) both;
+}
+
+/* The chosen card lifting off the deck (this-or-that.tsx:310-334): out past
+   the screen's edge on the side it was chosen toward, 14 up, turning 12
+   degrees more, 300 ms on bezier(0.33, 0, 0.67, 1); whole until its eased
+   travel passes 0.72 (65 percent of the time), then gone. The resting style
+   is where it ends (set by the piece), so this plays from where it stood. */
+@keyframes dk-tot-leave {
+  from {
+    opacity: 1;
+    transform: translate(var(--dk-from, 0px), 0px) rotate(var(--dk-from-turn, 0deg));
+  }
+  65.1% {
+    opacity: 1;
+  }
+}
+.dk-tot-leave {
+  animation: dk-tot-leave 300ms cubic-bezier(0.33, 0, 0.67, 1) var(--dk-delay, 0ms) both;
+}
+
+/* The next card growing from its plate (this-or-that.tsx:163-214): from 10
+   lower, as narrow as the plate under it and at 0.4, on SETTLE. */
+@keyframes dk-tot-arrive {
+  from {
+    opacity: 0.4;
+    transform: translateY(10px) scale(0.9446);
+  }
+}
+.dk-tot-arrive {
+  animation: dk-tot-arrive 583ms
+    linear(0, 0.0175, 0.0625, 0.1287, 0.2066, 0.2936, 0.3835, 0.4708, 0.5564, 0.6365, 0.7082, 0.7738, 0.8302, 0.8799, 0.9217, 0.9555, 0.9834, 1.0052, 1.0213, 1.0332, 1.041, 1.0457, 1.0478, 1.0478, 1.0462, 1.0434, 1.0399, 1.0359, 1.0317, 1.0274, 1.0232, 1.0193, 1.0156, 1.0123, 1.0094, 1.0068, 1.0047, 1.0029, 1.0014, 1.0002, 0.9993, 0.9987, 0.9982, 0.9979, 0.9977, 0.9977, 0.9977, 0.9978, 1)
+    var(--dk-delay, 0ms) both;
+}
+
+/* A round folded into its line: the dots light one after another, 70 ms
+   each, 120 ms after the fold, each swelling as it lights (parts.tsx:93-119). */
+@keyframes dk-dot-light {
+  0% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.318);
+  }
+  50% {
+    transform: scale(1.45);
+  }
+  75% {
+    transform: scale(1.318);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.dk-dot-light {
+  animation: dk-dot-light 70ms linear calc(120ms + var(--dk-delay, 0ms)) both;
+}
+
+/* Found it: the check's lit disc pops in from half its size, 160 ms in, on SETTLE (guess.tsx:275-290). */
+.dk-guess-found {
+  animation: dk-pop-half 583ms
+    linear(0, 0.0175, 0.0625, 0.1287, 0.2066, 0.2936, 0.3835, 0.4708, 0.5564, 0.6365, 0.7082, 0.7738, 0.8302, 0.8799, 0.9217, 0.9555, 0.9834, 1.0052, 1.0213, 1.0332, 1.041, 1.0457, 1.0478, 1.0478, 1.0462, 1.0434, 1.0399, 1.0359, 1.0317, 1.0274, 1.0232, 1.0193, 1.0156, 1.0123, 1.0094, 1.0068, 1.0047, 1.0029, 1.0014, 1.0002, 0.9993, 0.9987, 0.9982, 0.9979, 0.9977, 0.9977, 0.9977, 0.9978, 1)
+    calc(160ms + var(--dk-delay, 0ms)) both;
+}
+
+/* The question mark breathing in its ring (guess.tsx:78-95): 1100 ms each way. */
+@keyframes dk-think-ring {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+@keyframes dk-think-mark {
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+.dk-think-ring {
+  animation: dk-think-ring 2200ms ease-in-out infinite;
+}
+.dk-think-mark {
+  animation: dk-think-mark 2200ms ease-in-out infinite;
+}
+
+/* Trivia's clock running down twenty seconds (trivia.tsx:110-131). */
+@keyframes dk-clock {
+  from {
+    transform: scaleX(1);
+    opacity: 0.75;
+  }
+}
+.dk-clock {
+  animation: dk-clock 20000ms linear var(--dk-delay, 0ms) both;
+}
+
+/* With motion reduced, what arrives fades in over 150 ms instead (theme/motion.ts EASE.fade). */
+@keyframes dk-g-fade {
+  from {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dk-game-rise,
+  .dk-tot-guess,
+  .dk-tot-arrive,
+  .dk-guess-found {
+    animation-name: dk-g-fade;
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .dk-tt-turn,
+  .dk-tt-back,
+  .dk-tt-lit,
+  .dk-dot-light,
+  .dk-think-ring,
+  .dk-think-mark,
+  .dk-clock {
+    animation: none;
+  }
+  .dk-tot-leave {
+    animation-name: dk-tot-leave-fade;
+    animation-duration: 160ms;
+  }
+}
+@keyframes dk-tot-leave-fade {
+  from {
+    opacity: 1;
+    transform: translate(var(--dk-from, 0px), 0px) rotate(var(--dk-from-turn, 0deg));
+  }
+  to {
+    opacity: 0;
+    transform: translate(var(--dk-from, 0px), 0px) rotate(var(--dk-from-turn, 0deg));
+  }
+}
+
+/* Play's sheets as store build 20 draws every sheet: solid #161619, nothing
+   behind showing through (theme/tokens.ts sheet, "it was 97% opaque, and the
+   page's large light figures showed through it as ghosts"), edged with one
+   device pixel. The kit's Sheet panel is its last child; its colour and edge
+   are inline, so this scoped rule overrides them. */
+.dk-g-sheet > div:last-child {
+  background: #161619 !important;
+  border: 0 !important;
+  box-shadow: inset 0 0 0 0.3333px rgba(255, 255, 255, 0.12);
+}
+
+/* The shelf's living marks (shelf.tsx:107-162): one beat of 2.8 s, the app's
+   own: to 1 over 900 ms, 500 ms still, to 2 over 900 ms, 500 ms still, and
+   round again (Reanimated's default timing, in and out on a square). */
+@keyframes dk-mark-a {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  32.14%,
+  50% {
+    opacity: 1;
+  }
+  82.14% {
+    opacity: 0.3;
+  }
+}
+@keyframes dk-mark-b {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  32.14%,
+  50% {
+    opacity: 0.3;
+  }
+  82.14% {
+    opacity: 1;
+  }
+}
+@keyframes dk-mark-turn {
+  0% {
+    transform: scaleY(1);
+    animation-timing-function: ease-in;
+  }
+  16.07% {
+    transform: scaleY(0);
+    animation-timing-function: ease-out;
+  }
+  32.14%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes dk-mark-step {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  16.07% {
+    transform: translate(13px, 0px);
+  }
+  32.14% {
+    transform: translate(0px, 13px);
+  }
+  66.07%,
+  100% {
+    transform: translate(13px, 13px);
+  }
+}
+@keyframes dk-mark-out {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  32.14%,
+  50% {
+    opacity: 0;
+  }
+  82.14% {
+    opacity: 1;
+  }
+}
+@keyframes dk-mark-in {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  32.14%,
+  50% {
+    opacity: 1;
+  }
+  82.14% {
+    opacity: 0;
+  }
+}
+.dk-mark-a,
+.dk-mark-b,
+.dk-mark-out,
+.dk-mark-in {
+  animation: var(--dk-mark) 2800ms cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+.dk-mark-a {
+  --dk-mark: dk-mark-a;
+}
+.dk-mark-b {
+  --dk-mark: dk-mark-b;
+}
+.dk-mark-out {
+  --dk-mark: dk-mark-out;
+}
+.dk-mark-in {
+  --dk-mark: dk-mark-in;
+}
+.dk-mark-turn {
+  animation: dk-mark-turn 2800ms linear infinite;
+}
+.dk-mark-step {
+  animation: dk-mark-step 2800ms step-end infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dk-mark-a,
+  .dk-mark-b,
+  .dk-mark-out,
+  .dk-mark-in,
+  .dk-mark-turn,
+  .dk-mark-step {
+    animation: none;
+  }
+}
