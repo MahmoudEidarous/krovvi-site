@@ -80,6 +80,7 @@
   .cap { font-size: 21px; line-height: 1.45; color: var(--soft); }
   .lab { font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
   .say { font-size: 34px; line-height: 1.22; font-weight: 600; letter-spacing: -0.022em; color: var(--ivory); }
+  .say.xl2 { font-size: 46px; line-height: 1.16; letter-spacing: -0.028em; }
   .say2 { font-size: 30px; line-height: 1.36; letter-spacing: -0.012em; color: var(--fg2); }
 
   /* ---------- The K and the word ---------- */
@@ -190,7 +191,29 @@
   .lgd i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
   .chart text { font-family: inherit; }
 
-  /* ---------- 10. Market ---------- */
+  /* ---------- 8. How we work: the product, step by step ---------- */
+  .evo .ax2 { position: absolute; left: 399px; width: 801px; top: 469px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(237,237,235,0.25), rgba(237,237,235,0.85)); }
+  .evo .ax { position: absolute; left: 0; right: 0; top: 470px; height: 1px; background: linear-gradient(90deg, rgba(74,74,79,0), #4a4a4f 6%, #4a4a4f 94%, rgba(74,74,79,0)); }
+  .evo .ph { position: absolute; top: 4px; }
+  .evo .ph.old .iphone { opacity: 0.55; }
+  .evo .pivot { position: absolute; top: 0; width: 0; height: 470px; }
+  .evo .pivot::before, .evo .pivot::after { content: ""; position: absolute; left: 0; border-left: 1px dashed #55555a; }
+  .evo .pivot::before { top: 40px; height: 112px; }
+  .evo .pivot::after { top: 300px; height: 162px; }
+  .evo .pivot .bx { position: absolute; left: -125px; width: 250px; top: 168px; text-align: center; }
+  .evo .pivot .t, .evo .today .t { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--ivory); }
+  .evo .pivot .s, .evo .today .s { font-size: 20px; line-height: 1.38; color: var(--fg2); margin-top: 8px; }
+  .evo .today { position: absolute; top: 168px; width: 260px; margin-left: -130px; text-align: center; }
+  .evo .today .t { font-size: 44px; letter-spacing: -0.03em; }
+  .evo .mk { position: absolute; top: 0; width: 0; }
+  .evo .mk i { position: absolute; left: -7px; top: 463px; width: 14px; height: 14px; border-radius: 50%; background: var(--ivory); }
+  .evo .mk.ring i { background: var(--ground); border: 1.5px solid #8a8a8f; }
+  .evo .mk .halo { position: absolute; left: -38px; top: 432px; width: 76px; height: 76px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.5), rgba(237,237,235,0) 100%); }
+  .evo .mk .dt { position: absolute; left: -130px; width: 260px; top: 494px; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .evo .mk.now .dt { color: var(--ivory); }
+  .evo .mk .tx { position: absolute; left: -130px; width: 260px; top: 518px; text-align: center; font-size: 20px; color: var(--fg2); }
+
+  /* ---------- 9. Market ---------- */
   .mega-n { font-size: 172px; font-weight: 600; letter-spacing: -0.055em; line-height: 0.86; font-variant-numeric: tabular-nums; }
   .mrow { display: grid; grid-template-columns: 150px 1fr; column-gap: 30px; align-items: center; padding: 24px 0; border-top: 1px solid #1f1f23; }
   .mrow:last-child { border-bottom: 1px solid #1f1f23; }
@@ -240,13 +263,18 @@
   .ph4 .col h3 { margin: 10px 0 0; font-size: 29px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
   .ph4 .col p.d { margin-top: 10px; font-size: 19px; line-height: 1.42; color: var(--soft); width: 290px; }
 
-  /* ---------- 15. Team ---------- */
-  .fdr { display: grid; grid-template-columns: 430px 470px; column-gap: 60px; }
+  .grow4 .cl { position: absolute; top: 300px; width: 300px; text-align: center; }
+  .grow4 .cl .k { font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .grow4 .cl h3 { margin: 10px 0 0; font-size: 28px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
+  .grow4 .cl p.d { margin-top: 10px; font-size: 19px; line-height: 1.42; color: var(--soft); }
+
+  /* ---------- 12. Team ---------- */
+  .fdr { display: grid; grid-template-columns: 450px 450px; column-gap: 60px; }
   .nm { font-size: 42px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; white-space: nowrap; }
   .rl { font-size: 19px; color: var(--muted); margin-top: 10px; }
-  .fs { font-size: 64px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; margin-top: 34px; font-variant-numeric: tabular-nums; }
+  .fs { font-size: 40px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-top: 36px; }
   .fl { margin-top: 10px; }
-  .fdr ul { list-style: none; margin-top: 22px; }
+  .fdr ul { list-style: none; margin-top: 20px; }
   .fdr li { position: relative; padding-left: 20px; font-size: 19px; line-height: 1.45; color: var(--fg2); margin-top: 6px; }
   .fdr li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
   .contact { font-size: 22px; color: var(--fg2); }
@@ -373,7 +401,7 @@
   html.phone .fdr { grid-template-columns: 1fr; row-gap: 40px; }
   html.phone .nm { font-size: 30px; }
   html.phone .rl { font-size: 15px; }
-  html.phone .fs { font-size: 44px; margin-top: 20px; }
+  html.phone .fs { font-size: 26px; margin-top: 18px; }
   html.phone .fdr li { font-size: 15px; }
   html.phone .contact { font-size: 16px; }
   html.phone .contact .sep { margin: 0 8px; }
@@ -428,7 +456,6 @@
     </div>
     <p class="cap abs" data-a style="--d:0.45; left:0; top:470px; width:540px;">Out of every 100 people who pay for an app, <b>how many still pay a year later.</b></p>
   </div>
-  <p class="src">Source: subscription app report, March 2026.</p>
   <div class="pg">2</div>
 </section>
 
@@ -456,14 +483,9 @@
     <div class="row"><p class="tm">9:40 pm</p><div class="bubf">bringing Sam in 👋</div><p class="bh">Brings other friends in</p></div>
     <div class="row"><p class="tm">12:50 am</p><div class="bubf">still thinking about what you said</div><p class="bh">Brings it up later</p></div>
   </div>
-  <div class="b stat" data-a style="--d:0.4; left:120px; top:722px; width:560px;">
-    <p class="n"><span class="count" data-to="27">27</span>%</p>
-    <p class="cap">of US adults online already use AI for social or emotional talk.</p>
+  <div class="b" data-a style="--d:0.55; left:120px; top:712px; width:1240px;">
+    <p class="say xl2">An AI people love to talk to, that also gets things done, <span class="dim">doesn’t exist yet.</span></p>
   </div>
-  <div class="b" data-a style="--d:0.55; left:760px; top:722px; width:720px;">
-    <p class="say">An AI people love to talk to, that also gets things done, <span class="dim">doesn’t exist yet.</span></p>
-  </div>
-  <p class="src">Source: national survey of US adults, September 2026.</p>
   <div class="pg">3</div>
 </section>
 
@@ -485,7 +507,6 @@
     <div class="glow" style="left:-300px; top:-60px; width:1040px; height:1020px;"></div>
     <div class="iphone abs" data-a data-video="vid/tot.mp4" data-poster="vid/tot.jpg" data-ar="600/1298" data-alt="A real recording of the app: someone says they are bored, Krovvi plays This or That, reads them right 5 of 10 and remembers they would rather text than call" style="--d:0.15; --w:384px; left:28px; top:49px;"></div>
   </div>
-  <p class="src" style="left:660px; width:820px;">The phone plays a real recording of the app, with demo data.</p>
   <div class="pg">4</div>
 </section>
 
@@ -539,14 +560,13 @@
       <div class="it" data-a style="--d:0.55;"><div class="iphone" data-src="img/car.png" data-alt="A money question becomes a savings chart with a slider" style="--w:290px;"></div><div class="cp"><p class="tt">Next morning · It helps</p><p>A money question becomes a chart you can slide.</p></div></div>
     </div>
   </div>
-  <p class="src" style="width:380px;">Real app screens, demo data.</p>
   <div class="pg">6</div>
 </section>
 
 <!-- 7. Built in 4 weeks -->
 <section class="slide" data-seed="77">
   <div class="b" style="left:120px; top:96px; width:1360px;">
-    <p class="kick" data-a>Built in 4 weeks</p>
+    <p class="kick" data-a>In the app today</p>
     <h1 data-a style="--d:0.05;">Everything a friend does, in one chat.</h1>
   </div>
   <div class="v" data-strip style="left:120px; top:232px; width:1360px; height:600px;">
@@ -559,53 +579,48 @@
       <div class="it" data-a style="--d:0.4;"><div class="iphone" data-src="img/money.png" data-alt="Money: October so far, spends found in receipts and mail" style="--w:196px;"></div><p class="t">Gets things done</p><p class="s">Real screens, real help</p></div>
     </div>
   </div>
-  <p class="src">All five are in the iPhone app today, in private beta; some parts are on for the team first. Real app screens, demo data.</p>
   <div class="pg">7</div>
 </section>
 
-<!-- 8. We move fast -->
+<!-- 8. How we work -->
 <section class="slide" data-seed="110">
   <div class="b" style="left:120px; top:96px; width:1360px;">
-    <p class="kick" data-a>We move fast</p>
-    <h1 data-a style="--d:0.05;">Krovvi started as a recording app.<br><span class="dim">We built this version in 4 weeks.</span></h1>
+    <p class="kick" data-a>How we work</p>
+    <h1 data-a style="--d:0.05;">We try, learn and change, fast.</h1>
+    <p class="lead" data-a style="--d:0.2; margin-top:22px; width:1240px;">Krovvi started as a recording app. On 17 September we changed direction and rebuilt it in 4 weeks. <b>We ship to production every day.</b></p>
   </div>
-  <div class="b stats4" style="left:120px; top:328px; width:1360px;">
-    <div data-a style="--d:0.15;"><p class="n">17 Sep</p><p class="l">the day we started the new vision</p></div>
-    <div data-a style="--d:0.22;"><p class="n count" data-to="2284">2,284</p><p class="l">commits since then</p></div>
-    <div data-a style="--d:0.29;"><p class="n count" data-to="124">124</p><p class="l">releases to production in 20 days</p></div>
-    <div data-a style="--d:0.36;"><p class="n"><span class="count" data-to="28">28</span> of 28</p><p class="l">days with new code</p></div>
+  <div class="v evo only-dt" style="left:120px; top:306px; width:1360px; height:560px;">
+    <div class="ax fade" style="--d:0.15;"></div>
+    <div class="ax2 fade" style="--d:0.5;"></div>
+    <div class="ph old" data-a style="--d:0.25; left:48px; top:75px;"><div class="iphone" data-src="img/old-recording.png" data-island="0" data-alt="The recording app in September: notes from a recorded meeting, what was agreed, with a transcript tab" style="--w:180px;"></div></div>
+    <div class="pivot fade" style="--d:0.45; left:399px;"><div class="bx"><p class="t">New direction</p><p class="s">A friend people<br>love talking to</p></div></div>
+    <div class="ph" data-a style="--d:0.55; left:553px;"><div class="iphone" data-src="img/first-chat.png" data-alt="Krovvi's first chat: I'm not trying to be a super intelligence. I'm trying to be a super friend." style="--w:214px;"></div></div>
+    <div class="ph" data-a style="--d:0.7; left:813px;"><div class="iphone" data-src="img/guess-en-6-won.png" data-alt="Guess what I'm thinking: a giraffe, got it in 5" style="--w:214px;"></div></div>
+    <div class="today" data-a style="--d:0.85; left:1200px;"><p class="t">Today</p><p class="s">A new version is<br>out to testers</p></div>
+    <div class="mk" data-a style="--d:0.3; left:138px;"><i></i><p class="dt">Jul</p><p class="tx">A recording app</p></div>
+    <div class="mk ring" data-a style="--d:0.45; left:399px;"><i></i><p class="dt">17 Sep</p></div>
+    <div class="mk" data-a style="--d:0.6; left:660px;"><i></i><p class="dt">9 Oct</p><p class="tx">Its first chat</p></div>
+    <div class="mk" data-a style="--d:0.75; left:920px;"><i></i><p class="dt">14 Oct</p><p class="tx">Games made from your life</p></div>
+    <div class="mk now" data-a style="--d:0.9; left:1200px;"><div class="halo"></div><i></i><p class="dt">15 Oct</p></div>
   </div>
-  <div class="v only-dt" style="left:120px; top:486px; width:1360px; height:350px;">
-    <div class="abs fade" style="--d:0.4; left:0; top:0; width:1360px; display:flex; gap:34px; align-items:center;">
-      <p class="lab">Commits per day, 27 Jul to 14 Oct</p>
-      <p class="lgd"><span><i style="background:#6e6e69"></i>Recording app</span><span><i style="background:#EDEDEB"></i>New vision</span></p>
+  <div class="v only-ph" data-strip style="width:950px; height:600px;">
+    <div class="strip s3">
+      <div class="it"><div class="iphone" data-src="img/old-recording.png" data-island="0" data-alt="The recording app in September" style="--w:290px; opacity:0.6;"></div><p class="t">Jul</p><p class="s">A recording app</p></div>
+      <div class="it"><div class="iphone" data-src="img/first-chat.png" data-alt="Krovvi's first chat" style="--w:290px;"></div><p class="t">9 Oct</p><p class="s">Its first chat</p></div>
+      <div class="it"><div class="iphone" data-src="img/guess-en-6-won.png" data-alt="Guess what I'm thinking" style="--w:290px;"></div><p class="t">14 Oct</p><p class="s">Games made from your life</p></div>
     </div>
-    <svg id="perday" class="abs chart" style="left:0; top:24px;" width="1360" height="326" aria-label="Commits per day"></svg>
   </div>
-  <div class="v only-ph" style="width:680px; height:470px;">
-    <p class="lab abs" style="left:0; top:0; font-size:26px;">Commits per day</p>
-    <svg id="perday-ph" class="abs chart" style="left:0; top:50px;" width="680" height="420" aria-label="Commits per day"></svg>
+  <div class="b tlp only-ph">
+    <div class="row"><p class="tm">Jul</p><p class="tx">A recording app</p></div>
+    <div class="row"><p class="tm">17 Sep</p><p class="tx"><b>New direction.</b> A friend people love talking to.</p></div>
+    <div class="row"><p class="tm">9 Oct</p><p class="tx">Its first chat</p></div>
+    <div class="row"><p class="tm">14 Oct</p><p class="tx">Games made from your life</p></div>
+    <div class="row now"><p class="tm">Today</p><p class="tx">A new version is out to testers</p></div>
   </div>
-  <p class="src">From git (main line, merges left out) and the production release log, 14 Oct 2026. At least one release to production every day since 1 October.</p>
   <div class="pg">8</div>
 </section>
 
-<!-- 9. 3 am -->
-<section class="slide" data-seed="121">
-  <div class="b" style="left:120px; top:250px; width:700px;">
-    <p class="kick" data-a>How we work</p>
-    <h1 class="xl" data-a style="--d:0.05;">Our busiest<br>hour is 3 am.</h1>
-    <p class="lead" data-a style="--d:0.2; margin-top:34px; width:620px;"><b><span class="count" data-to="56">56</span>% of our commits</b> since 17 September were made between midnight and 7 am.</p>
-  </div>
-  <div class="v" style="left:840px; top:130px; width:640px; height:640px;">
-    <div class="glow" style="left:20px; top:20px; width:600px; height:600px;"></div>
-    <svg id="clock" class="abs chart" style="left:0; top:0; overflow:visible;" width="640" height="640" viewBox="0 0 640 640" aria-label="Commits by hour of day since 17 September"></svg>
-  </div>
-  <p class="src">From git, main line, merges left out. Hours in local time.</p>
-  <div class="pg">9</div>
-</section>
-
-<!-- 10. The market -->
+<!-- 9. The market -->
 <section class="slide" data-seed="88">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>The market</p>
@@ -614,18 +629,16 @@
   <div class="v" style="left:120px; top:340px; width:600px; height:440px;">
     <p class="mega-n abs" data-a style="--d:0.15; left:-6px; top:0;">$<span class="count" data-to="40">40</span>B</p>
     <svg id="bars" class="abs" style="left:450px; top:12px;" width="150" height="190" aria-hidden="true"></svg>
-    <p class="cap abs" data-a style="--d:0.3; left:0; top:236px; width:560px; font-size:26px;">spent on consumer AI in 2026, <b>more than three times last year.</b></p>
+    <p class="cap abs" data-a style="--d:0.3; left:0; top:236px; width:560px; font-size:26px;">spent on consumer AI worldwide in 2026, <b>more than three times last year.</b></p>
   </div>
-  <div class="b" style="left:800px; top:316px; width:680px;">
-    <div class="mrow" data-a style="--d:0.3;"><div class="ic"><svg id="ring" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"></svg></div><div><p class="n"><span class="count" data-to="55">55</span>%</p><p class="l">of people who use AI <b>pay for at least one AI tool.</b></p></div></div>
-    <div class="mrow" data-a style="--d:0.42;"><div class="ic"><svg id="people" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"></svg></div><div><p class="n">1 in 5</p><p class="l">adults under 30 <b>get emotional support from AI chatbots.</b></p></div></div>
-    <div class="mrow" data-a style="--d:0.54;"><div class="ic"><svg id="launch" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"></svg></div><div><p class="n">6 weeks</p><p class="l">Three of the biggest tech companies launched personal agents. <b>All built for errands.</b></p></div></div>
+  <div class="b" style="left:800px; top:350px; width:680px;">
+    <div class="mrow" data-a style="--d:0.3;"><div class="ic"><svg id="globe" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"></svg></div><div><p class="n">2 billion</p><p class="l">people use AI worldwide, up 11% in a year. <b>Spending tripled.</b></p></div></div>
+    <div class="mrow" data-a style="--d:0.45;"><div class="ic"><svg id="launch" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"></svg></div><div><p class="n">6 weeks</p><p class="l">Three of the biggest tech companies launched personal agents. <b>All built for errands.</b></p></div></div>
   </div>
-  <p class="src">Sources: consumer AI market report, Sep 2026. National survey of US adults, Jun 2026. Company announcements, Sep and Oct 2026.</p>
-  <div class="pg">10</div>
+  <div class="pg">9</div>
 </section>
 
-<!-- 11. The landscape -->
+<!-- 10. The landscape -->
 <section class="slide" data-seed="99">
   <div class="b" style="left:120px; top:96px; width:900px;">
     <p class="kick" data-a>The landscape</p>
@@ -640,76 +653,22 @@
     <div data-a style="--d:0.6;"><p class="k">3</p><h3>Fun made from your life</h3><p class="d">Games and moments that star you and your people.</p></div>
     <div data-a style="--d:0.7;"><p class="k">4</p><h3>Friends come in through chats</h3><p class="d">Every shared chat puts Krovvi in front of someone new.</p></div>
   </div>
-  <p class="src">Conceptual positioning, not measured scores.</p>
-  <div class="pg">11</div>
+  <div class="pg">10</div>
 </section>
 
-<!-- 12. Early signals -->
-<section class="slide" data-seed="125">
-  <div class="b" style="left:120px; top:96px; width:1360px;">
-    <p class="kick" data-a>Early signals</p>
-    <h1 data-a style="--d:0.05;">Testers bring it their real life.<br><span class="dim">Early, small, and real.</span></h1>
-  </div>
-  <div class="b sig" style="left:120px; top:326px; width:1360px;">
-    <div data-a style="--d:0.15;"><div class="viz"><div class="units abs" data-units="dot" data-n="50" data-cols="10" data-size="15" data-gap="10" data-lit="50" data-st="18ms" data-d0="0.4s" style="left:0; top:0; width:240px; height:115px;"></div></div><p class="n"><span class="count" data-to="50">50</span>+</p><p class="l">people outside the team <b>joined the private beta</b> since August.</p></div>
-    <div data-a style="--d:0.25;"><div class="viz"><div class="units abs" data-units="cap" data-n="23" data-cols="23" data-size="7" data-h="66" data-gap="6" data-lit="23" data-st="30ms" data-d0="0.6s" style="left:0; top:44px; width:300px; height:66px;"></div></div><p class="n"><span class="count" data-to="23">23</span> hours</p><p class="l">of their own conversations <b>recorded by outside testers.</b></p></div>
-    <div data-a style="--d:0.35;"><div class="viz"><div class="units abs" data-units="dot" data-n="10" data-cols="10" data-size="22" data-gap="8" data-lit="5" data-st="90ms" data-d0="0.8s" style="left:0; top:66px; width:300px; height:22px;"></div></div><p class="n">5 of 10</p><p class="l">outside testers who saw a question from Krovvi <b>answered it.</b></p></div>
-    <div data-a style="--d:0.45;"><div class="viz"><div class="units abs" data-units="sq" data-n="7" data-cols="7" data-size="34" data-gap="9" data-pick="0,2,3,5" data-st="110ms" data-d0="1s" style="left:0; top:60px; width:300px; height:34px;"></div></div><p class="n">4 of 7</p><p class="l">days two outside testers <b>opened Krovvi</b> in the week to 13 October.</p></div>
-  </div>
-  <div class="b" data-a style="--d:0.6; left:120px; top:724px; width:1360px;">
-    <p class="say">Small numbers, from a private beta with no marketing. <span class="dim">Bringing every tester back on their own is the next job.</span></p>
-  </div>
-  <p class="src">From Krovvi’s own database and server logs, 16 Aug to 13 Oct 2026. Counts only; no one’s messages were read. Team accounts left out.</p>
-  <div class="pg">12</div>
-</section>
-
-<!-- 13. Where we are -->
-<section class="slide" data-seed="132">
-  <div class="b" style="left:120px; top:96px; width:1360px;">
-    <p class="kick" data-a>Where we are</p>
-    <h1 data-a style="--d:0.05;">Private beta on iPhone.<br><span class="dim">Next, prove they love it and come back.</span></h1>
-  </div>
-  <div class="v jr only-dt" style="left:120px; top:316px; width:1360px; height:200px;">
-    <div class="ln fade" style="--d:0.15; left:130px; width:825px;"></div>
-    <div class="ln fut fade" style="--d:0.55; left:955px; width:275px;"></div>
-    <div class="ms" data-a style="--d:0.2; --x:130px;"><p class="dt">27 Jul</p><i></i><p class="tx">First version, a recording app</p></div>
-    <div class="ms" data-a style="--d:0.3; --x:405px;"><p class="dt">18 Aug</p><i></i><p class="tx">Private beta on iPhone</p></div>
-    <div class="ms" data-a style="--d:0.4; --x:680px;"><p class="dt">17 Sep</p><i></i><p class="tx">New vision: the super friend</p></div>
-    <div class="ms now" data-a style="--d:0.5; --x:955px;"><div class="halo"></div><p class="dt">Today</p><i></i><p class="tx">Next iPhone build ready. Pre-revenue.</p></div>
-    <div class="ms nx" data-a style="--d:0.6; --x:1230px;"><p class="dt">Next</p><i></i><p class="tx">Prove they love it, then open to everyone</p></div>
-  </div>
-  <div class="b tlp only-ph">
-    <div class="row"><p class="tm">27 Jul</p><p class="tx">First version, a recording app</p></div>
-    <div class="row"><p class="tm">18 Aug</p><p class="tx">Private beta on iPhone</p></div>
-    <div class="row"><p class="tm">17 Sep</p><p class="tx">New vision: the super friend</p></div>
-    <div class="row now"><p class="tm">Today</p><p class="tx">Next iPhone build ready. Pre-revenue.</p></div>
-    <div class="row later"><p class="tm">Next</p><p class="tx">Prove they love it, then open to everyone</p></div>
-  </div>
-  <div class="b" style="left:120px; top:560px; width:1360px;">
-    <p class="lab" data-a style="--d:0.45;">What we prove next</p>
-    <div class="g4">
-      <div data-a style="--d:0.55;"><svg class="ico" width="52" height="52" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 21.5a8 8 0 1 1 1.6 6.4"/><path d="M14.2 16.8v5.2h5.2"/></g></svg><p class="w">Love</p><p class="l">How many come back in their second week, unasked.</p></div>
-      <div data-a style="--d:0.63;"><svg class="ico" width="52" height="52" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="11" y="13" width="24" height="20" rx="4.5"/><circle cx="18.5" cy="20" r="2.2"/><path d="M12.5 30.5l7-6 5 4 4-3 5.5 4.5"/></g></svg><p class="w">Share</p><p class="l">How often they send videos, voice notes and photos.</p></div>
-      <div data-a style="--d:0.71;"><svg class="ico" width="52" height="52" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17.5a3.5 3.5 0 0 1 3.5-3.5h11a3.5 3.5 0 0 1 3.5 3.5v7a3.5 3.5 0 0 1-3.5 3.5H21l-4.5 4v-4A3 3 0 0 1 14 24.5z"/></g></svg><p class="w">Talk</p><p class="l">How often a message Krovvi starts gets a reply.</p></div>
-      <div data-a style="--d:0.79;"><svg class="ico" width="52" height="52" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="19.5" r="3.6"/><circle cx="28" cy="20.5" r="3"/><path d="M12.5 31c.8-3.6 3.3-5.6 6.5-5.6s5.7 2 6.5 5.6M26 25.6c2.9-.3 5.2 1.4 6 4.6"/></g></svg><p class="w">Spread</p><p class="l">How many new people arrive through a shared chat.</p></div>
-    </div>
-  </div>
-  <div class="pg">13</div>
-</section>
-
-<!-- 14. Where this goes -->
+<!-- 11. Where this goes -->
 <section class="slide" data-seed="143">
   <div class="b" style="left:120px; top:106px; width:1360px;">
     <p class="kick" data-a>Where this goes</p>
-    <h1 class="big" data-a style="--d:0.05;">We’re competing to become people’s favorite AI.</h1>
-    <p class="lead" data-a style="--d:0.2; margin-top:34px; width:1200px;">As AI becomes a commodity, we’re building what compounds: <b>a personal AI people love spending time with, that understands them better with every conversation.</b></p>
+    <h1 class="big" data-a style="--d:0.05; font-size:86px;">We’re competing to become people’s favorite AI.</h1>
+    <p class="lead" data-a style="--d:0.2; margin-top:28px; width:1200px; font-size:26px;">As AI becomes a commodity, we’re building what compounds: <b>a personal AI people love spending time with, that understands them better with every conversation.</b></p>
   </div>
-  <div class="v ph4 only-dt" style="left:120px; top:604px; width:1360px; height:220px;">
-    <div class="ln fade" style="--d:0.3;"></div>
-    <div class="col now" data-a style="--d:0.35; left:0;"><div class="halo"></div><i></i><p class="k">1 · Now</p><h3>The friend in one chat</h3><p class="d">Memory, personality, games and real screens.</p></div>
-    <div class="col next" data-a style="--d:0.45; left:350px;"><i></i><p class="k">2 · Next</p><h3>Fun together</h3><p class="d">Videos, games and plans with friends inside shared chats.</p></div>
-    <div class="col then" data-a style="--d:0.55; left:700px;"><i></i><p class="k">3 · Then</p><h3>Krovvi meets Krovvi</h3><p class="d">Your Krovvi and your friends’ plan together, with permission.</p></div>
-    <div class="col later" data-a style="--d:0.65; left:1050px;"><i></i><p class="k">4 · Later</p><h3>Almost anything</h3><p class="d">It books, buys and builds for you, after your yes.</p></div>
+  <div class="v grow4 only-dt" style="left:120px; top:438px; width:1360px; height:420px;">
+    <svg id="grow4" class="abs" style="left:0; top:0; overflow:visible;" width="1360" height="280" viewBox="0 0 1360 280" aria-hidden="true"></svg>
+    <div class="cl" data-a style="--d:0.4; left:20px;"><p class="k">1 · Now</p><h3>The friend in one chat</h3><p class="d">Memory, personality, games and real screens.</p></div>
+    <div class="cl" data-a style="--d:0.55; left:360px;"><p class="k">2 · Next</p><h3>Fun together</h3><p class="d">Videos, games and plans with friends inside shared chats.</p></div>
+    <div class="cl" data-a style="--d:0.7; left:700px;"><p class="k">3 · Then</p><h3>Krovvi meets Krovvi</h3><p class="d">Your Krovvi and your friends’ plan together, with permission.</p></div>
+    <div class="cl" data-a style="--d:0.85; left:1040px;"><p class="k">4 · Later</p><h3>Almost anything</h3><p class="d">It books, buys and builds for you, after your yes.</p></div>
   </div>
   <div class="b tlp only-ph">
     <div class="row now"><p class="tm">1 · Now</p><p class="tx"><b>The friend in one chat.</b> Memory, personality, games and real screens.</p></div>
@@ -717,10 +676,10 @@
     <div class="row later"><p class="tm">3 · Then</p><p class="tx"><b>Krovvi meets Krovvi.</b> Your Krovvi and your friends’ plan together, with permission.</p></div>
     <div class="row later"><p class="tm">4 · Later</p><p class="tx"><b>Almost anything.</b> It books, buys and builds for you, after your yes.</p></div>
   </div>
-  <div class="pg">14</div>
+  <div class="pg">11</div>
 </section>
 
-<!-- 15. Team -->
+<!-- 12. Team -->
 <section class="slide" data-seed="154">
   <div class="b" style="left:120px; top:96px; width:960px;">
     <p class="kick" data-a>Team</p>
@@ -729,23 +688,21 @@
     <div data-a style="--d:0.1;">
       <p class="nm">Mahmoud Aidaros</p>
       <p class="rl">Co-founder, Product &amp; Technology</p>
-      <p class="fs"><span class="count" data-to="2284">2,284</span></p>
-      <p class="fl">commits in 4 weeks, building Krovvi’s app, server and AI.</p>
+      <p class="fs">Engineer and founder</p>
       <ul>
-        <li>Software engineer and entrepreneur</li>
         <li>Builds AI products, agents and apps from scratch</li>
         <li>Founded StudySmarterAI; worked on AI automation</li>
+        <li>Leads Krovvi’s product vision and technology</li>
       </ul>
     </div>
     <div data-a style="--d:0.2;">
       <p class="nm">Moustafa Elmesallamy</p>
       <p class="rl">Co-founder, Business &amp; Growth</p>
-      <p class="fs"><span class="count" data-to="11">11</span>+ years</p>
-      <p class="fl">in sales, across real estate, technology and travel.</p>
+      <p class="fs">11+ years in sales</p>
       <ul>
+        <li>Real estate, technology and travel</li>
         <li>5+ years in digital marketing</li>
-        <li>Business development, customer acquisition and growth strategy</li>
-        <li>Krovvi’s most active tester</li>
+        <li>Business development, customer acquisition and growth</li>
       </ul>
     </div>
   </div>
@@ -768,12 +725,10 @@
   <div class="nav"><button id="prev" aria-label="Previous slide">‹</button><span id="cnt"></span><button id="next" aria-label="Next slide">›</button></div>
 </div>
 
-<script src="data.js"></script>
 <script>
 (function () {
   var H = document.documentElement;
   var PRINT = H.classList.contains('print'), PHONE = H.classList.contains('phone');
-  var D = window.DECK_DATA || { perDay: [], hoursNew: new Array(24).fill(1) };
   var NS = 'http://www.w3.org/2000/svg';
   function el(tag, attrs, parent, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
   function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
@@ -857,66 +812,6 @@
       box.appendChild(u);
     }
   });
-
-  // ---------- Commits per day: one bar a day, the recording app in grey, the new vision in ivory ----------
-  function perDay(svg, o) {
-    if (!svg) return;
-    var Wc = o.W, Hc = o.H, L = o.L, R = o.R, T = o.T, B = o.B, data = D.perDay, n = data.length, yMax = 300;
-    var pw = (Wc - L - R) / n, bw = Math.max(2, pw - o.gap);
-    function y(v) { return T + (Hc - T - B) * (1 - v / yMax); }
-    [100, 200, 300].forEach(function (gv) {
-      el('line', { x1: L, y1: y(gv), x2: Wc - R, y2: y(gv), stroke: '#1d1d21', 'stroke-width': 1 }, svg);
-      el('text', { x: L - 10, y: y(gv) + o.font * 0.33, 'text-anchor': 'end', fill: '#6C6C67', 'font-size': o.font }, svg, gv);
-    });
-    el('line', { x1: L, y1: y(0), x2: Wc - R, y2: y(0), stroke: '#3a3a3e', 'stroke-width': 1 }, svg);
-    data.forEach(function (d, i) {
-      var v = d[1]; if (!v) return;
-      var x = L + i * pw + (pw - bw) / 2, top = y(v), base = y(0), rad = Math.min(3, bw / 2, (base - top) / 2);
-      var path = 'M' + x + ' ' + base + 'V' + (top + rad) + 'Q' + x + ' ' + top + ' ' + (x + rad) + ' ' + top + 'H' + (x + bw - rad) + 'Q' + (x + bw) + ' ' + top + ' ' + (x + bw) + ' ' + (top + rad) + 'V' + base + 'Z';
-      var p = el('path', { d: path, fill: d[0] >= '2026-09-17' ? '#EDEDEB' : '#6e6e69', class: 'grow' }, svg);
-      p.style.setProperty('--d', (0.45 + i * 0.012).toFixed(3));
-      el('title', {}, p, d[0] + ': ' + v + ' commits');
-    });
-    o.ticks.forEach(function (m) {
-      var i = data.findIndex(function (d) { return d[0] === m[0]; }); if (i < 0) return;
-      var x = m[2] === 'end' ? L + (i + 1) * pw : L + i * pw;
-      el('text', { x: x, y: Hc - o.font * 0.35, 'text-anchor': m[2], fill: '#8F8F8A', 'font-size': o.font }, svg, m[1]);
-    });
-    o.ann.forEach(function (a) {
-      var i = data.findIndex(function (d) { return d[0] === a[0]; }); if (i < 0) return;
-      var x = L + i * pw + pw / 2, top = y(Math.max(data[i][1], 1)) - 8;
-      var g = el('g', { class: 'fade' }, svg); g.style.setProperty('--d', a[4] || 1.2);
-      el('line', { x1: x, y1: a[2] + 8, x2: x, y2: top, stroke: '#55555a', 'stroke-width': 1, 'stroke-dasharray': '2 4' }, g);
-      el('circle', { cx: x, cy: a[2] + 8, r: 3, fill: '#D9D8D3' }, g);
-      el('text', { x: a[3] === 'start' ? x + 10 : x - 10, y: a[2] + 8 + o.font * 0.35, 'text-anchor': a[3], fill: '#D9D8D3', 'font-size': o.font + 1 }, g, a[1]);
-    });
-  }
-  perDay(document.getElementById('perday'), { W: 1360, H: 326, L: 44, R: 4, T: 52, B: 30, gap: 4, font: 15,
-    ticks: [['2026-07-27', '27 Jul', 'start'], ['2026-08-01', 'Aug', 'start'], ['2026-09-01', 'Sep', 'start'], ['2026-10-01', 'Oct', 'start'], ['2026-10-14', '14 Oct', 'end']],
-    ann: [['2026-07-27', '27 Jul · the recording app begins', 14, 'start', 0.9], ['2026-09-17', '17 Sep · the new vision begins', 14, 'end', 1.1], ['2026-10-09', '9 Oct · 275 commits in one day', 0, 'end', 1.5]] });
-  perDay(document.getElementById('perday-ph'), { W: 680, H: 420, L: 60, R: 4, T: 70, B: 44, gap: 2.2, font: 24,
-    ticks: [['2026-08-01', 'Aug', 'start'], ['2026-09-01', 'Sep', 'start'], ['2026-10-01', 'Oct', 'start']],
-    ann: [['2026-09-17', '17 Sep · new vision', 14, 'end', 1.1]] });
-
-  // ---------- Commits by hour since 17 Sep: a 24 hour clock, midnight at the top, the night hours bright ----------
-  (function () {
-    var svg = document.getElementById('clock'); if (!svg) return;
-    var cx = 320, cy = 320, r0 = 108, len = 150, hrs = D.hoursNew, max = Math.max.apply(null, hrs);
-    el('circle', { cx: cx, cy: cy, r: r0 - 16, fill: 'none', stroke: '#232327', 'stroke-width': 1 }, svg);
-    hrs.forEach(function (v, h) {
-      var a = (h / 24) * Math.PI * 2 - Math.PI / 2, l = 10 + (len - 10) * v / max;
-      var x1 = cx + Math.cos(a) * r0, y1 = cy + Math.sin(a) * r0, x2 = cx + Math.cos(a) * (r0 + l), y2 = cy + Math.sin(a) * (r0 + l);
-      var ln = el('line', { x1: x1.toFixed(1), y1: y1.toFixed(1), x2: x2.toFixed(1), y2: y2.toFixed(1), stroke: h < 7 ? '#EDEDEB' : '#55554f', 'stroke-width': 17, 'stroke-linecap': 'round', class: 'draw' }, svg);
-      ln.style.setProperty('--len', Math.ceil(l + 2)); ln.style.setProperty('--d', (0.3 + h * 0.045).toFixed(3));
-      el('title', {}, ln, (h < 10 ? '0' : '') + h + ':00 to ' + (h < 9 ? '0' : '') + (h + 1) + ':00: ' + v + ' commits');
-    });
-    [[0, '12 am'], [6, '6 am'], [12, '12 pm'], [18, '6 pm']].forEach(function (m) {
-      var a = (m[0] / 24) * Math.PI * 2 - Math.PI / 2, rr = r0 + len + 30;
-      el('text', { x: (cx + Math.cos(a) * rr).toFixed(1), y: (cy + Math.sin(a) * rr + 7).toFixed(1), 'text-anchor': 'middle', fill: '#8F8F8A', 'font-size': 19 }, svg, m[1]);
-    });
-    el('text', { x: cx, y: cy + 8, 'text-anchor': 'middle', fill: '#EDEDEB', 'font-size': 58, 'font-weight': 600, 'letter-spacing': '-0.03em' }, svg, '3 am');
-    el('text', { x: cx, y: cy + 40, 'text-anchor': 'middle', fill: '#8F8F8A', 'font-size': 18 }, svg, 'busiest hour');
-  })();
 
   // ---------- The loop: love, share, understand, better, back again. Clockwise from the top ----------
   (function () {
@@ -1010,23 +905,20 @@
         var p = el('path', { d: 'M' + x + ' 170V' + (top + rad) + 'Q' + x + ' ' + top + ' ' + (x + rad) + ' ' + top + 'H' + (x + bw - rad) + 'Q' + (x + bw) + ' ' + top + ' ' + (x + bw) + ' ' + (top + rad) + 'V170Z', fill: c[3], class: 'grow' }, b);
         p.style.setProperty('--d', 0.35 + i * 0.25);
         el('text', { x: x + bw / 2, y: 188, 'text-anchor': 'middle', fill: '#8F8F8A', 'font-size': 15 }, b, c[2]);
+        if (i === 0) { var v = el('text', { x: x + bw / 2, y: top - 10, 'text-anchor': 'middle', fill: '#A9A8A2', 'font-size': 16, class: 'fade' }, b, '$12B'); v.style.setProperty('--d', 0.7); }
       });
     }
-    var r = document.getElementById('ring');
-    if (r) {
-      var C = 2 * Math.PI * 46;
-      el('circle', { cx: 60, cy: 60, r: 46, fill: 'none', stroke: '#232327', 'stroke-width': 12 }, r);
-      var arc = el('circle', { cx: 60, cy: 60, r: 46, fill: 'none', stroke: '#EDEDEB', 'stroke-width': 12, 'stroke-linecap': 'round', transform: 'rotate(-90 60 60)', class: 'draw' }, r);
-      if (!H.classList.contains('anim')) arc.setAttribute('stroke-dasharray', (C * 0.55).toFixed(1) + ' ' + C.toFixed(1));
-      arc.style.setProperty('--len', (C * 0.55).toFixed(1)); arc.style.setProperty('--d', 0.5);
-    }
-    var pp = document.getElementById('people');
-    if (pp) {
-      for (var i = 0; i < 5; i++) {
-        var x = 14 + i * 28, c = i === 0 ? '#EDEDEB' : '#3a3a3e';
-        el('circle', { cx: x, cy: 22, r: 8, fill: c }, pp);
-        el('path', { d: 'M' + (x - 12) + ' 54 Q' + (x - 12) + ' 34 ' + x + ' 34 Q' + (x + 12) + ' 34 ' + (x + 12) + ' 54 Z', fill: c }, pp);
-      }
+    var gl = document.getElementById('globe');
+    if (gl) {
+      el('circle', { cx: 60, cy: 60, r: 48, fill: 'none', stroke: '#3a3a3e', 'stroke-width': 1.4 }, gl);
+      el('ellipse', { cx: 60, cy: 60, rx: 20, ry: 48, fill: 'none', stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('ellipse', { cx: 60, cy: 60, rx: 38, ry: 48, fill: 'none', stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 12, y1: 60, x2: 108, y2: 60, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 20, y1: 36, x2: 100, y2: 36, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 20, y1: 84, x2: 100, y2: 84, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      [[38, 30], [64, 24], [84, 42], [30, 52], [52, 48], [76, 62], [96, 66], [42, 74], [62, 86], [82, 90], [28, 78], [58, 66]].forEach(function (d, i) {
+        var c = el('circle', { cx: d[0], cy: d[1], r: 3.6, fill: '#EDEDEB', class: 'fade' }, gl); c.style.setProperty('--d', (0.5 + i * 0.06).toFixed(2));
+      });
     }
     var la = document.getElementById('launch');
     if (la) {
@@ -1035,6 +927,51 @@
       el('line', { x1: 136, y1: 27, x2: 136, y2: 43, stroke: '#3a3a3e', 'stroke-width': 1.5 }, la);
       [40, 82, 116].forEach(function (x, i) { var c = el('circle', { cx: x, cy: 35, r: 7.5, fill: '#EDEDEB', class: 'fade' }, la); c.style.setProperty('--d', 0.7 + i * 0.18); });
     }
+  })();
+
+  // ---------- Where this goes: the friend grows, from one chat to almost anything ----------
+  (function () {
+    var svg = document.getElementById('grow4'); if (!svg) return;
+    var cy = 140, C = [[170, 68], [510, 90], [850, 112], [1190, 134]];
+    var defs = el('defs', {}, svg), gg = el('radialGradient', { id: 'g4' }, defs);
+    el('stop', { offset: '0', 'stop-color': '#EDEDEB', 'stop-opacity': '0.11' }, gg);
+    el('stop', { offset: '1', 'stop-color': '#EDEDEB', 'stop-opacity': '0' }, gg);
+    function grp(d) { var g = el('g', { class: 'fade' }, svg); g.style.setProperty('--d', d); return g; }
+    function kmark(x, y, sc, g) { var k = el('g', { transform: 'translate(' + (x - 61 * sc).toFixed(1) + ' ' + (y - 60 * sc).toFixed(1) + ') scale(' + sc + ')' }, g); KD.forEach(function (p) { el('circle', { cx: p[0], cy: p[1], r: 6.5, fill: '#EDEDEB' }, k); }); }
+    function person(x, y, z, g, dim) { var f = dim ? '#8F8F8A' : '#EDEDEB'; el('circle', { cx: x, cy: (y - z * 0.5).toFixed(1), r: (z * 0.36).toFixed(1), fill: f }, g); el('path', { d: 'M' + (x - z * 0.66) + ' ' + (y + z * 0.62) + ' Q' + (x - z * 0.66) + ' ' + y + ' ' + x + ' ' + y + ' Q' + (x + z * 0.66) + ' ' + y + ' ' + (x + z * 0.66) + ' ' + (y + z * 0.62) + ' Z', fill: f }, g); }
+    function link(x0, y0, x1, y1, g, dash) { var a = { x1: x0.toFixed(1), y1: y0.toFixed(1), x2: x1.toFixed(1), y2: y1.toFixed(1), stroke: '#5a5a5f', 'stroke-width': 1.2 }; if (dash) a['stroke-dasharray'] = '3 4'; el('line', a, g); }
+    C.forEach(function (c, i) {
+      if (i < 3) {
+        var nx = C[i + 1], x0 = c[0] + c[1] + 18, x1 = nx[0] - nx[1] - 18;
+        var ln = el('path', { d: 'M' + x0 + ' ' + cy + ' H' + x1, stroke: '#4a4a4f', 'stroke-width': 1.4, fill: 'none', class: 'draw' }, svg);
+        ln.style.setProperty('--len', x1 - x0); ln.style.setProperty('--d', (0.55 + i * 0.15).toFixed(2));
+        var hd = el('path', { d: 'M' + (x1 - 8) + ' ' + (cy - 6) + ' L' + x1 + ' ' + cy + ' L' + (x1 - 8) + ' ' + (cy + 6), stroke: '#8a8a8f', 'stroke-width': 1.4, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: 'fade' }, svg);
+        hd.style.setProperty('--d', (0.85 + i * 0.15).toFixed(2));
+      }
+      var g = grp((0.3 + i * 0.15).toFixed(2));
+      el('circle', { cx: c[0], cy: cy, r: (c[1] * 1.3).toFixed(1), fill: 'url(#g4)' }, g);
+      el('circle', { cx: c[0], cy: cy, r: c[1], fill: '#060607', stroke: i === 0 ? '#9a9a9f' : '#34343a', 'stroke-width': 1.3 }, g);
+    });
+    // 1. You and Krovvi, in one chat
+    var g1 = grp(0.45), x = C[0][0];
+    link(x - 4, cy, x + 16, cy, g1); kmark(x - 22, cy, 0.34, g1); person(x + 30, cy + 2, 21, g1);
+    // 2. Your friends in the same chat
+    var g2 = grp(0.6); x = C[1][0];
+    [[0, -52], [47, 29], [-47, 29]].forEach(function (d) { link(x, cy, x + d[0] * 0.62, cy + d[1] * 0.62, g2); person(x + d[0], cy + d[1] + 4, 17, g2); });
+    kmark(x, cy, 0.32, g2);
+    // 3. Your Krovvi meets your friend's
+    var g3 = grp(0.75); x = C[2][0];
+    link(x - 30, cy, x + 30, cy, g3, true); el('circle', { cx: x, cy: cy, r: 3.4, fill: '#EDEDEB' }, g3);
+    kmark(x - 46, cy, 0.3, g3); kmark(x + 46, cy, 0.3, g3);
+    person(x - 46, cy - 52, 17, g3); person(x + 46, cy + 46, 17, g3);
+    // 4. Everything it can reach for you, after your yes
+    var g4 = grp(0.9); x = C[3][0];
+    for (var a = 0; a < 14; a++) {
+      var t = a / 14 * Math.PI * 2 - Math.PI / 2, ri = a % 2 ? 98 : 76;
+      link(x + Math.cos(t) * 30, cy + Math.sin(t) * 30, x + Math.cos(t) * (ri - 8), cy + Math.sin(t) * (ri - 8), g4);
+      el('circle', { cx: (x + Math.cos(t) * ri).toFixed(1), cy: (cy + Math.sin(t) * ri).toFixed(1), r: a % 2 ? 3.4 : 4.6, fill: a % 2 ? '#A9A8A2' : '#EDEDEB' }, g4);
+    }
+    kmark(x, cy, 0.36, g4);
   })();
 
   // ---------- Numbers that count up the first time their slide shows ----------
