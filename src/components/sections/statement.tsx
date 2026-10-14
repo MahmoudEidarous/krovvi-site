@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 
 import { InView } from "@/components/in-view";
@@ -23,6 +23,21 @@ const PIECES: Piece[] = [
   "Bring", "friends", "in", { mark: "share" }, ".",
   ..."It remembers what you said, brings it up later, and helps when it matters.".split(" "),
 ];
+
+/** The pieces in the groups that are set together: a word alone, or the word before a picture, the picture and its full stop. */
+const GROUPS: number[][] = (() => {
+  const out: number[][] = [];
+  for (let i = 0; i < PIECES.length; i += 1) {
+    const next = PIECES[i + 1];
+    if (typeof PIECES[i] === "string" && next !== undefined && typeof next !== "string") {
+      out.push(PIECES[i + 2] === "." ? [i, i + 1, i + 2] : [i, i + 1]);
+      i += PIECES[i + 2] === "." ? 2 : 1;
+    } else {
+      out.push([i]);
+    }
+  }
+  return out;
+})();
 
 /**
  * The pictures inside the sentence: small tiles in the app's graphite, lit
@@ -108,23 +123,28 @@ export function Statement() {
           style={{ "--p": reduced ? 1 : 0, "--n": PIECES.length } as React.CSSProperties}
         >
           <p className="text-[clamp(30px,4.6vw,56px)] font-semibold leading-[1.22] tracking-[-0.035em]">
-            {PIECES.map((piece, i) => {
-              const next = PIECES[i + 1];
-              // A full stop sits right after its word or picture; everything else is followed by a space.
-              const space = next === "." ? "" : " ";
-              if (typeof piece !== "string") {
-                return (
-                  <span key={i} style={lit(i)}>
-                    <Mark mark={piece.mark} />
-                    {space}
-                  </span>
-                );
-              }
+            {GROUPS.map((group) => {
+              // The word before a picture, the picture and its full stop never part at the end of a line.
+              const together = group.length > 1;
+              const last = group[group.length - 1];
               return (
-                <span key={i} style={lit(i)}>
-                  {piece}
-                  {space}
-                </span>
+                <Fragment key={group[0]}>
+                  <span className={together ? "whitespace-nowrap" : undefined}>
+                    {group.map((i) => {
+                      const piece = PIECES[i];
+                      // Inside a group a full stop sits right after its picture; the word before the picture keeps its space.
+                      const space = i === last || PIECES[i + 1] === "." ? "" : " ";
+                      return (
+                        <span key={i} style={lit(i)}>
+                          {typeof piece === "string" ? piece : <Mark mark={piece.mark} />}
+                          {space}
+                        </span>
+                      );
+                    })}
+                  </span>
+                  {/* The space after a group stands outside it, so a line may break there. */}
+                  {PIECES[last + 1] === undefined || PIECES[last + 1] === "." ? "" : " "}
+                </Fragment>
               );
             })}
           </p>
