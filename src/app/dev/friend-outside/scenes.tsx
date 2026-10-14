@@ -8,6 +8,7 @@ import {
   KrovviWidget,
   LockScreen,
   MessageWidget,
+  MoneyOverview,
   MyBubble,
   Notification,
   RecordWidget,
@@ -260,5 +261,10 @@ export const SCENES: Scene[] = [
         </Sent>
       </DeepChat>
     ),
+  },
+  {
+    id: "money",
+    title: "Money: Overview",
+    draw: () => <MoneyOverview />,
   },
 ];
