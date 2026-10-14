@@ -17,7 +17,7 @@ const { IDENTITY, PAGES, ABOUT, SHARE_IMAGE_ALT, llmsText, structuredData, struc
 const root = new URL("../../", import.meta.url);
 const read = (path) => readFileSync(new URL(path, root));
 const text = (path) => read(path).toString("utf8");
-const EM_DASH = "—";
+const EM_DASH = "\u2014";
 
 test("no em dash in any word a person, a search engine or an AI reads", () => {
   const words = JSON.stringify([IDENTITY, PAGES, ABOUT, SHARE_IMAGE_ALT, llmsText(), structuredData()]);
