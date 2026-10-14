@@ -85,14 +85,16 @@ export const IDENTITY: Identity = {
   url: `${SITE_URL}/`,
   alternateName: "krovvi.com",
 
-  // The lead's draft words, 14 October 2026 (option A of each in
-  // design/krovvi-identity-2026-10-14, where the owner picks). Options there:
-  //   tagline B: "An AI that already knows what's going on."
-  //   tagline C: "The AI friend that knows your life."
-  //   description B: "Krovvi is an AI friend on iPhone. It knows the people in your life, writes first when something matters, and gets things done."
+  // The lead's draft words, 14 October 2026: option A of each. The owner picks in
+  // design/krovvi-identity-2026-10-14 ("Words to choose"), where these are drawn as Google shows them:
+  //   title B: "Krovvi: the AI that knows what's going on in your life"
+  //   title C: "Krovvi: a friend and an assistant that knows your life"
+  //   description B: "Krovvi is an AI on your iPhone that keeps up with your people and plans, checks in first when something matters, and gets things done. Join the beta."
   //   description C: "Every AI starts from zero. Krovvi starts from your life: it remembers your people and plans, and talks first when something matters."
   //   mission B: "No one should have to keep their whole life in their head."
   //   mission C: "Make AI that knows you, so you never start from zero."
+  //   tagline B (first list): "An AI that already knows what's going on."; tagline C: "The AI friend that knows your life."
+  // A new tagline needs the share image drawn again: node scripts/identity/build.mjs (and SHARE_IMAGE_ALT below).
   tagline: "The AI that knows your life.",
   title: "Krovvi: the AI that knows your life",
   description:

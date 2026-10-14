@@ -29,10 +29,22 @@
   .b .line { position: absolute; left: 0; right: 0; top: 118px; text-align: center; font-size: 124px; letter-spacing: -0.045em; }
   .b .k { position: absolute; left: calc(50% - 40px); top: 452px; width: 80px; height: 80px; }
 
-  /* C: the stacked lockup (identity.html: a 52 px K box over a 30 px wordmark, 16 px apart), large, in the middle of the sky. */
-  .c .stack { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(0.533 * 92px); padding-bottom: 6px; }
-  .c .k { width: 188px; height: 188px; margin: -34px 0 -34px; }
-  .c .word { font-size: 92px; }
+  /* C: the product. The lockup and the line on the left; on the right Krovvi talking first, drawn from the app's own
+     numbers (H2's docs/app-visual-spec-deep.md 1.4 and 1.6; krovvi-message.tsx at catch8 bc25b1a3) at 2.1 pixels a
+     point: the why line, one bubble, the three one tap answers. */
+  .c { --S: 2.1px; }
+  .c .lockup { position: absolute; left: calc(96px - 0.2792 * 54px); top: 66px; display: flex; align-items: center; gap: calc(0.45 * 48px); }
+  .c .lockup .k { width: 54px; height: 54px; }
+  .c .lockup .word { font-size: 48px; }
+  .c .line { position: absolute; left: 96px; top: 200px; font-size: 88px; letter-spacing: -0.042em; }
+  .c .turn { position: absolute; left: 600px; top: 0; bottom: 0; width: calc(296 * var(--S)); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-top: 34px; }
+  .c .why { display: flex; align-items: center; gap: calc(6 * var(--S)); color: #8F8F8A; font-size: calc(13 * var(--S)); line-height: calc(16 * var(--S)); padding: calc(2 * var(--S)) 0; margin-bottom: calc(16 * var(--S)); }
+  .c .bubble { background: rgba(30,30,33,0.58); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.085); border-radius: calc(20 * var(--S)); padding: calc(7 * var(--S)) calc(14 * var(--S)) calc(8 * var(--S)); font-size: calc(17 * var(--S)); line-height: calc(25 * var(--S)); letter-spacing: calc(-0.2 * var(--S)); white-space: nowrap; }
+  .c .answers { display: flex; flex-wrap: wrap; gap: calc(8 * var(--S)); margin-top: calc(12 * var(--S)); max-width: calc(296 * var(--S)); }
+  .c .pill { height: calc(34 * var(--S)); display: flex; align-items: center; padding: 0 calc(14 * var(--S)); border-radius: 999px; background: rgba(30,30,33,0.58); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.085); font-size: calc(14 * var(--S)); font-weight: 600; letter-spacing: calc(-0.2 * var(--S)); white-space: nowrap; }
+  /* Apple Color Emoji stands larger on the phone than Chrome draws it (H2's spec 0.5): 1.17 em after 17 point words, 1.26 em after 14. */
+  .c .emo { font-size: 1.17em; line-height: 0; margin-left: 0.08em; }
+  .c .pill .emo { font-size: 1.26em; }
 </style>
 <body>
 <canvas id="sky"></canvas>
@@ -51,7 +63,15 @@ const stage = document.getElementById("stage");
 stage.className = `stage ${v}`;
 if (v === "a") stage.innerHTML = `<div class="lockup">${mark()}<span class="word">krovvi</span></div><h1 class="line">${TAGLINE}</h1>`;
 if (v === "b") stage.innerHTML = `<h1 class="line">${TAGLINE}</h1>${mark()}`;
-if (v === "c") stage.innerHTML = `<div class="stack">${mark()}<span class="word">krovvi</span></div>`;
+// The why line's glyph: the app's chat bubble (glyph.tsx ICON.bubble) at 12 points, faint, a 1.45 point line, a 1.6 point dot.
+const S = 2.1;
+const bubbleGlyph = `<svg width="${12 * S}" height="${12 * S}" viewBox="0 0 24 24" style="flex:none;overflow:visible" aria-hidden="true"><g fill="none" stroke="#7A7A74" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"><rect x="1.4" y="2.4" width="21.2" height="14" rx="5.6"/><path d="M11.4 16.4L6.8 20.6L6.8 16.2"/></g><circle cx="12" cy="9.4" r="1.6" fill="#7A7A74"/></svg>`;
+if (v === "c") stage.innerHTML = `<div class="lockup">${mark()}<span class="word">krovvi</span></div><h1 class="line">${(params.get("line3") || "The AI|that knows|your life.").split("|").map(esc).join("<br>")}</h1>
+  <div class="turn">
+    <div class="why">${bubbleGlyph}<span>Your review with Sam</span></div>
+    <div class="bubble">How did the review go? <span class="emo">&#x1F642;</span></div>
+    <div class="answers"><span class="pill"><span>It went great <span class="emo">&#x1F389;</span></span></span><span class="pill"><span>It was okay</span></span><span class="pill"><span>Not great, honestly</span></span></div>
+  </div>`;
 
 // The app's sky (catch8 src/lib/sky/stars.ts, DEPTH, seed 11), drawn as the app draws it (components/sky/stars.tsx).
 function seeded(seed) {
@@ -105,6 +125,10 @@ function keepOuts() {
   for (const el of stage.querySelectorAll(".k")) {
     const dots = [...el.querySelectorAll("circle")].map((c) => c.getBoundingClientRect());
     boxes.push({ k: true, l: Math.min(...dots.map((d) => d.left)), t: Math.min(...dots.map((d) => d.top)), r: Math.max(...dots.map((d) => d.right)), b: Math.max(...dots.map((d) => d.bottom)) });
+  }
+  for (const el of stage.querySelectorAll(".why, .bubble, .pill")) {
+    const r = el.getBoundingClientRect();
+    boxes.push({ l: r.left, t: r.top, r: r.right, b: r.bottom });
   }
   for (const el of stage.querySelectorAll(".word, .line")) {
     const range = document.createRange();
