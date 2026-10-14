@@ -1,5 +1,4 @@
-import { FunVisual, OrderVisual, PeopleVisual } from "@/components/films/tiles";
-import { CloseVisual, SendVisual, TextsFirstVisual } from "@/components/films/tiles-wait";
+import { CloseVisual, FunVisual, OrderVisual, PeopleVisual, SendVisual, TextsFirstVisual } from "@/components/films/tiles";
 import { InView } from "@/components/in-view";
 import { an } from "@/lib/anim";
 

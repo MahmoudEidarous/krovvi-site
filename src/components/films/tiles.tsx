@@ -3,6 +3,7 @@
 import { useRef, type ReactNode } from "react";
 
 import {
+  AppsHome,
   AppTile,
   AskCard,
   AskFold,
@@ -10,10 +11,18 @@ import {
   C,
   DeepChat,
   GameFolded,
+  HomeScreen,
   KrovviBubbles,
+  LockScreen,
+  MoneyOverview,
   MyBubble,
+  Sent,
+  SentPhotos,
   ThisOrThat,
   Turn,
+  VoiceNote,
+  CATEGORY_TINT,
+  type ConfirmRow,
   Working,
   emo,
   type AppId,
@@ -228,40 +237,260 @@ const LIT: Array<{ app: AppId; line: string; at: number }> = [
   { app: "fitness", line: "10K plan", at: 2300 },
 ];
 
-const QUIET: AppId[] = ["todo", "nutrition", "habits", "kitchen", "health", "watch", "library", "meetings"].slice(0, 8) as AppId[];
 
-function AppsPanel({ cols, seen, reduced, className }: { cols: number; seen: boolean; reduced: boolean; className?: string }) {
-  const cell = 86;
-  const rows = Math.ceil((LIT.length + QUIET.length) / cols);
-  return (
-    <SkyPanel
-      className={className}
-      w={cols * cell + 48}
-      h={rows * 104 + 42}
-      seed={61}
-      label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan. To-do, Nutrition, Habits, Kitchen, Health, Watch, Library and Meetings stand beside them."
-    >
-      <div style={{ position: "absolute", inset: 0, padding: "26px 24px 0", display: "flex", flexWrap: "wrap" }}>
-        {LIT.map((t) => (
-          <AppTile key={t.app} app={t.app} width={cell} line={seen || reduced ? t.line : undefined} lit={seen || reduced} arrive={seen && !reduced ? t.at : undefined} />
-        ))}
-        {QUIET.map((app) => (
-          <AppTile key={app} app={app} width={cell} />
-        ))}
-      </div>
-    </SkyPanel>
-  );
-}
+/** What waits for a yes in Money: the receipt sent in the chat today (Send it anything), and one from earlier. */
+const TO_CONFIRM: ConfirmRow[] = [
+  { title: "Lume", sub: "$42.80 · Today · from a receipt", mark: "receipt", tint: CATEGORY_TINT.eating },
+  { title: "Pharmacy", sub: "$12.75 · Sat 3 Oct · from a receipt", mark: "heart", tint: CATEGORY_TINT.health },
+];
 
-/** The apps behind the chat, the four that just took something lit in turn: six across on a wide tile, four on a phone. */
+/**
+ * The apps behind the chat, the four that just took something lit in turn
+ * (the home in the night look, kit AppsHome), and Money open beside it: the
+ * month at a glance, what came from a receipt or the mail waiting for a
+ * confirm, and the bills coming up.
+ */
 export function OrderVisual() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const seen = useFirstSeen(ref, "0px 0px -20% 0px");
+  const lit = seen || reduced;
+  const apps = Object.fromEntries(LIT.map((t) => [t.app, { line: lit ? t.line : undefined, lit, arrive: seen && !reduced ? t.at : undefined }]));
+  return (
+    <div ref={ref} className="grid gap-4 md:grid-cols-2">
+      <div className="overflow-hidden rounded-[22px]" style={{ background: C.sky, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+        <Scaled w={393} h={560} label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan.">
+          <AppsHome day="Wednesday" date="14 October" name="Alex" apps={apps} dock={false} sky={<PhoneSky seed={61} />} />
+        </Scaled>
+      </div>
+      <div className="overflow-hidden rounded-[22px]" style={{ background: C.bg, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+        <Scaled w={393} h={560} label="Money in Krovvi: October, $1,104 spent, $1,394 left after bills. To confirm: Lume, $42.80 today from a receipt, and Pharmacy, $12.75 from a receipt. Coming up: Streaming and Music.">
+          <MoneyOverview confirm={TO_CONFIRM} />
+        </Scaled>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* It texts you first                                                   */
+/* ------------------------------------------------------------------ */
+
+const NUDGES = [
+  { text: "Your aunt's birthday is tomorrow 🎂 Want a nudge in the morning to text her?", when: "now" },
+  { text: "Sam said the contract would come by Monday. It's not here yet. Want me to nudge him?", when: "2h ago" },
+];
+
+/**
+ * The lock screen at night with Krovvi's messages resting on it, as build 20
+ * shows them (KrovviNotify: a message from Krovvi with the K picture), the
+ * older one first and the newest dropping in on top. Drawn 560 points tall:
+ * the clock, the two messages, the flashlight and the camera.
+ */
+export function TextsFirstVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const seen = useFirstSeen(ref, "0px 0px -20% 0px");
+  return (
+    <div ref={ref} className="overflow-hidden rounded-[22px]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+      <Scaled w={393} h={560} label={`A lock screen at 8:30 on Wednesday 14 October, with two messages from Krovvi. Now: ${NUDGES[0].text} Two hours ago: ${NUDGES[1].text}`}>
+        <LockScreen time="8:30" notes={seen || reduced ? NUDGES : []} rise={!reduced} delay={350} stagger={950} style={{ height: 560 }} />
+      </Scaled>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Send it anything                                                     */
+/* ------------------------------------------------------------------ */
+
+const SENT: Beat[] = [
+  {
+    id: "v",
+    wait: 400,
+    gap: 0,
+    show: (has) => (
+      <Sent>
+        <VoiceNote ms={23000} about="How the Northline interview went" rise reading={!has("r1")} />
+      </Sent>
+    ),
+  },
+  { id: "w1", wait: 500, gap: 16, until: "r1", show: () => <Working /> },
+  { id: "r1", wait: 1500, gap: 0, show: () => <Says lines={["Sounds like it went really well 😄", "I'll check in Friday, when they said they'd call."]} stagger={480} /> },
+  {
+    id: "p",
+    wait: 1700,
+    gap: 16,
+    show: (has) => (
+      <Sent>
+        <SentPhotos photos={["receipt"]} rise reading={!has("r2")} />
+        {/* Its own row across the column, so the bubble takes its 82 percent of the column, not of itself. */}
+        <MyBubble text="Lunch with Omar" rise style={{ alignSelf: "stretch" }} />
+      </Sent>
+    ),
+  },
+  { id: "w2", wait: 500, gap: 16, until: "r2", show: () => <Working /> },
+  { id: "r2", wait: 1300, gap: 0, show: () => <Says lines={["Lume, $42.80. It's in Money to confirm."]} /> },
+];
+
+export function SendVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const at = usePlayOnce(SENT, ref);
   return (
     <div ref={ref}>
-      <AppsPanel cols={6} seen={seen} reduced={reduced} className="hidden md:block" />
-      <AppsPanel cols={4} seen={seen} reduced={reduced} className="md:hidden" />
+      <SkyPanel h={560} seed={23} label="You send a voice note, 23 seconds, about how the Northline interview went. Krovvi: Sounds like it went really well. I'll check in Friday, when they said they'd call. Then a photo of a receipt: Lunch with Omar. Krovvi: Lume, $42.80. It's in Money to confirm.">
+        <PanelThread beats={SENT} at={at} />
+      </SkyPanel>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* It's on your Home Screen                                             */
+/* ------------------------------------------------------------------ */
+
+/** The two widgets of build 20 at the top of a Home Screen, Krovvi's latest message and the chat's own box, with Krovvi's icon among the apps under them. */
+export function CloseVisual() {
+  return (
+    <div className="overflow-hidden rounded-[22px]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+      <Scaled w={393} h={600} label="A Home Screen with two Krovvi widgets. Krovvi: its latest message, How did the Northline interview go? Message Krovvi: Ask, or give it a job, with Camera, Photos and Record. Krovvi's app icon sits among the apps below.">
+        <HomeScreen layout="phone" />
+      </Scaled>
+    </div>
+  );
+}
+
+/** What waits for a yes in Money: the receipt sent in the chat today (Send it anything), and one from earlier. */
+const TO_CONFIRM: ConfirmRow[] = [
+  { title: "Lume", sub: "$42.80 · Today · from a receipt", mark: "receipt", tint: CATEGORY_TINT.eating },
+  { title: "Pharmacy", sub: "$12.75 · Sat 3 Oct · from a receipt", mark: "heart", tint: CATEGORY_TINT.health },
+];
+
+/**
+ * The apps behind the chat, the four that just took something lit in turn
+ * (the home in the night look, kit AppsHome), and Money open beside it: the
+ * month at a glance, what came from a receipt or the mail waiting for a
+ * confirm, and the bills coming up.
+ */
+export function OrderVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const seen = useFirstSeen(ref, "0px 0px -20% 0px");
+  const lit = seen || reduced;
+  const apps = Object.fromEntries(LIT.map((t) => [t.app, { line: lit ? t.line : undefined, lit, arrive: seen && !reduced ? t.at : undefined }]));
+  return (
+    <div ref={ref} className="grid gap-4 md:grid-cols-2">
+      <div className="overflow-hidden rounded-[22px]" style={{ background: C.sky, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+        <Scaled w={393} h={560} label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan.">
+          <AppsHome day="Wednesday" date="14 October" name="Alex" apps={apps} dock={false} sky={<PhoneSky seed={61} />} />
+        </Scaled>
+      </div>
+      <div className="overflow-hidden rounded-[22px]" style={{ background: C.bg, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+        <Scaled w={393} h={560} label="Money in Krovvi: October, $1,104 spent, $1,394 left after bills. To confirm: Lume, $42.80 today from a receipt, and Pharmacy, $12.75 from a receipt. Coming up: Streaming and Music.">
+          <MoneyOverview confirm={TO_CONFIRM} />
+        </Scaled>
+      </div>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* It texts you first                                                   */
+/* ------------------------------------------------------------------ */
+
+const NUDGES = [
+  { text: "Your aunt's birthday is tomorrow 🎂 Want a nudge in the morning to text her?", when: "now" },
+  { text: "Sam said the contract would come by Monday. It's not here yet. Want me to nudge him?", when: "2h ago" },
+];
+
+/**
+ * The lock screen at night with Krovvi's messages resting on it, as build 20
+ * shows them (KrovviNotify: a message from Krovvi with the K picture), the
+ * older one first and the newest dropping in on top. Drawn 560 points tall:
+ * the clock, the two messages, the flashlight and the camera.
+ */
+export function TextsFirstVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const seen = useFirstSeen(ref, "0px 0px -20% 0px");
+  return (
+    <div ref={ref} className="overflow-hidden rounded-[22px]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+      <Scaled w={393} h={560} label={`A lock screen at 8:30 on Wednesday 14 October, with two messages from Krovvi. Now: ${NUDGES[0].text} Two hours ago: ${NUDGES[1].text}`}>
+        <LockScreen time="8:30" notes={seen || reduced ? NUDGES : []} rise={!reduced} delay={350} stagger={950} style={{ height: 560 }} />
+      </Scaled>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Send it anything                                                     */
+/* ------------------------------------------------------------------ */
+
+const SENT: Beat[] = [
+  {
+    id: "v",
+    wait: 400,
+    gap: 0,
+    show: (has) => (
+      <Sent>
+        <VoiceNote ms={23000} about="How the Northline interview went" rise reading={!has("r1")} />
+      </Sent>
+    ),
+  },
+  { id: "w1", wait: 500, gap: 16, until: "r1", show: () => <Working /> },
+  { id: "r1", wait: 1500, gap: 0, show: () => <Says lines={["Sounds like it went really well 😄", "I'll check in Friday, when they said they'd call."]} stagger={480} /> },
+  {
+    id: "p",
+    wait: 1700,
+    gap: 16,
+    show: (has) => (
+      <Sent>
+        <SentPhotos photos={["receipt"]} rise reading={!has("r2")} />
+        {/* Its own row across the column, so the bubble takes its 82 percent of the column, not of itself. */}
+        <MyBubble text="Lunch with Omar" rise style={{ alignSelf: "stretch" }} />
+      </Sent>
+    ),
+  },
+  { id: "w2", wait: 500, gap: 16, until: "r2", show: () => <Working /> },
+  { id: "r2", wait: 1300, gap: 0, show: () => <Says lines={["Lume, $42.80. It's in Money to confirm."]} /> },
+];
+
+export function SendVisual() {
+  const ref = useRef<HTMLDivElement>(null);
+  const at = usePlayOnce(SENT, ref);
+  return (
+    <div ref={ref}>
+      <SkyPanel h={560} seed={23} label="You send a voice note, 23 seconds, about how the Northline interview went. Krovvi: Sounds like it went really well. I'll check in Friday, when they said they'd call. Then a photo of a receipt: Lunch with Omar. Krovvi: Lume, $42.80. It's in Money to confirm.">
+        <PanelThread beats={SENT} at={at} />
+      </SkyPanel>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* It's on your Home Screen                                             */
+/* ------------------------------------------------------------------ */
+
+/** A widget's name under it on the Home Screen: 12 points, white, in the soft shadow iOS gives words over a wallpaper. */
+function WidgetName({ text }: { text: string }) {
+  return <div style={{ marginTop: 6, textAlign: "center", fontSize: 12, lineHeight: "15px", color: "#FFFFFF", textShadow: "0 0.5px 3px rgba(0,0,0,0.45)" }}>{text}</div>;
+}
+
+/** The two widgets of build 20 on a Home Screen: Krovvi's latest message, and the chat's own box with Camera, Photos and Record. */
+export function CloseVisual() {
+  return (
+    <div className="overflow-hidden rounded-[22px]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
+      <Scaled w={393} h={428} label="Two Krovvi widgets on a Home Screen. Krovvi: its latest message, How did the Northline interview go? Message Krovvi: Ask, or give it a job, with Camera, Photos and Record.">
+        <div className="dk absolute inset-0" style={{ background: HOME_WALLPAPER }}>
+          <div style={{ position: "absolute", left: (393 - WIDGET.medium) / 2, top: 28, width: WIDGET.medium, display: "flex", flexDirection: "column" }}>
+            <KrovviWidget size="medium" text="How did the Northline interview go? 🙂" when="now" />
+            <WidgetName text="Krovvi" />
+            <div style={{ height: 22 }} />
+            <MessageWidget size="medium" />
+            <WidgetName text="Message Krovvi" />
+          </div>
+        </div>
+      </Scaled>
     </div>
   );
 }

@@ -11,6 +11,9 @@ import {
   KrovviText,
   MoveHeader,
   MyBubble,
+  SavingsLive,
+  SavingsQuestion,
+  SavingsTurn,
   ShareSheet,
   ShareTurn,
   StatusBar,
@@ -155,6 +158,38 @@ export function PlayFilm({ playing, still = false }: FilmProps) {
   return (
     <Screen time="11:40" seed={7}>
       <Thread beats={PLAY} at={at} />
+    </Screen>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. It helps                                                          */
+/* ------------------------------------------------------------------ */
+
+const HELP: Beat[] = [
+  {
+    id: "q",
+    wait: 450,
+    gap: 0,
+    show: () => (
+      <div className="dk-rise flex flex-col gap-[16px]">
+        <SavingsQuestion time="8:05 am" />
+      </div>
+    ),
+  },
+  { id: "w", wait: 500, gap: 16, until: "a", show: () => <Working /> },
+  // The answer and its screen; a beat after it lands, the slider is pulled from $400 to $700 as a finger would, and the date comes in.
+  { id: "a", wait: 1500, gap: 0, show: () => <SavingsTurn card={<SavingsLive value={400} auto={700} autoDelay={2600} autoMs={1300} interactive={false} rise />} /> },
+];
+
+export const HELP_LABEL =
+  "Next morning, 8:05. You ask: If I put away 400 a month, when can I buy the car? Krovvi: With $6,500 saved and $400 a month, you'd have the $20,000 by August 2029. Slide to see how much a bigger amount brings it in. A chart shows the savings line rising to the goal, with a slider for what you put away each month; it moves to $700, and the date comes in.";
+
+export function HelpFilm({ playing, still = false }: FilmProps) {
+  const at = usePlayed(HELP, playing, still);
+  return (
+    <Screen time="8:05" seed={23}>
+      <Thread beats={HELP} at={at} />
     </Screen>
   );
 }
