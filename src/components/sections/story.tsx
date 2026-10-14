@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 
-import { CHECK_IN_LABEL, CheckInFilm, FRIEND_LABEL, FriendFilm, PLAN_LABEL, PlanFilm, type FilmProps } from "@/components/films/day";
-import { HELP_LABEL, HelpFilm, PLAY_LABEL, PlayFilm } from "@/components/films/day-wait";
+import { CHECK_IN_LABEL, CheckInFilm, FRIEND_LABEL, FriendFilm, PLAN_LABEL, PLAY_LABEL, PlanFilm, PlayFilm, type FilmProps } from "@/components/films/day";
+import { HELP_LABEL, HelpFilm } from "@/components/films/day-wait";
 import { useFirstSeen } from "@/components/films/use-seen";
 import { InView } from "@/components/in-view";
 import { Phone } from "@/components/phone";

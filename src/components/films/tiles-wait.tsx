@@ -3,32 +3,11 @@
 import { useRef } from "react";
 
 import { KrovviBubbles, MoveHeader, MyBubble, Turn, emo } from "@/components/deep";
-import { Phone } from "@/components/phone";
-import { PhoneSky } from "@/components/sky/phone-sky";
-import { DeepChat } from "@/components/deep";
 
-import { type Beat, Thread } from "./chat-film";
+import { type Beat } from "./chat-film";
 import { PanelThread, SkyPanel, usePlayOnce } from "./tiles";
 
 /* Stand-ins for the tiles whose pieces the helpers are drawing (question cards, lock screen, sent things, widgets). Replaced on merge. */
-
-const ASKS: Beat[] = [{ id: "a", wait: 400, gap: 0, show: () => <Turn><KrovviBubbles lines={[emo("Got a few quick ones for you 🙂")]} rise /></Turn> }];
-
-export function PeopleVisual() {
-  const ref = useRef<HTMLDivElement>(null);
-  const at = usePlayOnce(ASKS, ref);
-  return (
-    <div ref={ref} className="mx-auto w-[min(330px,100%)]">
-      <Phone label="Krovvi asks a few quick questions about the people in your life.">
-        <div className="absolute inset-0">
-          <DeepChat sky={<PhoneSky seed={19} />} veil columnStyle={{ gap: 0, paddingTop: 6 }}>
-            <Thread beats={ASKS} at={at} />
-          </DeepChat>
-        </div>
-      </Phone>
-    </div>
-  );
-}
 
 const FIRST: Beat[] = [
   { id: "m", wait: 400, gap: 0, show: () => <Turn><MoveHeader text="Your aunt's birthday" kind="event" /><KrovviBubbles lines={[emo("Your aunt's birthday is tomorrow\u00a0🎂"), "Want a nudge in the morning to text her?"]} rise stagger={420} /></Turn> },

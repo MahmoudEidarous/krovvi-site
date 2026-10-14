@@ -15,8 +15,10 @@ import {
   ShareTurn,
   StatusBar,
   Turn,
+  TwoTruths,
   Working,
   emo,
+  type Truth,
 } from "@/components/deep";
 import { Mark } from "@/components/mark";
 import { PhoneSky } from "@/components/sky/phone-sky";
@@ -102,6 +104,57 @@ export function CheckInFilm({ playing, still = false }: FilmProps) {
   return (
     <Screen time="6:30" seed={41}>
       <Thread beats={CHECK_IN} at={at} />
+    </Screen>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. You play                                                          */
+/* ------------------------------------------------------------------ */
+
+/** Two truths about the person, from what Krovvi knows, and one it made up (the deck's demo world). */
+const TRUTHS: Truth[] = [
+  { text: "You run along the river on Fridays", note: "You told me in June, after the 10K." },
+  { text: "You wake up at 6 every day", lie: true, note: "Made that up. You'd never wake at 6." },
+  { text: "Your sister Lina lives in Lisbon", note: "She moved there in March." },
+];
+
+const PLAY: Beat[] = [
+  { id: "q", wait: 450, gap: 0, show: () => <MyBubble text="I'm bored. Play something with me" rise /> },
+  { id: "w", wait: 450, gap: 16, until: "a", show: () => <Working /> },
+  {
+    id: "a",
+    wait: 1200,
+    gap: 0,
+    show: (has) => (
+      <Turn>
+        <KrovviBubbles lines={[emo(keepEmoji("Two truths and a lie, about you 👀")), "One of these I made up."]} rise stagger={420} />
+        <TwoTruths
+          statements={TRUTHS}
+          rise
+          delay={760}
+          stage={has("tap") ? "revealed" : "pick"}
+          picked={has("tap") ? 1 : null}
+          flip={has("tap")}
+          marks={[has("m0") ? true : null, null, has("m2") ? true : null]}
+        />
+      </Turn>
+    ),
+  },
+  { id: "tap", wait: 2700 },
+  { id: "m0", wait: 2400 },
+  { id: "m2", wait: 800 },
+  { id: "r", wait: 900, gap: 16, show: () => <Says lines={["You got me 😄", "I'll keep the river runs, and I won't plan anything for you before 8."]} stagger={520} /> },
+];
+
+export const PLAY_LABEL =
+  "11:40 PM. You say you're bored. Krovvi starts Two truths and a lie, about you: You run along the river on Fridays. You wake up at 6 every day. Your sister Lina lives in Lisbon. You tap the second, and it was the lie: Made that up. You'd never wake at 6. You mark the other two right, and Krovvi says: You got me. I'll keep the river runs, and I won't plan anything for you before 8.";
+
+export function PlayFilm({ playing, still = false }: FilmProps) {
+  const at = usePlayed(PLAY, playing, still);
+  return (
+    <Screen time="11:40" seed={7}>
+      <Thread beats={PLAY} at={at} />
     </Screen>
   );
 }
