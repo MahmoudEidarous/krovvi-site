@@ -31,8 +31,8 @@ export const C = {
   glass: "rgba(30,30,33,0.58)",
   glassEdge: "rgba(255,255,255,0.085)",
   glassSolid: "#121214",
-  /** A sheet (tokens.ts:58-60). */
-  sheet: "rgba(22,22,25,0.97)",
+  /** A sheet: solid in store build 20 (6edb7fca), where the chat no longer shows through it. */
+  sheet: "#161619",
   sheetEdge: "rgba(255,255,255,0.12)",
   /** A tile inside a sheet (tokens.ts:62). */
   tile: "rgba(255,255,255,0.08)",

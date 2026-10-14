@@ -45,7 +45,7 @@ export function BrickScreen({ title, label, children, foot, rise = false, classN
       {title ? (
         <div style={{ ...FACE.label, fontWeight: 600, color: C.soft, padding: `${PAD - 2}px ${PAD}px 0` }}>
           {title}
-          {label ? <span style={{ fontWeight: 500, color: C.muted }}>{`  ·  ${label}`}</span> : null}
+          {label ? <span style={{ fontWeight: 500, color: C.muted, whiteSpace: "pre-wrap" }}>{`  ·  ${label}`}</span> : null}
         </div>
       ) : null}
       <div style={{ padding: `${title ? 10 : PAD}px ${PAD}px ${PAD}px`, display: "flex", flexDirection: "column", gap: SCREEN_GAP }}>

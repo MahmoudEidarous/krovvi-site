@@ -259,12 +259,12 @@ export function OrderVisual() {
   return (
     <div ref={ref} className="grid gap-4 md:grid-cols-2">
       <div className="overflow-hidden rounded-[22px]" style={{ background: C.sky, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
-        <Scaled w={393} h={560} label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan.">
+        <Scaled w={393} h={600} label="Krovvi's apps behind the chat: Money has 2 to confirm, Plans has Friday dinner, Trips has Lisbon in March, Fitness has a 10K plan.">
           <AppsHome day="Wednesday" date="14 October" name="Alex" apps={apps} dock={false} sky={<PhoneSky seed={61} />} />
         </Scaled>
       </div>
       <div className="overflow-hidden rounded-[22px]" style={{ background: C.bg, boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
-        <Scaled w={393} h={560} label="Money in Krovvi: October, $1,104 spent, $1,394 left after bills. To confirm: Lume, $42.80 today from a receipt, and Pharmacy, $12.75 from a receipt. Coming up: Streaming and Music.">
+        <Scaled w={393} h={600} label="Money in Krovvi: October, $1,104 spent, $1,394 left after bills. To confirm: Lume, $42.80 today from a receipt, and Pharmacy, $12.75 from a receipt. Coming up: Streaming and Music.">
           <MoneyOverview confirm={TO_CONFIRM} />
         </Scaled>
       </div>
@@ -353,7 +353,7 @@ export function SendVisual() {
 export function CloseVisual() {
   return (
     <div className="overflow-hidden rounded-[22px]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.05)" }}>
-      <Scaled w={393} h={600} label="A Home Screen with two Krovvi widgets. Krovvi: its latest message, How did the Northline interview go? Message Krovvi: Ask, or give it a job, with Camera, Photos and Record. Krovvi's app icon sits among the apps below.">
+      <Scaled w={393} h={668} label="A Home Screen with two Krovvi widgets. Krovvi: its latest message, How did the Northline interview go? Message Krovvi: Ask, or give it a job, with Camera, Photos and Record. Krovvi's app icon sits among the apps below.">
         <HomeScreen layout="phone" />
       </Scaled>
     </div>
