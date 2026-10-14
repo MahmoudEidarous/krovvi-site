@@ -1,0 +1,114 @@
+/* Motion and states for the outside, answers and sent pieces (answers.tsx,
+   answers-live.tsx, outside.tsx, sent.tsx, money.tsx). The app's one curve
+   everywhere: theme/motion.ts:16, cubic-bezier(0.23, 1, 0.32, 1). Each
+   keyframe ends on the element's resting style, so with motion reduced a
+   piece simply shows its end. */
+
+/* A line on a chart drawing in once as it arrives with the answer, left to
+   right (components/screen/bricks/chart.tsx DRAW_MS 900, Path end={drawn}). */
+@keyframes dkx-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+.dkx-draw {
+  animation: dkx-draw 900ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* The area under it and its end dot follow the line in (chart.tsx areaShown, dotsShown). */
+@keyframes dkx-fade {
+  from {
+    opacity: 0;
+  }
+}
+.dkx-fade {
+  animation: dkx-fade var(--dk-dur, 500ms) cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+}
+
+/* A figure rolling to a new value after a quiet moment (components/screen/roll.tsx):
+   the new one rises in from below as the old one leaves above, 360 ms. */
+@keyframes dkx-roll-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--dk-lift, 29px));
+  }
+}
+@keyframes dkx-roll-out {
+  to {
+    opacity: 0;
+    transform: translateY(calc(var(--dk-lift, 29px) * -1));
+  }
+}
+.dkx-roll-in {
+  animation: dkx-roll-in 360ms cubic-bezier(0.23, 1, 0.32, 1) 40ms both;
+}
+.dkx-roll-out {
+  animation: dkx-roll-out 360ms cubic-bezier(0.23, 1, 0.32, 1) 0ms both;
+}
+
+/* The slider as a control on the page: a keyboard's focus shows on its thumb. */
+.dkx-slider {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.dkx-slider:focus-visible .dkx-thumb {
+  outline: 2px solid rgba(230, 220, 200, 0.85);
+  outline-offset: 3px;
+}
+
+/* A notification arriving on the lock screen, from below with a fade (iOS's own). */
+@keyframes dkx-note-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.96);
+  }
+}
+.dkx-note-in {
+  animation: dkx-note-in 420ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+  transform-origin: 50% 100%;
+}
+
+/* A banner dropping in at the top of the screen. */
+@keyframes dkx-banner-in {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.96);
+  }
+}
+.dkx-banner-in {
+  animation: dkx-banner-in 420ms cubic-bezier(0.23, 1, 0.32, 1) var(--dk-delay, 0ms) both;
+  transform-origin: 50% 0%;
+}
+
+/* A voice message playing: the light moving over the dots while Krovvi listens (components/answer/reading-light.tsx). */
+@keyframes dkx-listen {
+  from {
+    transform: translateX(-60%);
+  }
+  to {
+    transform: translateX(160%);
+  }
+}
+.dkx-listen {
+  animation: dkx-listen 1600ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dkx-draw,
+  .dkx-roll-in,
+  .dkx-roll-out,
+  .dkx-note-in,
+  .dkx-banner-in {
+    animation: none;
+  }
+  .dkx-fade {
+    animation-duration: 1ms;
+  }
+  .dkx-listen {
+    animation: none;
+    opacity: 0;
+  }
+}
