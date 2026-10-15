@@ -128,6 +128,25 @@
   .units .u.lit { background: var(--ivory); }
   .units .u.mid { background: var(--mid); }
 
+  /* ---------- 2 and 3. The problem: the facts ---------- */
+  .facts { display: grid; grid-template-columns: 1fr 1fr; column-gap: 70px; }
+  .fact { display: grid; grid-template-columns: 1fr 292px; column-gap: 26px; align-items: center; padding: 44px 0 46px; border-top: 1px solid #222226; }
+  .fact .n { font-size: 88px; font-weight: 600; letter-spacing: -0.045em; line-height: 0.95; font-variant-numeric: tabular-nums; }
+  .fact .l { font-size: 22px; line-height: 1.42; color: var(--soft); margin-top: 16px; }
+  .fact .l b { color: var(--ivory); font-weight: 600; }
+  .rank p { display: flex; gap: 12px; align-items: baseline; font-size: 19px; color: var(--soft); padding: 6px 0; white-space: nowrap; }
+  .rank p i { font-style: normal; font-size: 15px; font-weight: 600; color: var(--muted); width: 12px; }
+  .rank p:first-child { color: var(--ivory); font-weight: 600; }
+  .bars2 .r { display: grid; grid-template-columns: 44px 1fr; align-items: center; column-gap: 12px; margin: 12px 0; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bars2 .t { position: relative; height: 30px; border-radius: 7px; background: #141417; overflow: hidden; }
+  .bars2 .f { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 7px; display: flex; align-items: center; justify-content: flex-end; padding-right: 9px; font-size: 14px; font-weight: 600; color: #0a0a0a; }
+  .ico-big { display: flex; justify-content: center; }
+  .gaps .lab { margin-bottom: 16px; }
+  .gaps .gp { display: grid; grid-template-columns: 60px 1fr; column-gap: 24px; align-items: start; padding: 24px 0; border-top: 1px solid #222226; }
+  .gaps .gp:last-child { border-bottom: 1px solid #222226; }
+  .gaps .t { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .gaps .s { font-size: 21px; line-height: 1.42; color: var(--soft); margin-top: 8px; }
+
   /* ---------- 3. A friend's day ---------- */
   .tl .line { position: absolute; left: 0; right: 0; top: 190px; height: 1px; background: linear-gradient(90deg, rgba(58,58,62,0), #3a3a3e 5%, #3a3a3e 95%, rgba(58,58,62,0)); }
   .tl .now { position: absolute; top: 166px; left: 0; width: 48px; height: 48px; margin-left: -24px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.9), rgba(237,237,235,0.25) 30%, rgba(237,237,235,0) 100%); }
@@ -284,6 +303,8 @@
   /* ---------- Motion (present and phone only; print shows the end state) ---------- */
   .anim [data-a] { opacity: 0; translate: 0 22px; }
   .anim .on [data-a] { opacity: 1; translate: 0 0; transition: opacity 0.7s ease, translate 0.9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.12s); }
+  .anim .growx { transform: scaleX(0); transform-origin: left center; }
+  .anim .on .growx { transform: none; transition: transform 1s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.6s); }
   .anim .grow { transform: scaleY(0); transform-box: fill-box; transform-origin: 50% 100%; }
   .anim .on .grow { transform: none; transition: transform 0.9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.3s); }
   .anim .land-dot { opacity: 0; transform: translateY(-26px); transform-box: fill-box; transform-origin: center; }
@@ -331,7 +352,7 @@
   html.over .slide { position: relative; left: auto; top: auto; transform: none; opacity: 1; visibility: visible; zoom: 0.2; cursor: pointer; outline: 6px solid transparent; }
   html.over .slide.on { outline-color: rgba(237,237,235,0.5); }
   html.over [data-a], html.over .tl .it { opacity: 1 !important; translate: none !important; }
-  html.over .grow, html.over .land-dot { transform: none !important; opacity: 1 !important; }
+  html.over .grow, html.over .growx, html.over .land-dot { transform: none !important; opacity: 1 !important; }
   html.over .draw { stroke-dashoffset: 0 !important; }
   html.over .fade { opacity: 1 !important; }
   html.over .units .u.lit { background: var(--ivory) !important; }
@@ -406,6 +427,17 @@
   html.phone .contact { font-size: 16px; }
   html.phone .contact .sep { margin: 0 8px; }
   html.phone .mega-n { font-size: 96px; }
+  html.phone .facts { grid-template-columns: 1fr; }
+  html.phone .fact { grid-template-columns: 1fr; row-gap: 14px; padding: 20px 0; }
+  html.phone .fact .n { font-size: 46px; }
+  html.phone .fact .l { font-size: 15px; margin-top: 8px; }
+  html.phone .rank p { font-size: 15px; padding: 3px 0; }
+  html.phone .ico-big { justify-content: flex-start; }
+  html.phone .ico-big svg { width: 64px; height: 64px; }
+  html.phone .gaps .gp { grid-template-columns: 40px 1fr; column-gap: 14px; padding: 16px 0; }
+  html.phone .gaps .gp svg { width: 40px; height: 40px; }
+  html.phone .gaps .t { font-size: 20px; }
+  html.phone .gaps .s { font-size: 15px; }
 
   /* ---------- Print: every slide one page, end states, still frames for the videos ---------- */
   @media print {
@@ -437,29 +469,57 @@
   <p class="b foot" data-a style="--d:0.5; left:120px; top:814px;">Private beta on iPhone &nbsp;·&nbsp; October 2026</p>
 </section>
 
-<!-- 2. The problem -->
-<section class="slide" data-seed="22">
-  <div class="b" style="left:120px; top:96px; width:720px;">
+<!-- 2. The need -->
+<section class="slide" data-seed="21">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>The problem</p>
-    <h1 data-a style="--d:0.05;">People use AI.<br><span class="dim">They don’t love it yet.</span></h1>
-    <p class="lead" data-a style="--d:0.2; margin-top:34px; width:640px;">The market built tools you open for a task. <b>Nobody opens one just to talk.</b></p>
+    <h1 data-a style="--d:0.05;">People want an AI for their life.<br><span class="dim">Not just for work.</span></h1>
   </div>
-  <div class="v" data-a style="--d:0.35; left:120px; top:500px; width:640px; height:160px;">
-    <div class="blank"><span class="cur"></span><span class="ph">Ask anything</span></div>
-    <p class="note">Every chat starts here. When the task is done, you close it.</p>
-  </div>
-  <div class="v" style="left:880px; top:140px; width:600px; height:600px;">
-    <div class="units abs" data-units="dot" data-n="100" data-cols="10" data-size="30" data-gap="15" data-lit="21" data-mid="10" data-st="22ms" style="left:0; top:0; width:435px; height:435px;"></div>
-    <div class="lg abs" data-a style="--d:0.3; left:478px; top:4px;">
-      <div><p class="n count" data-to="21">21</p><p class="t"><i style="background:var(--ivory)"></i>AI apps</p></div>
-      <div><p class="n" style="color:#7a7a7e;"><span class="count" data-to="31">31</span></p><p class="t"><i style="background:var(--mid)"></i>Other apps</p></div>
+  <div class="b facts" style="left:120px; top:318px; width:1360px;">
+    <div class="fact" data-a style="--d:0.15;">
+      <div><p class="n">#1</p><p class="l">use of AI in 2025 was <b>therapy and companionship.</b></p></div>
+      <div class="rank"><p><i>1</i>Therapy and companionship</p><p><i>2</i>Organizing my life</p><p><i>3</i>Finding purpose</p></div>
     </div>
-    <p class="cap abs" data-a style="--d:0.45; left:0; top:470px; width:540px;">Out of every 100 people who pay for an app, <b>how many still pay a year later.</b></p>
+    <div class="fact" data-a style="--d:0.25;">
+      <div><p class="n"><span class="count" data-to="73">73</span>%</p><p class="l">of messages to the biggest AI assistant <b>are not about work.</b></p></div>
+      <div class="bars2"><div class="r"><span>2024</span><div class="t"><div class="f growx" style="width:53%; background:#5e5e62; color:#EDEDEB;">53%</div></div></div><div class="r"><span>2025</span><div class="t"><div class="f growx" style="width:73%; background:var(--ivory);">73%</div></div></div></div>
+    </div>
+    <div class="fact" data-a style="--d:0.35;">
+      <div><p class="n">1 in 6</p><p class="l">people worldwide <b>are lonely.</b> Loneliness is linked to 871,000 deaths a year.</p></div>
+      <div><svg class="ppl" data-people="6" data-lit="1" width="250" height="64" viewBox="0 0 250 64" aria-hidden="true"></svg></div>
+    </div>
+    <div class="fact" data-a style="--d:0.45;">
+      <div><p class="n">$<span class="count" data-to="328">328</span>M</p><p class="l">spent on AI companion apps in the first half of 2026, <b>on pretend characters.</b></p></div>
+      <div class="ico-big"><svg width="104" height="104" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 16.5a3.5 3.5 0 0 1 3.5-3.5h13a3.5 3.5 0 0 1 3.5 3.5v8a3.5 3.5 0 0 1-3.5 3.5H21l-5 4.5V28a3 3 0 0 1-3-3z"/><path d="M23 25c-2.8-2-4.3-3.4-4.3-4.9a2.15 2.15 0 0 1 4.3-.5 2.15 2.15 0 0 1 4.3.5c0 1.5-1.5 2.9-4.3 4.9z"/></g></svg></div>
+    </div>
   </div>
   <div class="pg">2</div>
 </section>
 
-<!-- 3. The insight -->
+<!-- 3. The gap -->
+<section class="slide" data-seed="22">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>The problem</p>
+    <h1 data-a style="--d:0.05;">Today’s AI is a tool.<br><span class="dim">People don’t stay.</span></h1>
+  </div>
+  <div class="v" style="left:120px; top:318px; width:640px; height:540px;">
+    <div class="units abs" data-units="dot" data-n="100" data-cols="10" data-size="26" data-gap="13" data-lit="21" data-mid="10" data-st="22ms" style="left:0; top:0; width:377px; height:377px;"></div>
+    <div class="lg abs" data-a style="--d:0.3; left:424px; top:0;">
+      <div><p class="n count" data-to="21">21</p><p class="t"><i style="background:var(--ivory)"></i>AI apps</p></div>
+      <div><p class="n" style="color:#7a7a7e;"><span class="count" data-to="31">31</span></p><p class="t"><i style="background:var(--mid)"></i>Other apps</p></div>
+    </div>
+    <p class="cap abs" data-a style="--d:0.45; left:0; top:406px; width:600px;">Out of 100 people who pay for an AI app, <b>21 still pay a year later.</b> Other apps keep 31. AI apps lose paying users about 30% faster.</p>
+  </div>
+  <div class="b gaps" style="left:850px; top:318px; width:630px;">
+    <p class="lab" data-a style="--d:0.3;">Today’s AI</p>
+    <div class="gp" data-a style="--d:0.4;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="16" width="28" height="14" rx="7"/><path d="M15.5 20v6"/></g></svg><div><p class="t">Forgets you</p><p class="s">Every chat starts from an empty box. You explain yourself again.</p></div></div>
+    <div class="gp" data-a style="--d:0.5;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 12h14M16 34h14"/><path d="M17.5 12c0 5.5 5.5 7.5 5.5 11s-5.5 5.5-5.5 11M28.5 12c0 5.5-5.5 7.5-5.5 11s5.5 5.5 5.5 11"/></g></svg><div><p class="t">Waits for you</p><p class="s">It never starts the conversation. Nothing happens until you type.</p></div></div>
+    <div class="gp" data-a style="--d:0.6;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="13" width="20" height="20" rx="5"/><path d="M18 23.5l3.5 3.5 7-8"/></g></svg><div><p class="t">Only does tasks</p><p class="s">You open it for a job, then close it. Nobody opens it just to talk.</p></div></div>
+  </div>
+  <div class="pg">3</div>
+</section>
+
+<!-- 4. The insight -->
 <section class="slide" data-seed="33">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>The insight</p>
@@ -486,10 +546,10 @@
   <div class="b" data-a style="--d:0.55; left:120px; top:712px; width:1240px;">
     <p class="say xl2">An AI people love to talk to, that also gets things done, <span class="dim">doesn’t exist yet.</span></p>
   </div>
-  <div class="pg">3</div>
+  <div class="pg">4</div>
 </section>
 
-<!-- 4. Meet Krovvi -->
+<!-- 5. Meet Krovvi -->
 <section class="slide" data-seed="44">
   <div class="b" style="left:660px; top:146px; width:820px;">
     <p class="kick" data-a>Meet Krovvi</p>
@@ -498,7 +558,7 @@
     <div class="qual" data-a style="--d:0.35;">
       <p><b>Personality</b><span>Funny, honest and curious, with opinions.</span></p>
       <p><b>Memory</b><span>Your people, plans and inside jokes.</span></p>
-      <p><b>Intelligence</b><span>Real talk about anything.</span></p>
+      <p><b>Talks first</b><span>It starts the conversation when it matters.</span></p>
       <p><b>Action</b><span>Real screens. It acts after your yes.</span></p>
       <p><b>Grows with you</b><span>Learns you. No settings to fill in.</span></p>
     </div>
@@ -507,10 +567,10 @@
     <div class="glow" style="left:-300px; top:-60px; width:1040px; height:1020px;"></div>
     <div class="iphone abs" data-a data-video="vid/tot.mp4" data-poster="vid/tot.jpg" data-ar="600/1298" data-alt="A real recording of the app: someone says they are bored, Krovvi plays This or That, reads them right 5 of 10 and remembers they would rather text than call" style="--d:0.15; --w:384px; left:28px; top:49px;"></div>
   </div>
-  <div class="pg">4</div>
+  <div class="pg">5</div>
 </section>
 
-<!-- 5. How Krovvi wins -->
+<!-- 6. How Krovvi wins -->
 <section class="slide" data-seed="55">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>How Krovvi wins</p>
@@ -541,10 +601,10 @@
     <p><i>4</i><span><b>It gets more fun and useful</b>Better jokes, picks and help</span></p>
     <p><i>5</i><span><b>They come back</b>Without being asked, and the loop goes again</span></p>
   </div>
-  <div class="pg">5</div>
+  <div class="pg">6</div>
 </section>
 
-<!-- 6. A friend first -->
+<!-- 7. A friend first -->
 <section class="slide" data-seed="66">
   <div class="b" style="left:120px; top:96px; width:390px;">
     <p class="kick" data-a>One friend, all day</p>
@@ -560,10 +620,10 @@
       <div class="it" data-a style="--d:0.55;"><div class="iphone" data-src="img/car.png" data-alt="A money question becomes a savings chart with a slider" style="--w:290px;"></div><div class="cp"><p class="tt">Next morning · It helps</p><p>A money question becomes a chart you can slide.</p></div></div>
     </div>
   </div>
-  <div class="pg">6</div>
+  <div class="pg">7</div>
 </section>
 
-<!-- 7. Built in 4 weeks -->
+<!-- 8. Built in 4 weeks -->
 <section class="slide" data-seed="77">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>In the app today</p>
@@ -579,10 +639,10 @@
       <div class="it" data-a style="--d:0.4;"><div class="iphone" data-src="img/money.png" data-alt="Money: October so far, spends found in receipts and mail" style="--w:196px;"></div><p class="t">Gets things done</p><p class="s">Real screens, real help</p></div>
     </div>
   </div>
-  <div class="pg">7</div>
+  <div class="pg">8</div>
 </section>
 
-<!-- 8. How we work -->
+<!-- 9. How we work -->
 <section class="slide" data-seed="110">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>How we work</p>
@@ -617,10 +677,10 @@
     <div class="row"><p class="tm">14 Oct</p><p class="tx">Games made from your life</p></div>
     <div class="row now"><p class="tm">Today</p><p class="tx">A new version is out to testers</p></div>
   </div>
-  <div class="pg">8</div>
+  <div class="pg">9</div>
 </section>
 
-<!-- 9. The market -->
+<!-- 10. The market -->
 <section class="slide" data-seed="88">
   <div class="b" style="left:120px; top:96px; width:1360px;">
     <p class="kick" data-a>The market</p>
@@ -635,10 +695,10 @@
     <div class="mrow" data-a style="--d:0.3;"><div class="ic"><svg id="globe" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"></svg></div><div><p class="n">2 billion</p><p class="l">people use AI worldwide, up 11% in a year. <b>Spending tripled.</b></p></div></div>
     <div class="mrow" data-a style="--d:0.45;"><div class="ic"><svg id="launch" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"></svg></div><div><p class="n">6 weeks</p><p class="l">Three of the biggest tech companies launched personal agents. <b>All built for errands.</b></p></div></div>
   </div>
-  <div class="pg">9</div>
+  <div class="pg">10</div>
 </section>
 
-<!-- 10. The landscape -->
+<!-- 11. The landscape -->
 <section class="slide" data-seed="99">
   <div class="b" style="left:120px; top:96px; width:900px;">
     <p class="kick" data-a>The landscape</p>
@@ -653,10 +713,10 @@
     <div data-a style="--d:0.6;"><p class="k">3</p><h3>Fun made from your life</h3><p class="d">Games and moments that star you and your people.</p></div>
     <div data-a style="--d:0.7;"><p class="k">4</p><h3>Friends come in through chats</h3><p class="d">Every shared chat puts Krovvi in front of someone new.</p></div>
   </div>
-  <div class="pg">10</div>
+  <div class="pg">11</div>
 </section>
 
-<!-- 11. Where this goes -->
+<!-- 12. Where this goes -->
 <section class="slide" data-seed="143">
   <div class="b" style="left:120px; top:106px; width:1360px;">
     <p class="kick" data-a>Where this goes</p>
@@ -676,10 +736,10 @@
     <div class="row later"><p class="tm">3 · Then</p><p class="tx"><b>Krovvi meets Krovvi.</b> Your Krovvi and your friends’ plan together, with permission.</p></div>
     <div class="row later"><p class="tm">4 · Later</p><p class="tx"><b>Almost anything.</b> It books, buys and builds for you, after your yes.</p></div>
   </div>
-  <div class="pg">11</div>
+  <div class="pg">12</div>
 </section>
 
-<!-- 12. Team -->
+<!-- 13. Team -->
 <section class="slide" data-seed="154">
   <div class="b" style="left:120px; top:96px; width:960px;">
     <p class="kick" data-a>Team</p>
@@ -790,6 +850,16 @@
     });
     svg.insertAdjacentHTML('beforeend', parts.join(''));
     s.insertBefore(svg, s.firstChild);
+  });
+
+  // ---------- People: n figures, the first ones lit ----------
+  document.querySelectorAll('svg.ppl').forEach(function (sv) {
+    var n = +sv.dataset.people, lit = +sv.dataset.lit;
+    for (var i = 0; i < n; i++) {
+      var x = 22 + i * 41, c = i < lit ? '#EDEDEB' : '#34343a';
+      el('circle', { cx: x, cy: 17, r: 10, fill: c }, sv);
+      el('path', { d: 'M' + (x - 16) + ' 60 Q' + (x - 16) + ' 33 ' + x + ' 33 Q' + (x + 16) + ' 33 ' + (x + 16) + ' 60 Z', fill: c }, sv);
+    }
   });
 
   // ---------- Units: dots, capsules and squares that light up one by one ----------
