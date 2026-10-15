@@ -1,0 +1,52 @@
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:3300
+- Network:       http://192.168.0.226:3300
+✓ Ready in 468ms
+✓ Running next.config.ts took 98ms
+
+ GET / 200 in 603ms (next.js: 247ms, application-code: 356ms)
+ GET /manifest.webmanifest 200 in 68ms (next.js: 50ms, application-code: 19ms)
+ GET / 200 in 160ms (next.js: 11ms, application-code: 149ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 4ms, application-code: 6ms)
+ GET / 200 in 170ms (next.js: 35ms, application-code: 135ms)
+ GET /manifest.webmanifest 200 in 8ms (next.js: 3ms, application-code: 5ms)
+ GET / 200 in 366ms (next.js: 5ms, application-code: 360ms)
+ GET /manifest.webmanifest 200 in 41ms (next.js: 29ms, application-code: 12ms)
+ GET /manifest.webmanifest 200 in 45ms (next.js: 15ms, application-code: 30ms)
+ GET / 200 in 376ms (next.js: 10ms, application-code: 365ms)
+ GET / 200 in 139ms (next.js: 19ms, application-code: 120ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 5ms, application-code: 5ms)
+ GET / 200 in 228ms (next.js: 33ms, application-code: 196ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET / 200 in 146ms (next.js: 13ms, application-code: 134ms)
+ GET /manifest.webmanifest 200 in 14ms (next.js: 7ms, application-code: 8ms)
+ GET /manifest.webmanifest 200 in 7ms (next.js: 2ms, application-code: 5ms)
+ GET / 200 in 221ms (next.js: 41ms, application-code: 181ms)
+[browser] Updating a style property during rerender (textDecoration) when a conflicting property is set (textDecorationColor) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. 
+ GET / 200 in 158ms (next.js: 17ms, application-code: 141ms)
+ GET /manifest.webmanifest 200 in 6ms (next.js: 3ms, application-code: 3ms)
+[browser] Updating a style property during rerender (textDecoration) when a conflicting property is set (textDecorationColor) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. 
+ GET /manifest.webmanifest 200 in 6ms (next.js: 3ms, application-code: 3ms)
+ GET / 200 in 213ms (next.js: 15ms, application-code: 198ms)
+ GET /manifest.webmanifest 200 in 4ms (next.js: 1.9ms, application-code: 3ms)
+ GET / 200 in 131ms (next.js: 7ms, application-code: 124ms)
+ GET / 200 in 143ms (next.js: 13ms, application-code: 130ms)
+ GET /manifest.webmanifest 200 in 11ms (next.js: 7ms, application-code: 4ms)
+ GET / 200 in 117ms (next.js: 8ms, application-code: 109ms)
+ GET /manifest.webmanifest 200 in 5ms (next.js: 3ms, application-code: 3ms)
+ GET / 200 in 137ms (next.js: 10ms, application-code: 128ms)
+ GET /manifest.webmanifest 200 in 7ms (next.js: 3ms, application-code: 4ms)
+[browser] Updating a style property during rerender (textDecoration) when a conflicting property is set (textDecorationColor) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. 
+ GET / 200 in 137ms (next.js: 14ms, application-code: 123ms)
+ GET /manifest.webmanifest 200 in 5ms (next.js: 1.8ms, application-code: 3ms)
+ GET / 200 in 161ms (next.js: 15ms, application-code: 147ms)
+ GET /manifest.webmanifest 200 in 5ms (next.js: 1.5ms, application-code: 4ms)
+[browser] Updating a style property during rerender (textDecoration) when a conflicting property is set (textDecorationColor) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. 
+ GET / 200 in 211ms (next.js: 98ms, application-code: 114ms)
+ GET /manifest.webmanifest 200 in 31ms (next.js: 26ms, application-code: 5ms)
+ GET /manifest.webmanifest 200 in 6ms (next.js: 3ms, application-code: 3ms)
+ GET / 200 in 378ms (next.js: 9ms, application-code: 369ms)
+ GET / 200 in 126ms (next.js: 10ms, application-code: 116ms)
+ GET /manifest.webmanifest 200 in 5ms (next.js: 2ms, application-code: 3ms)
+ GET / 200 in 110ms (next.js: 3ms, application-code: 107ms)
+ GET /manifest.webmanifest 200 in 6ms (next.js: 3ms, application-code: 3ms)
