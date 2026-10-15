@@ -26,7 +26,7 @@ import { Mark } from "@/components/mark";
 import { PhoneSky } from "@/components/sky/phone-sky";
 
 import { type Beat, Thread, useBeats } from "./chat-film";
-import { keepEmoji } from "./tiles";
+import { keepEmoji } from "./emoji";
 
 /**
  * A day with Krovvi, one phone screen per moment, for "How it works": it

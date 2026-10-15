@@ -74,10 +74,10 @@ function over(hex: string, base: string, t: number): string {
 }
 
 /** A pane on the app's page (kit/ground.tsx pagePane, theme/pane.ts night): #0E0E10, corners 20, one hairline, 12 under it. */
-const PANE: CSSProperties = { background: C.surface, borderRadius: 20, border: `${HAIR}px solid ${C.edge}`, overflow: "hidden", marginBottom: 12 };
+export const PANE: CSSProperties = { background: C.surface, borderRadius: 20, border: `${HAIR}px solid ${C.edge}`, overflow: "hidden", marginBottom: 12 };
 
 /** kit/blocks.tsx GroupHead: the group's name 20 on 25 semibold, 4 in, 12 over and 8 under it; a count or an action across. */
-function GroupHead({ title, value, action }: { title: string; value?: string; action?: string }) {
+export function GroupHead({ title, value, action }: { title: string; value?: string; action?: string }) {
   return (
     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, padding: "12px 4px 8px" }}>
       <span style={{ fontSize: 20, lineHeight: "25px", fontWeight: 600, letterSpacing: "-0.5px", color: C.fg }}>{title}</span>
@@ -99,7 +99,7 @@ function GroupHead({ title, value, action }: { title: string; value?: string; ac
  * control at the far edge; at least 60 tall, 10 over and under, 16 at the
  * sides, a hairline from 72 in (16 with no tile).
  */
-function Row({ first, lead, title, sub, value, trail }: { first: boolean; lead?: ReactNode; title: string; sub?: string; value?: string; trail?: ReactNode }) {
+export function Row({ first, lead, title, sub, value, trail }: { first: boolean; lead?: ReactNode; title: string; sub?: string; value?: string; trail?: ReactNode }) {
   return (
     <div>
       {first ? null : <div style={{ height: HAIR, background: C.line, marginLeft: lead ? 72 : 16 }} />}
@@ -117,7 +117,7 @@ function Row({ first, lead, title, sub, value, trail }: { first: boolean; lead?:
 }
 
 /** kit/blocks.tsx IconTile: the mark in its colour, half the tile, on a raised step (#18181A) with one hairline, corners 0.28 of it. */
-function IconTile({ mark, tint, size = 44 }: { mark: MoneyMark; tint: string; size?: number }) {
+export function IconTile({ mark, tint, size = 44 }: { mark: MoneyMark; tint: string; size?: number }) {
   return (
     <span style={{ width: size, height: size, borderRadius: size * 0.28, background: C.surfaceHi, border: `${HAIR}px solid ${C.edge}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
       <Mark name={mark} size={Math.round(size * 0.5)} color={tint} />
@@ -126,7 +126,7 @@ function IconTile({ mark, tint, size = 44 }: { mark: MoneyMark; tint: string; si
 }
 
 /** kit/found.tsx Answers: the cross that leaves it out (32, raised) and the yes in the app's colour (32 tall, 14 at the sides). */
-function Answers({ yes, tint }: { yes: string; tint: string }) {
+export function Answers({ yes, tint }: { yes: string; tint: string }) {
   return (
     <span style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
       <span style={{ width: 32, height: 32, borderRadius: 16, background: C.surfaceHi, border: `${HAIR}px solid ${C.edge}`, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -140,7 +140,7 @@ function Answers({ yes, tint }: { yes: string; tint: string }) {
 }
 
 /** kit/tick.tsx Tick: a 26 point ring of 1.5 faint, filled ivory with its tick once done. */
-function Tick() {
+export function Tick() {
   return <span style={{ width: 26, height: 26, borderRadius: 13, border: `1.5px solid ${C.faint}`, flexShrink: 0 }} />;
 }
 
@@ -150,7 +150,7 @@ function Tick() {
  * dot it has reached in its own light, then the bills still due in faint,
  * then the rest ivory at an eighth.
  */
-function DotBar({ share, held = 0, tint, n = 30, dot = 5, width }: { share: number; held?: number; tint: string; n?: number; dot?: number; width: number }) {
+export function DotBar({ share, held = 0, tint, n = 30, dot = 5, width }: { share: number; held?: number; tint: string; n?: number; dot?: number; width: number }) {
   const safe = Math.max(0, Math.min(1, share));
   const lit = safe > 0 ? Math.min(n, Math.max(1, Math.round(n * safe))) : 0;
   const more = held > 0 ? Math.min(n - lit, Math.max(1, Math.round(n * Math.min(1, held)))) : 0;

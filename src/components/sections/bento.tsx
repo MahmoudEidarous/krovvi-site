@@ -1,15 +1,15 @@
+import { AsksLoopVisual, FirstMovesVisual, LearnsVisual, OrganizedVisual } from "@/components/films/bento-live";
 import { PeopleMapVisual } from "@/components/films/people-map";
-import { AdaptsVisual, AppsVisual, AsksVisual, FirstVisual, FunVisual } from "@/components/films/tiles";
 import { InView } from "@/components/in-view";
 import { an } from "@/lib/anim";
 
 /**
  * What makes Krovvi a friend, each shown as the app draws it, large, on the
- * app's own night. The star is its memory of your world: the People map,
- * where the more you talk, the closer someone sits, and a change is kept up
- * with. Then what a friend does (it starts the conversation, makes the fun
- * out of your life, asks when it isn't sure, adapts to how you like things),
- * and last the apps it fills in as you talk.
+ * app's own night, and each one moving. The star is its memory of your
+ * world: the People map, where the more you talk, the closer someone sits,
+ * and a change is kept up with. Then three things a friend does: it starts
+ * the conversation, it asks when it isn't sure, and it adapts to how you
+ * like things. Last, the apps it keeps in order as you talk.
  */
 export function Bento() {
   return (
@@ -42,27 +42,24 @@ export function Bento() {
             </div>
           </Tile>
 
-          <Tile className="lg:row-span-2" title="It starts the conversation." body="No empty box. When something matters, it writes first, and it stays quiet the rest of the time.">
-            <FirstVisual />
+          <Tile title="It starts the conversation." body="No empty box. When something matters, it writes first. Quiet the rest of the time.">
+            <FirstMovesVisual />
           </Tile>
-          <Tile split className="lg:col-span-2" title="Fun, made from your life." body="Games it makes from what it knows about you. You play, and it learns you a little better.">
-            <FunVisual />
+          <Tile title="It asks, so it gets you right." body="When it isn't sure, it asks, a few quick ones at a time.">
+            <AsksLoopVisual />
           </Tile>
-          <Tile split className="lg:col-span-2" title="It asks, so it gets you right." body="When it isn't sure, it asks, a few quick ones at a time. And you can fix anything it remembers.">
-            <AsksVisual />
+          <Tile title="It adapts to you." body="It learns how you talk and what you like. No settings to fill in.">
+            <LearnsVisual />
           </Tile>
 
-          <Tile title="It adapts to you." body="It learns how you talk and what you like. No settings to fill in.">
-            <AdaptsVisual />
-          </Tile>
           <Tile
             split
-            className="lg:col-span-2"
-            title="Your life, in order."
-            body="Money, plans, trips, workouts and more. Its apps fill themselves as you talk, so you never fill in a form."
+            className="lg:col-span-3"
+            title="Your life, organized."
+            body="Money, plans and to-dos, kept as you talk. Its apps fill themselves, so you never fill in a form."
           >
-            <div className="mx-auto w-full max-w-[460px]">
-              <AppsVisual />
+            <div className="mx-auto w-full max-w-[600px]">
+              <OrganizedVisual />
             </div>
           </Tile>
         </div>

@@ -620,3 +620,49 @@ body {
     transform: rotate(-4deg);
   }
 }
+
+/* The bento's live pictures (components/films/bento-live.tsx): a new piece grows into its place and settles there. */
+.bl-in {
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: k-grow 620ms var(--ease) both;
+}
+.bl-in > .bl-inner {
+  min-height: 0;
+  animation: bl-drop 760ms cubic-bezier(0.34, 1.18, 0.5, 1) both;
+}
+.bl-up > .bl-inner {
+  animation-name: bl-rise;
+}
+.bl-up > .bl-inner.bl-lit {
+  animation:
+    bl-rise 760ms cubic-bezier(0.34, 1.18, 0.5, 1) both,
+    bl-lit 2600ms var(--ease) 200ms both;
+}
+@keyframes bl-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.97);
+  }
+}
+@keyframes bl-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+}
+@keyframes bl-lit {
+  from {
+    background-color: var(--bl-tint);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bl-in,
+  .bl-in > .bl-inner,
+  .bl-up > .bl-inner.bl-lit {
+    animation: none !important;
+  }
+}
