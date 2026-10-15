@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { Phone } from "@/components/phone";
@@ -20,6 +21,8 @@ export const metadata: Metadata = {
 const HIDE_DEV_BADGE = "nextjs-portal{display:none!important}";
 
 export default async function DeepDevPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  // A design review page, for development only, as /s/dev and /o/dev are: never served by the live site.
+  if (process.env.NODE_ENV === "production") notFound();
   const { shot } = await searchParams;
   const one = typeof shot === "string" ? SCENES.find((s) => s.id === shot) : undefined;
   if (one) {
