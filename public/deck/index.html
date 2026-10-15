@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="/deck/">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Krovvi">
+<meta property="og:title" content="Krovvi: your super friend">
+<meta property="og:description" content="The personal AI you actually want to spend time with. Pitch deck, October 2026.">
+<meta property="og:url" content="https://krovvi.com/deck">
+<meta property="og:image" content="https://krovvi.com/deck/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Krovvi: Your super friend. The personal AI you actually want to spend time with.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://krovvi.com/deck/og.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krovvi Pitch Deck</title>
+<meta name="description" content="Krovvi is your super friend: the personal AI you actually want to spend time with.">
+<meta name="theme-color" content="#010101">
+<script>
+  // Pick the mode before anything paints: present (one slide at a time), phone (one long page), print (PDF).
+  (function () {
+    var h = document.documentElement, q = location.search;
+    var mq = window.matchMedia && window.matchMedia('(max-width: 760px), (max-height: 500px) and (pointer: coarse)');
+    var mode = /print/.test(q) ? 'print' : (/phone/.test(q) || (mq && mq.matches)) ? 'phone' : 'present';
+    h.classList.add(mode);
+    if (mode !== 'print') h.classList.add('anim');
+    if (/font=inter/.test(q)) h.classList.add('inter');
+  })();
+</script>
+<style>
+  @font-face { font-family: "Inter Deck"; src: url("fonts/inter-var.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @page { size: 1200pt 675pt; margin: 0; }
+  :root {
+    --ground: #010101;
+    --ivory: #EDEDEB;
+    --fg2: #D9D8D3;
+    --soft: #A9A8A2;
+    --muted: #8F8F8A;
+    --faint: #6C6C67;
+    --line: #2A2A2E;
+    --off: #1B1B1E;
+    --mid: #5E5E62;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--ground); color: var(--ivory); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter Deck", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+  }
+  html.inter body { font-family: "Inter Deck", system-ui, sans-serif; }
+  p, h1, h2, h3, ul { margin: 0; padding: 0; }
+  button { font: inherit; }
+
+  /* ---------- The page: 1600 x 900, content between x 120 and x 1480 ---------- */
+  .slide { width: 1600px; height: 900px; position: relative; overflow: hidden; background: var(--ground); }
+  .sky { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+  .b, .v { position: absolute; z-index: 2; }
+  .v > .abs, .abs { position: absolute; }
+  .src { position: absolute; left: 120px; bottom: 38px; width: 1180px; font-size: 14px; line-height: 1.45; color: var(--faint); z-index: 2; }
+  .pg { position: absolute; right: 120px; bottom: 38px; font-size: 15px; color: var(--faint); z-index: 2; font-variant-numeric: tabular-nums; }
+  .only-ph { display: none; }
+
+  .kick { font-size: 15px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  h1 { font-weight: 600; font-size: 66px; line-height: 1.05; letter-spacing: -0.034em; color: var(--ivory); }
+  h1.h56 { font-size: 56px; }
+  h1.h62 { font-size: 62px; }
+  h1.xl { font-size: 90px; line-height: 1.0; letter-spacing: -0.042em; }
+  h1.big { font-size: 100px; line-height: 1.0; letter-spacing: -0.044em; }
+  h1.mega { font-size: 150px; line-height: 0.93; letter-spacing: -0.052em; }
+  .dim { color: var(--muted); }
+  .lead { font-size: 28px; line-height: 1.42; color: var(--soft); letter-spacing: -0.008em; }
+  .lead.s24 { font-size: 24px; }
+  .lead b, .cap b, .say2 b, .l b { color: var(--ivory); font-weight: 600; }
+  .cap { font-size: 21px; line-height: 1.45; color: var(--soft); }
+  .lab { font-size: 15px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
+  .say { font-size: 34px; line-height: 1.22; font-weight: 600; letter-spacing: -0.022em; color: var(--ivory); }
+  .say.xl2 { font-size: 46px; line-height: 1.16; letter-spacing: -0.028em; }
+  .say2 { font-size: 30px; line-height: 1.36; letter-spacing: -0.012em; color: var(--fg2); }
+
+  /* ---------- The K and the word ---------- */
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand span { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; color: var(--ivory); }
+
+  /* ---------- The iPhone: titanium rim, black bezel, the real screen, the island, a little glass ---------- */
+  .iphone { position: relative; width: var(--w); padding: calc(var(--w) * 0.032); border-radius: calc(var(--w) * 0.19);
+    background: linear-gradient(150deg, #a3a3aa 0%, #5a5a61 6%, #232327 22%, #141417 52%, #2b2b30 82%, #94949b 100%); }
+  .iphone.abs { position: absolute; }
+  .iphone::before { content: ""; position: absolute; inset: 1.5px; border-radius: calc(var(--w) * 0.186); background: #040405; }
+  .iphone::after { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(255,255,255,0.13); pointer-events: none; }
+  .iphone .scr { position: relative; z-index: 1; border-radius: calc(var(--w) * 0.158); overflow: hidden; background: #000; }
+  .iphone .scr img, .iphone .scr video { display: block; width: 100%; height: auto; }
+  .iphone .isl { position: absolute; z-index: 2; left: 50%; top: 1.26%; width: 31.5%; height: 4.2%; transform: translateX(-50%); background: #000; border-radius: 999px; }
+  .iphone .glr { position: absolute; z-index: 3; inset: 0; pointer-events: none; background: linear-gradient(118deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.02) 30%, rgba(255,255,255,0) 46%); }
+  .iphone i { position: absolute; width: 3px; border-radius: 2px; background: linear-gradient(180deg, #76767c, #3a3a3f); }
+  .iphone i.a { left: -2px; top: 17%; height: 4%; }
+  .iphone i.b { left: -2px; top: 24%; height: 7.4%; }
+  .iphone i.c { left: -2px; top: 33%; height: 7.4%; }
+  .iphone i.d { right: -2px; top: 27%; height: 11%; }
+  .glow { position: absolute; border-radius: 50%; pointer-events: none; z-index: 0;
+    background: radial-gradient(closest-side, rgba(237,237,235,0.13), rgba(237,237,235,0.05) 50%, rgba(237,237,235,0) 100%); }
+
+  /* ---------- 1. Cover ---------- */
+  .sub { font-size: 34px; line-height: 1.3; letter-spacing: -0.015em; color: var(--fg2); margin-top: 46px; max-width: 640px; }
+  .foot { font-size: 18px; color: var(--muted); letter-spacing: 0.01em; }
+
+  /* ---------- 2. Problem ---------- */
+  .blank { width: 600px; height: 88px; border-radius: 44px; border: 1.5px solid #38383c; background: #0a0a0c; display: flex; align-items: center; padding: 0 34px; }
+  .blank .cur { width: 3px; height: 34px; background: var(--ivory); margin-right: 8px; animation: blink 1.1s steps(1) infinite; }
+  .blank .ph { font-size: 28px; color: var(--faint); }
+  .note { font-size: 20px; line-height: 1.4; color: var(--muted); margin-top: 22px; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .lg { display: flex; flex-direction: column; gap: 34px; }
+  .lg .n { font-size: 76px; font-weight: 600; letter-spacing: -0.045em; line-height: 0.9; font-variant-numeric: tabular-nums; }
+  .lg .t { font-size: 17px; color: var(--muted); margin-top: 10px; display: flex; align-items: center; gap: 9px; }
+  .lg .t i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+
+  /* ---------- Units: dots, capsules and squares that light up ---------- */
+  .units { position: relative; }
+  .units .u { position: absolute; background: var(--off); border-radius: 50%; }
+  .units .u.sq { border-radius: 9px; }
+  .units .u.cap { border-radius: 99px; }
+  .units .u.lit { background: var(--ivory); }
+  .units .u.mid { background: var(--mid); }
+
+  /* ---------- 2 and 3. The problem: the facts ---------- */
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 64px; }
+  .fact { display: flex; flex-direction: column; padding-top: 40px; border-top: 1px solid #222226; }
+  .fact > div + div { margin-top: 34px; }
+  .fact .n { font-size: 88px; font-weight: 600; letter-spacing: -0.045em; line-height: 0.95; font-variant-numeric: tabular-nums; }
+  .fact .l { font-size: 22px; line-height: 1.42; color: var(--soft); margin-top: 16px; min-height: 94px; }
+  .fact .l b { color: var(--ivory); font-weight: 600; }
+  .rank p { display: flex; gap: 12px; align-items: baseline; font-size: 19px; color: var(--soft); padding: 6px 0; white-space: nowrap; }
+  .rank p i { font-style: normal; font-size: 15px; font-weight: 600; color: var(--muted); width: 12px; }
+  .rank p:first-child { color: var(--ivory); font-weight: 600; }
+  .bars2 .r { display: grid; grid-template-columns: 44px 1fr; align-items: center; column-gap: 12px; margin: 12px 0; font-size: 15px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .bars2 .t { position: relative; height: 30px; border-radius: 7px; background: #141417; overflow: hidden; }
+  .bars2 .f { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 7px; display: flex; align-items: center; justify-content: flex-end; padding-right: 9px; font-size: 14px; font-weight: 600; color: #0a0a0a; }
+  .ico-big { display: flex; justify-content: center; }
+  .gaps .lab { margin-bottom: 16px; }
+  .gaps .gp { display: grid; grid-template-columns: 60px 1fr; column-gap: 24px; align-items: start; padding: 24px 0; border-top: 1px solid #222226; }
+  .gaps .gp:last-child { border-bottom: 1px solid #222226; }
+  .gaps .t { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .gaps .s { font-size: 21px; line-height: 1.42; color: var(--soft); margin-top: 8px; }
+
+  /* ---------- 3. A friend's day ---------- */
+  .tl .line { position: absolute; left: 0; right: 0; top: 190px; height: 1px; background: linear-gradient(90deg, rgba(58,58,62,0), #3a3a3e 5%, #3a3a3e 95%, rgba(58,58,62,0)); }
+  .tl .now { position: absolute; top: 166px; left: 0; width: 48px; height: 48px; margin-left: -24px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.9), rgba(237,237,235,0.25) 30%, rgba(237,237,235,0) 100%); }
+  .tl .it { position: absolute; top: 0; left: var(--x); width: 0; height: 330px; }
+  .tl .it .pt { position: absolute; left: -5px; top: 185px; width: 10px; height: 10px; border-radius: 50%; background: var(--ivory); }
+  .tl .it .stem { position: absolute; left: -0.5px; width: 1px; background: #3a3a3e; }
+  .tl .it.hi .stem { top: 74px; height: 112px; }
+  .tl .it.lo .stem { top: 146px; height: 40px; }
+  .bubf { display: inline-block; white-space: nowrap; padding: 13px 20px; border-radius: 26px; border-top-left-radius: 8px; background: #1b1b1e; border: 1px solid #2a2a2e; font-size: 22px; line-height: 1.25; color: var(--ivory); letter-spacing: -0.005em; }
+  .tl .it .bubf { position: absolute; left: -28px; }
+  .tl .it.hi .bubf { top: 20px; }
+  .tl .it.lo .bubf { top: 92px; }
+  .tl .it.r .bubf { left: auto; right: -28px; border-top-left-radius: 26px; border-top-right-radius: 8px; }
+  .tl .it .tm { position: absolute; left: -90px; width: 180px; top: 212px; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .tl .it .bh { position: absolute; left: -90px; width: 180px; top: 238px; text-align: center; font-size: 18px; line-height: 1.32; color: var(--soft); }
+  .stat { display: flex; align-items: flex-start; gap: 26px; }
+  .stat .n { font-size: 84px; font-weight: 600; letter-spacing: -0.045em; line-height: 0.92; font-variant-numeric: tabular-nums; flex: none; }
+  .stat .cap { margin-top: 4px; }
+  .tlp .row { position: relative; padding: 0 0 18px 26px; border-left: 1px solid #2f2f33; margin-left: 5px; }
+  .tlp .row::before { content: ""; position: absolute; left: -5px; top: 3px; width: 9px; height: 9px; border-radius: 50%; background: var(--ivory); }
+  .tlp .tm { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .tlp .bubf { margin-top: 8px; font-size: 17px; padding: 10px 15px; white-space: normal; }
+  .tlp .bh { font-size: 14px; color: var(--soft); margin-top: 6px; }
+  .tlp .tx { font-size: 16px; line-height: 1.4; color: var(--fg2); margin-top: 6px; }
+  .tlp .tx b { color: var(--ivory); font-weight: 600; }
+  .tlp .row.now::before { box-shadow: none; background: var(--ivory); outline: 4px solid rgba(237,237,235,0.18); }
+  .tlp .row.later::before { background: var(--ground); border: 1.5px solid #8a8a8f; }
+
+  /* ---------- 4. Meet Krovvi ---------- */
+  .qual { margin-top: 44px; }
+  .qual p { display: grid; grid-template-columns: 236px 1fr; align-items: baseline; padding: 15px 0; border-top: 1px solid #1f1f23; }
+  .qual p:last-child { border-bottom: 1px solid #1f1f23; }
+  .qual b { font-size: 26px; font-weight: 600; letter-spacing: -0.015em; color: var(--ivory); }
+  .qual span { font-size: 23px; color: var(--soft); letter-spacing: -0.005em; }
+
+  /* ---------- 5. The loop ---------- */
+  .nd { position: absolute; }
+  .nd .t { font-size: 23px; font-weight: 600; letter-spacing: -0.015em; color: var(--ivory); line-height: 1.2; white-space: nowrap; }
+  .nd .s { font-size: 16px; color: var(--soft); margin-top: 6px; line-height: 1.35; white-space: nowrap; }
+  .steps5 p { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-top: 1px solid #1f1f23; font-size: 15px; color: var(--soft); }
+  .steps5 p i { font-style: normal; font-size: 12px; font-weight: 600; color: var(--muted); width: 14px; flex: none; }
+  .steps5 p b { color: var(--ivory); font-weight: 600; font-size: 16px; display: block; }
+
+  /* ---------- Phone rows (6 and 7) ---------- */
+  .strip { position: absolute; left: 0; top: 0; right: 0; display: flex; justify-content: space-between; align-items: flex-end; }
+  .strip .it { position: relative; display: flex; flex-direction: column; align-items: center; }
+  .strip .t { font-size: 24px; font-weight: 600; letter-spacing: -0.015em; color: var(--ivory); margin-top: 26px; text-align: center; white-space: nowrap; }
+  .strip .s { font-size: 18px; color: var(--soft); margin-top: 6px; text-align: center; white-space: nowrap; }
+  .s3 .cp { position: relative; width: 100%; padding-top: 44px; text-align: center; }
+  .s3 .cp::before { content: ""; position: absolute; left: 50%; top: 18px; width: 11px; height: 11px; margin-left: -5.5px; border-radius: 50%; background: var(--ivory); z-index: 1; }
+  .s3 .cp .tt { font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .s3 .cp p:last-child { font-size: 20px; line-height: 1.38; color: var(--fg2); margin: 8px auto 0; max-width: 270px; }
+  .s3 .axis { position: absolute; left: 145px; right: 145px; height: 1px; background: #3a3a3e; }
+
+  /* ---------- 8. Speed ---------- */
+  .stats4 { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 30px; }
+  .stats4 .n { font-size: 70px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .stats4 .l { font-size: 19px; line-height: 1.38; color: var(--soft); margin-top: 10px; }
+  .lgd { display: flex; gap: 22px; font-size: 15px; color: var(--soft); }
+  .lgd span { display: inline-flex; align-items: center; gap: 8px; }
+  .lgd i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .chart text { font-family: inherit; }
+
+  /* ---------- 8. How we work: the product, step by step ---------- */
+  .evo .ax2 { position: absolute; left: 399px; width: 801px; top: 469px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, rgba(237,237,235,0.25), rgba(237,237,235,0.85)); }
+  .evo .ax { position: absolute; left: 0; right: 0; top: 470px; height: 1px; background: linear-gradient(90deg, rgba(74,74,79,0), #4a4a4f 6%, #4a4a4f 94%, rgba(74,74,79,0)); }
+  .evo .ph { position: absolute; top: 4px; }
+  .evo .ph.old .iphone { opacity: 0.55; }
+  .evo .pivot { position: absolute; top: 0; width: 0; height: 470px; }
+  .evo .pivot::before, .evo .pivot::after { content: ""; position: absolute; left: 0; border-left: 1px dashed #55555a; }
+  .evo .pivot::before { top: 40px; height: 112px; }
+  .evo .pivot::after { top: 300px; height: 162px; }
+  .evo .pivot .bx { position: absolute; left: -125px; width: 250px; top: 168px; text-align: center; }
+  .evo .pivot .t, .evo .today .t { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; color: var(--ivory); }
+  .evo .pivot .s, .evo .today .s { font-size: 20px; line-height: 1.38; color: var(--fg2); margin-top: 8px; }
+  .evo .today { position: absolute; top: 168px; width: 260px; margin-left: -130px; text-align: center; }
+  .evo .today .t { font-size: 44px; letter-spacing: -0.03em; }
+  .evo .mk { position: absolute; top: 0; width: 0; }
+  .evo .mk i { position: absolute; left: -7px; top: 463px; width: 14px; height: 14px; border-radius: 50%; background: var(--ivory); }
+  .evo .mk.ring i { background: var(--ground); border: 1.5px solid #8a8a8f; }
+  .evo .mk .halo { position: absolute; left: -38px; top: 432px; width: 76px; height: 76px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.5), rgba(237,237,235,0) 100%); }
+  .evo .mk .dt { position: absolute; left: -130px; width: 260px; top: 494px; text-align: center; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .evo .mk.now .dt { color: var(--ivory); }
+  .evo .mk .tx { position: absolute; left: -130px; width: 260px; top: 518px; text-align: center; font-size: 20px; color: var(--fg2); }
+
+  /* ---------- 9. Market ---------- */
+  .mega-n { font-size: 172px; font-weight: 600; letter-spacing: -0.055em; line-height: 0.86; font-variant-numeric: tabular-nums; }
+  .mrow { display: grid; grid-template-columns: 150px 1fr; column-gap: 30px; align-items: center; padding: 24px 0; border-top: 1px solid #1f1f23; }
+  .mrow:last-child { border-bottom: 1px solid #1f1f23; }
+  .mrow .n { font-size: 58px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .mrow .l, .sig .l, .fl { font-size: 20px; line-height: 1.42; color: var(--soft); }
+  .mrow .l { margin-top: 8px; }
+
+  /* ---------- 11. Landscape ---------- */
+  .qd { position: absolute; }
+  .qd .nm2 { font-size: 22px; color: var(--fg2); display: flex; align-items: center; gap: 10px; white-space: nowrap; letter-spacing: -0.005em; }
+  .qd .nm2 i { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
+  .qd .c { font-size: 16px; line-height: 1.38; color: var(--faint); margin-top: 6px; }
+  .steps4 h3 { margin: 6px 0 0; font-size: 27px; line-height: 1.18; font-weight: 600; letter-spacing: -0.02em; }
+  .steps4 .k { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+  .steps4 p.d { margin-top: 6px; font-size: 19px; line-height: 1.4; color: var(--soft); }
+  .steps4 > div { margin-top: 26px; }
+
+  /* ---------- 12. Early signals ---------- */
+  .sig { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 40px; }
+  .sig .viz { height: 110px; position: relative; }
+  .sig .n { font-size: 64px; font-weight: 600; letter-spacing: -0.04em; line-height: 1; margin-top: 26px; font-variant-numeric: tabular-nums; }
+  .sig .l { margin-top: 12px; }
+
+  /* ---------- 13. Journey ---------- */
+  .jr .ln { position: absolute; left: 0; top: 70px; height: 1px; background: #4a4a4f; }
+  .jr .ln.fut { background: none; border-top: 1px dashed #4a4a4f; }
+  .jr .ms { position: absolute; left: var(--x); top: 0; width: 0; }
+  .jr .ms .dt { position: absolute; left: -130px; width: 260px; top: 22px; text-align: center; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .jr .ms i { position: absolute; left: -7px; top: 63px; width: 14px; height: 14px; border-radius: 50%; background: var(--ivory); }
+  .jr .ms.nx i { background: var(--ground); border: 1.5px solid #6a6a6f; }
+  .jr .ms .tx { position: absolute; left: -130px; width: 260px; top: 98px; text-align: center; font-size: 22px; line-height: 1.38; color: var(--fg2); }
+  .jr .ms.now .dt { color: var(--ivory); }
+  .jr .ms.now .halo { position: absolute; left: -36px; top: 34px; width: 72px; height: 72px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.45), rgba(237,237,235,0) 100%); }
+  .g4 { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 40px; margin-top: 26px; }
+  .g4 .ico { display: block; margin-bottom: 20px; }
+  .g4 .w { font-size: 46px; font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+  .g4 .l { font-size: 20px; line-height: 1.42; color: var(--soft); margin-top: 14px; }
+  .g4 > div { padding-top: 0; }
+
+  /* ---------- 14. Phases ---------- */
+  .ph4 .ln { position: absolute; left: 8px; right: 302px; top: 30px; height: 1px; background: #4a4a4f; }
+  .ph4 .col { position: absolute; top: 0; width: 300px; }
+  .ph4 .col i { position: absolute; left: 0; top: 23px; width: 15px; height: 15px; border-radius: 50%; background: var(--ivory); }
+  .ph4 .col.later i, .ph4 .col.then i, .ph4 .col.next i { background: var(--ground); border: 1.5px solid #8a8a8f; }
+  .ph4 .col .halo { position: absolute; left: -29px; top: 1px; width: 72px; height: 72px; border-radius: 50%; background: radial-gradient(closest-side, rgba(237,237,235,0.45), rgba(237,237,235,0) 100%); }
+  .ph4 .col .k { margin-top: 64px; font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .ph4 .col h3 { margin: 10px 0 0; font-size: 29px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
+  .ph4 .col p.d { margin-top: 10px; font-size: 19px; line-height: 1.42; color: var(--soft); width: 290px; }
+
+  .grow4 .cl { position: absolute; top: 300px; width: 300px; text-align: center; }
+  .grow4 .cl .k { font-size: 15px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .grow4 .cl h3 { margin: 10px 0 0; font-size: 28px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; }
+  .grow4 .cl p.d { margin-top: 10px; font-size: 19px; line-height: 1.42; color: var(--soft); }
+
+  /* ---------- 12. Team ---------- */
+  .fdr { display: grid; grid-template-columns: 450px 450px; column-gap: 60px; }
+  .nm { font-size: 42px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.05; white-space: nowrap; }
+  .rl { font-size: 19px; color: var(--muted); margin-top: 10px; }
+  .fs { font-size: 40px; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-top: 36px; }
+  .fl { margin-top: 10px; }
+  .fdr ul { list-style: none; margin-top: 20px; }
+  .fdr li { position: relative; padding-left: 20px; font-size: 19px; line-height: 1.45; color: var(--fg2); margin-top: 6px; }
+  .fdr li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
+  .contact { font-size: 22px; color: var(--fg2); }
+  .contact .sep { color: var(--faint); margin: 0 14px; }
+  .tag { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; text-align: center; }
+
+  /* ---------- Motion (present and phone only; print shows the end state) ---------- */
+  .anim [data-a] { opacity: 0; translate: 0 22px; }
+  .anim .on [data-a] { opacity: 1; translate: 0 0; transition: opacity 0.7s ease, translate 0.9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.12s); }
+  .anim .growx { transform: scaleX(0); transform-origin: left center; }
+  .anim .on .growx { transform: none; transition: transform 1s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.6s); }
+  .anim .grow { transform: scaleY(0); transform-box: fill-box; transform-origin: 50% 100%; }
+  .anim .on .grow { transform: none; transition: transform 0.9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--d, 0) * 1s + 0.3s); }
+  .anim .land-dot { opacity: 0; transform: translateY(-26px); transform-box: fill-box; transform-origin: center; }
+  .anim .on .land-dot { opacity: 1; transform: none; transition: opacity 0.5s ease, transform 0.7s cubic-bezier(.3,1.4,.5,1); transition-delay: calc(var(--d, 0) * 1s + 0.2s); }
+  .anim .draw { stroke-dasharray: var(--len) var(--len); stroke-dashoffset: var(--len); }
+  .anim .on .draw { stroke-dashoffset: 0; transition: stroke-dashoffset 0.9s ease; transition-delay: calc(var(--d, 0) * 1s + 0.35s); }
+  .anim .fade { opacity: 0; }
+  .anim .on .fade { opacity: 1; transition: opacity 0.6s ease; transition-delay: calc(var(--d, 0) * 1s + 0.2s); }
+  .anim .units .u.lit, .anim .units .u.mid { background: var(--off); }
+  .anim .on .units .u.lit { background: var(--ivory); transition: background 0.3s ease; transition-delay: calc(var(--i) * var(--st, 30ms) + var(--d0, 0.5s)); }
+  .anim .on .units .u.mid { background: var(--mid); transition: background 0.3s ease; transition-delay: calc(var(--i) * var(--st, 30ms) + var(--d0, 0.5s)); }
+  .anim .tl .it { opacity: 0; translate: 0 10px; }
+  .anim .on .tl .it { opacity: 1; translate: 0 0; transition: opacity 0.5s ease, translate 0.6s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--t) * 4.2s + 0.7s); }
+  .tl .now { display: none; }
+  .anim .tl .now { display: block; opacity: 0; }
+  .anim .on .tl .now { animation: travel 4.6s linear 0.6s 1 both; }
+  @keyframes travel { 0% { left: 0; opacity: 0; } 4% { opacity: 1; } 92% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+  .spin { transform-box: view-box; transform-origin: var(--ox) var(--oy); }
+  .anim .on .spin { animation: spin 10s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .pulse { display: none; }
+  .anim .pulse { display: block; transform-box: fill-box; transform-origin: center; opacity: 0; }
+  .anim .on .pulse { animation: pulse 2.8s ease-out infinite; }
+  .anim .on .pulse.p2 { animation-delay: 1.4s; }
+  @keyframes pulse { 0% { transform: scale(1); opacity: 0.45; } 100% { transform: scale(2.3); opacity: 0; } }
+
+  /* ---------- Present mode: one slide at a time, scaled to the window ---------- */
+  html.present body { overflow: hidden; height: 100vh; }
+  html.present .deck { position: fixed; inset: 0; }
+  html.present .slide { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(var(--s, 1)); opacity: 0; visibility: hidden; transition: opacity 0.45s ease, visibility 0s linear 0.45s; }
+  html.present .slide.on { opacity: 1; visibility: visible; transition: opacity 0.45s ease, visibility 0s; }
+  .ui { display: none; }
+  html.present .ui { display: block; }
+  .bar { position: fixed; left: 0; bottom: 0; height: 2px; background: rgba(237,237,235,0.55); transition: width 0.4s ease; z-index: 10; }
+  .hint { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); font-size: 13px; color: var(--faint); letter-spacing: 0.04em; transition: opacity 1s ease; z-index: 10; white-space: nowrap; }
+  .nav { position: fixed; right: 18px; bottom: 12px; display: flex; align-items: center; gap: 4px; z-index: 11; opacity: 0.55; transition: opacity 0.3s ease; }
+  .nav:hover { opacity: 1; }
+  .nav button { width: 34px; height: 34px; border-radius: 17px; border: 0; background: transparent; color: var(--soft); font-size: 22px; line-height: 1; cursor: pointer; }
+  .nav button:hover { background: #18181b; color: var(--ivory); }
+  .nav span { font-size: 13px; color: var(--muted); min-width: 52px; text-align: center; font-variant-numeric: tabular-nums; }
+
+  /* Overview: every slide small, click one to open it */
+  html.over body { overflow: auto; height: auto; }
+  html.over .deck { position: static; display: flex; flex-wrap: wrap; gap: 24px; padding: 32px; justify-content: center; }
+  html.over .slide { position: relative; left: auto; top: auto; transform: none; opacity: 1; visibility: visible; zoom: 0.2; cursor: pointer; outline: 6px solid transparent; }
+  html.over .slide.on { outline-color: rgba(237,237,235,0.5); }
+  html.over [data-a], html.over .tl .it { opacity: 1 !important; translate: none !important; }
+  html.over .grow, html.over .growx, html.over .land-dot { transform: none !important; opacity: 1 !important; }
+  html.over .draw { stroke-dashoffset: 0 !important; }
+  html.over .fade { opacity: 1 !important; }
+  html.over .units .u.lit { background: var(--ivory) !important; }
+  html.over .units .u.mid { background: var(--mid) !important; }
+  html.over .ui .hint, html.over .ui .nav { display: none; }
+
+  /* ---------- Phone mode: the same deck as one page that reads top to bottom ---------- */
+  html.phone .deck { max-width: 640px; margin: 0 auto; }
+  html.phone .slide { width: auto; height: auto; padding: 76px 20px 64px; border-bottom: 1px solid #101012; }
+  html.phone .b, html.phone .v { position: relative; left: auto !important; top: auto !important; right: auto !important; bottom: auto !important; }
+  html.phone .b { width: auto !important; }
+  html.phone .v { margin-left: auto; margin-right: auto; }
+  html.phone .slide > .b + .b, html.phone .slide > .b + .v, html.phone .slide > .v + .b, html.phone .slide > .v + .v { margin-top: 30px; }
+  html.phone .only-dt { display: none !important; }
+  html.phone .only-ph { display: block; }
+  html.phone .src { position: relative; left: auto !important; bottom: auto; width: auto !important; margin-top: 30px; font-size: 12px; }
+  html.phone .pg { display: none; }
+  html.phone .kick { font-size: 12px !important; margin-bottom: 14px; }
+  html.phone h1 { font-size: 34px !important; line-height: 1.1 !important; letter-spacing: -0.03em !important; }
+  html.phone h1.xl, html.phone h1.big { font-size: 42px !important; line-height: 1.04 !important; }
+  html.phone h1.mega { font-size: 60px !important; line-height: 0.95 !important; }
+  html.phone .lead { font-size: 18px !important; width: auto !important; margin-top: 18px !important; }
+  html.phone .sub { font-size: 21px; margin-top: 22px; }
+  html.phone .foot { font-size: 14px; }
+  html.phone .say { font-size: 22px; }
+  html.phone .say2 { font-size: 19px; }
+  html.phone .cap, html.phone .note { font-size: 16px; }
+  html.phone .brand span { font-size: 24px; }
+  html.phone .brand svg { width: 28px; height: 28px; }
+  html.phone .stat .n { font-size: 52px; }
+  html.phone .stat { gap: 16px; }
+  html.phone .qual { margin-top: 24px; }
+  html.phone .qual p { grid-template-columns: 1fr; padding: 11px 0; }
+  html.phone .qual b { font-size: 18px; }
+  html.phone .qual span { font-size: 16px; margin-top: 2px; }
+  html.phone .v[data-strip] { width: auto !important; height: auto !important; zoom: 1 !important; margin-left: -20px; margin-right: -20px; }
+  html.phone .v[data-strip] .glow { display: none; }
+  html.phone .strip { position: relative; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 18px; padding: 6px 20px 10px; justify-content: flex-start; align-items: flex-start; scrollbar-width: none; }
+  html.phone .strip::-webkit-scrollbar { display: none; }
+  html.phone .strip .it { flex: none; scroll-snap-align: center; }
+  html.phone .strip .iphone { --w: 224px !important; }
+  html.phone .strip .t { font-size: 17px; margin-top: 16px; }
+  html.phone .strip .s { font-size: 14px; }
+  html.phone .s3 .axis { display: none; }
+  html.phone .s3 .cp { padding-top: 16px; }
+  html.phone .s3 .cp::before { display: none; }
+  html.phone .s3 .cp .tt { font-size: 12px; }
+  html.phone .s3 .cp p:last-child { font-size: 15px; max-width: 220px; }
+  html.phone .stats4 { grid-template-columns: 1fr 1fr; row-gap: 22px; }
+  html.phone .stats4 .n { font-size: 40px; }
+  html.phone .stats4 .l { font-size: 14px; }
+  html.phone .mrow { grid-template-columns: 96px 1fr; column-gap: 18px; padding: 16px 0; }
+  html.phone .mrow .ic { zoom: 0.64; }
+  html.phone .mrow .n { font-size: 36px; }
+  html.phone .mrow .l, html.phone .sig .l, html.phone .fl { font-size: 15px; }
+  html.phone .steps4 h3 { font-size: 19px; }
+  html.phone .steps4 p.d { font-size: 15px; }
+  html.phone .steps4 > div { margin-top: 16px; }
+  html.phone .sig { grid-template-columns: 1fr 1fr; row-gap: 30px; column-gap: 20px; }
+  html.phone .sig .viz { zoom: 0.5; }
+  html.phone .sig .n { font-size: 38px; margin-top: 14px; }
+  html.phone .g4 { grid-template-columns: 1fr 1fr; row-gap: 22px; column-gap: 20px; margin-top: 16px; }
+  html.phone .g4 .w { font-size: 28px; }
+  html.phone .g4 .ico { width: 40px; height: 40px; margin-bottom: 12px; }
+  html.phone .g4 .l { font-size: 15px; margin-top: 8px; }
+  html.phone .g4 > div { padding-top: 14px; }
+  html.phone .fdr { grid-template-columns: 1fr; row-gap: 40px; }
+  html.phone .nm { font-size: 30px; }
+  html.phone .rl { font-size: 15px; }
+  html.phone .fs { font-size: 26px; margin-top: 18px; }
+  html.phone .fdr li { font-size: 15px; }
+  html.phone .contact { font-size: 16px; }
+  html.phone .contact .sep { margin: 0 8px; }
+  html.phone .mega-n { font-size: 96px; }
+  html.phone .facts { grid-template-columns: 1fr; }
+  html.phone .fact { padding: 20px 0; }
+  html.phone .fact > div + div { margin-top: 16px; }
+  html.phone .fact .l { min-height: 0; }
+  html.phone .fact .n { font-size: 46px; }
+  html.phone .fact .l { font-size: 15px; margin-top: 8px; }
+  html.phone .rank p { font-size: 15px; padding: 3px 0; }
+  html.phone .ico-big { justify-content: flex-start; }
+  html.phone .ico-big svg { width: 64px; height: 64px; }
+  html.phone .gaps .gp { grid-template-columns: 40px 1fr; column-gap: 14px; padding: 16px 0; }
+  html.phone .gaps .gp svg { width: 40px; height: 40px; }
+  html.phone .gaps .t { font-size: 20px; }
+  html.phone .gaps .s { font-size: 15px; }
+
+  /* ---------- Print: every slide one page, end states, still frames for the videos ---------- */
+  @media print {
+    html, body { height: auto !important; overflow: visible !important; }
+    .deck { position: static !important; display: block !important; padding: 0 !important; }
+    .slide { position: relative !important; left: auto !important; top: auto !important; transform: none !important; opacity: 1 !important; visibility: visible !important; zoom: 1 !important; margin: 0 !important; outline: 0 !important; break-after: page; page-break-after: always; }
+    .slide:last-child { break-after: auto; page-break-after: auto; }
+    .ui { display: none !important; }
+    .blank .cur { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 1. Cover -->
+<section class="slide" data-seed="11">
+  <div class="b brand" data-a style="left:120px; top:92px;">
+    <svg class="kmark" width="38" height="38" viewBox="0 0 120 120" aria-hidden="true"></svg><span>krovvi</span>
+  </div>
+  <div class="b" style="left:120px; top:262px; width:860px;">
+    <h1 class="mega" data-a style="--d:0.08;">Your super<br>friend.</h1>
+    <p class="sub" data-a style="--d:0.3;">The personal AI you actually want to spend time with.</p>
+  </div>
+  <div class="v" style="left:1040px; top:0; width:440px; height:900px;">
+    <div class="glow" style="left:-330px; top:-70px; width:1100px; height:1040px;"></div>
+    <div class="iphone abs" data-a data-video="vid/opening.mp4" data-poster="vid/opening.jpg" data-ar="402/874" data-island="0" data-alt="Krovvi's first chat, recorded in the real app: it deletes two generic assistant lines, then says it is trying to be a super friend" style="--d:0.25; --w:386px; left:27px; top:45px;"></div>
+  </div>
+  <p class="b foot" data-a style="--d:0.5; left:120px; top:814px;">Private beta on iPhone &nbsp;·&nbsp; October 2026</p>
+</section>
+
+<!-- 2. The need -->
+<section class="slide" data-seed="21">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>The problem</p>
+    <h1 data-a style="--d:0.05;">People want an AI for their life.<br><span class="dim">Not just for work.</span></h1>
+  </div>
+  <div class="b facts" style="left:120px; top:330px; width:1360px;">
+    <div class="fact" data-a style="--d:0.15;">
+      <div><p class="n">#1</p><p class="l">use of AI in 2025 was <b>therapy and companionship.</b></p></div>
+      <div class="rank"><p><i>1</i>Therapy and companionship</p><p><i>2</i>Organizing my life</p><p><i>3</i>Finding purpose</p></div>
+    </div>
+    <div class="fact" data-a style="--d:0.25;">
+      <div><p class="n"><span class="count" data-to="73">73</span>%</p><p class="l">of messages to the biggest AI assistant <b>are not about work.</b></p></div>
+      <div class="bars2"><div class="r"><span>2024</span><div class="t"><div class="f growx" style="width:53%; background:#5e5e62; color:#EDEDEB;">53%</div></div></div><div class="r"><span>2025</span><div class="t"><div class="f growx" style="width:73%; background:var(--ivory);">73%</div></div></div></div>
+    </div>
+    <div class="fact" data-a style="--d:0.35;">
+      <div><p class="n">1 in 6</p><p class="l">people worldwide <b>are lonely.</b> Loneliness is linked to 871,000 deaths a year.</p></div>
+      <div><svg class="ppl" data-people="6" data-lit="1" width="250" height="64" viewBox="0 0 250 64" aria-hidden="true"></svg></div>
+    </div>
+  </div>
+  <div class="pg">2</div>
+</section>
+
+<!-- 3. The gap -->
+<section class="slide" data-seed="22">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>The problem</p>
+    <h1 data-a style="--d:0.05;">Today’s AI is a tool.<br><span class="dim">People don’t stay.</span></h1>
+  </div>
+  <div class="v" style="left:120px; top:318px; width:640px; height:540px;">
+    <div class="units abs" data-units="dot" data-n="100" data-cols="10" data-size="26" data-gap="13" data-lit="21" data-mid="10" data-st="22ms" style="left:0; top:0; width:377px; height:377px;"></div>
+    <div class="lg abs" data-a style="--d:0.3; left:424px; top:0;">
+      <div><p class="n count" data-to="21">21</p><p class="t"><i style="background:var(--ivory)"></i>AI apps</p></div>
+      <div><p class="n" style="color:#7a7a7e;"><span class="count" data-to="31">31</span></p><p class="t"><i style="background:var(--mid)"></i>Other apps</p></div>
+    </div>
+    <p class="cap abs" data-a style="--d:0.45; left:0; top:406px; width:600px;">Out of 100 people who pay for an AI app, <b>21 still pay a year later.</b> Other apps keep 31. AI apps lose paying users about 30% faster.</p>
+  </div>
+  <div class="b gaps" style="left:850px; top:318px; width:630px;">
+    <p class="lab" data-a style="--d:0.3;">Today’s AI</p>
+    <div class="gp" data-a style="--d:0.4;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="16" width="28" height="14" rx="7"/><path d="M15.5 20v6"/></g></svg><div><p class="t">Forgets you</p><p class="s">Every chat starts from an empty box. You explain yourself again.</p></div></div>
+    <div class="gp" data-a style="--d:0.5;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 12h14M16 34h14"/><path d="M17.5 12c0 5.5 5.5 7.5 5.5 11s-5.5 5.5-5.5 11M28.5 12c0 5.5-5.5 7.5-5.5 11s5.5 5.5 5.5 11"/></g></svg><div><p class="t">Waits for you</p><p class="s">It never starts the conversation. Nothing happens until you type.</p></div></div>
+    <div class="gp" data-a style="--d:0.6;"><svg width="60" height="60" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="22" fill="none" stroke="#2f2f33" stroke-width="1"/><g fill="none" stroke="#EDEDEB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="13" width="20" height="20" rx="5"/><path d="M18 23.5l3.5 3.5 7-8"/></g></svg><div><p class="t">Only does tasks</p><p class="s">You open it for a job, then close it. Nobody opens it just to talk.</p></div></div>
+  </div>
+  <div class="pg">3</div>
+</section>
+
+<!-- 4. The insight -->
+<section class="slide" data-seed="33">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>The insight</p>
+    <h1 class="h62" data-a style="--d:0.05;">You don’t open a friend’s chat for a task.<br><span class="dim">You open it all day.</span></h1>
+  </div>
+  <div class="v tl only-dt" style="left:120px; top:322px; width:1360px; height:330px;">
+    <div class="line"></div>
+    <div class="now"></div>
+    <div class="it hi" style="--x:114px; --t:0.08;"><div class="stem"></div><div class="bubf">look at this 😂</div><div class="pt"></div><p class="tm">9:10 am</p><p class="bh">Sends something funny</p></div>
+    <div class="it lo r" style="--x:367px; --t:0.27;"><div class="stem"></div><div class="bubf">what are you eating?</div><div class="pt"></div><p class="tm">12:40 pm</p><p class="bh">Talks about nothing</p></div>
+    <div class="it hi" style="--x:559px; --t:0.41;"><div class="stem"></div><div class="bubf">wait, how did the interview go?</div><div class="pt"></div><p class="tm">3:20 pm</p><p class="bh">Remembers what you said</p></div>
+    <div class="it lo" style="--x:788px; --t:0.58;"><div class="stem"></div><div class="bubf">help me pick one?</div><div class="pt"></div><p class="tm">6:30 pm</p><p class="bh">Helps when it matters</p></div>
+    <div class="it lo" style="--x:1017px; --t:0.75;"><div class="stem"></div><div class="bubf">bringing Sam in 👋</div><div class="pt"></div><p class="tm">9:40 pm</p><p class="bh">Brings other friends in</p></div>
+    <div class="it hi r" style="--x:1246px; --t:0.92;"><div class="stem"></div><div class="bubf">still thinking about what you said</div><div class="pt"></div><p class="tm">12:50 am</p><p class="bh">Brings it up later</p></div>
+  </div>
+  <div class="b tlp only-ph">
+    <div class="row"><p class="tm">9:10 am</p><div class="bubf">look at this 😂</div><p class="bh">Sends something funny</p></div>
+    <div class="row"><p class="tm">12:40 pm</p><div class="bubf">what are you eating?</div><p class="bh">Talks about nothing</p></div>
+    <div class="row"><p class="tm">3:20 pm</p><div class="bubf">wait, how did the interview go?</div><p class="bh">Remembers what you said</p></div>
+    <div class="row"><p class="tm">6:30 pm</p><div class="bubf">help me pick one?</div><p class="bh">Helps when it matters</p></div>
+    <div class="row"><p class="tm">9:40 pm</p><div class="bubf">bringing Sam in 👋</div><p class="bh">Brings other friends in</p></div>
+    <div class="row"><p class="tm">12:50 am</p><div class="bubf">still thinking about what you said</div><p class="bh">Brings it up later</p></div>
+  </div>
+  <div class="b" data-a style="--d:0.55; left:120px; top:712px; width:1240px;">
+    <p class="say xl2">An AI people love to talk to, that also gets things done, <span class="dim">doesn’t exist yet.</span></p>
+  </div>
+  <div class="pg">4</div>
+</section>
+
+<!-- 5. Meet Krovvi -->
+<section class="slide" data-seed="44">
+  <div class="b" style="left:660px; top:146px; width:820px;">
+    <p class="kick" data-a>Meet Krovvi</p>
+    <h1 class="xl" data-a style="--d:0.05;">One friend.<br><span class="dim">Your whole world.</span></h1>
+    <p class="lead" data-a style="--d:0.2; margin-top:30px; width:740px;">Friendship is the experience. <b>Memory, intelligence and action make it extraordinary.</b></p>
+    <div class="qual" data-a style="--d:0.35;">
+      <p><b>Personality</b><span>Funny, honest and curious, with opinions.</span></p>
+      <p><b>Memory</b><span>Your people, plans and inside jokes.</span></p>
+      <p><b>Talks first</b><span>It starts the conversation when it matters.</span></p>
+      <p><b>Action</b><span>Real screens. It acts after your yes.</span></p>
+      <p><b>Grows with you</b><span>Learns you. No settings to fill in.</span></p>
+    </div>
+  </div>
+  <div class="v" style="left:130px; top:0; width:440px; height:900px;">
+    <div class="glow" style="left:-300px; top:-60px; width:1040px; height:1020px;"></div>
+    <div class="iphone abs" data-a data-video="vid/tot.mp4" data-poster="vid/tot.jpg" data-ar="600/1298" data-alt="A real recording of the app: someone says they are bored, Krovvi plays This or That, reads them right 5 of 10 and remembers they would rather text than call" style="--d:0.15; --w:384px; left:28px; top:49px;"></div>
+  </div>
+  <div class="pg">5</div>
+</section>
+
+<!-- 6. How Krovvi wins -->
+<section class="slide" data-seed="55">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>How Krovvi wins</p>
+    <h1 data-a style="--d:0.05;">Make people love it.<br><span class="dim">Let that build the intelligence.</span></h1>
+  </div>
+  <div class="b" style="left:120px; top:394px; width:440px;">
+    <div data-a style="--d:0.2;">
+      <p class="say">Rent the intelligence.<br>Own the relationship.</p>
+      <p class="cap" style="margin-top:14px;">Models keep getting better and cheaper for everyone. What compounds is a person’s world, and the habit of sharing it.</p>
+    </div>
+    <div data-a style="--d:0.32; margin-top:44px;">
+      <p class="say">Trust by design.</p>
+      <p class="cap" style="margin-top:14px;">You see and fix what it remembers. It asks before anything goes out. No ads, no selling data, no training on your chats.</p>
+    </div>
+  </div>
+  <div class="v loopv" style="left:620px; top:288px; width:860px; height:560px;">
+    <svg id="loop" class="abs" style="left:0; top:0;" width="860" height="560" viewBox="0 0 860 560" aria-hidden="true"></svg>
+    <div class="nd only-dt" data-a style="--d:0.45; left:240px; top:28px; width:300px; text-align:center;"><p class="t">They love talking to it</p><p class="s">A personality people enjoy</p></div>
+    <div class="nd only-dt" data-a style="--d:0.6; left:602px; top:216px; width:258px;"><p class="t">They share their life</p><p class="s">Videos, voice notes, photos</p></div>
+    <div class="nd only-dt" data-a style="--d:0.75; left:482px; top:482px; width:330px;"><p class="t">It understands them</p><p class="s">A living memory of their world</p></div>
+    <div class="nd only-dt" data-a style="--d:0.9; left:0; top:482px; width:298px; text-align:right;"><p class="t">It gets more fun and useful</p><p class="s">Better jokes, picks and help</p></div>
+    <div class="nd only-dt" data-a style="--d:1.05; left:0; top:216px; width:178px; text-align:right;"><p class="t">They come back</p><p class="s">Without being asked</p></div>
+  </div>
+  <div class="b steps5 only-ph">
+    <p><i>1</i><span><b>They love talking to it</b>A personality people enjoy</span></p>
+    <p><i>2</i><span><b>They share their life</b>Videos, voice notes, photos</span></p>
+    <p><i>3</i><span><b>It understands them</b>A living memory of their world</span></p>
+    <p><i>4</i><span><b>It gets more fun and useful</b>Better jokes, picks and help</span></p>
+    <p><i>5</i><span><b>They come back</b>Without being asked, and the loop goes again</span></p>
+  </div>
+  <div class="pg">6</div>
+</section>
+
+<!-- 7. A friend first -->
+<section class="slide" data-seed="66">
+  <div class="b" style="left:120px; top:96px; width:390px;">
+    <p class="kick" data-a>One friend, all day</p>
+    <h1 class="h56" data-a style="--d:0.05;">A friend first.<br><span class="dim">It also gets things done.</span></h1>
+    <p class="lead s24" data-a style="--d:0.2; margin-top:30px;">Its memory carries what matters from one moment to the next, <b>so it never starts from zero.</b></p>
+  </div>
+  <div class="v" data-strip style="left:530px; top:84px; width:950px; height:760px;">
+    <div class="glow" style="left:60px; top:-80px; width:840px; height:840px;"></div>
+    <div class="strip s3">
+      <div class="axis only-dt" style="top:629px;"></div>
+      <div class="it" data-a style="--d:0.25;"><div class="iphone" data-src="img/checkin.png" data-alt="Krovvi writes first: Today was the Northline interview, right? How did it go?" style="--w:290px;"></div><div class="cp"><p class="tt">6:30 pm · It checks in</p><p>It remembered the interview and asks how it went.</p></div></div>
+      <div class="it" data-a style="--d:0.4;"><div class="iphone" data-src="img/truths-en-2-revealed.png" data-alt="Two truths and a lie, about you, written from memory" style="--w:290px;"></div><div class="cp"><p class="tt">11:40 pm · You play</p><p>Two truths and a lie, written from what it knows about you.</p></div></div>
+      <div class="it" data-a style="--d:0.55;"><div class="iphone" data-src="img/car.png" data-alt="A money question becomes a savings chart with a slider" style="--w:290px;"></div><div class="cp"><p class="tt">Next morning · It helps</p><p>A money question becomes a chart you can slide.</p></div></div>
+    </div>
+  </div>
+  <div class="pg">7</div>
+</section>
+
+<!-- 8. Built in 4 weeks -->
+<section class="slide" data-seed="77">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>In the app today</p>
+    <h1 data-a style="--d:0.05;">Everything a friend does, in one chat.</h1>
+  </div>
+  <div class="v" data-strip style="left:120px; top:232px; width:1360px; height:600px;">
+    <div class="glow" style="left:230px; top:-20px; width:900px; height:700px;"></div>
+    <div class="strip s5">
+      <div class="it" data-a style="--d:0.4;"><div class="iphone" data-src="img/saturday.png" data-alt="Krovvi picks a Saturday morning" style="--w:196px;"></div><p class="t">Hang out</p><p class="s">Talk about anything</p></div>
+      <div class="it" data-a style="--d:0.27;"><div class="iphone" data-src="img/asks.png" data-alt="Who is Sam to you? You mentioned him three times this week." style="--w:220px;"></div><p class="t">Grows with you</p><p class="s">Remembers your people</p></div>
+      <div class="it" data-a style="--d:0.14;"><div class="iphone" data-src="img/tot-en-3-done.png" data-alt="This or That: I read you right 5 of 10" style="--w:246px;"></div><p class="t">Fun together</p><p class="s">Five games made from your life</p></div>
+      <div class="it" data-a style="--d:0.27;"><div class="iphone" data-src="img/shared-friend.png" data-island="0" data-alt="A shared chat opened by a friend in the browser" style="--w:220px;"></div><p class="t">Your people</p><p class="s">Share any chat as a link</p></div>
+      <div class="it" data-a style="--d:0.4;"><div class="iphone" data-src="img/money.png" data-alt="Money: October so far, spends found in receipts and mail" style="--w:196px;"></div><p class="t">Gets things done</p><p class="s">Real screens, real help</p></div>
+    </div>
+  </div>
+  <div class="pg">8</div>
+</section>
+
+<!-- 9. How we work -->
+<section class="slide" data-seed="110">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>How we work</p>
+    <h1 data-a style="--d:0.05;">We try, learn and change, fast.</h1>
+    <p class="lead" data-a style="--d:0.2; margin-top:22px; width:1240px;">Krovvi started as a recording app. On 17 September we changed direction and rebuilt it in 4 weeks. <b>We ship to production every day.</b></p>
+  </div>
+  <div class="v evo only-dt" style="left:120px; top:306px; width:1360px; height:560px;">
+    <div class="ax fade" style="--d:0.15;"></div>
+    <div class="ax2 fade" style="--d:0.5;"></div>
+    <div class="ph old" data-a style="--d:0.25; left:48px; top:75px;"><div class="iphone" data-src="img/old-recording.png" data-island="0" data-alt="The recording app in September: notes from a recorded meeting, what was agreed, with a transcript tab" style="--w:180px;"></div></div>
+    <div class="pivot fade" style="--d:0.45; left:399px;"><div class="bx"><p class="t">New direction</p><p class="s">A friend people<br>love talking to</p></div></div>
+    <div class="ph" data-a style="--d:0.55; left:553px;"><div class="iphone" data-src="img/first-chat.png" data-alt="Krovvi's first chat: I'm not trying to be a super intelligence. I'm trying to be a super friend." style="--w:214px;"></div></div>
+    <div class="ph" data-a style="--d:0.7; left:813px;"><div class="iphone" data-src="img/guess-en-6-won.png" data-alt="Guess what I'm thinking: a giraffe, got it in 5" style="--w:214px;"></div></div>
+    <div class="today" data-a style="--d:0.85; left:1200px;"><p class="t">Today</p><p class="s">A new version is<br>out to testers</p></div>
+    <div class="mk" data-a style="--d:0.3; left:138px;"><i></i><p class="dt">Jul</p><p class="tx">A recording app</p></div>
+    <div class="mk ring" data-a style="--d:0.45; left:399px;"><i></i><p class="dt">17 Sep</p></div>
+    <div class="mk" data-a style="--d:0.6; left:660px;"><i></i><p class="dt">9 Oct</p><p class="tx">Its first chat</p></div>
+    <div class="mk" data-a style="--d:0.75; left:920px;"><i></i><p class="dt">14 Oct</p><p class="tx">Games made from your life</p></div>
+    <div class="mk now" data-a style="--d:0.9; left:1200px;"><div class="halo"></div><i></i><p class="dt">15 Oct</p></div>
+  </div>
+  <div class="v only-ph" data-strip style="width:950px; height:600px;">
+    <div class="strip s3">
+      <div class="it"><div class="iphone" data-src="img/old-recording.png" data-island="0" data-alt="The recording app in September" style="--w:290px; opacity:0.6;"></div><p class="t">Jul</p><p class="s">A recording app</p></div>
+      <div class="it"><div class="iphone" data-src="img/first-chat.png" data-alt="Krovvi's first chat" style="--w:290px;"></div><p class="t">9 Oct</p><p class="s">Its first chat</p></div>
+      <div class="it"><div class="iphone" data-src="img/guess-en-6-won.png" data-alt="Guess what I'm thinking" style="--w:290px;"></div><p class="t">14 Oct</p><p class="s">Games made from your life</p></div>
+    </div>
+  </div>
+  <div class="b tlp only-ph">
+    <div class="row"><p class="tm">Jul</p><p class="tx">A recording app</p></div>
+    <div class="row"><p class="tm">17 Sep</p><p class="tx"><b>New direction.</b> A friend people love talking to.</p></div>
+    <div class="row"><p class="tm">9 Oct</p><p class="tx">Its first chat</p></div>
+    <div class="row"><p class="tm">14 Oct</p><p class="tx">Games made from your life</p></div>
+    <div class="row now"><p class="tm">Today</p><p class="tx">A new version is out to testers</p></div>
+  </div>
+  <div class="pg">9</div>
+</section>
+
+<!-- 10. The market -->
+<section class="slide" data-seed="88">
+  <div class="b" style="left:120px; top:96px; width:1360px;">
+    <p class="kick" data-a>The market</p>
+    <h1 data-a style="--d:0.05;">Personal AI is becoming a huge market.<br><span class="dim">The winning experience isn’t built yet.</span></h1>
+  </div>
+  <div class="v" style="left:120px; top:340px; width:600px; height:440px;">
+    <p class="mega-n abs" data-a style="--d:0.15; left:-6px; top:0;">$<span class="count" data-to="40">40</span>B</p>
+    <svg id="bars" class="abs" style="left:450px; top:12px;" width="150" height="190" aria-hidden="true"></svg>
+    <p class="cap abs" data-a style="--d:0.3; left:0; top:236px; width:560px; font-size:26px;">spent on consumer AI worldwide in 2026, <b>more than three times last year.</b></p>
+  </div>
+  <div class="b" style="left:800px; top:350px; width:680px;">
+    <div class="mrow" data-a style="--d:0.3;"><div class="ic"><svg id="globe" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"></svg></div><div><p class="n">2 billion</p><p class="l">people use AI worldwide, up 11% in a year. <b>Spending tripled.</b></p></div></div>
+    <div class="mrow" data-a style="--d:0.45;"><div class="ic"><svg id="launch" width="140" height="70" viewBox="0 0 140 70" aria-hidden="true"></svg></div><div><p class="n">6 weeks</p><p class="l">Three of the biggest tech companies launched personal agents. <b>All built for errands.</b></p></div></div>
+  </div>
+  <div class="pg">10</div>
+</section>
+
+<!-- 11. The landscape -->
+<section class="slide" data-seed="99">
+  <div class="b" style="left:120px; top:96px; width:900px;">
+    <p class="kick" data-a>The landscape</p>
+    <h1 data-a style="--d:0.05;">Everyone else picks a side.</h1>
+  </div>
+  <div class="v only-dt" id="quad" data-a style="--d:0.15; left:120px; top:236px; width:880px; height:600px;"></div>
+  <div class="v only-ph" id="quad-ph" style="width:600px; height:600px;"></div>
+  <div class="b steps4" style="left:1080px; top:250px; width:400px;">
+    <p class="lab" data-a style="--d:0.3;">Only Krovvi has all four</p>
+    <div data-a style="--d:0.4;"><p class="k">1</p><h3>The real world, remembered</h3><p class="d">Built from what you say, share and record.</p></div>
+    <div data-a style="--d:0.5;"><p class="k">2</p><h3>It starts the conversation</h3><p class="d">No empty box, and no feed you didn’t ask for.</p></div>
+    <div data-a style="--d:0.6;"><p class="k">3</p><h3>Fun made from your life</h3><p class="d">Games and moments that star you and your people.</p></div>
+    <div data-a style="--d:0.7;"><p class="k">4</p><h3>Friends come in through chats</h3><p class="d">Every shared chat puts Krovvi in front of someone new.</p></div>
+  </div>
+  <div class="pg">11</div>
+</section>
+
+<!-- 12. Where this goes -->
+<section class="slide" data-seed="143">
+  <div class="b" style="left:120px; top:106px; width:1360px;">
+    <p class="kick" data-a>Where this goes</p>
+    <h1 class="big" data-a style="--d:0.05; font-size:86px;">We’re competing to become people’s favorite AI.</h1>
+    <p class="lead" data-a style="--d:0.2; margin-top:28px; width:1200px; font-size:26px;">As AI becomes a commodity, we’re building what compounds: <b>a personal AI people love spending time with, that understands them better with every conversation.</b></p>
+  </div>
+  <div class="v grow4 only-dt" style="left:120px; top:438px; width:1360px; height:420px;">
+    <svg id="grow4" class="abs" style="left:0; top:0; overflow:visible;" width="1360" height="280" viewBox="0 0 1360 280" aria-hidden="true"></svg>
+    <div class="cl" data-a style="--d:0.4; left:20px;"><p class="k">1 · Now</p><h3>The friend in one chat</h3><p class="d">Memory, personality, games and real screens.</p></div>
+    <div class="cl" data-a style="--d:0.55; left:360px;"><p class="k">2 · Next</p><h3>Fun together</h3><p class="d">Videos, games and plans with friends inside shared chats.</p></div>
+    <div class="cl" data-a style="--d:0.7; left:700px;"><p class="k">3 · Then</p><h3>Krovvi meets Krovvi</h3><p class="d">Your Krovvi and your friends’ plan together, with permission.</p></div>
+    <div class="cl" data-a style="--d:0.85; left:1040px;"><p class="k">4 · Later</p><h3>Almost anything</h3><p class="d">It books, buys and builds for you, after your yes.</p></div>
+  </div>
+  <div class="b tlp only-ph">
+    <div class="row now"><p class="tm">1 · Now</p><p class="tx"><b>The friend in one chat.</b> Memory, personality, games and real screens.</p></div>
+    <div class="row later"><p class="tm">2 · Next</p><p class="tx"><b>Fun together.</b> Videos, games and plans with friends inside shared chats.</p></div>
+    <div class="row later"><p class="tm">3 · Then</p><p class="tx"><b>Krovvi meets Krovvi.</b> Your Krovvi and your friends’ plan together, with permission.</p></div>
+    <div class="row later"><p class="tm">4 · Later</p><p class="tx"><b>Almost anything.</b> It books, buys and builds for you, after your yes.</p></div>
+  </div>
+  <div class="pg">12</div>
+</section>
+
+<!-- 13. Team -->
+<section class="slide" data-seed="154">
+  <div class="b" style="left:120px; top:96px; width:960px;">
+    <p class="kick" data-a>Team</p>
+  </div>
+  <div class="b fdr" style="left:120px; top:150px; width:960px;">
+    <div data-a style="--d:0.1;">
+      <p class="nm">Mahmoud Aidaros</p>
+      <p class="rl">Co-founder, Product &amp; Technology</p>
+      <p class="fs">Engineer and founder</p>
+      <ul>
+        <li>Builds AI products, agents and apps from scratch</li>
+        <li>Founded StudySmarterAI; worked on AI automation</li>
+        <li>Leads Krovvi’s product vision and technology</li>
+      </ul>
+    </div>
+    <div data-a style="--d:0.2;">
+      <p class="nm">Moustafa Elmesallamy</p>
+      <p class="rl">Co-founder, Business &amp; Growth</p>
+      <p class="fs">11+ years in sales</p>
+      <ul>
+        <li>Real estate, technology and travel</li>
+        <li>5+ years in digital marketing</li>
+        <li>Business development, customer acquisition and growth</li>
+      </ul>
+    </div>
+  </div>
+  <div class="b" data-a style="--d:0.35; left:120px; top:640px; width:960px;">
+    <p class="say2">Two founders in Cairo, with a great ambition and a big dream: <b>to make a real impact on the world.</b></p>
+  </div>
+  <p class="b contact" data-a style="--d:0.5; left:120px; top:800px;">mahmoudaidaors@krovvi.com<span class="sep">·</span>krovvi.com</p>
+  <div class="v" style="left:1140px; top:170px; width:340px; height:500px;">
+    <div class="glow" style="left:-170px; top:-140px; width:680px; height:700px;"></div>
+    <svg class="kmark big abs" style="left:10px; top:0;" width="320" height="320" viewBox="0 0 120 120" aria-hidden="true"></svg>
+    <p class="tag abs" data-a style="--d:1.1; left:0; top:360px; width:340px;">Your super friend.</p>
+  </div>
+</section>
+
+</div>
+
+<div class="ui">
+  <div class="bar" id="bar"></div>
+  <div class="hint" id="hint">Use ← → or click to move &nbsp;·&nbsp; F for full screen &nbsp;·&nbsp; O for all slides</div>
+  <div class="nav"><button id="prev" aria-label="Previous slide">‹</button><span id="cnt"></span><button id="next" aria-label="Next slide">›</button></div>
+</div>
+
+<script>
+(function () {
+  var H = document.documentElement;
+  var PRINT = H.classList.contains('print'), PHONE = H.classList.contains('phone');
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; if (parent) parent.appendChild(e); return e; }
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
+  function lenOf(p, fallback) { try { return Math.ceil(p.getTotalLength()); } catch (e) { return fallback || 400; } }
+
+  // ---------- Phones: the frame around each real screen or recording ----------
+  document.querySelectorAll('.iphone').forEach(function (p) {
+    var scr = document.createElement('div'); scr.className = 'scr';
+    var m;
+    if (p.dataset.video && !PRINT) {
+      m = document.createElement('video');
+      m.muted = true; m.defaultMuted = true; m.playsInline = true;
+      m.setAttribute('muted', ''); m.setAttribute('playsinline', ''); m.setAttribute('preload', 'auto');
+      m.setAttribute('aria-label', p.dataset.alt || '');
+      m.poster = p.dataset.poster; m.src = p.dataset.video;
+    } else {
+      m = new Image(); m.src = p.dataset.video ? p.dataset.poster : p.dataset.src; m.alt = p.dataset.alt || '';
+    }
+    if (p.dataset.ar) m.style.aspectRatio = p.dataset.ar;
+    scr.appendChild(m);
+    if (p.dataset.island !== '0') { var isl = document.createElement('span'); isl.className = 'isl'; scr.appendChild(isl); }
+    var g = document.createElement('span'); g.className = 'glr'; scr.appendChild(g);
+    p.appendChild(scr);
+    ['a', 'b', 'c', 'd'].forEach(function (k) { var i = document.createElement('i'); i.className = k; p.appendChild(i); });
+  });
+
+  // ---------- The K: eleven equal ivory dots ----------
+  var KD = [[40,28],[40,44],[40,60],[40,76],[40,92],[54,50],[68,40],[82,30],[54,70],[68,80],[82,90]];
+  document.querySelectorAll('svg.kmark').forEach(function (s) {
+    var big = s.classList.contains('big');
+    KD.forEach(function (p, i) {
+      var c = el('circle', { cx: p[0], cy: p[1], r: 6.5, fill: '#EDEDEB' }, s);
+      if (big) { c.setAttribute('class', 'land-dot'); c.style.setProperty('--d', (0.3 + i * 0.07).toFixed(2)); }
+    });
+  });
+
+  // ---------- The app's sky: quiet ivory stars at three depths, thinned so the words stay calm ----------
+  var DEPTH = [
+    { per: 143, r: [0.35, 0.6], a: [0.07, 0.22], glow: false },
+    { per: 38.5, r: [0.6, 0.95], a: [0.22, 0.55], glow: false },
+    { per: 9.1, r: [1.0, 1.55], a: [0.55, 0.9], glow: true }
+  ];
+  var W = 1600, Hh = 900, AREA = W * Hh / 100000, KEEP = 0.22, SIZE = 1.25;
+  document.querySelectorAll('.slide').forEach(function (s, si) {
+    var svg = el('svg', { class: 'sky', viewBox: '0 0 ' + W + ' ' + Hh, preserveAspectRatio: 'xMidYMid slice', 'aria-hidden': 'true' });
+    var defs = el('defs', {}, svg), gid = 'sg' + si;
+    var g = el('radialGradient', { id: gid }, defs);
+    el('stop', { offset: '0', 'stop-color': '#EDEDEB', 'stop-opacity': '0.26' }, g);
+    el('stop', { offset: '1', 'stop-color': '#EDEDEB', 'stop-opacity': '0' }, g);
+    var r = rng(Number(s.dataset.seed || 7)), parts = [];
+    DEPTH.forEach(function (d) {
+      var n = Math.round(d.per * AREA * KEEP);
+      for (var i = 0; i < n; i++) {
+        var x = r() * W, y = r() * Hh, rad = (d.r[0] + r() * (d.r[1] - d.r[0])) * SIZE, a = d.a[0] + r() * (d.a[1] - d.a[0]);
+        if (d.glow) parts.push('<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + (rad * 4.2).toFixed(2) + '" fill="url(#' + gid + ')" opacity="' + a.toFixed(2) + '"/>');
+        parts.push('<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="' + rad.toFixed(2) + '" fill="#EDEDEB" fill-opacity="' + a.toFixed(2) + '"/>');
+      }
+    });
+    svg.insertAdjacentHTML('beforeend', parts.join(''));
+    s.insertBefore(svg, s.firstChild);
+  });
+
+  // ---------- People: n figures, the first ones lit ----------
+  document.querySelectorAll('svg.ppl').forEach(function (sv) {
+    var n = +sv.dataset.people, lit = +sv.dataset.lit;
+    for (var i = 0; i < n; i++) {
+      var x = 22 + i * 41, c = i < lit ? '#EDEDEB' : '#34343a';
+      el('circle', { cx: x, cy: 17, r: 10, fill: c }, sv);
+      el('path', { d: 'M' + (x - 16) + ' 60 Q' + (x - 16) + ' 33 ' + x + ' 33 Q' + (x + 16) + ' 33 ' + (x + 16) + ' 60 Z', fill: c }, sv);
+    }
+  });
+
+  // ---------- Units: dots, capsules and squares that light up one by one ----------
+  document.querySelectorAll('[data-units]').forEach(function (box) {
+    var kind = box.dataset.units, n = +box.dataset.n, cols = +box.dataset.cols, size = +box.dataset.size, gap = +box.dataset.gap;
+    var h = +(box.dataset.h || size), lit = +(box.dataset.lit || 0), mid = +(box.dataset.mid || 0);
+    var pick = box.dataset.pick ? box.dataset.pick.split(',').map(Number) : null;
+    if (box.dataset.st) box.style.setProperty('--st', box.dataset.st);
+    if (box.dataset.d0) box.style.setProperty('--d0', box.dataset.d0);
+    var order = 0;
+    for (var i = 0; i < n; i++) {
+      var u = document.createElement('i'); u.className = 'u' + (kind === 'dot' ? '' : ' ' + kind);
+      var c = i % cols, rr = Math.floor(i / cols);
+      u.style.left = (c * (size + gap)) + 'px'; u.style.top = (rr * (h + gap)) + 'px';
+      u.style.width = size + 'px'; u.style.height = h + 'px';
+      var on = pick ? pick.indexOf(i) >= 0 : i < lit;
+      var isMid = !pick && !on && i < lit + mid;
+      if (on) { u.classList.add('lit'); u.style.setProperty('--i', order++); }
+      else if (isMid) { u.classList.add('mid'); u.style.setProperty('--i', order++ + 3); }
+      box.appendChild(u);
+    }
+  });
+
+  // ---------- The loop: love, share, understand, better, back again. Clockwise from the top ----------
+  (function () {
+    var svg = document.getElementById('loop'); if (!svg) return;
+    var cx = 390, cy = 300, R = 190, nodes = [-90, -18, 54, 126, 198], gap = 11;
+    var defs = el('defs', {}, svg);
+    var gg = el('radialGradient', { id: 'lg' }, defs);
+    el('stop', { offset: '0', 'stop-color': '#EDEDEB', 'stop-opacity': '0.9' }, gg);
+    el('stop', { offset: '0.35', 'stop-color': '#EDEDEB', 'stop-opacity': '0.25' }, gg);
+    el('stop', { offset: '1', 'stop-color': '#EDEDEB', 'stop-opacity': '0' }, gg);
+    el('circle', { cx: cx, cy: cy, r: R - 62, fill: 'none', stroke: '#1b1b1f', 'stroke-width': 1 }, svg);
+    nodes.forEach(function (a0, i) {
+      var a1 = i === 4 ? nodes[0] + 360 : nodes[i + 1];
+      var s = (a0 + gap) * Math.PI / 180, e = (a1 - gap) * Math.PI / 180;
+      var x0 = cx + R * Math.cos(s), y0 = cy + R * Math.sin(s), x1 = cx + R * Math.cos(e), y1 = cy + R * Math.sin(e);
+      var path = el('path', { d: 'M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + R + ' ' + R + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1), fill: 'none', stroke: '#6a6a6f', 'stroke-width': 1.8, 'stroke-linecap': 'round', class: 'draw' }, svg);
+      path.style.setProperty('--d', (0.45 + i * 0.15).toFixed(2)); path.style.setProperty('--len', lenOf(path, 220));
+      var t = e + Math.PI / 2, ah = 10;
+      var head = el('path', { d: 'M' + (x1 - ah * Math.cos(t - 0.45)).toFixed(1) + ' ' + (y1 - ah * Math.sin(t - 0.45)).toFixed(1) + ' L' + x1.toFixed(1) + ' ' + y1.toFixed(1) + ' L' + (x1 - ah * Math.cos(t + 0.45)).toFixed(1) + ' ' + (y1 - ah * Math.sin(t + 0.45)).toFixed(1), fill: 'none', stroke: '#A9A8A2', 'stroke-width': 1.8, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: 'fade' }, svg);
+      head.style.setProperty('--d', (0.8 + i * 0.15).toFixed(2));
+    });
+    var spin = el('g', { class: 'spin' }, svg);
+    spin.style.setProperty('--ox', cx + 'px'); spin.style.setProperty('--oy', cy + 'px');
+    var lx = cx + R * Math.cos(-54 * Math.PI / 180), ly = cy + R * Math.sin(-54 * Math.PI / 180);
+    el('circle', { cx: lx.toFixed(1), cy: ly.toFixed(1), r: 26, fill: 'url(#lg)' }, spin);
+    el('circle', { cx: lx.toFixed(1), cy: ly.toFixed(1), r: 3.5, fill: '#EDEDEB' }, spin);
+    nodes.forEach(function (a) {
+      var x = cx + R * Math.cos(a * Math.PI / 180), y = cy + R * Math.sin(a * Math.PI / 180);
+      el('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: 17, fill: '#0b0b0d', stroke: '#EDEDEB', 'stroke-opacity': 0.3, 'stroke-width': 1.2 }, svg);
+      el('circle', { cx: x.toFixed(1), cy: y.toFixed(1), r: 6.5, fill: '#EDEDEB' }, svg);
+    });
+    var k = el('g', { transform: 'translate(' + (cx - 44) + ' ' + (cy - 44) + ') scale(0.733)' }, svg);
+    KD.forEach(function (p) { el('circle', { cx: p[0], cy: p[1], r: 6.5, fill: '#EDEDEB' }, k); });
+  })();
+
+  // ---------- Landscape: two axes, the sides people pick, and Krovvi alone in the corner ----------
+  function quad(box, o) {
+    if (!box) return;
+    var Wq = o.W, Hq = o.H, X0 = 44, Y0 = Hq - 44;
+    var s = el('svg', { width: Wq, height: Hq, viewBox: '0 0 ' + Wq + ' ' + Hq, style: 'position:absolute; left:0; top:0; overflow:visible;' });
+    el('line', { x1: X0, y1: Y0, x2: Wq - 8, y2: Y0, stroke: '#4a4a4f', 'stroke-width': 1.4 }, s);
+    el('line', { x1: X0, y1: Y0, x2: X0, y2: 8, stroke: '#4a4a4f', 'stroke-width': 1.4 }, s);
+    el('path', { d: 'M' + (Wq - 18) + ' ' + (Y0 - 6) + ' L' + (Wq - 8) + ' ' + Y0 + ' L' + (Wq - 18) + ' ' + (Y0 + 6), fill: 'none', stroke: '#4a4a4f', 'stroke-width': 1.4 }, s);
+    el('path', { d: 'M' + (X0 - 6) + ' 18 L' + X0 + ' 8 L' + (X0 + 6) + ' 18', fill: 'none', stroke: '#4a4a4f', 'stroke-width': 1.4 }, s);
+    var mx = X0 + (Wq - X0) / 2, my = Y0 / 2 + 4;
+    el('line', { x1: mx, y1: 14, x2: mx, y2: Y0 - 4, stroke: '#222226', 'stroke-width': 1, 'stroke-dasharray': '3 7' }, s);
+    el('line', { x1: X0 + 4, y1: my, x2: Wq - 14, y2: my, stroke: '#222226', 'stroke-width': 1, 'stroke-dasharray': '3 7' }, s);
+    el('text', { x: Wq - 10, y: Hq - 10, 'text-anchor': 'end', fill: '#8F8F8A', 'font-size': o.ax, 'font-weight': 600, 'letter-spacing': '0.08em' }, s, 'GETS REAL THINGS DONE');
+    el('text', { x: 0, y: 0, 'text-anchor': 'end', fill: '#8F8F8A', 'font-size': o.ax, 'font-weight': 600, 'letter-spacing': '0.08em', transform: 'translate(' + (X0 - 20) + ' 12) rotate(-90)' }, s, 'FUN TO SPEND TIME WITH');
+    // Krovvi: a badge with two soft rings, top right
+    var kx = o.k[0], ky = o.k[1], kr = o.kr;
+    el('circle', { cx: kx, cy: ky, r: kr, fill: 'none', stroke: '#EDEDEB', 'stroke-width': 1.2, class: 'pulse' }, s);
+    el('circle', { cx: kx, cy: ky, r: kr, fill: 'none', stroke: '#EDEDEB', 'stroke-width': 1.2, class: 'pulse p2' }, s);
+    el('circle', { cx: kx, cy: ky, r: kr * 2.2, fill: 'url(#qg' + o.id + ')' }, s);
+    var dg = el('defs', {}, s), rg = el('radialGradient', { id: 'qg' + o.id }, dg);
+    el('stop', { offset: '0', 'stop-color': '#EDEDEB', 'stop-opacity': '0.16' }, rg);
+    el('stop', { offset: '1', 'stop-color': '#EDEDEB', 'stop-opacity': '0' }, rg);
+    el('circle', { cx: kx, cy: ky, r: kr, fill: '#0b0b0d', stroke: '#EDEDEB', 'stroke-width': 2.2 }, s);
+    var kg = el('g', { transform: 'translate(' + (kx - kr * 0.78) + ' ' + (ky - kr * 0.78) + ') scale(' + (kr * 1.56 / 120) + ')' }, s);
+    KD.forEach(function (p) { el('circle', { cx: p[0], cy: p[1], r: 7, fill: '#EDEDEB' }, kg); });
+    box.appendChild(s);
+    o.labels.forEach(function (l) {
+      var d = document.createElement('div'); d.className = 'qd';
+      d.style.left = l.x + 'px'; d.style.top = l.y + 'px'; if (l.w) d.style.width = l.w + 'px';
+      if (l.align) d.style.textAlign = l.align;
+      d.innerHTML = (l.names || []).map(function (nm) { return '<p class="nm2" style="font-size:' + o.nm + 'px;' + (l.align === 'right' ? 'justify-content:flex-end;' : '') + '"><i></i>' + nm + '</p>'; }).join('<div style="height:10px"></div>')
+        + (l.c ? '<p class="c" style="font-size:' + o.c + 'px;">' + l.c + '</p>' : '')
+        + (l.krovvi ? '<p style="font-size:' + o.kt + 'px; font-weight:600; letter-spacing:-0.02em;">Krovvi</p><p class="c" style="font-size:' + o.c + 'px; color:#A9A8A2; margin-top:4px;">' + l.krovvi + '</p>' : '');
+      box.appendChild(d);
+    });
+  }
+  quad(document.getElementById('quad'), { id: 'd', W: 880, H: 600, ax: 15, nm: 22, c: 16, kt: 34, k: [598, 86], kr: 34, labels: [
+    { x: 648, y: 52, w: 230, krovvi: 'Knows your life, fun to talk to, and gets it done.' },
+    { x: 92, y: 78, w: 360, names: ['Character and companion apps'], c: 'Fun, but pretend characters. No help with real life.' },
+    { x: 92, y: 420, w: 300, names: ['Notes and reminders'], c: 'Remember only what you type.' },
+    { x: 500, y: 330, w: 380, names: ['Voice assistants', 'Personal agents', 'Chat assistants'], c: 'Useful, but built for errands.<br>Most start from zero.' }
+  ] });
+  quad(document.getElementById('quad-ph'), { id: 'p', W: 600, H: 600, ax: 20, nm: 26, c: 21, kt: 38, k: [372, 92], kr: 40, labels: [
+    { x: 426, y: 66, w: 170, krovvi: 'Knows you, fun, and useful.' },
+    { x: 74, y: 160, w: 260, names: ['Companion apps'], c: 'Fun, but pretend.' },
+    { x: 74, y: 420, w: 230, names: ['Notes apps'], c: 'Only what you type.' },
+    { x: 330, y: 330, w: 270, names: ['Chat assistants', 'Personal agents'], c: 'Useful, built for errands.' }
+  ] });
+
+  // ---------- Market pictures: last year against this year, a ring, five people, three launches ----------
+  (function () {
+    var b = document.getElementById('bars');
+    if (b) {
+      [[16, 52, '2025', '#55554f'], [86, 170, '2026', '#EDEDEB']].forEach(function (c, i) {
+        var x = c[0], h = c[1], top = 170 - h, bw = 50, rad = 5;
+        var p = el('path', { d: 'M' + x + ' 170V' + (top + rad) + 'Q' + x + ' ' + top + ' ' + (x + rad) + ' ' + top + 'H' + (x + bw - rad) + 'Q' + (x + bw) + ' ' + top + ' ' + (x + bw) + ' ' + (top + rad) + 'V170Z', fill: c[3], class: 'grow' }, b);
+        p.style.setProperty('--d', 0.35 + i * 0.25);
+        el('text', { x: x + bw / 2, y: 188, 'text-anchor': 'middle', fill: '#8F8F8A', 'font-size': 15 }, b, c[2]);
+        if (i === 0) { var v = el('text', { x: x + bw / 2, y: top - 10, 'text-anchor': 'middle', fill: '#A9A8A2', 'font-size': 16, class: 'fade' }, b, '$12B'); v.style.setProperty('--d', 0.7); }
+      });
+    }
+    var gl = document.getElementById('globe');
+    if (gl) {
+      el('circle', { cx: 60, cy: 60, r: 48, fill: 'none', stroke: '#3a3a3e', 'stroke-width': 1.4 }, gl);
+      el('ellipse', { cx: 60, cy: 60, rx: 20, ry: 48, fill: 'none', stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('ellipse', { cx: 60, cy: 60, rx: 38, ry: 48, fill: 'none', stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 12, y1: 60, x2: 108, y2: 60, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 20, y1: 36, x2: 100, y2: 36, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      el('line', { x1: 20, y1: 84, x2: 100, y2: 84, stroke: '#26262a', 'stroke-width': 1.2 }, gl);
+      [[38, 30], [64, 24], [84, 42], [30, 52], [52, 48], [76, 62], [96, 66], [42, 74], [62, 86], [82, 90], [28, 78], [58, 66]].forEach(function (d, i) {
+        var c = el('circle', { cx: d[0], cy: d[1], r: 3.6, fill: '#EDEDEB', class: 'fade' }, gl); c.style.setProperty('--d', (0.5 + i * 0.06).toFixed(2));
+      });
+    }
+    var la = document.getElementById('launch');
+    if (la) {
+      el('line', { x1: 4, y1: 35, x2: 136, y2: 35, stroke: '#3a3a3e', 'stroke-width': 1.5 }, la);
+      el('line', { x1: 4, y1: 27, x2: 4, y2: 43, stroke: '#3a3a3e', 'stroke-width': 1.5 }, la);
+      el('line', { x1: 136, y1: 27, x2: 136, y2: 43, stroke: '#3a3a3e', 'stroke-width': 1.5 }, la);
+      [40, 82, 116].forEach(function (x, i) { var c = el('circle', { cx: x, cy: 35, r: 7.5, fill: '#EDEDEB', class: 'fade' }, la); c.style.setProperty('--d', 0.7 + i * 0.18); });
+    }
+  })();
+
+  // ---------- Where this goes: the friend grows, from one chat to almost anything ----------
+  (function () {
+    var svg = document.getElementById('grow4'); if (!svg) return;
+    var cy = 140, C = [[170, 68], [510, 90], [850, 112], [1190, 134]];
+    var defs = el('defs', {}, svg), gg = el('radialGradient', { id: 'g4' }, defs);
+    el('stop', { offset: '0', 'stop-color': '#EDEDEB', 'stop-opacity': '0.11' }, gg);
+    el('stop', { offset: '1', 'stop-color': '#EDEDEB', 'stop-opacity': '0' }, gg);
+    function grp(d) { var g = el('g', { class: 'fade' }, svg); g.style.setProperty('--d', d); return g; }
+    function kmark(x, y, sc, g) { var k = el('g', { transform: 'translate(' + (x - 61 * sc).toFixed(1) + ' ' + (y - 60 * sc).toFixed(1) + ') scale(' + sc + ')' }, g); KD.forEach(function (p) { el('circle', { cx: p[0], cy: p[1], r: 6.5, fill: '#EDEDEB' }, k); }); }
+    function person(x, y, z, g, dim) { var f = dim ? '#8F8F8A' : '#EDEDEB'; el('circle', { cx: x, cy: (y - z * 0.5).toFixed(1), r: (z * 0.36).toFixed(1), fill: f }, g); el('path', { d: 'M' + (x - z * 0.66) + ' ' + (y + z * 0.62) + ' Q' + (x - z * 0.66) + ' ' + y + ' ' + x + ' ' + y + ' Q' + (x + z * 0.66) + ' ' + y + ' ' + (x + z * 0.66) + ' ' + (y + z * 0.62) + ' Z', fill: f }, g); }
+    function link(x0, y0, x1, y1, g, dash) { var a = { x1: x0.toFixed(1), y1: y0.toFixed(1), x2: x1.toFixed(1), y2: y1.toFixed(1), stroke: '#5a5a5f', 'stroke-width': 1.2 }; if (dash) a['stroke-dasharray'] = '3 4'; el('line', a, g); }
+    C.forEach(function (c, i) {
+      if (i < 3) {
+        var nx = C[i + 1], x0 = c[0] + c[1] + 18, x1 = nx[0] - nx[1] - 18;
+        var ln = el('path', { d: 'M' + x0 + ' ' + cy + ' H' + x1, stroke: '#4a4a4f', 'stroke-width': 1.4, fill: 'none', class: 'draw' }, svg);
+        ln.style.setProperty('--len', x1 - x0); ln.style.setProperty('--d', (0.55 + i * 0.15).toFixed(2));
+        var hd = el('path', { d: 'M' + (x1 - 8) + ' ' + (cy - 6) + ' L' + x1 + ' ' + cy + ' L' + (x1 - 8) + ' ' + (cy + 6), stroke: '#8a8a8f', 'stroke-width': 1.4, fill: 'none', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', class: 'fade' }, svg);
+        hd.style.setProperty('--d', (0.85 + i * 0.15).toFixed(2));
+      }
+      var g = grp((0.3 + i * 0.15).toFixed(2));
+      el('circle', { cx: c[0], cy: cy, r: (c[1] * 1.3).toFixed(1), fill: 'url(#g4)' }, g);
+      el('circle', { cx: c[0], cy: cy, r: c[1], fill: '#060607', stroke: i === 0 ? '#9a9a9f' : '#34343a', 'stroke-width': 1.3 }, g);
+    });
+    // 1. You and Krovvi, in one chat
+    var g1 = grp(0.45), x = C[0][0];
+    link(x - 4, cy, x + 16, cy, g1); kmark(x - 22, cy, 0.34, g1); person(x + 30, cy + 2, 21, g1);
+    // 2. Your friends in the same chat
+    var g2 = grp(0.6); x = C[1][0];
+    [[0, -52], [47, 29], [-47, 29]].forEach(function (d) { link(x, cy, x + d[0] * 0.62, cy + d[1] * 0.62, g2); person(x + d[0], cy + d[1] + 4, 17, g2); });
+    kmark(x, cy, 0.32, g2);
+    // 3. Your Krovvi meets your friend's
+    var g3 = grp(0.75); x = C[2][0];
+    link(x - 30, cy, x + 30, cy, g3, true); el('circle', { cx: x, cy: cy, r: 3.4, fill: '#EDEDEB' }, g3);
+    kmark(x - 46, cy, 0.3, g3); kmark(x + 46, cy, 0.3, g3);
+    person(x - 46, cy - 52, 17, g3); person(x + 46, cy + 46, 17, g3);
+    // 4. Everything it can reach for you, after your yes
+    var g4 = grp(0.9); x = C[3][0];
+    for (var a = 0; a < 14; a++) {
+      var t = a / 14 * Math.PI * 2 - Math.PI / 2, ri = a % 2 ? 98 : 76;
+      link(x + Math.cos(t) * 30, cy + Math.sin(t) * 30, x + Math.cos(t) * (ri - 8), cy + Math.sin(t) * (ri - 8), g4);
+      el('circle', { cx: (x + Math.cos(t) * ri).toFixed(1), cy: (cy + Math.sin(t) * ri).toFixed(1), r: a % 2 ? 3.4 : 4.6, fill: a % 2 ? '#A9A8A2' : '#EDEDEB' }, g4);
+    }
+    kmark(x, cy, 0.36, g4);
+  })();
+
+  // ---------- Numbers that count up the first time their slide shows ----------
+  function countIn(slide) {
+    slide.querySelectorAll('.count').forEach(function (c) {
+      if (c.dataset.done) return; c.dataset.done = '1';
+      var to = +c.dataset.to, dur = 1300, t0 = null, fin = c.textContent;
+      c.textContent = '0';
+      setTimeout(function () {
+        requestAnimationFrame(function step(t) {
+          if (!t0) t0 = t;
+          var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+          c.textContent = k < 1 ? fmt(to * e) : fin;
+          if (k < 1) requestAnimationFrame(step);
+        });
+      }, 450);
+    });
+  }
+
+  // ---------- Videos: play when their slide shows, hold the last frame, then play again ----------
+  function playIn(slide) {
+    slide.querySelectorAll('video').forEach(function (v) {
+      clearTimeout(v._t);
+      v.pause();
+      try { v.currentTime = 0; } catch (e) {}
+      v._t = setTimeout(function () { var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); }, 900);
+      v.onended = function () { v._t = setTimeout(function () { if (slide.classList.contains('on')) { try { v.currentTime = 0; } catch (e) {} var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); } }, 3500); };
+    });
+  }
+  function stopIn(slide) { slide.querySelectorAll('video').forEach(function (v) { clearTimeout(v._t); v.pause(); }); }
+
+  // ---------- Modes ----------
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var cur = Math.max(0, Math.min(slides.length - 1, (parseInt(location.hash.slice(1), 10) || 1) - 1));
+  var bar = document.getElementById('bar'), hint = document.getElementById('hint'), cnt = document.getElementById('cnt');
+
+  function fitPresent() { H.style.setProperty('--s', Math.min(window.innerWidth / 1600, window.innerHeight / 900)); }
+  function fitPhone() {
+    var deck = document.querySelector('.deck');
+    var avail = Math.min(deck.clientWidth || H.clientWidth, 640) - 40;
+    document.querySelectorAll('.v').forEach(function (v) {
+      if (v.hasAttribute('data-strip')) return;
+      var w = parseFloat(v.style.width) || v.offsetWidth || 1;
+      v.style.zoom = Math.min(1, avail / w).toFixed(4);
+    });
+  }
+  function show(i) {
+    var prev = cur;
+    cur = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach(function (s, j) { s.classList.toggle('on', j === cur); });
+    if (prev !== cur) stopIn(slides[prev]);
+    playIn(slides[cur]); countIn(slides[cur]);
+    if (bar) bar.style.width = ((cur + 1) / slides.length * 100) + '%';
+    if (cnt) cnt.textContent = (cur + 1) + ' / ' + slides.length;
+    if (history.replaceState) history.replaceState(null, '', location.pathname + location.search + '#' + (cur + 1));
+  }
+
+  if (H.classList.contains('present')) {
+    fitPresent(); show(cur);
+    setTimeout(function () { if (hint) hint.style.opacity = '0'; }, 4000);
+    window.addEventListener('resize', fitPresent);
+    document.getElementById('prev').addEventListener('click', function () { show(cur - 1); });
+    document.getElementById('next').addEventListener('click', function () { show(cur + 1); });
+    document.addEventListener('keydown', function (e) {
+      var k = e.key;
+      if (H.classList.contains('over')) {
+        if (k === 'Escape' || k === 'o' || k === 'O' || k === 'Enter') { H.classList.remove('over'); fitPresent(); show(cur); }
+        return;
+      }
+      if (k === 'ArrowRight' || k === ' ' || k === 'PageDown' || k === 'ArrowDown') { e.preventDefault(); show(cur + 1); }
+      else if (k === 'ArrowLeft' || k === 'PageUp' || k === 'ArrowUp') { e.preventDefault(); show(cur - 1); }
+      else if (k === 'Home') show(0);
+      else if (k === 'End') show(slides.length - 1);
+      else if (k === 'f' || k === 'F') { if (!document.fullscreenElement) { if (H.requestFullscreen) H.requestFullscreen(); } else document.exitFullscreen(); }
+      else if (k === 'o' || k === 'O' || k === 'Escape') { H.classList.add('over'); }
+    });
+    slides.forEach(function (s, j) {
+      s.addEventListener('click', function (e) {
+        if (H.classList.contains('over')) { H.classList.remove('over'); fitPresent(); show(j); return; }
+        var rect = s.getBoundingClientRect();
+        if (e.clientX - rect.left < rect.width * 0.3) show(cur - 1); else show(cur + 1);
+      });
+    });
+    var sx = null;
+    document.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', function (e) { if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1)); sx = null; });
+  } else if (PHONE) {
+    fitPhone(); window.addEventListener('resize', fitPhone);
+    var seen = function (entries) {
+      entries.forEach(function (en) {
+        var s = en.target;
+        if (en.isIntersecting) { if (!s.classList.contains('on')) { s.classList.add('on'); countIn(s); } playIn(s); }
+        else stopIn(s);
+      });
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(seen, { threshold: 0.2 });
+      slides.forEach(function (s) { io.observe(s); });
+    } else slides.forEach(function (s) { s.classList.add('on'); });
+  } else {
+    slides.forEach(function (s) { s.classList.add('on'); });
+  }
+
+  // Ready once every picture and the fonts are in (videos fill in on their own).
+  var imgs = Array.prototype.slice.call(document.images);
+  Promise.all(imgs.map(function (i) { return i.complete ? Promise.resolve() : new Promise(function (ok) { i.onload = ok; i.onerror = ok; }); }))
+    .then(function () { return document.fonts ? document.fonts.ready : null; })
+    .then(function () { if (PHONE) fitPhone(); window.__ready = true; });
+})();
+</script>
+</body>
+</html>
