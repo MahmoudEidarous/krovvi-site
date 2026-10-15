@@ -1,19 +1,19 @@
 "use client";
 
 /**
- * Growth: the last five weeks. This week against the one before, people and
- * messages day by day, who joined, how new people's first days went (did they
- * write to Krovvi, did they come back), when in the day people use it, and
- * what they use it for. Tap a day's bar to see who it was.
+ * Growth: the last five weeks. This week against the one before, people,
+ * messages and sign-ups day by day, how new people's first days went (did
+ * they write to Krovvi, did they come back), when in the day people use it,
+ * and what they use it for. Tap a day's bar to see who it was.
  */
 
 import { useMemo, useState } from "react";
 
 import type { Board, Person } from "@/lib/team";
-import { Avatar, Card, Delta, Legend, Pill, Quiet, Segmented, Stat } from "./bits";
-import { Bars, Breakdown, SHADE, Steps, TipRow, TipTitle } from "./charts";
+import { Change, Face, Head, Key, Metrics, Pane, Quiet, Segmented, Statement, Tag } from "./bits";
+import { Bars, Breakdown, FG, Lines, SHADE, Steps, TipRow, TipTitle } from "./charts";
 import { daySeries, newcomers, peopleById, rollups, type DayPoint } from "./model";
-import { addDays, axisDay, dayName, dayShort, firstName, minutes, nameOf, plural } from "./words";
+import { addDays, axisDay, dayName, dayShort, minutes, nameOf, plural, shortName } from "./words";
 
 const pad2 = (n: number) => String(n).padStart(2, "0");
 
@@ -32,16 +32,19 @@ export function GrowthTab({ board, onPerson }: { board: Board; onPerson: (id: st
   const fresh = newcomersAll.filter((n) => joinedAs === "all" || n.person.tag === joinedAs);
   const withAccount = newcomersAll.filter((n) => n.person.tag === "outside");
   const cameBackNamed = withAccount.filter((n) => n.cameBack).length;
+  const cameBack = fresh.filter((n) => n.cameBack).length;
   const today = board.today;
 
   const weeks = useMemo(() => {
     const sum = (from: string, to: string) => {
       const active = new Set<string>();
       let msgs = 0;
+      let voiceMs = 0;
       for (const d of board.days) {
         if (d.d < from || d.d > to || people.get(d.p)?.tag === "team") continue;
         if (d.act) active.add(d.p);
         msgs += d.msgs;
+        voiceMs += d.voiceMs;
       }
       let named = 0;
       let guests = 0;
@@ -50,38 +53,40 @@ export function GrowthTab({ board, onPerson }: { board: Board; onPerson: (id: st
         named += pt.joinedNamed;
         guests += pt.joinedGuests;
       }
-      return { active: active.size, msgs, named, guests };
+      return { active: active.size, msgs, voiceMs, named, guests };
     };
     return { now: sum(addDays(today, -6), today), then: sum(addDays(today, -13), addDays(today, -7)) };
   }, [board, people, series, today]);
 
-  const cameBack = fresh.filter((n) => n.cameBack).length;
   const last = series.length - 1;
   const every = (i: number) => (i === last || (last - i) % 7 === 0 ? axisDay(series[i].d) : "");
 
   return (
-    <div className="grid grid-cols-1 gap-3 md:gap-4">
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-        <Stat label="People this week" value={weeks.now.active} delta={<Delta now={weeks.now.active} then={weeks.then.active} label="against the week before" />} sub="outside the team" />
-        <Stat label="Messages this week" value={weeks.now.msgs} delta={<Delta now={weeks.now.msgs} then={weeks.then.msgs} label="against the week before" />} sub="from outside people" />
-        <Stat
-          label="Joined this week"
-          value={weeks.now.named + weeks.now.guests}
-          delta={<Delta now={weeks.now.named + weeks.now.guests} then={weeks.then.named + weeks.then.guests} label="against the week before" />}
-          sub={`${weeks.now.named} with an account, ${weeks.now.guests} as guests`}
-        />
-        <Stat
-          label="Came back"
-          value={withAccount.length ? Math.round((cameBackNamed / withAccount.length) * 100) : 0}
-          format={(v) => `${Math.round(v)}%`}
-          sub={`${cameBackNamed} of ${withAccount.length} new people with an account used it on a second day`}
-        />
-      </div>
+    <div className="grid grid-cols-1 gap-6">
+      <Statement
+        figure={weeks.now.active}
+        noun={weeks.now.active === 1 ? "person" : "people"}
+        rest="used Krovvi this week"
+        under={
+          <>
+            <Change now={weeks.now.active} then={weeks.then.active} when="the week before" />. Outside the team, the last 7 days.
+          </>
+        }
+      />
 
-      <div className="grid grid-cols-1 gap-3 md:gap-4 lg:grid-cols-2">
+      <Metrics
+        items={[
+          { label: "Messages", value: weeks.now.msgs, note: <Change now={weeks.now.msgs} then={weeks.then.msgs} when="the week before" /> },
+          { label: "Joined", value: weeks.now.named + weeks.now.guests, note: `${weeks.now.named} with an account, ${weeks.now.guests} guests` },
+          { label: "Came back", value: withAccount.length ? Math.round((cameBackNamed / withAccount.length) * 100) : 0, format: (v) => `${Math.round(v)}%`, note: `${cameBackNamed} of ${withAccount.length} new people with an account` },
+          { label: "Recorded", value: weeks.now.voiceMs, format: (v) => (v ? minutes(v) : "0"), note: `${weeks.then.voiceMs ? minutes(weeks.then.voiceMs) : "none"} the week before` },
+        ]}
+      />
+
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
         <DayChart
           title="People per day"
-          sub="Everyone who did something in Krovvi that day. Tap a day to see who."
+          sub="Everyone who did something in Krovvi. Tap a day to see who."
           series={series}
           values={(p) => [p.outside, p.guests, p.team]}
           colors={[SHADE.outside, SHADE.guests, SHADE.team]}
@@ -97,100 +102,105 @@ export function GrowthTab({ board, onPerson }: { board: Board; onPerson: (id: st
           series={series}
           values={(p) => [p.msgsOut, p.msgsTeam]}
           colors={[SHADE.outside, SHADE.team]}
-          names={["Outside people", "Team"]}
+          names={["Outside", "Team"]}
           label={every}
           people={people}
           onPerson={onPerson}
         />
+        <DayChart
+          title="Who joined"
+          sub={`${board.accounts.named} accounts and ${board.accounts.guests} guests in all, test accounts left out.`}
+          series={series}
+          values={(p) => [p.joinedNamed, p.joinedGuests]}
+          colors={[SHADE.outside, SHADE.guests]}
+          names={["With an account", "Guests"]}
+          label={every}
+          people={people}
+          onPerson={onPerson}
+          floor={3}
+        />
+        <Pane className="p-5 sm:p-6">
+          <Head title="When people use Krovvi" sub="Things outside people did in each hour over five weeks, on Cairo’s clock." />
+          <div className="mt-5">
+            <Lines
+              height={190}
+              series={[{ values: Array.from({ length: 24 }, (_, h) => board.hours.find((x) => x.h === h)?.n ?? 0), color: FG, width: 2, fill: true }]}
+              label={(h) => (h % 6 === 0 ? pad2(h) : h === 23 ? "23" : "")}
+              tip={(h) => {
+                const row = board.hours.find((x) => x.h === h);
+                return (
+                  <>
+                    <TipTitle>
+                      {pad2(h)}:00 to {pad2((h + 1) % 24)}:00
+                    </TipTitle>
+                    <TipRow label="Things done" value={row?.n ?? 0} />
+                    <TipRow label="People" value={row?.p ?? 0} />
+                  </>
+                );
+              }}
+            />
+          </div>
+        </Pane>
       </div>
 
-      <DayChart
-        title="Who joined"
-        sub={`${board.accounts.named.toLocaleString("en-US")} accounts and ${board.accounts.guests.toLocaleString("en-US")} guests in all (test accounts left out).`}
-        series={series}
-        values={(p) => [p.joinedNamed, p.joinedGuests]}
-        colors={[SHADE.outside, SHADE.guests]}
-        names={["With an account", "Guests"]}
-        label={every}
-        people={people}
-        onPerson={onPerson}
-        floor={3}
-      />
-
-      <div className="grid grid-cols-1 gap-3 md:gap-4 lg:grid-cols-[1fr_1.2fr]">
-        <Card title="New people’s first days" sub="Everyone outside the team who joined in the last 30 days.">
-          <div className="mb-3">
+      <Pane className="p-5 sm:p-6">
+        <Head
+          title="New people’s first days"
+          sub="Everyone outside the team who joined in the last 30 days."
+          right={
             <Segmented<"outside" | "guest" | "all">
               label="Who joined"
+              size="sm"
               value={joinedAs}
               onChange={setJoinedAs}
               options={[
-                { id: "outside", label: `With an account ${withAccount.length}` },
+                { id: "outside", label: `Accounts ${withAccount.length}` },
                 { id: "guest", label: `Guests ${newcomersAll.length - withAccount.length}` },
                 { id: "all", label: "Both" },
               ]}
             />
-          </div>
-          {fresh.length ? (
+          }
+          className="flex-col sm:flex-row"
+        />
+        {fresh.length ? (
+          <div className="mt-4 grid grid-cols-1 gap-x-10 gap-y-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
             <Steps
               steps={[
                 { label: "Joined", value: fresh.length },
-                { label: "Did something", value: fresh.filter((n) => n.opened).length, note: "opened it, wrote, recorded or added something" },
+                { label: "Did something", value: fresh.filter((n) => n.opened).length },
                 { label: "Wrote to Krovvi", value: fresh.filter((n) => n.messaged).length },
                 { label: "Came back another day", value: cameBack },
                 { label: "Used it on 3 days or more", value: fresh.filter((n) => n.activeDays >= 3).length },
               ]}
             />
-          ) : (
-            <Quiet>Nobody new in the last 30 days.</Quiet>
-          )}
-        </Card>
-        <Card title="Each new person" sub="Newest first. Tap one to see their days." pad={false}>
-          <ul className="max-h-[430px] divide-y divide-[#1F1F1E] overflow-y-auto pb-1.5">
-            {fresh.map((n) => (
-              <li key={n.person.id}>
-                <button onClick={() => onPerson(n.person.id)} className="flex w-full items-center gap-3 px-4 py-2.5 text-left transition-colors duration-150 hover:bg-[#1B1B1A] sm:px-5">
-                  <Avatar person={n.person} size={34} />
-                  <div className="min-w-0 flex-1">
-                    <div className="truncate text-[14px] font-semibold">{nameOf(n.person)}</div>
-                    <div className="truncate text-[12.5px] text-[#8F8F8A]">
-                      Joined {joinedWord(n.joinedDay, today)}
-                      {n.msgs ? ` · ${plural(n.msgs, "message")}` : " · no messages"}
-                    </div>
-                  </div>
-                  <div className="flex shrink-0 items-center gap-1.5">
-                    {n.cameBack ? <Pill tone="new">Came back</Pill> : n.daysSince >= 1 ? <Pill>Not back yet</Pill> : <Pill>Today</Pill>}
-                    <span className="w-14 text-right text-[12.5px] tabular-nums text-[#A9A8A2]">{plural(n.activeDays, "day")}</span>
-                  </div>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      </div>
+            <ul className="max-h-[360px] overflow-y-auto pr-1 [scrollbar-width:thin]">
+              {fresh.map((n, i) => (
+                <li key={n.person.id}>
+                  <button onClick={() => onPerson(n.person.id)} className="flex w-full items-center gap-3 text-left">
+                    <Face person={n.person} size={30} />
+                    <span className={`flex min-w-0 flex-1 items-center gap-3 py-2.5 ${i ? "border-t border-white/[0.06]" : ""}`}>
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[14px] font-medium text-[#EDEDEB]">{nameOf(n.person)}</span>
+                        <span className="block truncate text-[12.5px] text-[#7A7A74]">
+                          Joined {joinedWord(n.joinedDay, today)} · {n.msgs ? plural(n.msgs, "message") : "no messages"}
+                        </span>
+                      </span>
+                      <span className="flex shrink-0 items-center gap-2">
+                        {n.cameBack ? <Tag tone="new">Came back</Tag> : n.daysSince >= 1 ? <Tag>Not back</Tag> : <Tag>Today</Tag>}
+                        <span className="w-12 text-right text-[12.5px] tabular-nums text-[#7A7A74]">{plural(n.activeDays, "day")}</span>
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          <Quiet>No one new in the last 30 days.</Quiet>
+        )}
+      </Pane>
 
-      <div className="grid grid-cols-1 gap-3 md:gap-4 lg:grid-cols-2">
-        <Card title="When people use Krovvi" sub="Things outside people did in each hour over five weeks, on Cairo’s clock.">
-          <Bars
-            points={Array.from({ length: 24 }, (_, h) => ({ key: String(h), values: [board.hours.find((x) => x.h === h)?.n ?? 0] }))}
-            colors={[SHADE.outside]}
-            label={(h) => (h % 3 === 0 ? pad2(h) : "")}
-            tip={(h) => {
-              const row = board.hours.find((x) => x.h === h);
-              return (
-                <>
-                  <TipTitle>
-                    {pad2(h)}:00 to {pad2((h + 1) % 24)}:00
-                  </TipTitle>
-                  <TipRow label="Things done" value={row?.n ?? 0} />
-                  <TipRow label="People" value={row?.p ?? 0} />
-                </>
-              );
-            }}
-          />
-        </Card>
-        <WhatTheyDo board={board} people={people} />
-      </div>
+      <WhatTheyDo board={board} people={people} />
     </div>
   );
 }
@@ -221,54 +231,53 @@ function DayChart({
   floor?: number;
 }) {
   const [picked, setPicked] = useState<number | null>(null);
-  const total = series.reduce((n, p) => n + values(p).reduce((a, b) => a + b, 0), 0);
   const chosen = picked !== null ? series[picked] : null;
   return (
-    <Card title={title} sub={sub} right={<span className="text-[12.5px] tabular-nums text-[#8F8F8A]">{total.toLocaleString("en-US")} in 35 days</span>}>
-      <Bars
-        points={series.map((p) => ({ key: p.d, values: values(p) }))}
-        colors={colors}
-        label={label}
-        now={series.length - 1}
-        picked={showWho ? picked : null}
-        onPick={showWho ? setPicked : undefined}
-        floor={floor}
-        tip={(i) => {
-          const v = values(series[i]);
-          return (
-            <>
-              <TipTitle>{dayShort(series[i].d)}</TipTitle>
-              {v.map((n, s) => (
-                <TipRow key={names[s]} color={colors[s]} label={names[s]} value={n} />
-              ))}
-            </>
-          );
-        }}
-      />
-      <div className="mt-3">
-        <Legend items={names.map((n, s) => ({ color: colors[s], label: n }))} />
+    <Pane className="p-5 sm:p-6">
+      <Head title={title} sub={sub} right={<Key items={names.map((n, s) => ({ color: colors[s], label: n }))} />} className="flex-col sm:flex-row" />
+      <div className="mt-5">
+        <Bars
+          points={series.map((p) => ({ key: p.d, values: values(p) }))}
+          colors={colors}
+          label={label}
+          now={series.length - 1}
+          picked={showWho ? picked : null}
+          onPick={showWho ? setPicked : undefined}
+          floor={floor}
+          tip={(i) => {
+            const v = values(series[i]);
+            return (
+              <>
+                <TipTitle>{dayShort(series[i].d)}</TipTitle>
+                {v.map((n, s) => (
+                  <TipRow key={names[s]} color={colors[s]} label={names[s]} value={n} />
+                ))}
+              </>
+            );
+          }}
+        />
       </div>
       {showWho && chosen ? (
-        <div className="team-tab mt-4 border-t border-[#1F1F1E] pt-3">
-          <div className="mb-2 flex items-baseline justify-between">
-            <span className="text-[13.5px] font-semibold">{dayShort(chosen.d)}</span>
-            <span className="text-[12.5px] text-[#8F8F8A]">{plural(chosen.who.length, "person", "people")}</span>
+        <div className="team-tab mt-4 border-t border-white/[0.06] pt-4">
+          <div className="mb-2.5 flex items-baseline justify-between">
+            <span className="text-[13.5px] font-medium text-[#EDEDEB]">{dayShort(chosen.d)}</span>
+            <span className="text-[12.5px] text-[#7A7A74]">{plural(chosen.who.length, "person", "people")}</span>
           </div>
           <div className="flex flex-wrap gap-1.5">
             {chosen.who.map((id) => {
               const p = people.get(id);
               return (
-                <button key={id} onClick={() => onPerson(id)} className="inline-flex items-center gap-1.5 rounded-full bg-[#1F1F1E] py-1 pl-1 pr-2.5 text-[12.5px] text-[#EDEDEB] transition-colors duration-150 hover:bg-[#2A2A28]">
-                  <Avatar person={p} size={22} />
-                  {firstName(p)}
-                  {p?.tag === "team" ? <span className="text-[#7A7A74]">· team</span> : null}
+                <button key={id} onClick={() => onPerson(id)} className="inline-flex items-center gap-2 rounded-full border border-white/[0.07] py-1 pl-1 pr-3 text-[12.5px] text-[#D9D8D3] transition-colors duration-150 hover:bg-white/[0.04]">
+                  <Face person={p} id={id} size={22} />
+                  {shortName(p, id)}
+                  {p?.tag === "team" ? <span className="text-[#5E5E5A]">team</span> : null}
                 </button>
               );
             })}
           </div>
         </div>
       ) : null}
-    </Card>
+    </Pane>
   );
 }
 
@@ -294,22 +303,28 @@ function WhatTheyDo({ board, people }: { board: Board; people: Map<string, Perso
     return t;
   }, [board, people]);
   return (
-    <Card title="What people did this week" sub="Outside people, the last 7 days.">
-      <Breakdown
-        rows={[
-          { label: "Opened Krovvi", value: totals.opens },
-          { label: "Messages to Krovvi", value: totals.msgs },
-          { label: "Recordings", value: totals.voice, shown: totals.voice ? `${totals.voice} (${minutes(totals.voiceMs)})` : "0" },
-          { label: "Notes, documents, photos and links", value: totals.notes },
-          { label: "Answers to Krovvi’s cards", value: totals.cards },
-          { label: "Changes in their apps", value: totals.appChanges },
-          { label: "Files Krovvi made for them", value: totals.krovviMade },
-          { label: "Changes Krovvi made in their apps", value: totals.krovviChanges },
-          { label: "Games played", value: totals.games },
-          { label: "Chats shared", value: totals.shares },
-          { label: "Messages Krovvi started", value: totals.krovviFirst },
-        ]}
-      />
-    </Card>
+    <Pane className="p-5 sm:p-6">
+      <Head title="What people did this week" sub="Outside people, the last 7 days." />
+      <div className="mt-5 grid grid-cols-1 gap-x-12 gap-y-3.5 md:grid-cols-2">
+        <Breakdown
+          rows={[
+            { label: "Opened Krovvi", value: totals.opens },
+            { label: "Messages to Krovvi", value: totals.msgs },
+            { label: "Recordings", value: totals.voice, shown: totals.voice ? `${totals.voice} · ${minutes(totals.voiceMs)}` : "0" },
+            { label: "Notes, documents, photos and links", value: totals.notes },
+            { label: "Answers to Krovvi’s cards", value: totals.cards },
+          ]}
+        />
+        <Breakdown
+          rows={[
+            { label: "Changes in their apps", value: totals.appChanges },
+            { label: "Games played", value: totals.games },
+            { label: "Chats shared", value: totals.shares },
+            { label: "Files Krovvi made for them", value: totals.krovviMade },
+            { label: "Messages Krovvi started", value: totals.krovviFirst },
+          ]}
+        />
+      </div>
+    </Pane>
   );
 }

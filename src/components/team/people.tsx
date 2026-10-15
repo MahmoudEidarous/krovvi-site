@@ -1,16 +1,16 @@
 "use client";
 
 /**
- * People: everyone who used Krovvi over a stretch of days, one line each,
- * with what they did and their last two weeks as tiny bars. Outside people
- * with an account first; guests (no sign-in, where our own test phones also
- * land) and the team each have their own filter. Tap a line for the person.
+ * People: everyone who used Krovvi over a stretch of days, one line each:
+ * what they did and their last two weeks as tiny bars. Outside people with
+ * an account first; guests (no sign-in, where our own test phones also land)
+ * and the team have their own choice. Tap a line for the person.
  */
 
 import { useMemo, useState } from "react";
 
 import type { Board, Person } from "@/lib/team";
-import { Avatar, Card, Chips, Pill, Quiet, Segmented } from "./bits";
+import { Face, Pane, Quiet, Segmented, Statement, Tag } from "./bits";
 import { Spark } from "./charts";
 import { RANGES, rangeSpan, rollups, things, type Range, type Rollup } from "./model";
 import { addDays, ago, date, dayOf, minutes, nameOf, plural, viaWord } from "./words";
@@ -28,6 +28,10 @@ interface Row {
 const EMPTY = (p: string): Rollup => ({ p, days: 0, opens: 0, msgs: 0, failed: 0, krovviFirst: 0, notes: 0, voice: 0, voiceMs: 0, games: 0, cards: 0, appChanges: 0, krovviChanges: 0, appsMade: 0, shares: 0, problems: 0, pushes: 0, krovviMade: 0 });
 
 const RANGE_WORDS: Record<Range, string> = { today: "today", yesterday: "yesterday", "7d": "in the last 7 days", "30d": "in the last 30 days" };
+const GROUP_WORDS: Record<Group, [string, string]> = { outside: ["person", "people"], guest: ["guest", "guests"], team: ["teammate", "teammates"], all: ["person", "people"] };
+
+/** The table's columns on a wide screen. */
+const COLS = "md:grid-cols-[minmax(0,1fr)_64px_64px_80px_64px_84px_56px_96px]";
 
 export function PeopleTab({ board, now, onPerson }: { board: Board; now: number; onPerson: (id: string) => void }) {
   const [range, setRange] = useState<Range>("7d");
@@ -73,13 +77,35 @@ export function PeopleTab({ board, now, onPerson }: { board: Board; now: number;
   }, [rows, group, sort]);
 
   const newCount = shown.filter((r) => r.isNew).length;
+  const [one, many] = GROUP_WORDS[group];
 
   return (
-    <div className="grid grid-cols-1 gap-3 md:gap-4">
-      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <Segmented<Range> label="Days" value={range} onChange={setRange} options={RANGES} />
+    <div className="grid grid-cols-1 gap-6">
+      <Statement
+        figure={shown.length}
+        noun={shown.length === 1 ? one : many}
+        rest={`used Krovvi ${RANGE_WORDS[range]}`}
+        under={newCount ? `${newCount} of them new.` : group === "guest" ? "No sign-in. Our own test phones land here too." : undefined}
+      />
+
+      <div className="flex flex-col gap-2.5 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+          <Segmented<Range> label="Days" value={range} onChange={setRange} options={RANGES} />
+          <Segmented<Group>
+            label="Who"
+            value={group}
+            onChange={setGroup}
+            options={[
+              { id: "outside", label: `Outside ${counts.outside}` },
+              { id: "guest", label: `Guests ${counts.guest}` },
+              { id: "team", label: `Team ${counts.team}` },
+              { id: "all", label: `All ${counts.all}` },
+            ]}
+          />
+        </div>
         <Segmented<Sort>
           label="Order"
+          size="sm"
           value={sort}
           onChange={setSort}
           options={[
@@ -89,21 +115,11 @@ export function PeopleTab({ board, now, onPerson }: { board: Board; now: number;
           ]}
         />
       </div>
-      <Chips<Group>
-        label="Who"
-        value={group}
-        onChange={setGroup}
-        options={[
-          { id: "outside", label: "Outside", count: counts.outside },
-          { id: "guest", label: "Guests", count: counts.guest },
-          { id: "team", label: "Team", count: counts.team },
-          { id: "all", label: "Everyone", count: counts.all },
-        ]}
-      />
-      <Card pad={false} title={`${plural(shown.length, "person", "people")} ${RANGE_WORDS[range]}`} sub={newCount ? `${newCount} of them new` : group === "guest" ? "No sign-in. Our own test phones show up here too." : undefined}>
+
+      <Pane className="px-4 py-2 sm:px-6">
         {shown.length ? (
           <>
-            <div className="hidden grid-cols-[minmax(230px,2.4fr)_repeat(6,minmax(64px,0.7fr))_96px] gap-3 border-b border-[#1F1F1E] px-5 pb-2.5 text-[11.5px] font-medium text-[#7A7A74] md:grid">
+            <div className={`hidden gap-4 border-b border-white/[0.06] py-3 pl-[50px] text-[12px] font-medium text-[#7A7A74] md:grid ${COLS}`}>
               <span>Person</span>
               <span className="text-right">Days</span>
               <span className="text-right">Opens</span>
@@ -111,77 +127,70 @@ export function PeopleTab({ board, now, onPerson }: { board: Board; now: number;
               <span className="text-right">Notes</span>
               <span className="text-right">Recorded</span>
               <span className="text-right">Games</span>
-              <span className="text-right">Last 14 days</span>
+              <span className="text-right">14 days</span>
             </div>
-            <ul className="divide-y divide-[#1F1F1E] pb-1.5">
-              {shown.map((row) => (
+            <ul>
+              {shown.map((row, i) => (
                 <li key={row.p.id}>
-                  <PersonLine row={row} now={now} onPerson={onPerson} />
+                  <PersonLine row={row} first={i === 0} now={now} onPerson={onPerson} />
                 </li>
               ))}
             </ul>
           </>
         ) : (
-          <Quiet>Nobody here {RANGE_WORDS[range]}.</Quiet>
+          <Quiet>No one here {RANGE_WORDS[range]}.</Quiet>
         )}
-      </Card>
+      </Pane>
     </div>
   );
 }
 
-function PersonLine({ row, now, onPerson }: { row: Row; now: number; onPerson: (id: string) => void }) {
+function PersonLine({ row, first, now, onPerson }: { row: Row; first: boolean; now: number; onPerson: (id: string) => void }) {
   const { p, r } = row;
-  const seen = p.last ? (now - p.last < 60_000 ? "just now" : `${ago(p.last, now)} ago`) : "nothing yet";
+  const seen = p.last ? (now - p.last < 60_000 ? "just now" : `${ago(p.last, now)} ago`) : "not yet";
+  const live = !!p.last && now - p.last < 10 * 60_000;
   const stats = [
     r.msgs ? plural(r.msgs, "message") : null,
     r.opens ? plural(r.opens, "open") : null,
-    r.notes ? plural(r.notes, "note") : null,
+    r.notes - r.voice > 0 ? plural(r.notes - r.voice, "note") : null,
     r.voiceMs ? `${minutes(r.voiceMs)} recorded` : null,
     r.games ? plural(r.games, "game") : null,
-    r.krovviMade ? `${plural(r.krovviMade, "file")} Krovvi made` : null,
   ].filter(Boolean);
-  const num = (v: number) => <span className={`text-right tabular-nums ${v ? "text-[#EDEDEB]" : "text-[#3A3A38]"}`}>{v ? v.toLocaleString("en-US") : "0"}</span>;
+  const cell = (v: number, shown?: string) => <span className={`hidden text-right text-[14px] tabular-nums md:block ${v ? "text-[#EDEDEB]" : "text-[#3E3E40]"}`}>{v ? (shown ?? v.toLocaleString("en-US")) : "0"}</span>;
+  const tags = (
+    <>
+      {row.isNew ? <Tag tone="new">New</Tag> : null}
+      {p.tag === "team" ? <Tag>Team</Tag> : null}
+    </>
+  );
   return (
-    <button onClick={() => onPerson(p.id)} className="block w-full text-left transition-colors duration-150 hover:bg-[#1B1B1A] active:bg-[#1F1F1E]">
-      <div className="flex items-center gap-3 px-4 py-3 md:hidden">
-        <Avatar person={p} size={40} live={!!p.last && now - p.last < 10 * 60_000} />
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-1.5">
-            <span className="truncate text-[15px] font-semibold">{nameOf(p)}</span>
-            {row.isNew ? <Pill tone="new">New</Pill> : null}
-            {p.tag === "team" ? <Pill tone="team">Team</Pill> : null}
-          </div>
-          <div className="mt-0.5 truncate text-[12.5px] text-[#8F8F8A]">
+    <button onClick={() => onPerson(p.id)} className="group flex w-full items-center gap-3.5 text-left">
+      <Face person={p} size={36} live={live} />
+      <span className={`grid min-w-0 flex-1 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 py-3.5 ${COLS} ${first ? "" : "border-t border-white/[0.06]"}`}>
+        <span className="min-w-0">
+          <span className="flex items-center gap-2">
+            <span className="truncate text-[15px] font-medium text-[#EDEDEB] transition-colors duration-150 group-hover:text-white">{nameOf(p)}</span>
+            {tags}
+          </span>
+          <span className="mt-0.5 block truncate text-[12.5px] text-[#7A7A74]">
             Last seen {seen} · {viaWord(p.via)}
-          </div>
-          <div className="mt-1 truncate text-[13px] text-[#A9A8A2]">{stats.length ? stats.join(" · ") : "Signed up, nothing else yet"}</div>
-        </div>
-        <Spark values={row.spark} width={64} height={26} />
-      </div>
-      <div className="hidden grid-cols-[minmax(230px,2.4fr)_repeat(6,minmax(64px,0.7fr))_96px] items-center gap-3 px-5 py-3 text-[14px] md:grid">
-        <div className="flex min-w-0 items-center gap-3">
-          <Avatar person={p} size={36} live={!!p.last && now - p.last < 10 * 60_000} />
-          <div className="min-w-0">
-            <div className="flex items-center gap-1.5">
-              <span className="truncate font-semibold">{nameOf(p)}</span>
-              {row.isNew ? <Pill tone="new">New</Pill> : null}
-              {p.tag === "team" ? <Pill tone="team">Team</Pill> : null}
-            </div>
-            <div className="truncate text-[12.5px] text-[#8F8F8A]">
-              Last seen {seen} · joined {date(p.joined)} · {viaWord(p.via)}
-            </div>
-          </div>
-        </div>
-        {num(r.days)}
-        {num(r.opens)}
-        {num(r.msgs)}
-        {num(r.notes)}
-        <span className={`text-right tabular-nums ${r.voiceMs ? "text-[#EDEDEB]" : "text-[#3A3A38]"}`}>{r.voiceMs ? minutes(r.voiceMs) : "0"}</span>
-        {num(r.games)}
-        <span className="flex justify-end">
-          <Spark values={row.spark} width={84} height={24} />
+            <span className="hidden md:inline"> · joined {date(p.joined)}</span>
+          </span>
+          <span className="mt-1 block truncate text-[13px] text-[#A9A8A2] md:hidden">{stats.length ? stats.join(" · ") : "Joined, nothing else yet"}</span>
         </span>
-      </div>
+        <span className="md:hidden">
+          <Spark values={row.spark} width={64} height={24} />
+        </span>
+        {cell(r.days)}
+        {cell(r.opens)}
+        {cell(r.msgs)}
+        {cell(r.notes - r.voice)}
+        {cell(r.voiceMs, minutes(r.voiceMs))}
+        {cell(r.games)}
+        <span className="hidden justify-end md:flex">
+          <Spark values={row.spark} width={84} height={22} />
+        </span>
+      </span>
     </button>
   );
 }

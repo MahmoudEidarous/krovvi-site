@@ -143,6 +143,13 @@ export function nameOf(p: Pick<Person, "id" | "name" | "tag"> | undefined, id?: 
   return p.tag === "guest" ? `Guest ${p.id.slice(0, 4)}` : `No name ${p.id.slice(0, 4)}`;
 }
 
+/** Moustafa E.: a first name and the last name's first letter, for tight lines. */
+export function shortName(p: Pick<Person, "id" | "name" | "tag"> | undefined, id?: string): string {
+  if (!p?.name) return nameOf(p, id);
+  const parts = p.name.trim().split(/\s+/);
+  return parts.length > 1 ? `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.` : parts[0];
+}
+
 export function firstName(p: Pick<Person, "id" | "name" | "tag"> | undefined): string {
   const n = nameOf(p);
   return p?.name ? n.split(/\s+/)[0] : n;
@@ -292,44 +299,50 @@ export function byThem(k: Kind): boolean {
   return k === "open" || k === "msg" || k === "note" || k === "card" || k === "app" || k === "share" || k === "land";
 }
 
-/** One thing in a line, after the person's name: "sent a message", "recorded 12 min". */
+/**
+ * One thing as a short sentence under the person's name: "Sent a message",
+ * "Recorded 12 min", and when Krovvi did it, Krovvi says so: "Krovvi wrote first".
+ */
 export function line(k: Kind, x: Facts): { text: string; bad?: boolean } {
   switch (k) {
     case "msg":
-      if (x.g) return { text: `played ${gameName(x.g)}` };
-      if (x.s === "failed") return { text: "sent a message, and the answer failed", bad: true };
-      if (x.s === "working" || x.s === "asked") return { text: "sent a message, Krovvi is answering" };
-      if (x.s === "stopped" || x.s === "cancelled") return { text: "sent a message, then stopped the answer" };
-      if (x.sh) return { text: "carried on a shared chat" };
-      return { text: x.a ? `sent a message, answered in ${seconds(x.a)}` : "sent a message" };
+      if (x.g) return { text: `Played ${gameName(x.g)}` };
+      if (x.s === "failed") return { text: "Sent a message, and the answer failed", bad: true };
+      if (x.s === "working" || x.s === "asked") return { text: "Sent a message, Krovvi is answering" };
+      if (x.s === "stopped" || x.s === "cancelled") return { text: "Sent a message, then stopped the answer" };
+      if (x.sh) return { text: "Carried on a shared chat" };
+      return { text: "Sent a message" };
     case "kfirst":
-      return { text: "got a message from Krovvi, who wrote first" };
+      return { text: "Krovvi wrote first" };
     case "note": {
       const kind = String(x.n ?? "");
-      if (kind === "voice") return { text: x.ms ? `recorded ${minutes(x.ms)}` : "made a recording" };
-      return { text: noteWords(kind)[0] };
+      if (kind === "voice") return { text: x.ms ? `Recorded ${minutes(x.ms)}` : "Made a recording" };
+      const words = noteWords(kind)[0];
+      return { text: words.charAt(0).toUpperCase() + words.slice(1) };
     }
     case "kmade":
-      return { text: x.n === "doc" ? "got a file Krovvi made" : "got a note Krovvi wrote" };
-    case "card":
-      return { text: cardWords(x.c, x.e) };
+      return { text: x.n === "doc" ? "Krovvi made a file" : "Krovvi wrote a note" };
+    case "card": {
+      const words = cardWords(x.c, x.e);
+      return { text: words.charAt(0).toUpperCase() + words.slice(1) };
+    }
     case "app":
-      return { text: x.new ? `made a new ${appName(x.o)} list` : `changed something in ${appName(x.o)}` };
+      return { text: x.new ? `Made a new ${appName(x.o)} list` : `Changed something in ${appName(x.o)}` };
     case "kapp":
-      return { text: x.new ? `got a new ${appName(x.o)} list, made by Krovvi` : `had ${appName(x.o)} updated by Krovvi` };
+      return { text: x.new ? `Krovvi made a ${appName(x.o)} list` : `Krovvi changed something in ${appName(x.o)}` };
     case "share":
-      return { text: "shared a chat" };
+      return { text: "Shared a chat" };
     case "land":
-      return { text: "carried on a chat someone shared" };
+      return { text: "Carried on a chat someone shared" };
     case "join":
-      return { text: x.via === "guest" ? "opened Krovvi for the first time, as a guest" : `joined with ${viaWord(String(x.via ?? "email"))}` };
+      return { text: x.via === "guest" ? "Opened Krovvi for the first time, as a guest" : `Joined with ${viaWord(String(x.via ?? "email"))}` };
     case "open": {
       const n = Number(x.n ?? 1);
-      return { text: n > 1 ? `opened Krovvi (${n} times that day)` : "opened Krovvi" };
+      return { text: n > 1 ? `Opened Krovvi, ${n} times that day` : "Opened Krovvi" };
     }
     case "buzz":
-      return { text: "got a notification from Krovvi" };
+      return { text: "Krovvi sent a notification" };
     case "fail":
-      return { text: problemWords(x.f).replace(/^A /, "a ").replace(/^An /, "an "), bad: true };
+      return { text: problemWords(x.f), bad: true };
   }
 }

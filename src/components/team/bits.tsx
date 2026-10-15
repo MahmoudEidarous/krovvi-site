@@ -1,35 +1,60 @@
 "use client";
 
 /**
- * The board's small pieces, in the app's own look: flat calm cards on black,
- * ivory type, ivory pills for the choice that is on, and a person's ink on
- * their initials (the voice inks tint people and nothing else).
+ * The board's pieces, in the app's own night look (components/deep/tokens.ts,
+ * read from the shipped app): the near black ground, panes with a hairline
+ * edge, big numbers set light the way the app sets an answer's figures,
+ * people as their dotted letter in their own ink, and ivory only for what is
+ * chosen. No boxes inside boxes: a pane holds one thing, rows inside it are
+ * split by hairlines that start at the words.
  */
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
+import { DeepFace } from "@/components/deep/face";
 import { useReducedMotion } from "@/lib/use-reduced-motion";
 import type { Person } from "@/lib/team";
-import { initials, inkOf } from "./words";
+import { nameOf } from "./words";
 
-export function Card({ title, sub, right, children, className = "", pad = true }: { title?: ReactNode; sub?: ReactNode; right?: ReactNode; children: ReactNode; className?: string; pad?: boolean }) {
+export const T = {
+  ground: "#030303",
+  pane: "#0E0E10",
+  raised: "#18181A",
+  edge: "rgba(255,255,255,0.07)",
+  rule: "rgba(255,255,255,0.06)",
+  fg: "#EDEDEB",
+  fg2: "#D9D8D3",
+  soft: "#A9A8A2",
+  muted: "#8F8F8A",
+  faint: "#7A7A74",
+  up: "#8CC59A",
+  down: "#E5876B",
+  danger: "#C4574F",
+} as const;
+
+/** One thing on the page: a calm pane with a hairline edge. */
+export function Pane({ children, className = "", style }: { children: ReactNode; className?: string; style?: CSSProperties }) {
   return (
-    <section className={`rounded-[22px] bg-[#161615] ${pad ? "p-4 sm:p-5" : ""} ${className}`}>
-      {title || right ? (
-        <div className={`flex items-start justify-between gap-3 ${pad ? "" : "px-4 pt-4 sm:px-5 sm:pt-5"} mb-3.5`}>
-          <div className="min-w-0">
-            {title ? <h2 className="text-[15px] font-semibold tracking-[-0.01em] text-[#EDEDEB]">{title}</h2> : null}
-            {sub ? <p className="mt-0.5 text-[12.5px] leading-snug text-[#8F8F8A]">{sub}</p> : null}
-          </div>
-          {right ? <div className="shrink-0">{right}</div> : null}
-        </div>
-      ) : null}
+    <section className={`rounded-[20px] border border-white/[0.07] bg-[#0E0E10] ${className}`} style={style}>
       {children}
     </section>
   );
 }
 
-/** A number that rolls to its new value, and glows once when it goes up. */
+/** A pane's title line: the title, a quiet line under it, and something small at the right. */
+export function Head({ title, sub, right, className = "" }: { title: ReactNode; sub?: ReactNode; right?: ReactNode; className?: string }) {
+  return (
+    <div className={`flex items-start justify-between gap-4 ${className}`}>
+      <div className="min-w-0">
+        <h2 className="text-[15px] font-semibold leading-[20px] tracking-[-0.2px] text-[#EDEDEB]">{title}</h2>
+        {sub ? <p className="mt-1 text-[13px] leading-[18px] text-[#8F8F8A]">{sub}</p> : null}
+      </div>
+      {right ? <div className="shrink-0 pt-0.5">{right}</div> : null}
+    </div>
+  );
+}
+
+/** A number that rolls to its new value and glows once when it goes up. */
 export function Ticker({ value, format = (v) => Math.round(v).toLocaleString("en-US") }: { value: number; format?: (v: number) => string }) {
   const reduced = useReducedMotion();
   const [shown, setShown] = useState(value);
@@ -55,8 +80,7 @@ export function Ticker({ value, format = (v) => Math.round(v).toLocaleString("en
     let raf = 0;
     const step = (now: number) => {
       const k = Math.min(1, (now - start) / 750);
-      const eased = 1 - Math.pow(1 - k, 3);
-      setShown(a + (b - a) * eased);
+      setShown(a + (b - a) * (1 - Math.pow(1 - k, 3)));
       if (k < 1) raf = requestAnimationFrame(step);
       else from.current = b;
     };
@@ -69,89 +93,100 @@ export function Ticker({ value, format = (v) => Math.round(v).toLocaleString("en
   return <span className={bump ? "team-bump" : undefined}>{format(shown)}</span>;
 }
 
-export function Stat({ label, value, format, sub, delta, onClick }: { label: string; value: number; format?: (v: number) => string; sub?: ReactNode; delta?: ReactNode; onClick?: () => void }) {
-  const Tag = onClick ? "button" : "div";
+/**
+ * The page's opening line, big and light: "3 people used Krovvi today".
+ * The number and its noun in ivory, the rest a step back.
+ */
+export function Statement({ figure, noun, rest, under }: { figure: ReactNode; noun: string; rest: string; under?: ReactNode }) {
   return (
-    <Tag onClick={onClick} className={`flex min-w-0 flex-col rounded-[20px] bg-[#161615] p-4 text-left ${onClick ? "transition-colors duration-150 hover:bg-[#1B1B1A] active:bg-[#1F1F1E]" : ""}`}>
-      <span className="text-[12.5px] text-[#8F8F8A]">{label}</span>
-      <span className="mt-1.5 text-[30px] font-semibold leading-none tracking-[-0.03em] tabular-nums text-[#EDEDEB] sm:text-[34px]">
-        <Ticker value={value} format={format} />
-      </span>
-      {sub || delta ? (
-        <span className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-[12.5px] leading-snug text-[#A9A8A2]">
-          {delta}
-          {sub ? <span className="min-w-0">{sub}</span> : null}
-        </span>
-      ) : null}
-    </Tag>
-  );
-}
-
-/** Up or down against an earlier stretch, in the app's own up and down inks. */
-export function Delta({ now, then, label }: { now: number; then: number; label?: string }) {
-  const diff = now - then;
-  if (!then && !now) return null;
-  const up = diff > 0;
-  const same = diff === 0;
-  const color = same ? "#8F8F8A" : up ? "#8CC59A" : "#E5876B";
-  return (
-    <span className="inline-flex items-center gap-1 rounded-full px-1.5 py-[1px] text-[11.5px] font-medium tabular-nums" style={{ color, background: same ? "#1F1F1E" : `${color}1A` }} title={label}>
-      {same ? "same" : `${up ? "▲" : "▼"} ${Math.abs(diff).toLocaleString("en-US")}`}
-    </span>
-  );
-}
-
-export function Avatar({ person, size = 36, live = false }: { person: Pick<Person, "id" | "name" | "tag"> | undefined; size?: number; live?: boolean }) {
-  const ink = inkOf(person?.id ?? "x");
-  return (
-    <span className="relative inline-flex shrink-0" style={{ width: size, height: size }}>
-      <span
-        className="inline-flex h-full w-full items-center justify-center rounded-full font-semibold"
-        style={{ background: `${ink}24`, color: ink, boxShadow: `inset 0 0 0 1px ${ink}40`, fontSize: Math.round(size * 0.36), letterSpacing: "0.02em" }}
-        aria-hidden="true"
-      >
-        {initials(person)}
-      </span>
-      {live ? <span className="team-live absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-[#0A0A0A] bg-[#EDEDEB]" /> : null}
-    </span>
-  );
-}
-
-export function Pill({ children, tone = "plain" }: { children: ReactNode; tone?: "plain" | "new" | "team" | "bad" }) {
-  const styles: Record<string, string> = {
-    plain: "bg-[#1F1F1E] text-[#A9A8A2]",
-    new: "bg-[#EDEDEB] text-[#0A0A0A]",
-    team: "bg-[#1F1F1E] text-[#8F8F8A]",
-    bad: "bg-[#C4574F1F] text-[#E5876B]",
-  };
-  return <span className={`inline-flex items-center rounded-full px-2 py-[2px] text-[11px] font-medium leading-[1.4] ${styles[tone]}`}>{children}</span>;
-}
-
-/** One choice of a few, the one that is on in ivory. */
-export function Segmented<T extends string>({ value, options, onChange, label }: { value: T; options: Array<{ id: T; label: string }>; onChange: (v: T) => void; label: string }) {
-  return (
-    <div role="tablist" aria-label={label} className="inline-flex rounded-full bg-[#161615] p-[3px]">
-      {options.map((o) => {
-        const on = o.id === value;
-        return (
-          <button
-            key={o.id}
-            role="tab"
-            aria-selected={on}
-            onClick={() => onChange(o.id)}
-            className={`rounded-full px-3 py-1.5 text-[13px] font-medium transition-colors duration-150 ${on ? "bg-[#EDEDEB] text-[#0A0A0A]" : "text-[#A9A8A2] hover:text-[#EDEDEB]"}`}
-          >
-            {o.label}
-          </button>
-        );
-      })}
+    <div>
+      <h1 className="text-[34px] font-light leading-[40px] tracking-[-1.2px] text-[#EDEDEB] sm:text-[44px] sm:leading-[50px] sm:tracking-[-1.6px]">
+        <span className="tabular-nums">{figure}</span> {noun} <span className="text-[#8F8F8A]">{rest}</span>
+      </h1>
+      {under ? <div className="mt-3 text-[14px] leading-[20px] text-[#A9A8A2]">{under}</div> : null}
     </div>
   );
 }
 
-export function Chips<T extends string>({ value, options, onChange, label }: { value: T; options: Array<{ id: T; label: string; count?: number }>; onChange: (v: T) => void; label: string }) {
+export interface Metric {
+  label: string;
+  value: number;
+  format?: (v: number) => string;
+  /** A short line under the figure. */
+  note?: ReactNode;
+  onClick?: () => void;
+}
+
+/**
+ * Several figures in one pane, side by side with hairlines between them
+ * (two by two on a phone): the way a big product shows its key numbers,
+ * not a box for each.
+ */
+export function Metrics({ items }: { items: Metric[] }) {
+  const cols = items.length >= 4 ? "md:grid-cols-4" : items.length === 3 ? "md:grid-cols-3" : "md:grid-cols-2";
   return (
-    <div role="tablist" aria-label={label} className="flex flex-wrap gap-2">
+    <Pane className="overflow-hidden">
+      <div className={`grid grid-cols-2 ${cols}`}>
+        {items.map((m, i) => {
+          const Tag = m.onClick ? "button" : "div";
+          const edges = [i % 2 === 1 ? "border-l" : "", i >= 2 ? "border-t md:border-t-0" : "", i % 4 !== 0 ? "md:border-l" : "md:border-l-0"].join(" ");
+          return (
+            <Tag
+              key={m.label}
+              onClick={m.onClick}
+              className={`min-w-0 border-white/[0.06] px-5 py-[18px] text-left ${edges} ${m.onClick ? "transition-colors duration-150 hover:bg-white/[0.02]" : ""}`}
+            >
+              <div className="text-[13px] font-medium leading-[18px] text-[#8F8F8A]">{m.label}</div>
+              <div className="mt-2 text-[34px] font-light leading-[38px] tracking-[-1.2px] tabular-nums text-[#EDEDEB]">
+                <Ticker value={m.value} format={m.format} />
+              </div>
+              {m.note ? <div className="mt-1.5 truncate text-[12.5px] leading-[17px] text-[#7A7A74]">{m.note}</div> : null}
+            </Tag>
+          );
+        })}
+      </div>
+    </Pane>
+  );
+}
+
+/** "4 more than this time yesterday": a change in words, with the app's up and down inks on the number only. */
+export function Change({ now, then, when }: { now: number; then: number; when: string }) {
+  const diff = now - then;
+  if (!now && !then) return <span>none {when} either</span>;
+  if (diff === 0) return <span>same as {when}</span>;
+  return (
+    <span>
+      <span style={{ color: diff > 0 ? T.up : T.down }}>
+        {Math.abs(diff).toLocaleString("en-US")} {diff > 0 ? "more" : "fewer"}
+      </span>{" "}
+      than {when}
+    </span>
+  );
+}
+
+/** A person: their first letter in Krovvi's dots, in their own ink, as the app draws them. */
+export function Face({ person, id, size = 32, live = false }: { person: Pick<Person, "id" | "name" | "tag"> | undefined; id?: string; size?: number; live?: boolean }) {
+  return (
+    <span className="relative inline-flex shrink-0" style={{ width: size, height: size }}>
+      <DeepFace name={nameOf(person, id)} size={size} ground={T.raised} />
+      {live ? <span className="team-live absolute -bottom-[1px] -right-[1px] h-[10px] w-[10px] rounded-full border-2 border-[#0E0E10] bg-[#EDEDEB]" /> : null}
+    </span>
+  );
+}
+
+export function Tag({ children, tone = "plain" }: { children: ReactNode; tone?: "plain" | "new" | "bad" }) {
+  const styles: Record<string, string> = {
+    plain: "text-[#8F8F8A] bg-white/[0.06]",
+    new: "text-[#030303] bg-[#EDEDEB]",
+    bad: "text-[#E5876B] bg-[#E5876B]/[0.12]",
+  };
+  return <span className={`inline-flex items-center rounded-full px-[7px] py-[1px] text-[11px] font-medium leading-[16px] ${styles[tone]}`}>{children}</span>;
+}
+
+/** One choice of a few, on a quiet track; the chosen one in ivory, as the app chooses. */
+export function Segmented<V extends string>({ value, options, onChange, label, size = "md" }: { value: V; options: Array<{ id: V; label: string }>; onChange: (v: V) => void; label: string; size?: "sm" | "md" }) {
+  return (
+    <div role="tablist" aria-label={label} className="inline-flex max-w-full overflow-x-auto rounded-full border border-white/[0.07] bg-[#0E0E10] p-[3px] [scrollbar-width:none]">
       {options.map((o) => {
         const on = o.id === value;
         return (
@@ -160,10 +195,9 @@ export function Chips<T extends string>({ value, options, onChange, label }: { v
             role="tab"
             aria-selected={on}
             onClick={() => onChange(o.id)}
-            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[13px] font-medium transition-colors duration-150 ${on ? "border-[#EDEDEB] bg-[#EDEDEB] text-[#0A0A0A]" : "border-[#262625] text-[#A9A8A2] hover:border-[#3A3A38] hover:text-[#EDEDEB]"}`}
+            className={`shrink-0 whitespace-nowrap rounded-full font-medium transition-colors duration-150 ${size === "sm" ? "px-3 py-[5px] text-[12.5px]" : "px-3.5 py-1.5 text-[13px]"} ${on ? "bg-[#EDEDEB] text-[#030303]" : "text-[#A9A8A2] hover:text-[#EDEDEB]"}`}
           >
             {o.label}
-            {o.count !== undefined ? <span className={`tabular-nums ${on ? "text-[#0A0A0A]/60" : "text-[#7A7A74]"}`}>{o.count}</span> : null}
           </button>
         );
       })}
@@ -172,21 +206,19 @@ export function Chips<T extends string>({ value, options, onChange, label }: { v
 }
 
 export function Quiet({ children }: { children: ReactNode }) {
-  return <p className="py-6 text-center text-[13.5px] text-[#8F8F8A]">{children}</p>;
+  return <p className="py-8 text-center text-[13.5px] text-[#7A7A74]">{children}</p>;
 }
 
-/** A key for a chart's colors. */
-export function Legend({ items }: { items: Array<{ color: string; label: string; dashed?: boolean; outline?: boolean }> }) {
+/** A key for a chart, small and quiet, beside its title. */
+export function Key({ items }: { items: Array<{ color: string; label: string; line?: "solid" | "dotted" }> }) {
   return (
     <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-[12px] text-[#8F8F8A]">
       {items.map((i) => (
         <span key={i.label} className="inline-flex items-center gap-1.5">
-          {i.dashed ? (
-            <span className="h-0 w-3.5 border-t-2 border-dotted" style={{ borderColor: i.color }} />
-          ) : i.outline ? (
-            <span className="h-2.5 w-2.5 rounded-[3px] border border-dashed" style={{ borderColor: i.color }} />
+          {i.line ? (
+            <span className="w-3.5" style={{ borderTop: `${i.line === "dotted" ? "1.5px dotted" : "2px solid"} ${i.color}` }} />
           ) : (
-            <span className="h-2 w-2 rounded-[3px]" style={{ background: i.color }} />
+            <span className="h-[7px] w-[7px] rounded-full" style={{ background: i.color }} />
           )}
           {i.label}
         </span>

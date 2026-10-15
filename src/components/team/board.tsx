@@ -145,9 +145,9 @@ export function TeamBoard({ boardKey, snapshot }: { boardKey?: string; snapshot?
   }
 
   return (
-    <div className="min-h-dvh bg-[#0A0A0A] text-[#EDEDEB]">
+    <div className="min-h-dvh bg-[#030303] text-[#EDEDEB] [font-feature-settings:'kern','ss01']">
       <Header tab={tab} go={go} checked={checked} offline={offline} snapshot={!!snapshot} />
-      <main className="mx-auto w-full max-w-[1180px] px-4 pb-[calc(104px+env(safe-area-inset-bottom))] pt-4 sm:px-6 md:pb-20 md:pt-6">
+      <main className="mx-auto w-full max-w-[1240px] px-4 pb-[calc(110px+env(safe-area-inset-bottom))] pt-6 sm:px-8 md:pb-24 md:pt-10">
         <div key={tab} className="team-tab">
           {tab === "live" ? <LiveTab board={board} now={now} fresh={fresh} onPerson={setPersonId} go={go} /> : null}
           {tab === "people" ? <PeopleTab board={board} now={now} onPerson={setPersonId} /> : null}
@@ -161,76 +161,83 @@ export function TeamBoard({ boardKey, snapshot }: { boardKey?: string; snapshot?
   );
 }
 
+function Brand() {
+  return (
+    <span className="flex min-w-0 items-center gap-2.5">
+      <Mark size={22} />
+      <span className="text-[17px] font-semibold tracking-[-0.02em] text-[#EDEDEB]">krovvi</span>
+      <span className="text-[17px] tracking-[-0.02em] text-[#5E5E5A]">team</span>
+    </span>
+  );
+}
+
 function Header({ tab, go, checked, offline, snapshot }: { tab: Tab; go: (t: Tab) => void; checked: number | null; offline: boolean; snapshot: boolean }) {
   return (
-    <header className="sticky top-0 z-30 border-b border-[#1A1A19] bg-[#0A0A0A]/80 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
-      <div className="mx-auto flex h-14 w-full max-w-[1180px] items-center justify-between gap-4 px-4 sm:px-6">
-        <div className="flex min-w-0 items-center gap-2.5">
-          <Mark size={26} />
-          <span className="text-[17px] font-semibold tracking-[-0.01em]">Krovvi</span>
-          <span className="text-[15px] text-[#8F8F8A]">Team</span>
-        </div>
-        <nav className="hidden items-center gap-1 rounded-full bg-[#161615] p-[3px] md:flex" aria-label="Board">
+    <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-[#030303]/80 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
+      <div className="mx-auto grid h-14 w-full max-w-[1240px] grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 sm:px-8">
+        <Brand />
+        <nav className="hidden items-center gap-0.5 md:flex" aria-label="Board">
           {TABS.map((t) => (
             <button
               key={t.id}
               onClick={() => go(t.id)}
               aria-current={tab === t.id ? "page" : undefined}
-              className={`rounded-full px-4 py-1.5 text-[13.5px] font-medium transition-colors duration-150 ${tab === t.id ? "bg-[#EDEDEB] text-[#0A0A0A]" : "text-[#A9A8A2] hover:text-[#EDEDEB]"}`}
+              className={`rounded-full px-4 py-1.5 text-[14px] font-medium transition-colors duration-150 ${tab === t.id ? "bg-white/[0.08] text-[#EDEDEB]" : "text-[#8F8F8A] hover:text-[#D9D8D3]"}`}
             >
               {t.label}
             </button>
           ))}
         </nav>
-        <LivePill checked={checked} offline={offline} snapshot={snapshot} />
+        <span className="col-start-3 justify-self-end">
+          <LiveMark checked={checked} offline={offline} snapshot={snapshot} />
+        </span>
       </div>
     </header>
   );
 }
 
-function LivePill({ checked, offline, snapshot }: { checked: number | null; offline: boolean; snapshot: boolean }) {
+/** Live and how fresh, in a few words; the dot breathes while the board is current. */
+function LiveMark({ checked, offline, snapshot }: { checked: number | null; offline: boolean; snapshot: boolean }) {
   const now = useNow(1_000);
-  if (snapshot) {
-    return <span className="rounded-full bg-[#161615] px-3 py-1.5 text-[12.5px] font-medium text-[#A9A8A2]">Snapshot</span>;
-  }
+  if (snapshot) return <span className="text-[13px] font-medium text-[#8F8F8A]">Snapshot</span>;
   const late = !checked || now - checked > 20_000;
   const live = !offline && !late;
   const since = checked ? Math.max(0, Math.round((now - checked) / 1000)) : null;
   return (
-    <span className="inline-flex items-center gap-2 rounded-full bg-[#161615] px-3 py-1.5 text-[12.5px] font-medium" aria-live="polite">
-      <span className={`h-2 w-2 rounded-full ${live ? "team-live bg-[#EDEDEB]" : "bg-[#7A7A74]"}`} />
-      <span className={live ? "text-[#EDEDEB]" : "text-[#A9A8A2]"}>{live ? "Live" : offline ? "Reconnecting" : "Catching up"}</span>
-      {since !== null && live ? <span className="hidden tabular-nums text-[#7A7A74] sm:inline">{since < 3 ? "just now" : `${since}s ago`}</span> : null}
+    <span className="inline-flex items-center gap-2 text-[13px] font-medium" aria-live="polite">
+      <span className={`h-[7px] w-[7px] rounded-full ${live ? "team-live bg-[#EDEDEB]" : "bg-[#5E5E5A]"}`} />
+      <span className={live ? "text-[#EDEDEB]" : "text-[#8F8F8A]"}>{live ? "Live" : offline ? "Reconnecting" : "Catching up"}</span>
+      {since !== null && live ? <span className="hidden tabular-nums text-[#5E5E5A] sm:inline">{since < 3 ? "now" : `${since}s`}</span> : null}
     </span>
   );
 }
 
 function TabIcon({ id, on }: { id: Tab; on: boolean }) {
-  const stroke = on ? "#EDEDEB" : "#8F8F8A";
-  const common = { fill: "none", stroke, strokeWidth: 1.7, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  const stroke = on ? "#EDEDEB" : "#7A7A74";
+  const common = { fill: "none", stroke, strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   return (
     <svg width={24} height={24} viewBox="0 0 24 24" aria-hidden="true">
       {id === "live" ? (
         <g {...common}>
-          <circle cx={12} cy={12} r={2.2} fill={stroke} stroke="none" />
-          <path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4" />
-          <path d="M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14" opacity={0.6} />
+          <circle cx={12} cy={12} r={2.1} fill={stroke} stroke="none" />
+          <path d="M8 8a5.6 5.6 0 0 0 0 8M16 8a5.6 5.6 0 0 1 0 8" />
+          <path d="M5.2 5.2a9.6 9.6 0 0 0 0 13.6M18.8 5.2a9.6 9.6 0 0 1 0 13.6" opacity={0.55} />
         </g>
       ) : id === "people" ? (
         <g {...common}>
-          <circle cx={9} cy={9} r={3.2} />
-          <path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5" />
-          <circle cx={16.5} cy={8.5} r={2.6} opacity={0.7} />
-          <path d="M16 13.6c2.3 0 4 1.5 4.5 4.4" opacity={0.7} />
+          <circle cx={9.5} cy={8.5} r={3.2} />
+          <path d="M3.8 19.2c.7-3.1 2.9-4.8 5.7-4.8s5 1.7 5.7 4.8" />
+          <path d="M15.6 5.6a3 3 0 0 1 0 5.8M17.6 14.6c1.5.6 2.4 2 2.7 4.2" opacity={0.6} />
         </g>
       ) : id === "growth" ? (
         <g {...common}>
-          <path d="M5 19v-4M10 19v-7M15 19v-5M20 19V6" />
+          <path d="M4 17.5l5-5 3.5 3.5L20 8.5" />
+          <path d="M15.5 8.5H20V13" />
         </g>
       ) : (
         <g {...common}>
-          <circle cx={12} cy={13.5} r={7} />
-          <path d="M12 13.5V10M10 3.5h4M18 7l1.4-1.4" />
+          <circle cx={12} cy={13.2} r={7} />
+          <path d="M12 13.2V9.6M10 3.6h4" />
         </g>
       )}
     </svg>
@@ -239,14 +246,14 @@ function TabIcon({ id, on }: { id: Tab; on: boolean }) {
 
 function TabBar({ tab, go }: { tab: Tab; go: (t: Tab) => void }) {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-[#1A1A19] bg-[#0A0A0A]/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl md:hidden" aria-label="Board">
-      <div className="mx-auto grid h-[62px] max-w-[520px] grid-cols-4">
+    <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-white/[0.06] bg-[#030303]/85 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl md:hidden" aria-label="Board">
+      <div className="mx-auto grid h-[60px] max-w-[520px] grid-cols-4">
         {TABS.map((t) => {
           const on = tab === t.id;
           return (
-            <button key={t.id} onClick={() => go(t.id)} aria-current={on ? "page" : undefined} className="flex flex-col items-center justify-center gap-0.5">
+            <button key={t.id} onClick={() => go(t.id)} aria-current={on ? "page" : undefined} className="flex flex-col items-center justify-center gap-[3px]">
               <TabIcon id={t.id} on={on} />
-              <span className={`text-[10.5px] font-medium ${on ? "text-[#EDEDEB]" : "text-[#8F8F8A]"}`}>{t.label}</span>
+              <span className={`text-[10.5px] font-medium tracking-[0.01em] ${on ? "text-[#EDEDEB]" : "text-[#7A7A74]"}`}>{t.label}</span>
             </button>
           );
         })}
@@ -257,30 +264,24 @@ function TabBar({ tab, go }: { tab: Tab; go: (t: Tab) => void }) {
 
 function Notice({ title, line }: { title: string; line: string }) {
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center bg-[#0A0A0A] px-8 text-center text-[#EDEDEB]">
-      <Mark size={56} />
-      <h1 className="mt-6 text-[22px] font-semibold tracking-[-0.02em]">{title}</h1>
-      <p className="mt-2 max-w-[300px] text-[15px] leading-relaxed text-[#A9A8A2]">{line}</p>
+    <div className="flex min-h-dvh flex-col items-center justify-center bg-[#030303] px-8 text-center text-[#EDEDEB]">
+      <Mark size={48} />
+      <h1 className="mt-7 text-[24px] font-light tracking-[-0.6px]">{title}</h1>
+      <p className="mt-2 max-w-[300px] text-[14px] leading-relaxed text-[#8F8F8A]">{line}</p>
     </div>
   );
 }
 
 function Loading() {
   return (
-    <div className="min-h-dvh bg-[#0A0A0A]">
-      <div className="mx-auto flex h-14 max-w-[1180px] items-center gap-2.5 px-4 pt-[env(safe-area-inset-top)] sm:px-6">
-        <Mark size={26} />
-        <span className="text-[17px] font-semibold text-[#EDEDEB]">Krovvi</span>
-        <span className="text-[15px] text-[#8F8F8A]">Team</span>
+    <div className="min-h-dvh bg-[#030303]">
+      <div className="mx-auto flex h-14 max-w-[1240px] items-center px-4 pt-[env(safe-area-inset-top)] sm:px-8">
+        <Brand />
       </div>
-      <div className="mx-auto grid max-w-[1180px] gap-3 px-4 pt-4 sm:px-6">
-        <div className="team-shimmer h-[132px] rounded-[22px]" />
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {[0, 1, 2, 3].map((i) => (
-            <div key={i} className="team-shimmer h-[112px] rounded-[20px]" />
-          ))}
-        </div>
-        <div className="team-shimmer h-[240px] rounded-[22px]" />
+      <div className="mx-auto grid max-w-[1240px] gap-6 px-4 pt-10 sm:px-8">
+        <div className="team-shimmer h-[44px] w-[min(520px,90%)] rounded-full" />
+        <div className="team-shimmer h-[118px] rounded-[20px]" />
+        <div className="team-shimmer h-[280px] rounded-[20px]" />
       </div>
     </div>
   );
