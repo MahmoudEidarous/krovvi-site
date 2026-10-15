@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/identity";
  * robots.txt. Every crawler may read the whole site.
  *
  * The pages people send each other (/s a shared chat, /o an object, /r what
- * was agreed) and the dev views (/dev, /s/dev, /o/dev) stay out of search by
+ * was agreed, /team the founders' board) and the dev views (/dev, /s/dev, /o/dev) stay out of search by
  * their own noindex, in the page and in an X-Robots-Tag header
  * (next.config.ts). A search engine only sees a noindex on a page it may
  * fetch, so they are not blocked here: blocked, a linked page could still be
@@ -19,7 +19,7 @@ import { SITE_URL } from "@/lib/identity";
  * them (iMessage and WhatsApp fetch from the phone; X, LinkedIn, Slack,
  * Telegram and Discord use their own agents), so every preview still draws.
  */
-const PEOPLES_LINKS = ["/s/", "/o/", "/r/"];
+const PEOPLES_LINKS = ["/s/", "/o/", "/r/", "/team/"];
 
 const AI_CRAWLERS = [
   "GPTBot",

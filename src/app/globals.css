@@ -666,3 +666,146 @@ body {
     animation: none !important;
   }
 }
+
+/* The team board (/team): bars rise once, a number that went up glows once,
+   the live dot breathes, a new line in the feed lights up and fades, a tab
+   settles in, the person page rises. With motion reduced nothing moves. */
+.team-grow rect {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: team-grow 640ms var(--ease) both;
+}
+@keyframes team-grow {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.team-draw {
+  animation: team-fade 700ms var(--ease) both;
+}
+.team-fade {
+  animation: team-fade 220ms ease-out both;
+}
+@keyframes team-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.team-fill {
+  transition: width 700ms var(--ease);
+}
+.team-bump {
+  animation: team-bump 1.4s ease-out;
+}
+@keyframes team-bump {
+  0% {
+    text-shadow: 0 0 22px rgba(237, 237, 235, 0.75);
+  }
+  100% {
+    text-shadow: 0 0 0 rgba(237, 237, 235, 0);
+  }
+}
+.team-live {
+  animation: team-live 2.2s ease-out infinite;
+}
+@keyframes team-live {
+  0% {
+    box-shadow: 0 0 0 0 rgba(237, 237, 235, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(237, 237, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(237, 237, 235, 0);
+  }
+}
+.team-new {
+  border-radius: 14px;
+  animation: team-new 3.2s ease-out;
+}
+@keyframes team-new {
+  0% {
+    background: rgba(237, 237, 235, 0.1);
+    transform: translateY(-4px);
+  }
+  12% {
+    transform: none;
+  }
+  100% {
+    background: rgba(237, 237, 235, 0);
+  }
+}
+.team-tab {
+  animation: team-tab 260ms var(--ease) both;
+}
+@keyframes team-tab {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.team-sheet {
+  animation: team-sheet-up 380ms var(--ease) both;
+}
+@keyframes team-sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+@media (min-width: 768px) {
+  .team-sheet {
+    animation-name: team-sheet-in;
+  }
+}
+@keyframes team-sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+.team-shimmer {
+  background: linear-gradient(100deg, #141413 30%, #1b1b1a 50%, #141413 70%);
+  background-size: 300% 100%;
+  animation: team-shimmer 1.4s linear infinite;
+}
+@keyframes team-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-grow rect,
+  .team-draw,
+  .team-fade,
+  .team-bump,
+  .team-live,
+  .team-new,
+  .team-tab,
+  .team-sheet,
+  .team-shimmer {
+    animation: none !important;
+  }
+  .team-fill {
+    transition: none;
+  }
+}
