@@ -8,7 +8,7 @@
  * The door's address is the one the phone uses (EXPO_PUBLIC_DOOR_URL in the app); NEXT_PUBLIC_DOOR_URL sets it here.
  */
 
-export const DOOR = (process.env.NEXT_PUBLIC_DOOR_URL ?? "https://krovvi-door.ecs.eu-central-1.on.aws").trim().replace(/\/+$/, "");
+export const DOOR = (process.env.NEXT_PUBLIC_DOOR_URL ?? "https://kr-58cc7a7744a64d8ba9846c6398639fff.ecs.eu-central-1.on.aws").trim().replace(/\/+$/, "");
 
 /** A link's token, as the database makes it. */
 export const TOKEN = /^[A-Za-z0-9_-]{20,40}$/;
