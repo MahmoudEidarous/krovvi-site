@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       { source: "/s/:path*", headers: PRIVATE_LINK_HEADERS },
       // A question someone's Krovvi made for their friends.
       { source: "/a/:path*", headers: PRIVATE_LINK_HEADERS },
-      // The founders' board: a link only they have.
+      // The founders' board and their outreach list: links only they have.
       { source: "/team/:path*", headers: PRIVATE_LINK_HEADERS },
       // Dev views, now and later: never in a search engine, even one whose page forgets to say so.
       { source: "/dev/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
@@ -30,7 +30,12 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     // krovvi.com/deck opens the deck's own page (public/deck, a standalone HTML deck with a /deck/ base).
-    return [{ source: "/deck", destination: "/deck/index.html" }];
+    // krovvi.com/team/outreach is the founders' investor list (public/team/outreach): sealed, it opens
+    // only with the key after the # in one of their two links, so the public code holds nothing readable.
+    return [
+      { source: "/deck", destination: "/deck/index.html" },
+      { source: "/team/outreach", destination: "/team/outreach/index.html" },
+    ];
   },
   async redirects() {
     // One canonical host. www lands on the apex, permanently.
