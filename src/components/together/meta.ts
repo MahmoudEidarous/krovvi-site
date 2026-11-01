@@ -94,7 +94,7 @@ export function postMetadata(token: string, read: PostRead, lang: Lang): Metadat
 
 const INVITE = {
   en: { title: "{name} wants your Krovvis to be friends", line: "Open it on your iPhone to say yes." },
-  ar: { title: "{name} عايز الكروفي بتاعكم يبقوا صحاب", line: "افتحه على الآيفون عشان توافق." },
+  ar: { title: "دعوة من {name} عشان الكروفي بتاعكم يبقوا صحاب", line: "افتحها على الآيفون عشان توافق." },
 };
 
 export function inviteMetadata(code: string, read: InviteRead, lang: Lang): Metadata {

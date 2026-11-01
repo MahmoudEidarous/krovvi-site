@@ -18,14 +18,14 @@ import { momentWords, namesWords, PLAN_STATES, type PlanState, type WebPostView 
 
 const C = {
   hint: { en: "Tap every one that works for you", ar: "دوس على كل اللي يناسبك" },
-  in: { en: "I’m in", ar: "أنا جاي" },
+  in: { en: "I’m in", ar: "هاجي" },
   maybe: { en: "Maybe", ar: "يمكن" },
   cant: { en: "Can’t", ar: "مش هقدر" },
   send: { en: "Send", ar: "ابعت" },
   sending: { en: "Sending", ar: "بيتبعت" },
-  sentIn: { en: "You’re in. {name} will see it.", ar: "إنت جاي. {name} هيشوفها." },
-  sentMaybe: { en: "You said maybe. {name} will see it.", ar: "قلت يمكن. {name} هيشوفها." },
-  sentCant: { en: "You can’t make it. {name} will see it.", ar: "مش هتقدر. {name} هيشوفها." },
+  sentIn: { en: "You’re in. {name} will see it.", ar: "قلت إنك هتيجي. ردك هيوصل لـ{name}." },
+  sentMaybe: { en: "You said maybe. {name} will see it.", ar: "قلت يمكن. ردك هيوصل لـ{name}." },
+  sentCant: { en: "You can’t make it. {name} will see it.", ar: "قلت مش هينفع. ردك هيوصل لـ{name}." },
   change: { en: "Change my answer", ar: "غيّر ردي" },
   settled: { en: "Settled", ar: "اتحسمت" },
   areYouIn: { en: "Are you in?", ar: "هتيجي؟" },
@@ -33,7 +33,7 @@ const C = {
   whoIn: { en: "In", ar: "جايين" },
   whoMaybe: { en: "Maybe", ar: "يمكن" },
   whoCant: { en: "Can’t", ar: "مش هيقدروا" },
-  nobody: { en: "Nobody has answered yet. Be the first.", ar: "لسه محدش رد. خليك أول واحد." },
+  nobody: { en: "Nobody has answered yet.", ar: "لسه محدش رد." },
   free: { en: "No app needed. Just your first name.", ar: "من غير أبلكيشن. اسمك الأول بس." },
 } satisfies Record<string, Words>;
 

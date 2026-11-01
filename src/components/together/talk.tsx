@@ -19,7 +19,7 @@ const C = {
   krovvi: { en: "{name}’s Krovvi", ar: "كروفي {name}" },
   replay: { en: "Replay", ar: "شغّلها تاني" },
   all: { en: "Show it all", ar: "اعرضها كلها" },
-  typing: { en: "{name} is typing", ar: "{name} بيكتب" },
+  typing: { en: "{name} is typing", ar: "{name}، جاري الكتابة" },
 } satisfies Record<string, Words>;
 
 /** How long a line stays alone before the next one: long enough to read it, never long enough to wait. */
