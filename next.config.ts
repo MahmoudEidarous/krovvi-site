@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 /**
- * Pages opened by a link someone was sent (an object, a shared chat, a question for friends): never
+ * Pages opened by a link someone was sent (an object, a shared chat, a question for friends, a Together post or
+ * invite): never
  * in a search engine or an archive, never cached, and the link never passed
  * on to whatever they tap next. The page itself says noindex too; robots.txt
  * must not block these paths, or a crawler could never read that.
@@ -19,6 +20,9 @@ const nextConfig: NextConfig = {
       { source: "/s/:path*", headers: PRIVATE_LINK_HEADERS },
       // A question someone's Krovvi made for their friends.
       { source: "/a/:path*", headers: PRIVATE_LINK_HEADERS },
+      // Krovvi Together: a post someone sent (an episode, two Krovvis talking, a plan, a character) and an invite.
+      { source: "/e/:path*", headers: PRIVATE_LINK_HEADERS },
+      { source: "/k/:path*", headers: PRIVATE_LINK_HEADERS },
       // The founders' board and their outreach list: links only they have.
       { source: "/team/:path*", headers: PRIVATE_LINK_HEADERS },
       // Dev views, now and later: never in a search engine, even one whose page forgets to say so.

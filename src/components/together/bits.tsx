@@ -112,13 +112,17 @@ export function OffPage({ lang, offline = false, onAgain }: { lang: Lang; offlin
   );
 }
 
-/** While the first read is still on its way in the browser (the server's read could not be had). */
+/**
+ * While the post is on its way. The K shows only after 700 ms: a read that comes quickly (nearly all of them) paints
+ * the post straight under the same top, with nothing flashing in between.
+ */
 export function Waiting({ lang }: { lang: Lang }) {
   return (
-    <Shell lang={lang} width={520}>
-      <div className="flex justify-center py-24" role="status" aria-label={lang === "ar" ? "بيحمّل" : "Loading"}>
+    <Shell lang={lang} width={600}>
+      <div className="flex justify-center py-24" role="status" aria-label={lang === "ar" ? "بيحمّل" : "Loading"} style={{ opacity: 0, animation: "tg-late 1ms linear 700ms forwards" }}>
         <Mark size={34} className="animate-pulse" />
       </div>
+      <style>{`@keyframes tg-late{to{opacity:1}}`}</style>
     </Shell>
   );
 }
