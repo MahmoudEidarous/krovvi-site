@@ -102,7 +102,8 @@ const CHARS_AR: Record<string, WebCharacter> = {
 };
 
 const HOUR = 3_600_000;
-const NOW = Date.UTC(2026, 10, 1, 18, 0);
+// The comments are this many minutes old when the dev server starts.
+const NOW = Date.now();
 const none = { reaction: null, answer: null } as WebPostView["mine"];
 
 function post(p: Partial<WebPostView> & Pick<WebPostView, "token" | "kind" | "title">): WebPostView {
