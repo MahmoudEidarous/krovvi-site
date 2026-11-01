@@ -6,6 +6,7 @@ import { Waiting } from "@/components/together/bits";
 import { InvitePage } from "@/components/together/invite-page";
 import { inviteMetadata, iosOfHeader, langOfHeader } from "@/components/together/meta";
 import { readInvite, type InviteRead, type Lang } from "@/lib/together";
+import { siteHeaders } from "@/lib/together-site";
 
 /**
  * An invite for two people's Krovvis to be friends (krovvi.com/k/<code>; components/together/invite-page.tsx). Read
@@ -13,7 +14,7 @@ import { readInvite, type InviteRead, type Lang } from "@/lib/together";
  * wants your Krovvis to be friends") and so the page paints at once. It speaks the visitor's own language.
  */
 
-const read = cache((code: string): Promise<InviteRead> => readInvite(code, { signal: AbortSignal.timeout(2500) }));
+const read = cache(async (code: string): Promise<InviteRead> => readInvite(code, { signal: AbortSignal.timeout(2500), headers: siteHeaders(await headers()) }));
 
 export async function generateMetadata({ params }: { params: Promise<{ code: string }> }): Promise<Metadata> {
   const { code } = await params;
