@@ -514,8 +514,9 @@ function Comments({ post, lang, now, name, onComment, onChangeName }: { post: We
                     </span>
                     <span className="shrink-0" style={{ ...STEP.meta, color: INK.faint }}>{agoWords(c.at, now, lang)}</span>
                   </p>
-                  <p dir="auto" style={{ ...STEP.body, textAlign: "start", whiteSpace: "pre-wrap", wordBreak: "break-word", marginTop: 1 }}>
-                    {c.text}
+                  {/* As the site's rows do: the line stands with the page (under the name), and reads in its own direction. */}
+                  <p style={{ ...STEP.body, textAlign: "start", whiteSpace: "pre-wrap", wordBreak: "break-word", marginTop: 1 }}>
+                    <bdi dir="auto">{c.text}</bdi>
                   </p>
                 </div>
               </li>

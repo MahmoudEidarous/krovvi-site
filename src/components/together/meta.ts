@@ -97,8 +97,15 @@ const INVITE = {
   ar: { title: "دعوة من {name} عشان الكروفي بتاعكم يبقوا صحاب", line: "افتحها على الآيفون عشان توافق." },
 };
 
+const RAN_OUT = {
+  en: { title: "This invite has run out", line: "Ask {name} to send a new one." },
+  ar: { title: "الدعوة دي خلصت", line: "اطلب من {name} دعوة جديدة." },
+};
+
 export function inviteMetadata(code: string, read: InviteRead, lang: Lang): Metadata {
-  if (!read.ok || !read.invite.valid) return plain(OFF[lang].title, OFF[lang].line, lang);
+  if (!read.ok) return plain(OFF[lang].title, OFF[lang].line, lang);
+  // An invite that ran out says so, as its page does, and who to ask; still no picture.
+  if (!read.invite.valid) return plain(RAN_OUT[lang].title, RAN_OUT[lang].line.replace("{name}", read.invite.name), lang);
   const invite = read.invite;
   const title = INVITE[lang].title.replace("{name}", invite.name);
   const line = INVITE[lang].line;

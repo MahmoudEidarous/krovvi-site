@@ -2,10 +2,10 @@
 
 /**
  * Two Krovvis talking (Krovvi Talks, catch8 docs/TOGETHER-2026-11-01.md): each Krovvi as its person's character, one
- * on each side, as a chat. The first time this browser sees it, it plays: line by line in the places they will
- * stand (so the page never jumps), paced by how long the line before was, starting once the talk is on screen. After
- * that it shows whole, with Replay. While the talk is still going (the server's `done` is false) new lines play as
- * they come and the other side is shown typing. With reduced motion, or no scripts, every line is simply there.
+ * on each side, as a chat. The first time this browser sees it, it plays once it is on screen: line by line, as a
+ * messaging app would, each speaker typing before they speak and paced by how long the line before was. After that
+ * it shows whole, with Replay. While the talk is still going (the server's `done` is false) new lines play as they
+ * come and the other side is shown typing. With reduced motion every line is simply there, and without scripts too.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -43,8 +43,8 @@ export function TalkBody({ post, lang, token }: { post: WebPostView; lang: Lang;
   const talk = post.talk!;
   const lines = talk.lines;
   const sides = { a: sideOf(talk.a, post, lang), b: sideOf(talk.b, post, lang) };
-  // "wait" is the server's drawing and the first one in the browser: the lines hold their places, unseen, until the
-  // browser knows whether this person has watched it before.
+  // "wait" is the server's drawing and the first one in the browser: nothing is said yet until the browser knows
+  // whether this person has watched it before (a browser without scripts gets the whole talk from the noscript).
   const [mode, setMode] = useState<"wait" | "play" | "all">("wait");
   const [shown, setShown] = useState(lines.length);
   const [inView, setInView] = useState(false);
@@ -93,22 +93,34 @@ export function TalkBody({ post, lang, token }: { post: WebPostView; lang: Lang;
     return () => window.clearTimeout(t);
   }, [mode, inView, shown, lines, talk.done, token]);
 
-  const visible = (i: number) => mode === "all" || (mode === "play" && i < shown);
-  const caughtUp = mode !== "wait" && shown >= lines.length;
   const last = lines[lines.length - 1];
   const nextSide: "a" | "b" = last ? (last.side === "a" ? "b" : "a") : "a";
+  // What is drawn: the lines said so far (all of them once seen), then whoever is typing: the next line's speaker
+  // while it plays, or the other side of a talk that is still going once every line is in.
+  const said = mode === "all" ? lines.length : mode === "play" ? Math.min(shown, lines.length) : 0;
+  const typing: "a" | "b" | null = mode === "play" && shown < lines.length ? lines[shown].side : mode !== "wait" && !talk.done && said >= lines.length ? nextSide : null;
+  const draw = (count: number, animate: boolean, typingSide: "a" | "b" | null) =>
+    lines.slice(0, count).map((line, i) => {
+      const startRun = i === 0 || lines[i - 1].side !== line.side;
+      // The picture sits by the last line of a run; when that side is typing on, it moves to the typing bubble.
+      const endRun = i === count - 1 ? typingSide !== line.side : lines[i + 1].side !== line.side;
+      return <Line key={i} start={line.side === "a"} side={sides[line.side]} text={line.text} startRun={startRun} endRun={endRun} animate={animate} />;
+    });
 
   return (
     <div ref={box}>
-      <div className="flex flex-col" style={{ gap: 4 }}>
-        {lines.map((line, i) => {
-          const side = sides[line.side];
-          const startRun = i === 0 || lines[i - 1].side !== line.side;
-          const endRun = i === lines.length - 1 || lines[i + 1].side !== line.side;
-          return <Line key={i} start={line.side === "a"} side={side} text={line.text} startRun={startRun} endRun={endRun} on={visible(i)} />;
-        })}
-        {!talk.done && caughtUp ? <Typing start={nextSide === "a"} side={sides[nextSide]} lang={lang} /> : null}
+      <div className="flex flex-col" style={{ gap: 4 }} aria-live={mode === "play" ? "polite" : undefined}>
+        {draw(said, mode === "play", typing)}
+        {typing ? <Typing start={typing === "a"} side={sides[typing]} lang={lang} continues={said > 0 && lines[said - 1].side === typing} /> : null}
       </div>
+      {/* Without scripts nothing would ever play: the whole talk is simply there. */}
+      {mode === "wait" ? (
+        <noscript>
+          <div className="flex flex-col" style={{ gap: 4 }}>
+            {draw(lines.length, false, null)}
+          </div>
+        </noscript>
+      ) : null}
       {mode === "play" && lines.length - shown >= 2 ? (
         <div className="mt-3 flex justify-center">
           <button
@@ -143,16 +155,12 @@ export function TalkBody({ post, lang, token }: { post: WebPostView; lang: Lang;
           </button>
         </div>
       ) : null}
-      {/* Without scripts nothing would ever play: every line is simply there. */}
-      <noscript>
-        <style>{`.tg-line{opacity:1!important;transform:none!important}`}</style>
-      </noscript>
     </div>
   );
 }
 
 /** One line: the character's picture on the outside edge of the first line in a run, its name in its own ink. */
-function Line({ start, side, text, startRun, endRun, on }: { start: boolean; side: Side; text: string; startRun: boolean; endRun: boolean; on: boolean }) {
+function Line({ start, side, text, startRun, endRun, animate }: { start: boolean; side: Side; text: string; startRun: boolean; endRun: boolean; animate: boolean }) {
   const tint = tintOf(side.name);
   const round = 18;
   const tight = 6;
@@ -163,9 +171,7 @@ function Line({ start, side, text, startRun, endRun, on }: { start: boolean; sid
         flexDirection: start ? "row" : "row-reverse",
         gap: 8,
         marginTop: startRun ? 10 : 0,
-        opacity: on ? 1 : 0,
-        transform: on ? "none" : "translateY(6px)",
-        transition: `opacity 320ms ${EASE}, transform 320ms ${EASE}`,
+        animation: animate ? `tg-line-in 320ms ${EASE} both` : undefined,
       }}
     >
       <span className="shrink-0" style={{ width: 32, height: 32 }} aria-hidden>
@@ -202,19 +208,26 @@ function Line({ start, side, text, startRun, endRun, on }: { start: boolean; sid
   );
 }
 
-/** The other side, typing: three dots that breathe in turn, for a talk that is still going. */
-function Typing({ start, side, lang }: { start: boolean; side: Side; lang: Lang }) {
+/** Whoever speaks next, typing: three dots that breathe in turn, under their name when they start a new run. */
+function Typing({ start, side, lang, continues }: { start: boolean; side: Side; lang: Lang; continues: boolean }) {
   return (
-    <div className="flex items-end" style={{ flexDirection: start ? "row" : "row-reverse", gap: 8, marginTop: 10 }} role="status" aria-label={say(C.typing, lang).replace("{name}", side.label)}>
+    <div className="flex items-end" style={{ flexDirection: start ? "row" : "row-reverse", gap: 8, marginTop: continues ? 0 : 10, animation: `tg-line-in 240ms ${EASE} both` }} role="status" aria-label={say(C.typing, lang).replace("{name}", side.label)}>
       <span className="shrink-0" aria-hidden>
         <CharacterPic character={side.character} name={side.name} size={32} />
       </span>
-      <div className="flex items-center" style={{ gap: 4, height: 38, padding: "0 14px", borderRadius: 18, background: INK.surfaceHi }} aria-hidden>
-        {[0, 1, 2].map((i) => (
-          <span key={i} className="tg-typing" style={{ width: 6, height: 6, borderRadius: 3, background: INK.soft, animationDelay: `${i * 160}ms` }} />
-        ))}
+      <div className="flex flex-col" style={{ alignItems: start ? "flex-start" : "flex-end" }}>
+        {continues ? null : (
+          <span className="truncate" aria-hidden style={{ ...STEP.meta, fontWeight: 600, color: tintOf(side.name), margin: "0 4px 3px" }}>
+            <bdi dir="auto">{side.label}</bdi>
+          </span>
+        )}
+        <div className="flex items-center" style={{ gap: 4, height: 38, padding: "0 14px", borderRadius: 18, background: INK.surfaceHi }} aria-hidden>
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="tg-typing" style={{ width: 6, height: 6, borderRadius: 3, background: INK.soft, animationDelay: `${i * 160}ms` }} />
+          ))}
+        </div>
       </div>
-      <style>{`.tg-typing{animation:tg-typing 1200ms ${EASE} infinite;opacity:.35}@keyframes tg-typing{0%,60%,100%{opacity:.35}30%{opacity:1}}@media (prefers-reduced-motion:reduce){.tg-typing{animation:none;opacity:.7}}`}</style>
+      <style>{`.tg-typing{animation:tg-typing 1200ms ${EASE} infinite;opacity:.35}@keyframes tg-typing{0%,60%,100%{opacity:.35}30%{opacity:1}}@keyframes tg-line-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.tg-typing{animation:none;opacity:.7}}`}</style>
     </div>
   );
 }
