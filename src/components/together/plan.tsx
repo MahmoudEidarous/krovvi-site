@@ -10,7 +10,7 @@
  * ivory with a tick, the faces at the end, the reader's choice in ivory.
  */
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { EASE, FaceStack, INK, STEP } from "@/components/objects/kit";
 import { say, type Lang, type Words } from "@/lib/objects";
@@ -50,10 +50,15 @@ export function PlanBody({ post, lang, onAnswer }: { post: WebPostView; lang: La
   const [editing, setEditing] = useState(!mine);
   const [sending, setSending] = useState(false);
 
+  // A send under way, or one that did not go through, keeps what they picked on the form (review, 2 November 2026:
+  // the copy put back after a failed change wiped the new picks and closed the form).
+  const holding = useRef(false);
+
   // This browser's answer came, changed, or was put back after a send that did not go through: the form follows it,
   // and comes back (keeping what they had picked) when there is no answer any more.
   const mineKey = mine ? `${mine.state}|${mine.picks.join(",")}` : "";
   useEffect(() => {
+    if (holding.current) return;
     if (!mine) {
       setEditing(true);
       return;
@@ -69,11 +74,24 @@ export function PlanBody({ post, lang, onAnswer }: { post: WebPostView; lang: La
   const ready = state !== null && !sending;
   const send = async () => {
     if (!state) return;
+    const tried = { state, picks };
+    holding.current = true;
     setSending(true);
     const chosen = state === "cant" ? [] : settled ? [settled.id] : picks;
     const ok = await onAnswer(state, chosen);
     setSending(false);
-    if (ok) setEditing(false);
+    if (ok) {
+      holding.current = false;
+      setEditing(false);
+      return;
+    }
+    // Not sent: the form stays open with what they picked, to send again (the next send or answer lets go).
+    setState(tried.state);
+    setPicks(tried.picks);
+    setEditing(true);
+    window.setTimeout(() => {
+      holding.current = false;
+    }, 0);
   };
 
   const pickedBy = (id: string) => plan.answers.filter((a) => a.state !== "cant" && a.picks.includes(id)).map((a) => a.name);
@@ -160,9 +178,8 @@ export function PlanBody({ post, lang, onAnswer }: { post: WebPostView; lang: La
         </section>
       )}
 
-      {editing ? (
+      {editing && !settled ? (
         <div className="mt-5">
-          {settled ? <p className="mb-2" style={{ ...STEP.title }}>{say(C.areYouIn, lang)}</p> : null}
           <div role="radiogroup" aria-label={say(C.areYouIn, lang)} className="grid grid-cols-3" style={{ gap: 8 }}>
             {PLAN_STATES.map((s) => {
               const on = state === s;
@@ -197,9 +214,11 @@ export function PlanBody({ post, lang, onAnswer }: { post: WebPostView; lang: La
           <p style={{ ...STEP.title, fontSize: 18, lineHeight: "24px" }}>
             <bdi>{say(SENT_WORDS[mine.state], lang).replace("{name}", author)}</bdi>
           </p>
-          <button type="button" onClick={() => setEditing(true)} className="mt-3 rounded-full transition-transform active:scale-[0.98]" style={{ ...STEP.label, fontWeight: 600, padding: "10px 18px", background: INK.surfaceHi, color: INK.fg }}>
-            {say(C.change, lang)}
-          </button>
+          {settled ? null : (
+            <button type="button" onClick={() => setEditing(true)} className="mt-3 rounded-full transition-transform active:scale-[0.98]" style={{ ...STEP.label, fontWeight: 600, padding: "10px 18px", background: INK.surfaceHi, color: INK.fg }}>
+              {say(C.change, lang)}
+            </button>
+          )}
         </div>
       ) : null}
 

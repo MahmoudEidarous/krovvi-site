@@ -10,7 +10,7 @@
 
 import type { Metadata } from "next";
 
-import { coverUrl, inviteCoverUrl, namesWords, type InviteRead, type Lang, type PostRead, type WebPostView } from "@/lib/together";
+import { coverUrl, inviteCoverUrl, inviterName, namesWords, type InviteRead, type Lang, type PostRead, type WebPostView } from "@/lib/together";
 
 const NOINDEX = { index: false, follow: false, nocache: true } as const;
 
@@ -105,9 +105,9 @@ const RAN_OUT = {
 export function inviteMetadata(code: string, read: InviteRead, lang: Lang): Metadata {
   if (!read.ok) return plain(OFF[lang].title, OFF[lang].line, lang);
   // An invite that ran out says so, as its page does, and who to ask; still no picture.
-  if (!read.invite.valid) return plain(RAN_OUT[lang].title, RAN_OUT[lang].line.replace("{name}", read.invite.name), lang);
+  if (!read.invite.valid) return plain(RAN_OUT[lang].title, RAN_OUT[lang].line.replace("{name}", inviterName(read.invite.name, lang, false)), lang);
   const invite = read.invite;
-  const title = INVITE[lang].title.replace("{name}", invite.name);
+  const title = INVITE[lang].title.replace("{name}", inviterName(invite.name, lang));
   const line = INVITE[lang].line;
   // The inviter's character, from the edge function's stable invite_cover JPEG (its size is the character picture's).
   const pic = invite.character?.image;

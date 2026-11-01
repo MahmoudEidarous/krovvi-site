@@ -208,10 +208,18 @@ export function normalizePost(raw: unknown, token: string): WebPostView | null {
   return post;
 }
 
+/** The inviter as a page names them: their name, or a friend when they have not given one yet. */
+export function inviterName(name: string, lang: Lang, start = true): string {
+  if (name.trim()) return name.trim();
+  if (lang === "ar") return "صاحبك";
+  return start ? "A friend" : "your friend";
+}
+
 export function normalizeInvite(raw: unknown, code: string): WebInviteView | null {
   const i = raw as Record<string, unknown> | null;
-  if (!i || typeof i !== "object" || typeof i.name !== "string" || !i.name.trim()) return null;
-  return { code: str(i.code) || code, name: i.name.trim().slice(0, 40), character: character(i.character), valid: i.valid !== false };
+  // An inviter with no name yet still invites: the page says "a friend" (review, 2 November 2026: it said the link was off).
+  if (!i || typeof i !== "object") return null;
+  return { code: str(i.code) || code, name: typeof i.name === "string" ? i.name.trim().slice(0, 40) : "", character: character(i.character), valid: i.valid !== false };
 }
 
 /**
@@ -223,7 +231,8 @@ export async function readPost(token: string, opts: { visitor?: string | null; i
   const params = new URLSearchParams({ post: token });
   if (opts.visitor && TOKEN_RE.test(opts.visitor)) params.set("visitor", opts.visitor);
   try {
-    const res = await fetch(`${TOGETHER_API}?${params}`, { cache: "no-store", ...opts.init });
+    // A browser's read gives up after eight seconds and says it is offline, rather than waiting for ever.
+    const res = await fetch(`${TOGETHER_API}?${params}`, { cache: "no-store", ...opts.init, signal: opts.init?.signal ?? AbortSignal.timeout(8000) });
     if (res.status === 404 || res.status === 410) return { ok: false, off: true };
     if (!res.ok) return { ok: false, offline: true };
     const body = (await res.json()) as { ok?: boolean; post?: unknown };
@@ -237,7 +246,7 @@ export async function readPost(token: string, opts: { visitor?: string | null; i
 export async function readInvite(code: string, init: RequestInit = {}): Promise<InviteRead> {
   if (!INVITE_RE.test(code)) return { ok: false, off: true };
   try {
-    const res = await fetch(`${TOGETHER_API}?invite=${encodeURIComponent(code)}`, { cache: "no-store", ...init });
+    const res = await fetch(`${TOGETHER_API}?invite=${encodeURIComponent(code)}`, { cache: "no-store", ...init, signal: init.signal ?? AbortSignal.timeout(8000) });
     if (res.status === 404 || res.status === 410) return { ok: false, off: true };
     if (!res.ok) return { ok: false, offline: true };
     const body = (await res.json()) as { ok?: boolean; invite?: unknown };
@@ -248,14 +257,25 @@ export async function readInvite(code: string, init: RequestInit = {}): Promise<
   }
 }
 
-/** What the edge function said to a write: the post as it now stands, or why not. */
-export type Wrote = { ok: true; post: WebPostView } | { ok: false; why: "off" | "busy" | "failed" };
+/**
+ * What the edge function said to a write: the post as it now stands, or why not. A refusal carries the function's
+ * reason (its `why`), so the page answers in its own words: the name, the comment's words, a plan already settled or
+ * full; anything else is "failed".
+ */
+export type WroteWhy = "off" | "busy" | "failed" | "name" | "text" | "settled" | "full";
+export type Wrote = { ok: true; post: WebPostView } | { ok: false; why: WroteWhy };
+
+const REASONS: Partial<Record<string, WroteWhy>> = { name: "name", text: "text", settled: "settled", full: "full" };
 
 async function write(token: string, body: Record<string, unknown>): Promise<Wrote> {
   try {
     const res = await fetch(TOGETHER_API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token, ...body }), cache: "no-store" });
     if (res.status === 429) return { ok: false, why: "busy" };
     if (res.status === 404 || res.status === 410) return { ok: false, why: "off" };
+    if (res.status === 400 || res.status === 409) {
+      const said = (await res.json().catch(() => null)) as { why?: unknown } | null;
+      return { ok: false, why: (typeof said?.why === "string" && REASONS[said.why]) || "failed" };
+    }
     if (!res.ok) return { ok: false, why: "failed" };
     const data = (await res.json()) as { ok?: boolean; post?: unknown };
     const post = data.ok === true ? normalizePost(data.post, token) : null;
@@ -357,8 +377,14 @@ export function visitorId(): string {
 }
 
 /** The first name as it is sent: one space between words, trimmed, at most 30 characters. Empty when there is none. */
+/**
+ * A first name as the edge function keeps it, or "" for one it would refuse (a link, an address, an @), so the sheet
+ * never keeps a name every write would fail on (review, 2 November 2026).
+ */
 export function cleanName(raw: string): string {
-  return raw.replace(/\s+/g, " ").trim().slice(0, LIMITS.webNameMax);
+  const one = raw.replace(/\s+/g, " ").trim();
+  if (/https?:|www\.|@|\.com\b/i.test(one)) return "";
+  return one.slice(0, LIMITS.webNameMax).trim();
 }
 
 let fallbackName = "";

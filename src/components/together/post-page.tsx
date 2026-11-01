@@ -77,6 +77,14 @@ const C = {
   notNow: { en: "Not now", ar: "مش دلوقتي" },
   done: { en: "Done", ar: "تمام" },
   failed: { en: "That didn’t go through. Try again.", ar: "ماوصلش. جرب تاني." },
+  name: { en: "That name can’t be used. Try just your first name.", ar: "الاسم ده مينفعش. اكتب اسمك الأول بس." },
+  text: { en: "That comment can’t go up. Links aren’t allowed here.", ar: "التعليق ده مينفعش يتنشر. الروابط مش مسموحة هنا." },
+  settled: { en: "This plan is set already.", ar: "الخطة دي اتظبطت خلاص." },
+  full: { en: "This plan has all the answers it can take.", ar: "الخطة دي خدت كل الردود اللي تقدر عليها." },
+  nameHint: { en: "Just a first name, with no @ or links.", ar: "اسم أول بس، من غير @ أو روابط." },
+  reportAsk: { en: "Report this page to Krovvi?", ar: "تبلّغ كروفي عن الصفحة دي؟" },
+  reportYes: { en: "Report", ar: "بلّغ" },
+  reportNo: { en: "Cancel", ar: "إلغاء" },
   busy: { en: "Too many at once. Try again in a minute.", ar: "كتير مرة واحدة. جرب كمان دقيقة." },
   makeYours: { en: "Make yours", ar: "اعمل بتاعك" },
   report: { en: "Report this page", ar: "بلّغ عن الصفحة دي" },
@@ -124,7 +132,7 @@ export function PostPage({ token, first, ios: iosGuess, shellLang = "en", fixtur
   const [langGuess, setLangGuess] = useState<Lang>(shellLang);
   const [name, setName] = useState("");
   const [sheet, setSheet] = useState<{ initial: string } | null>(null);
-  const [problem, setProblem] = useState<"failed" | "busy" | null>(null);
+  const [problem, setProblem] = useState<"failed" | "busy" | "name" | "text" | "settled" | "full" | null>(null);
   const [now, setNow] = useState(0);
   const ios = useIos(iosGuess);
   const latest = useRef<WebPostView | null>(first.ok ? first.post : null);
@@ -257,10 +265,17 @@ export function PostPage({ token, first, ios: iosGuess, shellLang = "en", fixtur
       }
       latest.current = before;
       setView({ kind: "ready", post: before });
-      setProblem(result.why === "busy" ? "busy" : "failed");
+      // A name the server will not take is forgotten here too, so the next tap asks for another one.
+      if (result.why === "name") {
+        keepName("");
+        setName("");
+      }
+      // A plan settled meanwhile: show it as it now stands.
+      if (result.why === "settled") void refresh();
+      setProblem(result.why);
       return false;
     },
-    [name, askName, fixture]
+    [name, askName, fixture, refresh]
   );
 
   if (view.kind === "off") return <OffPage lang={langGuess} />;
@@ -606,16 +621,21 @@ function NameSheet({ lang, author, initial, onDone }: { lang: Lang; author: stri
         <input
           ref={field}
           value={value}
-          onChange={(e) => setValue(e.target.value.slice(0, 40))}
+          onChange={(e) => setValue(e.target.value.slice(0, 30))}
           placeholder={say(C.namePlaceholder, lang)}
           autoComplete="given-name"
           autoCapitalize="words"
           enterKeyHint="done"
-          maxLength={40}
+          maxLength={30}
           dir="auto"
           className="w-full rounded-[14px] outline-none placeholder:text-[#7A7A74]"
           style={{ ...STEP.body, fontSize: 16, padding: "14px 16px", background: INK.surfaceHi, color: INK.fg }}
         />
+        {value.trim() && !clean ? (
+          <p className="mt-2" role="status" style={{ ...STEP.meta, color: INK.muted }}>
+            {say(C.nameHint, lang)}
+          </p>
+        ) : null}
         <div className="mt-4 flex gap-3">
           <button type="button" onClick={() => onDone(null)} className="h-[50px] flex-1 rounded-full" style={{ ...STEP.body, fontWeight: 600, background: INK.surfaceHi, color: INK.fg }}>
             {say(C.notNow, lang)}
@@ -631,21 +651,32 @@ function NameSheet({ lang, author, initial, onDone }: { lang: Lang; author: stri
 
 /* ── Report ────────────────────────────────────────────────────────────── */
 
+/** Report, asked once before it goes (one tap used to file it), and said plainly when it did not go through. */
 function Report({ token, lang, fixture }: { token: string; lang: Lang; fixture: boolean }) {
-  const [done, setDone] = useState(false);
+  const [step, setStep] = useState<"idle" | "ask" | "sending" | "done" | "failed">("idle");
+  const quiet = { ...STEP.meta, color: INK.faint, minHeight: 32 };
+  const send = async () => {
+    setStep("sending");
+    setStep(fixture || (await sendReport(token, "reported from the page", visitorId())) ? "done" : "failed");
+  };
   return (
     <footer className="mt-12 text-center">
-      {done ? (
+      {step === "done" ? (
         <span role="status" style={{ ...STEP.meta, color: INK.faint }}>{say(C.reported, lang)}</span>
+      ) : step === "ask" || step === "sending" || step === "failed" ? (
+        <div role="group" aria-label={say(C.reportAsk, lang)} className="flex flex-col items-center gap-2">
+          <span style={{ ...STEP.meta, color: INK.muted }}>{say(step === "failed" ? C.failed : C.reportAsk, lang)}</span>
+          <div className="flex gap-5">
+            <button type="button" className="underline decoration-dotted underline-offset-4" style={quiet} onClick={() => setStep("idle")}>
+              {say(C.reportNo, lang)}
+            </button>
+            <button type="button" disabled={step === "sending"} className="underline decoration-dotted underline-offset-4 disabled:opacity-50" style={{ ...quiet, color: INK.soft }} onClick={() => void send()}>
+              {say(C.reportYes, lang)}
+            </button>
+          </div>
+        </div>
       ) : (
-        <button
-          type="button"
-          className="underline decoration-dotted underline-offset-4"
-          style={{ ...STEP.meta, color: INK.faint, minHeight: 32 }}
-          onClick={async () => {
-            if (fixture || (await sendReport(token, "reported from the page", visitorId()))) setDone(true);
-          }}
-        >
+        <button type="button" className="underline decoration-dotted underline-offset-4" style={quiet} onClick={() => setStep("ask")}>
           {say(C.report, lang)}
         </button>
       )}

@@ -136,3 +136,16 @@ test("a plan's moment reads as a day and a time", () => {
   assert.equal(T.momentWords("2026-11-05", "en"), "Thu 5 Nov");
   assert.equal(T.momentWords(undefined, "en"), "");
 });
+
+test("a name the edge function would refuse is never kept, and an inviter with no name is a friend (review, 2 November 2026)", () => {
+  assert.equal(T.cleanName("  Nour  "), "Nour");
+  assert.equal(T.cleanName("@lina"), "");
+  assert.equal(T.cleanName("www.me.com"), "");
+  assert.equal(T.cleanName("N".repeat(40)).length, 30);
+  const invite = T.normalizeInvite({ code: "abcd1234", name: "", character: null, valid: true }, "abcd1234");
+  assert.ok(invite, "kept, not turned into a link that is off");
+  assert.equal(T.inviterName(invite.name, "en"), "A friend");
+  assert.equal(T.inviterName(invite.name, "en", false), "your friend");
+  assert.equal(T.inviterName(invite.name, "ar"), "صاحبك");
+  assert.equal(T.inviterName("Sara", "en"), "Sara");
+});

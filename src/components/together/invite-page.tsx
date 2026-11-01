@@ -15,7 +15,7 @@ import { useCallback, useEffect, useState } from "react";
 import { INK, STEP } from "@/components/objects/kit";
 import { say, type Lang, type Words } from "@/lib/objects";
 import { JOIN_URL } from "@/lib/site";
-import { appJoinUrl, readInvite, type InviteRead, type WebInviteView } from "@/lib/together";
+import { appJoinUrl, inviterName, readInvite, type InviteRead, type WebInviteView } from "@/lib/together";
 import { CharacterPic, OffPage, Shell, Waiting, WaysOn, useIos } from "./bits";
 
 const C = {
@@ -59,7 +59,7 @@ export function InvitePage({ code, first, ios: iosGuess, lang }: { code: string;
         <div className="py-24 text-center">
           <h1 style={{ ...STEP.title, fontSize: 22, lineHeight: "28px" }}>{say(C.ranOut, lang)}</h1>
           <p className="mt-2" style={{ ...STEP.body, color: INK.muted }}>
-            <bdi>{say(C.ranOutLine, lang).replace("{name}", invite.name)}</bdi>
+            <bdi>{say(C.ranOutLine, lang).replace("{name}", inviterName(invite.name, lang, false))}</bdi>
           </p>
           <div className="mt-12">
             <a href={JOIN_URL} className="underline decoration-dotted underline-offset-4" style={{ ...STEP.meta, color: INK.faint }}>
@@ -75,9 +75,9 @@ export function InvitePage({ code, first, ios: iosGuess, lang }: { code: string;
   return (
     <Shell lang={lang} width={520}>
       <div className="flex flex-col items-center text-center" style={{ paddingTop: 28 }}>
-        <CharacterPic character={character} name={invite.name} size={176} radius={36} priority />
+        <CharacterPic character={character} name={inviterName(invite.name, lang)} size={176} radius={36} priority />
         <h1 className="mt-7" style={{ fontSize: 26, lineHeight: "32px", fontWeight: 600, letterSpacing: lang === "ar" ? 0 : "-0.7px", maxWidth: 420 }}>
-          <bdi>{say(C.title, lang).replace("{name}", invite.name)}</bdi>
+          <bdi>{say(C.title, lang).replace("{name}", inviterName(invite.name, lang))}</bdi>
         </h1>
         {character ? (
           <p className="mt-2" style={{ ...STEP.body, color: INK.muted, maxWidth: 380 }}>
