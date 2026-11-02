@@ -75,11 +75,11 @@ const STEPS = [
 
 /** Then it helps: what's on your mind, and the moment the app has it done (each picture is the app's own answer). */
 export const TASKS = [
-  { name: "help-split", q: "Split the Lisbon trip with everyone", a: "Split by the nights each of you stayed" },
-  { name: "help-meals", q: "What's for dinner this week?", a: "Tacos tonight. Everyone said yes." },
-  { name: "help-money", q: "Am I spending too much?", a: "On track. Eating out is creeping up." },
-  { name: "help-trip", q: "What's left to do for Lisbon?", a: "One tour to confirm, and half the packing" },
-  { name: "help-gift", q: "Chip in for Maya's birthday gift", a: "Four of you are in so far" },
+  { name: "help-split", q: "Split the Lisbon trip with everyone", a: "Split by nights. Two payments settle it." },
+  { name: "help-meals", q: "What's for dinner this week?", a: "Tacos tonight. Everyone swiped yes." },
+  { name: "help-money", q: "Am I spending too much this month?", a: "On track. $901 left this month." },
+  { name: "help-trip", q: "What's left to do for Lisbon?", a: "One tour to confirm, then the packing" },
+  { name: "help-gift", q: "Chip in for Maya's birthday gift", a: "Four chipping in. $60 to go." },
   { name: "help-todo", q: "What do I have today?", a: "Six things. Two done already." },
 ];
 
@@ -305,7 +305,7 @@ function End() {
             <h2 className="lt-h">
               <Rise lines={["Say hi to your", "super friend."]} />
             </h2>
-            <p className="lt-p">Open it and it says hi first. A few quick taps, and you&apos;re friends.</p>
+            <p className="lt-p">Tap to say hi. It tells you it&apos;s an AI, asks your name, and you&apos;re friends.</p>
             <div className="lt-cta">
               <GetKrovvi />
               <span className="hfor">For iPhone</span>
@@ -318,7 +318,12 @@ function End() {
               <div className="lt-turn">
                 <div className="phn" id="ltPh">
                   <Device>
-                    <Scene name="hello" alt="Krovvi, the app, the first time you open it: it says hi first." className="on" id="ltScr" />
+                    <Scene
+                      name="hello"
+                      alt="Krovvi, the app, the first time you open it. You: hi. Krovvi: oh. hi. i'm krovvi. full honesty: i'm an ai, about two minutes old. what do i call you?"
+                      className="on"
+                      id="ltScr"
+                    />
                   </Device>
                 </div>
               </div>

@@ -17,8 +17,8 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en",
     start_url: "/",
     display: "browser",
-    background_color: IDENTITY.colors.sky,
-    theme_color: IDENTITY.colors.sky,
+    background_color: IDENTITY.colors.paper,
+    theme_color: IDENTITY.colors.paper,
     icons: [
       { src: "/brand/krovvi-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
       { src: "/brand/krovvi-512.png", sizes: "512x512", type: "image/png", purpose: "any" },

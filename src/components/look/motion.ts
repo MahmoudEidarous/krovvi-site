@@ -180,7 +180,9 @@ export function startLook(root: HTMLElement): () => void {
     const n = (story.get(sc) ?? 0) + 1;
     story.set(sc, n);
     const v = filmIn(sc);
-    if (!v || !v.dataset.src || reduce) {
+    /* no film, less motion asked for, or no film yet in your colour (a purple film over an ocean page would clash): the
+       screen's last moment, in your colour */
+    if (!v || !v.dataset.src || reduce || (v.dataset.film && dirFor(v.dataset.film, true) !== S.theme)) {
       sc.dataset.show = "e";
       return;
     }
@@ -467,7 +469,7 @@ export function startLook(root: HTMLElement): () => void {
       heroE.alt = "Krovvi, the app: your answer and Krovvi's reply.";
     }
     const film = `hero-${t}`;
-    if (!heroV || !hasFilmNamed(film) || reduce) {
+    if (!heroV || !hasFilmNamed(film) || reduce || dirFor(film, true) !== S.theme) {
       heroScr.dataset.show = "e";
       return;
     }

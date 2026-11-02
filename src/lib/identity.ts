@@ -67,8 +67,10 @@ export interface Identity {
     category: string;
   };
   colors: {
-    /** The sky's black: theme color and manifest background. */
+    /** The night's black: the browser bar of the pages people send each other (/s, /o, /a, /r, /e, /k, /team). */
     sky: string;
+    /** The light page's ground: the home, /privacy and /support, and the manifest (the site is light). */
+    paper: string;
     /** The app icon's tile (catch8 brand/icon-1024.svg). */
     tile: string;
     /** The dots and the type. */
@@ -85,22 +87,16 @@ export const IDENTITY: Identity = {
   url: `${SITE_URL}/`,
   alternateName: "krovvi.com",
 
-  // The lead's draft words, 14 October 2026: option A of each. The owner picks in
-  // design/krovvi-identity-2026-10-14 ("Words to choose"), where these are drawn as Google shows them:
-  //   title B: "Krovvi: the AI that knows what's going on in your life"
-  //   title C: "Krovvi: a friend and an assistant that knows your life"
-  //   description B: "Krovvi is an AI on your iPhone that keeps up with your people and plans, checks in first when something matters, and gets things done. Join the beta."
-  //   description C: "Every AI starts from zero. Krovvi starts from your life: it remembers your people and plans, and talks first when something matters."
-  //   mission B: "No one should have to keep their whole life in their head."
-  //   mission C: "Make AI that knows you, so you never start from zero."
-  //   tagline B (first list): "An AI that already knows what's going on."; tagline C: "The AI friend that knows your life."
+  // The words of the new site (A2, "the phone", the owner's pick of 31 October 2026; built 2 November 2026): Krovvi is
+  // your super friend, an AI on iPhone that listens, checks in and helps. The earlier draft (14 October 2026) said "The
+  // AI that knows your life"; its other options are in design/krovvi-identity-2026-10-14 in catch8.
   // A new tagline needs the share image drawn again: node scripts/identity/build.mjs (and SHARE_IMAGE_ALT below).
-  tagline: "The AI that knows your life.",
-  title: "Krovvi: the AI that knows your life",
+  tagline: "Your super friend.",
+  title: "Krovvi: your super friend",
   description:
-    "Krovvi is a personal AI on iPhone that remembers your people and plans, texts you first when something matters, and gets things done for you.",
-  ogTitle: "Krovvi: the AI that knows your life",
-  ogDescription: "It remembers your people and your plans, texts you first when something matters, and gets things done.",
+    "Krovvi is an AI friend on iPhone. It listens, checks in and keeps you company, and it helps with your plans, your money and your to-do list.",
+  ogTitle: "Krovvi: your super friend",
+  ogDescription: "An AI friend on your iPhone. It listens, checks in, remembers what matters, and helps with the plans and the to-do list.",
   category: "Personal AI for iPhone",
   mission: "Give everyone an AI that keeps up with their life.",
   status: "In beta on iPhone",
@@ -113,13 +109,13 @@ export const IDENTITY: Identity = {
   maker: "Delvnco", // from the privacy policy; owner to confirm the legal name before it goes in as legalName
   locale: "en_US",
   app: { operatingSystem: "iOS", device: "iPhone", category: "LifestyleApplication" }, // owner to confirm against App Store Connect
-  // The live pages stand on #0A0A0A: the browser bar and the manifest match them until the night look ships.
-  colors: { sky: "#0A0A0A", tile: "#0A0A0A", ink: "#EDEDEB" },
+  // The pages people send each other stand on #0A0A0A; the site itself is light (the new look, 2 November 2026).
+  colors: { sky: "#0A0A0A", paper: "#F8F7FF", tile: "#7B6BFF", ink: "#1D1840" },
   logo: { path: "/brand/krovvi-512.png", size: 512 },
 };
 
 /** The share image's alt text (the two .alt.txt files in src/app hold the same words). */
-export const SHARE_IMAGE_ALT = "The Krovvi K and the words: The AI that knows your life.";
+export const SHARE_IMAGE_ALT = "The Krovvi k and the words: your super friend. Beside them, the Krovvi app on an iPhone, asking how the interview went.";
 
 /** A page people can find: in the sitemap, in /llms.txt, and with its own title and description. */
 export interface SitePage {
