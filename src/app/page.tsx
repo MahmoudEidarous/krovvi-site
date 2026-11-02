@@ -1,27 +1,15 @@
-import { Bento } from "@/components/sections/bento";
-import { Closing } from "@/components/sections/closing";
-import { Hero } from "@/components/sections/hero";
-import { Loop } from "@/components/sections/loop";
-import { Statement } from "@/components/sections/statement";
-import { Story } from "@/components/sections/story";
-import { Ticker } from "@/components/sections/ticker";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteNav } from "@/components/site-nav";
+import type { Viewport } from "next";
 
-export default function Home() {
-  return (
-    <>
-      <SiteNav />
-      <main className="overflow-clip">
-        <Hero />
-        <Statement />
-        <Ticker />
-        <Bento />
-        <Story />
-        <Loop />
-        <Closing />
-      </main>
-      <SiteFooter />
-    </>
-  );
+import { Home } from "@/components/home/home";
+
+import "./look.css";
+
+/** The page is always light: its bars and its scrollbars are the light page's (its night parts are night by design). */
+export const viewport: Viewport = {
+  themeColor: "#F8F7FF",
+  colorScheme: "light",
+};
+
+export default function Page() {
+  return <Home />;
 }

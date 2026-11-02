@@ -1,0 +1,440 @@
+/* krovvi.com in the new look (A2, "the phone", design/krovvi-new-look-2026-10-28/landing-a2 in catch8), for the home,
+   /privacy and /support. Light only: the page is always light, its night parts (the friend part, the stage and the foot)
+   are night by design. Every phone shows the real app: pictures and films of its own screens (lib/app-shots.ts).
+   Look rules: plain grounds and real shadows, no coloured glows or blobs; colour comes from the app itself.
+   Motion rules: only transform and opacity move; big things settle without overshoot (--calm), small things pop a
+   little (--pop); nothing that follows the scroll waits for a transition.
+   Scope: these pages wrap everything in .kl, and the colours sit on the page's root only while a .kl is on it, so the
+   pages people send each other (/s, /o, /a, /r, /e, /k) and /team keep their own night look. */
+
+/* ---------- Krovvi's colour, the light page around it (catch8-look src/theme/look-palette.ts) ---------- */
+:root:has(.kl) {
+  color-scheme: light;
+  --k1: #7B6BFF; --k2: #5B49F2; --glowA: 255,170,220; --glowB: 91,73,242;
+  --bg1: #F1EEFF; --bg2: #F8F7FF; --bg3: #FFFFFF; --ink: #1D1840; --soft: #6E6890; --faint: #847FA1; --tint: #EFEDFF; --acc: #5F4FF5;
+  --me: #FFFFFF; --card: #FFFFFF; --line: rgba(29,24,64,.08); --kInk: #FFFFFF;
+  --cardSh: 0 18px 36px -20px rgba(20,16,40,.22), 0 1px 3px rgba(0,0,0,.05);
+  --kSh: 0 14px 30px -14px rgba(var(--glowB), .62), inset 0 1px 0 rgba(255,255,255,.22);
+  --phoneSh: 0 60px 100px -46px rgba(20,16,40,.42), 0 28px 50px -30px rgba(20,16,40,.32);
+  --calm: cubic-bezier(.22,.9,.24,1); --pop: cubic-bezier(.3,1.35,.5,1);
+  background: var(--bg2);
+  scroll-behavior: auto;
+}
+:root[data-theme="ocean"] { --k1: #3A8DFF; --k2: #1A5FE0; --glowA: 120,215,255; --glowB: 26,95,224; --bg1: #EAF3FF; --bg2: #F6FAFF; --ink: #0F1E33; --soft: #5D6F8A; --faint: #75859C; --tint: #E5F0FF; --acc: #1C66E0; }
+:root[data-theme="coral"] { --k1: #EF6B39; --k2: #D9481A; --glowA: 255,206,140; --glowB: 217,72,26; --bg1: #FFF2EA; --bg2: #FFF9F5; --ink: #2B170D; --soft: #8A6E60; --faint: #9C8478; --tint: #FFEEE4; --acc: #CC4517; }
+:root[data-theme="mono"] { --k1: #3B3B43; --k2: #131317; --glowA: 205,205,215; --glowB: 70,70,80; --bg1: #F2F2F4; --bg2: #F9F9FA; --ink: #141417; --soft: #6E6E78; --faint: #84848C; --tint: #EEEEF1; --acc: #1F1F25; }
+
+/* the night parts: near black with a breath of the colour */
+.kl [data-mode="dark"] {
+  color-scheme: dark;
+  --ink: #F5F5F7; --soft: #A4A4AF; --faint: #8D8D99; --line: rgba(255,255,255,.08); --card: #181822;
+  --kSh: 0 14px 34px -16px rgba(var(--glowB), .85), inset 0 1px 0 rgba(255,255,255,.18);
+  --phoneSh: 0 60px 110px -40px rgba(0,0,0,.85), 0 30px 60px -30px rgba(0,0,0,.9);
+  --bg1: #090915; --bg2: #0C0C18; --acc: #9692FF;
+}
+:root[data-theme="ocean"] .kl [data-mode="dark"] { --bg1: #060B14; --bg2: #090F19; --acc: #6DAAFF; }
+:root[data-theme="coral"] .kl [data-mode="dark"] { --bg1: #0B0809; --bg2: #0E0B0C; --acc: #F7916D; }
+:root[data-theme="mono"] .kl [data-mode="dark"] { --bg1: #08080A; --bg2: #0B0B0E; --acc: #F4F4F6; --k1: #F4F4F6; --k2: #D5D5DC; --glowB: 190,190,205; --kInk: #111114; }
+
+/* ---------- the page ---------- */
+:root:has(.kl) body { background: transparent; color: var(--ink); }
+.kl {
+  --display: var(--font-nunito), ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif;
+  --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--text); color: var(--ink); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.kl main { overflow-x: clip; }
+:where(.kl) a { color: inherit; text-decoration: none; }
+:where(.kl) button { font: inherit; color: inherit; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.kl h1, .kl h2, .kl h3 { text-wrap: balance; }
+.kl p { text-wrap: pretty; }
+:where(.kl) svg { display: block; }
+.kl :where(a, button, [tabindex]):focus-visible { outline: 2.5px solid var(--acc); outline-offset: 3px; border-radius: 6px; }
+.kl ::selection { background: color-mix(in srgb, var(--k1) 28%, transparent); }
+/* the app's soft wash, still behind everything: no blobs, no glows */
+.ground { position: fixed; inset: 0; z-index: -2; pointer-events: none; background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 62%, var(--bg3) 100%); }
+/* a new colour sweeps out from where you tapped (a view transition), so nothing fades in between */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- the mark and the name ---------- */
+.ktile { position: relative; display: inline-block; flex: none; border-radius: 22.5%; color: #fff; overflow: hidden;
+  background: radial-gradient(120% 90% at 30% 0%, color-mix(in oklab, var(--k1), #ffffff 22%) 0%, var(--k1) 42%, var(--k2) 100%);
+  box-shadow: 0 10px 20px -12px rgba(var(--glowB), .8), inset 0 1px 0 rgba(255,255,255,.3), inset 0 -6px 14px rgba(0,0,0,.1); }
+.ktile svg { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 1px 1.2px rgba(22,12,92,.26)); }
+.ktile path { stroke: currentColor; }
+.wordmark { display: block; height: 20px; width: auto; overflow: visible; }
+
+/* ---------- the way in ---------- */
+.getbig { display: inline-flex; align-items: center; gap: 10px; height: 62px; padding: 0 30px; border-radius: 31px; font-size: 19px; font-weight: 750; letter-spacing: -.01em; color: var(--kInk); white-space: nowrap;
+  background: linear-gradient(180deg, var(--k1), var(--k2)); box-shadow: 0 22px 40px -18px rgba(var(--glowB), .75), inset 0 1px 0 rgba(255,255,255,.25);
+  transition: transform .3s var(--pop), translate .6s var(--calm); }
+.getbig:hover { transform: translateY(-2px) scale(1.02); }
+.getbig:active { transform: scale(.97); }
+.getbig svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.hfor { font-size: 15px; font-weight: 600; color: var(--soft); }
+
+/* ---------- the top bar: one floating glass capsule ---------- */
+.cap { position: fixed; z-index: 60; top: calc(12px + env(safe-area-inset-top, 0px)); left: 50%; translate: -50% 0; display: flex; align-items: center; height: 56px; padding: 0 7px 0 12px; border-radius: 28px;
+  color: var(--ink); background: color-mix(in srgb, var(--card) 72%, transparent); -webkit-backdrop-filter: blur(22px) saturate(1.8); backdrop-filter: blur(22px) saturate(1.8);
+  box-shadow: 0 14px 36px -18px rgba(20,16,40,.25), 0 0 0 .5px rgba(0,0,0,.07), inset 0 .5px 0 rgba(255,255,255,.85);
+  transition: translate .9s var(--calm), opacity .5s ease, height .45s var(--calm), background-color .5s ease, box-shadow .5s ease, color .5s ease; }
+/* over the night parts there is nothing behind the bar for a blur to show: a plain dark glass (a live blur over a moving
+   page is the costliest thing a frame can draw) */
+.cap.dark { color: #F5F5F7; -webkit-backdrop-filter: none; backdrop-filter: none; background: rgba(22,22,31,.84); box-shadow: 0 14px 36px -16px rgba(0,0,0,.7), 0 0 0 .5px rgba(255,255,255,.1), inset 0 .5px 0 rgba(255,255,255,.08); }
+.cap.small { height: 50px; }
+.js .cap:not(.in) { translate: -50% -96px; opacity: 0; }
+.cap-brand { display: flex; align-items: center; gap: 10px; padding-right: 12px; height: 44px; }
+.cap-brand .ktile { transition: transform .5s var(--pop); }
+.cap-brand:hover .ktile { transform: rotate(-8deg) scale(1.06); }
+.cap-brand .wordmark { height: 19px; }
+.cap-links { position: relative; display: flex; align-items: center; padding: 0 6px; }
+.cap-links a { position: relative; z-index: 1; height: 40px; padding: 0 15px; display: flex; align-items: center; border-radius: 20px; font-size: 14.5px; font-weight: 650; color: color-mix(in srgb, currentColor 70%, transparent); transition: color .25s ease; white-space: nowrap; }
+.cap-links a:hover, .cap-links a.cur { color: currentColor; }
+/* one soft pill: under the part of the page you are in, and under whatever you point at */
+.cap-hl { position: absolute; z-index: 0; left: 0; top: 0; width: 10px; height: 40px; border-radius: 20px; background: color-mix(in srgb, currentColor 9%, transparent); opacity: 0; pointer-events: none; transition: translate .45s var(--calm), width .45s var(--calm), opacity .3s ease; }
+.cap-hl.on { opacity: 1; }
+.cap-get { height: 42px; max-width: 180px; padding: 0 19px; border-radius: 21px; display: flex; align-items: center; overflow: hidden; font-size: 15px; font-weight: 750; letter-spacing: -.01em; color: var(--kInk); white-space: nowrap;
+  background: linear-gradient(180deg, var(--k1), var(--k2)); box-shadow: var(--kSh);
+  transition: transform .25s var(--pop), height .45s var(--calm), max-width .6s var(--calm), padding .6s var(--calm), opacity .35s ease; }
+/* one way to get it at a time: while the first screen shows its own button, the top bar's steps aside */
+.cap.solo .cap-get { max-width: 0; padding-left: 0; padding-right: 0; opacity: 0; pointer-events: none; }
+.cap.solo .cap-links { padding-right: 8px; }
+.cap.small .cap-get { height: 38px; }
+.cap-get:hover { transform: scale(1.04); }
+.cap-get:active { transform: scale(.96); }
+
+/* ---------- the phones: an iPhone drawn at 416 x 870 around the app's real screen (390 x 844 points), scaled by
+   measuring; a real shadow under them, no coloured glow ---------- */
+.phn { position: absolute; left: 0; top: 0; width: 416px; height: 870px; transform-origin: 0 0; will-change: transform; }
+.dev { position: relative; width: 416px; height: 870px; }
+.phn .dev { transform: perspective(1800px); will-change: transform; }
+.dev-body { position: absolute; inset: 0; border-radius: 70px;
+  background: linear-gradient(155deg, #7A7A82 0%, #3B3B41 8%, #1D1D21 32%, #141417 62%, #2C2C31 88%, #6A6A72 100%);
+  box-shadow: var(--phoneSh), inset 0 0 0 1px rgba(255,255,255,.28), inset 0 0 0 2.4px rgba(0,0,0,.5), inset 0 2px 3px rgba(255,255,255,.16); }
+.dev-body::after { content: ""; position: absolute; inset: 4px; border-radius: 66px; background: #020203; box-shadow: inset 0 0 0 .6px rgba(255,255,255,.06); }
+.dev-scr { position: absolute; z-index: 1; left: 13px; top: 13px; width: 390px; height: 844px; border-radius: 57px; overflow: hidden; isolation: isolate; background: #F4F2FF; }
+.dev-isl { position: absolute; z-index: 40; top: 11px; left: 50%; width: 125px; height: 36.5px; margin-left: -62.5px; border-radius: 19px; background: #000; pointer-events: none; }
+.dev-btn { position: absolute; width: 4px; background: linear-gradient(90deg, #202024, #77777F 55%, #2C2C31); }
+.dev-btn.l { left: -3px; border-radius: 2px 0 0 2px; }
+.dev-btn.r { right: -3px; border-radius: 0 2px 2px 0; }
+.b-act { top: 150px; height: 34px; } .b-vu { top: 214px; height: 62px; } .b-vd { top: 290px; height: 62px; } .b-pw { top: 240px; height: 100px; } .b-cc { top: 560px; height: 60px; }
+/* one soft reflection across the glass */
+.dev-glint { position: absolute; z-index: 41; left: 13px; top: 13px; width: 390px; height: 844px; border-radius: 57px; pointer-events: none;
+  background: linear-gradient(118deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 24%, rgba(255,255,255,0) 36%); }
+
+/* a screen of the app: its first moment, its film, and its last moment, one over the other. What shows is set on the
+   screen (data-show): the last moment by default, so the answer is there even when nothing plays */
+.sc { position: absolute; inset: 0; visibility: hidden; }
+.sc.on, .sc.behind { visibility: visible; }
+.sc > img, .sc > video { position: absolute; left: 0; top: 0; width: 390px; height: 844px; max-width: none; object-fit: cover; display: block; opacity: 0; transition: opacity .22s ease; }
+.sc[data-show="a"] > .sc-a, .sc[data-show="v"] > .sc-v, .sc[data-show="e"] > .sc-e { opacity: 1; }
+/* the film shows over its first moment as soon as it plays, so swapping never shows a gap */
+.sc[data-show="v"] > .sc-a { opacity: 1; transition: none; }
+.sc > .sc-v { transition: opacity .12s linear; }
+
+/* ---------- the first screen: the name huge, the real app in front of it, already talking ---------- */
+.st1 { position: relative; height: 100svh; min-height: 640px; }
+.st1-pin { position: relative; height: 100%; overflow: hidden; }
+.hl { position: absolute; inset: 0; padding: calc(78px + 2vh) 48px 44px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: 40px; align-items: end; }
+.atitle { grid-column: 1 / -1; grid-row: 1; position: relative; z-index: 0; text-align: center; white-space: nowrap;
+  font-family: var(--display); font-weight: 900; font-size: var(--fs, 11vw); line-height: .86; letter-spacing: -.052em; color: var(--ink); }
+.atitle .ln { display: inline-block; white-space: nowrap; }
+.atitle .ch { display: inline-block; padding-bottom: .06em; }
+/* the coloured word: each letter's box reaches past its ink, so no stroke (the f's bar, the d's top) is cut off */
+.atitle .ln:last-child .ch { padding: 0 .12em .06em; margin: 0 -.12em; background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 80%, var(--k2)), var(--k2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root[data-theme="mono"] .atitle .ln:last-child .ch { background: linear-gradient(180deg, #4A4A52, #131317); -webkit-background-clip: text; background-clip: text; }
+.js .atitle .ch { opacity: 0; transform: translateY(.42em) rotate(4deg); }
+.js .atitle.on .ch { opacity: 1; transform: none; transition: opacity .45s ease, transform .9s var(--calm); transition-delay: calc(var(--i) * 22ms); }
+.asub { grid-column: 1; grid-row: 2; justify-self: start; align-self: end; max-width: 340px; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: var(--soft); }
+.slotH { grid-column: 2; grid-row: 2; align-self: start; position: relative; z-index: 2; width: var(--hW, 330px); height: var(--hH, 690px); margin-top: calc(var(--fs, 130px) * -.14); }
+.acta { grid-column: 3; grid-row: 2; justify-self: end; align-self: end; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.js .asub, .js .acta { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .9s var(--calm); }
+.js .st1.ready .asub, .js .st1.ready .acta { opacity: 1; transform: none; }
+.js .st1.ready .acta { transition-delay: .08s; }
+#heroPh { z-index: 3; transform: scale(var(--hs, .79)); }
+.js #heroPh { opacity: 0; }
+/* the first phone is yours to use: Krovvi has just texted, and you answer by tapping one of its real answers */
+.hs { position: absolute; z-index: 6; border-radius: 999px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.hs::before { content: ""; position: absolute; inset: -9px -6px; }
+.hs::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: rgba(29,24,64,.1); opacity: 0; transition: opacity .2s ease; }
+.hs:active::after, .hs.down::after { opacity: 1; transition: none; }
+/* until you answer, the three answers breathe once in turn: a ring of your colour, then nothing */
+.hs i { position: absolute; inset: -3px; border-radius: inherit; box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--k1) 70%, transparent); opacity: 0; transform: scale(.96); pointer-events: none; }
+.hs.nudge i { animation: hsnudge 1.5s var(--calm) both; }
+@keyframes hsnudge { 0% { opacity: 0; transform: scale(.96); } 30% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.08); } }
+#heroScr[data-show="v"] .hs, #heroScr[data-show="e"] .hs { visibility: hidden; }
+#heroScr[data-show="e"] { cursor: pointer; }
+
+/* ---------- a friend first: the night part, one phone, five of the app's own screens ---------- */
+.fr2 { position: relative; color: var(--ink); }
+.fr2-fade { height: 36svh; background: linear-gradient(180deg, color-mix(in srgb, var(--bg1) 0%, transparent) 0%, color-mix(in srgb, var(--bg1) 4%, transparent) 14%, color-mix(in srgb, var(--bg1) 14%, transparent) 28%, color-mix(in srgb, var(--bg1) 33%, transparent) 42%, color-mix(in srgb, var(--bg1) 57%, transparent) 56%, color-mix(in srgb, var(--bg1) 79%, transparent) 70%, color-mix(in srgb, var(--bg1) 94%, transparent) 84%, var(--bg1) 96%); }
+.fr2-out { height: 32svh; background: linear-gradient(180deg, var(--bg1) 4%, color-mix(in srgb, var(--bg1) 94%, transparent) 16%, color-mix(in srgb, var(--bg1) 79%, transparent) 30%, color-mix(in srgb, var(--bg1) 57%, transparent) 44%, color-mix(in srgb, var(--bg1) 33%, transparent) 58%, color-mix(in srgb, var(--bg1) 14%, transparent) 72%, color-mix(in srgb, var(--bg1) 4%, transparent) 86%, color-mix(in srgb, var(--bg1) 0%, transparent) 100%); }
+.fr2-track { position: relative; height: 470svh; background: var(--bg1); }
+.fr2-pin { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.fws { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.fw2 { position: absolute; left: 7vw; top: 50%; width: min(46vw, 660px); translate: 0 -50%; visibility: hidden; transition: visibility 0s .5s; }
+.fw2.mid { left: 50%; width: min(92vw, 1200px); translate: -50% -50%; text-align: center; }
+.fw2.on { visibility: visible; transition: none; }
+.fh2 { font-family: var(--display); font-weight: 900; font-size: clamp(54px, 6.6vw, 112px); line-height: .92; letter-spacing: -.048em; color: #F5F5F7; }
+.fw2.mid .fh2 { font-size: clamp(58px, 9.4vw, 160px); }
+.fw2[data-c="5"] .fh2 { font-size: clamp(44px, 5vw, 86px); }
+.fh2 .m { display: block; overflow: hidden; padding: .02em .04em .11em; margin: -.02em -.04em -.11em; }
+.fw2.mid .fh2 .m { display: inline-block; }
+.fh2 .m > span { display: inline-block; transform: translateY(108%); transition: transform .34s cubic-bezier(.5,0,.75,0); }
+.fw2.on .fh2 .m > span { transform: none; transition: transform .85s var(--calm); }
+.fw2.on .fh2 .m + .m > span { transition-delay: 70ms; }
+.fh2 .m:last-child > span { background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 62%, #ffffff), var(--k1)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .04em; }
+:root[data-theme="mono"] .fh2 .m:last-child > span { background: linear-gradient(180deg, #ffffff, #B9B9C2); -webkit-background-clip: text; background-clip: text; }
+.fl2 { margin-top: 24px; max-width: 470px; font-size: clamp(18px, 1.45vw, 22px); line-height: 1.45; letter-spacing: -.012em; color: #A4A4AF; opacity: 0; transform: translateY(12px); transition: opacity .22s ease, transform .3s ease; }
+.fw2.mid .fl2 { margin-left: auto; margin-right: auto; }
+.fw2.on .fl2 { opacity: 1; transform: none; transition: opacity .5s ease .22s, transform .8s var(--calm) .22s; }
+.fl2 .short { display: none; }
+#frPh { z-index: 1; }
+/* on a wide screen the words never sit over the phone, so the phone goes above them */
+@media (min-width: 861px) { .fws { z-index: 0; } }
+/* the steps: a solid night a shade lighter than the ground, so on a phone, where it sits over the bottom of the phone,
+   nothing shows through it */
+.steps2 { position: absolute; z-index: 3; left: 7vw; bottom: 6vh; display: flex; padding: 5px; border-radius: 999px; background: color-mix(in srgb, var(--bg1), #ffffff 7%); box-shadow: inset 0 0 0 .5px rgba(255,255,255,.08);
+  opacity: 0; transform: translateY(10px); transition: opacity .45s ease, transform .7s var(--calm); }
+.steps2.on { opacity: 1; transform: none; }
+.steps2 button { position: relative; z-index: 1; height: 34px; padding: 0 15px; border-radius: 17px; display: flex; align-items: center; font-size: 13.5px; font-weight: 700; color: rgba(255,255,255,.58); white-space: nowrap; transition: color .35s ease; }
+.steps2 button:hover:not(.on) { color: rgba(255,255,255,.8); }
+.steps2 button.on { color: var(--kInk); }
+.s2-hl { position: absolute; z-index: 0; left: 0; top: 5px; height: 34px; border-radius: 17px; background: linear-gradient(180deg, var(--k1), var(--k2)); box-shadow: 0 8px 20px -8px rgba(var(--glowB), .9); transition: translate .55s var(--calm), width .55s var(--calm); }
+#frPh .sc { will-change: transform; }
+#frPh .sc.on { z-index: 2; }
+#frPh .sc.behind { z-index: 1; }
+.sc-off { position: absolute; inset: 0; z-index: 30; background: #000; opacity: 0; pointer-events: none; }
+
+/* ---------- then it helps: the list ticks off, and the phone swipes from one answer to the next ---------- */
+.hp { position: relative; }
+.hp-track { position: relative; height: 270svh; }
+.hp-pin { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 6vw; align-items: center; padding: calc(88px + 3vh) 6vw 5vh; }
+.hp-copy { max-width: 640px; }
+.js .hp .th, .js .hp .tlead, .js .hp-list, .js .hp-one, .js .hp-slot { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform 1s var(--calm); }
+.hp.in .th, .hp.in .tlead, .hp.in .hp-list, .hp.in .hp-one, .hp.in .hp-slot { opacity: 1; transform: none; }
+.hp.in .tlead { transition-delay: .06s; } .hp.in .hp-list, .hp.in .hp-one { transition-delay: .12s; } .hp.in .hp-slot { transition-delay: .04s; }
+.th { font-family: var(--display); font-weight: 900; font-size: clamp(46px, min(5vw, 9.4vh), 84px); line-height: .95; letter-spacing: -.046em; }
+.tlead { margin-top: 18px; max-width: 520px; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: var(--soft); }
+.hp-list { position: relative; margin: 30px 0 0 -14px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.hp-list li { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; height: min(56px, 6.4vh); padding: 0 16px 0 14px; border-radius: 19px; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color .25s ease; }
+.hp-list li:hover:not(.on) { background: color-mix(in srgb, var(--card) 45%, transparent); }
+.hp-hl { position: absolute; z-index: 0; left: 0; right: 0; top: 0; height: min(56px, 6.4vh); border-radius: 19px; background: var(--card); box-shadow: var(--cardSh); opacity: 0; transition: transform .45s var(--calm), opacity .3s ease; }
+.hp-hl.live { opacity: 1; }
+/* the tick: an empty ring, then your colour with a check the moment it's done */
+.hk { position: relative; width: 28px; height: 28px; flex: none; border-radius: 50%; display: grid; place-items: center; color: var(--kInk); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--ink) 16%, transparent); transition: box-shadow .3s ease; }
+.hk::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(180deg, var(--k1), var(--k2)); transform: scale(0); transition: transform .45s var(--pop); }
+.hk svg { position: relative; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 20; stroke-dashoffset: 20; transition: stroke-dashoffset .3s ease .1s; }
+.hp-list li.done .hk { box-shadow: none; }
+.hp-list li.done .hk::before { transform: none; }
+.hp-list li.done .hk svg { stroke-dashoffset: 0; }
+.ttx { position: relative; flex: 1; min-width: 0; height: 1.32em; overflow: hidden; font-size: clamp(18px, 1.5vw, 22px); font-weight: 650; letter-spacing: -.016em; }
+.ttx .q, .ttx .a { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: transform .55s var(--calm), opacity .3s ease, color .3s ease; }
+.ttx .q { color: color-mix(in srgb, var(--faint) 62%, var(--ink)); }
+.hp-list li.on .ttx .q { color: var(--ink); }
+.ttx .a { position: absolute; left: 0; right: 0; top: 0; color: var(--acc); transform: translateY(105%); opacity: 0; }
+.hp-list li.done .ttx .q { transform: translateY(-105%); opacity: 0; }
+.hp-list li.done .ttx .a { transform: none; opacity: 1; }
+.hp-list li.done:not(.on) .ttx .a { color: color-mix(in srgb, var(--acc) 70%, var(--faint)); }
+/* the line that stands in for the list on a phone */
+.hp-one { display: none; }
+/* the phone: its screen is a row of the app's own answers that slides as you scroll; between two, the row steps back a
+   little, the way apps do when you swipe between them */
+.hp-slot { position: relative; width: var(--pw, 330px); height: var(--ph, 690px); cursor: pointer; }
+#hpPh { transform: scale(var(--hps, .79)); }
+.hp-view { position: absolute; inset: 0; overflow: hidden; border-radius: 57px; transform-origin: 50% 50%; will-change: transform; }
+.hp-strip { position: absolute; left: 0; top: 0; height: 844px; will-change: transform; }
+.hp-shot { position: absolute; top: 0; width: 390px; height: 844px; max-width: none; border-radius: 50px; object-fit: cover; background: var(--bg2); }
+
+/* ---------- the end: the phone on a dark stage, under one white light ---------- */
+.lt { position: relative; color: #F5F5F7; }
+.lt-fade { height: 34svh; background: linear-gradient(180deg, color-mix(in srgb, var(--bg1) 0%, transparent) 0%, color-mix(in srgb, var(--bg1) 4%, transparent) 14%, color-mix(in srgb, var(--bg1) 14%, transparent) 28%, color-mix(in srgb, var(--bg1) 33%, transparent) 42%, color-mix(in srgb, var(--bg1) 57%, transparent) 56%, color-mix(in srgb, var(--bg1) 79%, transparent) 70%, color-mix(in srgb, var(--bg1) 94%, transparent) 84%, var(--bg1) 96%); }
+.lt-room { position: relative; isolation: isolate; overflow: hidden; min-height: 100svh; display: grid; place-items: center; padding: calc(84px + 4vh) 6vw 9vh; background: var(--bg1); }
+.lt-in { width: 100%; max-width: 1180px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 64px; align-items: center; }
+.lt-h { font-family: var(--display); font-weight: 900; font-size: clamp(52px, 6.2vw, 108px); line-height: .92; letter-spacing: -.05em; color: #F5F5F7; }
+.lt-h .m { display: block; overflow: hidden; padding: .02em .06em .11em; margin: -.02em -.06em -.11em; }
+.lt-h .m > span { display: inline-block; transform: translateY(108%); transition: transform .45s cubic-bezier(.5,0,.75,0); }
+.lt.in .lt-h .m > span { transform: none; transition: transform 1s var(--calm) .1s; }
+.lt.in .lt-h .m + .m > span { transition-delay: .18s; }
+.lt-h .m:last-child > span { padding-right: .06em; background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 62%, #ffffff), var(--k1)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root[data-theme="mono"] .lt-h .m:last-child > span { background: linear-gradient(180deg, #ffffff, #B9B9C2); -webkit-background-clip: text; background-clip: text; }
+.lt-p { margin-top: 22px; max-width: 420px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: #A4A4AF; }
+.lt-cta { margin-top: 30px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.lt .hfor { color: #9494A0; }
+.js .lt-p, .js .lt-cta { opacity: 0; transform: translateY(18px); transition: opacity .7s ease .3s, transform 1s var(--calm) .3s; }
+.lt.in .lt-p, .lt.in .lt-cta { opacity: 1; transform: none; }
+.lt.in .lt-cta { transition-delay: .4s; }
+/* one white light from above, a pool of it on the floor, the phone's reflection in the dark floor */
+.lt-stage { position: relative; isolation: isolate; width: var(--pw, 340px); height: var(--ph, 710px); }
+.lt-beam { position: absolute; z-index: -1; left: 50%; bottom: -4%; width: 240%; height: 165%; translate: -50% 0; pointer-events: none;
+  background: conic-gradient(from 180deg at 50% 0%, rgba(255,255,255,0) 163deg, rgba(255,255,255,.065) 171deg, rgba(255,255,255,.115) 180deg, rgba(255,255,255,.065) 189deg, rgba(255,255,255,0) 197deg);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.15), #000 45%, #000 80%, rgba(0,0,0,0)); mask-image: linear-gradient(180deg, rgba(0,0,0,.15), #000 45%, #000 80%, rgba(0,0,0,0)); }
+.lt-pool { position: absolute; z-index: -1; left: 50%; bottom: -54px; width: 200%; height: 130px; translate: -50% 0; border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(255,255,255,.15), rgba(255,255,255,.045) 60%, rgba(255,255,255,0)); }
+/* the phone floats: it rises and settles a little, slowly, its reflection with it. Only flat moves, so its screen
+   stays as sharp as the page */
+.lt-aim, .lt-turn { position: absolute; inset: 0; }
+.lt-aim { will-change: transform; }
+.lt-turn { -webkit-box-reflect: below 14px linear-gradient(180deg, rgba(0,0,0,0) 74%, rgba(0,0,0,.2)); animation: ltfloat 6.5s cubic-bezier(.37,0,.63,1) infinite alternate; }
+@keyframes ltfloat { from { translate: 0 2px; } to { translate: 0 -11px; } }
+.lt-turn .phn { will-change: auto; transform: scale(var(--s, .8)); }
+.lt-turn .phn .dev { transform: none; will-change: auto; }
+.js .lt-stage { opacity: 0; transform: translateY(44px); transition: opacity .9s ease .15s, transform 1.3s var(--calm) .15s; }
+.lt.in .lt-stage { opacity: 1; transform: none; }
+
+/* ---------- the foot: the same night as the stage, no box around it ---------- */
+.ft { position: relative; isolation: isolate; overflow: hidden; color: #F5F5F7; background: var(--bg1); padding: 0 6vw; }
+.ft-top { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding-top: 36px; display: grid; grid-template-columns: 1.4fr .75fr .75fr 1.1fr; gap: 48px; }
+.ft-logo { display: inline-flex; align-items: center; gap: 12px; }
+.ft-logo .wordmark { height: 24px; color: #F5F5F7; }
+.ft-brand p { margin-top: 14px; max-width: 300px; font-size: 15px; line-height: 1.5; color: #A4A4AF; }
+.ft-col { display: flex; flex-direction: column; gap: 12px; }
+.ft-col b, .ft-look b { font-size: 12.5px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; color: #8D8D99; margin-bottom: 4px; }
+.ft-col a { position: relative; font-size: 16px; font-weight: 600; color: #F5F5F7; width: fit-content; transition: translate .4s var(--calm); }
+.ft-col a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; border-radius: 1px; background: linear-gradient(90deg, var(--k1), var(--k2)); transform: scaleX(0); transform-origin: 0 50%; transition: transform .45s var(--calm); }
+.ft-col a:hover { translate: 3px 0; }
+.ft-col a:hover::after { transform: scaleX(1); }
+.ft-look { display: flex; flex-direction: column; gap: 14px; }
+.sw4 { display: flex; gap: 12px; }
+.sw4 .dot { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(160deg, var(--a), var(--b)); box-shadow: inset 0 -3px 6px rgba(0,0,0,.18), inset 0 1px 2px rgba(255,255,255,.35); transition: transform .45s var(--pop), box-shadow .3s ease; }
+/* mono is black and white, so its swatch is both */
+.sw4 .dot.mono { background: linear-gradient(135deg, #F4F4F6 0 50%, #2A2A31 50% 100%); }
+.sw4 .dot:hover { transform: scale(1.12); }
+.sw4 .dot:active { transform: scale(.94); }
+.sw4 .dot.on { box-shadow: 0 0 0 3px var(--bg1), 0 0 0 5px #F5F5F7, inset 0 -3px 6px rgba(0,0,0,.18); }
+/* the name, as big as the page, in Krovvi's own strokes: lit in your colour from the top, sinking into the floor at the
+   bottom; its letters move one by one */
+.ft-giant { position: relative; z-index: 0; margin: 64px auto -1px; max-width: 1400px; touch-action: manipulation; -webkit-user-select: none; user-select: none; }
+.ftg-row { position: relative; width: 100%; aspect-ratio: var(--gr, 4.2); -webkit-mask-image: linear-gradient(180deg, #000 52%, rgba(0,0,0,.5) 80%, rgba(0,0,0,.12) 100%); mask-image: linear-gradient(180deg, #000 52%, rgba(0,0,0,.5) 80%, rgba(0,0,0,.12) 100%); }
+/* each letter on its own layer, turning and lifting from the middle of its foot */
+.ftl { position: absolute; top: 0; height: 100%; transform-origin: 50% 96%; will-change: transform; transition: opacity .3s ease; }
+.ftl svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.ftl.wait { opacity: 0; transition: none; }
+.ft-giant .s0 { stop-color: color-mix(in oklab, var(--k1) 55%, #ffffff); } .ft-giant .s1 { stop-color: var(--k1); } .ft-giant .s2 { stop-color: var(--k2); }
+:root[data-theme="mono"] .ft-giant .s0 { stop-color: #FFFFFF; } :root[data-theme="mono"] .ft-giant .s1 { stop-color: #C9C9D2; } :root[data-theme="mono"] .ft-giant .s2 { stop-color: #8A8A93; }
+.js .ft-giant .ftg-row { opacity: 0; transition: opacity .6s ease; }
+.ft-giant.on .ftg-row { opacity: 1; }
+.ft-base { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 20px; padding: 4px 0 calc(12px + env(safe-area-inset-bottom, 0px)); font-size: 13.5px; color: #8D8D99; }
+.ft-c { padding-bottom: 9px; }
+.ft-c.r { justify-self: end; }
+/* the line a phone has for going home: here it takes you back to the top */
+.ft-home { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 10px 22px 8px; font-size: 13px; font-weight: 650; color: #8E8E99; transition: color .3s ease; -webkit-tap-highlight-color: transparent; }
+.ft-home i { width: 134px; height: 5px; border-radius: 3px; background: #F5F5F7; opacity: .34; transition: transform .5s var(--pop), opacity .3s ease; }
+.ft-home:hover { color: #F5F5F7; }
+.ft-home:hover i { transform: translateY(-4px) scaleX(1.06); opacity: .72; }
+
+/* ---------- a page of words (privacy, support): the same top bar and foot, the words in one calm column ---------- */
+.doc { position: relative; padding: calc(132px + 4vh) 24px 120px; }
+.doc article { max-width: 680px; margin: 0 auto; }
+.doc h1 { font-family: var(--display); font-weight: 900; font-size: clamp(48px, 7vw, 84px); line-height: .95; letter-spacing: -.046em; color: var(--ink); }
+.doc .up { margin-top: 18px; font-size: 15px; color: var(--soft); }
+.doc h2 { margin-top: 52px; font-family: var(--display); font-weight: 900; font-size: 28px; line-height: 1.1; letter-spacing: -.03em; color: var(--ink); }
+.doc p, .doc li { font-size: 17.5px; line-height: 1.68; letter-spacing: -.01em; color: color-mix(in srgb, var(--ink) 78%, var(--soft)); }
+.doc p { margin-top: 16px; }
+.doc ul { margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.doc li { position: relative; padding-left: 24px; }
+.doc li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(180deg, var(--k1), var(--k2)); }
+.doc a { color: var(--acc); font-weight: 600; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--acc) 35%, transparent); }
+.doc a:hover { text-decoration-color: var(--acc); }
+.doc .mail { display: inline-flex; margin-top: 26px; }
+.doc-end { height: 18vh; background: linear-gradient(180deg, transparent, var(--bg1)); }
+.kl .doc-end[data-mode="dark"] { background: linear-gradient(180deg, color-mix(in srgb, var(--bg1) 0%, transparent), var(--bg1) 96%); }
+
+/* ---------- a short laptop screen ---------- */
+@media (max-height: 820px) and (min-width: 861px) {
+  .tlead { margin-top: 12px; }
+  .hp-list { margin-top: 18px; }
+  .ttx { font-size: 18px; }
+}
+/* ---------- a laptop ---------- */
+@media (max-width: 1180px) {
+  .hl { padding-left: 32px; padding-right: 32px; column-gap: 28px; }
+  .asub { max-width: 270px; font-size: 16.5px; }
+  .ft-top { grid-template-columns: 1fr 1fr 1fr; }
+  .ft-brand { grid-column: 1 / -1; }
+}
+
+/* ---------- a tablet and a phone: plain columns; the pinned parts keep their one phone ---------- */
+@media (max-width: 860px) {
+  .cap { left: 10px; right: 10px; translate: none; justify-content: space-between; height: 54px; padding-left: 10px; }
+  .cap.small { height: 50px; }
+  .js .cap:not(.in) { translate: 0 -96px; }
+  .cap-links { display: none; }
+  .st1 { height: auto; min-height: 0; }
+  .st1-pin { height: auto; overflow: visible; }
+  .hl { position: relative; inset: auto; display: flex; flex-direction: column; align-items: center; padding: 84px 16px 34px; text-align: center; }
+  .atitle { white-space: normal; }
+  .atitle .ln { display: block; }
+  .slotH { order: 2; margin-top: 14px; align-self: center; }
+  .asub { order: 3; max-width: 420px; margin-top: 26px; text-align: center; font-size: 16.5px; }
+  /* on a phone the top bar's button is the one way to get it */
+  .acta { display: none; }
+  .fr2-track { height: 520svh; }
+  .fw2, .fw2.mid { left: 50%; top: calc(76px + 1.5vh); width: min(92vw, 560px); translate: -50% 0; text-align: center; }
+  .fw2[data-c="0"] { top: 50%; translate: -50% -50%; }
+  /* the words sit over the top of the phone, on a fade of the night */
+  .fws::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: var(--scrim, 300px); opacity: 0; transition: opacity .4s ease;
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg1) 64%, color-mix(in srgb, var(--bg1) 0%, transparent) 100%); }
+  .fr2-pin:not([data-c="0"]) .fws::before { opacity: 1; }
+  .fh2, .fw2.mid .fh2 { font-size: clamp(38px, 10.4vw, 60px); }
+  .fw2[data-c="5"] .fh2 { font-size: clamp(30px, 8vw, 46px); }
+  .fh2 .m { display: inline-block; }
+  .fl2 { margin: 10px auto 0; font-size: 16px; max-width: 380px; }
+  .fl2 .long { display: none; } .fl2 .short { display: inline; }
+  .fw2[data-c="0"] .fl2 { font-size: 17px; }
+  .steps2 { left: 50%; translate: -50% 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px) + 56px); padding: 4px; }
+  .steps2 button { height: 30px; padding: 0 10px; font-size: 12.5px; border-radius: 15px; }
+  .s2-hl { top: 4px; height: 30px; border-radius: 15px; }
+  .hp-track { height: 300svh; }
+  .hp-pin { grid-template-columns: 1fr; grid-template-rows: auto 1fr; justify-items: center; align-items: start; row-gap: 0; padding: 78px 16px 0; text-align: center; }
+  .hp-copy { display: flex; flex-direction: column; align-items: center; }
+  .th { font-size: clamp(36px, 10vw, 54px); }
+  .tlead { font-size: 15.5px; margin-top: 10px; max-width: 340px; }
+  .hp-list { display: none; }
+  .hp-one { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 16px; width: 100%; }
+  .hp-one .seg6 { display: flex; gap: 6px; }
+  .hp-one .seg6 i { width: 26px; height: 4px; border-radius: 2px; background: color-mix(in srgb, var(--ink) 12%, transparent); overflow: hidden; position: relative; }
+  .hp-one .seg6 i b { position: absolute; inset: 0; background: linear-gradient(90deg, var(--k1), var(--k2)); transform-origin: 0 50%; transform: scaleX(0); transition: transform .35s var(--calm); }
+  .hp-one .seg6 i.done b { transform: scaleX(1); }
+  .hp-one .one { position: relative; height: 1.4em; width: 100%; overflow: hidden; font-size: 17px; font-weight: 650; letter-spacing: -.015em; }
+  .hp-one .one span { position: absolute; left: 0; right: 0; top: 0; transition: transform .5s var(--calm), opacity .3s ease; }
+  .hp-one .one .a { color: var(--acc); }
+  .hp-one .one .out { transform: translateY(-110%); opacity: 0; }
+  .hp-one .one .pre { transform: translateY(110%); opacity: 0; }
+  .hp-slot { margin-top: 14px; }
+  .lt-room { padding: 84px 16px calc(64px + env(safe-area-inset-bottom, 0px)); }
+  .lt-in { grid-template-columns: 1fr; gap: 34px; justify-items: center; text-align: center; }
+  .lt-copy { display: flex; flex-direction: column; align-items: center; }
+  .lt-h { font-size: clamp(42px, 12vw, 64px); }
+  .lt-p { margin-top: 14px; font-size: 16px; max-width: 320px; }
+  .lt-cta { justify-content: center; margin-top: 22px; }
+  .getbig { height: 56px; padding: 0 26px; font-size: 18px; border-radius: 28px; }
+  .ft { padding: 0 20px; }
+  .ft-top { grid-template-columns: 1fr 1fr; gap: 34px 24px; padding-top: 30px; }
+  .ft-giant { margin-top: 44px; }
+  .ft-brand, .ft-look { grid-column: 1 / -1; }
+  .ft-base { grid-template-columns: 1fr 1fr; gap: 0 12px; padding-top: 0; }
+  .ft-home { grid-column: 1 / -1; grid-row: 1; justify-self: center; padding-bottom: 14px; }
+  .ft-c { padding-bottom: 4px; }
+  .doc { padding: 120px 20px 90px; }
+  .doc h2 { margin-top: 44px; font-size: 25px; }
+  .doc p, .doc li { font-size: 17px; }
+}
+@media (max-width: 380px) {
+  .cap-brand .wordmark { height: 17px; }
+  .cap-get { padding: 0 15px; font-size: 14.5px; }
+}
+/* On touch screens the phones stand flat: iPhone Safari can fail to draw a phone with a screen inside it when the phone
+   is turned in 3D, so the tilt and the turns are for a mouse or trackpad only. */
+@media (hover: none), (pointer: coarse) {
+  .phn .dev { transform: none !important; }
+  .lt-turn { -webkit-box-reflect: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .atitle .ch, .js .asub, .js .acta, .js #heroPh, .js .cap, .js .ft-giant .ftg-row, .js .lt-p, .js .lt-cta, .js .lt-stage, .js .hp .th, .js .hp .tlead, .js .hp-list, .js .hp-one, .js .hp-slot { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .fh2 .m > span, .fl2, .lt-h .m > span { transition: none !important; transform: none !important; }
+  .lt-turn { animation: none !important; }
+  .hp-hl, .ttx .q, .ttx .a, .hk::before, .hk svg, .hs.nudge i { transition: none !important; animation: none !important; }
+}

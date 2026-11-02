@@ -48,7 +48,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Without scripts nothing would ever be scrolled into view: show every end state at once, and size
             the phone screens in CSS alone (right everywhere but Safari 26, which only matters with scripts off). */}
