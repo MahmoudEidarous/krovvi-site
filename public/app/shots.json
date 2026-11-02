@@ -1,11 +1,69 @@
 {
-  "taken": "2026-11-02 00:11",
-  "screen": [390, 844],
+  "taken": "2026-11-02 04:57",
+  "screen": [
+    390,
+    844
+  ],
   "themes": {
     "purple": {
-      "stills": ["vent", "vent-end"],
-      "films": { "vent": 2.77 }
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "friends",
+        "friends-end",
+        "hello",
+        "hello-end",
+        "help-gift",
+        "help-meals",
+        "help-money",
+        "help-split",
+        "help-todo",
+        "help-trip",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "play",
+        "play-end",
+        "vent",
+        "vent-end"
+      ],
+      "films": {
+        "vent": 4.73,
+        "memory": 4.3,
+        "friends": 6.0,
+        "hero-great": 3.67,
+        "play": 2.9,
+        "hero-low": 3.2,
+        "checkin": 3.5,
+        "hello": 7.87,
+        "hero-okay": 2.53
+      }
     }
   },
-  "frames": {}
+  "frames": {
+    "hero-great": {
+      "height": 36,
+      "width": 112.66667175292969,
+      "y": 574.6666717529297,
+      "x": 16
+    },
+    "hero-okay": {
+      "width": 102.66665649414062,
+      "y": 574.6666717529297,
+      "x": 136.66666412353516,
+      "height": 36
+    },
+    "hero-low": {
+      "y": 618.6666717529297,
+      "width": 155.6666717529297,
+      "x": 16,
+      "height": 36
+    }
+  }
 }
