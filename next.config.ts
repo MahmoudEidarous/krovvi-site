@@ -13,6 +13,13 @@ const PRIVATE_LINK_HEADERS = [
   { key: "Referrer-Policy", value: "no-referrer" },
 ];
 
+/** A shortcut file: downloaded, never shown as text, under its own name. */
+const shortcutHeaders = (name: string) => [
+  { key: "Content-Type", value: "application/octet-stream" },
+  { key: "Content-Disposition", value: `attachment; filename="${name}"` },
+  { key: "X-Robots-Tag", value: "noindex" },
+];
+
 const nextConfig: NextConfig = {
   async headers() {
     return [
@@ -30,6 +37,12 @@ const nextConfig: NextConfig = {
       // The pitch deck is for the people it is sent to: link previews draw, search engines skip it.
       { source: "/deck", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
       { source: "/deck/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] },
+      // The two signed Apple Shortcuts Money's link screen offers (catch8 assets/shortcuts, src/app/money-link.tsx):
+      // a download, saved under the name the app's steps tell them to choose ("Krovvi Bank Texts", "Krovvi Apple Pay"),
+      // since a shortcut added from a file takes the file's name. Each asks for the person's own link as it is added,
+      // so the files hold no one's link.
+      { source: "/shortcuts/krovvi-bank-texts.shortcut", headers: shortcutHeaders("Krovvi Bank Texts.shortcut") },
+      { source: "/shortcuts/krovvi-apple-pay.shortcut", headers: shortcutHeaders("Krovvi Apple Pay.shortcut") },
     ];
   },
   async rewrites() {
