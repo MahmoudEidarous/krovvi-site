@@ -117,7 +117,7 @@ function Foot({ home }: { home: boolean }) {
         </nav>
         <div className="ft-look">
           <b>Make it yours</b>
-          <div className="sw4" role="group" aria-label="Colour">
+          <div className="sw4" role="group" aria-label="Color">
             {DOTS.map((d) => (
               <button
                 key={d.pick}

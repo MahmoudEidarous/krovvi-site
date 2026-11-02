@@ -51,8 +51,9 @@ UI() { T 60 python3 "$HERE/idb_ui.py" "$UDID" "$@"; }
 # Each scene's time of day, so a film shot at night still reads right: the app's clock (lab-site &clock) and the
 # status bar both show it.
 typeset -A CLOCK=(hero 18:12 vent 19:24 checkin 20:05 play 21:40 memory 13:05 friends 12:30
-  split 10:15 meals 17:45 money 20:30 trip 19:10 gift 12:20 todo 8:05 hello 9:41)
-twelve() { local h=${1%%:*} m=${1##*:}; h=$((10#$h % 12)); (( h == 0 )) && h=12; print -r -- "$h:$m"; }
+  split 10:15 meals 17:45 money 20:30 trip 19:10 gift 12:20 todo 08:05 hello 09:41)
+# The phone keeps 24-hour time, as the owner's designs do (the app reads it at start: src/lib/phone-clock.ts), and the
+# status bar says the scene's time the way the app writes it (HH:mm).
 
 # ---------- the app's code, the simulator, Metro ----------
 if [[ ! -d $APP_DIR ]]; then
@@ -76,6 +77,15 @@ if ! T 30 xcrun simctl list devices booted | grep -q "$UDID"; then
   say "booting the simulator"
   T 120 xcrun simctl boot "$UDID" && BOOTED_HERE=1
   T 180 xcrun simctl bootstatus "$UDID" -b >/dev/null
+fi
+
+# 24-hour time, as the owner's designs use it: the cards read it (src/lib/phone-clock.ts) and it only takes effect after
+# the phone restarts, so a phone that did not have it yet gets it and restarts once. (The chat's own time lines are
+# always 12-hour in the app: lib/format.ts timeOfDay.)
+if [[ $(T 20 xcrun simctl spawn "$UDID" defaults read -g AppleICUForce24HourTime 2>/dev/null) != 1 ]]; then
+  say "setting 24-hour time and restarting the simulator"
+  T 20 xcrun simctl spawn "$UDID" defaults write -g AppleICUForce24HourTime -bool YES
+  T 90 xcrun simctl shutdown "$UDID"; T 120 xcrun simctl boot "$UDID"; T 180 xcrun simctl bootstatus "$UDID" -b >/dev/null
 fi
 
 METRO_PID=""
@@ -105,7 +115,7 @@ finish() {
 }
 trap finish EXIT INT TERM
 
-bar() { T 15 xcrun simctl status_bar "$UDID" override --time "$(twelve $1)" --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState discharging --batteryLevel 100; sleep 0.3; }
+bar() { T 15 xcrun simctl status_bar "$UDID" override --time "$1" --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState discharging --batteryLevel 100; sleep 0.3; }
 
 # The look is read once as the app starts (theme/look-boot.ts), from its own store: write it, then start the app.
 launch() {

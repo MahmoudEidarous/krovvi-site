@@ -212,7 +212,7 @@ const HERO_PICKS: Record<string, string[]> = {
 function hero(run: string): Turn[] {
   return [
     me('site-hero-1', 'big interview tomorrow. kinda nervous', at(23, 42, 1)),
-    krovvi('site-hero-1', ["you've practised all week. you're ready.", "get some sleep. i'll check in after."], at(23, 42, 1)),
+    krovvi('site-hero-1', ["you've practiced all week. you're ready.", "get some sleep. i'll check in after."], at(23, 42, 1)),
     checkIn(`site-hero-2-${run}`, 'Your interview today', ['hey. you made it through.', 'how did the interview go?'], ['it went great', 'it was okay', 'not great, honestly'], ago(2)),
   ];
 }
