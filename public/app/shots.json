@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-02 05:42",
+  "taken": "2026-11-02 06:11",
   "screen": [
     390,
     844
@@ -34,15 +34,15 @@
         "vent-end"
       ],
       "films": {
-        "vent": 4.77,
-        "memory": 4.4,
-        "friends": 4.57,
-        "hero-great": 3.63,
-        "play": 2.13,
-        "hero-low": 3.23,
-        "checkin": 3.43,
-        "hello": 7.53,
-        "hero-okay": 2.5
+        "vent": 4.7,
+        "memory": 5.3,
+        "friends": 4.3,
+        "hero-great": 3.5,
+        "play": 2.07,
+        "hero-low": 3.33,
+        "checkin": 3.87,
+        "hello": 6.93,
+        "hero-okay": 2.53
       }
     },
     "ocean": {
@@ -74,15 +74,15 @@
         "vent-end"
       ],
       "films": {
-        "memory": 5.33,
-        "friends": 4.77,
-        "hero-great": 3.7,
-        "play": 2.83,
-        "hero-low": 3.33,
-        "vent": 4.73,
-        "checkin": 3.43,
-        "hello": 5.3,
-        "hero-okay": 2.63
+        "memory": 4.33,
+        "friends": 4.73,
+        "hero-great": 3.73,
+        "play": 2.9,
+        "hero-low": 3.37,
+        "vent": 4.8,
+        "checkin": 3.53,
+        "hello": 7.07,
+        "hero-okay": 2.53
       }
     },
     "coral": {
@@ -114,15 +114,15 @@
         "vent-end"
       ],
       "films": {
-        "memory": 4.37,
-        "friends": 4.33,
-        "hero-great": 3.73,
-        "play": 2.4,
+        "memory": 4.3,
+        "friends": 5.53,
+        "hero-great": 3.63,
+        "play": 2.17,
         "hero-low": 3.27,
-        "vent": 4.73,
-        "checkin": 3.67,
-        "hello": 7.77,
-        "hero-okay": 2.5
+        "vent": 4.77,
+        "checkin": 3.7,
+        "hello": 6.27,
+        "hero-okay": 2.67
       }
     },
     "mono": {
@@ -154,15 +154,15 @@
         "vent-end"
       ],
       "films": {
-        "memory": 4.3,
-        "friends": 4.73,
-        "hero-great": 3.67,
-        "play": 2.37,
-        "hero-low": 3.27,
+        "memory": 4.37,
+        "friends": 4.67,
+        "hero-great": 3.7,
+        "play": 2.4,
+        "hero-low": 3.23,
         "vent": 4.77,
-        "checkin": 3.67,
-        "hello": 7.9,
-        "hero-okay": 2.63
+        "checkin": 3.63,
+        "hello": 7.17,
+        "hero-okay": 2.53
       }
     }
   },
