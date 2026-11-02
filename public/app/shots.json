@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-02 04:57",
+  "taken": "2026-11-02 05:13",
   "screen": [
     390,
     844
@@ -43,6 +43,126 @@
         "checkin": 3.5,
         "hello": 7.87,
         "hero-okay": 2.53
+      }
+    },
+    "ocean": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "friends",
+        "friends-end",
+        "hello",
+        "hello-end",
+        "help-gift",
+        "help-meals",
+        "help-money",
+        "help-split",
+        "help-todo",
+        "help-trip",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "play",
+        "play-end",
+        "vent",
+        "vent-end"
+      ],
+      "films": {
+        "memory": 4.37,
+        "friends": 4.6,
+        "hero-great": 3.97,
+        "play": 2.1,
+        "hero-low": 3.53,
+        "vent": 4.73,
+        "checkin": 3.77,
+        "hello": 8.37,
+        "hero-okay": 2.6
+      }
+    },
+    "coral": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "friends",
+        "friends-end",
+        "hello",
+        "hello-end",
+        "help-gift",
+        "help-meals",
+        "help-money",
+        "help-split",
+        "help-todo",
+        "help-trip",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "play",
+        "play-end",
+        "vent",
+        "vent-end"
+      ],
+      "films": {
+        "memory": 4.4,
+        "friends": 5.6,
+        "hero-great": 3.6,
+        "play": 2.47,
+        "hero-low": 3.17,
+        "vent": 4.73,
+        "checkin": 3.6,
+        "hello": 7.4,
+        "hero-okay": 2.5
+      }
+    },
+    "mono": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "friends",
+        "friends-end",
+        "hello",
+        "hello-end",
+        "help-gift",
+        "help-meals",
+        "help-money",
+        "help-split",
+        "help-todo",
+        "help-trip",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "play",
+        "play-end",
+        "vent",
+        "vent-end"
+      ],
+      "films": {
+        "memory": 4.37,
+        "friends": 5.57,
+        "hero-great": 3.73,
+        "play": 2.07,
+        "hero-low": 4.47,
+        "vent": 4.73,
+        "checkin": 3.7,
+        "hello": 7.0,
+        "hero-okay": 2.5
       }
     }
   },
