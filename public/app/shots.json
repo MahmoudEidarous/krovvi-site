@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-05 19:15",
+  "taken": "2026-11-05 19:43",
   "screen": [
     390,
     844
@@ -28,6 +28,8 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
@@ -42,7 +44,8 @@
         "hero-low": 3.7,
         "checkin": 3.33,
         "hello": 7.5,
-        "hero-okay": 2.7
+        "hero-okay": 2.7,
+        "news": 5.73
       }
     },
     "ocean": {
@@ -68,6 +71,8 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
@@ -82,7 +87,8 @@
         "vent": 4.27,
         "checkin": 3.2,
         "hello": 8.0,
-        "hero-okay": 2.9
+        "hero-okay": 2.9,
+        "news": 5.7
       }
     },
     "coral": {
@@ -108,6 +114,8 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
@@ -122,7 +130,8 @@
         "vent": 4.27,
         "checkin": 3.3,
         "hello": 8.1,
-        "hero-okay": 2.57
+        "hero-okay": 2.57,
+        "news": 5.63
       }
     },
     "mono": {
@@ -148,6 +157,8 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
@@ -162,7 +173,8 @@
         "vent": 4.53,
         "checkin": 3.23,
         "hello": 3.43,
-        "hero-okay": 2.57
+        "hero-okay": 2.57,
+        "news": 4.53
       }
     }
   },

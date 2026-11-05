@@ -999,7 +999,7 @@ export function startLook(root: HTMLElement): () => void {
         kick();
       });
     }
-    /* its hello is fetched while you are in the part before, and plays from its beginning every time you arrive */
+    /* its film (their big news, celebrated) is fetched while you are in the part before, and plays from its beginning every time you arrive */
     if (hp) watch((es) => {
       if (es[0].isIntersecting) quiet(() => warm(ltScr));
     }).observe(hp);

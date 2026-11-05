@@ -12,7 +12,8 @@
 # the light one, in each colour asked for.
 #
 # Scenes: hero (Krovvi's check-in after the interview, and its reply to each of the three one-tap answers), vent,
-# checkin, play, memory, friends, help (split, meals, money, trip, gift, todo) and hello (the first minute).
+# checkin, play, memory, friends, help (split, meals, money, trip, gift, todo), news (their big news, celebrated) and hello
+# (the first minute).
 #
 # Needs: Xcode's simulator with the Krovvi development build installed, Metro (started here on PORT if it is not
 # running, from APP_DIR with its .env.local, never committed and never printed), idb (pip install fb-idb, plus
@@ -51,7 +52,7 @@ UI() { T 60 python3 "$HERE/idb_ui.py" "$UDID" "$@"; }
 # Each scene's time of day, so a film shot at night still reads right: the app's clock (lab-site &clock) and the
 # status bar both show it.
 typeset -A CLOCK=(hero 18:12 vent 19:24 checkin 20:05 play 21:40 memory 13:05 friends 12:30
-  split 10:15 meals 17:45 money 20:30 trip 19:10 gift 12:20 todo 08:05 hello 09:41)
+  split 10:15 meals 17:45 money 20:30 trip 19:10 gift 12:20 todo 08:05 hello 09:41 news 18:40)
 # The phone keeps 24-hour time, as the owner's designs do (the app reads it at start: src/lib/phone-clock.ts), and the
 # status bar says the scene's time the way the app writes it (HH:mm).
 
@@ -226,6 +227,7 @@ for THEME in ${=THEMES}; do
   want play && tapscene play "lab-site?scene=play&run=$RUN${THEME}p&clock=${CLOCK[play]}" "you wake up at 6 every day" 8 play
   want memory && askscene memory "lab-site?scene=memory&clock=${CLOCK[memory]}" 10 memory
   want friends && askscene friends "lab-site?scene=friends&clock=${CLOCK[friends]}" 10 friends
+  want news && askscene news "lab-site?scene=news&clock=${CLOCK[news]}" 10 news
   if want help; then
     for task in split meals money trip gift todo; do
       visit "lab-site?scene=help&task=$task&clock=${CLOCK[$task]}" ${CLOCK[$task]}; sleep 10; shot "help-$task"
@@ -244,7 +246,7 @@ for THEME in ${=THEMES}; do
   # the pictures and films, for the web
   still hero
   for pick in great okay low; do (( FILMS )) && film "hero-$pick" tap; still "hero-$pick-end"; done
-  for s in vent memory friends; do (( FILMS )) && film $s ask; still "$s-end"; done
+  for s in vent memory friends news; do (( FILMS )) && film $s ask; still "$s-end"; done
   for s in checkin play hello; do (( FILMS )) && film $s tap; still "$s"; still "$s-end"; done
   for task in split meals money trip gift todo; do still "help-$task"; done
   # a film's first frame is a picture too
