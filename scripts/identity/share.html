@@ -8,13 +8,13 @@
      Rendered by build.mjs. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=block">
 <style>
   html, body { margin: 0; }
   body {
     width: 1200px; height: 630px; overflow: hidden; position: relative; color: #1D1840;
     background: linear-gradient(180deg, #F1EEFF 0%, #F8F7FF 62%, #FFFFFF 100%);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+    font-family: "Baloo 2", ui-rounded, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   .lockup { position: absolute; left: 84px; top: 70px; display: flex; align-items: center; gap: 18px; }
@@ -22,13 +22,13 @@
     background: radial-gradient(120% 90% at 30% 0%, #978BFF 0%, #7B6BFF 42%, #5B49F2 100%);
     box-shadow: 0 16px 28px -16px rgba(91,73,242,.8), inset 0 1px 0 rgba(255,255,255,.3); }
   .tile svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .word { height: 44px; color: #1D1840; }
-  .word svg { height: 100%; width: auto; display: block; overflow: visible; }
-  h1 { position: absolute; left: 76px; top: 200px; margin: 0; font-family: "Nunito", ui-rounded, sans-serif; font-weight: 900;
-    font-size: 132px; line-height: .86; letter-spacing: -.052em; color: #1D1840; }
+  /* the word as the app writes it: Baloo 2 ExtraBold, a hundredth of its size taken from between its letters */
+  .word { font-family: "Baloo 2", ui-rounded, sans-serif; font-weight: 800; font-size: 58px; line-height: 1; letter-spacing: -.01em; color: #1D1840; transform: translateY(3px); }
+  h1 { position: absolute; left: 78px; top: 196px; margin: 0; font-family: "Baloo 2", ui-rounded, sans-serif; font-weight: 800;
+    font-size: 128px; line-height: .9; letter-spacing: -.031em; color: #1D1840; }
   h1 span { display: block; }
   h1 .c { padding: 0 .12em .06em; margin: 0 -.12em; background: linear-gradient(180deg, #7362FA, #5B49F2); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; }
-  .sub { position: absolute; left: 84px; top: 470px; margin: 0; width: 520px; font-size: 27px; line-height: 1.36; letter-spacing: -.012em; color: #6E6890; }
+  .sub { position: absolute; left: 84px; top: 470px; margin: 0; width: 540px; font-size: 27px; font-weight: 500; line-height: 1.32; letter-spacing: -.005em; color: #6E6890; }
   /* the phone: an iPhone drawn at 416 x 870 around the app's real screen, scaled, rising from the bottom edge */
   .phone { position: absolute; left: 760px; top: 62px; width: 416px; height: 870px; transform: scale(.7); transform-origin: 0 0; }
   .body { position: absolute; inset: 0; border-radius: 70px; background: linear-gradient(155deg, #7A7A82 0%, #3B3B41 8%, #1D1D21 32%, #141417 62%, #2C2C31 88%, #6A6A72 100%);
@@ -38,12 +38,12 @@
   .scr img { width: 390px; height: 844px; display: block; }
   .isl { position: absolute; top: 11px; left: 50%; width: 125px; height: 36.5px; margin-left: -62.5px; border-radius: 19px; background: #000; }
 </style>
-<div class="lockup"><div class="tile" id="tile"></div><div class="word" id="word"></div></div>
+<div class="lockup"><div class="tile" id="tile"></div><div class="word">Krovvi</div></div>
 <h1 id="line"></h1>
 <p class="sub">An AI friend on your iPhone. It listens, checks in, and helps with the plans and the to-do list.</p>
 <div class="phone"><div class="body"></div><div class="scr"><img src="../../public/app/purple/hero.webp" alt=""><div class="isl"></div></div></div>
 <script>
-  /* the k and the word in the Heavy strokes (components/look/brand.tsx, scripts/identity/k.mjs) */
+  /* the k in the Heavy strokes, the app icon's own (components/look/brand.tsx, scripts/identity/k.mjs) */
   const B = 78.3, X = 32, T = 15.5, W = 14.3, f = (n) => (+n).toFixed(2);
   const st = (d, w) => `<path fill="none" stroke="currentColor" stroke-width="${f(w)}" stroke-linecap="round" stroke-linejoin="round" d="${d}"/>`;
   function kAt(x, w) {
@@ -51,19 +51,8 @@
     const L0 = [J[0] + lt * (A[0] - J[0]), J[1] + lt * (A[1] - J[1])], L1 = [s + 27.6, B - r];
     return { svg: st(`M${f(s)} ${f(T + r)}V${f(B - r)}`, w) + st(`M${f(J[0])} ${f(J[1])}L${f(A[0])} ${f(A[1])}M${f(L0[0])} ${f(L0[1])}L${f(L1[0])} ${f(L1[1])}`, w * .96), right: L1[0] + r };
   }
-  function wordAt(x, w) {
-    const r = w / 2, xh = B - X, thin = .96, out = [];
-    const k = kAt(x, w); out.push(k.svg); x = k.right + 6;
-    { const s = x + r, tx = s + 19, ty = X + r + 1.2; out.push(st(`M${f(s)} ${f(X + r)}V${f(B - r)}`, w)); out.push(st(`M${f(s)} ${f(X + r + 17)}C${f(s)} ${f(X + r + 3)} ${f(s + 6.5)} ${f(X + r - .6)} ${f(tx)} ${f(ty)}`, w * thin)); x = tx + r + 3.2; }
-    { const ow = xh * 1.03, cx = x + ow / 2, cy = B - xh / 2, ex = ow / 2 - r, ey = (xh + 1.6) / 2 - r; out.push(st(`M${f(cx - ex)} ${f(cy)}A${f(ex)} ${f(ey)} 0 1 0 ${f(cx + ex)} ${f(cy)}A${f(ex)} ${f(ey)} 0 1 0 ${f(cx - ex)} ${f(cy)}Z`, w)); x += ow + 3.6; }
-    for (let n = 0; n < 2; n++) { const vw = xh * .95, a = x + r, b = x + vw - r, m = x + vw / 2; out.push(st(`M${f(a)} ${f(X + r)}L${f(m)} ${f(B - r)}L${f(b)} ${f(X + r)}`, w * thin)); x += vw + (n === 0 ? 2.4 : 5); }
-    { const s = x + r, dr = r * .94; out.push(st(`M${f(s)} ${f(X + r)}V${f(B - r)}`, w)); out.push(`<circle cx="${f(s)}" cy="${f(X - 3.6 - dr)}" r="${f(dr)}" fill="currentColor"/>`); x = s + r; }
-    return { svg: out.join(''), right: x };
-  }
   const k = kAt(0, W), sc = 60 / (B - T), tx = 50.8 - (k.right / 2) * sc, ty = 48.4 - ((T + B) / 2) * sc;
   document.getElementById('tile').innerHTML = `<svg viewBox="0 0 100 100" style="color:#fff"><g transform="translate(${f(tx)} ${f(ty)}) scale(${f(sc)})">${k.svg}</g></svg>`;
-  const d = wordAt(0, W);
-  document.getElementById('word').innerHTML = `<svg viewBox="-1 ${f(T - 1.5)} ${f(d.right + 2)} ${f(B - T + 2.5)}">${d.svg}</svg>`;
   /* the tagline, lowercase as the home page sets it, its last word in Krovvi's colour */
   const line = (new URLSearchParams(location.search).get('line') || 'Your super friend.').toLowerCase();
   const words = line.split(' '), last = words.pop();

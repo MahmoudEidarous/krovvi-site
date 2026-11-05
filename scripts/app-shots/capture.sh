@@ -181,8 +181,9 @@ film() { # name, how it starts: "tap" trims to just before the first move, "ask"
   local dur=$(T 30 ffprobe -v error -show_entries format=duration -of csv=p=0 "$in")
   [[ -z $dur ]] && return
   if [[ $how == tap && -n $first_end ]]; then start=$(( first_end > 0.35 ? first_end - 0.35 : 0 )); fi
-  # an ask film opens on the screen before it: it starts the moment the chat stands
-  [[ $how == ask && -n $first_end ]] && start=$(( first_end + 0.1 ))
+  # an ask film opens on the screen before it: it starts once the chat stands and its buttons have drawn their icons
+  # (at +0.1 s the history button and the mic were still blank discs, and that frame was the film's poster: 5 Nov 2026)
+  [[ $how == ask && -n $first_end ]] && start=$(( first_end + 0.55 ))
   end=${last_start:-$dur}; end=$(( end + 0.5 < dur ? end + 0.5 : dur ))
   T 300 ffmpeg -v error -y -ss $start -to $end -i "$in" -vf "fps=30,scale=$WIDTH:-2:flags=lanczos,format=yuv420p" \
     -c:v libx264 -preset slow -crf 22 -profile:v high -movflags +faststart -an "$OUT/$name.mp4" || return
