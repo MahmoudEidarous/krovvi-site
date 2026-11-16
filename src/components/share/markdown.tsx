@@ -122,12 +122,49 @@ type Block =
   | { t: "h"; level: number; text: string }
   | { t: "hr" }
   | { t: "quote"; text: string }
+  | { t: "callout"; kind: CalloutKind; text: string }
   | { t: "list"; ordered: boolean; start: number; items: Array<{ text: string; children: Block[] }> }
   | { t: "table"; headers: string[]; rows: string[][]; align: Array<"left" | "right" | "center" | null> }
   | { t: "fence"; lang: string; content: string };
 
 const LIST_ITEM = /^(\s*)([-*+]|\d{1,3}[.)])\s+(.*)$/;
 const TABLE_SEP = /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/;
+
+/**
+ * A callout, as the app reads one (catch8 src/lib/answer/markdown-plugins.ts CALLOUT): a quote whose first words are
+ * [!NOTE], [!TIP], [!IMPORTANT], [!WARNING] or [!CAUTION]. Until 16 November 2026 this page drew it as a plain quote
+ * with "[!TIP]" printed as written, in English and in Arabic (seen in real iOS Safari on a live shared chat).
+ */
+export type CalloutKind = "note" | "tip" | "important" | "warning" | "caution";
+const CALLOUT = /^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*/i;
+/** The word a callout is named by, as the app says it (catch8 src/lib/i18n.ts answer.callout). */
+const CALLOUT_WORD: Record<"en" | "ar", Record<CalloutKind, string>> = {
+  en: { note: "Note", tip: "Tip", important: "Important", warning: "Warning", caution: "Careful" },
+  ar: { note: "ملحوظة", tip: "نصيحة", important: "مهم", warning: "تنبيه", caution: "خلّي بالك" },
+};
+
+/** A cell's words as a person reads them: without the marks of bold, code and links. */
+function plainLength(cell: string): number {
+  return [...cell.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*_`~]/g, "")].length;
+}
+
+/** The widest a column asks to be, in characters: past this a cell wraps onto more lines. */
+const COLUMN_MOST_CH = 24;
+
+/**
+ * How wide each column asks to be, in characters: its longest cell or head, never under 3 and never over
+ * COLUMN_MOST_CH. A table was squeezed into the phone's width whatever it held, so with real words in four columns
+ * "Week 1, Day 1" broke over four lines and a topic over seven, six rows taking three screens (seen in real iOS
+ * Safari, 16 November 2026). Each column now keeps the room its words need and a table wider than the screen slides
+ * sideways in its own card, as the app's does. One rule from the cells themselves, for every table. Pure.
+ */
+export function columnMinCh(headers: string[], rows: string[][]): number[] {
+  return headers.map((head, n) => {
+    let longest = plainLength(head);
+    for (const row of rows) longest = Math.max(longest, plainLength(row[n] ?? ""));
+    return Math.max(3, Math.min(COLUMN_MOST_CH, longest));
+  });
+}
 
 function cellsOf(line: string): string[] {
   const trimmed = line.trim().replace(/^\|/, "").replace(/\|$/, "");
@@ -178,7 +215,9 @@ export function parseBlocks(source: string): Block[] {
       flush();
       const body: string[] = [];
       while (i < lines.length && /^\s*>/.test(lines[i])) body.push(lines[i++].replace(/^\s*>\s?/, ""));
-      out.push({ t: "quote", text: body.join("\n") });
+      const text = body.join("\n");
+      const marked = CALLOUT.exec(text);
+      out.push(marked ? { t: "callout", kind: marked[1].toLowerCase() as CalloutKind, text: text.slice(marked[0].length).replace(/^\s*\n/, "") } : { t: "quote", text });
       continue;
     }
     if (line.includes("|") && i + 1 < lines.length && TABLE_SEP.test(lines[i + 1])) {
@@ -254,6 +293,19 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
           ))}
         </blockquote>
       );
+    case "callout": {
+      // A tone and a word, no border, as the app draws one (catch8 src/components/answer/blocks.tsx Callout): a
+      // warning carries the look's one warm red on its word alone, so the page never turns into an alarm.
+      const warm = block.kind === "warning" || block.kind === "caution";
+      return (
+        <div role="note" dir={env.lang === "ar" ? "rtl" : "ltr"} style={{ background: INK.surface, borderRadius: 17, padding: "12px 14px 2px", margin: "0 0 12px" }}>
+          <div style={{ ...STEP.label, fontWeight: 600, color: warm ? INK.down : INK.pick, marginBottom: 6 }}>{CALLOUT_WORD[env.lang][block.kind]}</div>
+          {parseBlocks(block.text).map((b, n) => (
+            <BlockNode key={n} block={b} env={env} k={`${k}-${n}`} />
+          ))}
+        </div>
+      );
+    }
     case "list": {
       const Tag = block.ordered ? "ol" : "ul";
       return (
@@ -269,7 +321,8 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
         </Tag>
       );
     }
-    case "table":
+    case "table": {
+      const minCh = columnMinCh(block.headers, block.rows);
       return (
         <div className="mb-3 overflow-x-auto" style={{ background: INK.surface, borderRadius: 17 }}>
           <table className="w-full" style={{ borderCollapse: "collapse", minWidth: "100%" }}>
@@ -287,7 +340,8 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
                 <tr key={r} style={{ borderTop: `0.5px solid ${INK.line}` }}>
                   {row.map((cell, n) => (
                     <td key={n} dir="auto" style={{ ...STEP.body, fontWeight: n === 0 ? 500 : 400, textAlign: block.align[n] ?? (n > 0 && /^[\s$€£\d.,%+-]+\w{0,4}$/.test(cell) ? "right" : "start"), fontVariantNumeric: "tabular-nums", padding: "10px 12px", whiteSpace: n === 0 ? "nowrap" : undefined, position: n === 0 ? "sticky" : undefined, insetInlineStart: 0, background: INK.surface }}>
-                      {inline(cell, `${k}-${r}-${n}`)}
+                      {/* The room this column's words need (columnMinCh): a block's own least width holds in every browser, where a cell's is not promised. */}
+                      <div style={{ minWidth: `${minCh[n] ?? 3}ch` }}>{inline(cell, `${k}-${r}-${n}`)}</div>
                     </td>
                   ))}
                 </tr>
@@ -296,6 +350,7 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
           </table>
         </div>
       );
+    }
     case "fence": {
       if (block.lang === "card") {
         const id = block.content.trim();
