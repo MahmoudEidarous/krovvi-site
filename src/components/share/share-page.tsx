@@ -20,12 +20,12 @@
  * holding the page (a transition, React's own way to keep a page answering
  * while it draws). A part that does not come is asked again by itself, and
  * again when the phone is back online; only then does the page say so, at
- * the end of what it has, with Try again.
+ * the end of what it has, with Try again. The mark is the app's own icon.
  */
 
 import { startTransition, useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
 
-import { Mark } from "@/components/mark";
+import { AppIcon } from "@/components/look/app-icon";
 import { INK, STEP } from "@/components/objects/kit";
 import { browserLang, say, type Lang, type Words } from "@/lib/objects";
 import { readPart, readShare, report, sayOpened, type MediaLink, type ShareRead } from "@/lib/share";
@@ -232,11 +232,12 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
   }, [token, state.kind]);
 
   const shellDir = lang === "ar" ? "rtl" : "ltr";
-  // Whose page this is, and nothing to tap but the way home: the one way on is at the foot.
+  // Whose page this is, and nothing to tap but the way home: the one way on is at the foot. The mark is the app's
+  // own icon, as a home screen shows it.
   const head = (
     <div className="flex items-center" style={{ height: 56 }}>
       <a href="/" className="flex items-center gap-2" aria-label="Krovvi">
-        <Mark size={22} />
+        <AppIcon size={24} />
         <span style={{ ...STEP.label, fontWeight: 600 }}>Krovvi</span>
       </a>
     </div>
@@ -259,7 +260,7 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
           </div>
         ) : (
           <div className="flex justify-center py-24">
-            <Mark size={34} className="animate-pulse" />
+            <AppIcon size={28} className="animate-pulse" />
           </div>
         )}
       </main>

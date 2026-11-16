@@ -12,12 +12,14 @@ import { SHARE_API } from "@/lib/share";
  */
 
 /**
- * The picture every shared chat shows in a messaging app (public/share-card-*.png): the K and the
- * wordmark with "A chat shared from Krovvi" in the chat's language, never anything from the chat itself.
+ * The picture every shared chat shows in a messaging app (public/share-card-*.png, drawn by
+ * scripts/identity/share-cards.mjs): the app's own icon and the wordmark with "A chat shared from Krovvi" in the
+ * chat's language, never anything from the chat itself. The link preview's title and name come from the share's own
+ * row (the door's meta read), never from the copy, so a long chat's preview is as quick as a short one's.
  */
 const CARD = {
   en: { url: "/share-card-en.png", width: 1200, height: 630, alt: "A chat shared from Krovvi" },
-  ar: { url: "/share-card-ar.png", width: 1200, height: 630, alt: "شات متشارك من كروفي" },
+  ar: { url: "/share-card-ar.png", width: 1200, height: 630, alt: "محادثة متشاركة من كروفي" },
 } as const;
 
 export async function generateMetadata({ params }: { params: Promise<{ token: string }> }): Promise<Metadata> {
