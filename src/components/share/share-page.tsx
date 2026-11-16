@@ -12,16 +12,25 @@
  * in the top corner and the line under the button are gone. A link made with
  * its sharer's name, which the app no longer offers, still says it. An open
  * is counted only once the page has really been seen for a few seconds.
+ *
+ * A long chat opens at once (the owner, 16 November 2026: "should not take
+ * forever to load with long chats ... and should be much more realibale"):
+ * the first part (about a screen or two) is drawn as soon as it comes, and
+ * the rest follows a part at a time behind it, each part drawn without
+ * holding the page (a transition, React's own way to keep a page answering
+ * while it draws). A part that does not come is asked again by itself, and
+ * again when the phone is back online; only then does the page say so, at
+ * the end of what it has, with Try again.
  */
 
-import { useCallback, useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import { startTransition, useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
 
 import { Mark } from "@/components/mark";
 import { INK, STEP } from "@/components/objects/kit";
 import { browserLang, say, type Lang, type Words } from "@/lib/objects";
-import { readShare, report, sayOpened, type ShareRead } from "@/lib/share";
+import { readPart, readShare, report, sayOpened, type MediaLink, type ShareRead } from "@/lib/share";
 import { JOIN_URL } from "@/lib/site";
-import { ChatView, type MediaUrls } from "./chat-view";
+import { ChatView, mediaOfTurn, PhotoAgain, type MediaUrls, type SnapTurn, type TurnItem } from "./chat-view";
 
 const C = {
   sharedBy: { en: "Shared by", ar: "شاركه" },
@@ -39,7 +48,28 @@ const C = {
   again: { en: "Try again", ar: "جرب تاني" },
   noApp: { en: "Didn’t open? Krovvi isn’t on this phone yet.", ar: "ما فتحش؟ كروفي مش على الموبايل ده لسه." },
   notIphone: { en: "Krovvi is on iPhone.", ar: "كروفي على الآيفون." },
+  // The rest of a long chat, after its first part.
+  restComing: { en: "Loading the rest of the chat", ar: "باقي المحادثة بيتحمّل" },
+  restFailed: { en: "The rest of the chat didn’t load.", ar: "باقي المحادثة ماتحمّلش." },
 } satisfies Record<string, Words>;
+
+/** How many turns the first draw holds when a door from before parts sends the whole chat at once: the rest is drawn behind it. */
+const FIRST_DRAW = 12;
+
+function mediaMap(links: MediaLink[]): MediaUrls {
+  const out: MediaUrls = {};
+  for (const m of links) out[m.id] = { url: m.url, mime: m.mime };
+  return out;
+}
+
+/** Turns and the links for each one's own photos and files. */
+function itemsOf(turns: SnapTurn[], links: MediaLink[]): TurnItem[] {
+  const all = mediaMap(links);
+  return turns.map((turn) => ({ turn, media: mediaOfTurn(turn, all) }));
+}
+
+/** Where the rest of the chat stands: all here, on its way from a turn, or not come after asking again. */
+type Rest = { kind: "done" } | { kind: "coming"; from: number } | { kind: "failed"; from: number };
 
 /** How long the page waits for the app to take over before it says the app is not there. */
 const APP_WAIT_MS = 1800;
@@ -70,11 +100,15 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
   const [state, setState] = useState<{ kind: "loading" } | { kind: "ready"; share: ShareRead } | { kind: "off" } | { kind: "gone" } | { kind: "offline" }>(
     fixture ? { kind: "ready", share: fixture } : { kind: "loading" }
   );
+  const [items, setItems] = useState<TurnItem[]>(() => (fixture ? itemsOf(fixture.snapshot.turns, fixture.media) : []));
+  const [rest, setRest] = useState<Rest>({ kind: "done" });
   const [lang, setLang] = useState<Lang>("en");
   const [reported, setReported] = useState(false);
   const [device, setDevice] = useState<"ios" | "other" | null>(null);
   const [noApp, setNoApp] = useState(false);
   const counted = useRef(false);
+  /** Which reading of the page this is: a part asked for by an earlier one is dropped when it comes. */
+  const reading = useRef(0);
 
   useEffect(() => {
     setLang(browserLang());
@@ -82,10 +116,66 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
   }, []);
   const load = useCallback(() => {
     if (!token) return;
+    const mine = ++reading.current;
     setState({ kind: "loading" });
-    void readShare(token).then((r) => setState(r.ok ? { kind: "ready", share: r.share } : r.off ? { kind: "off" } : r.offline ? { kind: "offline" } : { kind: "gone" }));
+    setRest({ kind: "done" });
+    void readShare(token).then((r) => {
+      if (mine !== reading.current) return;
+      if (!r.ok) return setState(r.off ? { kind: "off" } : r.offline ? { kind: "offline" } : { kind: "gone" });
+      const all = itemsOf(r.share.snapshot.turns, r.share.media);
+      // The first screen at once; a whole chat from a door before parts is drawn behind it.
+      setItems(all.slice(0, FIRST_DRAW));
+      setState({ kind: "ready", share: r.share });
+      if (all.length > FIRST_DRAW) startTransition(() => setItems(all));
+      setRest(r.share.more ? { kind: "coming", from: r.share.more.from } : { kind: "done" });
+    });
   }, [token]);
   useEffect(() => load(), [load]);
+
+  // The rest of the chat, a part at a time, each drawn as it comes without holding the page.
+  const version = state.kind === "ready" ? state.share.version : 0;
+  useEffect(() => {
+    if (!token || rest.kind !== "coming" || !version) return;
+    const mine = reading.current;
+    let live = true;
+    void readPart(token, rest.from, version).then((r) => {
+      if (!live || mine !== reading.current) return;
+      if (r.ok) {
+        // Drawn behind what is on screen, while the next part is already on its way.
+        startTransition(() => setItems((had) => [...had, ...itemsOf(r.turns, r.media)]));
+        setRest(r.more && r.turns.length ? { kind: "coming", from: r.more.from } : { kind: "done" });
+      } else if (r.changed) load();
+      else if (r.off) setState({ kind: "off" });
+      else if (r.gone) setState({ kind: "gone" });
+      else setRest({ kind: "failed", from: rest.from });
+    });
+    return () => {
+      live = false;
+    };
+  }, [token, rest, version, load]);
+
+  // Back online: what did not come is asked again, by itself.
+  useEffect(() => {
+    const back = () => {
+      if (state.kind === "offline") load();
+      else if (rest.kind === "failed") setRest({ kind: "coming", from: rest.from });
+    };
+    window.addEventListener("online", back);
+    return () => window.removeEventListener("online", back);
+  }, [state.kind, rest, load]);
+
+  // A photo that did not load (its hour-long link ran out on a page left open): fresh links for the part it is in.
+  const photoAgain = useCallback(
+    (turn: number) => {
+      if (!token || !version || turn < 0) return;
+      void readPart(token, turn, version).then((r) => {
+        if (!r.ok) return;
+        const fresh = mediaMap(r.media);
+        setItems((had) => had.map((it, n) => (n < turn || n >= turn + Math.max(1, r.turns.length) ? it : { turn: it.turn, media: mediaOfTurn(it.turn, { ...it.media, ...fresh }) })));
+      });
+    },
+    [token, version]
+  );
 
   // Continue in Krovvi: the app takes over if it is on this phone. If the page is still in front a moment later,
   // it is not (Safari has said the address is invalid), so the page says so and offers the app instead.
@@ -141,13 +231,6 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
     };
   }, [token, state.kind]);
 
-  const media = useMemo<MediaUrls>(() => {
-    if (state.kind !== "ready") return {};
-    const out: MediaUrls = {};
-    for (const m of state.share.media) out[m.id] = { url: m.url, mime: m.mime };
-    return out;
-  }, [state]);
-
   const shellDir = lang === "ar" ? "rtl" : "ltr";
   // Whose page this is, and nothing to tap but the way home: the one way on is at the foot.
   const head = (
@@ -185,6 +268,7 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
 
   const share = state.share;
   const contentDir = share.snapshot.dir;
+  const restLang = share.snapshot.lang;
   return (
     <main dir={shellDir} lang={lang} className="mx-auto min-h-dvh w-full max-w-[680px] px-4 pb-40" style={{ background: INK.bg, color: INK.fg }}>
       {head}
@@ -197,8 +281,29 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
         </p>
       </header>
       <div dir={contentDir}>
-        <ChatView snapshot={share.snapshot} media={media} lang={share.snapshot.lang} />
+        <PhotoAgain.Provider value={token ? photoAgain : null}>
+          <ChatView items={items} lang={share.snapshot.lang} />
+        </PhotoAgain.Provider>
       </div>
+      {/* The end of what has come, while the rest is on its way, or when it did not come after asking again. In the
+          chat's own language, under its last message. */}
+      {rest.kind === "coming" ? (
+        <p dir={contentDir} lang={restLang} role="status" className="mt-6 text-center" style={{ ...STEP.meta, color: INK.faint }}>
+          {say(C.restComing, restLang)}
+        </p>
+      ) : rest.kind === "failed" ? (
+        <div dir={contentDir} lang={restLang} role="status" className="mt-6 text-center">
+          <p style={{ ...STEP.meta, color: INK.muted }}>{say(C.restFailed, restLang)}</p>
+          <button
+            type="button"
+            onClick={() => setRest({ kind: "coming", from: rest.from })}
+            className="mt-3 rounded-full active:scale-[0.98]"
+            style={{ ...STEP.label, fontWeight: 600, padding: "10px 18px", background: INK.surfaceHi, color: INK.fg }}
+          >
+            {say(C.again, restLang)}
+          </button>
+        </div>
+      ) : null}
       <footer className="mt-10 text-center">
         {!reported ? (
           <button

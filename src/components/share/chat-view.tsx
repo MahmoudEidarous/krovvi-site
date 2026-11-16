@@ -8,14 +8,22 @@
  * a message heard while Krovvi worked in its place, the photos and files,
  * and a question card with what was picked. Read with the chat's own reader
  * (lib/answer/reply-format.ts, copied from the app).
+ *
+ * A long chat stays light (16 November 2026): a turn out of sight is not
+ * laid out or painted until it comes near (content-visibility), and a photo
+ * is fetched only as it nears the screen. A photo whose hour-long link has
+ * run out asks the page once for a fresh one before it is left out.
  */
 
-import { Fragment } from "react";
+import { createContext, memo, useContext, useState } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
 import { BURST_SEP, replyParts, type ReplyPart } from "@/lib/answer/reply-format";
 import { inline, Markdown, ShareMedia, type RenderEnv } from "./markdown";
 import type { ShareCard } from "./cards";
+
+/** A turn's photo that did not load: the page fetches fresh links for that turn's part once (share-page.tsx). */
+export const PhotoAgain = createContext<((turn: number) => void) | null>(null);
 
 export interface SnapTurn {
   at: number;
@@ -58,36 +66,54 @@ function Badge({ emoji, side }: { emoji: string; side: "start" | "end" }) {
   );
 }
 
+/**
+ * The photos above a message. Fetched as they near the screen, never all at page load. One that does not load asks
+ * once for a fresh link (an hour-long link runs out on a page left open), and a photo that still does not load leaves
+ * no broken picture behind.
+ */
+function Photos({ photos, media, turn }: { photos: number[]; media: MediaUrls; turn: number }) {
+  const again = useContext(PhotoAgain);
+  // By photo, not by link: a photo that is gone from storage asks once, then is left out, however many links it gets.
+  const [asked, setAsked] = useState<ReadonlySet<number>>(new Set());
+  const [lost, setLost] = useState<ReadonlySet<number>>(new Set());
+  const shown = photos.filter((p) => media[p] && !lost.has(p));
+  if (!shown.length) return null;
+  return (
+    <div className="flex flex-wrap justify-end" style={{ gap: 4, maxWidth: "78%" }}>
+      {shown.map((p) => (
+        // A tap opens the photo whole, in its own tab.
+        <a key={p} href={media[p].url} target="_blank" rel="noopener noreferrer" className="block active:opacity-80">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={media[p].url}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            width={photos.length === 1 ? 220 : 120}
+            height={photos.length === 1 ? 220 : 120}
+            className="object-cover"
+            style={{ width: photos.length === 1 ? 220 : 120, height: photos.length === 1 ? 220 : 120, borderRadius: 13, background: INK.surface }}
+            onError={() => {
+              if (again && !asked.has(p)) {
+                setAsked((s) => new Set(s).add(p));
+                again(turn);
+              } else setLost((s) => new Set(s).add(p));
+            }}
+          />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 /** The person's messages: one group of bubbles on the right, Krovvi's reaction on the last one. */
-function Person({ texts, photos, media, reaction }: { texts: string[]; photos: number[]; media: MediaUrls; reaction: string | null }) {
+function Person({ texts, photos, media, reaction, turn = -1 }: { texts: string[]; photos: number[]; media: MediaUrls; reaction: string | null; turn?: number }) {
   const shown = texts.map((t) => t.trim()).filter(Boolean);
   // A turn of Krovvi's own (a made file's receipt) has no message of theirs above it.
   if (!shown.length && !photos.length) return null;
   return (
     <div className="flex flex-col items-end" style={{ gap: 4, margin: "16px 0 4px" }}>
-      {photos.length ? (
-        <div className="flex flex-wrap justify-end" style={{ gap: 4, maxWidth: "78%" }}>
-          {photos.map((p) =>
-            media[p] ? (
-              // A tap opens the photo whole, in its own tab.
-              <a key={p} href={media[p].url} target="_blank" rel="noopener noreferrer" className="block active:opacity-80">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={media[p].url}
-                  alt=""
-                  className="object-cover"
-                  style={{ width: photos.length === 1 ? 220 : 120, height: photos.length === 1 ? 220 : 120, borderRadius: 13 }}
-                  // A photo that is gone (or whose hour-long link ran out) leaves no broken picture behind.
-                  onError={(e) => {
-                    const link = e.currentTarget.parentElement;
-                    if (link) link.style.display = "none";
-                  }}
-                />
-              </a>
-            ) : null
-          )}
-        </div>
-      ) : null}
+      {photos.length ? <Photos photos={photos} media={media} turn={turn} /> : null}
       {shown.map((t, n) => (
         <div key={n} className="relative" style={{ maxWidth: "78%" }}>
           <div dir="auto" style={{ ...BUBBLE, background: INK.surfaceHi, color: INK.fg, padding: "8px 13px", borderRadius: 17, borderEndEndRadius: n === shown.length - 1 ? 6 : 17, whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
@@ -156,15 +182,35 @@ function Ask({ ask, lang }: { ask: NonNullable<SnapTurn["ask"]>; lang: "en" | "a
   );
 }
 
-/** One turn: the person's messages, then Krovvi's reply in its parts. */
-function Turn({ turn, media, lang }: { turn: SnapTurn; media: MediaUrls; lang: "en" | "ar" }) {
+/**
+ * A turn out of sight is kept, but not laid out or painted until it comes near: a chat of three hundred long answers
+ * costs the browser what its screen shows. `auto` keeps a turn's real height once it has been drawn, so the page does
+ * not jump when it is scrolled back.
+ */
+const OFFSCREEN = { contentVisibility: "auto", containIntrinsicSize: "auto 640px" } as const;
+
+/** The photos and files one turn shows, as the copy names them (its photos, its files, the files its words link). */
+export function mediaOfTurn(turn: SnapTurn, all: MediaUrls): MediaUrls {
+  const ids = new Set<number>([...(turn.photos ?? []), ...(turn.files ?? []).map((f) => f.media)]);
+  for (const m of (turn.a ?? "").matchAll(/\]\(share:file\?m=(\d{1,4})\)/g)) ids.add(Number(m[1]));
+  const out: MediaUrls = {};
+  for (const id of ids) if (all[id]) out[id] = all[id];
+  return out;
+}
+
+/** A turn and the links for its own photos and files: a part that arrives later, with links for its own, never redraws this one. */
+export type TurnItem = { turn: SnapTurn; media: MediaUrls };
+
+/** One turn: the person's messages, then Krovvi's reply in its parts. Drawn once, unless its own links change. */
+const Turn = memo(function Turn({ turn, media, lang, index }: { turn: SnapTurn; media: MediaUrls; lang: "en" | "ar"; index: number }) {
   const env: RenderEnv = { cards: turn.cards, lang };
   const parts = replyParts(turn.a, { mixed: turn.style === "mixed", final: true });
   const reaction = (parts.find((p) => p.kind === "react") as Extract<ReplyPart, { kind: "react" }> | undefined)?.emoji ?? null;
   let piece = -1;
   return (
-    <div>
-      <Person texts={turn.q.split(BURST_SEP)} photos={turn.photos} media={media} reaction={reaction} />
+    <div style={OFFSCREEN}>
+      <ShareMedia.Provider value={media}>
+      <Person texts={turn.q.split(BURST_SEP)} photos={turn.photos} media={media} reaction={reaction} turn={index} />
       <div className="flex flex-col" style={{ gap: 4, marginTop: 8 }}>
         {parts.map((p, n) => {
           if (p.kind === "react") return null;
@@ -193,18 +239,17 @@ function Turn({ turn, media, lang }: { turn: SnapTurn; media: MediaUrls; lang: "
         {turn.ask ? <Ask ask={turn.ask} lang={lang} /> : null}
         {turn.stopped ? <div style={{ ...STEP.meta, color: INK.muted }}>{lang === "ar" ? "اتوقف" : "Stopped"}</div> : null}
       </div>
+      </ShareMedia.Provider>
     </div>
   );
-}
+});
 
-export function ChatView({ snapshot, media, lang }: { snapshot: ChatSnapshot; media: MediaUrls; lang: "en" | "ar" }) {
+export function ChatView({ items, lang }: { items: TurnItem[]; lang: "en" | "ar" }) {
   return (
-    <ShareMedia.Provider value={media}>
-      {snapshot.turns.map((t, n) => (
-        <Fragment key={n}>
-          <Turn turn={t} media={media} lang={lang} />
-        </Fragment>
+    <>
+      {items.map((it, n) => (
+        <Turn key={n} turn={it.turn} media={it.media} lang={lang} index={n} />
       ))}
-    </ShareMedia.Provider>
+    </>
   );
 }
