@@ -236,9 +236,10 @@ export function SharePage({ token, fixture }: { token?: string; fixture?: ShareR
   // own icon, as a home screen shows it.
   const head = (
     <div className="flex items-center" style={{ height: 56 }}>
-      <a href="/" className="flex items-center gap-2" aria-label="Krovvi">
+      <a href="/" className="flex items-center gap-2" aria-label={lang === "ar" ? "كروفي" : "Krovvi"}>
         <AppIcon size={24} />
-        <span style={{ ...STEP.label, fontWeight: 600 }}>Krovvi</span>
+        {/* Its name in the page's own language: on an Arabic page it is كروفي, as the button at the foot says it. */}
+        <span style={{ ...STEP.label, fontWeight: 600 }}>{lang === "ar" ? "كروفي" : "Krovvi"}</span>
       </a>
     </div>
   );
