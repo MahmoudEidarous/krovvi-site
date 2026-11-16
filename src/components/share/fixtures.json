@@ -536,5 +536,187 @@
       ]
     },
     "media": []
+  },
+  "chat-seen": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "Four days in Lisbon",
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Mahmoud",
+    "made_at": 1791016200000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "Four days in Lisbon",
+      "lang": "en",
+      "dir": "ltr",
+      "made_at": 1791016200000,
+      "name": "Mahmoud",
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "Four days in Lisbon. What should I not miss?",
+          "photos": [],
+          "a": "Four things, and I'd start with the view: it shows you where everything else is.\n\n```openui\nroot = Card([must], \"Don't miss\")\nmust = List([Item(\"Miradouro de Santa Luzia\", \"The whole old town and the river from one terrace. Go at sunset.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"My pick\"), Item(\"Tram 28\", \"The old yellow tram through Alfama. Ride it early, before the queues.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\"), Item(\"LX Factory\", \"An old factory turned into shops, food and a bookshop worth an hour.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\"), Item(\"Time Out Market\", \"Two dozen of the city's kitchens under one roof.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"For lunch\")])\n```\n\nWith an evening free, these are worth it too.\n\n```openui\nroot = Card([more])\nmore = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Torre_Bel%C3%A9m_April_2009-4a.jpg/960px-Torre_Bel%C3%A9m_April_2009-4a.jpg\", \"Belém Tower\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Sunset_Sailing_on_Tagus_River_%2850657005681%29.jpg/960px-Sunset_Sailing_on_Tagus_River_%2850657005681%29.jpg\", \"A sail on the Tagus\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"Fado in Alfama\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Feira_da_ladra.jpg/960px-Feira_da_ladra.jpg\", \"Feira da Ladra\", \"Wikimedia Commons\")])\n```\n\nAnd if it rains, three ways to spend the afternoon.\n\n```openui\nroot = Card([rain])\nrain = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"LX Factory\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"Time Out Market\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"A fado house\", \"Wikimedia Commons\")])\n```\n\nAnd this is the view itself:\n\n![The view from the terrace](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg)\n\nSee?",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014460000,
+          "q": "How am I doing on my food budget this month?",
+          "photos": [],
+          "a": "You're on track: **$312 of $600** with 18 days gone, a little under an even pace.\n\n```openui\nroot = Card([spent, days, weeks, split, top, table], \"Food this month\")\nspent = Progress(\"Spent so far\", 312, 600, \"$\", \"less\", 18 / 31, \"Today\", \"About \" + @Money(@Round((600 - 312) / (31 - 18)), \"$\") + \" a day keeps you inside it\")\ndays = Chart(\"bars\", @Range(1, 18), [Series(\"Each day\", [18, 22, 0, 25, 19, 14, 31, 17, 20, 0, 24, 18, 15, 27, 16, 14, 15, 17])], \"$\", @Round(600 / 31), \"Even pace\")\nweeks = Chart(\"area\", [\"W1\", \"W2\", \"W3\"], [Series(\"Groceries\", [62, 71, 58]), Series(\"Eating out\", [40, 22, 31])], \"$\", null, null, \"By week\")\nsplit = Chart(\"pie\", [\"Groceries\", \"Eating out\", \"Delivery\", \"Coffee\"], [Series(\"Where it went\", [191, 93, 18, 10])], \"$\")\ntop = Chart(\"rank\", [\"Market\", \"Bakery\", \"Café\", \"Delivery\"], [Series(\"Most spent at\", [120, 71, 40, 18])], \"$\")\ntable = Table([\"Week\", \"Spent\", \"Meals out\"], [[\"Week 1\", \"$102\", 3], [\"Week 2\", \"$93\", 1], [\"Week 3\", \"$117\", 2]], \"Week by week\")\n```",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014460000,
+          "q": "Which of the three flats should I take?",
+          "photos": [],
+          "a": "**Avenidas** if your commute matters most: 14 minutes to work and the most room, for $240 more than Graça. Pick what matters most and the pick follows.\n\n```openui\nroot = Card([focus, flats, pics, more], \"Three flats in Lisbon\")\n$focus = \"commute\"\nfocus = Choice(\"focus\", \"What matters most\", [Opt(\"Price\", \"price\"), Opt(\"Commute\", \"commute\"), Opt(\"Space\", \"space\"), Opt(\"Light\", \"light\")], $focus)\nflats = Compare([a, g, l], $focus)\na = Pick(\"Avenidas 3-bed\", [\"96 m²\", \"14 min to work\", \"Lift\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"$1,690/mo\", \"Shortest commute\", \"https://example.com/avenidas\", {price: 4, commute: 10, space: 10, light: 6})\ng = Pick(\"Graça 2-bed\", [\"78 m²\", \"35 min to work\", \"River view\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"$1,450/mo\", \"The best light\", null, {price: 7, commute: 4, space: 7, light: 10})\nl = Pick(\"Alfama loft\", [\"62 m²\", \"28 min to work\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"$1,250/mo\", \"Cheapest, $440 less\", null, {price: 10, commute: 6, space: 4, light: 5})\npics = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"The view from Graça\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"Tram 28 by the loft\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"Near Avenidas\", \"Wikimedia Commons\")])\nmore = Buttons([Button(\"Open the Avenidas listing\", @OpenUrl(\"https://example.com/avenidas\"), \"secondary\")])\n```",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": [
+      {
+        "id": 0,
+        "url": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22440%22%20height%3D%22440%22%3E%3Crect%20width%3D%22440%22%20height%3D%22440%22%20fill%3D%22%232a2620%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22180%22%20r%3D%2270%22%20fill%3D%22%23c98a62%22%2F%3E%3Crect%20x%3D%22230%22%20y%3D%22120%22%20width%3D%22140%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22%23b0a89d%22%2F%3E%3C%2Fsvg%3E",
+        "mime": "image/jpeg"
+      },
+      {
+        "id": 1,
+        "url": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKMSAwIG9iago8PD4+CmVuZG9iagp0cmFpbGVyCjw8Pj4KJSVFT0YK",
+        "mime": "application/pdf"
+      }
+    ]
+  },
+  "chat-seen-ar": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "أربع أيام في لشبونة",
+    "lang": "ar",
+    "dir": "rtl",
+    "name": null,
+    "made_at": 1791015000000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "أربع أيام في لشبونة",
+      "lang": "ar",
+      "dir": "rtl",
+      "made_at": 1791015000000,
+      "name": null,
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "أربع أيام في لشبونة. إيه اللي لازم أشوفه؟",
+          "photos": [],
+          "a": "أربع حاجات، وأنا أبدأ بالمنظر: هو اللي يوريك كل حاجة تانية فين.\n\n```openui\nroot = Card([must], \"ماتفوتهمش\")\nmust = List([Item(\"ميرادورو دي سانتا لوزيا\", \"البلد القديمة كلها والنهر من تراس واحد. روح وقت الغروب.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"اختياري\"), Item(\"ترام 28\", \"الترام الأصفر القديم وسط ألفاما. اركبه بدري قبل الطوابير.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\"), Item(\"إل إكس فاكتوري\", \"مصنع قديم بقى محلات وأكل ومكتبة تستاهل ساعة.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\"), Item(\"تايم أوت ماركت\", \"أكتر من عشرين مطبخ من مطابخ المدينة تحت سقف واحد.\", null, \"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"للغدا\")])\n```\n\nولو عندك ليلة فاضية، دول كمان يستاهلوا.\n\n```openui\nroot = Card([more])\nmore = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Torre_Bel%C3%A9m_April_2009-4a.jpg/960px-Torre_Bel%C3%A9m_April_2009-4a.jpg\", \"برج بيليم\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Sunset_Sailing_on_Tagus_River_%2850657005681%29.jpg/960px-Sunset_Sailing_on_Tagus_River_%2850657005681%29.jpg\", \"مركب في نهر التاجة\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"فادو في ألفاما\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Feira_da_ladra.jpg/960px-Feira_da_ladra.jpg\", \"سوق فيرا دا لادرا\", \"ويكيميديا\")])\n```\n\nولو مطرت، تلات طرق تقضي بيهم بعد الضهر.\n\n```openui\nroot = Card([rain])\nrain = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"إل إكس فاكتوري\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"تايم أوت ماركت\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"بيت فادو\", \"ويكيميديا\")])\n```\n\nوده المنظر نفسه:\n\n![المنظر من التراس](https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg)\n\nشايف؟",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014460000,
+          "q": "أنا ماشي إزاي في ميزانية الأكل الشهر ده؟",
+          "photos": [],
+          "a": "إنت ماشي كويس: **312 من 600 دولار** وعدّى 18 يوم، تحت المعدل الطبيعي بشوية.\n\n```openui\nroot = Card([spent, days, weeks, split, top, table], \"الأكل الشهر ده\")\nspent = Progress(\"صرفت لحد دلوقتي\", 312, 600, \"$\", \"less\", 18 / 31, \"النهارده\", \"حوالي \" + @Money(@Round((600 - 312) / (31 - 18)), \"$\") + \" في اليوم وتفضل جوه الميزانية\")\ndays = Chart(\"bars\", @Range(1, 18), [Series(\"كل يوم\", [18, 22, 0, 25, 19, 14, 31, 17, 20, 0, 24, 18, 15, 27, 16, 14, 15, 17])], \"$\", @Round(600 / 31), \"المعدل\")\nweeks = Chart(\"area\", [\"أ1\", \"أ2\", \"أ3\"], [Series(\"البقالة\", [62, 71, 58]), Series(\"الأكل برة\", [40, 22, 31])], \"$\", null, null, \"كل أسبوع\")\nsplit = Chart(\"pie\", [\"البقالة\", \"الأكل برة\", \"الدليفري\", \"القهوة\"], [Series(\"الفلوس راحت فين\", [191, 93, 18, 10])], \"$\")\ntop = Chart(\"rank\", [\"السوبرماركت\", \"الفرن\", \"الكافيه\", \"الدليفري\"], [Series(\"صرفت أكتر في\", [120, 71, 40, 18])], \"$\")\ntable = Table([\"الأسبوع\", \"صرفت\", \"أكلات برة\"], [[\"أسبوع 1\", \"102 دولار\", 3], [\"أسبوع 2\", \"93 دولار\", 1], [\"أسبوع 3\", \"117 دولار\", 2]], \"أسبوع بأسبوع\")\n```",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        },
+        {
+          "at": 1791014460000,
+          "q": "آخد أنهي شقة من التلاتة؟",
+          "photos": [],
+          "a": "**أفينيداس** لو المشوار أهم حاجة: 14 دقيقة للشغل وأوسع مساحة، بزيادة 240 دولار عن جراسا. اختار الأهم والاختيار هيمشي معاك.\n\n```openui\nroot = Card([focus, flats, pics, more], \"تلات شقق في لشبونة\")\n$focus = \"commute\"\nfocus = Choice(\"focus\", \"إيه الأهم\", [Opt(\"السعر\", \"price\"), Opt(\"المشوار\", \"commute\"), Opt(\"المساحة\", \"space\"), Opt(\"النور\", \"light\")], $focus)\nflats = Compare([a, g, l], $focus)\na = Pick(\"أفينيداس 3 أوض\", [\"96 متر\", \"14 دقيقة للشغل\", \"أسانسير\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"1,690 دولار في الشهر\", \"أقصر مشوار\", \"https://example.com/avenidas\", {price: 4, commute: 10, space: 10, light: 6})\ng = Pick(\"جراسا أوضتين\", [\"78 متر\", \"35 دقيقة للشغل\", \"على النهر\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"1,450 دولار في الشهر\", \"أحلى نور\", null, {price: 7, commute: 4, space: 7, light: 10})\nl = Pick(\"لوفت ألفاما\", [\"62 متر\", \"28 دقيقة للشغل\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"1,250 دولار في الشهر\", \"الأرخص، بـ440 أقل\", null, {price: 10, commute: 6, space: 4, light: 5})\npics = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"المنظر من جراسا\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"ترام 28 جنب اللوفت\", \"ويكيميديا\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"جنب أفينيداس\", \"ويكيميديا\")])\nmore = Buttons([Button(\"افتح إعلان أفينيداس\", @OpenUrl(\"https://example.com/avenidas\"), \"secondary\")])\n```",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": []
+  },
+  "chat-flats": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "Three flats",
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Mahmoud",
+    "made_at": 1791016200000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "Three flats",
+      "lang": "en",
+      "dir": "ltr",
+      "made_at": 1791016200000,
+      "name": "Mahmoud",
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "Which of the three flats should I take?",
+          "photos": [],
+          "a": "**Avenidas** if your commute matters most: 14 minutes to work and the most room, for $240 more than Graça. Pick what matters most and the pick follows.\n\n```openui\nroot = Card([focus, flats, pics, more], \"Three flats in Lisbon\")\n$focus = \"commute\"\nfocus = Choice(\"focus\", \"What matters most\", [Opt(\"Price\", \"price\"), Opt(\"Commute\", \"commute\"), Opt(\"Space\", \"space\"), Opt(\"Light\", \"light\")], $focus)\nflats = Compare([a, g, l], $focus)\na = Pick(\"Avenidas 3-bed\", [\"96 m²\", \"14 min to work\", \"Lift\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"$1,690/mo\", \"Shortest commute\", \"https://example.com/avenidas\", {price: 4, commute: 10, space: 10, light: 6})\ng = Pick(\"Graça 2-bed\", [\"78 m²\", \"35 min to work\", \"River view\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"$1,450/mo\", \"The best light\", null, {price: 7, commute: 4, space: 7, light: 10})\nl = Pick(\"Alfama loft\", [\"62 m²\", \"28 min to work\"], \"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"$1,250/mo\", \"Cheapest, $440 less\", null, {price: 10, commute: 6, space: 4, light: 5})\npics = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"The view from Graça\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"Tram 28 by the loft\", \"Wikimedia Commons\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"Near Avenidas\", \"Wikimedia Commons\")])\nmore = Buttons([Button(\"Open the Avenidas listing\", @OpenUrl(\"https://example.com/avenidas\"), \"secondary\")])\n```",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": [
+      {
+        "id": 0,
+        "url": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22440%22%20height%3D%22440%22%3E%3Crect%20width%3D%22440%22%20height%3D%22440%22%20fill%3D%22%232a2620%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22180%22%20r%3D%2270%22%20fill%3D%22%23c98a62%22%2F%3E%3Crect%20x%3D%22230%22%20y%3D%22120%22%20width%3D%22140%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22%23b0a89d%22%2F%3E%3C%2Fsvg%3E",
+        "mime": "image/jpeg"
+      },
+      {
+        "id": 1,
+        "url": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKMSAwIG9iago8PD4+CmVuZG9iagp0cmFpbGVyCjw8Pj4KJSVFT0YK",
+        "mime": "application/pdf"
+      }
+    ]
   }
 }

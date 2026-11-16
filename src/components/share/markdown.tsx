@@ -16,6 +16,7 @@ import { INK, STEP } from "@/components/objects/kit";
 import { BLOCK_LANGS, BlockView } from "./blocks";
 import { CardView, type ShareCard } from "./cards";
 import { Diagram } from "./diagram";
+import { OpenUIView, Pictures } from "./openui";
 
 const BODY = { fontSize: 16, lineHeight: "26px", letterSpacing: "-0.15px", color: INK.fg } as const;
 
@@ -28,7 +29,7 @@ export interface RenderEnv {
 /* Inline.                                                              */
 /* ------------------------------------------------------------------ */
 
-const INLINE = /(`[^`\n]+`)|(\*\*[^*\n]+\*\*|__[^_\n]+__)|(\*[^*\n]+\*|(?<![\w])_[^_\n]+_(?![\w]))|(\[[^\]\n]+\]\([^)\s]+\))|(https?:\/\/[^\s<>()]+[^\s<>().,;:!?'"])/g;
+const INLINE = /(`[^`\n]+`)|(\*\*[^*\n]+\*\*|__[^_\n]+__)|(\*[^*\n]+\*|(?<![\w])_[^_\n]+_(?![\w]))|(!?\[[^\]\n]+\]\([^)\s]+\))|(https?:\/\/[^\s<>()]+[^\s<>().,;:!?'"])/g;
 
 /** The copy's photos and files, by the index its words name them by (share:file?m=). */
 export const ShareMedia = createContext<Record<number, { url: string; mime: string }>>({});
@@ -88,7 +89,8 @@ export function inline(text: string, key = "i"): ReactNode[] {
     else if (bold) out.push(<strong key={k} style={{ fontWeight: 600 }}>{inline(bold.slice(2, -2), k)}</strong>);
     else if (italic) out.push(<em key={k}>{inline(italic.slice(1, -1), k)}</em>);
     else if (link) {
-      const lm = /^\[([^\]]+)\]\(([^)\s]+)\)$/.exec(link)!;
+      // A picture inside a sentence is its words, as a link to it: the mark before it is not shown.
+      const lm = /^!?\[([^\]]+)\]\(([^)\s]+)\)$/.exec(link)!;
       const [, words, href] = lm;
       const file = /^share:file\?m=(\d{1,4})$/.exec(href);
       if (href.startsWith("share:receipt")) out.push(<Receipt key={k} href={href} words={words} />);
@@ -125,6 +127,7 @@ type Block =
   | { t: "callout"; kind: CalloutKind; text: string }
   | { t: "list"; ordered: boolean; start: number; items: Array<{ text: string; children: Block[] }> }
   | { t: "table"; headers: string[]; rows: string[][]; align: Array<"left" | "right" | "center" | null> }
+  | { t: "pictures"; items: Array<{ url: string; caption: string }> }
   | { t: "fence"; lang: string; content: string };
 
 const LIST_ITEM = /^(\s*)([-*+]|\d{1,3}[.)])\s+(.*)$/;
@@ -171,6 +174,9 @@ function cellsOf(line: string): string[] {
   return trimmed.split(/(?<!\\)\|/).map((c) => c.trim().replace(/\\\|/g, "|"));
 }
 
+/** A line that is only a picture: ![what it shows](https address). */
+const PICTURE_LINE = /^\s*!\[([^\]\n]*)\]\(\s*<?(https:\/\/[^)\s>]+)>?(?:\s+"[^"\n]*")?\s*\)\s*$/;
+
 export function parseBlocks(source: string): Block[] {
   const lines = source.replace(/\r\n?/g, "\n").split("\n");
   const out: Block[] = [];
@@ -196,6 +202,20 @@ export function parseBlocks(source: string): Block[] {
     if (!line.trim()) {
       flush();
       i += 1;
+      continue;
+    }
+    // Pictures written in the words, each on a line of its own: drawn, the ones that follow one another side by side
+    // (the page showed their Markdown as words until 16 November 2026). Only https, as the app loads them.
+    if (PICTURE_LINE.test(line)) {
+      flush();
+      const items: Array<{ url: string; caption: string }> = [];
+      while (i < lines.length) {
+        const m = PICTURE_LINE.exec(lines[i]);
+        if (m) items.push({ url: m[2], caption: m[1].trim() });
+        else if (lines[i].trim() || !PICTURE_LINE.test(lines[i + 1] ?? "")) break;
+        i += 1;
+      }
+      out.push({ t: "pictures", items });
       continue;
     }
     const h = /^(#{1,6})\s+(.*?)\s*#*\s*$/.exec(line);
@@ -351,7 +371,17 @@ function BlockNode({ block, env, k }: { block: Block; env: RenderEnv; k: string 
         </div>
       );
     }
+    case "pictures":
+      return (
+        <div className="mb-3">
+          <Pictures pictures={block.items.map((p) => ({ ...p, source: "" }))} rtl={env.lang === "ar"} />
+        </div>
+      );
     case "fence": {
+      // A live block (the app draws it natively): its parts in the page's look, as they stood (./openui.tsx). An
+      // older answer's screen has no reader here and is left out: never its lines shown as code.
+      if (block.lang === "openui") return <OpenUIView program={block.content} env={env} />;
+      if (block.lang === "screen") return null;
       if (block.lang === "card") {
         const id = block.content.trim();
         const card = env.cards[id];
