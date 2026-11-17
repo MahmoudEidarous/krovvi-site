@@ -49,8 +49,8 @@ export const PROPS = {
   Item: ['title', 'detail', 'icon', 'picture', 'badge'],
   Compare: ['items', 'focus', 'title'],
   Pick: ['name', 'points', 'picture', 'value', 'tag', 'link', 'scores'],
-  Gallery: ['pictures'],
-  Picture: ['src', 'caption', 'source'],
+  Gallery: ['pictures', 'title'],
+  Picture: ['src', 'caption', 'source', 'text'],
   Thing: ['id'],
   Buttons: ['items'],
   Button: ['label', 'action', 'style'],
@@ -304,13 +304,18 @@ export function partsIn(value, name) {
   return (Array.isArray(value) ? value : []).filter((x) => x && typeof x === 'object' && !Array.isArray(x) && (!name || x.part === name));
 }
 
-/** How many pictures stand in each row, for two to six: the app's own rule (src/lib/openui/tiles.ts in the app's code). */
+/** The most pictures a set shows: the app's own limit (src/lib/openui/tiles.ts in the app's code). */
+export const TILES_MOST = 8;
+
+/**
+ * How many pictures stand in each row, for two to eight: the app's own rule since 17 November 2026 (src/lib/openui/
+ * tiles.ts in the app's code). Two side by side, always, so each thing has room for its name and a line or two on it;
+ * an odd last one keeps its half of the row. Until then two to six stood two or three across.
+ */
 export function tileRows(count) {
-  const n = Math.max(0, Math.min(6, Math.floor(count)));
+  const n = Math.max(0, Math.min(TILES_MOST, Math.floor(count)));
   if (n < 2) return [];
-  if (n === 2) return [2];
-  if (n === 3) return [3];
-  if (n === 4) return [2, 2];
-  if (n === 5) return [2, 3];
-  return [3, 3];
+  const rows = [];
+  for (let left = n; left > 0; left -= 2) rows.push(Math.min(2, left));
+  return rows;
 }

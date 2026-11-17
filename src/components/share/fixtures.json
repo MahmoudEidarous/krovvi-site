@@ -718,5 +718,88 @@
         "mime": "application/pdf"
       }
     ]
+  },
+  "chat-tiles": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "Lisbon, shown",
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Mahmoud",
+    "made_at": 1791016200000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "Lisbon, shown",
+      "lang": "en",
+      "dir": "ltr",
+      "made_at": 1791016200000,
+      "name": "Mahmoud",
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "Show me the sides of Lisbon",
+          "photos": [],
+          "a": "Lisbon has two sides worth your four days: the old hills by the river, and the places people actually eat and browse.\n\n```openui\nroot = Card([old, eat], \"Lisbon, shown\")\nold = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"1. Santa Luzia terrace\", \"Wikimedia Commons\", \"The whole old town and the river from one terrace. Best at sunset.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"2. Tram 28\", \"Wikimedia Commons\", \"The old yellow tram through Alfama. Ride it early, before the queues.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Torre_Bel%C3%A9m_April_2009-4a.jpg/960px-Torre_Bel%C3%A9m_April_2009-4a.jpg\", \"3. Belém Tower\", \"Wikimedia Commons\", \"The river fort the ships left from. Twenty minutes west by tram.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"4. Fado in Alfama\", \"Wikimedia Commons\", \"A small room, two guitars, one voice. Book a late table.\")], \"The old city\")\neat = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"5. LX Factory\", \"Wikimedia Commons\", \"An old factory of shops, food and a bookshop worth an hour.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"6. Time Out Market\", \"Wikimedia Commons\", \"Two dozen of the city's kitchens under one roof. Loud, and good.\"), Picture(\"https://pictures.invalid/feira-da-ladra.jpg\", \"7. Feira da Ladra\", \"Wikimedia Commons\", \"The flea market behind the Pantheon, on Tuesdays and Saturdays.\")], \"Food and browsing\")\n```\n\nFor you I'd start at **Santa Luzia at sunset**, then walk down into Alfama for fado: that is the Lisbon you came for. Which side do you want first: the old city, food and browsing, or both with the days split?",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": [
+      {
+        "id": 0,
+        "url": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22440%22%20height%3D%22440%22%3E%3Crect%20width%3D%22440%22%20height%3D%22440%22%20fill%3D%22%232a2620%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22180%22%20r%3D%2270%22%20fill%3D%22%23c98a62%22%2F%3E%3Crect%20x%3D%22230%22%20y%3D%22120%22%20width%3D%22140%22%20height%3D%22200%22%20rx%3D%2212%22%20fill%3D%22%23b0a89d%22%2F%3E%3C%2Fsvg%3E",
+        "mime": "image/jpeg"
+      },
+      {
+        "id": 1,
+        "url": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKMSAwIG9iago8PD4+CmVuZG9iagp0cmFpbGVyCjw8Pj4KJSVFT0YK",
+        "mime": "application/pdf"
+      }
+    ]
+  },
+  "chat-tiles-ar": {
+    "ok": true,
+    "id": "fixture",
+    "kind": "chat",
+    "title": "لشبونة",
+    "lang": "ar",
+    "dir": "rtl",
+    "name": null,
+    "made_at": 1791015000000,
+    "version": 1,
+    "snapshot": {
+      "v": 1,
+      "kind": "chat",
+      "title": "لشبونة",
+      "lang": "ar",
+      "dir": "rtl",
+      "made_at": 1791015000000,
+      "name": null,
+      "turns": [
+        {
+          "at": 1791014460000,
+          "q": "وريني لشبونة شكلها إيه",
+          "photos": [],
+          "a": "لشبونة ليها وشين يستاهلوا الأربع أيام: التلال القديمة على النهر، والأماكن اللي الناس بتاكل وتتمشى فيها فعلا.\n\n```openui\nroot = Card([old, eat], \"لشبونة بالصور\")\nold = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg/960px-View_from_Miradouro_de_Santa_Luzia%2C_Lisbon%2C_20250603_2016_9045.jpg\", \"1. تراس سانتا لوزيا\", \"ويكيميديا\", \"البلد القديمة كلها والنهر من تراس واحد. أحلى وقت الغروب.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg/960px-Lisbon_in_a_day_-_Tram_28_Alfama_%2839271341600%29.jpg\", \"2. ترام 28\", \"ويكيميديا\", \"الترام الأصفر القديم وسط ألفاما. اركبه بدري قبل الطوابير.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Torre_Bel%C3%A9m_April_2009-4a.jpg/960px-Torre_Bel%C3%A9m_April_2009-4a.jpg\", \"3. برج بيليم\", \"ويكيميديا\", \"قلعة النهر اللي المراكب كانت بتطلع منها. عشرين دقيقة بالترام.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg/960px-Lisbon._Fado_at_A_Baiuca._%2841223895034%29.jpg\", \"4. فادو في ألفاما\", \"ويكيميديا\", \"أوضة صغيرة، جيتارين وصوت واحد. احجز ترابيزة بالليل.\")], \"البلد القديمة\")\neat = Gallery([Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/LX_Factory_%2822342591986%29.jpg/960px-LX_Factory_%2822342591986%29.jpg\", \"5. إل إكس فاكتوري\", \"ويكيميديا\", \"مصنع قديم بقى محلات وأكل ومكتبة تستاهل ساعة.\"), Picture(\"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg/960px-Time_Out_Market%2C_Lisboa_%2840935702680%29.jpg\", \"6. تايم أوت ماركت\", \"ويكيميديا\", \"أكتر من عشرين مطبخ من مطابخ البلد تحت سقف واحد. زحمة وحلو.\"), Picture(\"https://pictures.invalid/feira-da-ladra.jpg\", \"7. سوق فيرا دا لادرا\", \"ويكيميديا\", \"سوق الحاجات القديمة ورا البانثيون، التلات والسبت.\")], \"الأكل والتمشية\")\n```\n\nأنا لو مكانك أبدأ بـ**سانتا لوزيا وقت الغروب**، وبعدها أنزل ألفاما أسمع فادو: دي لشبونة اللي انت جاي عشانها. تحب تبدأ بإيه: البلد القديمة، الأكل والتمشية، ولا الاتنين وتقسم الأيام؟",
+          "style": "page",
+          "reactions": {},
+          "heard": {},
+          "cards": {},
+          "files": [],
+          "ask": null,
+          "stopped": false
+        }
+      ]
+    },
+    "media": []
   }
 }

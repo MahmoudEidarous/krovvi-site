@@ -16,7 +16,7 @@
 import type { CSSProperties, ReactNode } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
-import { addressOf, partsIn, readProgram, tileRows, wordsOf } from "@/lib/openui-program.mjs";
+import { addressOf, partsIn, readProgram, TILES_MOST, tileRows, wordsOf } from "@/lib/openui-program.mjs";
 
 import { CardView } from "./cards";
 import { Diagram } from "./diagram";
@@ -119,26 +119,54 @@ function ListView({ p, k }: { p: Part; k: string }) {
   );
 }
 
-/** One picture large, or two to six side by side, every one on the page with its own words under it. */
-export function Pictures({ pictures, rtl }: { pictures: Array<{ url: string; caption: string; source: string }>; rtl: boolean }) {
-  if (!pictures.length) return null;
-  if (pictures.length === 1) {
-    const one = pictures[0];
+/** A picture of a set: where it is (none when the web gave no address the page may load), its name, where it came from, and a line or two on it. */
+export interface Shown {
+  url: string | null;
+  caption: string;
+  source: string;
+  text?: string;
+}
+
+/**
+ * One picture large, or two to eight as tiles, two side by side: each thing with its picture, its name and a line or
+ * two on it right under, in a group under its heading when it has one (the app's own layout since 17 November 2026,
+ * src/components/openui/things.tsx in the app's code: an answer that shows things explains each one beside its
+ * picture). An odd last tile keeps its half of the row. A thing whose picture has no address the page may load keeps
+ * its place and its words, on a quiet frame, as the app keeps it.
+ */
+export function Pictures({ pictures, rtl, title }: { pictures: Shown[]; rtl: boolean; title?: string }) {
+  const kept = pictures.filter((p) => p.url || p.caption || p.text);
+  if (!kept.length) return null;
+  const heading = title ? (
+    <div dir="auto" style={{ ...STEP.label, fontWeight: 700, color: INK.fg, marginBottom: 10 }}>
+      {title}
+    </div>
+  ) : null;
+  if (kept.length === 1) {
+    const one = kept[0];
     const words = [one.caption, one.source].filter(Boolean).join(" · ");
     return (
       <figure style={{ margin: 0 }}>
-        <a href={one.url} target="_blank" rel="noopener noreferrer" aria-label={words || "Picture"}>
-          <Pic src={one.url} alt={words} style={{ width: "100%", maxHeight: 360, borderRadius: 14 }} />
-        </a>
+        {heading}
+        {one.url ? (
+          <a href={one.url} target="_blank" rel="noopener noreferrer" aria-label={words || "Picture"}>
+            <Pic src={one.url} alt={words} style={{ width: "100%", maxHeight: 360, borderRadius: 14 }} />
+          </a>
+        ) : null}
         {words ? (
           <figcaption dir="auto" style={{ ...STEP.meta, color: INK.muted, marginTop: 8 }}>
             {words}
           </figcaption>
         ) : null}
+        {one.text ? (
+          <div dir="auto" style={{ ...STEP.meta, color: INK.fg, marginTop: 4 }}>
+            {one.text}
+          </div>
+        ) : null}
       </figure>
     );
   }
-  const shown = pictures.slice(0, 6);
+  const shown = kept.slice(0, TILES_MOST);
   const rows: Array<typeof shown> = [];
   let at = 0;
   for (const n of tileRows(shown.length)) {
@@ -146,28 +174,43 @@ export function Pictures({ pictures, rtl }: { pictures: Array<{ url: string; cap
     at += n;
   }
   return (
-    <div style={{ display: "grid", gap: 12 }}>
-      {rows.map((row, r) => (
-        <div key={r} style={{ display: "grid", gridTemplateColumns: `repeat(${row.length}, minmax(0, 1fr))`, gap: 8, direction: rtl ? "rtl" : "ltr" }}>
-          {row.map((p, n) => (
-            <figure key={n} style={{ margin: 0, minWidth: 0 }}>
-              <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.caption || "Picture"}>
-                <Pic src={p.url} alt={p.caption} style={{ width: "100%", aspectRatio: row.length >= 3 ? "3 / 4" : "1 / 1", borderRadius: 14 }} />
-              </a>
-              {p.caption ? (
-                <figcaption dir="auto" style={{ ...STEP.label, fontWeight: 600, color: INK.fg, marginTop: 6, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
-                  {p.caption}
-                </figcaption>
-              ) : null}
-              {p.source ? (
-                <div dir="auto" style={{ ...STEP.meta, color: INK.muted, marginTop: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                  {p.source}
+    <div>
+      {heading}
+      <div style={{ display: "grid", gap: 14 }}>
+        {rows.map((row, r) => (
+          // Two columns whatever the row holds, so an odd last tile keeps its half.
+          <div key={r} style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 10, direction: rtl ? "rtl" : "ltr" }}>
+            {row.map((p, n) => (
+              <figure key={n} style={{ margin: 0, minWidth: 0 }}>
+                {/* The tile's frame stands whether or not its picture comes: one that does not load leaves the quiet
+                    frame over its words, never a hole (the picture hides itself on an error). */}
+                <div style={{ width: "100%", aspectRatio: "3 / 4", borderRadius: 14, background: INK.surfaceHi, overflow: "hidden" }}>
+                  {p.url ? (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer" aria-label={p.caption || "Picture"} style={{ display: "block", width: "100%", height: "100%" }}>
+                      <Pic src={p.url} alt="" style={{ width: "100%", height: "100%" }} />
+                    </a>
+                  ) : null}
                 </div>
-              ) : null}
-            </figure>
-          ))}
-        </div>
-      ))}
+                {p.caption ? (
+                  <figcaption dir="auto" style={{ ...STEP.label, fontWeight: 600, color: INK.fg, marginTop: 6, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
+                    {p.caption}
+                  </figcaption>
+                ) : null}
+                {p.text ? (
+                  <div dir="auto" style={{ ...STEP.meta, color: INK.muted, marginTop: 2, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 5, WebkitBoxOrient: "vertical" }}>
+                    {p.text}
+                  </div>
+                ) : null}
+                {p.source ? (
+                  <div dir="auto" style={{ ...STEP.meta, color: INK.muted, opacity: 0.8, marginTop: 2, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    {p.source}
+                  </div>
+                ) : null}
+              </figure>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -451,10 +494,9 @@ function PartView({ p, env, k }: { p: Part; env: RenderEnv; k: string }): ReactN
       );
     }
     case "Gallery": {
-      const pictures = parts(p.props.pictures, "Picture")
-        .map((x) => ({ url: addressOf(x.props.src), caption: wordsOf(x.props.caption), source: wordsOf(x.props.source) }))
-        .filter((x): x is { url: string; caption: string; source: string } => !!x.url);
-      return <Pictures pictures={pictures} rtl={rtl} />;
+      // Every thing of the set, with or without a picture the page may load: its words are kept either way.
+      const pictures = parts(p.props.pictures, "Picture").map((x) => ({ url: addressOf(x.props.src), caption: wordsOf(x.props.caption), source: wordsOf(x.props.source), text: wordsOf(x.props.text) }));
+      return <Pictures pictures={pictures} rtl={rtl} title={wordsOf(p.props.title)} />;
     }
     case "Thing": {
       const card = env.cards[wordsOf(p.props.id)];

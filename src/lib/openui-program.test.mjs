@@ -22,6 +22,13 @@ test('a card of rows with pictures: each row its name, its line, its picture and
   assert.equal(items[0].props.detail, 'The whole old town and the river from one terrace. Go at sunset.');
 });
 
+test('each thing as a tile: its picture, its name and a line on it, in a group under its heading', () => {
+  const root = readProgram('root = Card([g])\ng = Gallery([Picture("https://example.com/a.jpg", "Wide leg", "A shop", "Loose from the hip down. Good with a fitted top."), Picture("https://example.com/b.jpg", "Straight", "", "The same width all the way.")], "Relaxed fits")\n');
+  const gallery = partsIn(root.props.children, 'Gallery')[0];
+  assert.equal(gallery.props.title, 'Relaxed fits');
+  assert.deepEqual(partsIn(gallery.props.pictures, 'Picture').map((p) => p.props.text), ['Loose from the hip down. Good with a fitted top.', 'The same width all the way.']);
+});
+
 test('pictures side by side: each with its words, a card with no name', () => {
   const root = readProgram('root = Card([more])\nmore = Gallery([Picture("https://example.com/a.jpg", "Belém Tower", "Wikimedia Commons"), Picture("https://example.com/b.jpg", "Fado in Alfama")])\n');
   assert.equal(root.props.title, undefined);
@@ -93,11 +100,12 @@ test('a block that cannot be read never breaks the page: no root, a part nobody 
 });
 
 test('more arguments than a part has props are left out, and every part the app knows is known here', () => {
-  const root = readProgram('root = Card([p])\np = Picture("https://example.com/a.jpg", "A", "Site", "a later prop", "another")\n');
-  assert.deepEqual(Object.keys(root.props.children[0].props), ['src', 'caption', 'source']);
+  const root = readProgram('root = Card([p])\np = Picture("https://example.com/a.jpg", "A", "Site", "A line on it.", "a later prop", "another")\n');
+  assert.deepEqual(Object.keys(root.props.children[0].props), ['src', 'caption', 'source', 'text']);
   for (const name of ['Card', 'Tabs', 'Text', 'Note', 'Stats', 'Progress', 'Chart', 'Table', 'Slider', 'Choice', 'Toggle', 'Field', 'Form', 'Checklist', 'Steps', 'Timeline', 'Flow', 'Diagram', 'List', 'Compare', 'Gallery', 'Thing', 'Buttons', 'FollowUps']) assert.ok(PROPS[name], name);
   assert.deepEqual(PROPS.Item, ['title', 'detail', 'icon', 'picture', 'badge']);
-  assert.deepEqual(PROPS.Picture, ['src', 'caption', 'source']);
+  assert.deepEqual(PROPS.Picture, ['src', 'caption', 'source', 'text']);
+  assert.deepEqual(PROPS.Gallery, ['pictures', 'title']);
 });
 
 test('what a part shows: words trimmed, a figure as its number, an address only when it is https', () => {
@@ -112,5 +120,6 @@ test('what a part shows: words trimmed, a figure as its number, an address only 
 });
 
 test('pictures stand as the app stands them: two side by side, three across, four as a square, two over three, two rows of three', () => {
-  assert.deepEqual([0, 1, 2, 3, 4, 5, 6, 9].map(tileRows), [[], [], [2], [3], [2, 2], [2, 3], [3, 3], [3, 3]]);
+  // Two side by side, always, up to eight; an odd last one keeps its half of the row (the app's rule since 17 November 2026).
+  assert.deepEqual([0, 1, 2, 3, 4, 5, 6, 8, 11].map(tileRows), [[], [], [2], [2, 1], [2, 2], [2, 2, 1], [2, 2, 2], [2, 2, 2, 2], [2, 2, 2, 2]]);
 });
