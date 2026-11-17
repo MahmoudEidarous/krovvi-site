@@ -13,7 +13,7 @@
  * Pictures load from where the answer found them, https only, lazily, and without telling that site which page asked.
  */
 
-import type { CSSProperties, ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 import { INK, STEP } from "@/components/objects/kit";
 import { addressOf, partsIn, readProgram, TILES_MOST, tileRows, wordsOf } from "@/lib/openui-program.mjs";
@@ -34,20 +34,31 @@ const GAP = 14;
 const isPart = (x: unknown): x is Part => !!x && typeof x === "object" && !Array.isArray(x) && typeof (x as Part).part === "string";
 const parts = (value: unknown, name?: string): Part[] => partsIn(value, name) as Part[];
 
-/** A picture from the web: lazily, with no word to its site of who asked, and gone without a hole when it does not load. */
+/**
+ * A picture from the web: lazily, with no word to its site of who asked, and gone without a hole when it does not load.
+ * A picture that failed before the page woke (the page is drawn on the server, and an error that comes before React
+ * listens is never heard) is found when it wakes: Mobile Safari drew its broken mark in a tile on 17 November 2026.
+ */
 function Pic({ src, alt, style }: { src: string; alt: string; style: CSSProperties }) {
+  const [failed, setFailed] = useState(false);
+  const ref = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    const img = ref.current;
+    // Complete with no width: it was asked for and did not come. A lazy one not asked for yet is not complete.
+    if (img && img.complete && img.naturalWidth === 0) setFailed(true);
+  }, [src]);
+  if (failed) return null;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
+      ref={ref}
       src={src}
       alt={alt}
       loading="lazy"
       decoding="async"
       referrerPolicy="no-referrer"
       style={{ display: "block", objectFit: "cover", background: INK.surfaceHi, ...style }}
-      onError={(e) => {
-        e.currentTarget.style.visibility = "hidden";
-      }}
+      onError={() => setFailed(true)}
     />
   );
 }
