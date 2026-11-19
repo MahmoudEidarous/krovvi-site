@@ -1,0 +1,335 @@
+/* krovvi.com's home, 19 November 2026: today's app, shown big. The shell (colours, top bar, phone, foot) is look.css.
+   One language of motion for the whole page:
+   - each part is a sheet that slides up over the one before, which steps back a little (the way the app's own sheets do);
+   - titles rise line by line from under their own edge;
+   - one phone at a time, nearly as big as a phone in the hand, its screen always the real app;
+   - only transform and opacity move, and nothing that follows the scroll waits for a transition. */
+
+.kl { --chat: #EAE9F4; --sheet: 44px; }
+
+/* a part that slides up over the one before it */
+.sheet { position: relative; border-radius: var(--sheet) var(--sheet) 0 0; margin-top: calc(var(--sheet) * -1); }
+/* a title in lines, each rising from under its own edge once its part is seen (.in) */
+.m { display: block; overflow: hidden; padding: .02em .06em .12em; margin: -.02em -.06em -.12em; }
+.m > span { display: inline-block; }
+.js .rise .m > span { transform: translateY(108%); transition: transform .4s cubic-bezier(.5,0,.75,0); }
+.js .rise.in .m > span { transform: none; transition: transform 1s var(--calm) .05s; }
+.js .rise.in .m + .m > span { transition-delay: .13s; }
+.js .fade { opacity: 0; transform: translateY(18px); transition: opacity .7s ease .2s, transform 1s var(--calm) .2s; }
+.js .fade.in { opacity: 1; transform: none; }
+/* as the next part slides up over a part, that part dims a little under its own shade (the sheet's edge stays crisp) */
+.shade { position: absolute; inset: 0; z-index: 20; background: #05050C; opacity: 0; pointer-events: none; }
+
+/* ---------- 1. the first screen: the name huge, the real app in front of it, already talking ---------- */
+.hero { position: relative; z-index: 0; }
+.hero-in { position: relative; min-height: 100svh; padding: calc(78px + 2vh) 48px calc(var(--sheet) + 56px); display: flex; flex-direction: column; align-items: center; transform-origin: 50% 30%; will-change: transform; }
+.atitle { position: relative; z-index: 0; width: 100%; text-align: center; white-space: nowrap;
+  font-family: var(--display); font-weight: 800; font-size: var(--fs, 11vw); line-height: .86; letter-spacing: -.031em; color: var(--ink); }
+.atitle .ln { display: inline-block; white-space: nowrap; }
+.atitle .ch { display: inline-block; padding-bottom: .06em; }
+/* the coloured word: each letter's box reaches past its ink, so no stroke (the f's bar, the d's top) is cut off */
+.atitle .ln:last-child .ch { padding: 0 .12em .06em; margin: 0 -.12em; background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 80%, var(--k2)), var(--k2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+:root[data-theme="mono"] .atitle .ln:last-child .ch { background: linear-gradient(180deg, #4A4A52, #131317); -webkit-background-clip: text; background-clip: text; }
+.js .atitle .ch { opacity: 0; transform: translateY(.42em) rotate(4deg); }
+.js .atitle.on .ch { opacity: 1; transform: none; transition: opacity .45s ease, transform .9s var(--calm); transition-delay: calc(var(--i) * 22ms); }
+/* the phone runs past the bottom of the first screen: the page is asking to be scrolled */
+.hero-ph { --ph: clamp(600px, 88svh, 900px); position: relative; z-index: 2; margin-top: calc(var(--fs, 130px) * -.15); }
+.js .hero-ph { opacity: 0; }
+.hero-ph .dev { transform: perspective(1800px); will-change: transform; }
+/* the line and the way in stand in the bottom corners of the first screen, whatever the phone's length */
+.asub, .acta { position: absolute; top: calc(100svh - 44px); translate: 0 -100%; }
+.asub { left: 48px; max-width: 340px; font-size: clamp(17px, 1.3vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: var(--soft); }
+.acta { right: 48px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.js .asub, .js .acta { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .9s var(--calm); }
+.js .hero.ready .asub, .js .hero.ready .acta { opacity: 1; transform: none; }
+.js .hero.ready .acta { transition-delay: .08s; }
+/* the first phone is yours to use: Krovvi has just texted, and you answer by tapping one of its real answers */
+.hs { position: absolute; z-index: 6; border-radius: 999px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.hs::before { content: ""; position: absolute; inset: -9px -6px; }
+.hs::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: rgba(29,24,64,.1); opacity: 0; transition: opacity .2s ease; }
+.hs:active::after, .hs.down::after { opacity: 1; transition: none; }
+/* until you answer, the three answers breathe once in turn: a ring of your colour, then nothing */
+.hs i { position: absolute; inset: -3px; border-radius: inherit; box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--k1) 70%, transparent); opacity: 0; transform: scale(.96); pointer-events: none; }
+.hs.nudge i { animation: hsnudge 1.5s var(--calm) both; }
+@keyframes hsnudge { 0% { opacity: 0; transform: scale(.96); } 30% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.08); } }
+#heroScr[data-show="v"] .hs, #heroScr[data-show="e"] .hs { visibility: hidden; }
+#heroScr[data-show="e"] { cursor: pointer; }
+
+
+/* ---------- 2. a friend first: a night sheet, one phone, five of the app's own moments ---------- */
+.fr { z-index: 1; color: var(--ink); background: var(--bg1); }
+.fr-track { position: relative; height: 480svh; }
+.fr-pin { position: sticky; top: 0; height: 100svh; overflow: hidden; border-radius: var(--sheet) var(--sheet) 0 0; }
+.fr-words { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.fw { position: absolute; left: max(7vw, calc(50% - 600px)); top: 50%; width: min(42vw, 620px); translate: 0 -50%; visibility: hidden; transition: visibility 0s .5s; }
+.fw.mid { left: 50%; width: min(92vw, 1200px); translate: -50% -50%; text-align: center; }
+.fw.on { visibility: visible; transition: none; }
+.fh { font-family: var(--display); font-weight: 800; font-size: clamp(54px, 6.4vw, 112px); line-height: .92; letter-spacing: -.029em; color: #F5F5F7; }
+.fw.mid .fh { font-size: clamp(58px, 9.4vw, 160px); }
+.fw.mid .fh .m { display: inline-block; }
+.fh .m > span { transform: translateY(108%); transition: transform .34s cubic-bezier(.5,0,.75,0); }
+.fw.on .fh .m > span { transform: none; transition: transform .85s var(--calm); }
+.fw.on .fh .m + .m > span { transition-delay: 70ms; }
+.fh .m:last-child > span, .lt-h .m:last-child > span, .pl-h .m:last-child > span { background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 62%, #ffffff), var(--k1)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .04em; }
+:root[data-theme="mono"] :is(.fh, .lt-h, .pl-h) .m:last-child > span { background: linear-gradient(180deg, #ffffff, #B9B9C2); -webkit-background-clip: text; background-clip: text; }
+.fl { margin-top: 24px; max-width: 470px; font-size: clamp(18px, 1.45vw, 22px); line-height: 1.45; letter-spacing: -.012em; color: #A4A4AF; opacity: 0; transform: translateY(12px); transition: opacity .22s ease, transform .3s ease; }
+.fw.mid .fl { margin-left: auto; margin-right: auto; max-width: 620px; }
+.fw.on .fl { opacity: 1; transform: none; transition: opacity .5s ease .22s, transform .8s var(--calm) .22s; }
+.fl .short { display: none; }
+/* the phone: down out of sight under the opening words, then up beside each step's words */
+.fr-ph { --ph: clamp(520px, 84svh, 900px); position: absolute; z-index: 1; top: calc(50% - var(--ph) / 2 + 16px); right: max(8vw, calc(50% - 590px)); transform: translateY(112svh); transition: transform .7s cubic-bezier(.5,0,.75,0); will-change: transform; }
+.fr-pin.up .fr-ph { transform: none; transition: transform 1.15s var(--calm); }
+/* its screens change the way a chat is pushed: the one before slides away as the next slides in, the way you go */
+.fr-ph .sc { opacity: 0; transform: translateX(9%); transition: opacity .25s ease, transform .5s var(--calm), visibility 0s .5s; will-change: transform; }
+.fr-ph .sc.was { transform: translateX(-9%); }
+.fr-ph[data-dir="back"] .sc { transform: translateX(-9%); }
+.fr-ph[data-dir="back"] .sc.was { transform: translateX(9%); }
+.fr-ph .sc.on { opacity: 1; transform: none; transition: opacity .3s ease .08s, transform .62s var(--calm) .04s; }
+/* the steps: a solid night a shade lighter than the ground, so on a phone, where it sits over the bottom of the phone,
+   nothing shows through it */
+.fr-steps { position: absolute; z-index: 3; left: max(7vw, calc(50% - 600px)); bottom: 6vh; display: flex; padding: 5px; border-radius: 999px; background: color-mix(in srgb, var(--bg1), #ffffff 7%); box-shadow: inset 0 0 0 .5px rgba(255,255,255,.08);
+  opacity: 0; transform: translateY(10px); transition: opacity .45s ease, transform .7s var(--calm); }
+.fr-steps.on { opacity: 1; transform: none; }
+.fr-steps button { position: relative; z-index: 1; height: 36px; padding: 0 16px; border-radius: 18px; display: flex; align-items: center; font-size: 14px; font-weight: 700; color: rgba(255,255,255,.58); white-space: nowrap; transition: color .35s ease; }
+.fr-steps button:hover:not(.on) { color: rgba(255,255,255,.8); }
+.fr-steps button.on { color: var(--kInk); }
+.fs-hl { position: absolute; z-index: 0; left: 0; top: 5px; height: 36px; border-radius: 18px; background: linear-gradient(180deg, var(--k1), var(--k2)); box-shadow: 0 8px 20px -8px rgba(var(--glowB), .9); transition: translate .55s var(--calm), width .55s var(--calm); }
+
+/* ---------- 3. it plays: the games themselves, in a row that moves as you scroll ---------- */
+.pl { position: relative; z-index: 1; margin-top: -1px; padding: 12vh 0 calc(15vh + var(--sheet)); overflow: hidden; color: #F5F5F7; background: var(--bg1); }
+.pl-in { transform-origin: 50% 40%; will-change: transform; }
+.pl-head { max-width: 1340px; margin: 0 auto; padding: 0 max(7vw, 24px); display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; }
+.pl-h { font-family: var(--display); font-weight: 800; font-size: clamp(56px, 8vw, 132px); line-height: .9; letter-spacing: -.03em; }
+.pl-h .m { display: inline-block; }
+.pl-p { max-width: 400px; padding-bottom: .6em; font-size: clamp(18px, 1.45vw, 22px); line-height: 1.45; letter-spacing: -.012em; color: #A4A4AF; }
+.pl-rail { margin-top: 8vh; }
+.pl-row { display: flex; gap: clamp(18px, 2vw, 30px); width: max-content; padding: 0 max(7vw, 24px) 60px; will-change: transform; }
+.pl-card { margin: 0; width: clamp(210px, 19vw, 292px); flex: none; }
+.pl-card:nth-child(even) { margin-top: 44px; }
+.pl-scr { position: relative; overflow: hidden; border-radius: clamp(26px, 2.4vw, 36px); background: var(--chat); box-shadow: 0 50px 80px -44px rgba(0,0,0,.9), 0 0 0 1px rgba(255,255,255,.07); }
+.pl-scr img { display: block; width: 100%; height: auto; }
+/* under a pointer a game lifts a little, as something you could pick up */
+.pl-card { transition: transform .5s var(--calm); }
+@media (hover: hover) { .pl-card:hover { transform: translateY(-10px); } }
+.pl-card figcaption { margin-top: 16px; text-align: center; font-size: 16px; font-weight: 700; letter-spacing: -.01em; color: #C4C4CE; }
+
+/* ---------- 4. just say it: one real chat, scrolled inside a phone that stays put ---------- */
+.say { z-index: 2; overflow: clip; padding: 15vh 0 0; background: var(--bg2); }
+.say-head { position: relative; z-index: 6; padding: 0 24px; text-align: center; }
+.say-h { font-family: var(--display); font-weight: 800; font-size: clamp(64px, 10.5vw, 176px); line-height: .88; letter-spacing: -.032em; color: var(--ink); }
+.say-h .m { display: inline-block; }
+.say-h .m:last-child > span { background: linear-gradient(180deg, color-mix(in oklab, var(--k1) 80%, var(--k2)), var(--k2)); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .04em; }
+:root[data-theme="mono"] .say-h .m:last-child > span { background: linear-gradient(180deg, #4A4A52, #131317); -webkit-background-clip: text; background-clip: text; }
+.say-p { margin: 26px auto 0; max-width: 560px; font-size: clamp(18px, 1.45vw, 22px); line-height: 1.45; letter-spacing: -.012em; color: var(--soft); }
+/* three columns: what this is (left), the phone's screen (middle), everything you can say (right). The phone's screen
+   is as wide as the middle column, and the chat in it is the page itself scrolling: nothing is moved by script. */
+.say-in { --ph: clamp(540px, 84svh, 900px); --u: calc(var(--ph) / 900); position: relative; margin-top: 9vh; display: grid; grid-template-columns: minmax(0, 1fr) calc(var(--u) * 402) minmax(0, 1fr); column-gap: calc(var(--u) * 13 + 5vw); align-items: start; padding: 0 5vw; }
+.say-side { position: sticky; top: 0; z-index: 6; height: 100svh; display: flex; align-items: center; }
+.say-side.l { justify-content: flex-end; }
+/* the phone and the chat share one place: the phone holds still in it while the chat goes by (no margin tricks, so the
+   phone leaves whole with the chat's end) */
+.say-col { position: relative; z-index: 1; display: grid; }
+.say-gate, .say-feed { grid-area: 1 / 1; min-width: 0; }
+/* the phone: its glass is a window (everything outside it is covered in the page's own colour), its band and its
+   shadow are drawn over that. It stays in the middle of the screen while the chat goes by under it. */
+.say-gate { position: sticky; z-index: 3; top: calc((100svh - var(--ph)) / 2 + 16px); height: var(--ph); align-self: start; pointer-events: none; }
+.say-dev { position: absolute; left: calc(var(--u) * -13); top: 0; width: calc(var(--u) * 428); height: calc(var(--u) * 900); }
+.say-hole { position: absolute; left: calc(var(--u) * 13); top: calc(var(--u) * 13); width: calc(var(--u) * 402); height: calc(var(--u) * 874); border-radius: calc(var(--u) * 59); overflow: hidden; box-shadow: 0 0 0 200vmax var(--bg2); }
+/* the band: titanium outside, black inside, each a ring cut out of a rounded box */
+.say-ring { position: absolute; inset: 0; border-radius: calc(var(--u) * 72); border: calc(var(--u) * 13) solid transparent; background: #020203 border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) padding-box exclude, linear-gradient(#000 0 0); }
+.say-ring.t { border-width: calc(var(--u) * 4); background: linear-gradient(155deg, #8A8A92 0%, #3F3F45 7%, #1D1D21 30%, #131316 62%, #2C2C31 88%, #74747C 100%) border-box; }
+.say-drop { position: absolute; inset: 0; border-radius: calc(var(--u) * 72); box-shadow: var(--phoneSh); }
+/* the app's own top and its text box, cut from its screen, over the chat as the app has them */
+.say-top, .say-bot { position: absolute; left: 0; width: 100%; height: auto; display: block; }
+.say-top { top: 0; }
+.say-bot { bottom: 0; }
+.say-top, .say-bot { z-index: 2; }
+/* each melts into the chat at its inner edge, as the app's own bars do (the chat's ground is a soft sky, never one flat colour) */
+.say-top { -webkit-mask-image: linear-gradient(180deg, #000 80%, rgba(0,0,0,0)); mask-image: linear-gradient(180deg, #000 80%, rgba(0,0,0,0)); }
+.say-bot { -webkit-mask-image: linear-gradient(0deg, #000 92%, rgba(0,0,0,0)); mask-image: linear-gradient(0deg, #000 92%, rgba(0,0,0,0)); }
+/* the chat: each exchange is the app's own, cut out of its screen, one under the other on the chat's ground */
+.say-feed { position: relative; z-index: 1; margin: 0; padding: calc(var(--u) * 150) 0 calc(var(--u) * 200); list-style: none; display: flex; flex-direction: column; gap: calc(var(--u) * 104); background: var(--chat); }
+.say-feed li { position: relative; width: 100%; }
+/* an exchange's own ground melts into the chat's at its top and bottom, so no edge shows between two */
+.say-x { position: relative; width: 100%; -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0), #000 9px, #000 calc(100% - 12px), rgba(0,0,0,0)); mask-image: linear-gradient(180deg, rgba(0,0,0,0), #000 9px, #000 calc(100% - 12px), rgba(0,0,0,0)); }
+.say-x img { display: block; width: 100%; height: 100%; }
+/* its film lies exactly over its picture, and shows only while it plays or stands at its end */
+.say-x video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity .12s linear; }
+.say-feed li.playing .say-x video { opacity: 1; }
+.say-tag { display: none; }
+/* what the exchange in front is: its name, big, and one line */
+.say-now { position: relative; width: min(100%, 420px); height: 240px; text-align: right; }
+.sn { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: flex-end; justify-content: center; gap: 12px; opacity: 0; transform: translateY(22px); transition: opacity .25s ease, transform .35s ease; pointer-events: none; }
+.sn.on { opacity: 1; transform: none; transition: opacity .45s ease .12s, transform .8s var(--calm) .1s; }
+.sn.was { transform: translateY(-22px); }
+.sn b { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 5.2vw, 92px); line-height: .95; letter-spacing: -.03em; color: var(--ink); }
+.sn span { max-width: 300px; font-size: clamp(17px, 1.35vw, 21px); line-height: 1.4; letter-spacing: -.012em; color: var(--soft); }
+/* everything you can just say: the one in front marked, any of them a tap away */
+.say-index { position: relative; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.say-index li { position: relative; z-index: 1; height: 44px; padding: 0 18px; display: flex; align-items: center; border-radius: 22px; font-size: clamp(17px, 1.4vw, 21px); font-weight: 700; letter-spacing: -.015em; color: color-mix(in srgb, var(--faint) 70%, var(--ink)); cursor: pointer; transition: color .3s ease; -webkit-tap-highlight-color: transparent; }
+.say-index li:hover { color: var(--ink); }
+.say-index li.on { color: var(--kInk); }
+.si-hl { position: absolute; z-index: 0; left: 0; top: 0; width: 100px; height: 44px; border-radius: 22px; background: linear-gradient(180deg, var(--k1), var(--k2)); box-shadow: 0 12px 24px -12px rgba(var(--glowB), .8); transition: translate .5s var(--calm), width .5s var(--calm); }
+
+/* ---------- 5. the whole picture: the phone swipes between the apps those cards open ---------- */
+.ap { position: relative; z-index: 2; background: var(--bg2); }
+.ap-track { position: relative; height: 290svh; }
+.ap-pin { position: sticky; top: 0; height: 100svh; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 6vw; align-items: center; padding: 78px max(7vw, calc(50% - 600px)) 2vh; transform-origin: 50% 30%; will-change: transform; }
+.ap-copy { max-width: 620px; }
+.ap-h { font-family: var(--display); font-weight: 800; font-size: clamp(46px, min(5.2vw, 9.4vh), 88px); line-height: .94; letter-spacing: -.029em; color: var(--ink); }
+.ap-p { margin-top: 18px; max-width: 500px; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: var(--soft); }
+.js .ap .ap-h, .js .ap .ap-p, .js .ap-list, .js .ap-one, .js .ap-ph { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform 1s var(--calm); }
+.ap.in .ap-h, .ap.in .ap-p, .ap.in .ap-list, .ap.in .ap-one, .ap.in .ap-ph { opacity: 1; transform: none; }
+.ap.in .ap-p { transition-delay: .06s; } .ap.in .ap-list, .ap.in .ap-one { transition-delay: .12s; } .ap.in .ap-ph { transition-delay: .04s; }
+.ap-list { position: relative; margin: 26px 0 0 -18px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.ap-list li { position: relative; z-index: 1; display: flex; align-items: baseline; gap: 14px; height: min(60px, 6.9vh); padding: 0 18px; border-radius: 20px; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.ap-list li b { flex: none; min-width: 3.9em; font-family: var(--display); font-weight: 800; font-size: clamp(22px, 1.9vw, 30px); line-height: min(60px, 6.9vh); letter-spacing: -.02em; color: color-mix(in srgb, var(--faint) 55%, var(--ink)); transition: color .3s ease; }
+.ap-list li span { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: clamp(15px, 1.2vw, 18px); letter-spacing: -.01em; color: var(--soft); opacity: 0; transform: translateX(-8px); transition: opacity .3s ease, transform .5s var(--calm); }
+.ap-list li:hover b { color: var(--ink); }
+.ap-list li.on b { color: var(--tone, var(--acc)); }
+.ap-list li.on span { opacity: 1; transform: none; }
+.ap-hl { position: absolute; z-index: 0; left: 0; right: 0; top: 0; height: min(60px, 6.9vh); border-radius: 20px; background: var(--card); box-shadow: var(--cardSh); opacity: 0; transition: transform .45s var(--calm), opacity .3s ease; }
+.ap-hl.live { opacity: 1; }
+.ap-one { display: none; }
+/* the phone: its screen is a row of the app's own pages that slides as you scroll; between two, the row steps back a
+   little, the way apps do when you swipe between them */
+.ap-ph { --ph: clamp(520px, 84svh, 900px); position: relative; cursor: pointer; }
+.ap-view { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; transform-origin: 50% 50%; will-change: transform; }
+.ap-strip { position: absolute; left: 0; top: 0; height: 100%; will-change: transform; }
+.ap-shot { position: absolute; top: 0; width: calc(var(--u) * 402); height: 100%; overflow: hidden; border-radius: calc(var(--u) * 52); background: var(--chat); }
+.ap-shot img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- 6. the end: the phone on a dark stage, under one white light ---------- */
+.lt { z-index: 3; color: #F5F5F7; background: var(--bg1); }
+.lt-room { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--sheet) var(--sheet) 0 0; min-height: max(100svh, 760px); display: grid; place-items: center; padding: calc(96px + 3vh) 6vw 11vh; }
+.lt-in { width: 100%; max-width: 1180px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 64px; align-items: center; }
+.lt-h { font-family: var(--display); font-weight: 800; font-size: clamp(52px, 6.2vw, 108px); line-height: .92; letter-spacing: -.030em; color: #F5F5F7; }
+.lt-h .m > span { transform: translateY(108%); transition: transform .45s cubic-bezier(.5,0,.75,0); }
+.lt.in .lt-h .m > span { transform: none; transition: transform 1s var(--calm) .1s; }
+.lt.in .lt-h .m + .m > span { transition-delay: .18s; }
+.lt-p { margin-top: 22px; max-width: 420px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.45; letter-spacing: -.012em; color: #A4A4AF; }
+.lt-cta { margin-top: 30px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.lt .hfor { color: #9494A0; }
+.js .lt-p, .js .lt-cta { opacity: 0; transform: translateY(18px); transition: opacity .7s ease .3s, transform 1s var(--calm) .3s; }
+.lt.in .lt-p, .lt.in .lt-cta { opacity: 1; transform: none; }
+.lt.in .lt-cta { transition-delay: .4s; }
+/* one white light from above, a pool of it on the floor, the phone's reflection in the dark floor */
+.lt-stage { --ph: clamp(480px, 72svh, 800px); position: relative; isolation: isolate; width: calc(var(--ph) / 900 * 428); height: var(--ph); }
+.lt-beam { position: absolute; z-index: -1; left: 50%; bottom: -4%; width: 240%; height: 165%; translate: -50% 0; pointer-events: none;
+  background: conic-gradient(from 180deg at 50% 0%, rgba(255,255,255,0) 163deg, rgba(255,255,255,.065) 171deg, rgba(255,255,255,.115) 180deg, rgba(255,255,255,.065) 189deg, rgba(255,255,255,0) 197deg);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.15), #000 45%, #000 80%, rgba(0,0,0,0)); mask-image: linear-gradient(180deg, rgba(0,0,0,.15), #000 45%, #000 80%, rgba(0,0,0,0)); }
+.lt-pool { position: absolute; z-index: -1; left: 50%; bottom: -54px; width: 200%; height: 130px; translate: -50% 0; border-radius: 50%; pointer-events: none; background: radial-gradient(closest-side, rgba(255,255,255,.15), rgba(255,255,255,.045) 60%, rgba(255,255,255,0)); }
+/* the phone floats: it rises and settles a little, slowly, its reflection with it. Only flat moves, so its screen
+   stays as sharp as the page */
+.lt-aim, .lt-turn { position: absolute; inset: 0; }
+.lt-aim { will-change: transform; }
+.lt-turn { -webkit-box-reflect: below 14px linear-gradient(180deg, rgba(0,0,0,0) 74%, rgba(0,0,0,.2)); animation: ltfloat 6.5s cubic-bezier(.37,0,.63,1) infinite alternate; }
+@keyframes ltfloat { from { translate: 0 2px; } to { translate: 0 -11px; } }
+.js .lt-stage { opacity: 0; transform: translateY(44px); transition: opacity .9s ease .15s, transform 1.3s var(--calm) .15s; }
+.lt.in .lt-stage { opacity: 1; transform: none; }
+/* the foot is the same night, and comes with the stage */
+.ft { z-index: 3; }
+
+/* ---------- a short laptop screen ---------- */
+@media (max-height: 820px) and (min-width: 861px) {
+  .ap-p { margin-top: 12px; }
+  .ap-list { margin-top: 16px; }
+}
+/* ---------- a laptop ---------- */
+@media (max-width: 1180px) {
+  .hero-in { padding-left: 32px; padding-right: 32px; }
+  .asub { left: 32px; max-width: 250px; font-size: 16.5px; }
+  .acta { right: 32px; }
+  .say-in { column-gap: calc(var(--u) * 13 + 3vw); padding: 0 3vw; }
+}
+
+/* ---------- a tablet and a phone: plain columns; the pinned parts keep their one phone ---------- */
+@media (max-width: 860px) {
+  .kl { --sheet: 30px; }
+  .hero-in { min-height: 0; padding: 84px 16px calc(var(--sheet) + 30px); text-align: center; }
+  .atitle { white-space: normal; }
+  .atitle .ln { display: block; }
+  .hero-ph { --ph: calc(min(86vw, 400px) / 428 * 900); order: 2; margin-top: 14px; }
+  .asub { position: static; translate: none; order: 3; max-width: 420px; margin-top: 26px; text-align: center; font-size: 16.5px; }
+  /* on a phone the top bar's button is the one way to get it */
+  .acta { display: none; }
+
+  .fr-track { height: 600svh; }
+  .fw, .fw.mid { left: 50%; top: calc(76px + 1.5vh); width: min(92vw, 560px); translate: -50% 0; text-align: center; }
+  .fw[data-c="0"] { top: 50%; translate: -50% -50%; }
+  /* the words sit over the top of the phone, on a fade of the night */
+  .fr-words { z-index: 2; }
+  .fr-words::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: var(--scrim, 300px); opacity: 0; transition: opacity .4s ease;
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg1) 64%, color-mix(in srgb, var(--bg1) 0%, transparent) 100%); }
+  .fr-pin:not([data-c="0"]) .fr-words::before { opacity: 1; }
+  .fh, .fw.mid .fh { font-size: clamp(38px, 10.4vw, 60px); }
+  .fh .m { display: inline-block; }
+  .fl { margin: 10px auto 0; font-size: 16px; max-width: 380px; }
+  .fl .long { display: none; } .fl .short { display: inline; }
+  .fw[data-c="0"] .fl { font-size: 17px; }
+  .fr-ph { --ph: calc(min(84vw, 400px) / 428 * 900); top: var(--phTop, 250px); right: auto; left: calc(50% - var(--ph) / 900 * 214); }
+  .fr-steps { left: 50%; translate: -50% 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px) + 56px); padding: 4px; max-width: calc(100vw - 20px); }
+  .fr-steps button { height: 32px; padding: 0 11px; font-size: 12.5px; border-radius: 16px; }
+  .fs-hl { top: 4px; height: 32px; border-radius: 16px; }
+
+  .pl { padding: 9vh 0 calc(9vh + var(--sheet)); }
+  .pl-head { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .pl-h { font-size: clamp(52px, 15vw, 84px); }
+  .pl-p { padding-bottom: 0; font-size: 16.5px; }
+  .pl-rail { margin-top: 5vh; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+  .pl-rail::-webkit-scrollbar { display: none; }
+  .pl-row { padding: 0 20px 40px; gap: 16px; }
+  .pl-card { width: 58vw; max-width: 260px; scroll-snap-align: center; }
+  .pl-card:nth-child(even) { margin-top: 0; }
+
+  /* the chat fills the phone you are holding, as the app does */
+  .say { padding-top: 10vh; }
+  .say-h { font-size: clamp(60px, 19vw, 110px); }
+  .say-p { font-size: 16.5px; margin-top: 16px; max-width: 360px; }
+  .say-in { --u: calc(min(100vw, 520px) / 402); display: block; margin-top: 6vh; padding: 0; }
+  .say-side, .say-gate { display: none; }
+  .say-col { display: block; width: min(100vw, 520px); margin: 0 auto; }
+  .say-feed { padding: calc(var(--u) * 26) 0 calc(var(--u) * 60); gap: calc(var(--u) * 34); border-radius: var(--sheet) var(--sheet) 0 0; }
+  /* each exchange says what it is, in the chat's own quiet way */
+  .say-tag { display: flex; align-items: baseline; gap: 8px; padding: 0 calc(var(--u) * 20) calc(var(--u) * 6); font-size: 13.5px; color: var(--soft); }
+  .say-tag b { font-size: 15px; font-weight: 800; letter-spacing: -.01em; color: var(--ink); }
+
+  .ap-track { height: 330svh; }
+  .ap-pin { grid-template-columns: 1fr; grid-template-rows: auto 1fr; justify-items: center; align-items: start; row-gap: 0; padding: 78px 16px 0; text-align: center; }
+  .ap-copy { display: flex; flex-direction: column; align-items: center; }
+  .ap-h { font-size: clamp(34px, 9.6vw, 52px); }
+  .ap-p { font-size: 15.5px; margin-top: 10px; max-width: 340px; }
+  .ap-list { display: none; }
+  .ap-one { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 14px; width: 100%; }
+  .ap-one .seg { display: flex; gap: 6px; }
+  .ap-one .seg i { width: 26px; height: 4px; border-radius: 2px; background: color-mix(in srgb, var(--ink) 12%, transparent); overflow: hidden; position: relative; }
+  .ap-one .seg i b { position: absolute; inset: 0; background: linear-gradient(90deg, var(--k1), var(--k2)); transform-origin: 0 50%; transform: scaleX(0); transition: transform .35s var(--calm); }
+  .ap-one .seg i.done b { transform: scaleX(1); }
+  .ap-one .one { position: relative; height: 1.4em; width: 100%; overflow: hidden; font-size: 17px; font-weight: 700; letter-spacing: -.015em; }
+  .ap-one .one span { position: absolute; left: 0; right: 0; top: 0; transition: transform .5s var(--calm), opacity .3s ease; }
+  .ap-one .one .out { transform: translateY(-110%); opacity: 0; }
+  .ap-one .one .pre { transform: translateY(110%); opacity: 0; }
+  .ap-ph { --ph: calc(min(80vw, 400px) / 428 * 900); margin-top: 14px; }
+
+  .lt-room { padding: 84px 16px calc(64px + env(safe-area-inset-bottom, 0px)); }
+  .lt-in { grid-template-columns: 1fr; gap: 34px; justify-items: center; text-align: center; }
+  .lt-copy { display: flex; flex-direction: column; align-items: center; }
+  .lt-h { font-size: clamp(42px, 12vw, 64px); }
+  .lt-p { margin-top: 14px; font-size: 16px; max-width: 320px; }
+  .lt-cta { justify-content: center; margin-top: 22px; }
+  .lt-stage { --ph: calc(min(64vw, 300px) / 428 * 900); }
+}
+/* On touch screens the phones stand flat: iPhone Safari can fail to draw a phone with a screen inside it when the phone
+   is turned in 3D, so the tilt is for a mouse or trackpad only. */
+@media (hover: none), (pointer: coarse) {
+  .hero-ph .dev { transform: none !important; }
+  .lt-turn { -webkit-box-reflect: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .atitle .ch, .js .asub, .js .acta, .js .hero-ph, .js .lt-p, .js .lt-cta, .js .lt-stage, .js .ap .ap-h, .js .ap .ap-p, .js .ap-list, .js .ap-one, .js .ap-ph, .js .fade { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .m > span, .fl { transition: none !important; transform: none !important; }
+  .fl { opacity: 1 !important; }
+  .lt-turn { animation: none !important; }
+  .fr-ph, .fr-ph .sc, .sn, .ap-hl, .hs.nudge i { transition: none !important; animation: none !important; }
+}

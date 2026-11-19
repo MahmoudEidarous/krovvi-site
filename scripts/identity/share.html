@@ -4,7 +4,7 @@
 <title>Krovvi share image</title>
 <!-- The picture a chat app shows under a link to krovvi.com (1200 x 630), in the site's light look: the k and the name
      at the top, the tagline as big as the home page sets it (?line=, its last word in Krovvi's colour), and the real
-     app in a phone rising from the bottom (public/app/purple/hero.webp, taken by scripts/app-shots/capture.sh).
+     app in a phone rising from the bottom (public/app/purple/hero@3x.webp, taken by scripts/app-shots/take.sh).
      Rendered by build.mjs. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,19 +29,19 @@
   h1 span { display: block; }
   h1 .c { padding: 0 .12em .06em; margin: 0 -.12em; background: linear-gradient(180deg, #7362FA, #5B49F2); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; }
   .sub { position: absolute; left: 84px; top: 470px; margin: 0; width: 540px; font-size: 27px; font-weight: 500; line-height: 1.32; letter-spacing: -.005em; color: #6E6890; }
-  /* the phone: an iPhone drawn at 416 x 870 around the app's real screen, scaled, rising from the bottom edge */
-  .phone { position: absolute; left: 760px; top: 62px; width: 416px; height: 870px; transform: scale(.7); transform-origin: 0 0; }
-  .body { position: absolute; inset: 0; border-radius: 70px; background: linear-gradient(155deg, #7A7A82 0%, #3B3B41 8%, #1D1D21 32%, #141417 62%, #2C2C31 88%, #6A6A72 100%);
+  /* the phone: an iPhone drawn at 428 x 900 around the app's real screen (402 x 874 points, its island its own),
+     scaled, rising from the bottom edge */
+  .phone { position: absolute; left: 748px; top: 56px; width: 428px; height: 900px; transform: scale(.72); transform-origin: 0 0; }
+  .body { position: absolute; inset: 0; border-radius: 72px; background: linear-gradient(155deg, #8A8A92 0%, #3F3F45 7%, #1D1D21 30%, #131316 62%, #2C2C31 88%, #74747C 100%);
     box-shadow: 0 60px 100px -46px rgba(20,16,40,.42), 0 28px 50px -30px rgba(20,16,40,.32), inset 0 0 0 1px rgba(255,255,255,.28); }
-  .body::after { content: ""; position: absolute; inset: 4px; border-radius: 66px; background: #020203; }
-  .scr { position: absolute; left: 13px; top: 13px; width: 390px; height: 844px; border-radius: 57px; overflow: hidden; background: #F4F2FF; }
-  .scr img { width: 390px; height: 844px; display: block; }
-  .isl { position: absolute; top: 11px; left: 50%; width: 125px; height: 36.5px; margin-left: -62.5px; border-radius: 19px; background: #000; }
+  .body::after { content: ""; position: absolute; inset: 4px; border-radius: 68px; background: #020203; }
+  .scr { position: absolute; left: 13px; top: 13px; width: 402px; height: 874px; border-radius: 59px; overflow: hidden; background: #EAE9F4; }
+  .scr img { width: 402px; height: 874px; display: block; }
 </style>
 <div class="lockup"><div class="tile" id="tile"></div><div class="word">Krovvi</div></div>
 <h1 id="line"></h1>
-<p class="sub">An AI friend on your iPhone. It listens, checks in, and helps with the plans and the to-do list.</p>
-<div class="phone"><div class="body"></div><div class="scr"><img src="../../public/app/purple/hero.webp" alt=""><div class="isl"></div></div></div>
+<p class="sub">An AI friend on your iPhone. It listens, checks in, and keeps your whole day in one chat.</p>
+<div class="phone"><div class="body"></div><div class="scr"><img src="../../public/app/purple/hero@3x.webp" alt=""></div></div>
 <script>
   /* the k in the Heavy strokes, the app icon's own (components/look/brand.tsx, scripts/identity/k.mjs) */
   const B = 78.3, X = 32, T = 15.5, W = 14.3, f = (n) => (+n).toFixed(2);

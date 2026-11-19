@@ -1,24 +1,32 @@
 {
-  "taken": "2026-11-05 19:43",
+  "taken": "2026-11-19 19:57",
   "screen": [
-    390,
-    844
+    402,
+    874
   ],
   "themes": {
     "purple": {
       "stills": [
+        "card-skin",
+        "card-water",
         "checkin",
         "checkin-end",
-        "friends",
-        "friends-end",
-        "hello",
-        "hello-end",
-        "help-gift",
-        "help-meals",
-        "help-money",
-        "help-split",
-        "help-todo",
-        "help-trip",
+        "chrome-bot",
+        "chrome-top",
+        "days",
+        "days-end",
+        "flame",
+        "flame-end",
+        "game-chess-mid",
+        "game-countries-mid",
+        "game-five-mid",
+        "game-fleet-mid",
+        "game-four-mid",
+        "game-groups-mid",
+        "game-higher-mid",
+        "game-hunt-mid",
+        "game-sudoku-mid",
+        "game-trivia-mid",
         "hero",
         "hero-great",
         "hero-great-end",
@@ -30,172 +38,149 @@
         "memory-end",
         "news",
         "news-end",
-        "play",
-        "play-end",
+        "page-food",
+        "page-habits",
+        "page-health",
+        "page-money",
+        "page-study",
+        "page-todo",
         "vent",
-        "vent-end"
+        "vent-end",
+        "x-fitness",
+        "x-focus",
+        "x-meal",
+        "x-money",
+        "x-reading",
+        "x-skin",
+        "x-sleep",
+        "x-study",
+        "x-water"
       ],
       "films": {
-        "vent": 4.3,
-        "memory": 3.77,
-        "friends": 3.93,
-        "hero-great": 3.73,
-        "play": 1.93,
-        "hero-low": 3.7,
-        "checkin": 3.33,
-        "hello": 7.5,
-        "hero-okay": 2.7,
-        "news": 5.73
-      }
-    },
-    "ocean": {
-      "stills": [
-        "checkin",
-        "checkin-end",
-        "friends",
-        "friends-end",
-        "hello",
-        "hello-end",
-        "help-gift",
-        "help-meals",
-        "help-money",
-        "help-split",
-        "help-todo",
-        "help-trip",
-        "hero",
-        "hero-great",
-        "hero-great-end",
-        "hero-low",
-        "hero-low-end",
-        "hero-okay",
-        "hero-okay-end",
-        "memory",
-        "memory-end",
-        "news",
-        "news-end",
-        "play",
-        "play-end",
-        "vent",
-        "vent-end"
-      ],
-      "films": {
-        "memory": 3.87,
-        "friends": 3.93,
-        "hero-great": 3.67,
-        "play": 2.0,
-        "hero-low": 3.4,
-        "vent": 4.27,
-        "checkin": 3.2,
-        "hello": 8.0,
-        "hero-okay": 2.9,
-        "news": 5.7
-      }
-    },
-    "coral": {
-      "stills": [
-        "checkin",
-        "checkin-end",
-        "friends",
-        "friends-end",
-        "hello",
-        "hello-end",
-        "help-gift",
-        "help-meals",
-        "help-money",
-        "help-split",
-        "help-todo",
-        "help-trip",
-        "hero",
-        "hero-great",
-        "hero-great-end",
-        "hero-low",
-        "hero-low-end",
-        "hero-okay",
-        "hero-okay-end",
-        "memory",
-        "memory-end",
-        "news",
-        "news-end",
-        "play",
-        "play-end",
-        "vent",
-        "vent-end"
-      ],
-      "films": {
-        "memory": 3.9,
-        "friends": 3.97,
-        "hero-great": 3.53,
-        "play": 2.0,
-        "hero-low": 3.2,
-        "vent": 4.27,
-        "checkin": 3.3,
-        "hello": 8.1,
-        "hero-okay": 2.57,
-        "news": 5.63
-      }
-    },
-    "mono": {
-      "stills": [
-        "checkin",
-        "checkin-end",
-        "friends",
-        "friends-end",
-        "hello",
-        "hello-end",
-        "help-gift",
-        "help-meals",
-        "help-money",
-        "help-split",
-        "help-todo",
-        "help-trip",
-        "hero",
-        "hero-great",
-        "hero-great-end",
-        "hero-low",
-        "hero-low-end",
-        "hero-okay",
-        "hero-okay-end",
-        "memory",
-        "memory-end",
-        "news",
-        "news-end",
-        "play",
-        "play-end",
-        "vent",
-        "vent-end"
-      ],
-      "films": {
-        "memory": 3.83,
-        "friends": 3.77,
-        "hero-great": 3.53,
-        "play": 2.03,
-        "hero-low": 3.27,
-        "vent": 4.53,
-        "checkin": 3.23,
-        "hello": 3.43,
-        "hero-okay": 2.57,
-        "news": 4.53
+        "card-skin": 0.43,
+        "card-water": 0.87,
+        "checkin": 5.3,
+        "days": 1.57,
+        "flame": 2.97,
+        "hero-great": 4.37,
+        "hero-low": 4.2,
+        "hero-okay": 3.17,
+        "memory": 4.2,
+        "news": 5.23,
+        "vent": 4.17,
+        "x-skin": 0.47,
+        "x-water": 0.87
       }
     }
   },
   "frames": {
     "hero-great": {
-      "height": 36,
       "width": 107.66666412353516,
-      "y": 582.6666717529297,
-      "x": 16
+      "height": 36,
+      "x": 16,
+      "y": 573.6666717529297
     },
     "hero-okay": {
+      "y": 573.6666717529297,
       "width": 97,
-      "y": 582.6666717529297,
       "x": 131.66666412353516,
       "height": 36
     },
     "hero-low": {
-      "y": 626.6666717529297,
       "width": 145.6666717529297,
-      "x": 16,
+      "y": 573.6666717529297,
+      "x": 236.6666717529297,
       "height": 36
     }
+  },
+  "sizes": {
+    "x-day": [
+      402,
+      487
+    ],
+    "x-focus": [
+      402,
+      390
+    ],
+    "x-money": [
+      402,
+      509
+    ],
+    "x-skin": [
+      402,
+      439
+    ],
+    "x-study": [
+      402,
+      487
+    ],
+    "x-water": [
+      402,
+      439
+    ],
+    "x-fitness": [
+      402,
+      440
+    ],
+    "x-meal": [
+      402,
+      463
+    ],
+    "x-reading": [
+      402,
+      440
+    ],
+    "x-sleep": [
+      402,
+      390
+    ],
+    "chrome-top": [
+      402,
+      139
+    ],
+    "chrome-bot": [
+      402,
+      126
+    ],
+    "game-chess-mid": [
+      402,
+      804
+    ],
+    "game-countries-mid": [
+      402,
+      804
+    ],
+    "game-five-mid": [
+      402,
+      804
+    ],
+    "game-fleet-mid": [
+      402,
+      804
+    ],
+    "game-four-mid": [
+      402,
+      804
+    ],
+    "game-groups-mid": [
+      402,
+      804
+    ],
+    "game-higher-mid": [
+      402,
+      804
+    ],
+    "game-hunt-mid": [
+      402,
+      804
+    ],
+    "game-sudoku-mid": [
+      402,
+      804
+    ],
+    "game-trivia-mid": [
+      402,
+      804
+    ]
   }
 }

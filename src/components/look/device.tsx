@@ -1,24 +1,44 @@
-import { filmUrl, hasFilm, hasStill, stillUrl } from "@/lib/app-shots";
+import { filmUrl, hasFilm, hasStill, SCREEN, stillSet, stillUrl } from "@/lib/app-shots";
 
 /**
- * An iPhone drawn at 416 x 870 around the app's real screen (390 x 844 points): the body, its buttons, the island, one
- * soft reflection. What is on the screen is always the app itself, a picture or a film of it (lib/app-shots.ts).
+ * An iPhone drawn around the app's real screen (402 x 874 points, 428 x 900 with its band): the body, its buttons, one
+ * soft reflection. The island is the screen's own (the pictures are the phone's whole screen). What is on the screen is
+ * always the app itself, a picture or a film of it (lib/app-shots.ts). Its size is the height it is given (--ph, look.css).
  */
-export function Device({ children }: { children: React.ReactNode }) {
+export function Device({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className="dev">
+    <div className={`dev ${className}`.trim()}>
       <div className="dev-body" />
       <i className="dev-btn l b-act" />
       <i className="dev-btn l b-vu" />
       <i className="dev-btn l b-vd" />
       <i className="dev-btn r b-pw" />
       <i className="dev-btn r b-cc" />
-      <div className="dev-scr">
-        {children}
-        <div className="dev-isl" />
-      </div>
+      <div className="dev-scr">{children}</div>
       <div className="dev-glint" />
     </div>
+  );
+}
+
+/** How wide a phone's screen is drawn at most, for the browser to pick the right file. */
+const SIZES = "(max-width: 860px) 86vw, 420px";
+
+/** One of the app's screens, still. */
+export function Shot({ name, alt, className = "", eager = false, sizes = SIZES }: { name: string; alt: string; className?: string; eager?: boolean; sizes?: string }) {
+  if (!hasStill(name)) return null;
+  return (
+    <img
+      className={className}
+      src={stillUrl(name)}
+      srcSet={stillSet(name)}
+      sizes={sizes}
+      alt={alt}
+      width={SCREEN.w}
+      height={SCREEN.h}
+      loading={eager ? "eager" : "lazy"}
+      decoding="async"
+      data-shot={name}
+    />
   );
 }
 
@@ -45,13 +65,12 @@ export function Scene({
   children?: React.ReactNode;
 }) {
   const film = hasFilm(name);
-  const end = film ? `${name}-end` : name;
-  const loading = eager ? "eager" : "lazy";
+  const end = film && hasStill(`${name}-end`) ? `${name}-end` : name;
   return (
     <div className={`sc ${className}`.trim()} id={id} data-scene={name} data-show={show}>
-      {film && hasStill(name) && <img className="sc-a" src={stillUrl(name)} alt="" width={390} height={844} loading={loading} decoding="async" data-shot={name} />}
+      {film && hasStill(name) && <Shot className="sc-a" name={name} alt="" eager={eager} />}
       {film && <video className="sc-v" muted playsInline preload="none" data-src={filmUrl(name)} data-film={name} aria-hidden="true" tabIndex={-1} />}
-      {hasStill(end) && <img className="sc-e" src={stillUrl(end)} alt={alt} width={390} height={844} loading={loading} decoding="async" data-shot={end} />}
+      <Shot className="sc-e" name={end} alt={alt} eager={eager} />
       {children}
     </div>
   );

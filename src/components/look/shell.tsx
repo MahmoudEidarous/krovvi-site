@@ -1,5 +1,6 @@
 import { Baloo_2 } from "next/font/google";
 
+import { TAKEN, type Theme } from "@/lib/app-shots";
 import { JOIN_URL, SUPPORT_EMAIL } from "@/lib/site";
 
 import { KTile, Wordmark } from "./brand";
@@ -59,10 +60,13 @@ function TopBar({ home }: { home: boolean }) {
       <nav className="cap-links" id="capLinks" aria-label={home ? "On this page" : "Krovvi"}>
         <i className="cap-hl" aria-hidden="true" />
         <a href={`${at}#friend`} data-go="friend">
-          Why a friend
+          A friend
         </a>
-        <a href={`${at}#tasks`} data-go="tasks">
-          How it helps
+        <a href={`${at}#chat`} data-go="chat">
+          Just say it
+        </a>
+        <a href={`${at}#apps`} data-go="apps">
+          Apps
         </a>
         <a href="/support">Support</a>
       </nav>
@@ -73,12 +77,17 @@ function TopBar({ home }: { home: boolean }) {
   );
 }
 
-const DOTS: { pick: string; label: string; a?: string; b?: string }[] = [
+const DOTS: { pick: Theme; label: string; a?: string; b?: string }[] = [
   { pick: "purple", label: "Purple", a: "#7B6BFF", b: "#5B49F2" },
   { pick: "ocean", label: "Ocean", a: "#3A8DFF", b: "#1A5FE0" },
   { pick: "coral", label: "Coral", a: "#EF6B39", b: "#D9481A" },
   { pick: "mono", label: "Mono" },
 ];
+/**
+ * The colours to choose from: only the ones the app's screens were taken in (public/app/shots.json), so a colour picked
+ * here is the colour of every phone on the page too. With one colour taken there is nothing to choose.
+ */
+const LOOKS = DOTS.filter((d) => d.pick === "purple" || (TAKEN[d.pick]?.stills?.length ?? 0) > 0);
 
 /** The name as big as the page, letter by letter, so each can move on its own. */
 const GIANT = [..."Krovvi"];
@@ -103,10 +112,13 @@ function Foot({ home }: { home: boolean }) {
         <nav className="ft-col" aria-label="Krovvi">
           <b>Krovvi</b>
           <a href={`${at}#friend`} data-go="friend">
-            Why a friend
+            A friend first
           </a>
-          <a href={`${at}#tasks`} data-go="tasks">
-            How it helps
+          <a href={`${at}#chat`} data-go="chat">
+            Just say it
+          </a>
+          <a href={`${at}#apps`} data-go="apps">
+            The apps
           </a>
           <a href={JOIN_URL}>Get Krovvi</a>
         </nav>
@@ -116,21 +128,25 @@ function Foot({ home }: { home: boolean }) {
           <a href="/privacy">Privacy</a>
           <a href={`mailto:${SUPPORT_EMAIL}`}>Email us</a>
         </nav>
-        <div className="ft-look">
-          <b>Make it yours</b>
-          <div className="sw4" role="group" aria-label="Color">
-            {DOTS.map((d) => (
-              <button
-                key={d.pick}
-                type="button"
-                className={`dot${d.pick === "mono" ? " mono" : ""}`}
-                data-pick={d.pick}
-                aria-label={d.label}
-                style={d.a ? ({ "--a": d.a, "--b": d.b } as React.CSSProperties) : undefined}
-              />
-            ))}
+        {LOOKS.length > 1 ? (
+          <div className="ft-look">
+            <b>Make it yours</b>
+            <div className="sw4" role="group" aria-label="Color">
+              {LOOKS.map((d) => (
+                <button
+                  key={d.pick}
+                  type="button"
+                  className={`dot${d.pick === "mono" ? " mono" : ""}`}
+                  data-pick={d.pick}
+                  aria-label={d.label}
+                  style={d.a ? ({ "--a": d.a, "--b": d.b } as React.CSSProperties) : undefined}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="ft-look" aria-hidden="true" />
+        )}
       </div>
       <div className="ft-giant" id="ftGiant" aria-hidden="true">
         <div className="ftg-row">

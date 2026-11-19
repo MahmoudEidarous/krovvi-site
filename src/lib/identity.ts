@@ -94,9 +94,9 @@ export const IDENTITY: Identity = {
   tagline: "Your super friend.",
   title: "Krovvi: your super friend",
   description:
-    "Krovvi is an AI friend on iPhone. It listens, checks in and keeps you company, and it helps with your plans, your money and your to-do list.",
+    "Krovvi is an AI friend on iPhone. It listens, checks in and keeps you company, and it looks after your money, habits, studying and plans in one chat.",
   ogTitle: "Krovvi: your super friend",
-  ogDescription: "An AI friend on your iPhone. It listens, checks in, remembers what matters, and helps with the plans and the to-do list.",
+  ogDescription: "An AI friend on your iPhone. It listens, checks in, remembers what matters, and keeps your whole day in one chat.",
   category: "Personal AI for iPhone",
   mission: "Give everyone an AI that keeps up with their life.",
   status: "In beta on iPhone",

@@ -3,6 +3,7 @@ import type { Viewport } from "next";
 import { Home } from "@/components/home/home";
 
 import "./look.css";
+import "./home.css";
 
 /** The page is always light: its bars and its scrollbars are the light page's (its night parts are night by design). */
 export const viewport: Viewport = {

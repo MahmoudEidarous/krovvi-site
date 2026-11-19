@@ -1,11 +1,11 @@
 import { TAKEN, type Theme } from "@/lib/app-shots";
 
 /**
- * Everything that moves on krovvi.com, ported from A2's a2.js (catch8 design/krovvi-new-look-2026-10-28/landing-a2),
- * whose smoothness rules hold here too: one frame loop for everything that follows the scroll or the pointer, reading
- * first and writing after; following a moving target the same way at 60 or 120 frames a second (1 - exp(-dt/tau));
- * transforms written straight onto elements; no blur on anything that moves. Where A2's phones played drawn kit screens
- * in iframes, these phones show the real app: pictures and films of its own screens, played when they are seen.
+ * Everything that moves on krovvi.com (the home of 19 November 2026; its smoothness rules are A2's): one frame loop for
+ * everything that follows the scroll or the pointer, reading first and writing after; following a moving target the
+ * same way at 60 or 120 frames a second (1 - exp(-dt/tau)); transforms written straight onto elements; no blur on
+ * anything that moves. The phones show the real app: pictures and films of its own screens, played when they are seen.
+ * Sizes are the stylesheet's own (a phone is as tall as it is given), so nothing here measures a phone.
  *
  * startLook(root) sets it all up and returns the one call that takes it all down again.
  */
@@ -146,10 +146,25 @@ export function startLook(root: HTMLElement): () => void {
   const hasFilmNamed = (name: string) => TAKEN.purple?.films?.[name] !== undefined;
   const hasStillNamed = (name: string) => !!TAKEN.purple?.stills?.includes(name);
   /** Every picture and film on the page follows the colour. */
+  /** A picture's two sizes, in the colour it is shown in. */
+  const setOf = (name: string) => {
+    const dir = dirFor(name, false);
+    return `/app/${dir}/${name}.webp 804w, /app/${dir}/${name}@3x.webp 1206w`;
+  };
+  /** One of the app's screens put in a picture's place. */
+  const setShot = (im: HTMLImageElement, name: string) => {
+    im.dataset.shot = name;
+    im.srcset = setOf(name);
+    im.src = stillOf(name);
+    if (!im.sizes) im.sizes = "(max-width: 860px) 86vw, 420px";
+  };
   const swapShots = () => {
     $$<HTMLImageElement>("img[data-shot]").forEach((im) => {
       const src = stillOf(im.dataset.shot!);
-      if (im.getAttribute("src") !== src) im.src = src;
+      if (im.getAttribute("src") !== src) {
+        im.srcset = setOf(im.dataset.shot!);
+        im.src = src;
+      }
     });
     $$<HTMLVideoElement>("video[data-film]").forEach((v) => {
       const src = filmOf(v.dataset.film!);
@@ -326,13 +341,19 @@ export function startLook(root: HTMLElement): () => void {
     });
   }
 
-  /* ---------- the first screen: the name huge, the real app talking in a phone in front of it ---------- */
-  const st1 = $("#top");
-  const heroL = $("#heroL");
+  /* parts that come in when they are seen: a title rising, a line fading up (home.css .rise, .fade) */
+  $$("[data-in]").forEach((el) => {
+    watch((es) => es.forEach((e) => {
+      if (e.isIntersecting) el.classList.add("in");
+    }), { threshold: 0.3 }).observe(el);
+  });
+
+  /* ---------- 1. the first screen: the name huge, the real app talking in a phone in front of it ---------- */
+  const hero = $("#top");
+  const heroIn = $("#heroIn");
   const title = $("#atitle");
-  const slotH = $("#slotH");
   const heroPh = $("#heroPh");
-  const acta = heroL ? $(".acta", heroL) : null;
+  const acta = heroIn ? $(".acta", heroIn) : null;
   const heroDev = heroPh ? $(".dev", heroPh) : null;
   const heroScr = $("#heroScr");
   let heroCta = false;
@@ -342,35 +363,27 @@ export function startLook(root: HTMLElement): () => void {
     return Promise.race([document.fonts.load(`800 100px ${fam}`).then(() => undefined), sleep(700)]).catch(() => undefined);
   };
 
-  /* The name fills the width; the phone fills what is left under it. Measured, never guessed. */
+  /* The name fills the width: measured, never guessed. The phone's size is the stylesheet's own (look.css --ph). */
   let lastW = 0;
   const layout = (force?: boolean) => {
-    if (!st1 || !heroL || !title || !slotH || !heroPh) return;
+    if (!heroIn || !title) return;
     if (!force && innerWidth === lastW) return;
     lastW = innerWidth;
     const phone = isPhone();
-    const vh = innerHeight;
-    const cs = getComputedStyle(heroL);
-    const W = heroL.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
-    title.style.setProperty("--fs", "100px");
-    const rg = document.createRange();
-    rg.selectNodeContents(title);
-    const natural = phone ? Math.max(...$$(".ln", title).map((l) => l.getBoundingClientRect().width)) : rg.getBoundingClientRect().width;
-    const fs = Math.min(phone ? 132 : 236, (100 * W * (phone ? 0.98 : 0.985)) / natural);
-    title.style.setProperty("--fs", `${fs.toFixed(1)}px`);
-    heroL.style.setProperty("--fs", `${fs.toFixed(1)}px`);
-    let sH: number;
-    if (phone) {
-      slotH.style.setProperty("--hH", "10px");
-      const top = slotH.getBoundingClientRect().top + scrollY;
-      sH = Math.min(clamp((vh - top - (fine ? 18 : 62)) / 870, 0.48, 0.74), (W * 0.84) / 416);
-    } else {
-      const tb = title.getBoundingClientRect().top - st1.getBoundingClientRect().top + title.offsetHeight;
-      sH = clamp((Math.max(vh, 640) - tb + fs * 0.14 - 40) / 870, 0.52, 0.9);
-    }
-    slotH.style.setProperty("--hW", `${(416 * sH).toFixed(1)}px`);
-    slotH.style.setProperty("--hH", `${(870 * sH).toFixed(1)}px`);
-    heroPh.style.transform = `scale(${sH.toFixed(4)})`;
+    const cs = getComputedStyle(heroIn);
+    const W = heroIn.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    title.style.fontSize = "100px";
+    /* the words' own width, whatever box they sit in: one line on a computer, the longer of two on a phone */
+    const wide = (el: Element) => {
+      const rg = document.createRange();
+      rg.selectNodeContents(el);
+      return rg.getBoundingClientRect().width;
+    };
+    const natural = phone ? Math.max(...$$(".ln", title).map(wide)) : wide(title);
+    title.style.fontSize = "";
+    if (!natural) return;
+    const fs = Math.min(phone ? 132 : 250, (100 * W * (phone ? 0.98 : 0.985)) / natural);
+    heroIn.style.setProperty("--fs", `${fs.toFixed(1)}px`);
     if (cap) cap.classList.toggle("solo", heroCta && !phone);
   };
 
@@ -391,22 +404,22 @@ export function startLook(root: HTMLElement): () => void {
       },
     });
   }
-  if (st1 && !reduce && fine) {
-    on(st1, "pointermove", (e) => {
+  if (hero && !reduce && fine) {
+    on(hero, "pointermove", (e) => {
       const pe = e as PointerEvent;
-      TILT.ty = clamp((pe.clientX / innerWidth - 0.5) * 2, -1, 1) * 7;
-      TILT.tx = clamp((pe.clientY / innerHeight - 0.5) * 2, -1, 1) * -4;
+      TILT.ty = clamp((pe.clientX / innerWidth - 0.5) * 2, -1, 1) * 6;
+      TILT.tx = clamp((pe.clientY / innerHeight - 0.5) * 2, -1, 1) * -3;
       kick();
     });
-    on(st1, "pointerleave", () => {
+    on(hero, "pointerleave", () => {
       TILT.tx = 0;
       TILT.ty = 0;
       kick();
     });
   }
   /* your pointer on the phone means you are using it: it turns to face you, so its screen is sharp to tap */
-  if (slotH && fine) {
-    on(slotH, "pointerenter", () => {
+  if (heroPh && fine) {
+    on(heroPh, "pointerenter", () => {
       TILT.tx = 0;
       TILT.ty = 0;
       kick();
@@ -443,13 +456,15 @@ export function startLook(root: HTMLElement): () => void {
       /* a private window */
     }
   };
-  const showAnswered = (t: string) => {
-    if (!heroScr || !heroE) return;
+  const endOf = (t: string) => {
     const end = `hero-${t}-end`;
-    if (!hasStillNamed(end)) return;
-    heroE.dataset.shot = end;
-    heroE.src = stillOf(end);
+    if (!heroE || !hasStillNamed(end)) return false;
+    setShot(heroE, end);
     heroE.alt = "Krovvi, the app: your answer and Krovvi's reply.";
+    return true;
+  };
+  const showAnswered = (t: string) => {
+    if (!heroScr || !endOf(t)) return;
     heroScr.dataset.show = "e";
     answered = true;
   };
@@ -462,12 +477,7 @@ export function startLook(root: HTMLElement): () => void {
       btn.classList.add("down");
       later(() => btn.classList.remove("down"), 160);
     }
-    const end = `hero-${t}-end`;
-    if (heroE && hasStillNamed(end)) {
-      heroE.dataset.shot = end;
-      heroE.src = stillOf(end);
-      heroE.alt = "Krovvi, the app: your answer and Krovvi's reply.";
-    }
+    endOf(t);
     const film = `hero-${t}`;
     if (!heroV || !hasFilmNamed(film) || reduce || dirFor(film, true) !== S.theme) {
       heroScr.dataset.show = "e";
@@ -530,27 +540,27 @@ export function startLook(root: HTMLElement): () => void {
   if (remembered) showAnswered(remembered);
   /* the phone buzzes on the page when Krovvi texts you: two short shakes, the way a phone does on a table */
   const buzz = () => {
-    if (reduce || !slotH) return;
+    if (reduce || !heroPh) return;
     const kf = [{ translate: "0 0" }, { translate: "-3px 0", offset: 0.2 }, { translate: "3px 0", offset: 0.4 }, { translate: "-2px 0", offset: 0.6 }, { translate: "2px 0", offset: 0.8 }, { translate: "0 0" }];
-    slotH.animate(kf, { duration: 240, easing: "linear" }).finished.then(() => {
-      if (alive) slotH.animate(kf, { duration: 200, delay: 110, easing: "linear" });
+    heroPh.animate(kf, { duration: 240, easing: "linear" }).finished.then(() => {
+      if (alive) heroPh.animate(kf, { duration: 200, delay: 110, easing: "linear" });
     }).catch(() => {});
   };
   /* the first phone's film plays only while it is near; as you come back up it carries on from where it was */
   let heroNear = true;
-  if (slotH) {
+  if (heroPh) {
     watch((es) => es.forEach((e) => {
       heroNear = e.isIntersecting;
       if (!heroV) return;
       if (!heroNear && !heroV.paused) heroV.pause();
       else if (heroNear && heroScr?.dataset.show === "v" && heroV.paused && !heroV.ended) heroV.play().catch(() => {});
-    }), { rootMargin: "35% 0px" }).observe(slotH);
+    }), { rootMargin: "20% 0px" }).observe(heroPh);
   }
 
-  /* what the friend part fetches once the first screen has made its entrance (set below) */
+  /* what the next parts fetch once the first screen has made its entrance (set below) */
   let afterEntrance = () => {};
   /* The opening: the name rises letter by letter, the phone stands up in front of it, then the top bar drops in. */
-  if (st1 && title && heroPh && slotH) {
+  if (hero && title && heroPh) {
     (async () => {
       await face();
       if (!alive) return;
@@ -566,9 +576,9 @@ export function startLook(root: HTMLElement): () => void {
           [{ transform: "perspective(1800px) translateY(16vh) rotateX(22deg) scale(.93)", opacity: 0 }, { offset: 0.3, opacity: 1 }, { transform: "perspective(1800px)", opacity: 1 }],
           { duration: 1150, easing: CALM }
         );
-      else if (!reduce) slotH.animate([{ transform: "translateY(70px)", opacity: 0 }, { offset: 0.3, opacity: 1 }, { transform: "none", opacity: 1 }], { duration: 1000, easing: CALM });
+      else if (!reduce) heroPh.animate([{ transform: "translateY(70px)", opacity: 0 }, { offset: 0.3, opacity: 1 }, { transform: "none", opacity: 1 }], { duration: 1000, easing: CALM });
       await sleep(reduce ? 0 : 320);
-      st1.classList.add("ready");
+      hero.classList.add("ready");
       cap?.classList.add("in");
       kick();
       await sleep(reduce ? 0 : 520);
@@ -588,385 +598,356 @@ export function startLook(root: HTMLElement): () => void {
   }
   on(window, "resize", () => layout());
 
-  /* ---------- a friend first: the night part, one phone, five of the app's own screens ---------- */
-  const fr2 = $("#friend");
+  /* ---------- the sheets: as a part slides up over the one before, that one steps back a little and dims ---------- */
+  type Back = { sheet: HTMLElement; back: HTMLElement; shade: HTMLElement | null; p: number; key: string };
+  const backs: Back[] = [];
+  const stepsBack = (sheet: HTMLElement | null, back: HTMLElement | null) => {
+    if (!sheet || !back || reduce) return;
+    backs.push({ sheet, back, shade: $(":scope > .shade", back), p: 0, key: "" });
+  };
+  parts.push({
+    read() {
+      const vh = innerHeight;
+      /* on a phone the page simply scrolls: a part is never held back under the next */
+      const still = isPhone();
+      for (const b of backs) b.p = still ? 0 : clamp(1 - b.sheet.getBoundingClientRect().top / vh);
+    },
+    write() {
+      for (const b of backs) {
+        const key = b.p.toFixed(3);
+        if (key === b.key) continue;
+        b.key = key;
+        /* it falls behind by a part of the scroll: the sheet is in front, moving faster */
+        b.back.style.transform = b.p > 0 ? `translate3d(0, ${(b.p * innerHeight * 0.3).toFixed(1)}px, 0)` : "";
+        if (b.shade) b.shade.style.opacity = (b.p * 0.55).toFixed(3);
+      }
+      return false;
+    },
+  });
+
+  /* ---------- 2. a friend first: the night sheet, one phone, five of the app's own moments ---------- */
+  const fr = $("#friend");
   const track = $("#frTrack");
-  const pin2 = $("#pin2");
+  const pin = $("#frPin");
   const frPh = $("#frPh");
-  const fws = $("#fws");
-  const steps2 = $("#steps2");
-  const s2hl = steps2 ? $(".s2-hl", steps2) : null;
-  const N2 = 6;
+  const frWords = $("#frWords");
+  const frSteps = $("#frSteps");
+  const fsHl = frSteps ? $(".fs-hl", frSteps) : null;
+  const FW = frWords ? $$(".fw", frWords) : [];
   const SCR = frPh ? $$(".sc", frPh) : [];
-  const OFF = frPh ? $(".sc-off", frPh) : null;
-  const FRD = frPh ? $(".dev", frPh) : null;
+  const TABS = frSteps ? $$<HTMLButtonElement>("button", frSteps) : [];
+  const N2 = FW.length; // the opening words, then one for each screen
+  stepsBack(fr, heroIn);
   /* each screen's pictures are fetched ahead of time, one in each quiet moment once the first screen has made its
      entrance: nothing loads while you scroll */
   let warmed = 0;
-  const preload2 = () => {
+  const warmFriend = () => {
     if (warmed >= SCR.length) return;
     quiet(() => {
       warm(SCR[warmed]);
       warmed++;
-      preload2();
+      warmFriend();
     });
   };
-  afterEntrance = preload2;
+  afterEntrance = warmFriend;
   let cur2 = -1;
-  let tv2 = 0;
-  let moving2 = false;
-  let behind = -1;
-  const putBehind = () => SCR.forEach((el, i) => el.classList.toggle("behind", i === behind && !el.classList.contains("on") && !moving2));
-  /* The screen you see plays its film from its beginning; every other screen holds still. The next step's screen is
-     drawn ahead, out of sight under the one you see, so a step change moves pictures that are already drawn. */
-  const steer2 = (c: number) => {
+  let want2 = 0;
+  const tabTo = (c: number) => {
+    const b = TABS[c - 1];
+    TABS.forEach((t) => t.classList.toggle("on", t === b));
+    if (!fsHl || !b) return;
+    fsHl.style.translate = `${b.offsetLeft}px 0`;
+    fsHl.style.width = `${b.offsetWidth}px`;
+  };
+  const setChapter = (c: number) => {
+    if (c === cur2 || !pin) return;
+    const from = cur2;
+    cur2 = c;
+    pin.dataset.c = String(c);
+    pin.classList.toggle("up", c >= 1);
+    FW.forEach((w) => w.classList.toggle("on", Number(w.dataset.c) === c));
+    frSteps?.classList.toggle("on", c >= 1);
+    if (c >= 1) tabTo(c);
     const k = c - 1;
-    const n = c < N2 - 1 ? c : -1;
+    if (frPh) frPh.dataset.dir = c >= from ? "fwd" : "back";
     SCR.forEach((sc, i) => {
+      sc.classList.toggle("on", i === k);
+      /* the ones already seen wait on the left, the ones to come on the right */
+      sc.classList.toggle("was", i < k);
       if (i === k) {
-        if (cur2 !== k || sc.dataset.show === "e") playScene(sc);
+        /* a moment for the screen to slide in, then its film from the start */
+        later(() => {
+          if (cur2 === c) playScene(sc);
+        }, reduce ? 0 : 380);
       } else holdScene(sc);
     });
-    if (n >= 0) warm(SCR[n]);
-    behind = n;
-    quiet(putBehind);
+    /* the screen at the opening is the first one, already in place as the phone comes up */
+    if (c === 0 && SCR[0]) SCR[0].dataset.show = "a";
   };
-  const hold2 = () => {
-    SCR.forEach((sc) => holdScene(sc));
-    behind = -1;
-    putBehind();
-  };
-  const showOnly = (k: number) =>
-    SCR.forEach((el, i) => {
-      el.classList.toggle("on", i === k);
-      if (i === k) el.classList.remove("behind");
-      el.style.zIndex = "";
-      el.style.transform = "";
-      el.style.filter = "";
-      el.style.opacity = "";
-    });
-  const IOS = "cubic-bezier(.32,.72,0,1)";
-  /* Changing screens the way the phone does: it sleeps and wakes when Krovvi checks in, new chats slide in from the side.
-     If you scroll fast, the newest wish wins at once. */
-  const toScreen = async (k: number) => {
-    const v = ++tv2;
-    const live = () => alive && v === tv2;
-    const from = cur2;
-    SCR.forEach((el) => el.getAnimations().forEach((a) => a.cancel()));
-    if (OFF) {
-      OFF.getAnimations().forEach((a) => a.cancel());
-      OFF.style.opacity = "0";
-    }
-    cur2 = k;
-    moving2 = true;
-    SCR.forEach((el, i) => {
-      if (i !== k) el.classList.remove("behind");
-    });
-    const done = () => {
-      if (live()) {
-        moving2 = false;
-        quiet(putBehind);
-      }
-    };
-    if (from < 0 || from === k || reduce) {
-      showOnly(k);
-      done();
-      return;
-    }
-    const A = SCR[from];
-    const B = SCR[k];
-    const fwd = k > from;
-    if (OFF && ((from === 0 && k === 1) || (from === 1 && k === 0))) {
-      /* the screen sleeps, then wakes on the other one: Krovvi checking in is a text that wakes your phone */
-      showOnly(from);
-      await OFF.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 170, easing: "ease-in", fill: "forwards" }).finished.catch(() => {});
-      if (!live()) return;
-      showOnly(k);
-      OFF.style.opacity = "1";
-      OFF.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 560, easing: "ease-out", fill: "forwards" });
-      await B.animate([{ transform: "scale(1.06)", filter: "brightness(.55)" }, { transform: "none", filter: "brightness(1)" }], { duration: 820, easing: CALM }).finished.catch(() => {});
-      done();
-      return;
-    }
-    /* a new chat slides in from the side, the old one steps back */
-    A.classList.add("on");
-    B.classList.add("on");
-    A.style.zIndex = fwd ? "1" : "3";
-    B.style.zIndex = fwd ? "3" : "1";
-    const inA = fwd ? [{ transform: "none", opacity: 1 }, { transform: "translateX(-28%)", opacity: 0.45 }] : [{ transform: "none" }, { transform: "translateX(102%)" }];
-    const inB = fwd ? [{ transform: "translateX(102%)" }, { transform: "none" }] : [{ transform: "translateX(-28%)", opacity: 0.45 }, { transform: "none", opacity: 1 }];
-    A.animate(inA, { duration: 560, easing: IOS, fill: "forwards" });
-    await B.animate(inB, { duration: 560, easing: IOS, fill: "forwards" }).finished.catch(() => {});
-    if (!live()) return;
-    showOnly(k);
-    done();
-  };
-
-  /* Where the friend phone stands: on the right on a wide screen; on a phone, under the words. */
-  let g2: { s: number; x: number; y: number } | null = null;
-  let stepAt: [number, number][] = [];
-  const stepBtns = steps2 ? $$<HTMLButtonElement>("button", steps2) : [];
+  /* on a phone the words sit over the top of the phone: the phone starts under the tallest words */
   const measure2 = () => {
-    if (!pin2 || !fws) return;
-    const vw = pin2.clientWidth;
-    const vh = pin2.clientHeight;
-    if (isPhone()) {
-      /* the phone fits under the words when it can; on a short screen it tucks its top under their fade */
-      const wb = Math.max(...$$<HTMLElement>(".fw2", fws).filter((x) => x.dataset.c !== "0").map((x) => x.offsetTop + x.offsetHeight));
-      const bottom = vh - (fine ? 22 : 78);
-      const s = Math.min((vw * 0.66) / 416, clamp((bottom - wb - 16) / 870, 0.5, 0.66));
-      g2 = { s, x: vw / 2 - 208 * s, y: bottom - 870 * s };
-      fws.style.setProperty("--scrim", `${Math.round(wb + 70)}px`);
-    } else {
-      const s = clamp((vh * 0.8) / 870, 0.5, 0.86);
-      g2 = { s, x: vw * 0.7 - 208 * s, y: vh * 0.52 - 435 * s };
-    }
-    stepAt = stepBtns.map((b) => [b.offsetLeft, b.offsetWidth]);
-  };
-  const pos2 = (hidden: boolean) => (g2 ? `translate3d(${g2.x.toFixed(1)}px, ${(g2.y + (hidden ? innerHeight * 0.9 : 0)).toFixed(1)}px, 0) scale(${g2.s.toFixed(4)})` : "");
-  let ch = -1;
-  let phoneUp = false;
-  const setPhone = (up: boolean, anim = true) => {
-    if (!g2 || !frPh) return;
-    frPh.getAnimations().forEach((a) => a.cancel());
-    /* rising: from below the screen to its place; going: back down */
-    if (anim && !reduce && up !== phoneUp)
-      frPh.animate([{ transform: pos2(up) }, { transform: pos2(!up) }], { duration: up ? 1000 : 560, easing: up ? CALM : "cubic-bezier(.5,0,.75,0)" });
-    frPh.style.transform = pos2(!up);
-    phoneUp = up;
-  };
-  const go2 = (c: number) => {
-    if (c === ch || !pin2 || !fws) return;
-    const prev = ch;
-    ch = c;
-    if (c >= N2) {
-      hold2();
+    if (!pin || !frWords) return;
+    if (!isPhone()) {
+      pin.style.removeProperty("--phTop");
+      frWords.style.removeProperty("--scrim");
       return;
     }
-    if (c < 0) {
-      hold2();
-      c = 0;
-    } else steer2(c);
-    pin2.dataset.c = String(c);
-    $$<HTMLElement>(".fw2", fws).forEach((x) => x.classList.toggle("on", +x.dataset.c! === c));
-    steps2?.classList.toggle("on", c >= 1);
-    stepBtns.forEach((b) => {
-      const is = +b.dataset.c! === c;
-      b.classList.toggle("on", is);
-      b.setAttribute("aria-pressed", is ? "true" : "false");
+    let bottom = 0;
+    FW.forEach((w) => {
+      if (w.dataset.c === "0") return;
+      bottom = Math.max(bottom, w.offsetTop + w.offsetHeight);
     });
-    const at = stepAt[c - 1];
-    if (s2hl && at && at[1]) {
-      s2hl.style.translate = `${at[0]}px 0`;
-      s2hl.style.width = `${at[1]}px`;
-    }
-    if (c === 0) {
-      setPhone(false, prev > 0 && prev < N2);
-      return;
-    }
-    const k = c - 1;
-    if (!phoneUp) {
-      showOnly(k);
-      cur2 = k;
-      setPhone(true, prev >= 0 && prev < N2);
-    } else toScreen(k);
-    if (!reduce && fine && phoneUp && prev >= 1 && prev < N2 && FRD)
-      FRD.animate(
-        [{ transform: "perspective(1800px) rotateY(0deg)" }, { transform: `perspective(1800px) rotateY(${c > prev ? -8 : 8}deg)`, offset: 0.42 }, { transform: "perspective(1800px) rotateY(0deg)" }],
-        { duration: 760, easing: "cubic-bezier(.45,0,.25,1)" }
-      );
+    pin.style.setProperty("--phTop", `${Math.round(bottom + 18)}px`);
+    frWords.style.setProperty("--scrim", `${Math.round(bottom + 54)}px`);
   };
-  let near2 = false;
-  let want2 = -1;
-  if (fr2 && track && pin2) {
+  if (fr && track && pin) {
     parts.push({
       read() {
-        if (!near2) return;
         const r = track.getBoundingClientRect();
-        const room = track.offsetHeight - pin2.offsetHeight;
-        const v = (room > 0 ? clamp(-r.top / room) : 0) * N2 * 0.999;
-        /* still below the screen, the part counts as not begun (-1); scrolled away above it, as over (N2) */
-        want2 = r.top > innerHeight ? -1 : r.bottom < 0 ? N2 : Math.min(N2 - 1, Math.floor(v));
+        const p = clamp(-r.top / Math.max(1, r.height - innerHeight));
+        /* the opening words hold for a shorter stretch than each screen */
+        const first = 0.5 / (N2 - 0.5);
+        want2 = p < first ? 0 : Math.min(N2 - 1, 1 + Math.floor(((p - first) / (1 - first)) * (N2 - 1)));
+        /* before the sheet has come up, nothing has started */
+        if (r.top > innerHeight * 0.55) want2 = 0;
       },
       write() {
-        if (near2) go2(want2);
+        setChapter(want2);
         return false;
       },
     });
-    on(window, "resize", () => {
-      measure2();
-      setPhone(phoneUp, false);
-    });
-    /* far from the part every film holds still, and the step is worked out afresh when you come back */
-    watch((es) => es.forEach((e) => {
-      near2 = e.isIntersecting;
-      if (near2) {
-        measure2();
-        setPhone(phoneUp, false);
-        kick();
-      } else {
-        hold2();
-        ch = -1;
-      }
-    }), { rootMargin: "30% 0px" }).observe(fr2);
-    stepBtns.forEach((b) => on(b, "click", () => toChapter(+b.dataset.c!)));
+    const toChapter = (c: number) => {
+      const r = track.getBoundingClientRect();
+      const span = r.height - innerHeight;
+      const first = 0.5 / (N2 - 0.5);
+      const p = c === 0 ? 0 : first + ((c - 1 + 0.4) / (N2 - 1)) * (1 - first);
+      scrollTo({ top: scrollY + r.top + p * span, behavior: reduce ? "auto" : "smooth" });
+    };
+    TABS.forEach((b) =>
+      on(b, "click", () => {
+        press(b);
+        toChapter(Number(b.dataset.c));
+      })
+    );
+    on(window, "resize", measure2);
   }
-  const toChapter = (c: number) => {
-    if (!track || !pin2) return;
-    const top = track.getBoundingClientRect().top + scrollY;
-    const room = track.offsetHeight - pin2.offsetHeight;
-    scrollTo({ top: top + room * ((c + 0.5) / N2), behavior: reduce ? "auto" : "smooth" });
-  };
 
-  /* ---------- then it helps: what's on your mind ticks off as you scroll, and the phone swipes between the answers ---------- */
-  const hp = $("#tasks");
-  const hpTrack = $("#hpTrack");
-  const hpPin = $("#hpPin");
-  const hpList = $("#hpList");
-  const hpSlot = $("#hpSlot");
-  const hpPh = $("#hpPh");
-  const hpOne = $("#hpOne");
-  const hpLis = hpList ? $$<HTMLLIElement>("li", hpList) : [];
-  const NT = hpLis.length || 6;
-  const GAP = 408;
-  const hpHl = hpList ? $(".hp-hl", hpList) : null;
-  const hpSegs = hpOne ? $$(".seg6 i", hpOne) : [];
-  const hpLine = hpOne ? $(".one", hpOne) : null;
-  const hpView = hpPh ? $(".hp-view", hpPh) : null;
-  const hpStrip = hpPh ? $(".hp-strip", hpPh) : null;
-  const TASK_WORDS = hpLis.map((l) => ({ q: $(".q", l)?.textContent ?? "", a: $(".a", l)?.textContent ?? "" }));
-  let hpNear = false;
-  const fitHp = () => {
-    if (!hpPin || !hpSlot || !hpPh) return;
-    const vh = hpPin.clientHeight;
-    const vw = hpPin.clientWidth;
-    let s: number;
-    if (isPhone()) {
-      hpSlot.style.setProperty("--ph", "10px");
-      s = clamp(Math.min((vh - hpSlot.offsetTop - (fine ? 16 : 74)) / 870, (vw * 0.74) / 416), 0.36, 0.72);
-    } else s = clamp((vh * 0.8) / 870, 0.5, 0.86);
-    hpSlot.style.setProperty("--pw", `${(416 * s).toFixed(1)}px`);
-    hpSlot.style.setProperty("--ph", `${(870 * s).toFixed(1)}px`);
-    hpPh.style.transform = `scale(${s.toFixed(4)})`;
-  };
-  const HP = { u: 0, tu: 0, act: -1, drawn: false };
-  const swipe = (f: number) => {
-    const t = clamp((f - 0.32) / 0.36);
-    return t * t * (3 - 2 * t);
-  };
-  let hpT = 0;
-  const hpPut = (text: string, cls: string) => {
-    if (!hpLine) return;
-    const old = $$("span:not(.out)", hpLine);
-    const n = document.createElement("span");
-    n.className = `${cls} pre`;
-    n.textContent = text;
-    hpLine.appendChild(n);
-    requestAnimationFrame(() => requestAnimationFrame(() => n.classList.remove("pre")));
-    old.forEach((o) => {
-      o.classList.add("out");
-      later(() => o.remove(), 600);
-    });
-  };
-  /* on a phone the list is one line: what's on your mind, then, a beat later, done */
-  const hpSay = (i: number) => {
-    const t = TASK_WORDS[i];
-    if (!t) return;
-    window.clearTimeout(hpT);
-    hpPut(t.q, "q");
-    hpT = later(() => hpPut(t.a, "a"), reduce ? 0 : 380);
-  };
-  const hpAct = (i: number) => {
-    HP.act = i;
-    hpLis.forEach((l, k) => {
-      l.classList.toggle("done", k <= i);
-      l.classList.toggle("on", k === i);
-    });
-    if (hpHl && hpLis[i]) {
-      hpHl.style.transform = `translateY(${hpLis[i].offsetTop}px)`;
-      hpHl.classList.add("live");
-    }
-    hpSegs.forEach((s, k) => s.classList.toggle("done", k <= i));
-    hpSay(i);
-  };
-  const toTask = (i: number) => {
-    if (!hpTrack || !hpPin) return;
-    const top = hpTrack.getBoundingClientRect().top + scrollY;
-    const room = hpTrack.offsetHeight - hpPin.offsetHeight;
-    scrollTo({ top: top + room * (i ? (i - 0.06) / (NT - 1) : 0), behavior: reduce ? "auto" : "smooth" });
-  };
-  if (hp && hpTrack && hpPin && hpView && hpStrip) {
-    watch((es) => {
-      hpNear = es[0].isIntersecting;
-      if (hpNear) {
-        fitHp();
-        HP.drawn = false;
-        kick();
-      }
-    }, { rootMargin: "100% 0px" }).observe(hp);
-    /* the words and the phone come up as the part arrives */
-    watch((es) => es.forEach((e) => hp.classList.toggle("in", e.isIntersecting)), { threshold: 0.12 }).observe(hpPin);
-    /* the pictures start loading while you are still in the part before, so the phone is never blank when it arrives */
-    watch((es) => {
-      if (es[0].isIntersecting && hpPh) $$<HTMLImageElement>("img[loading=lazy]", hpPh).forEach((im) => (im.loading = "eager"));
-    }, { rootMargin: "0px 0px 300% 0px" }).observe(hp);
-    on(window, "resize", fitHp);
-    /* the scroll moves the row of answers; each one rests a while, then the next slides in quickly */
+  /* ---------- 3. it plays: the row of games moves sideways as you scroll down past it ---------- */
+  const plRail = $("#plRail");
+  const plRow = $("#plRow");
+  const PL = { x: 0, key: "" };
+  if (plRail && plRow && !reduce) {
     parts.push({
       read() {
-        if (!hpNear) return;
-        const r = hpTrack.getBoundingClientRect();
-        const room = hpTrack.offsetHeight - hpPin.offsetHeight;
-        const v = (room > 0 ? clamp(-r.top / room) : 0) * (NT - 1);
-        const k = Math.min(NT - 2, Math.floor(v));
-        HP.tu = k + swipe(v - k);
+        /* on a phone the row is swiped by hand */
+        if (isPhone()) {
+          PL.x = 0;
+          return;
+        }
+        const r = plRail.getBoundingClientRect();
+        const vh = innerHeight;
+        const p = clamp((vh - r.top) / (vh + r.height));
+        const room = Math.max(0, plRow.scrollWidth - innerWidth);
+        /* it starts a little in from the right, and ends with its last game in view */
+        PL.x = innerWidth * 0.12 - p * (room + innerWidth * 0.12);
       },
-      write(dt) {
-        if (!hpNear) return false;
-        const n = reduce ? HP.tu : follow(HP.u, HP.tu, dt, 60);
-        if (n === HP.u && HP.drawn) return false;
-        HP.u = n;
-        HP.drawn = true;
-        /* between two answers the row steps back a little, the way apps do when you swipe between them */
-        const t = n - Math.floor(n);
-        const dip = reduce ? 0 : Math.sin(Math.PI * t) * 0.07;
-        hpView.style.transform = `scale(${(1 - dip).toFixed(4)})`;
-        hpStrip.style.transform = `translate3d(${(-n * GAP).toFixed(2)}px, 0, 0)`;
-        const act = Math.round(n);
-        if (act !== HP.act) hpAct(act);
-        return HP.u !== HP.tu;
+      write() {
+        const key = PL.x.toFixed(1);
+        if (key !== PL.key) {
+          PL.key = key;
+          plRow.style.transform = PL.x ? `translate3d(${key}px, 0, 0)` : "";
+        }
+        return false;
       },
     });
-    if (hpList)
-      on(hpList, "click", (e) => {
-        const l = (e.target as Element).closest("li") as HTMLElement | null;
-        if (l) {
-          press(l);
-          toTask(+l.dataset.i!);
-        }
-      });
-    if (hpSlot) on(hpSlot, "click", () => toTask(Math.min(NT - 1, HP.act + 1)));
   }
 
-  /* ---------- the end: the phone on a dark stage under one white light, saying hi the way the app does ---------- */
+  /* ---------- 4. just say it: the chat is the page itself scrolling inside the phone; the words beside it follow ---------- */
+  const say = $("#chat");
+  const sayFeed = $("#sayFeed");
+  const sayNow = $("#sayNow");
+  const sayIndex = $("#sayIndex");
+  const siHl = sayIndex ? $(".si-hl", sayIndex) : null;
+  const XS = sayFeed ? $$("li", sayFeed) : [];
+  const SN = sayNow ? $$(".sn", sayNow) : [];
+  const SI = sayIndex ? $$("li", sayIndex) : [];
+  stepsBack(say, $("#plIn"));
+  let sayCur = -1;
+  let sayWant = 0;
+  const sayTo = (i: number) => {
+    if (i === sayCur) return;
+    sayCur = i;
+    SN.forEach((el, k) => {
+      el.classList.toggle("on", k === i);
+      el.classList.toggle("was", k < i);
+    });
+    SI.forEach((el, k) => el.classList.toggle("on", k === i));
+    const li = SI[i];
+    if (siHl && li) {
+      siHl.style.translate = `0 ${li.offsetTop}px`;
+      siHl.style.width = `${li.offsetWidth}px`;
+    }
+    /* the card in front moves as it does in the app (a step ticked, a glass added, a timer running): its film plays
+       once over its picture and stays at its end; the others go back to their pictures */
+    XS.forEach((x, k) => {
+      const v = x.querySelector("video") as HTMLVideoElement | null;
+      if (!v) return;
+      if (k !== i) {
+        if (!v.paused) v.pause();
+        x.classList.remove("playing");
+        return;
+      }
+      if (reduce || !v.dataset.src || (v.dataset.film && dirFor(v.dataset.film, true) !== S.theme)) return;
+      if (!v.getAttribute("src")) {
+        v.preload = "auto";
+        v.src = v.dataset.src;
+      }
+      later(() => {
+        if (sayCur !== i || !alive) return;
+        v.onplaying = () => {
+          if (sayCur === i) x.classList.add("playing");
+        };
+        try {
+          v.currentTime = 0;
+        } catch {
+          /* not loaded yet: it starts at its beginning anyway */
+        }
+        v.play().catch(() => {});
+      }, 650);
+    });
+  };
+  if (say && XS.length) {
+    parts.push({
+      read() {
+        /* the exchange in front is the one nearest the middle of the screen */
+        const mid = innerHeight * 0.5;
+        let best = 0;
+        let dist = Infinity;
+        XS.forEach((li, i) => {
+          const r = li.getBoundingClientRect();
+          const d = Math.abs(r.top + r.height / 2 - mid);
+          if (d < dist) {
+            dist = d;
+            best = i;
+          }
+        });
+        sayWant = best;
+      },
+      write() {
+        sayTo(sayWant);
+        return false;
+      },
+    });
+    SI.forEach((li, i) =>
+      on(li, "click", () => {
+        const x = XS[i];
+        if (!x) return;
+        const r = x.getBoundingClientRect();
+        scrollTo({ top: scrollY + r.top + r.height / 2 - innerHeight / 2, behavior: reduce ? "auto" : "smooth" });
+      })
+    );
+    on(window, "resize", () => {
+      sayCur = -1;
+      kick();
+    });
+  }
+
+  /* ---------- 5. the whole picture: the phone swipes between the apps as you scroll, and the list keeps up ---------- */
+  const ap = $("#apps");
+  const apTrack = $("#apTrack");
+  const apPin = $("#apPin");
+  const apList = $("#apList");
+  const apHl = apList ? $(".ap-hl", apList) : null;
+  const apStrip = $("#apStrip");
+  const apPh = $("#apPh");
+  const apView = apPh ? $(".ap-view", apPh) : null;
+  const apOne = $("#apOne");
+  const apSeg = apOne ? $$(".seg i", apOne) : [];
+  const apOneLine = apOne ? $(".one", apOne) : null;
+  const AI = apList ? $$("li", apList) : [];
+  const M = AI.length;
+  const AP = { pos: 0, key: "", cur: -1, step: 0 };
+  const apMeasure = () => {
+    /* one page and the gap to the next, in px: the screen is 402 of the phone's points wide, a step is 420 */
+    AP.step = apView ? (apView.clientWidth * 420) / 402 : 0;
+    AP.key = "";
+  };
+  const apTo = (i: number) => {
+    if (i === AP.cur) return;
+    const from = AP.cur;
+    AP.cur = i;
+    AI.forEach((li, k) => li.classList.toggle("on", k === i));
+    const li = AI[i];
+    if (apHl && li) {
+      apHl.style.transform = `translateY(${li.offsetTop}px)`;
+      apHl.classList.add("live");
+    }
+    apSeg.forEach((s, k) => s.classList.toggle("done", k <= i));
+    if (apOneLine && li) {
+      /* on a phone one line stands in for the list: the app's name, rolling to the next */
+      const old = apOneLine.querySelector("span:not(.out)") as HTMLElement | null;
+      const next = document.createElement("span");
+      next.textContent = `${li.querySelector("b")?.textContent ?? ""}. ${li.querySelector("span")?.textContent ?? ""}`;
+      if (old && from >= 0 && !reduce) {
+        next.className = "pre";
+        apOneLine.appendChild(next);
+        void next.offsetWidth;
+        next.className = "";
+        old.className = "out";
+        later(() => old.remove(), 520);
+      } else {
+        apOneLine.textContent = "";
+        apOneLine.appendChild(next);
+      }
+    }
+  };
+  if (ap && apTrack && apPin && apStrip && M) {
+    stepsBack($("#get"), apPin);
+    const ease = (t: number) => t * t * (3 - 2 * t);
+    parts.push({
+      read() {
+        const r = apTrack.getBoundingClientRect();
+        const p = clamp(-r.top / Math.max(1, r.height - innerHeight));
+        /* each page holds for half its stretch, then slides to the next over the other half */
+        const seg = p * (M - 1);
+        const i = Math.min(M - 2, Math.floor(seg));
+        AP.pos = M > 1 ? i + ease(clamp((seg - i - 0.5) / 0.5)) : 0;
+      },
+      write() {
+        const key = AP.pos.toFixed(4);
+        if (key !== AP.key) {
+          AP.key = key;
+          if (!AP.step) apMeasure();
+          apStrip.style.transform = `translate3d(${(-AP.pos * AP.step).toFixed(1)}px, 0, 0)`;
+          /* between two pages the row steps back a little, the way apps do when you swipe between them */
+          const between = Math.sin(Math.PI * (AP.pos - Math.floor(AP.pos)));
+          if (apView) apView.style.transform = between > 0.002 ? `scale(${(1 - between * 0.035).toFixed(4)})` : "";
+        }
+        apTo(Math.round(AP.pos));
+        return false;
+      },
+    });
+    const toApp = (i: number) => {
+      const r = apTrack.getBoundingClientRect();
+      const p = M > 1 ? (i + 0.12) / (M - 1) : 0;
+      scrollTo({ top: scrollY + r.top + clamp(p) * (r.height - innerHeight), behavior: reduce ? "auto" : "smooth" });
+    };
+    AI.forEach((li, i) => on(li, "click", () => toApp(i)));
+    if (apPh) on(apPh, "click", () => toApp(Math.min(M - 1, AP.cur + 1)));
+    watch((es) => es.forEach((e) => {
+      if (e.isIntersecting) ap.classList.add("in");
+    }), { threshold: 0.3 }).observe(apPin);
+    on(window, "resize", apMeasure);
+  }
+
+  /* ---------- 6. the end: the phone on a dark stage under one white light, celebrating your news ---------- */
   const lt = $("#get");
   const ltRoom = $("#ltRoom");
   const ltStage = $("#ltStage");
   const ltAim = $("#ltAim");
-  const ltPh = $("#ltPh");
   const ltScr = $("#ltScr");
-  const ltFade = lt ? $(".lt-fade", lt) : null;
-  const fitLt = () => {
-    if (!ltStage || !ltPh) return;
-    const phone = isPhone();
-    const vh = innerHeight;
-    const s = phone ? clamp(Math.min((vh - 330) / 870, (innerWidth * 0.64) / 416), 0.44, 0.64) : clamp((vh * 0.74) / 870, 0.55, 0.82);
-    ltStage.style.setProperty("--pw", `${(416 * s).toFixed(1)}px`);
-    ltStage.style.setProperty("--ph", `${(870 * s).toFixed(1)}px`);
-    ltPh.style.setProperty("--s", s.toFixed(4));
-  };
   /* With a mouse it drifts a little toward your pointer, in flat moves only, so its screen stays sharp; at rest it sits
-     on whole screen pixels, where text is crispest. On its own it floats (look.css ltfloat). */
+     on whole screen pixels, where text is crispest. On its own it floats (home.css ltfloat). */
   const AIM = { x: 0, y: 0, tx: 0, ty: 0, key: "" };
   if (lt && ltRoom && ltStage && ltAim) {
     parts.push({
@@ -1000,15 +981,14 @@ export function startLook(root: HTMLElement): () => void {
       });
     }
     /* its film (their big news, celebrated) is fetched while you are in the part before, and plays from its beginning every time you arrive */
-    if (hp) watch((es) => {
+    if (ap) watch((es) => {
       if (es[0].isIntersecting) quiet(() => warm(ltScr));
-    }).observe(hp);
+    }).observe(ap);
     watch((es) => es.forEach((e) => {
       if (e.isIntersecting) playScene(ltScr);
       else holdScene(ltScr);
-    }), { threshold: 0.08 }).observe(ltRoom);
+    }), { threshold: 0.5 }).observe(ltStage);
     watch((es) => es.forEach((e) => lt.classList.toggle("in", e.isIntersecting)), { threshold: 0.35 }).observe(ltRoom);
-    on(window, "resize", fitLt);
   }
 
   /* ---------- the foot: the name as big as the page; its letters lean up toward your pointer, or jump when tapped ---------- */
@@ -1122,25 +1102,22 @@ export function startLook(root: HTMLElement): () => void {
     NAV.endWas = null;
     kick();
   });
-  const frOut = fr2 ? $(".fr2-out", fr2) : null;
   const darkTops = $$("[data-mode='dark']");
+  /* each link of the top bar, and the part of the page it stands for */
+  const NAVS = capA.map((a) => ({ a, part: a.dataset.go ? document.getElementById(a.dataset.go) : null })).filter((n) => n.part);
   parts.push({
     read() {
       const vh = innerHeight;
       NAV.small = scrollY > 30;
-      if (track && hp) {
-        const r = track.getBoundingClientRect();
-        const t = hp.getBoundingClientRect();
-        /* dark over the friend part, and again from the stage to the end */
-        NAV.dark = (r.top < 40 && r.bottom + (frOut?.offsetHeight ?? 0) * 0.45 > 40) || (!!lt && lt.getBoundingClientRect().top + (ltFade?.offsetHeight ?? 0) * 0.55 < 40);
-        const inFriend = r.top < vh * 0.5 && r.bottom > vh * 0.5;
-        const inTasks = t.top < vh * 0.5 && t.bottom > vh * 0.5;
-        NAV.cur = inFriend ? capA[0] ?? null : inTasks ? capA[1] ?? null : null;
-      } else {
-        NAV.dark = darkTops.some((d) => {
-          const r = d.getBoundingClientRect();
-          return r.top < 40 && r.bottom > 40;
-        });
+      /* dark while a night part is under the bar */
+      NAV.dark = darkTops.some((d) => {
+        const r = d.getBoundingClientRect();
+        return r.top < 40 && r.bottom > 40;
+      });
+      NAV.cur = null;
+      for (const n of NAVS) {
+        const r = n.part!.getBoundingClientRect();
+        if (r.top < vh * 0.5 && r.bottom > vh * 0.5) NAV.cur = n.a;
       }
       NAV.end = ltRoom ? ltRoom.getBoundingClientRect().top < vh * 0.5 : ft ? ft.getBoundingClientRect().top < vh * 0.5 : false;
     },
@@ -1155,7 +1132,7 @@ export function startLook(root: HTMLElement): () => void {
         const end = (NAV.endWas = NAV.end);
         quiet(() => {
           if (NAV.end !== end) return;
-          const night = getComputedStyle(ltRoom ?? ft ?? root).backgroundColor;
+          const night = getComputedStyle(lt ?? ft ?? root).backgroundColor;
           de.style.backgroundColor = end ? night : "";
           const m = tintMeta();
           if (m) m.content = end ? night : getComputedStyle(de).getPropertyValue("--bg2").trim();
@@ -1184,26 +1161,23 @@ export function startLook(root: HTMLElement): () => void {
     }
     const a = el.closest("[data-go]") as HTMLElement | null;
     if (!a || !root.contains(a)) return;
-    if (a.dataset.go === "tasks" && hpTrack) {
-      me.preventDefault();
-      toTask(0);
-    } else if (a.dataset.go === "friend" && track) {
-      me.preventDefault();
-      toChapter(0);
-    }
+    const part = a.dataset.go ? document.getElementById(a.dataset.go) : null;
+    if (!part) return;
+    me.preventDefault();
+    /* a part that slides up over the one before starts a little under its own top edge */
+    scrollTo({ top: scrollY + part.getBoundingClientRect().top + (part.classList.contains("sheet") ? 2 : 0), behavior: reduce ? "auto" : "smooth" });
   });
 
   /* ---------- set it all up ---------- */
   measure2();
-  fitHp();
-  fitLt();
+  apMeasure();
   const settle = () => {
     if (!alive) return;
     layout(true);
     measure2();
-    setPhone(phoneUp, false);
-    fitHp();
-    fitLt();
+    apMeasure();
+    sayCur = -1;
+    if (cur2 >= 1) tabTo(cur2);
     kick();
   };
   if (document.fonts) document.fonts.ready.then(settle).catch(() => {});
