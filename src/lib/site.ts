@@ -1,5 +1,8 @@
-/** Where people reach us: support, and beta requests until a TestFlight link exists. Same address as the privacy policy. */
+/** Where people reach us for support. Same address as the privacy policy. */
 export const SUPPORT_EMAIL = "mahmoudaidaors@krovvi.com";
 
-/** The one place the way in is set. A TestFlight public link replaces the email when it exists. */
-export const JOIN_URL = `mailto:${SUPPORT_EMAIL}?subject=Join%20the%20Krovvi%20beta&body=Hi%2C%20I%27d%20like%20to%20try%20Krovvi%20on%20my%20iPhone.`;
+/**
+ * The one place the way in is set: Krovvi's public TestFlight link since 19 November 2026 (the owner's word that day;
+ * until then every "Get Krovvi" opened an email asking for an invite). A store link replaces it when there is one.
+ */
+export const JOIN_URL = "https://testflight.apple.com/join/N9HwpPAW";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { SUPPORT_EMAIL } from "./site";
+import { JOIN_URL, SUPPORT_EMAIL } from "./site";
 
 /**
  * Krovvi's identity: every word and fact a person, a search engine, a chat app
@@ -189,8 +189,8 @@ export const ABOUT = {
   ],
   /** From the privacy policy, word for word. */
   privacy: "We never sell your data. Krovvi has no ads. We do not use your data to train AI models.",
-  /** How to get in, before the address. */
-  join: "Krovvi is in beta on iPhone. To join, email",
+  /** How to get in, before the link. */
+  join: "Krovvi is in beta on iPhone. Anyone can join through TestFlight:",
 } as const;
 
 /** /llms.txt, built from the words above. */
@@ -215,7 +215,7 @@ export function llmsText(): string {
     "",
     "## How to join",
     "",
-    `${ABOUT.join} ${IDENTITY.email} and ask for an invite. Questions and support go to the same address.`,
+    `${ABOUT.join} ${JOIN_URL} Questions and support go to ${IDENTITY.email}.`,
     "",
     "## Privacy",
     "",

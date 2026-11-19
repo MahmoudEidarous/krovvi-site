@@ -39,7 +39,7 @@ const ARROW = (
   </svg>
 );
 
-/** The way in: the same link the site has always used (lib/site.ts), until there is a store link. */
+/** The way in: the one link the whole site uses (lib/site.ts), the public TestFlight link until there is a store link. */
 export function GetKrovvi() {
   return (
     <a className="getbig" href={JOIN_URL}>
