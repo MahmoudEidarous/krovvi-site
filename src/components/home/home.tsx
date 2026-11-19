@@ -305,7 +305,7 @@ function End() {
             <h2 className="lt-h">
               <Rise lines={["Say hi to your", "super friend."]} />
             </h2>
-            <p className="lt-p">Tap to say hi. It tells you it&apos;s an AI, asks your name, and you&apos;re friends.</p>
+            <p className="lt-p">The big news, the bad days and the to-do list. It&apos;s there for all of it, the first to celebrate with you.</p>
             <div className="lt-cta">
               <GetKrovvi />
               <span className="hfor">For iPhone</span>
@@ -319,8 +319,8 @@ function End() {
                 <div className="phn" id="ltPh">
                   <Device>
                     <Scene
-                      name="hello"
-                      alt="Krovvi, the app, the first time you open it. You: hi. Krovvi: oh. hi. i'm krovvi. full honesty: i'm an ai, about two minutes old. what do i call you?"
+                      name="news"
+                      alt="Krovvi, the app. You: they called. I got the job. Krovvi cheers, confetti falls, and it says: no way. i knew it. you walked in ready and they saw it. when do you start?"
                       className="on"
                       id="ltScr"
                     />

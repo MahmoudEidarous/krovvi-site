@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-02 06:11",
+  "taken": "2026-11-05 19:43",
   "screen": [
     390,
     844
@@ -28,21 +28,24 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
         "vent-end"
       ],
       "films": {
-        "vent": 4.7,
-        "memory": 5.3,
-        "friends": 4.3,
-        "hero-great": 3.5,
-        "play": 2.07,
-        "hero-low": 3.33,
-        "checkin": 3.87,
-        "hello": 6.93,
-        "hero-okay": 2.53
+        "vent": 4.3,
+        "memory": 3.77,
+        "friends": 3.93,
+        "hero-great": 3.73,
+        "play": 1.93,
+        "hero-low": 3.7,
+        "checkin": 3.33,
+        "hello": 7.5,
+        "hero-okay": 2.7,
+        "news": 5.73
       }
     },
     "ocean": {
@@ -68,21 +71,24 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
         "vent-end"
       ],
       "films": {
-        "memory": 4.33,
-        "friends": 4.73,
-        "hero-great": 3.73,
-        "play": 2.9,
-        "hero-low": 3.37,
-        "vent": 4.8,
-        "checkin": 3.53,
-        "hello": 7.07,
-        "hero-okay": 2.53
+        "memory": 3.87,
+        "friends": 3.93,
+        "hero-great": 3.67,
+        "play": 2.0,
+        "hero-low": 3.4,
+        "vent": 4.27,
+        "checkin": 3.2,
+        "hello": 8.0,
+        "hero-okay": 2.9,
+        "news": 5.7
       }
     },
     "coral": {
@@ -108,21 +114,24 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
         "vent-end"
       ],
       "films": {
-        "memory": 4.3,
-        "friends": 5.53,
-        "hero-great": 3.63,
-        "play": 2.17,
-        "hero-low": 3.27,
-        "vent": 4.77,
-        "checkin": 3.7,
-        "hello": 6.27,
-        "hero-okay": 2.67
+        "memory": 3.9,
+        "friends": 3.97,
+        "hero-great": 3.53,
+        "play": 2.0,
+        "hero-low": 3.2,
+        "vent": 4.27,
+        "checkin": 3.3,
+        "hello": 8.1,
+        "hero-okay": 2.57,
+        "news": 5.63
       }
     },
     "mono": {
@@ -148,40 +157,43 @@
         "hero-okay-end",
         "memory",
         "memory-end",
+        "news",
+        "news-end",
         "play",
         "play-end",
         "vent",
         "vent-end"
       ],
       "films": {
-        "memory": 4.37,
-        "friends": 4.67,
-        "hero-great": 3.7,
-        "play": 2.4,
-        "hero-low": 3.23,
-        "vent": 4.77,
-        "checkin": 3.63,
-        "hello": 7.17,
-        "hero-okay": 2.53
+        "memory": 3.83,
+        "friends": 3.77,
+        "hero-great": 3.53,
+        "play": 2.03,
+        "hero-low": 3.27,
+        "vent": 4.53,
+        "checkin": 3.23,
+        "hello": 3.43,
+        "hero-okay": 2.57,
+        "news": 4.53
       }
     }
   },
   "frames": {
     "hero-great": {
       "height": 36,
-      "width": 112.66667175292969,
-      "y": 574.6666717529297,
+      "width": 107.66666412353516,
+      "y": 582.6666717529297,
       "x": 16
     },
     "hero-okay": {
-      "width": 102.66665649414062,
-      "y": 574.6666717529297,
-      "x": 136.66666412353516,
+      "width": 97,
+      "y": 582.6666717529297,
+      "x": 131.66666412353516,
       "height": 36
     },
     "hero-low": {
-      "y": 618.6666717529297,
-      "width": 155.6666717529297,
+      "y": 626.6666717529297,
+      "width": 145.6666717529297,
       "x": 16,
       "height": 36
     }

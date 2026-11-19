@@ -5,6 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { LabChat, type LabStep } from '@/app/agent';
+import { celebrate } from '@/components/celebration';
 import { ChatSky } from '@/components/chat-sky';
 import { replayOpening } from '@/components/first-meeting/opening';
 import { krovviFirstOf } from '@/lib/agent/krovvi-first';
@@ -32,6 +33,7 @@ import { color } from '@/theme/tokens';
  *   krovvi:///lab-site?scene=friends                           game night with the group, the plan filling in
  *   krovvi:///lab-site?scene=help&task=split|meals|money|trip|gift|todo   the jobs it takes off their list
  *   krovvi:///lab-site?scene=hello                             the first chat's opening, from its first moment
+ *   krovvi:///lab-site?scene=news                              their big news, and Krovvi the first to celebrate it
  *
  * `run` makes a fresh message each time, so a one-tap answer or a game is never one already answered.
  * `clock=18:12` sets the app's own clock to today at that time while the bench is open (and puts the real one back as it
@@ -255,6 +257,12 @@ const MEMORY_REPLY = [
   '<say>there’s a beginners class near her on saturday mornings. want the link?</say>',
 ].join('\n');
 
+/** Their big news: Krovvi's cheer lands on it, confetti falls in the theme's colours (components/celebration.tsx, as the
+ * server's celebrate command draws it), then its words. The end of the site's story: the interview it opens with. */
+const NEWS_ASK = 'THEY CALLED. I GOT THE JOB';
+const NEWS_REPLY = says(['no way. i knew it.', 'you walked in ready and they saw it.', 'when do you start?']);
+const NEWS_PARTY_MS = 1500;
+
 const FRIENDS_ASK = 'plan game night with everyone';
 function friendsReply(): LabStep[] {
   return [{ tool: 'objectMake', ms: 1100 }, ...streamed(says(['done. i asked everyone for you.', "friday at sam's is winning so far."])), 200, card('plan', 'game-night-en'), 900];
@@ -302,6 +310,12 @@ export default function LabSiteRoute() {
   useEffect(() => {
     setStatusBarStyle(look.statusBar, false);
   }, [scene]);
+  // The news scene's confetti, a moment after Krovvi's cheer lands on their message.
+  useEffect(() => {
+    if (scene !== 'news') return;
+    const timer = setTimeout(() => celebrate('confetti'), NEWS_PARTY_MS);
+    return () => clearTimeout(timer);
+  }, [scene, run, p.clock]);
   const { turns, replies, ask, moved } = useMemo(() => {
     switch (scene) {
       case 'vent':
@@ -320,6 +334,8 @@ export default function LabSiteRoute() {
       }
       case 'hello':
         return { turns: helloTurns(), replies: [[700, ...streamed(says(['good one. i ask that too.']))]], ask: undefined, moved: undefined };
+      case 'news':
+        return { turns: [] as Turn[], replies: [[650, '<react>🎉</react>', 1500, ...streamed(NEWS_REPLY, 18, 50)]], ask: NEWS_ASK, moved: undefined };
       default: {
         const pick = HERO_PICKS[p.pick ?? 'great'] ?? HERO_PICKS.great;
         return { turns: hero(run), replies: [[900, ...streamed(says(pick))]], ask: undefined, moved: undefined };

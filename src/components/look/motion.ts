@@ -339,7 +339,7 @@ export function startLook(root: HTMLElement): () => void {
   const face = () => {
     if (!document.fonts || !title) return Promise.resolve();
     const fam = getComputedStyle(title).fontFamily;
-    return Promise.race([document.fonts.load(`900 100px ${fam}`).then(() => undefined), sleep(700)]).catch(() => undefined);
+    return Promise.race([document.fonts.load(`800 100px ${fam}`).then(() => undefined), sleep(700)]).catch(() => undefined);
   };
 
   /* The name fills the width; the phone fills what is left under it. Measured, never guessed. */
@@ -999,7 +999,7 @@ export function startLook(root: HTMLElement): () => void {
         kick();
       });
     }
-    /* its hello is fetched while you are in the part before, and plays from its beginning every time you arrive */
+    /* its film (their big news, celebrated) is fetched while you are in the part before, and plays from its beginning every time you arrive */
     if (hp) watch((es) => {
       if (es[0].isIntersecting) quiet(() => warm(ltScr));
     }).observe(hp);
@@ -1018,11 +1018,20 @@ export function startLook(root: HTMLElement): () => void {
   /* A2's units, so the springs feel the same: a letter's box is 320 tall */
   const FONT = 400;
   const GH = FONT * 0.8;
-  const gW = gRow ? parseFloat(gRow.dataset.w || "1") : 1;
   type L = { g: HTMLElement; cx: number; w: number; y: number; v: number; s: number; vs: number; hold: boolean };
-  const letters: L[] = giant
-    ? $$<HTMLElement>(".ftl", giant).map((g) => ({ g, cx: parseFloat(g.dataset.cx || "0"), w: parseFloat(g.dataset.lw || "1"), y: 0, v: 0, s: 1, vs: 0, hold: false }))
-    : [];
+  const letters: L[] = giant ? $$<HTMLElement>(".ftl", giant).map((g) => ({ g, cx: 0, w: 1, y: 0, v: 0, s: 1, vs: 0, hold: false })) : [];
+  /* each letter's middle and width across the row, in px, measured: the letters are the font's own, and they change
+     size with the page (a transform never moves offsetLeft, so the springs do not disturb it) */
+  const measureGiant = () =>
+    letters.forEach((L) => {
+      L.cx = L.g.offsetLeft + L.g.offsetWidth / 2;
+      L.w = Math.max(1, L.g.offsetWidth);
+    });
+  if (letters.length) {
+    measureGiant();
+    on(window, "resize", measureGiant);
+    if (document.fonts) document.fonts.ready.then(measureGiant).catch(() => {});
+  }
   const placeLetter = (L: L) => {
     L.g.style.transform = `translate3d(0, ${((L.y / GH) * 100).toFixed(3)}%, 0) scale(${L.s.toFixed(4)})`;
   };
@@ -1062,8 +1071,8 @@ export function startLook(root: HTMLElement): () => void {
     if (fine) {
       on(ft, "pointermove", (e) => {
         const pe = e as PointerEvent;
-        const g = giant.getBoundingClientRect();
-        FT.px = pe.clientY > g.top - g.height * 0.3 && pe.clientY < g.bottom + 20 ? (pe.clientX - g.left) * (gW / g.width) : null;
+        const g = (gRow ?? giant).getBoundingClientRect();
+        FT.px = pe.clientY > g.top - g.height * 0.3 && pe.clientY < g.bottom + 20 ? pe.clientX - g.left : null;
         kick();
       });
       on(ft, "pointerleave", () => {

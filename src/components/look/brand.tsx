@@ -127,16 +127,16 @@ export function Pieces({ pieces }: { pieces: Piece[] }) {
   );
 }
 
-/** "krovvi", drawn: as tall as its box, in currentColor. */
+/**
+ * The word Krovvi as the app writes it since 3 November 2026 (catch8 src/components/look/wordmark.tsx): Baloo 2
+ * ExtraBold, a hundredth of its size taken from between its letters, in currentColor. Its size is the font size set
+ * on its class.
+ */
 export function Wordmark({ className }: { className?: string }) {
-  const letters = wordLetters();
-  const right = letters[letters.length - 1].right;
   return (
-    <svg className={className} viewBox={`-1 ${f(WORD_TOP)} ${f(right + 2)} ${f(WORD_BOTTOM - WORD_TOP)}`} aria-hidden="true" focusable="false">
-      {letters.map((l, i) => (
-        <Pieces key={i} pieces={l.pieces} />
-      ))}
-    </svg>
+    <span className={className} aria-hidden="true">
+      Krovvi
+    </span>
   );
 }
 
