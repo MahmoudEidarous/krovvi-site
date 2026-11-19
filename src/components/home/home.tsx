@@ -104,6 +104,7 @@ const SAID = [
   { key: "reading", name: "Reading", line: "Your pages, against what you aimed for.", said: "read 12 pages of dune" },
   { key: "money", name: "Money", line: "What you spent, and what's left.", said: "cinema was 21.75, and 33.55 at zara" },
   { key: "study", name: "Study", line: "Flashcards, made from your course.", said: "make me flashcards for linkage" },
+  { key: "shop", name: "Shopping", line: "Found in real shops, in your size.", said: "i need running shoes for my daily road runs. i wear 43" },
 ];
 
 /**
@@ -112,6 +113,7 @@ const SAID = [
  */
 export const APPS = [
   { name: "page-money", title: "Money", line: "Your month, your bills, and what's left.", tone: "#0A7F8E" },
+  { name: "page-shopping", title: "Shopping", line: "Your wish lists: the photo, the price, the shop.", tone: "#D8402F" },
   { name: "page-study", title: "Study", line: "Your exams, your notes, your cards.", tone: "#2D62E6" },
   { name: "page-health", title: "Health", line: "Sleep, medicine, and how you feel.", tone: "#D8437B" },
   { name: "page-habits-own", title: "Habits", line: "The small things you keep, day by day.", tone: "#7250EA" },
@@ -325,8 +327,8 @@ function Said() {
               <i className="dev-btn r b-pw" />
               <i className="dev-btn r b-cc" />
               <div className="say-hole">
-                {hasStill("chrome-top") && <img className="say-top" src={stillUrl("chrome-top")} srcSet={stillSet("chrome-top")} sizes="(max-width: 860px) 100vw, 420px" alt="" decoding="async" />}
-                {hasStill("chrome-bot") && <img className="say-bot" src={stillUrl("chrome-bot")} srcSet={stillSet("chrome-bot")} sizes="(max-width: 860px) 100vw, 420px" alt="" decoding="async" />}
+                {hasStill("chrome-top") && <img className="say-top" src={stillUrl("chrome-top")} srcSet={stillSet("chrome-top")} sizes="(max-width: 860px) 100vw, 420px" alt="" decoding="async" data-shot="chrome-top" />}
+                {hasStill("chrome-bot") && <img className="say-bot" src={stillUrl("chrome-bot")} srcSet={stillSet("chrome-bot")} sizes="(max-width: 860px) 100vw, 420px" alt="" decoding="async" data-shot="chrome-bot" />}
               </div>
               <i className="say-ring" />
               <i className="say-ring t" />

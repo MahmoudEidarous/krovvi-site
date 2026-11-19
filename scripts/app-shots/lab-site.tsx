@@ -5,6 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { LabChat, type LabStep } from '@/app/agent';
+import { primeCard } from '@/components/answer/cards';
 import { celebrate } from '@/components/celebration';
 import { ChatSky } from '@/components/chat-sky';
 import { replayOpening } from '@/components/first-meeting/opening';
@@ -20,6 +21,7 @@ import { openOnPart } from '@/components/objects/shell';
 import { krovviFirstOf } from '@/lib/agent/krovvi-first';
 import { dayShown } from '@/lib/agent/lab-day';
 import { useBenchLanguage } from '@/lib/bench-language';
+import { useBenchLook } from '@/lib/bench-look';
 import { noteBetter } from '@/lib/better-you';
 import { today as dayNow } from '@/lib/day-now';
 import { setDaysBench } from '@/lib/days';
@@ -33,9 +35,11 @@ import { benchLoop, benchTellLands } from '@/lib/loop/bench';
 import type { Fixture, Kind } from '@/lib/objects/core';
 import { FIXTURES, FIX_NOW } from '@/lib/objects/fixtures';
 import { primeFixture } from '@/lib/objects/store';
+import { liveCard } from '@/lib/shop/fixtures';
 import { phoneWeekFirst, weekStartOf } from '@/lib/week-start';
 import { look } from '@/theme/look';
 import { color } from '@/theme/tokens';
+import { runOps, specOf, withIds, type OpCall } from '@objects/index.ts';
 
 /**
  * The website's bench (krovvi.com; first 2 November 2026, grown on 19 November 2026 for the site that shows today's
@@ -57,6 +61,10 @@ import { color } from '@/theme/tokens';
  *                                                              lights for the day (11 becomes 12) once the reply is written
  *   krovvi:///lab-site?scene=page&kind=spending&state=rich-en  an app's own page, the fixture one person's alone, on a
  *                                                              day near today (`&back=3` weeks earlier, `&tab=` its part)
+ *   krovvi:///lab-site?scene=page&kind=wishlist&state=site-kit a wish list's page: the running kit (the site's own list)
+ *   krovvi:///lab-site?scene=shop                              a thing asked for in the shops, and Krovvi's pick over its card
+ *
+ * Any scene takes `&look=ocean-light` (purple, ocean, coral or mono): the app starts again in that colour and comes back.
  *
  * `run` makes a fresh message each time, so a one-tap answer is never one already answered.
  * `clock=18:12` sets the app's own clock to today at that time while the bench is open (and puts the real one back as
@@ -248,7 +256,37 @@ function solo(f: Fixture): Fixture {
 /** The kinds' benches beside the shared fixtures, as the objects bench reads them (app/lab-objects.tsx benchOf). */
 function benchOf(kind: Kind): Fixture[] {
   if (!__DEV__) return [];
-  return kind === 'goal' ? goalBench() : kind === 'workout' ? fitnessBench() : kind === 'spending' ? moneyBench() : kind === 'study' ? studyBench() : kind === 'food' ? foodBench() : kind === 'habits' ? habitsBench() : kind === 'health' ? healthBench() : [];
+  return kind === 'goal' ? goalBench() : kind === 'workout' ? fitnessBench() : kind === 'spending' ? moneyBench() : kind === 'study' ? studyBench() : kind === 'food' ? foodBench() : kind === 'habits' ? habitsBench() : kind === 'health' ? healthBench() : kind === 'wishlist' ? wishBench() : [];
+}
+
+/**
+ * The site's own wish list (state site-kit): a running kit, kept from the very products of the shop card the site
+ * shows (lib/shop/fixtures.ts liveCard 'running': a card the shop tool wrote live on 3 November 2026, real shops and
+ * their own prices), put on an empty list by the kind's own `add`, as a reply keeps them. So the list's page and the
+ * card in the chat show the same things at the same prices. Made only when a bench asks.
+ */
+const KIT: Array<{ ids: string[]; size?: string; hoursAgo: number }> = [
+  { ids: ['i5'], hoursAgo: 30 },
+  { ids: ['i11'], size: '43', hoursAgo: 26 },
+  { ids: ['i6'], hoursAgo: 3 },
+  { ids: ['i1'], size: '43', hoursAgo: 1 },
+];
+function wishBench(): Fixture[] {
+  const base = (FIXTURES.wishlist ?? []).find((f) => f.name === 'empty-en');
+  if (!base) return [];
+  const owner = base.snap.members.find((m) => m.role === 'owner') ?? null;
+  const card = liveCard('running').card;
+  const all = [...card.groups.flatMap((g) => g.items), ...card.rest];
+  let snap: Fixture['snap'] = { ...base.snap, head: { ...base.snap.head, id: 'owishsitekit1', title: 'Running kit', settings: { ...base.snap.head.settings, for: null, occasion: 'the city 10K', day: new RealDate(base.now + 30 * DAY).toISOString().slice(0, 10), budget: 3000, currency: card.currency ?? 'AED' } } };
+  KIT.forEach((step, n) => {
+    const products = step.ids.map((id) => all.find((i) => i.id === id)).filter(Boolean);
+    const calls: OpCall[] = [{ op: 'add', args: { products, ...(step.size ? { size: step.size } : {}) } }];
+    const ids = Array.from({ length: 6 }, (_x, i) => `iwsite${String(n * 6 + i + 1).padStart(6, '0')}`);
+    const { value: run } = withIds(ids, () => runOps(specOf('wishlist'), snap, calls, { now: base.now - step.hoursAgo * 3_600_000, viewer: owner, via: 'krovvi', lang: 'en' }));
+    if (run.problems.length) throw new Error(`The site's wish list did not take its things: ${run.problems.map((x) => x.problem).join(' ')}`);
+    snap = run.next;
+  });
+  return [{ ...base, name: 'site-kit', note: 'The site: a running kit, from the shop card the site shows', snap }];
 }
 
 function fixtureOf(kind: Kind, state: string): Fixture | null {
@@ -360,6 +398,23 @@ function exchange(key: string, when: (cardNow: number) => Date): { turns: Turn[]
   };
 }
 
+/**
+ * A thing asked for in the shops, and Krovvi's pick over its card: the card the shop tool wrote live for this very ask
+ * (lib/shop/fixtures.ts liveCard 'running'; real shops, their own photos and prices), drawn by the chat's own thread as
+ * the shop bench draws it (app/lab-shop.tsx). A bench card's id starts "blab", so nothing it does is sent anywhere.
+ */
+const SHOP_ID = 'blabsiterun01';
+const SHOP_ASK = 'i need running shoes for my daily road runs. i wear 43';
+const SHOP_WORDS = ['the new balance 1080v15.', 'it’s in your 43, and it’s the one i’d get for daily road miles.'];
+function shopTurns(): Turn[] {
+  primeCard(SHOP_ID, liveCard('running').card);
+  const stamp = ago(1);
+  return [
+    me('site-shop', SHOP_ASK, stamp),
+    { id: 'site-shop:a', role: 'assistant', createdAt: stamp, content: [{ type: 'text', text: `${says(SHOP_WORDS)}\n\n\`\`\`card\n${SHOP_ID}\n\`\`\`\n` }], metadata: { custom: { style: 'mixed', turnId: 'site-shop' } } },
+  ];
+}
+
 /** The first chat's opening (components/first-meeting/opening.tsx), drawn from its first moment. */
 function helloTurns(): Turn[] {
   forgetOpeningPlayed();
@@ -389,7 +444,7 @@ const DAY_REPLY = says(['wait. they said YES?', 'three weeks of waiting and the 
 const DAY_LANDS_MS = 5600;
 
 export default function LabSiteRoute() {
-  const p = useLocalSearchParams<{ scene?: string; pick?: string; card?: string; cards?: string; run?: string; clock?: string; home?: string; streak?: string; kind?: string; state?: string; back?: string; tab?: string; again?: string }>();
+  const p = useLocalSearchParams<{ scene?: string; pick?: string; card?: string; cards?: string; run?: string; clock?: string; home?: string; streak?: string; kind?: string; state?: string; back?: string; tab?: string; again?: string; look?: string; shop?: string }>();
   const scene = p.scene ?? 'hero';
   const run = p.run ?? '';
   // A card's scene stands at its fixture's own moment (a little after it, as a reply lands); any other at `clock`.
@@ -417,6 +472,8 @@ export default function LabSiteRoute() {
   // first, so every time the scene makes reads the scene's own clock
   useClock(moment);
   useBenchLanguage('en');
+  // `&look=ocean-light` takes the app to that colour (it starts again in it and comes back here), for the site's other colours.
+  useBenchLook(p.look);
   // The status bar as the chat has it over Home (app/index.tsx): dark words on the light look, light on the dark.
   useEffect(() => {
     setStatusBarStyle(look.statusBar, false);
@@ -469,6 +526,8 @@ export default function LabSiteRoute() {
         return { turns: [] as Turn[], replies: [[650, '<react>🎉</react>', 1500, ...streamed(NEWS_REPLY, 18, 50)]], ask: NEWS_ASK };
       case 'day':
         return { turns: dayBefore(), replies: [[900, ...streamed(DAY_REPLY, 16, 50)]], ask: DAY_ASK };
+      case 'shop':
+        return { turns: shopTurns(), replies: [[600, ...streamed(says(['kept.']))]], ask: undefined };
       case 'card':
       case 'thread': {
         // each exchange a few minutes after the one before, the last one a moment ago

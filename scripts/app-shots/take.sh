@@ -3,6 +3,8 @@
 # running Metro (19 November 2026: the site shows today's app, taken at the phone's own 3x). One call, one thing:
 #
 #   zsh take.sh still <name> <path?query> [seconds=6]          a page opened, then its picture
+#   zsh take.sh tall  <name> <path?query> [seconds=7]          a chat whose last exchange is taller than the screen: its end
+#                                                              (<name>-b), then the chat drawn down by a finger, its start (<name>)
 #   zsh take.sh ask   <name> <path?query> [seconds=9]          filmed from the moment the page opens (a chat that types by itself)
 #   zsh take.sh tap   <name> <path?query> "<label>" [seconds=7] [wait=7]   its picture, then a film of one tap and what follows
 #   zsh take.sh run   <name> <path?query> [seconds=6] [wait=6]  its picture, then a film of it running by itself
@@ -47,6 +49,11 @@ case $what in
   labels) UI labels ;;
   still)
     visit "$url"; sleep 2.5; clock; sleep ${4:-6}; shot "$name" ;;
+  tall)
+    # the chat stands at its end; a finger draws it down by about 240 points, and it stands on its start (cut.mjs joins the two)
+    visit "$url"; sleep 2.5; clock; sleep ${4:-7}; shot "$name-b"
+    T 20 "$IDB" ui swipe --udid "$UDID" --duration 0.5 200 360 200 600 >/dev/null 2>&1 || say "missed the drag in $name"
+    sleep 1.8; shot "$name" ;;
   ask)
     # once unfilmed for the clock; then away to an empty chat until it surely stands; then filmed from the open. The
     # second open carries one more word (&again=), so the page is made afresh and its chat types from the start.
@@ -72,5 +79,5 @@ case $what in
     # where a control sits, kept for the site's own taps over the picture: frame <key> "<label>"
     f=$(UI frame "$url" 2>/dev/null) || { say "no frame for $url"; exit 0; }
     python3 -c "import json,os,sys; p=sys.argv[1]; d=json.load(open(p)) if os.path.exists(p) else {}; d[sys.argv[2]]=json.loads(sys.argv[3]); json.dump(d,open(p,'w'),indent=1)" "$RAW/frames.json" "$name" "$f"; say "frame $name" ;;
-  *) print "usage: take.sh still|ask|tap|tapxy|run|frame|labels ..."; exit 2 ;;
+  *) print "usage: take.sh still|tall|ask|tap|tapxy|run|frame|labels ..."; exit 2 ;;
 esac

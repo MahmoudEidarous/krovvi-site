@@ -2,7 +2,8 @@
 # Takes again every screen krovvi.com shows, in one run of about twelve minutes, then sizes and cuts them.
 #
 #   zsh scripts/app-shots/all.sh                 everything, into ~/.krovvi/site19/raw, then public/app/purple
-#   UDID=<simulator> RAW=<folder> zsh scripts/app-shots/all.sh
+#   UDID=<simulator> RAW=<folder> THEME=ocean zsh scripts/app-shots/all.sh      another colour, into public/app/ocean
+#   ONLY=shop zsh scripts/app-shots/all.sh       the shopping screens alone (what was added last), then cut
 #
 # Before it: a simulator booted with the Krovvi development build, opened on a Metro that serves an app worktree at
 # today's main holding this folder's lab-site.tsx as src/app/lab-site.tsx (the bench page; never committed in the app's
@@ -12,13 +13,27 @@
 # for as long as it stays open under the pages after it.
 #
 # Each line is one picture or film (take.sh); the names are the ones the page asks for (src/components/home/home.tsx)
-# and cut.mjs serves (its USED list). Other colours: start the app in that look first (any bench's &look=ocean-light),
-# run this with RAW set to a folder of that colour's own, then node cut.mjs --raw <folder> --theme ocean.
+# and cut.mjs serves (its USED list). Other colours: take the app to that look first (the shop bench's
+# &look=ocean-light: it starts again in it), start it afresh, then run this with THEME=ocean and RAW set to a folder of
+# that colour's own. Purple is cut first: the other colours are cut exactly where purple's exchanges were.
 set -u
 HERE=${0:A:h}
 cd "$HERE"
 t() { zsh take.sh "$@" 2>&1 | grep -v '^$'; }
 R=$(date +%s)
+THEME=${THEME:-purple}
+export RAW=${RAW:-$HOME/.krovvi/site19/raw}
+shop() {
+  # shopping: a thing asked for in the shops (taller than the screen: its end, then its start), and the wish list's page
+  t tall card-shop "lab-site?scene=shop&clock=19:05&run=$R" 8
+  t still page-shopping "lab-site?scene=page&kind=wishlist&state=site-kit" 8
+}
+if [[ ${ONLY:-} == shop ]]; then
+  t still warm "lab-site?scene=card&card=day" 4
+  shop
+  node cut.mjs --raw "$RAW" --theme "$THEME" --only card-shop,page-shopping
+  exit 0
+fi
 
 # the real day first: Days, and the tap that opens a day's own page
 t still warm-days "days-bench?lang=en" 5
@@ -52,11 +67,14 @@ t still page-money "lab-site?scene=page&kind=spending&state=rich-en" 7
 t still page-food "lab-site?scene=page&kind=food&state=rich-en" 7
 t still page-health "lab-site?scene=page&kind=health&state=rich-en" 7
 t still page-study "lab-apps?app=study&lang=en" 7
-t still page-habits "lab-apps?app=habits&lang=en" 7
-t still page-todo "lab-apps?app=todo&lang=en" 7
+t still page-habits-own "lab-site?scene=page&kind=habits&state=rich-en" 7
+t still page-todo-own "lab-site?scene=page&kind=todo&state=day-en" 7
 t still page-library "lab-own?app=library&lang=en" 7
 
 # it plays: each game in the middle of a round
 for g in chess four five sudoku fleet hunt higher groups trivia countries; do t still "game-$g-mid" "lab-play?scene=$g-mid&run=$R" 6; done
 
-node cut.mjs
+shop
+
+# NOCUT=1 leaves the sizing and cutting for later (node cut.mjs --raw <folder> --theme <colour>)
+[[ -n ${NOCUT:-} ]] || node cut.mjs --raw "$RAW" --theme "$THEME"

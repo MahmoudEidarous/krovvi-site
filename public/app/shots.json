@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-19 21:12",
+  "taken": "2026-11-19 23:04",
   "screen": [
     402,
     874
@@ -41,6 +41,7 @@
         "page-health",
         "page-library",
         "page-money",
+        "page-shopping",
         "page-study",
         "page-todo-own",
         "vent",
@@ -50,6 +51,7 @@
         "x-meal",
         "x-money",
         "x-reading",
+        "x-shop",
         "x-skin",
         "x-sleep",
         "x-study",
@@ -68,6 +70,207 @@
         "memory": 4.2,
         "news": 5.23,
         "vent": 4.17
+      }
+    },
+    "ocean": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "chrome-bot",
+        "chrome-top",
+        "days",
+        "days-end",
+        "flame",
+        "flame-end",
+        "game-chess-mid",
+        "game-countries-mid",
+        "game-five-mid",
+        "game-fleet-mid",
+        "game-four-mid",
+        "game-groups-mid",
+        "game-higher-mid",
+        "game-hunt-mid",
+        "game-sudoku-mid",
+        "game-trivia-mid",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "news",
+        "news-end",
+        "page-food",
+        "page-habits-own",
+        "page-health",
+        "page-library",
+        "page-money",
+        "page-shopping",
+        "page-study",
+        "page-todo-own",
+        "vent",
+        "vent-end",
+        "x-fitness",
+        "x-focus",
+        "x-meal",
+        "x-money",
+        "x-reading",
+        "x-shop",
+        "x-skin",
+        "x-sleep",
+        "x-study",
+        "x-water"
+      ],
+      "films": {
+        "x-focus": 7.13,
+        "x-skin": 0.57,
+        "x-water": 0.9,
+        "checkin": 3.77,
+        "days": 1.57,
+        "flame": 5.17,
+        "hero-great": 4.33,
+        "hero-low": 4.33,
+        "hero-okay": 3.33,
+        "memory": 3.93,
+        "news": 5.4,
+        "vent": 3.67
+      }
+    },
+    "coral": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "chrome-bot",
+        "chrome-top",
+        "days",
+        "days-end",
+        "flame",
+        "flame-end",
+        "game-chess-mid",
+        "game-countries-mid",
+        "game-five-mid",
+        "game-fleet-mid",
+        "game-four-mid",
+        "game-groups-mid",
+        "game-higher-mid",
+        "game-hunt-mid",
+        "game-sudoku-mid",
+        "game-trivia-mid",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "news",
+        "news-end",
+        "page-food",
+        "page-habits-own",
+        "page-health",
+        "page-library",
+        "page-money",
+        "page-shopping",
+        "page-study",
+        "page-todo-own",
+        "vent",
+        "vent-end",
+        "x-fitness",
+        "x-focus",
+        "x-meal",
+        "x-money",
+        "x-reading",
+        "x-shop",
+        "x-skin",
+        "x-sleep",
+        "x-study",
+        "x-water"
+      ],
+      "films": {
+        "x-focus": 7.23,
+        "x-skin": 0.5,
+        "x-water": 0.97,
+        "checkin": 3.77,
+        "days": 1.57,
+        "flame": 5.9,
+        "hero-great": 4.4,
+        "hero-low": 3.87,
+        "hero-okay": 3.37,
+        "memory": 4.1,
+        "news": 5.63,
+        "vent": 4.2
+      }
+    },
+    "mono": {
+      "stills": [
+        "checkin",
+        "checkin-end",
+        "chrome-bot",
+        "chrome-top",
+        "days",
+        "days-end",
+        "flame",
+        "flame-end",
+        "game-chess-mid",
+        "game-countries-mid",
+        "game-five-mid",
+        "game-fleet-mid",
+        "game-four-mid",
+        "game-groups-mid",
+        "game-higher-mid",
+        "game-hunt-mid",
+        "game-sudoku-mid",
+        "game-trivia-mid",
+        "hero",
+        "hero-great",
+        "hero-great-end",
+        "hero-low",
+        "hero-low-end",
+        "hero-okay",
+        "hero-okay-end",
+        "memory",
+        "memory-end",
+        "news",
+        "news-end",
+        "page-food",
+        "page-habits-own",
+        "page-health",
+        "page-library",
+        "page-money",
+        "page-shopping",
+        "page-study",
+        "page-todo-own",
+        "vent",
+        "vent-end",
+        "x-fitness",
+        "x-focus",
+        "x-meal",
+        "x-money",
+        "x-reading",
+        "x-shop",
+        "x-skin",
+        "x-sleep",
+        "x-study",
+        "x-water"
+      ],
+      "films": {
+        "x-focus": 6.1,
+        "x-skin": 0.63,
+        "x-water": 0.77,
+        "checkin": 4.4,
+        "days": 1.5,
+        "flame": 5.3,
+        "hero-great": 4.27,
+        "hero-low": 5,
+        "hero-okay": 2.9,
+        "memory": 3.93,
+        "news": 5.47,
+        "vent": 4.07
       }
     }
   },
@@ -207,6 +410,68 @@
     "page-todo-own": [
       402,
       804
+    ],
+    "x-shop": [
+      402,
+      805
+    ],
+    "page-shopping": [
+      402,
+      804
     ]
+  },
+  "cuts": {
+    "card-shop": {
+      "y": 546,
+      "h": 2414,
+      "width": 1206,
+      "seam": 1800,
+      "d": 895
+    },
+    "card-fitness": {
+      "y": 546,
+      "h": 1318,
+      "width": 1206
+    },
+    "card-focus": {
+      "y": 546,
+      "h": 1168,
+      "width": 1206
+    },
+    "card-meal": {
+      "y": 546,
+      "h": 1388,
+      "width": 1206
+    },
+    "card-money": {
+      "y": 539,
+      "h": 1526,
+      "width": 1206
+    },
+    "card-reading": {
+      "y": 546,
+      "h": 1318,
+      "width": 1206
+    },
+    "card-skin": {
+      "y": 546,
+      "h": 1318,
+      "width": 1206
+    },
+    "card-sleep": {
+      "y": 546,
+      "h": 1168,
+      "width": 1206
+    },
+    "card-study": {
+      "y": 546,
+      "h": 1460,
+      "width": 1206
+    },
+    "card-water": {
+      "y": 546,
+      "h": 1318,
+      "width": 1206
+    }
   }
 }

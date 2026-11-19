@@ -569,6 +569,10 @@ export function startLook(root: HTMLElement): () => void {
       if (!alive) return;
       title.classList.add("on");
       await sleep(reduce ? 0 : 180);
+      /* in a colour of your own the phone waits for its picture in that colour (a moment at most), so purple never shows first */
+      const first = S.theme !== "purple" && heroScr ? $<HTMLImageElement>("img.sc-a", heroScr) : null;
+      if (first) await Promise.race([first.decode().catch(() => {}), sleep(1200)]);
+      if (!alive) return;
       heroPh.style.opacity = "1";
       /* it stands up in 3D on a computer; on a touch screen it rises flat */
       if (!reduce && fine && heroDev)
@@ -874,6 +878,8 @@ export function startLook(root: HTMLElement): () => void {
   const AD = $$("#apDots li");
   const M = apCards.length;
   const AP = { pos: 0, key: "", cur: -1, w: 0, peek: 0, tone: [] as string[], shown: [] as boolean[] };
+  /** How long the last app stands at the end, in stretches of the scroll (the others hold 0.38 of theirs). */
+  const AP_REST = 0.45;
   const apMeasure = () => {
     /* a card's width and how far the next one shows from behind it, in px: both are the stylesheet's own */
     AP.w = apCards[0]?.offsetWidth ?? 0;
@@ -950,8 +956,9 @@ export function startLook(root: HTMLElement): () => void {
       read() {
         const r = apTrack.getBoundingClientRect();
         const p = clamp(-r.top / Math.max(1, r.height - innerHeight));
-        /* each app holds for a part of its stretch, then the deck deals the next over the rest */
-        const seg = p * (M - 1);
+        /* each app holds for a part of its stretch, then the deck deals the next over the rest; the last one holds
+           too (AP_REST of a stretch), so it stands whole on its own ground before the part moves on */
+        const seg = Math.min(M - 1, p * (M - 1 + AP_REST));
         const i = Math.min(M - 2, Math.floor(seg));
         AP.pos = M > 1 ? i + ease(clamp((seg - i - 0.38) / 0.62)) : 0;
       },
@@ -968,7 +975,7 @@ export function startLook(root: HTMLElement): () => void {
     });
     const toApp = (i: number) => {
       const r = apTrack.getBoundingClientRect();
-      const p = M > 1 ? (i + 0.1) / (M - 1) : 0;
+      const p = M > 1 ? (i + 0.1) / (M - 1 + AP_REST) : 0;
       scrollTo({ top: scrollY + r.top + clamp(p) * (r.height - innerHeight), behavior: reduce ? "auto" : "smooth" });
     };
     AD.forEach((li, i) => {

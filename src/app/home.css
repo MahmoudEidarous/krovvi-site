@@ -6,6 +6,10 @@
    - only transform and opacity move, and nothing that follows the scroll waits for a transition. */
 
 .kl { --chat: #EAE9F4; --sheet: 44px; }
+/* the chat's ground in each colour, read off that colour's own screens (scripts/app-shots/ground.mjs) */
+:root[data-theme="ocean"] .kl { --chat: #E5EBF5; }
+:root[data-theme="coral"] .kl { --chat: #F3E8E2; }
+:root[data-theme="mono"] .kl { --chat: #EAEAEC; }
 
 /* a part that slides up over the one before it */
 .sheet { position: relative; border-radius: var(--sheet) var(--sheet) 0 0; margin-top: calc(var(--sheet) * -1); }
@@ -178,7 +182,7 @@
 /* the sheet's rounded top is the part's own (clipped to it): the ground inside is square, so no corner of the first
    app's colour shows around another app's */
 .ap { z-index: 2; overflow: clip; color: #fff; background: color-mix(in oklab, var(--t0, #0C8573) 72%, #06050F); }
-.ap-track { position: relative; height: 520svh; }
+.ap-track { position: relative; height: 620svh; }
 /* the ground reaches past the bottom of the tallest the screen gets (a phone's browser bars come and go, and the page
    shows under them), the deck and the words stand in the part that is always seen */
 .ap-pin { position: sticky; top: 0; height: calc(100lvh + 140px); overflow: hidden; }
@@ -186,14 +190,15 @@
 .ap-tones { position: absolute; inset: 0; z-index: 0; }
 .ap-tones i { position: absolute; inset: 0; opacity: 0; will-change: opacity; background: color-mix(in oklab, var(--t) 72%, #06050F); }
 .ap-tones i:first-child { opacity: 1; }
-.ap-in { position: relative; z-index: 1; height: 100svh; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: clamp(28px, 5vw, 90px); padding: 84px max(7vw, calc(50% - 640px)) 4vh; }
-.ap-copy { grid-column: 2; grid-row: 1; min-width: 0; display: flex; flex-direction: column; }
+.ap-in { position: relative; z-index: 1; height: 100svh; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: clamp(28px, 5vw, 90px); padding: 84px max(7vw, calc(50% - 720px)) 4vh; }
+/* the words' column is measured, so the longest name (Shopping) is as big as its column allows and no bigger */
+.ap-copy { grid-column: 2; grid-row: 1; min-width: 0; display: flex; flex-direction: column; container-type: inline-size; }
 .ap-h { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 2.5vw, 42px); line-height: 1.02; letter-spacing: -.022em; color: #fff; }
 .ap-p { margin-top: 8px; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.4; letter-spacing: -.012em; color: rgba(255,255,255,.72); }
 /* the app in front, by name: each name rolls up from under its own edge as the one before rolls away */
 .ap-names { position: relative; margin-top: clamp(20px, 5vh, 56px); height: calc(clamp(76px, 11.4vw, 196px) * 1.02 + 3.6em); }
 .an { position: absolute; left: 0; top: 0; right: 0; pointer-events: none; }
-.an h3 { font-family: var(--display); font-weight: 800; font-size: clamp(76px, 11.4vw, 196px); line-height: .9; letter-spacing: -.036em; color: #fff; }
+.an h3 { font-family: var(--display); font-weight: 800; font-size: min(clamp(76px, 11.4vw, 196px), 26.5cqw); line-height: .9; letter-spacing: -.036em; color: #fff; }
 .an .m > span { transform: translateY(128%); transition: transform .32s cubic-bezier(.5,0,.75,0); }
 .an.was .m > span { transform: translateY(-128%); }
 .an.on .m > span { transform: none; transition: transform .8s var(--calm) .06s; }
@@ -305,7 +310,7 @@
   .say-tag { display: flex; align-items: baseline; gap: 8px; padding: 0 calc(var(--u) * 20) calc(var(--u) * 6); font-size: 13.5px; color: var(--soft); }
   .say-tag b { font-size: 15px; font-weight: 800; letter-spacing: -.01em; color: var(--ink); }
 
-  .ap-track { height: 480svh; }
+  .ap-track { height: 572svh; }
   .ap-in { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; justify-items: center; align-items: start; row-gap: 0; padding: 74px 16px calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; }
   .ap-copy { grid-column: 1; grid-row: 1; align-items: center; width: 100%; }
   .ap-h { font-size: clamp(22px, 6.2vw, 30px); }
