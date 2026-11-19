@@ -106,14 +106,18 @@ const SAID = [
   { key: "study", name: "Study", line: "Flashcards, made from your course.", said: "make me flashcards for linkage" },
 ];
 
-/** The whole picture: the apps those cards open, each the app's own page. */
+/**
+ * The whole picture: the apps those cards open, each the app's own page, and the app's own colour for its ground. In an
+ * order that never puts two colours of one family side by side.
+ */
 export const APPS = [
-  { name: "page-money", title: "Money", line: "Your month, your bills, and what's left.", tone: "#0F9D7A" },
-  { name: "page-study", title: "Study", line: "Your exams, your notes, your cards.", tone: "#4F7BF0" },
-  { name: "page-food", title: "Food", line: "Your day on a plate, and your water.", tone: "#12A36B" },
-  { name: "page-health", title: "Health", line: "Sleep, medicine, and how you feel.", tone: "#E2457F" },
-  { name: "page-habits", title: "Habits", line: "The small things you keep, day by day.", tone: "#7A5CF5" },
-  { name: "page-todo", title: "Plans", line: "Today, and everyone in it.", tone: "#5B49F2" },
+  { name: "page-money", title: "Money", line: "Your month, your bills, and what's left.", tone: "#0A7F8E" },
+  { name: "page-study", title: "Study", line: "Your exams, your notes, your cards.", tone: "#2D62E6" },
+  { name: "page-health", title: "Health", line: "Sleep, medicine, and how you feel.", tone: "#D8437B" },
+  { name: "page-habits-own", title: "Habits", line: "The small things you keep, day by day.", tone: "#7250EA" },
+  { name: "page-food", title: "Food", line: "Your day on a plate, and your water.", tone: "#259240" },
+  { name: "page-todo-own", title: "To-do", line: "Today, and what can wait.", tone: "#5B49F2" },
+  { name: "page-library", title: "Library", line: "Your recordings, files and photos, kept.", tone: "#E07B16" },
 ];
 
 /** A title in lines, each rising from under its own edge. */
@@ -363,7 +367,7 @@ function Said() {
           <ol className="say-index" id="sayIndex" aria-label="What you can just say">
             <i className="si-hl" aria-hidden="true" />
             {SAID.map((x, i) => (
-              <li key={x.key} className={i === 0 ? "on" : ""} data-x={x.key}>
+              <li key={x.key} className={i === 0 ? "on" : ""} data-x={x.key} role="button" tabIndex={0}>
                 {x.name}
               </li>
             ))}
@@ -376,44 +380,46 @@ function Said() {
 
 function Apps() {
   return (
-    <section className="ap" id="apps" aria-label="The whole picture">
+    <section className="ap sheet" id="apps" data-mode="dark" aria-label="The whole picture" style={{ "--t0": APPS[0].tone } as React.CSSProperties}>
       <div className="ap-track" id="apTrack">
         <div className="ap-pin" id="apPin">
-          <div className="ap-copy">
-            <h2 className="ap-h">Want the whole picture?</h2>
-            <p className="ap-p">Everything you tell it lands in a place of its own. Open any of them, any time.</p>
-            <ol className="ap-list" id="apList" aria-label="Krovvi's apps">
-              <i className="ap-hl" aria-hidden="true" />
-              {APPS.map((a, i) => (
-                <li key={a.name} data-i={i} style={{ "--tone": a.tone } as React.CSSProperties}>
-                  <b>{a.title}</b>
-                  <span>{a.line}</span>
-                </li>
-              ))}
-            </ol>
-            <div className="ap-one" id="apOne" aria-hidden="true">
-              <div className="seg">
-                {APPS.map((a) => (
-                  <i key={a.name}>
-                    <b />
-                  </i>
+          <div className="ap-tones" id="apTones" aria-hidden="true">
+            {APPS.map((a) => (
+              <i key={a.name} style={{ "--t": a.tone } as React.CSSProperties} />
+            ))}
+          </div>
+          <div className="ap-in">
+            <div className="ap-copy">
+              <h2 className="ap-h">Want the whole picture?</h2>
+              <p className="ap-p">Every card opens a place of its own.</p>
+              <div className="ap-names" id="apNames">
+                {APPS.map((a, i) => (
+                  <div key={a.name} className={`an${i === 0 ? " on" : ""}`}>
+                    <h3>
+                      <span className="m">
+                        <span>{a.title}</span>
+                      </span>
+                    </h3>
+                    <p>{a.line}</p>
+                  </div>
                 ))}
               </div>
-              <div className="one" />
+              <ol className="ap-dots" id="apDots" aria-label="Krovvi's apps">
+                {APPS.map((a, i) => (
+                  <li key={a.name} className={i === 0 ? "on" : ""} data-i={i} role="button" tabIndex={0} aria-label={a.title}>
+                    {a.title}
+                  </li>
+                ))}
+              </ol>
             </div>
-          </div>
-          <div className="ap-ph" id="apPh">
-            <Device>
-              <div className="ap-view">
-                <div className="ap-strip" id="apStrip">
-                  {APPS.map((a, i) => (
-                    <div key={a.name} className="ap-shot" style={{ left: `calc(var(--u) * ${i * 420})` }}>
-                      <Shot name={a.name} alt={`${a.title}, in Krovvi. ${a.line}`} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Device>
+            <div className="ap-deck" id="apDeck">
+              {APPS.map((a, i) => (
+                <figure key={a.name} className="ap-card" data-i={i} style={{ zIndex: APPS.length - i }}>
+                  <Shot name={a.name} alt={`${a.title}, in Krovvi. ${a.line}`} sizes="(max-width: 860px) 62vw, 420px" />
+                  <i className="veil" aria-hidden="true" />
+                </figure>
+              ))}
+            </div>
           </div>
           <i className="shade" aria-hidden="true" />
         </div>

@@ -1,5 +1,5 @@
 {
-  "taken": "2026-11-19 19:57",
+  "taken": "2026-11-19 21:12",
   "screen": [
     402,
     874
@@ -7,8 +7,6 @@
   "themes": {
     "purple": {
       "stills": [
-        "card-skin",
-        "card-water",
         "checkin",
         "checkin-end",
         "chrome-bot",
@@ -39,11 +37,12 @@
         "news",
         "news-end",
         "page-food",
-        "page-habits",
+        "page-habits-own",
         "page-health",
+        "page-library",
         "page-money",
         "page-study",
-        "page-todo",
+        "page-todo-own",
         "vent",
         "vent-end",
         "x-fitness",
@@ -57,19 +56,18 @@
         "x-water"
       ],
       "films": {
-        "card-skin": 0.43,
-        "card-water": 0.87,
+        "x-focus": 6.1,
+        "x-skin": 0.47,
+        "x-water": 0.87,
         "checkin": 5.3,
         "days": 1.57,
-        "flame": 2.97,
+        "flame": 4.57,
         "hero-great": 4.37,
         "hero-low": 4.2,
         "hero-okay": 3.17,
         "memory": 4.2,
         "news": 5.23,
-        "vent": 4.17,
-        "x-skin": 0.47,
-        "x-water": 0.87
+        "vent": 4.17
       }
     }
   },
@@ -100,7 +98,7 @@
     ],
     "x-focus": [
       402,
-      390
+      389
     ],
     "x-money": [
       402,
@@ -120,7 +118,7 @@
     ],
     "x-fitness": [
       402,
-      440
+      439
     ],
     "x-meal": [
       402,
@@ -128,11 +126,11 @@
     ],
     "x-reading": [
       402,
-      440
+      439
     ],
     "x-sleep": [
       402,
-      390
+      389
     ],
     "chrome-top": [
       402,
@@ -179,6 +177,34 @@
       804
     ],
     "game-trivia-mid": [
+      402,
+      804
+    ],
+    "page-food": [
+      402,
+      804
+    ],
+    "page-habits-own": [
+      402,
+      804
+    ],
+    "page-health": [
+      402,
+      804
+    ],
+    "page-library": [
+      402,
+      804
+    ],
+    "page-money": [
+      402,
+      804
+    ],
+    "page-study": [
+      402,
+      804
+    ],
+    "page-todo-own": [
       402,
       804
     ]

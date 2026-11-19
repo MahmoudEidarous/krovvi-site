@@ -675,10 +675,11 @@ export function startLook(root: HTMLElement): () => void {
       /* the ones already seen wait on the left, the ones to come on the right */
       sc.classList.toggle("was", i < k);
       if (i === k) {
-        /* a moment for the screen to slide in, then its film from the start */
+        /* a moment for the screen to slide in (longer for the first, which comes up with the phone), then its film
+           from the start */
         later(() => {
           if (cur2 === c) playScene(sc);
-        }, reduce ? 0 : 380);
+        }, reduce ? 0 : from <= 0 ? 950 : 380);
       } else holdScene(sc);
     });
     /* the screen at the opening is the first one, already in place as the phone comes up */
@@ -762,6 +763,14 @@ export function startLook(root: HTMLElement): () => void {
     });
   }
 
+  /* a row that is tapped is also chosen from the keys: Return or Space does what a tap does */
+  const byKey = (e: Event) => {
+    const ke = e as KeyboardEvent;
+    if (ke.key !== "Enter" && ke.key !== " ") return;
+    ke.preventDefault();
+    (ke.currentTarget as HTMLElement).click();
+  };
+
   /* ---------- 4. just say it: the chat is the page itself scrolling inside the phone; the words beside it follow ---------- */
   const say = $("#chat");
   const sayFeed = $("#sayFeed");
@@ -838,90 +847,120 @@ export function startLook(root: HTMLElement): () => void {
         return false;
       },
     });
-    SI.forEach((li, i) =>
+    SI.forEach((li, i) => {
       on(li, "click", () => {
         const x = XS[i];
         if (!x) return;
         const r = x.getBoundingClientRect();
         scrollTo({ top: scrollY + r.top + r.height / 2 - innerHeight / 2, behavior: reduce ? "auto" : "smooth" });
-      })
-    );
+      });
+      on(li, "keydown", byKey);
+    });
     on(window, "resize", () => {
       sayCur = -1;
       kick();
     });
   }
 
-  /* ---------- 5. the whole picture: the phone swipes between the apps as you scroll, and the list keeps up ---------- */
+  /* ---------- 5. the whole picture: a deck of the apps' own pages; scrolling deals the next, and its ground and name follow ---------- */
   const ap = $("#apps");
   const apTrack = $("#apTrack");
   const apPin = $("#apPin");
-  const apList = $("#apList");
-  const apHl = apList ? $(".ap-hl", apList) : null;
-  const apStrip = $("#apStrip");
-  const apPh = $("#apPh");
-  const apView = apPh ? $(".ap-view", apPh) : null;
-  const apOne = $("#apOne");
-  const apSeg = apOne ? $$(".seg i", apOne) : [];
-  const apOneLine = apOne ? $(".one", apOne) : null;
-  const AI = apList ? $$("li", apList) : [];
-  const M = AI.length;
-  const AP = { pos: 0, key: "", cur: -1, step: 0 };
+  const apDeck = $("#apDeck");
+  const apCards = apDeck ? $$(".ap-card", apDeck) : [];
+  const apVeils = apCards.map((c) => $(".veil", c));
+  const apTones = $$("#apTones i");
+  const AN = $$("#apNames .an");
+  const AD = $$("#apDots li");
+  const M = apCards.length;
+  const AP = { pos: 0, key: "", cur: -1, w: 0, peek: 0, tone: [] as string[], shown: [] as boolean[] };
   const apMeasure = () => {
-    /* one page and the gap to the next, in px: the screen is 402 of the phone's points wide, a step is 420 */
-    AP.step = apView ? (apView.clientWidth * 420) / 402 : 0;
+    /* a card's width and how far the next one shows from behind it, in px: both are the stylesheet's own */
+    AP.w = apCards[0]?.offsetWidth ?? 0;
+    AP.peek = apDeck ? parseFloat(getComputedStyle(apDeck).getPropertyValue("--peek")) || (apDeck.offsetWidth - AP.w) / 3 : 0;
+    if (apDeck && !(AP.peek > 0)) AP.peek = Math.max(0, (apDeck.offsetWidth - AP.w) / 3);
     AP.key = "";
   };
   const apTo = (i: number) => {
     if (i === AP.cur) return;
-    const from = AP.cur;
     AP.cur = i;
-    AI.forEach((li, k) => li.classList.toggle("on", k === i));
-    const li = AI[i];
-    if (apHl && li) {
-      apHl.style.transform = `translateY(${li.offsetTop}px)`;
-      apHl.classList.add("live");
-    }
-    apSeg.forEach((s, k) => s.classList.toggle("done", k <= i));
-    if (apOneLine && li) {
-      /* on a phone one line stands in for the list: the app's name, rolling to the next */
-      const old = apOneLine.querySelector("span:not(.out)") as HTMLElement | null;
-      const next = document.createElement("span");
-      next.textContent = `${li.querySelector("b")?.textContent ?? ""}. ${li.querySelector("span")?.textContent ?? ""}`;
-      if (old && from >= 0 && !reduce) {
-        next.className = "pre";
-        apOneLine.appendChild(next);
-        void next.offsetWidth;
-        next.className = "";
-        old.className = "out";
-        later(() => old.remove(), 520);
+    AN.forEach((el, k) => {
+      el.classList.toggle("on", k === i);
+      el.classList.toggle("was", k < i);
+    });
+    AD.forEach((el, k) => el.classList.toggle("on", k === i));
+  };
+  /* where the deck stands for a place between two apps: every card's place, turn, size and dimness */
+  const deal = (pos: number) => {
+    for (let i = 0; i < M; i++) {
+      const card = apCards[i];
+      const d = i - pos;
+      const seen = d > -1.02 && d < 3.7;
+      if (!seen) {
+        if (AP.shown[i] !== false) {
+          AP.shown[i] = false;
+          card.style.opacity = "0";
+          card.style.pointerEvents = "none";
+        }
+        continue;
+      }
+      AP.shown[i] = true;
+      let x: number;
+      let y = 0;
+      let turn: number;
+      let size: number;
+      let o = 1;
+      let veil = 0;
+      if (d >= 0) {
+        /* waiting behind: each a step to the right, a little smaller, a little turned, a little dimmer */
+        const k = Math.min(d, 3);
+        x = k * AP.peek * 1.18;
+        turn = k * 1.6;
+        size = 1 - k * 0.07;
+        veil = k * 0.2;
+        if (d > 3) o = clamp(1 - (d - 3) / 0.6);
       } else {
-        apOneLine.textContent = "";
-        apOneLine.appendChild(next);
+        /* dealt: off to the left with a turn of the wrist, gone before it would be in the words' way */
+        const t = -d;
+        x = -t * AP.w * 1.3;
+        y = t * AP.w * 0.1;
+        turn = -t * 12;
+        size = 1 - t * 0.04;
+        o = clamp(1 - (t - 0.3) / 0.5);
+      }
+      card.style.transform = `translate3d(${x.toFixed(1)}px, ${y.toFixed(1)}px, 0) rotate(${turn.toFixed(2)}deg) scale(${size.toFixed(4)})`;
+      card.style.opacity = o.toFixed(3);
+      card.style.pointerEvents = Math.abs(d) < 0.5 ? "auto" : "none";
+      const v = apVeils[i];
+      if (v) v.style.opacity = veil.toFixed(3);
+    }
+    /* each app's ground, the one in front over the one before */
+    for (let i = 0; i < apTones.length; i++) {
+      const o = i === 0 ? "1" : clamp(pos - (i - 1)).toFixed(3);
+      if (AP.tone[i] !== o) {
+        AP.tone[i] = o;
+        apTones[i].style.opacity = o;
       }
     }
   };
-  if (ap && apTrack && apPin && apStrip && M) {
+  if (ap && apTrack && apPin && apDeck && M) {
     stepsBack($("#get"), apPin);
     const ease = (t: number) => t * t * (3 - 2 * t);
     parts.push({
       read() {
         const r = apTrack.getBoundingClientRect();
         const p = clamp(-r.top / Math.max(1, r.height - innerHeight));
-        /* each page holds for half its stretch, then slides to the next over the other half */
+        /* each app holds for a part of its stretch, then the deck deals the next over the rest */
         const seg = p * (M - 1);
         const i = Math.min(M - 2, Math.floor(seg));
-        AP.pos = M > 1 ? i + ease(clamp((seg - i - 0.5) / 0.5)) : 0;
+        AP.pos = M > 1 ? i + ease(clamp((seg - i - 0.38) / 0.62)) : 0;
       },
       write() {
         const key = AP.pos.toFixed(4);
         if (key !== AP.key) {
           AP.key = key;
-          if (!AP.step) apMeasure();
-          apStrip.style.transform = `translate3d(${(-AP.pos * AP.step).toFixed(1)}px, 0, 0)`;
-          /* between two pages the row steps back a little, the way apps do when you swipe between them */
-          const between = Math.sin(Math.PI * (AP.pos - Math.floor(AP.pos)));
-          if (apView) apView.style.transform = between > 0.002 ? `scale(${(1 - between * 0.035).toFixed(4)})` : "";
+          if (!AP.w) apMeasure();
+          deal(reduce ? Math.round(AP.pos) : AP.pos);
         }
         apTo(Math.round(AP.pos));
         return false;
@@ -929,11 +968,15 @@ export function startLook(root: HTMLElement): () => void {
     });
     const toApp = (i: number) => {
       const r = apTrack.getBoundingClientRect();
-      const p = M > 1 ? (i + 0.12) / (M - 1) : 0;
+      const p = M > 1 ? (i + 0.1) / (M - 1) : 0;
       scrollTo({ top: scrollY + r.top + clamp(p) * (r.height - innerHeight), behavior: reduce ? "auto" : "smooth" });
     };
-    AI.forEach((li, i) => on(li, "click", () => toApp(i)));
-    if (apPh) on(apPh, "click", () => toApp(Math.min(M - 1, AP.cur + 1)));
+    AD.forEach((li, i) => {
+      on(li, "click", () => toApp(i));
+      on(li, "keydown", byKey);
+    });
+    /* a tap on the card in front deals the next one */
+    apCards.forEach((c) => on(c, "click", () => toApp(Math.min(M - 1, AP.cur + 1))));
     watch((es) => es.forEach((e) => {
       if (e.isIntersecting) ap.classList.add("in");
     }), { threshold: 0.3 }).observe(apPin);
@@ -1097,9 +1140,9 @@ export function startLook(root: HTMLElement): () => void {
   }
 
   /* ---------- the top bar's state, and the page's own links ---------- */
-  const NAV = { dark: false, small: false, cur: null as HTMLElement | null, end: false, endWas: null as boolean | null };
+  const NAV = { dark: false, small: false, cur: null as HTMLElement | null, tint: "", tintWas: null as string | null };
   paintHooks.push(() => {
-    NAV.endWas = null;
+    NAV.tintWas = null;
     kick();
   });
   const darkTops = $$("[data-mode='dark']");
@@ -1119,23 +1162,37 @@ export function startLook(root: HTMLElement): () => void {
         const r = n.part!.getBoundingClientRect();
         if (r.top < vh * 0.5 && r.bottom > vh * 0.5) NAV.cur = n.a;
       }
-      NAV.end = ltRoom ? ltRoom.getBoundingClientRect().top < vh * 0.5 : ft ? ft.getBoundingClientRect().top < vh * 0.5 : false;
+      /* what the page is under the middle of the screen: the apps' part on the ground of the app in front, a night
+         part, or the light page */
+      NAV.tint = "";
+      const mid = vh * 0.5;
+      if (ap) {
+        const r = ap.getBoundingClientRect();
+        if (r.top < mid && r.bottom > mid) NAV.tint = `app${Math.max(0, AP.cur)}`;
+      }
+      if (!NAV.tint)
+        for (const d of darkTops) {
+          const r = d.getBoundingClientRect();
+          if (r.top < mid && r.bottom > mid) NAV.tint = "night";
+        }
     },
     write() {
       if (cap) {
         cap.classList.toggle("dark", NAV.dark);
         cap.classList.toggle("small", NAV.small);
       }
-      /* From the stage down the page is night, so whatever shows past its end (an iPhone's bars take this colour) is
-         night too. Changing it redraws the whole screen, so it waits for a pause in your scrolling. */
-      if (NAV.end !== NAV.endWas) {
-        const end = (NAV.endWas = NAV.end);
+      /* Whatever shows past the page's edges takes the colour of the part you are in (an iPhone's bars take the page's
+         own colour): night over a night part, an app's ground over the apps, the light page elsewhere. Changing it
+         redraws the whole screen, so it waits for a pause in your scrolling. */
+      if (NAV.tint !== NAV.tintWas) {
+        const tint = (NAV.tintWas = NAV.tint);
         quiet(() => {
-          if (NAV.end !== end) return;
-          const night = getComputedStyle(lt ?? ft ?? root).backgroundColor;
-          de.style.backgroundColor = end ? night : "";
+          if (NAV.tint !== tint) return;
+          const from = tint.startsWith("app") ? (apTones[Number(tint.slice(3))] ?? ap) : tint === "night" ? (fr ?? lt ?? ft) : null;
+          const colour = from ? getComputedStyle(from).backgroundColor : "";
+          de.style.backgroundColor = colour;
           const m = tintMeta();
-          if (m) m.content = end ? night : getComputedStyle(de).getPropertyValue("--bg2").trim();
+          if (m) m.content = colour || getComputedStyle(de).getPropertyValue("--bg2").trim();
         });
       }
       if (NAV.cur !== curA) {

@@ -329,7 +329,7 @@ const CARDS: Record<string, CardScene> = {
   weight: { kind: 'food', state: 'said-weight-en', ask: '76.8 this morning', words: ['half a kilo down this week.', 'you’re 0.8 from your aim.'] },
   dose: { kind: 'health', state: 'said-dose-en', ask: 'took my vitamin d', words: ['marked.', 'iron is next, at 9 tonight.'] },
   fitness: { kind: 'workout', state: 'said-session-en', ask: 'did 45 minutes of yoga', words: ['nice. that’s four days this week.', 'aim reached.'] },
-  money: { kind: 'spending', state: 'mid-en', said: 2, back: 3, ask: 'cinema was 21.75, and 33.55 at zara', words: ['both in.', '$859 left for the month.'] },
+  money: { kind: 'spending', state: 'mid-en', said: 2, back: 2, ask: 'cinema was 21.75, and 33.55 at zara', words: ['both in.', '$467 left, with 8 days to go.'] },
   study: { kind: 'study', state: 'said-cards-en', ask: 'make me flashcards for linkage', words: ['eight cards, ready.', 'want to try them now?'] },
   goal: { kind: 'goal', state: 'said-did-en', ask: 'did my session', words: ['marked.', 'that’s today’s part done.'] },
 };

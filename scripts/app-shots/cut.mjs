@@ -159,7 +159,7 @@ const USED = new Set([
   "hero", "hero-great", "hero-okay", "hero-low", "hero-great-end", "hero-okay-end", "hero-low-end",
   "vent", "vent-end", "checkin", "checkin-end", "news", "news-end", "memory", "memory-end", "days", "days-end", "flame", "flame-end",
   "card-water", "card-skin", "card-focus", "card-sleep", "card-meal", "card-fitness", "card-reading", "card-money", "card-study",
-  "page-money", "page-study", "page-food", "page-health", "page-habits", "page-todo",
+  "page-money", "page-study", "page-food", "page-health", "page-habits-own", "page-todo-own", "page-library",
   "game-chess-mid", "game-four-mid", "game-five-mid", "game-sudoku-mid", "game-fleet-mid", "game-hunt-mid", "game-higher-mid", "game-groups-mid", "game-trivia-mid", "game-countries-mid",
 ]);
 
@@ -172,8 +172,8 @@ for (const f of files.filter((x) => x.endsWith(".png")).sort()) {
     const key = name.slice(5);
     sizes[`x-${key}`] = await exchange(join(RAW, f), key);
     stills.add(`x-${key}`);
-  } else if (name.startsWith("game-")) {
-    // a game without the phone's own bar over it or its home line under it: the game's page as it is
+  } else if (name.startsWith("game-") || name.startsWith("page-")) {
+    // a game or an app's page without the phone's own bar over it or its home line under it: the page as it is
     sizes[name] = await band(join(RAW, f), name, 52, 856);
     stills.add(name);
   } else {

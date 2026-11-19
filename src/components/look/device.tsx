@@ -1,4 +1,4 @@
-import { filmUrl, hasFilm, hasStill, SCREEN, stillSet, stillUrl } from "@/lib/app-shots";
+import { filmUrl, hasFilm, hasStill, SCREEN, sizeOf, stillSet, stillUrl } from "@/lib/app-shots";
 
 /**
  * An iPhone drawn around the app's real screen (402 x 874 points, 428 x 900 with its band): the body, its buttons, one
@@ -26,6 +26,8 @@ const SIZES = "(max-width: 860px) 86vw, 420px";
 /** One of the app's screens, still. */
 export function Shot({ name, alt, className = "", eager = false, sizes = SIZES }: { name: string; alt: string; className?: string; eager?: boolean; sizes?: string }) {
   if (!hasStill(name)) return null;
+  // a picture cut from a screen (a game, an app's page) has its own size; a whole screen has the phone's
+  const size = sizeOf(name) ?? SCREEN;
   return (
     <img
       className={className}
@@ -33,8 +35,8 @@ export function Shot({ name, alt, className = "", eager = false, sizes = SIZES }
       srcSet={stillSet(name)}
       sizes={sizes}
       alt={alt}
-      width={SCREEN.w}
-      height={SCREEN.h}
+      width={size.w}
+      height={size.h}
       loading={eager ? "eager" : "lazy"}
       decoding="async"
       data-shot={name}
